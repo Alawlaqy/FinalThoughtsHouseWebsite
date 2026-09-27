@@ -40,7 +40,7 @@ export const partners: Partner[] = [
   { name: "Buffalo", logo: "/images/partners/buffalo.webp" },
 ];
 
-// The marquee repeats the list 3x for a seamless loop; only the first copy is exposed
+// The marquee repeats the list twice (animated by -50%) for a seamless loop; only the first copy is exposed
 // to screen readers / search engines, the repeats are decorative.
 function PartnerCard({ partner, decorative = false }: { partner: Partner; decorative?: boolean }) {
   return (
@@ -99,7 +99,7 @@ export default function PartnersSection() {
           className={`flex ${lang === "ar" ? "animate-marquee-rtl" : "animate-marquee"}`}
           style={{ width: "max-content" }}
         >
-          {[...firstHalf, ...firstHalf, ...firstHalf].map((partner, i) => (
+          {[...firstHalf, ...firstHalf].map((partner, i) => (
             <PartnerCard key={`r1-${i}`} partner={partner} decorative={i >= firstHalf.length} />
           ))}
         </div>
@@ -115,7 +115,7 @@ export default function PartnersSection() {
           className={`flex ${lang === "ar" ? "animate-marquee" : "animate-marquee-rtl"}`}
           style={{ width: "max-content" }}
         >
-          {[...secondHalf, ...secondHalf, ...secondHalf].map((partner, i) => (
+          {[...secondHalf, ...secondHalf].map((partner, i) => (
             <PartnerCard key={`r2-${i}`} partner={partner} decorative={i >= secondHalf.length} />
           ))}
         </div>

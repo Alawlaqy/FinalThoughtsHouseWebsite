@@ -1,6 +1,11 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+/* Unused scaffolding components (shadcn/ui kit, Manus dialog, map) — keep their classes out of the CSS bundle */
+@source not "./components/ui";
+@source not "./components/ManusDialog.tsx";
+@source not "./components/Map.tsx";
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
