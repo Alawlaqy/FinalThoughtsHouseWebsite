@@ -64,8 +64,7 @@ export default function HeroSection() {
 
           {/* Headline */}
           <h1
-            style={{ "--reveal-delay": "0.1s" } as React.CSSProperties}
-            className="reveal-up text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-[1.1] mb-6"
+            className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-[1.1] mb-6"
           >
             {t("hero.slogan")}
           </h1>
