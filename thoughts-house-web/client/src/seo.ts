@@ -51,12 +51,12 @@ const HOME_META: Record<Language, { title: string; description: string }> = {
   en: {
     title: "Thoughts House | IT System Integrator & Cybersecurity in Saudi Arabia",
     description:
-      "Thoughts House is an IT system integrator in Dammam, Saudi Arabia, delivering cybersecurity, network infrastructure, cloud and backup solutions with Sophos, Cisco, Dell, Microsoft and more.",
+      "IT system integrator in Dammam, Saudi Arabia: cybersecurity, network infrastructure, cloud and backup solutions with Sophos, Cisco, Dell, Microsoft and more.",
   },
   ar: {
     title: "بيت الأفكار | تكامل أنظمة تقنية المعلومات والأمن السيبراني في السعودية",
     description:
-      "بيت الأفكار (Thoughts House) شركة تكامل أنظمة تقنية معلومات في الدمام، تقدم حلول الأمن السيبراني والبنية التحتية للشبكات والحلول السحابية والنسخ الاحتياطي مع شركاء مثل Sophos وCisco وDell وMicrosoft.",
+      "بيت الأفكار شركة تكامل أنظمة تقنية معلومات في الدمام: حلول الأمن السيبراني والبنية التحتية للشبكات والحلول السحابية والنسخ الاحتياطي في السعودية.",
   },
 };
 
