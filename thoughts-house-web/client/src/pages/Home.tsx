@@ -7,6 +7,7 @@ import HeroSection from "@/components/HeroSection";
 import ServicesSection from "@/components/ServicesSection";
 import AboutSection from "@/components/AboutSection";
 import PartnersSection from "@/components/PartnersSection";
+import FaqSection from "@/components/FaqSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import WhatsAppWidget from "@/components/WhatsAppWidget";
@@ -21,6 +22,7 @@ export default function Home() {
         <ServicesSection />
         <AboutSection />
         <PartnersSection />
+        <FaqSection />
         <ContactSection />
       </main>
       <Footer />

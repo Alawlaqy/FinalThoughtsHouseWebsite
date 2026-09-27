@@ -19,7 +19,7 @@ const root = path.resolve(import.meta.dirname, "..");
 const publicDir = path.join(root, "dist", "public");
 const serverEntry = path.join(root, "dist", "server", "entry-server.js");
 
-const { render, renderHead, renderNotFoundHead, renderSitemap, ROUTES } = await import(pathToFileURL(serverEntry).href);
+const { render, renderHead, renderNotFoundHead, renderSitemap, renderLlmsTxt, ROUTES } = await import(pathToFileURL(serverEntry).href);
 const template = fs.readFileSync(path.join(publicDir, "index.html"), "utf-8");
 
 for (const route of ROUTES) {
@@ -46,5 +46,8 @@ console.log("prerendered 404.html");
 
 fs.writeFileSync(path.join(publicDir, "sitemap.xml"), renderSitemap(new Date().toISOString().slice(0, 10)));
 console.log(`sitemap.xml → ${ROUTES.length} URLs`);
+
+fs.writeFileSync(path.join(publicDir, "llms.txt"), renderLlmsTxt());
+console.log("llms.txt");
 
 fs.rmSync(path.join(root, "dist", "server"), { recursive: true, force: true });

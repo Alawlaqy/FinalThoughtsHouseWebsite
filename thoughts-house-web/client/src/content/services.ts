@@ -4,9 +4,9 @@
  */
 import type { Language } from "@/seo";
 
-export type ServiceSlug = "cybersecurity" | "network-infrastructure" | "cloud-backup";
+export type ServiceSlug = "cybersecurity" | "network-infrastructure" | "cloud-backup" | "it-supply";
 
-export const SERVICE_SLUGS: ServiceSlug[] = ["cybersecurity", "network-infrastructure", "cloud-backup"];
+export const SERVICE_SLUGS: ServiceSlug[] = ["cybersecurity", "network-infrastructure", "cloud-backup", "it-supply"];
 
 /** Responsive srcset for a service image ("/images/<name>-1280.webp" also exists at 720w). */
 export function imageSrcSet(src: string) {
@@ -412,6 +412,124 @@ export const SERVICES: Record<ServiceSlug, Service> = {
         ],
         ctaTitle: "احمِ بياناتك وحافظ على استمرارية أعمالك",
         ctaText: "أخبرنا عن خوادمك وبياناتك وسنرشّح لك حل النسخ الاحتياطي والتعافي المناسب.",
+      },
+    },
+  },
+
+  "it-supply": {
+    slug: "it-supply",
+    image: "/images/it-supply-1280.webp",
+    vendors: [
+      "Dell", "HP", "Lenovo", "Supermicro", "ASUS", "NVIDIA", "Apple", "Cisco", "Sophos", "Palo Alto Networks",
+      "Microsoft", "Veeam", "NetApp", "Pure Storage", "Western Digital", "Seagate",
+    ],
+    content: {
+      en: {
+        metaTitle: "IT Hardware Supplier & Reseller in Dammam, Saudi Arabia | Thoughts House",
+        metaDescription:
+          "Supply of servers, storage, network and security appliances, laptops, workstations and software licenses from leading brands — with sizing, delivery and installation in Saudi Arabia.",
+        name: "IT Supply & Licensing",
+        h1: "IT Hardware Supply & Software Licensing in Saudi Arabia",
+        intro:
+          "Buying IT equipment is easier when your supplier also understands how it will be used. Thoughts House supplies servers, storage, networking and security appliances, end-user devices and software licenses from leading brands — and helps you choose the right models, then delivers, installs and supports them.",
+        offeringsTitle: "What we supply",
+        offerings: [
+          {
+            title: "Servers & Storage",
+            text: "Rack and tower servers, storage systems and backup appliances, sized for your workloads and growth.",
+          },
+          {
+            title: "Network & Security Appliances",
+            text: "Switches, routers, wireless access points and next-generation firewalls, configured to your design.",
+          },
+          {
+            title: "Laptops, Desktops & Workstations",
+            text: "Business laptops, desktops and high-performance workstations for office, engineering and design teams.",
+          },
+          {
+            title: "Software Licensing & Renewals",
+            text: "Operating systems, productivity, security and backup licenses and subscriptions, with renewal reminders so nothing expires unnoticed.",
+          },
+          {
+            title: "Project Procurement & Quotations",
+            text: "Complete bills of materials and competitive quotations for new projects, office fit-outs and refresh cycles.",
+          },
+        ],
+        vendorsTitle: "Brands we supply",
+        vendorsText:
+          "We source hardware and software from leading manufacturers and recommend the models that fit your requirements and budget.",
+        whyTitle: "Why buy from Thoughts House",
+        why: WHY_EN,
+        faqTitle: "Frequently asked questions",
+        faq: [
+          {
+            q: "Can you help us choose the right hardware before we buy?",
+            a: "Yes. Tell us about your users, workloads and budget and we will recommend suitable models and quantities, so you do not over- or under-buy.",
+          },
+          {
+            q: "Do you install and configure what you supply?",
+            a: "Yes. Beyond supply we can deliver, install, configure and support the equipment, so everything works together from day one.",
+          },
+          {
+            q: "How do we request a quotation?",
+            a: "Send your requirements or bill of materials through the contact form, by email to sales@thoughtshouse.com or on WhatsApp, and our sales team will prepare a quotation.",
+          },
+        ],
+        ctaTitle: "Request a quotation",
+        ctaText: "Send us your requirements or bill of materials and we will get back to you with a quotation.",
+      },
+      ar: {
+        metaTitle: "توريد أجهزة وسيرفرات وتراخيص تقنية المعلومات في الدمام | بيت الأفكار",
+        metaDescription:
+          "توريد السيرفرات وأنظمة التخزين وأجهزة الشبكات والحماية وأجهزة الحاسب والتراخيص من أبرز العلامات التجارية، مع اختيار المواصفات والتوصيل والتركيب في السعودية.",
+        name: "التوريد والتراخيص",
+        h1: "توريد أجهزة تقنية المعلومات وتراخيص البرمجيات في السعودية",
+        intro:
+          "شراء معدات تقنية المعلومات أسهل عندما يفهم المورّد كيف ستُستخدم. في بيت الأفكار نورّد السيرفرات وأنظمة التخزين وأجهزة الشبكات والحماية وأجهزة المستخدمين وتراخيص البرمجيات من أبرز العلامات التجارية، ونساعدك في اختيار الطرازات المناسبة، ثم نوصلها ونركّبها وندعمها.",
+        offeringsTitle: "ماذا نورّد",
+        offerings: [
+          {
+            title: "السيرفرات وأنظمة التخزين",
+            text: "سيرفرات بأنواعها وأنظمة تخزين وأجهزة نسخ احتياطي بسعات مناسبة لأعمالك ونموّها.",
+          },
+          {
+            title: "أجهزة الشبكات والحماية",
+            text: "مبدّلات وموجّهات ونقاط وصول لاسلكية وجدران حماية من الجيل التالي، تُعدّ حسب تصميم شبكتك.",
+          },
+          {
+            title: "أجهزة الحاسب المحمولة والمكتبية ومحطات العمل",
+            text: "أجهزة محمولة ومكتبية للأعمال ومحطات عمل عالية الأداء لفرق المكاتب والهندسة والتصميم.",
+          },
+          {
+            title: "تراخيص البرمجيات وتجديدها",
+            text: "تراخيص واشتراكات أنظمة التشغيل وبرامج الإنتاجية والحماية والنسخ الاحتياطي، مع تذكير بالتجديد حتى لا ينتهي أي ترخيص دون علمك.",
+          },
+          {
+            title: "توريد المشاريع وعروض الأسعار",
+            text: "قوائم معدات متكاملة وعروض أسعار تنافسية للمشاريع الجديدة وتجهيز المكاتب وتحديث الأجهزة.",
+          },
+        ],
+        vendorsTitle: "العلامات التجارية التي نورّدها",
+        vendorsText: "نورّد الأجهزة والبرمجيات من كبرى الشركات المصنّعة، ونرشّح الطرازات المناسبة لاحتياجاتك وميزانيتك.",
+        whyTitle: "لماذا تشتري من بيت الأفكار",
+        why: WHY_AR,
+        faqTitle: "الأسئلة الشائعة",
+        faq: [
+          {
+            q: "هل تساعدوننا في اختيار الأجهزة المناسبة قبل الشراء؟",
+            a: "نعم. أخبرنا عن عدد المستخدمين وطبيعة العمل والميزانية، وسنرشّح الطرازات والكميات المناسبة حتى لا تشتري أكثر أو أقل من حاجتك.",
+          },
+          {
+            q: "هل تقومون بتركيب وإعداد ما تورّدونه؟",
+            a: "نعم. إلى جانب التوريد نوصل الأجهزة ونركّبها ونُعدّها وندعمها، ليعمل كل شيء بتكامل من اليوم الأول.",
+          },
+          {
+            q: "كيف نطلب عرض سعر؟",
+            a: "أرسل احتياجاتك أو قائمة المعدات عبر نموذج التواصل أو البريد sales@thoughtshouse.com أو واتساب، وسيجهّز فريق المبيعات عرض السعر.",
+          },
+        ],
+        ctaTitle: "اطلب عرض سعر",
+        ctaText: "أرسل لنا احتياجاتك أو قائمة المعدات وسنعود إليك بعرض سعر.",
       },
     },
   },

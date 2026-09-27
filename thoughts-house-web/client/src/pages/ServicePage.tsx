@@ -76,7 +76,9 @@ export default function ServicePage({ slug }: { slug: ServiceSlug }) {
               href="#contact"
               className="inline-flex items-center gap-2 px-7 py-3.5 bg-[#2563EB] text-white font-semibold rounded-lg hover:bg-[#1D4ED8] transition-all duration-300 hover:shadow-xl hover:shadow-[#2563EB]/30"
             >
-              {lang === "ar" ? "اطلب استشارة" : "Request a consultation"}
+              {slug === "it-supply"
+                ? lang === "ar" ? "اطلب عرض سعر" : "Request a quotation"
+                : lang === "ar" ? "اطلب استشارة" : "Request a consultation"}
               <Arrow className="w-4 h-4" aria-hidden="true" />
             </a>
           </div>

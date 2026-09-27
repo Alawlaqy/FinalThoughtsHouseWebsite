@@ -16,6 +16,7 @@ const translations: Record<string, Record<Language, string>> = {
   "nav.home": { en: "Home", ar: "الرئيسية" },
   "nav.services": { en: "Services", ar: "الخدمات" },
   "nav.partners": { en: "Partners", ar: "الشركاء" },
+  "nav.insights": { en: "Insights", ar: "مقالات" },
   "nav.contact": { en: "Contact Us", ar: "تواصل معنا" },
 
   // Hero
@@ -107,6 +108,8 @@ const translations: Record<string, Record<Language, string>> = {
   "footer.quickLinks": { en: "Quick Links", ar: "روابط سريعة" },
   "footer.contactInfo": { en: "Contact Info", ar: "معلومات التواصل" },
   "footer.services": { en: "Services", ar: "خدماتنا" },
+  "services.supplyCta": { en: "Need hardware or licenses?", ar: "تحتاج أجهزة أو تراخيص؟" },
+  "services.supplyLink": { en: "IT Supply & Licensing", ar: "التوريد والتراخيص" },
 
   // Chatbot
   "chatbot.title": { en: "Thoughts House Assistant", ar: "مساعد بيت الأفكار" },

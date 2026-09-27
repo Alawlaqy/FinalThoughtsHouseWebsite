@@ -4,6 +4,8 @@
  * to generate static HTML for every route.
  */
 import { SERVICES, SERVICE_SLUGS, type ServiceSlug } from "./content/services";
+import { ARTICLES, getArticle, type ArticleSlug } from "./content/articles";
+import { HOME_FAQ } from "./content/homeFaq";
 
 export type Language = "en" | "ar";
 
@@ -11,13 +13,20 @@ export const SITE_URL = "https://www.thoughtshouse.com";
 export const LOGO_URL = `${SITE_URL}/images/logo-192.png`;
 /** 1200x630 JPG share images (JPG for widest social-platform support) */
 export const OG_IMAGE = `${SITE_URL}/images/og-home.jpg`;
-const ogImage = (route: Route) => (route.page === "service" ? `${SITE_URL}/images/og-${route.slug}.jpg` : OG_IMAGE);
+const ogImage = (route: Route) =>
+  route.page === "service"
+    ? `${SITE_URL}/images/og-${route.slug}.jpg`
+    : route.page === "article"
+      ? `${SITE_URL}/images/og-${getArticle(route.slug).service}.jpg`
+      : OG_IMAGE;
 
 const ORG_ID = `${SITE_URL}/#organization`;
 
 export type Route =
   | { page: "home"; lang: Language; path: string }
-  | { page: "service"; lang: Language; path: string; slug: ServiceSlug };
+  | { page: "service"; lang: Language; path: string; slug: ServiceSlug }
+  | { page: "insights"; lang: Language; path: string }
+  | { page: "article"; lang: Language; path: string; slug: ArticleSlug };
 
 export const HOME_PATHS: Record<Language, string> = { en: "/", ar: "/ar/" };
 
@@ -25,10 +34,20 @@ export function servicePath(slug: ServiceSlug, lang: Language) {
   return `${lang === "ar" ? "/ar" : ""}/services/${slug}/`;
 }
 
+export function insightsPath(lang: Language) {
+  return `${lang === "ar" ? "/ar" : ""}/insights/`;
+}
+
+export function articlePath(slug: ArticleSlug, lang: Language) {
+  return `${insightsPath(lang)}${slug}/`;
+}
+
 /** Every prerendered page. */
 export const ROUTES: Route[] = (["en", "ar"] as Language[]).flatMap((lang) => [
   { page: "home" as const, lang, path: HOME_PATHS[lang] },
   ...SERVICE_SLUGS.map((slug) => ({ page: "service" as const, lang, slug, path: servicePath(slug, lang) })),
+  { page: "insights" as const, lang, path: insightsPath(lang) },
+  ...ARTICLES.map((a) => ({ page: "article" as const, lang, slug: a.slug, path: articlePath(a.slug, lang) })),
 ]);
 
 /** Matches a URL path (with or without trailing slash) to a route. */
@@ -44,7 +63,16 @@ export function langFromPath(pathname: string): Language {
 /** Same page in the other language. */
 export function alternatePath(route: Route): string {
   const other: Language = route.lang === "en" ? "ar" : "en";
-  return route.page === "home" ? HOME_PATHS[other] : servicePath(route.slug, other);
+  switch (route.page) {
+    case "home":
+      return HOME_PATHS[other];
+    case "service":
+      return servicePath(route.slug, other);
+    case "insights":
+      return insightsPath(other);
+    case "article":
+      return articlePath(route.slug, other);
+  }
 }
 
 const HOME_META: Record<Language, { title: string; description: string }> = {
@@ -62,10 +90,38 @@ const HOME_META: Record<Language, { title: string; description: string }> = {
 
 const LOCALE: Record<Language, string> = { en: "en_US", ar: "ar_SA" };
 
+export const INSIGHTS_META: Record<Language, { title: string; description: string; h1: string; intro: string }> = {
+  en: {
+    title: "IT & Cybersecurity Insights for Saudi Businesses | Thoughts House",
+    description:
+      "Practical guides on cybersecurity compliance, firewalls, backup, Wi-Fi and IT infrastructure for organizations in Saudi Arabia.",
+    h1: "Insights",
+    intro: "Practical guides for IT decision makers in Saudi Arabia — from cybersecurity compliance to backup and networking.",
+  },
+  ar: {
+    title: "مقالات في تقنية المعلومات والأمن السيبراني للشركات في السعودية | بيت الأفكار",
+    description:
+      "أدلة عملية حول الالتزام بالأمن السيبراني وجدران الحماية والنسخ الاحتياطي وشبكات Wi-Fi والبنية التحتية للمنشآت في المملكة.",
+    h1: "مقالات ومعرفة",
+    intro: "أدلة عملية لمتخذي قرارات تقنية المعلومات في المملكة، من الالتزام بالأمن السيبراني إلى النسخ الاحتياطي والشبكات.",
+  },
+};
+
 export function getMeta(route: Route) {
-  if (route.page === "home") return HOME_META[route.lang];
-  const c = SERVICES[route.slug].content[route.lang];
-  return { title: c.metaTitle, description: c.metaDescription };
+  switch (route.page) {
+    case "home":
+      return HOME_META[route.lang];
+    case "service": {
+      const c = SERVICES[route.slug].content[route.lang];
+      return { title: c.metaTitle, description: c.metaDescription };
+    }
+    case "insights":
+      return INSIGHTS_META[route.lang];
+    case "article": {
+      const c = getArticle(route.slug).content[route.lang];
+      return { title: c.metaTitle, description: c.description };
+    }
+  }
 }
 
 export function getTitle(route: Route) {
@@ -131,19 +187,77 @@ function structuredData(route: Route) {
   const url = SITE_URL + route.path;
   const graph: object[] = [organization];
 
+  const home = HOME_PATHS[route.lang];
+  const homeCrumb = { "@type": "ListItem", position: 1, name: route.lang === "ar" ? "الرئيسية" : "Home", item: SITE_URL + home };
+
   if (route.page === "home") {
-    graph.push({
-      "@type": "WebSite",
-      "@id": `${SITE_URL}/#website`,
-      url: `${SITE_URL}/`,
-      name: "Thoughts House",
-      inLanguage: ["en", "ar"],
-      publisher: { "@id": ORG_ID },
-    });
+    graph.push(
+      {
+        "@type": "WebSite",
+        "@id": `${SITE_URL}/#website`,
+        url: `${SITE_URL}/`,
+        name: "Thoughts House",
+        inLanguage: ["en", "ar"],
+        publisher: { "@id": ORG_ID },
+      },
+      {
+        "@type": "FAQPage",
+        inLanguage: route.lang,
+        mainEntity: HOME_FAQ[route.lang].items.map((f) => ({
+          "@type": "Question",
+          name: f.q,
+          acceptedAnswer: { "@type": "Answer", text: f.a },
+        })),
+      },
+    );
+  } else if (route.page === "insights") {
+    graph.push(
+      {
+        "@type": "CollectionPage",
+        name: INSIGHTS_META[route.lang].h1,
+        url,
+        inLanguage: route.lang,
+        hasPart: ARTICLES.map((a) => ({
+          "@type": "Article",
+          headline: a.content[route.lang].title,
+          url: SITE_URL + articlePath(a.slug, route.lang),
+        })),
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [homeCrumb, { "@type": "ListItem", position: 2, name: INSIGHTS_META[route.lang].h1, item: url }],
+      },
+    );
+  } else if (route.page === "article") {
+    const a = getArticle(route.slug);
+    const c = a.content[route.lang];
+    graph.push(
+      {
+        "@type": "Article",
+        "@id": `${url}#article`,
+        headline: c.title,
+        description: c.description,
+        url,
+        mainEntityOfPage: url,
+        image: `${SITE_URL}/images/og-${a.service}.jpg`,
+        inLanguage: route.lang,
+        datePublished: a.published,
+        dateModified: a.published,
+        author: { "@id": ORG_ID },
+        publisher: { "@id": ORG_ID },
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          homeCrumb,
+          { "@type": "ListItem", position: 2, name: INSIGHTS_META[route.lang].h1, item: SITE_URL + insightsPath(route.lang) },
+          { "@type": "ListItem", position: 3, name: c.title, item: url },
+        ],
+      },
+    );
   } else {
     const service = SERVICES[route.slug];
     const c = service.content[route.lang];
-    const home = HOME_PATHS[route.lang];
     graph.push(
       {
         "@type": "Service",
@@ -168,7 +282,7 @@ function structuredData(route: Route) {
       {
         "@type": "BreadcrumbList",
         itemListElement: [
-          { "@type": "ListItem", position: 1, name: route.lang === "ar" ? "الرئيسية" : "Home", item: SITE_URL + home },
+          homeCrumb,
           { "@type": "ListItem", position: 2, name: c.name, item: url },
         ],
       },
@@ -202,7 +316,7 @@ export function renderHead(route: Route): string {
     `<link rel="alternate" hreflang="en" href="${SITE_URL}${enPath}" />`,
     `<link rel="alternate" hreflang="ar" href="${SITE_URL}${arPath}" />`,
     `<link rel="alternate" hreflang="x-default" href="${SITE_URL}${enPath}" />`,
-    `<meta property="og:type" content="website" />`,
+    `<meta property="og:type" content="${route.page === "article" ? "article" : "website"}" />`,
     `<meta property="og:site_name" content="Thoughts House" />`,
     `<meta property="og:title" content="${esc(m.title)}" />`,
     `<meta property="og:description" content="${esc(m.description)}" />`,
@@ -250,4 +364,34 @@ export function renderNotFoundHead(): string {
     `<title>Page not found | Thoughts House</title>`,
     `<meta name="robots" content="noindex" />`,
   ].join("\n    ");
+}
+
+/** llms.txt — a plain summary of the company and its key pages for AI assistants. */
+export function renderLlmsTxt(): string {
+  const lines = [
+    "# Thoughts House (بيت الأفكار)",
+    "",
+    "> IT system integrator and IT supplier based in Dammam, Eastern Province, Saudi Arabia, serving organizations across the Kingdom. Services: cybersecurity, network infrastructure, cloud & backup, and IT hardware supply & software licensing. Bilingual website (English / Arabic).",
+    "",
+    "- Email: sales@thoughtshouse.com",
+    "- Phone / WhatsApp: +966 54 102 2995",
+    "- Location: Dammam, Saudi Arabia",
+    "- Technology partners include: Sophos, Cisco, Palo Alto Networks, CrowdStrike, Check Point, Trend Micro, Microsoft, Microsoft Azure, AWS, Dell, HP, Lenovo, Supermicro, ASUS, NVIDIA, Apple, Veeam, Veritas, Acronis, Backblaze, NetApp, Pure Storage, Western Digital, Seagate, Buffalo",
+    "",
+    "## Services",
+    ...SERVICE_SLUGS.map((slug) => {
+      const c = SERVICES[slug].content.en;
+      return `- [${c.name}](${SITE_URL}${servicePath(slug, "en")}): ${c.metaDescription}`;
+    }),
+    "",
+    "## Insights",
+    ...ARTICLES.map((a) => `- [${a.content.en.title}](${SITE_URL}${articlePath(a.slug, "en")}): ${a.content.en.description}`),
+    "",
+    "## Arabic",
+    `- [الصفحة الرئيسية](${SITE_URL}/ar/)`,
+    ...SERVICE_SLUGS.map((slug) => `- [${SERVICES[slug].content.ar.name}](${SITE_URL}${servicePath(slug, "ar")})`),
+    `- [${INSIGHTS_META.ar.h1}](${SITE_URL}${insightsPath("ar")})`,
+    "",
+  ];
+  return lines.join("\n");
 }

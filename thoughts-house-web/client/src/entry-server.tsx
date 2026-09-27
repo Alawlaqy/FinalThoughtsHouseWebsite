@@ -4,8 +4,12 @@
  */
 import { renderToString } from "react-dom/server";
 import App from "./App";
+import { ARTICLE_BODIES } from "./content/articleBodies";
+import { provideArticleBodies } from "./content/articleBodyStore";
 
-export { renderHead, renderNotFoundHead, renderSitemap, ROUTES } from "./seo";
+provideArticleBodies(ARTICLE_BODIES);
+
+export { renderHead, renderNotFoundHead, renderSitemap, renderLlmsTxt, ROUTES } from "./seo";
 
 export function render(path: string) {
   return renderToString(<App path={path} />);

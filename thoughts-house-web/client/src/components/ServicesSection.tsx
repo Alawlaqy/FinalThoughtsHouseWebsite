@@ -220,6 +220,13 @@ export default function ServicesSection() {
             );
           })}
         </div>
+
+        <p className="mt-14 text-center text-[#64748B]">
+          {t("services.supplyCta")}{" "}
+          <a href={servicePath("it-supply", lang)} className="font-semibold text-[#2563EB] hover:underline">
+            {t("services.supplyLink")}
+          </a>
+        </p>
       </div>
     </section>
   );

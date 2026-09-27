@@ -1,0 +1,28 @@
+# Notify Bing (and other IndexNow engines) of all site URLs after each successful
+# Vercel production deployment, so new and updated pages are indexed within hours.
+name: IndexNow
+
+on:
+  deployment_status:
+
+jobs:
+  submit:
+    if: >-
+      github.event.deployment_status.state == 'success' &&
+      startsWith(github.event.deployment.environment, 'Production')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Submit sitemap URLs to IndexNow
+        env:
+          HOST: www.thoughtshouse.com
+          # Public key — also served at https://www.thoughtshouse.com/<KEY>.txt
+          KEY: 202ce8c366ab79cae699e6976bd80408
+        run: |
+          urls=$(curl -sf "https://$HOST/sitemap.xml" | grep -o '<loc>[^<]*' | sed 's/<loc>//' | jq -R . | jq -sc .)
+          echo "Submitting: $urls"
+          payload=$(jq -nc --arg host "$HOST" --arg key "$KEY" --argjson urls "$urls" \
+            '{host: $host, key: $key, keyLocation: "https://\($host)/\($key).txt", urlList: $urls}')
+          curl -sf -X POST "https://api.indexnow.org/indexnow" \
+            -H "Content-Type: application/json; charset=utf-8" \
+            -d "$payload" \
+            -w "IndexNow HTTP %{http_code}\n"
