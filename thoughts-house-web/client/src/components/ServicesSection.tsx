@@ -6,9 +6,9 @@
 import { useState } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { servicePath } from "@/seo";
+import { imageSrcSet } from "@/content/services";
 import type { ServiceSlug } from "@/content/services";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
-import { motion } from "framer-motion";
 import {
   ShieldCheck,
   Network,
@@ -19,9 +19,9 @@ import {
 } from "lucide-react";
 
 const IMAGES = {
-  cybersecurity: "https://d2xsxph8kpxj0f.cloudfront.net/310419663032266291/6GEufHXYFFmAikUkdcoDrJ/cybersecurity-Tk6v5uPJnToKTo9TXqDmCD.webp",
-  network: "https://d2xsxph8kpxj0f.cloudfront.net/310419663032266291/6GEufHXYFFmAikUkdcoDrJ/network-infra-i9Hm8tpzm5hNWDuLfBfjTt.webp",
-  cloud: "https://d2xsxph8kpxj0f.cloudfront.net/310419663032266291/6GEufHXYFFmAikUkdcoDrJ/cloud-solutions-8rEytQ7iMWksfRUJYD9d6y.webp",
+  cybersecurity: "/images/cybersecurity-1280.webp",
+  network: "/images/network-infrastructure-1280.webp",
+  cloud: "/images/cloud-backup-1280.webp",
 };
 
 type TabKey = "cybersecurity" | "network" | "cloud";
@@ -156,21 +156,21 @@ export default function ServicesSection() {
             const isActive = tab.key === activeTab;
             const Icon = tab.icon;
             return (
-              <motion.div
+              <div
                 key={tab.key}
                 id={`service-${tab.key}`}
                 role="tabpanel"
                 aria-labelledby={`service-tab-${tab.key}`}
                 hidden={!isActive}
-                initial={false}
-                animate={isActive ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                transition={{ duration: 0.4 }}
-                className="grid lg:grid-cols-2 gap-10 items-center"
+                style={{ "--reveal-y": "20px", "--reveal-duration": "0.4s" } as React.CSSProperties}
+                className="reveal-up grid lg:grid-cols-2 gap-10 items-center"
               >
                 {/* Image */}
                 <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-[#1E293B]/10 group">
                   <img
                     src={tab.image}
+                    srcSet={imageSrcSet(tab.image)}
+                    sizes="(min-width: 1024px) 50vw, 100vw"
                     alt={t(tab.titleKey)}
                     width={1920}
                     height={1072}
@@ -216,7 +216,7 @@ export default function ServicesSection() {
                     <Arrow className="w-4 h-4" aria-hidden="true" />
                   </a>
                 </div>
-              </motion.div>
+              </div>
             );
           })}
         </div>

@@ -1,7 +1,4 @@
-import { Toaster } from "@/components/ui/sonner";
-import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/NotFound";
-import { Router as WouterRouter } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import { LanguageProvider } from "./contexts/LanguageContext";
@@ -20,12 +17,7 @@ function App({ path }: { path: string }) {
     <ErrorBoundary>
       <ThemeProvider defaultTheme="light">
         <LanguageProvider lang={lang} altHref={route ? alternatePath(route) : HOME_PATHS[lang === "en" ? "ar" : "en"]}>
-          <TooltipProvider>
-            <Toaster />
-            <WouterRouter ssrPath={typeof window === "undefined" ? path : undefined}>
-              {!route ? <NotFound /> : route.page === "home" ? <Home /> : <ServicePage slug={route.slug} />}
-            </WouterRouter>
-          </TooltipProvider>
+          {!route ? <NotFound /> : route.page === "home" ? <Home /> : <ServicePage slug={route.slug} />}
         </LanguageProvider>
       </ThemeProvider>
     </ErrorBoundary>

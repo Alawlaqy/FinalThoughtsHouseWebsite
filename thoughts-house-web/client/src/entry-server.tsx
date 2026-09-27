@@ -5,7 +5,7 @@
 import { renderToString } from "react-dom/server";
 import App from "./App";
 
-export { renderHead, renderSitemap, ROUTES } from "./seo";
+export { renderHead, renderNotFoundHead, renderSitemap, ROUTES } from "./seo";
 
 export function render(path: string) {
   return renderToString(<App path={path} />);

@@ -6,7 +6,6 @@
 import { useState, useEffect } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Menu, X, Globe } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
 
 const navLinks = [
   { key: "nav.home", href: "#home" },
@@ -53,7 +52,7 @@ export default function Navbar() {
           className="flex items-center gap-2 group"
         >
           <img
-            src="https://d2xsxph8kpxj0f.cloudfront.net/310419663032266291/6GEufHXYFFmAikUkdcoDrJ/thoughts-house-logo-transparent_8229ec19.png"
+            src="/images/logo-96.webp"
             alt="Thoughts House Logo"
             width={44}
             height={44}
@@ -134,14 +133,9 @@ export default function Navbar() {
       </nav>
 
       {/* Mobile Menu */}
-      <AnimatePresence>
-        {mobileOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.2 }}
-            className="md:hidden bg-white border-t border-gray-100 shadow-lg overflow-hidden"
+      {mobileOpen && (
+          <div
+            className="pop-in md:hidden bg-white border-t border-gray-100 shadow-lg overflow-hidden"
           >
             <div className="container py-4 flex flex-col gap-1">
               {navLinks.map((link) => (
@@ -162,9 +156,8 @@ export default function Navbar() {
                 {t("hero.contact")}
               </a>
             </div>
-          </motion.div>
+          </div>
         )}
-      </AnimatePresence>
     </header>
   );
 }

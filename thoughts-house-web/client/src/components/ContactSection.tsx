@@ -6,9 +6,7 @@
 import { useState } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
-import { motion } from "framer-motion";
 import { Mail, Phone, MapPin, Send, CheckCircle, Loader2 } from "lucide-react";
-import { toast } from "sonner";
 
 const CONTACT_ENDPOINT = "https://formsubmit.co/ajax/sales@thoughtshouse.com";
 
@@ -23,6 +21,7 @@ export default function ContactSection() {
   });
   const [submitted, setSubmitted] = useState(false);
   const [sending, setSending] = useState(false);
+  const [error, setError] = useState(false);
 
   // Messages are delivered to the sales inbox via FormSubmit (https://formsubmit.co).
   // The very first submission triggers a one-time activation email to that inbox.
@@ -32,6 +31,7 @@ export default function ContactSection() {
     if (honeypot) return; // spam bot filled the hidden field
 
     setSending(true);
+    setError(false);
     try {
       const res = await fetch(CONTACT_ENDPOINT, {
         method: "POST",
@@ -52,12 +52,11 @@ export default function ContactSection() {
         throw new Error(data.message || `HTTP ${res.status}`);
       }
       setSubmitted(true);
-      toast.success(t("contact.sent"));
       setFormData({ name: "", company: "", email: "", message: "" });
-      setTimeout(() => setSubmitted(false), 3000);
+      setTimeout(() => setSubmitted(false), 6000);
     } catch (err) {
       console.error("Contact form failed", err);
-      toast.error(t("contact.error"));
+      setError(true);
     } finally {
       setSending(false);
     }
@@ -199,6 +198,10 @@ export default function ContactSection() {
                     </>
                   )}
                 </button>
+                <p role="status" aria-live="polite" className="text-sm">
+                  {submitted && <span className="text-green-700 font-medium">{t("contact.sent")}</span>}
+                  {error && <span className="text-red-600 font-medium">{t("contact.error")}</span>}
+                </p>
               </form>
             </div>
           </div>
@@ -210,14 +213,11 @@ export default function ContactSection() {
               {contactInfo.map((info, i) => {
                 const Icon = info.icon;
                 return (
-                  <motion.a
+                  <a
                     key={i}
                     href={info.href}
                     target={info.href.startsWith("http") ? "_blank" : undefined}
                     rel={info.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                    initial={{ opacity: 0, x: lang === "ar" ? -20 : 20 }}
-                    animate={isVisible ? { opacity: 1, x: 0 } : {}}
-                    transition={{ duration: 0.4, delay: 0.3 + i * 0.1 }}
                     className="flex items-center gap-4 p-4 bg-[#F8FAFC] rounded-xl border border-gray-100 hover:border-[#2563EB]/20 hover:shadow-md transition-all duration-300 group"
                   >
                     <div className="w-12 h-12 rounded-xl bg-[#2563EB]/10 flex items-center justify-center flex-shrink-0 group-hover:bg-[#2563EB]/20 transition-colors">
@@ -226,7 +226,7 @@ export default function ContactSection() {
                     <span className="text-sm font-medium text-[#334155] group-hover:text-[#2563EB] transition-colors">
                       {info.label}
                     </span>
-                  </motion.a>
+                  </a>
                 );
               })}
             </div>

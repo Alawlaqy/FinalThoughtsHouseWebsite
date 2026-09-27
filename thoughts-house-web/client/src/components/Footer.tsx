@@ -36,7 +36,7 @@ export default function Footer() {
           <div>
             <div className="flex items-center gap-2 mb-4">
               <img
-                src="https://d2xsxph8kpxj0f.cloudfront.net/310419663032266291/6GEufHXYFFmAikUkdcoDrJ/thoughts-house-logo-transparent_8229ec19.png"
+                src="/images/logo-96.webp"
                 alt="Thoughts House Logo"
                 width={48}
                 height={48}

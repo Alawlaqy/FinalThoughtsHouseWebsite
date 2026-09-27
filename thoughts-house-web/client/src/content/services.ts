@@ -8,7 +8,10 @@ export type ServiceSlug = "cybersecurity" | "network-infrastructure" | "cloud-ba
 
 export const SERVICE_SLUGS: ServiceSlug[] = ["cybersecurity", "network-infrastructure", "cloud-backup"];
 
-const CDN = "https://d2xsxph8kpxj0f.cloudfront.net/310419663032266291/6GEufHXYFFmAikUkdcoDrJ";
+/** Responsive srcset for a service image ("/images/<name>-1280.webp" also exists at 720w). */
+export function imageSrcSet(src: string) {
+  return `${src.replace("-1280.", "-720.")} 720w, ${src} 1280w`;
+}
 
 interface Localized {
   /** <title> */
@@ -37,7 +40,7 @@ export interface Service {
   content: Record<Language, Localized>;
 }
 
-const WHY_EN = [
+export const WHY_EN = [
   {
     title: "Local team in Dammam",
     text: "We are based in Dammam and work with organizations across Saudi Arabia, so you deal directly with the engineers who design, deploy and support your systems.",
@@ -52,7 +55,7 @@ const WHY_EN = [
   },
 ];
 
-const WHY_AR = [
+export const WHY_AR = [
   {
     title: "فريق محلي في الدمام",
     text: "مقرّنا في الدمام ونخدم المؤسسات في مختلف مناطق المملكة، فتتعامل مباشرة مع المهندسين الذين يصممون أنظمتك وينفذونها ويدعمونها.",
@@ -70,7 +73,7 @@ const WHY_AR = [
 export const SERVICES: Record<ServiceSlug, Service> = {
   cybersecurity: {
     slug: "cybersecurity",
-    image: `${CDN}/cybersecurity-Tk6v5uPJnToKTo9TXqDmCD.webp`,
+    image: "/images/cybersecurity-1280.webp",
     vendors: ["Sophos", "Palo Alto Networks", "CrowdStrike", "Check Point", "Trend Micro", "Cisco", "Microsoft"],
     content: {
       en: {
@@ -185,7 +188,7 @@ export const SERVICES: Record<ServiceSlug, Service> = {
 
   "network-infrastructure": {
     slug: "network-infrastructure",
-    image: `${CDN}/network-infra-i9Hm8tpzm5hNWDuLfBfjTt.webp`,
+    image: "/images/network-infrastructure-1280.webp",
     vendors: ["Cisco", "HP", "Dell", "Lenovo", "Supermicro", "ASUS"],
     content: {
       en: {
@@ -300,7 +303,7 @@ export const SERVICES: Record<ServiceSlug, Service> = {
 
   "cloud-backup": {
     slug: "cloud-backup",
-    image: `${CDN}/cloud-solutions-8rEytQ7iMWksfRUJYD9d6y.webp`,
+    image: "/images/cloud-backup-1280.webp",
     vendors: ["Microsoft Azure", "AWS", "Veeam", "Veritas", "Acronis", "Backblaze", "NetApp", "Pure Storage", "Dell"],
     content: {
       en: {

@@ -6,6 +6,7 @@
  *   /ar/                    → dist/public/ar/index.html
  *   /services/<slug>/       → dist/public/services/<slug>/index.html
  *   /ar/services/<slug>/    → dist/public/ar/services/<slug>/index.html
+ *   (unknown URLs)          → dist/public/404.html
  *
  * Also writes sitemap.xml for all routes. Runs after `vite build` (client) and
  * `vite build --ssr` (server entry).
@@ -18,7 +19,7 @@ const root = path.resolve(import.meta.dirname, "..");
 const publicDir = path.join(root, "dist", "public");
 const serverEntry = path.join(root, "dist", "server", "entry-server.js");
 
-const { render, renderHead, renderSitemap, ROUTES } = await import(pathToFileURL(serverEntry).href);
+const { render, renderHead, renderNotFoundHead, renderSitemap, ROUTES } = await import(pathToFileURL(serverEntry).href);
 const template = fs.readFileSync(path.join(publicDir, "index.html"), "utf-8");
 
 for (const route of ROUTES) {
@@ -33,6 +34,15 @@ for (const route of ROUTES) {
   fs.writeFileSync(path.join(outDir, "index.html"), html);
   console.log(`prerendered ${route.path}`);
 }
+
+// 404.html — served by the host for any unknown URL
+fs.writeFileSync(
+  path.join(publicDir, "404.html"),
+  template
+    .replace(/<!--seo-head-->[\s\S]*?<!--\/seo-head-->/, () => renderNotFoundHead())
+    .replace("<!--app-html-->", () => render("/404")),
+);
+console.log("prerendered 404.html");
 
 fs.writeFileSync(path.join(publicDir, "sitemap.xml"), renderSitemap(new Date().toISOString().slice(0, 10)));
 console.log(`sitemap.xml → ${ROUTES.length} URLs`);

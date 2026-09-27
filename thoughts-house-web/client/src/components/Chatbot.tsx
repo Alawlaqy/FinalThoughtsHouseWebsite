@@ -4,7 +4,6 @@
  */
 import { useState, useRef, useEffect } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
-import { motion, AnimatePresence } from "framer-motion";
 import { MessageCircle, X, Send, Bot } from "lucide-react";
 
 interface Message {
@@ -91,14 +90,9 @@ export default function Chatbot() {
   return (
     <div className={`fixed bottom-6 ${lang === "ar" ? "right-6" : "left-6"} z-40`}>
       {/* Chat Window */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: 20, scale: 0.9 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: 20, scale: 0.9 }}
-            transition={{ duration: 0.3 }}
-            className="mb-4 w-[340px] sm:w-[380px] bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden flex flex-col"
+      {isOpen && (
+          <div
+            className="pop-in mb-4 w-[340px] sm:w-[380px] bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden flex flex-col"
             style={{ maxHeight: "500px" }}
           >
             {/* Header */}
@@ -185,18 +179,15 @@ export default function Chatbot() {
                 <Send className="w-4 h-4" />
               </button>
             </form>
-          </motion.div>
+          </div>
         )}
-      </AnimatePresence>
 
       {/* Toggle Button */}
-      <motion.button
+      <button
         onClick={() => setIsOpen(!isOpen)}
         aria-label={isOpen ? (lang === "en" ? "Close chat" : "إغلاق المحادثة") : (lang === "en" ? "Open chat assistant" : "فتح المساعد")}
         aria-expanded={isOpen}
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
-        className={`w-14 h-14 rounded-full flex items-center justify-center shadow-lg transition-all duration-300 ${
+        className={`hover:scale-105 active:scale-95 w-14 h-14 rounded-full flex items-center justify-center shadow-lg transition-all duration-300 ${
           isOpen
             ? "bg-[#1E293B] shadow-[#1E293B]/30"
             : "bg-[#2563EB] shadow-[#2563EB]/30 hover:shadow-xl hover:shadow-[#2563EB]/40"
@@ -207,7 +198,7 @@ export default function Chatbot() {
         ) : (
           <MessageCircle className="w-6 h-6 text-white" />
         )}
-      </motion.button>
+      </button>
     </div>
   );
 }

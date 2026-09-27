@@ -6,7 +6,6 @@
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
-const CDN = "https://d2xsxph8kpxj0f.cloudfront.net/310419663032266291/6GEufHXYFFmAikUkdcoDrJ";
 
 interface Partner {
   name: string;
@@ -14,31 +13,31 @@ interface Partner {
 }
 
 export const partners: Partner[] = [
-  { name: "Sophos", logo: `${CDN}/sophos_36cf4b72.png` },
-  { name: "Dell", logo: `${CDN}/dell_8cbd4e7c.png` },
-  { name: "HP", logo: `${CDN}/hp_a059a6b6.png` },
-  { name: "Lenovo", logo: `${CDN}/lenovo_20c8ed51.png` },
-  { name: "AWS", logo: `${CDN}/aws_332948b0.png` },
-  { name: "Cisco", logo: `${CDN}/cisco_a8d2b755.png` },
-  { name: "Palo Alto Networks", logo: `${CDN}/paloalto_47512556.jpg` },
-  { name: "CrowdStrike", logo: `${CDN}/crowdstrike_45a13678.jpg` },
-  { name: "Check Point", logo: `${CDN}/checkpoint_b4c37eb0.png` },
-  { name: "Trend Micro", logo: `${CDN}/trendmicro_25aaff59.png` },
-  { name: "Apple", logo: `${CDN}/apple_831318cf.png` },
-  { name: "Microsoft", logo: `${CDN}/microsoft_e888e042.jpg` },
-  { name: "Supermicro", logo: `${CDN}/supermicro_42510d91.png` },
-  { name: "ASUS", logo: `${CDN}/asus_b1db9bea.png` },
-  { name: "NVIDIA", logo: `${CDN}/nvidia_38a21bcb.png` },
-  { name: "Veeam", logo: `${CDN}/veeam_02f27d55.webp` },
-  { name: "Microsoft Azure", logo: `${CDN}/azure_90458907.png` },
-  { name: "Veritas", logo: `${CDN}/veritas_e84ec80b.png` },
-  { name: "Acronis", logo: `${CDN}/acronis_4de1df87.png` },
-  { name: "Backblaze", logo: `${CDN}/backblaze_83dc6208.png` },
-  { name: "NetApp", logo: `${CDN}/netapp_72237aa9.png` },
-  { name: "Western Digital", logo: `${CDN}/westerndigital_a371731a.png` },
-  { name: "Seagate", logo: `${CDN}/seagate_91398734.png` },
-  { name: "Pure Storage", logo: `${CDN}/purestorage_771f30e3.png` },
-  { name: "Buffalo", logo: `${CDN}/buffalo_f7d9a99d.webp` },
+  { name: "Sophos", logo: "/images/partners/sophos.webp" },
+  { name: "Dell", logo: "/images/partners/dell.webp" },
+  { name: "HP", logo: "/images/partners/hp.webp" },
+  { name: "Lenovo", logo: "/images/partners/lenovo.webp" },
+  { name: "AWS", logo: "/images/partners/aws.webp" },
+  { name: "Cisco", logo: "/images/partners/cisco.webp" },
+  { name: "Palo Alto Networks", logo: "/images/partners/paloalto.webp" },
+  { name: "CrowdStrike", logo: "/images/partners/crowdstrike.webp" },
+  { name: "Check Point", logo: "/images/partners/checkpoint.webp" },
+  { name: "Trend Micro", logo: "/images/partners/trendmicro.webp" },
+  { name: "Apple", logo: "/images/partners/apple.webp" },
+  { name: "Microsoft", logo: "/images/partners/microsoft.webp" },
+  { name: "Supermicro", logo: "/images/partners/supermicro.webp" },
+  { name: "ASUS", logo: "/images/partners/asus.webp" },
+  { name: "NVIDIA", logo: "/images/partners/nvidia.webp" },
+  { name: "Veeam", logo: "/images/partners/veeam.webp" },
+  { name: "Microsoft Azure", logo: "/images/partners/azure.webp" },
+  { name: "Veritas", logo: "/images/partners/veritas.webp" },
+  { name: "Acronis", logo: "/images/partners/acronis.webp" },
+  { name: "Backblaze", logo: "/images/partners/backblaze.webp" },
+  { name: "NetApp", logo: "/images/partners/netapp.webp" },
+  { name: "Western Digital", logo: "/images/partners/westerndigital.webp" },
+  { name: "Seagate", logo: "/images/partners/seagate.webp" },
+  { name: "Pure Storage", logo: "/images/partners/purestorage.webp" },
+  { name: "Buffalo", logo: "/images/partners/buffalo.webp" },
 ];
 
 // The marquee repeats the list 3x for a seamless loop; only the first copy is exposed

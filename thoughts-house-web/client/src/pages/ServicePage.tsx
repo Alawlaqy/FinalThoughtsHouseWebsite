@@ -10,7 +10,7 @@ import WhatsAppWidget from "@/components/WhatsAppWidget";
 import Chatbot from "@/components/Chatbot";
 import { partners } from "@/components/PartnersSection";
 import { useLanguage } from "@/contexts/LanguageContext";
-import { SERVICES, SERVICE_SLUGS, type ServiceSlug } from "@/content/services";
+import { SERVICES, SERVICE_SLUGS, imageSrcSet, type ServiceSlug } from "@/content/services";
 import { servicePath } from "@/seo";
 import { CheckCircle2, ChevronDown, ChevronLeft, ChevronRight, MapPin, Layers, Wrench, ArrowLeft, ArrowRight } from "lucide-react";
 
@@ -36,6 +36,8 @@ export default function ServicePage({ slug }: { slug: ServiceSlug }) {
           <div className="absolute inset-0">
             <img
               src={service.image}
+              srcSet={imageSrcSet(service.image)}
+              sizes="100vw"
               alt=""
               width={1920}
               height={1072}

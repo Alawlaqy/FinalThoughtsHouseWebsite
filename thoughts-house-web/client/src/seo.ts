@@ -8,10 +8,10 @@ import { SERVICES, SERVICE_SLUGS, type ServiceSlug } from "./content/services";
 export type Language = "en" | "ar";
 
 export const SITE_URL = "https://www.thoughtshouse.com";
-export const LOGO_URL =
-  "https://d2xsxph8kpxj0f.cloudfront.net/310419663032266291/6GEufHXYFFmAikUkdcoDrJ/thoughts-house-logo-transparent_8229ec19.png";
-export const OG_IMAGE =
-  "https://d2xsxph8kpxj0f.cloudfront.net/310419663032266291/6GEufHXYFFmAikUkdcoDrJ/hero-bg-Vr4m9Ly3dbEfs2tnY82hfX.webp";
+export const LOGO_URL = `${SITE_URL}/images/logo-192.png`;
+/** 1200x630 JPG share images (JPG for widest social-platform support) */
+export const OG_IMAGE = `${SITE_URL}/images/og-home.jpg`;
+const ogImage = (route: Route) => (route.page === "service" ? `${SITE_URL}/images/og-${route.slug}.jpg` : OG_IMAGE);
 
 const ORG_ID = `${SITE_URL}/#organization`;
 
@@ -152,7 +152,7 @@ function structuredData(route: Route) {
         serviceType: SERVICES[route.slug].content.en.name,
         description: c.metaDescription,
         url,
-        image: service.image,
+        image: SITE_URL + service.image,
         inLanguage: route.lang,
         provider: { "@id": ORG_ID },
         areaServed: { "@type": "Country", name: "Saudi Arabia" },
@@ -192,7 +192,7 @@ export function renderHead(route: Route): string {
   const url = SITE_URL + route.path;
   const enPath = route.lang === "en" ? route.path : alternatePath(route);
   const arPath = route.lang === "ar" ? route.path : alternatePath(route);
-  const image = route.page === "service" ? SERVICES[route.slug].image : OG_IMAGE;
+  const image = ogImage(route);
   const other: Language = route.lang === "en" ? "ar" : "en";
 
   return [
@@ -208,6 +208,8 @@ export function renderHead(route: Route): string {
     `<meta property="og:description" content="${esc(m.description)}" />`,
     `<meta property="og:url" content="${url}" />`,
     `<meta property="og:image" content="${image}" />`,
+    `<meta property="og:image:width" content="1200" />`,
+    `<meta property="og:image:height" content="630" />`,
     `<meta property="og:locale" content="${LOCALE[route.lang]}" />`,
     `<meta property="og:locale:alternate" content="${LOCALE[other]}" />`,
     `<meta name="twitter:card" content="summary_large_image" />`,
@@ -240,4 +242,12 @@ export function renderSitemap(lastmod: string): string {
     "</urlset>",
     "",
   ].join("\n");
+}
+
+/** <head> for the 404 page (served for any unknown URL; never indexed). */
+export function renderNotFoundHead(): string {
+  return [
+    `<title>Page not found | Thoughts House</title>`,
+    `<meta name="robots" content="noindex" />`,
+  ].join("\n    ");
 }
