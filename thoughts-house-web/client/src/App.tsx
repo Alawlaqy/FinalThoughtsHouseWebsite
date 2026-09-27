@@ -1,35 +1,29 @@
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/NotFound";
-import { Route, Router as WouterRouter, Switch } from "wouter";
+import { Router as WouterRouter } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import { LanguageProvider } from "./contexts/LanguageContext";
 import Home from "./pages/Home";
-import { langFromPath } from "./seo";
-
-function Router() {
-  return (
-    <Switch>
-      <Route path={"/"} component={Home} />
-      <Route path={"/ar"} component={Home} />
-      <Route path={"/ar/"} component={Home} />
-      <Route path={"/404"} component={NotFound} />
-      <Route component={NotFound} />
-    </Switch>
-  );
-}
+import ServicePage from "./pages/ServicePage";
+import { alternatePath, HOME_PATHS, langFromPath, resolveRoute } from "./seo";
 
 /** `path` is the request path — passed explicitly during prerendering, read from the URL in the browser. */
 function App({ path }: { path: string }) {
+  // Every page is a real URL (prerendered to static HTML), so routing is a simple lookup;
+  // navigation between pages is a normal full-page link.
+  const route = resolveRoute(path);
+  const lang = route?.lang ?? langFromPath(path);
+
   return (
     <ErrorBoundary>
       <ThemeProvider defaultTheme="light">
-        <LanguageProvider lang={langFromPath(path)}>
+        <LanguageProvider lang={lang} altHref={route ? alternatePath(route) : HOME_PATHS[lang === "en" ? "ar" : "en"]}>
           <TooltipProvider>
             <Toaster />
             <WouterRouter ssrPath={typeof window === "undefined" ? path : undefined}>
-              <Router />
+              {!route ? <NotFound /> : route.page === "home" ? <Home /> : <ServicePage slug={route.slug} />}
             </WouterRouter>
           </TooltipProvider>
         </LanguageProvider>

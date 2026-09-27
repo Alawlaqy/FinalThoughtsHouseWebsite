@@ -16,7 +16,7 @@ const navLinks = [
 ];
 
 export default function Navbar() {
-  const { t, lang, altHref } = useLanguage();
+  const { t, lang, altHref, homeHref } = useLanguage();
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -26,10 +26,13 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const handleNavClick = (href: string) => {
+  // Section links point at the home page (e.g. "/#services") so they also work from service
+  // pages; when the section exists on the current page we scroll to it instead of navigating.
+  const handleNavClick = (e: React.MouseEvent, hash: string) => {
     setMobileOpen(false);
-    const el = document.querySelector(href);
+    const el = document.querySelector(hash);
     if (el) {
+      e.preventDefault();
       el.scrollIntoView({ behavior: "smooth" });
     }
   };
@@ -45,8 +48,8 @@ export default function Navbar() {
       <nav className="container flex items-center justify-between h-18 md:h-20">
         {/* Logo */}
         <a
-          href="#home"
-          onClick={(e) => { e.preventDefault(); handleNavClick("#home"); }}
+          href={homeHref}
+          onClick={(e) => handleNavClick(e, "#home")}
           className="flex items-center gap-2 group"
         >
           <img
@@ -71,8 +74,8 @@ export default function Navbar() {
           {navLinks.map((link) => (
             <a
               key={link.key}
-              href={link.href}
-              onClick={(e) => { e.preventDefault(); handleNavClick(link.href); }}
+              href={homeHref + link.href}
+              onClick={(e) => handleNavClick(e, link.href)}
               className={`px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 hover:bg-[#2563EB]/10 ${
                 scrolled ? "text-[#1E293B] hover:text-[#2563EB]" : "text-white/90 hover:text-white"
               }`}
@@ -97,8 +100,8 @@ export default function Navbar() {
 
           {/* CTA */}
           <a
-            href="#contact"
-            onClick={(e) => { e.preventDefault(); handleNavClick("#contact"); }}
+            href={homeHref + "#contact"}
+            onClick={(e) => handleNavClick(e, "#contact")}
             className="ml-2 px-5 py-2.5 bg-[#2563EB] text-white text-sm font-semibold rounded-lg hover:bg-[#1D4ED8] transition-all duration-200 hover:shadow-lg hover:shadow-[#2563EB]/25 active:scale-[0.98]"
           >
             {t("hero.contact")}
@@ -144,16 +147,16 @@ export default function Navbar() {
               {navLinks.map((link) => (
                 <a
                   key={link.key}
-                  href={link.href}
-                  onClick={(e) => { e.preventDefault(); handleNavClick(link.href); }}
+                  href={homeHref + link.href}
+                  onClick={(e) => handleNavClick(e, link.href)}
                   className="px-4 py-3 text-[#1E293B] font-medium rounded-lg hover:bg-[#2563EB]/10 hover:text-[#2563EB] transition-colors"
                 >
                   {t(link.key)}
                 </a>
               ))}
               <a
-                href="#contact"
-                onClick={(e) => { e.preventDefault(); handleNavClick("#contact"); }}
+                href={homeHref + "#contact"}
+                onClick={(e) => handleNavClick(e, "#contact")}
                 className="mt-2 px-4 py-3 bg-[#2563EB] text-white font-semibold rounded-lg text-center hover:bg-[#1D4ED8] transition-colors"
               >
                 {t("hero.contact")}

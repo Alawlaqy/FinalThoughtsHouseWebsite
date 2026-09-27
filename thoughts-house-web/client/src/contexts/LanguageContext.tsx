@@ -1,11 +1,13 @@
 import { createContext, useContext, useCallback, useEffect, type ReactNode } from "react";
-import { PATHS, getTitle, type Language } from "@/seo";
+import type { Language } from "@/seo";
 
 interface LanguageContextType {
   lang: Language;
   dir: "ltr" | "rtl";
   /** URL of the same page in the other language (e.g. "/ar/") */
   altHref: string;
+  /** Home page URL in the current language */
+  homeHref: string;
   t: (key: string) => string;
 }
 
@@ -63,6 +65,7 @@ const translations: Record<string, Record<Language, string>> = {
   "services.cloud.server": { en: "Server Management", ar: "إدارة الخوادم" },
   "services.cloud.backup": { en: "Automated Backup", ar: "النسخ الاحتياطي التلقائي" },
   "services.cloud.migration": { en: "Cloud Migration", ar: "الترحيل السحابي" },
+  "services.learnMore": { en: "Learn more about", ar: "اعرف المزيد عن" },
 
   // Partners
   "partners.title": { en: "Our Strategic Partners", ar: "شركاؤنا الاستراتيجيون" },
@@ -103,6 +106,7 @@ const translations: Record<string, Record<Language, string>> = {
   "footer.slogan": { en: "We Build & Protect Your Network", ar: "نبني ونحمي شبكتك" },
   "footer.quickLinks": { en: "Quick Links", ar: "روابط سريعة" },
   "footer.contactInfo": { en: "Contact Info", ar: "معلومات التواصل" },
+  "footer.services": { en: "Services", ar: "خدماتنا" },
 
   // Chatbot
   "chatbot.title": { en: "Thoughts House Assistant", ar: "مساعد بيت الأفكار" },
@@ -139,16 +143,15 @@ const translations: Record<string, Record<Language, string>> = {
 
 const LanguageContext = createContext<LanguageContextType | null>(null);
 
-// Each language lives at its own URL (/ and /ar/) so search engines can index both.
-// Switching language is a normal link to the other URL.
-export function LanguageProvider({ lang, children }: { lang: Language; children: ReactNode }) {
+// Each language lives at its own URL (/ and /ar/, /services/x/ and /ar/services/x/) so search
+// engines can index both. Switching language is a normal link to the other URL.
+export function LanguageProvider({ lang, altHref, children }: { lang: Language; altHref: string; children: ReactNode }) {
   const dir = lang === "ar" ? "rtl" : "ltr";
-  const altHref = PATHS[lang === "en" ? "ar" : "en"];
+  const homeHref = lang === "ar" ? "/ar/" : "/";
 
   useEffect(() => {
     document.documentElement.lang = lang;
     document.documentElement.dir = dir;
-    document.title = getTitle(lang);
   }, [lang, dir]);
 
   const t = useCallback(
@@ -159,7 +162,7 @@ export function LanguageProvider({ lang, children }: { lang: Language; children:
   );
 
   return (
-    <LanguageContext.Provider value={{ lang, dir, altHref, t }}>
+    <LanguageContext.Provider value={{ lang, dir, altHref, homeHref, t }}>
       {children}
     </LanguageContext.Provider>
   );

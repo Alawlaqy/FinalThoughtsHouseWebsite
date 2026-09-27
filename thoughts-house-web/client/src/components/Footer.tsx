@@ -4,13 +4,18 @@
  */
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Mail, Phone, MapPin } from "lucide-react";
+import { SERVICES, SERVICE_SLUGS } from "@/content/services";
+import { servicePath } from "@/seo";
 
 export default function Footer() {
-  const { t, lang } = useLanguage();
+  const { t, lang, homeHref } = useLanguage();
 
-  const handleNavClick = (href: string) => {
-    const el = document.querySelector(href);
-    if (el) el.scrollIntoView({ behavior: "smooth" });
+  const handleNavClick = (e: React.MouseEvent, hash: string) => {
+    const el = document.querySelector(hash);
+    if (el) {
+      e.preventDefault();
+      el.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   const navLinks = [
@@ -26,7 +31,7 @@ export default function Footer() {
       <div className="h-1 bg-gradient-to-r from-[#2563EB] via-[#60A5FA] to-[#2563EB]" />
 
       <div className="container py-16">
-        <div className="grid md:grid-cols-3 gap-12">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2 mb-4">
@@ -57,11 +62,30 @@ export default function Footer() {
               {navLinks.map((link) => (
                 <li key={link.key}>
                   <a
-                    href={link.href}
-                    onClick={(e) => { e.preventDefault(); handleNavClick(link.href); }}
+                    href={homeHref + link.href}
+                    onClick={(e) => handleNavClick(e, link.href)}
                     className="text-sm text-white/60 hover:text-[#60A5FA] transition-colors duration-200"
                   >
                     {t(link.key)}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Services */}
+          <div>
+            <h2 className="text-sm font-bold uppercase tracking-wider text-white/80 mb-5">
+              {t("footer.services")}
+            </h2>
+            <ul className="space-y-3">
+              {SERVICE_SLUGS.map((slug) => (
+                <li key={slug}>
+                  <a
+                    href={servicePath(slug, lang)}
+                    className="text-sm text-white/60 hover:text-[#60A5FA] transition-colors duration-200"
+                  >
+                    {SERVICES[slug].content[lang].name}
                   </a>
                 </li>
               ))}

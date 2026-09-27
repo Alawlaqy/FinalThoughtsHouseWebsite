@@ -13,7 +13,7 @@ interface Partner {
   logo: string;
 }
 
-const partners: Partner[] = [
+export const partners: Partner[] = [
   { name: "Sophos", logo: `${CDN}/sophos_36cf4b72.png` },
   { name: "Dell", logo: `${CDN}/dell_8cbd4e7c.png` },
   { name: "HP", logo: `${CDN}/hp_a059a6b6.png` },

@@ -5,6 +5,8 @@
  */
 import { useState } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { servicePath } from "@/seo";
+import type { ServiceSlug } from "@/content/services";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { motion } from "framer-motion";
 import {
@@ -12,6 +14,8 @@ import {
   Network,
   Cloud,
   CheckCircle2,
+  ArrowRight,
+  ArrowLeft,
 } from "lucide-react";
 
 const IMAGES = {
@@ -24,6 +28,7 @@ type TabKey = "cybersecurity" | "network" | "cloud";
 
 interface TabData {
   key: TabKey;
+  slug: ServiceSlug;
   icon: typeof ShieldCheck;
   titleKey: string;
   descKey: string;
@@ -34,6 +39,7 @@ interface TabData {
 const tabs: TabData[] = [
   {
     key: "cybersecurity",
+    slug: "cybersecurity",
     icon: ShieldCheck,
     titleKey: "services.cybersecurity",
     descKey: "services.cybersecurity.desc",
@@ -48,6 +54,7 @@ const tabs: TabData[] = [
   },
   {
     key: "network",
+    slug: "network-infrastructure",
     icon: Network,
     titleKey: "services.network",
     descKey: "services.network.desc",
@@ -62,6 +69,7 @@ const tabs: TabData[] = [
   },
   {
     key: "cloud",
+    slug: "cloud-backup",
     icon: Cloud,
     titleKey: "services.cloud",
     descKey: "services.cloud.desc",
@@ -77,7 +85,8 @@ const tabs: TabData[] = [
 ];
 
 export default function ServicesSection() {
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
+  const Arrow = lang === "ar" ? ArrowLeft : ArrowRight;
   const [activeTab, setActiveTab] = useState<TabKey>("cybersecurity");
   const { ref: sectionRef, isVisible } = useScrollReveal({ threshold: 0.05 });
 
@@ -199,6 +208,13 @@ export default function ServicesSection() {
                       </li>
                     ))}
                   </ul>
+                  <a
+                    href={servicePath(tab.slug, lang)}
+                    className="group mt-8 inline-flex items-center gap-2 px-6 py-3 bg-[#2563EB] text-white font-semibold rounded-lg hover:bg-[#1D4ED8] transition-all duration-300"
+                  >
+                    {t("services.learnMore")} {t(tab.titleKey)}
+                    <Arrow className="w-4 h-4" aria-hidden="true" />
+                  </a>
                 </div>
               </motion.div>
             );
