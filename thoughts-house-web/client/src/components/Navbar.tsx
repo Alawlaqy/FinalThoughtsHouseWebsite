@@ -16,7 +16,7 @@ const navLinks = [
 ];
 
 export default function Navbar() {
-  const { t, lang, toggleLanguage } = useLanguage();
+  const { t, lang, altHref } = useLanguage();
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -52,6 +52,8 @@ export default function Navbar() {
           <img
             src="https://d2xsxph8kpxj0f.cloudfront.net/310419663032266291/6GEufHXYFFmAikUkdcoDrJ/thoughts-house-logo-transparent_8229ec19.png"
             alt="Thoughts House Logo"
+            width={44}
+            height={44}
             className="w-11 h-11 object-contain"
           />
           <div className="flex flex-col">
@@ -80,17 +82,18 @@ export default function Navbar() {
           ))}
 
           {/* Language Toggle */}
-          <button
-            onClick={toggleLanguage}
+          <a
+            href={altHref}
+            hrefLang={lang === "en" ? "ar" : "en"}
             className={`flex items-center gap-1.5 px-3 py-2 text-sm font-medium rounded-lg transition-all duration-200 ${
               scrolled
                 ? "text-[#64748B] hover:text-[#2563EB] hover:bg-[#2563EB]/10"
                 : "text-white/70 hover:text-white hover:bg-white/10"
             }`}
           >
-            <Globe className="w-4 h-4" />
+            <Globe className="w-4 h-4" aria-hidden="true" />
             {lang === "en" ? "العربية" : "English"}
-          </button>
+          </a>
 
           {/* CTA */}
           <a
@@ -104,17 +107,21 @@ export default function Navbar() {
 
         {/* Mobile Menu Button */}
         <div className="flex items-center gap-2 md:hidden">
-          <button
-            onClick={toggleLanguage}
-            className={`p-2 rounded-lg transition-colors ${
+          <a
+            href={altHref}
+            hrefLang={lang === "en" ? "ar" : "en"}
+            aria-label={lang === "en" ? "العربية" : "English"}
+            className={`p-3 rounded-lg transition-colors ${
               scrolled ? "text-[#64748B]" : "text-white/70"
             }`}
           >
-            <Globe className="w-5 h-5" />
-          </button>
+            <Globe className="w-5 h-5" aria-hidden="true" />
+          </a>
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className={`p-2 rounded-lg transition-colors ${
+            aria-label={mobileOpen ? (lang === "en" ? "Close menu" : "إغلاق القائمة") : (lang === "en" ? "Open menu" : "فتح القائمة")}
+            aria-expanded={mobileOpen}
+            className={`p-2.5 rounded-lg transition-colors ${
               scrolled ? "text-[#1E293B]" : "text-white"
             }`}
           >

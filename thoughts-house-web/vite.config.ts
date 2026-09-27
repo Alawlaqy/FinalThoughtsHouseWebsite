@@ -150,7 +150,16 @@ function vitePluginManusDebugCollector(): Plugin {
   };
 }
 
-const plugins = [react(), tailwindcss(), jsxLocPlugin(), vitePluginManusRuntime(), vitePluginManusDebugCollector()];
+// The Manus runtime (inlines ~300KB of script into index.html) and jsx-loc (adds a data-loc
+// source path to every element) are only needed inside the Manus editor, so they are limited
+// to the dev server and kept out of production builds.
+const plugins = [
+  react(),
+  tailwindcss(),
+  { ...jsxLocPlugin(), apply: "serve" } as Plugin,
+  { ...vitePluginManusRuntime(), apply: "serve" } as Plugin,
+  vitePluginManusDebugCollector(),
+];
 
 export default defineConfig({
   plugins,

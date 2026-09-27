@@ -41,12 +41,17 @@ const partners: Partner[] = [
   { name: "Buffalo", logo: `${CDN}/buffalo_f7d9a99d.webp` },
 ];
 
-function PartnerCard({ partner }: { partner: Partner }) {
+// The marquee repeats the list 3x for a seamless loop; only the first copy is exposed
+// to screen readers / search engines, the repeats are decorative.
+function PartnerCard({ partner, decorative = false }: { partner: Partner; decorative?: boolean }) {
   return (
-    <div className="flex-shrink-0 mx-3 px-8 py-5 bg-white rounded-xl shadow-sm border border-gray-100 flex items-center justify-center hover:shadow-md hover:border-[#2563EB]/20 transition-all duration-300 group min-w-[160px] h-[80px]">
+    <div aria-hidden={decorative || undefined} className="flex-shrink-0 mx-3 px-8 py-5 bg-white rounded-xl shadow-sm border border-gray-100 flex items-center justify-center hover:shadow-md hover:border-[#2563EB]/20 transition-all duration-300 group min-w-[160px] h-[80px]">
       <img
         src={partner.logo}
-        alt={partner.name}
+        alt={decorative ? "" : partner.name}
+        width={120}
+        height={44}
+        decoding="async"
         className="max-h-[44px] max-w-[120px] object-contain grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300"
         loading="lazy"
       />
@@ -96,7 +101,7 @@ export default function PartnersSection() {
           style={{ width: "max-content" }}
         >
           {[...firstHalf, ...firstHalf, ...firstHalf].map((partner, i) => (
-            <PartnerCard key={`r1-${i}`} partner={partner} />
+            <PartnerCard key={`r1-${i}`} partner={partner} decorative={i >= firstHalf.length} />
           ))}
         </div>
       </div>
@@ -112,7 +117,7 @@ export default function PartnersSection() {
           style={{ width: "max-content" }}
         >
           {[...secondHalf, ...secondHalf, ...secondHalf].map((partner, i) => (
-            <PartnerCard key={`r2-${i}`} partner={partner} />
+            <PartnerCard key={`r2-${i}`} partner={partner} decorative={i >= secondHalf.length} />
           ))}
         </div>
       </div>

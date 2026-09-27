@@ -6,7 +6,7 @@
 import { useState } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import {
   ShieldCheck,
   Network,
@@ -81,8 +81,6 @@ export default function ServicesSection() {
   const [activeTab, setActiveTab] = useState<TabKey>("cybersecurity");
   const { ref: sectionRef, isVisible } = useScrollReveal({ threshold: 0.05 });
 
-  const activeData = tabs.find((tab) => tab.key === activeTab)!;
-
   return (
     <section id="services" className="py-24 bg-white geometric-pattern" ref={sectionRef}>
       <div className="container">
@@ -108,6 +106,7 @@ export default function ServicesSection() {
 
         {/* Tab Buttons */}
         <div
+          role="tablist"
           className={`flex flex-wrap justify-center gap-3 mb-12 transition-all duration-700 delay-200 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
@@ -118,6 +117,10 @@ export default function ServicesSection() {
             return (
               <button
                 key={tab.key}
+                id={`service-tab-${tab.key}`}
+                role="tab"
+                aria-selected={isActive}
+                aria-controls={`service-${tab.key}`}
                 onClick={() => setActiveTab(tab.key)}
                 className={`group flex items-center gap-2.5 px-6 py-3.5 rounded-xl font-semibold text-sm transition-all duration-300 ${
                   isActive
@@ -138,61 +141,68 @@ export default function ServicesSection() {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={activeTab}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.4 }}
-              className="grid lg:grid-cols-2 gap-10 items-center"
-            >
-              {/* Image */}
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-[#1E293B]/10 group">
-                <img
-                  src={activeData.image}
-                  alt={t(activeData.titleKey)}
-                  className="w-full h-[320px] sm:h-[400px] object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#1E293B]/40 to-transparent" />
-                <div className="absolute bottom-6 left-6 right-6">
-                  <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/95 backdrop-blur-sm rounded-lg shadow-lg">
-                    {(() => {
-                      const Icon = activeData.icon;
-                      return <Icon className="w-5 h-5 text-[#2563EB]" />;
-                    })()}
-                    <span className="font-bold text-[#1E293B]">{t(activeData.titleKey)}</span>
+          {/* All panels are rendered so every service is in the HTML for search engines;
+              inactive ones are hidden until their tab is selected. */}
+          {tabs.map((tab) => {
+            const isActive = tab.key === activeTab;
+            const Icon = tab.icon;
+            return (
+              <motion.div
+                key={tab.key}
+                id={`service-${tab.key}`}
+                role="tabpanel"
+                aria-labelledby={`service-tab-${tab.key}`}
+                hidden={!isActive}
+                initial={false}
+                animate={isActive ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                transition={{ duration: 0.4 }}
+                className="grid lg:grid-cols-2 gap-10 items-center"
+              >
+                {/* Image */}
+                <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-[#1E293B]/10 group">
+                  <img
+                    src={tab.image}
+                    alt={t(tab.titleKey)}
+                    width={1920}
+                    height={1072}
+                    loading="lazy"
+                    decoding="async"
+                    className="w-full h-[320px] sm:h-[400px] object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#1E293B]/40 to-transparent" />
+                  <div className="absolute bottom-6 left-6 right-6">
+                    <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/95 backdrop-blur-sm rounded-lg shadow-lg">
+                      <Icon className="w-5 h-5 text-[#2563EB]" />
+                      <span className="font-bold text-[#1E293B]">{t(tab.titleKey)}</span>
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              {/* Content */}
-              <div>
-                <h3 className="text-2xl sm:text-3xl font-bold text-[#1E293B] mb-4">
-                  {t(activeData.titleKey)}
-                </h3>
-                <p className="text-[#64748B] leading-relaxed mb-8 text-base">
-                  {t(activeData.descKey)}
-                </p>
-                <div className="space-y-3">
-                  {activeData.features.map((featureKey, i) => (
-                    <motion.div
-                      key={featureKey}
-                      initial={{ opacity: 0, x: -10 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.3, delay: i * 0.1 }}
-                      className="flex items-center gap-3 p-3 rounded-lg hover:bg-[#F8FAFC] transition-colors group"
-                    >
-                      <div className="w-8 h-8 rounded-lg bg-[#2563EB]/10 flex items-center justify-center flex-shrink-0 group-hover:bg-[#2563EB]/20 transition-colors">
-                        <CheckCircle2 className="w-4 h-4 text-[#2563EB]" />
-                      </div>
-                      <span className="font-medium text-[#334155]">{t(featureKey)}</span>
-                    </motion.div>
-                  ))}
+                {/* Content */}
+                <div>
+                  <h3 className="text-2xl sm:text-3xl font-bold text-[#1E293B] mb-4">
+                    {t(tab.titleKey)}
+                  </h3>
+                  <p className="text-[#64748B] leading-relaxed mb-8 text-base">
+                    {t(tab.descKey)}
+                  </p>
+                  <ul className="space-y-3">
+                    {tab.features.map((featureKey) => (
+                      <li
+                        key={featureKey}
+                        className="flex items-center gap-3 p-3 rounded-lg hover:bg-[#F8FAFC] transition-colors group"
+                      >
+                        <div className="w-8 h-8 rounded-lg bg-[#2563EB]/10 flex items-center justify-center flex-shrink-0 group-hover:bg-[#2563EB]/20 transition-colors">
+                          <CheckCircle2 className="w-4 h-4 text-[#2563EB]" aria-hidden="true" />
+                        </div>
+                        <span className="font-medium text-[#334155]">{t(featureKey)}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-              </div>
-            </motion.div>
-          </AnimatePresence>
+              </motion.div>
+            );
+          })}
         </div>
       </div>
     </section>

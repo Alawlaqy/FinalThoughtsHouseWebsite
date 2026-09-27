@@ -33,6 +33,9 @@ export default function Footer() {
               <img
                 src="https://d2xsxph8kpxj0f.cloudfront.net/310419663032266291/6GEufHXYFFmAikUkdcoDrJ/thoughts-house-logo-transparent_8229ec19.png"
                 alt="Thoughts House Logo"
+                width={48}
+                height={48}
+                loading="lazy"
                 className="w-12 h-12 object-contain brightness-0 invert"
               />
               <div>
@@ -47,9 +50,9 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-sm font-bold uppercase tracking-wider text-white/80 mb-5">
+            <h2 className="text-sm font-bold uppercase tracking-wider text-white/80 mb-5">
               {t("footer.quickLinks")}
-            </h4>
+            </h2>
             <ul className="space-y-3">
               {navLinks.map((link) => (
                 <li key={link.key}>
@@ -67,9 +70,9 @@ export default function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h4 className="text-sm font-bold uppercase tracking-wider text-white/80 mb-5">
+            <h2 className="text-sm font-bold uppercase tracking-wider text-white/80 mb-5">
               {t("footer.contactInfo")}
-            </h4>
+            </h2>
             <ul className="space-y-3">
               <li>
                 <a href="mailto:sales@thoughtshouse.com" className="flex items-center gap-3 text-sm text-white/60 hover:text-[#60A5FA] transition-colors">

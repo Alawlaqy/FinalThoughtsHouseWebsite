@@ -117,6 +117,7 @@ export default function Chatbot() {
               </div>
               <button
                 onClick={() => setIsOpen(false)}
+                aria-label={lang === "en" ? "Close chat" : "إغلاق المحادثة"}
                 className="p-1.5 rounded-lg hover:bg-white/10 transition-colors"
               >
                 <X className="w-5 h-5 text-white/70" />
@@ -169,6 +170,7 @@ export default function Chatbot() {
             <form onSubmit={handleSubmit} className="p-3 border-t border-gray-100 flex gap-2">
               <input
                 type="text"
+                aria-label={t("chatbot.placeholder")}
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
                 placeholder={t("chatbot.placeholder")}
@@ -177,6 +179,7 @@ export default function Chatbot() {
               <button
                 type="submit"
                 disabled={!input.trim()}
+                aria-label={lang === "en" ? "Send" : "إرسال"}
                 className="p-2.5 bg-[#2563EB] text-white rounded-xl hover:bg-[#1D4ED8] transition-colors disabled:opacity-40"
               >
                 <Send className="w-4 h-4" />
@@ -189,6 +192,8 @@ export default function Chatbot() {
       {/* Toggle Button */}
       <motion.button
         onClick={() => setIsOpen(!isOpen)}
+        aria-label={isOpen ? (lang === "en" ? "Close chat" : "إغلاق المحادثة") : (lang === "en" ? "Open chat assistant" : "فتح المساعد")}
+        aria-expanded={isOpen}
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
         className={`w-14 h-14 rounded-full flex items-center justify-center shadow-lg transition-all duration-300 ${

@@ -24,7 +24,10 @@ export default function HeroSection() {
       <div className="absolute inset-0">
         <img
           src={HERO_BG}
-          alt="Data center background"
+          alt=""
+          width={1920}
+          height={1072}
+          fetchPriority="high"
           className="w-full h-full object-cover"
         />
         {/* Dark overlay with gradient */}

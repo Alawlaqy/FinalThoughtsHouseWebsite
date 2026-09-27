@@ -1,11 +1,11 @@
-import { createContext, useContext, useState, useCallback, useEffect, type ReactNode } from "react";
-
-type Language = "en" | "ar";
+import { createContext, useContext, useCallback, useEffect, type ReactNode } from "react";
+import { PATHS, getTitle, type Language } from "@/seo";
 
 interface LanguageContextType {
   lang: Language;
   dir: "ltr" | "rtl";
-  toggleLanguage: () => void;
+  /** URL of the same page in the other language (e.g. "/ar/") */
+  altHref: string;
   t: (key: string) => string;
 }
 
@@ -134,19 +134,17 @@ const translations: Record<string, Record<Language, string>> = {
 
 const LanguageContext = createContext<LanguageContextType | null>(null);
 
-export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [lang, setLang] = useState<Language>("en");
-
+// Each language lives at its own URL (/ and /ar/) so search engines can index both.
+// Switching language is a normal link to the other URL.
+export function LanguageProvider({ lang, children }: { lang: Language; children: ReactNode }) {
   const dir = lang === "ar" ? "rtl" : "ltr";
+  const altHref = PATHS[lang === "en" ? "ar" : "en"];
 
   useEffect(() => {
     document.documentElement.lang = lang;
     document.documentElement.dir = dir;
+    document.title = getTitle(lang);
   }, [lang, dir]);
-
-  const toggleLanguage = useCallback(() => {
-    setLang((prev) => (prev === "en" ? "ar" : "en"));
-  }, []);
 
   const t = useCallback(
     (key: string) => {
@@ -156,7 +154,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   );
 
   return (
-    <LanguageContext.Provider value={{ lang, dir, toggleLanguage, t }}>
+    <LanguageContext.Provider value={{ lang, dir, altHref, t }}>
       {children}
     </LanguageContext.Provider>
   );
