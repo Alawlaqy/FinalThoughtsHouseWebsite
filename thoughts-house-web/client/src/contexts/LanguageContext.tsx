@@ -92,6 +92,11 @@ const translations: Record<string, Record<Language, string>> = {
   "contact.emailPlaceholder": { en: "Enter your email", ar: "أدخل بريدك الإلكتروني" },
   "contact.messagePlaceholder": { en: "How can we help you?", ar: "كيف يمكننا مساعدتك؟" },
   "contact.sent": { en: "Message sent successfully!", ar: "تم إرسال الرسالة بنجاح!" },
+  "contact.sending": { en: "Sending...", ar: "جارٍ الإرسال..." },
+  "contact.error": {
+    en: "Sorry, your message could not be sent. Please email sales@thoughtshouse.com or call +966 54 102 2995.",
+    ar: "عذراً، تعذّر إرسال الرسالة. يرجى مراسلتنا على sales@thoughtshouse.com أو الاتصال على 2995 102 54 966+.",
+  },
 
   // Footer
   "footer.rights": { en: "All rights reserved.", ar: "جميع الحقوق محفوظة." },

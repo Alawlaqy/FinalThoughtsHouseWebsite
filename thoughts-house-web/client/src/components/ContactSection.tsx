@@ -7,8 +7,10 @@ import { useState } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin, Send, CheckCircle } from "lucide-react";
+import { Mail, Phone, MapPin, Send, CheckCircle, Loader2 } from "lucide-react";
 import { toast } from "sonner";
+
+const CONTACT_ENDPOINT = "https://formsubmit.co/ajax/sales@thoughtshouse.com";
 
 export default function ContactSection() {
   const { t, lang } = useLanguage();
@@ -20,15 +22,45 @@ export default function ContactSection() {
     message: "",
   });
   const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  // Messages are delivered to the sales inbox via FormSubmit (https://formsubmit.co).
+  // The very first submission triggers a one-time activation email to that inbox.
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setSubmitted(true);
-    toast.success(t("contact.sent"));
-    setTimeout(() => {
-      setSubmitted(false);
+    const honeypot = new FormData(e.currentTarget).get("_honey");
+    if (honeypot) return; // spam bot filled the hidden field
+
+    setSending(true);
+    try {
+      const res = await fetch(CONTACT_ENDPOINT, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          name: formData.name,
+          company: formData.company,
+          email: formData.email,
+          message: formData.message,
+          _replyto: formData.email,
+          _subject: `New website inquiry from ${formData.name}${formData.company ? ` (${formData.company})` : ""}`,
+          _template: "table",
+          language: lang === "ar" ? "Arabic" : "English",
+        }),
+      });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok || data.success === false || data.success === "false") {
+        throw new Error(data.message || `HTTP ${res.status}`);
+      }
+      setSubmitted(true);
+      toast.success(t("contact.sent"));
       setFormData({ name: "", company: "", email: "", message: "" });
-    }, 3000);
+      setTimeout(() => setSubmitted(false), 3000);
+    } catch (err) {
+      console.error("Contact form failed", err);
+      toast.error(t("contact.error"));
+    } finally {
+      setSending(false);
+    }
   };
 
   const contactInfo = [
@@ -81,6 +113,8 @@ export default function ContactSection() {
           <div className="lg:col-span-3">
             <div className="bg-[#F8FAFC] rounded-2xl p-8 border border-gray-100">
               <form onSubmit={handleSubmit} className="space-y-5">
+                {/* Honeypot: hidden from people, bots tend to fill it */}
+                <input type="text" name="_honey" tabIndex={-1} autoComplete="off" aria-hidden="true" className="hidden" />
                 <div className="grid sm:grid-cols-2 gap-5">
                   <div>
                     <label htmlFor="contact-name" className="block text-sm font-semibold text-[#1E293B] mb-2">
@@ -145,13 +179,18 @@ export default function ContactSection() {
                 </div>
                 <button
                   type="submit"
-                  disabled={submitted}
+                  disabled={submitted || sending}
                   className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-[#2563EB] text-white font-semibold rounded-xl hover:bg-[#1D4ED8] transition-all duration-300 hover:shadow-lg hover:shadow-[#2563EB]/25 active:scale-[0.98] disabled:opacity-70"
                 >
                   {submitted ? (
                     <>
                       <CheckCircle className="w-5 h-5" />
                       {t("contact.sent")}
+                    </>
+                  ) : sending ? (
+                    <>
+                      <Loader2 className="w-5 h-5 animate-spin" />
+                      {t("contact.sending")}
                     </>
                   ) : (
                     <>
