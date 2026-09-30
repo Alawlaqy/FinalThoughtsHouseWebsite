@@ -71,7 +71,10 @@ export default function ServicePage({ slug }: { slug: ServiceSlug }) {
               </ol>
             </nav>
             <h1 className="max-w-3xl text-4xl sm:text-5xl font-extrabold text-white leading-[1.15] mb-6">{c.h1}</h1>
-            <p className="max-w-2xl text-lg sm:text-xl text-white/75 leading-relaxed mb-10">{c.intro}</p>
+            <p className="max-w-2xl text-lg sm:text-xl text-white/75 leading-relaxed mb-6">{c.intro}</p>
+            <p className="max-w-2xl text-base text-white/90 leading-relaxed mb-10 ps-4 border-s-2 border-[#60A5FA]">
+              {c.summary}
+            </p>
             <a
               href="#contact"
               className="inline-flex items-center gap-2 px-7 py-3.5 bg-[#2563EB] text-white font-semibold rounded-lg hover:bg-[#1D4ED8] transition-all duration-300 hover:shadow-xl hover:shadow-[#2563EB]/30"

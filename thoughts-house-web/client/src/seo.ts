@@ -6,6 +6,8 @@
 import { SERVICES, SERVICE_SLUGS, type ServiceSlug } from "./content/services";
 import { ARTICLES, getArticle, type ArticleSlug } from "./content/articles";
 import { HOME_FAQ } from "./content/homeFaq";
+import { ABOUT, COMPANY } from "./content/about";
+import { getArticleBody } from "./content/articleBodyStore";
 
 export type Language = "en" | "ar";
 
@@ -25,6 +27,7 @@ const ORG_ID = `${SITE_URL}/#organization`;
 export type Route =
   | { page: "home"; lang: Language; path: string }
   | { page: "service"; lang: Language; path: string; slug: ServiceSlug }
+  | { page: "about"; lang: Language; path: string }
   | { page: "insights"; lang: Language; path: string }
   | { page: "article"; lang: Language; path: string; slug: ArticleSlug };
 
@@ -32,6 +35,10 @@ export const HOME_PATHS: Record<Language, string> = { en: "/", ar: "/ar/" };
 
 export function servicePath(slug: ServiceSlug, lang: Language) {
   return `${lang === "ar" ? "/ar" : ""}/services/${slug}/`;
+}
+
+export function aboutPath(lang: Language) {
+  return `${lang === "ar" ? "/ar" : ""}/about/`;
 }
 
 export function insightsPath(lang: Language) {
@@ -46,6 +53,7 @@ export function articlePath(slug: ArticleSlug, lang: Language) {
 export const ROUTES: Route[] = (["en", "ar"] as Language[]).flatMap((lang) => [
   { page: "home" as const, lang, path: HOME_PATHS[lang] },
   ...SERVICE_SLUGS.map((slug) => ({ page: "service" as const, lang, slug, path: servicePath(slug, lang) })),
+  { page: "about" as const, lang, path: aboutPath(lang) },
   { page: "insights" as const, lang, path: insightsPath(lang) },
   ...ARTICLES.map((a) => ({ page: "article" as const, lang, slug: a.slug, path: articlePath(a.slug, lang) })),
 ]);
@@ -68,6 +76,8 @@ export function alternatePath(route: Route): string {
       return HOME_PATHS[other];
     case "service":
       return servicePath(route.slug, other);
+    case "about":
+      return aboutPath(other);
     case "insights":
       return insightsPath(other);
     case "article":
@@ -115,6 +125,8 @@ export function getMeta(route: Route) {
       const c = SERVICES[route.slug].content[route.lang];
       return { title: c.metaTitle, description: c.metaDescription };
     }
+    case "about":
+      return { title: ABOUT[route.lang].metaTitle, description: ABOUT[route.lang].metaDescription };
     case "insights":
       return INSIGHTS_META[route.lang];
     case "article": {
@@ -141,16 +153,20 @@ const organization = {
   url: `${SITE_URL}/`,
   logo: LOGO_URL,
   image: OG_IMAGE,
-  email: "sales@thoughtshouse.com",
-  telephone: "+966541022995",
+  email: COMPANY.email,
+  telephone: COMPANY.phone,
   address: {
     "@type": "PostalAddress",
-    addressLocality: "Dammam",
-    addressRegion: "Eastern Province",
-    addressCountry: "SA",
+    streetAddress: COMPANY.streetAddress,
+    addressLocality: COMPANY.locality,
+    addressRegion: COMPANY.region,
+    postalCode: COMPANY.postalCode,
+    addressCountry: COMPANY.country,
   },
+  slogan: "We Build & Protect Your Network",
+  knowsLanguage: ["ar", "en"],
   areaServed: { "@type": "Country", name: "Saudi Arabia" },
-  hasMap: "https://maps.app.goo.gl/SECK4KzVH42TiTxD6",
+  hasMap: COMPANY.mapUrl,
   knowsAbout: [
     "Cybersecurity",
     "Endpoint Protection",
@@ -228,15 +244,44 @@ function structuredData(route: Route) {
         itemListElement: [homeCrumb, { "@type": "ListItem", position: 2, name: INSIGHTS_META[route.lang].h1, item: url }],
       },
     );
+  } else if (route.page === "about") {
+    graph.push(
+      {
+        "@type": "AboutPage",
+        name: ABOUT[route.lang].h1,
+        description: ABOUT[route.lang].summary,
+        url,
+        inLanguage: route.lang,
+        mainEntity: { "@id": ORG_ID },
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [homeCrumb, { "@type": "ListItem", position: 2, name: ABOUT[route.lang].h1, item: url }],
+      },
+    );
   } else if (route.page === "article") {
     const a = getArticle(route.slug);
     const c = a.content[route.lang];
+    // Bodies are provided at build time (entry-server), so the FAQ is available when prerendering.
+    const body = getArticleBody(route.slug, route.lang);
+    if (body?.faq.length) {
+      graph.push({
+        "@type": "FAQPage",
+        inLanguage: route.lang,
+        mainEntity: body.faq.map((f) => ({
+          "@type": "Question",
+          name: f.q,
+          acceptedAnswer: { "@type": "Answer", text: f.a },
+        })),
+      });
+    }
     graph.push(
       {
         "@type": "Article",
         "@id": `${url}#article`,
         headline: c.title,
         description: c.description,
+        ...(body?.summary.length ? { abstract: body.summary.join(" ") } : {}),
         url,
         mainEntityOfPage: url,
         image: `${SITE_URL}/images/og-${a.service}.jpg`,
@@ -371,17 +416,16 @@ export function renderLlmsTxt(): string {
   const lines = [
     "# Thoughts House (بيت الأفكار)",
     "",
-    "> IT system integrator and IT supplier based in Dammam, Eastern Province, Saudi Arabia, serving organizations across the Kingdom. Services: cybersecurity, network infrastructure, cloud & backup, and IT hardware supply & software licensing. Bilingual website (English / Arabic).",
+    `> ${ABOUT.en.summary}`,
     "",
-    "- Email: sales@thoughtshouse.com",
-    "- Phone / WhatsApp: +966 54 102 2995",
-    "- Location: Dammam, Saudi Arabia",
-    "- Technology partners include: Sophos, Cisco, Palo Alto Networks, CrowdStrike, Check Point, Trend Micro, Microsoft, Microsoft Azure, AWS, Dell, HP, Lenovo, Supermicro, ASUS, NVIDIA, Apple, Veeam, Veritas, Acronis, Backblaze, NetApp, Pure Storage, Western Digital, Seagate, Buffalo",
+    "## Company facts",
+    ...ABOUT.en.facts.map((f) => `- ${f.label}: ${f.value}`),
+    `- About page: ${SITE_URL}${aboutPath("en")}`,
     "",
     "## Services",
     ...SERVICE_SLUGS.map((slug) => {
       const c = SERVICES[slug].content.en;
-      return `- [${c.name}](${SITE_URL}${servicePath(slug, "en")}): ${c.metaDescription}`;
+      return `- [${c.name}](${SITE_URL}${servicePath(slug, "en")}): ${c.summary}`;
     }),
     "",
     "## Insights",
@@ -389,6 +433,7 @@ export function renderLlmsTxt(): string {
     "",
     "## Arabic",
     `- [الصفحة الرئيسية](${SITE_URL}/ar/)`,
+    `- [${ABOUT.ar.h1}](${SITE_URL}${aboutPath("ar")}): ${ABOUT.ar.summary}`,
     ...SERVICE_SLUGS.map((slug) => `- [${SERVICES[slug].content.ar.name}](${SITE_URL}${servicePath(slug, "ar")})`),
     `- [${INSIGHTS_META.ar.h1}](${SITE_URL}${insightsPath("ar")})`,
     "",

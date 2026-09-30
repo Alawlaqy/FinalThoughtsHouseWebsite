@@ -5,6 +5,7 @@ import { LanguageProvider } from "./contexts/LanguageContext";
 import Home from "./pages/Home";
 import ServicePage from "./pages/ServicePage";
 import InsightsPage from "./pages/InsightsPage";
+import AboutPage from "./pages/AboutPage";
 import ArticlePage from "./pages/ArticlePage";
 import { alternatePath, HOME_PATHS, langFromPath, resolveRoute } from "./seo";
 
@@ -25,6 +26,8 @@ function App({ path }: { path: string }) {
             <Home />
           ) : route.page === "service" ? (
             <ServicePage slug={route.slug} />
+          ) : route.page === "about" ? (
+            <AboutPage />
           ) : route.page === "insights" ? (
             <InsightsPage />
           ) : (

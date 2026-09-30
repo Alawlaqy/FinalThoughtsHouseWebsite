@@ -17,6 +17,7 @@ const translations: Record<string, Record<Language, string>> = {
   "nav.services": { en: "Services", ar: "الخدمات" },
   "nav.partners": { en: "Partners", ar: "الشركاء" },
   "nav.insights": { en: "Insights", ar: "مقالات" },
+  "nav.about": { en: "About Us", ar: "من نحن" },
   "nav.contact": { en: "Contact Us", ar: "تواصل معنا" },
 
   // Hero

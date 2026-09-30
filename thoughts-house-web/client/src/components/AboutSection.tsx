@@ -5,6 +5,7 @@
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { WHY_AR, WHY_EN } from "@/content/services";
+import { aboutPath } from "@/seo";
 import { MapPin, Layers, Wrench, Search, PenTool, Rocket, LifeBuoy } from "lucide-react";
 
 const WHY_ICONS = [MapPin, Layers, Wrench];
@@ -61,6 +62,9 @@ export default function AboutSection() {
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-[#1E293B] mb-4">{c.title}</h2>
           <p className="text-lg text-[#64748B] leading-relaxed">{c.intro}</p>
+          <a href={aboutPath(lang)} className="inline-block mt-4 font-semibold text-[#2563EB] hover:underline">
+            {lang === "ar" ? "المزيد عن بيت الأفكار" : "More about Thoughts House"}
+          </a>
         </div>
 
         {/* Why us */}

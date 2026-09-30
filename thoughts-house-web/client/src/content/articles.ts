@@ -11,7 +11,8 @@ export type ArticleSlug =
   | "pdpl-technical-requirements"
   | "how-to-choose-a-firewall"
   | "3-2-1-backup-ransomware"
-  | "office-wifi-planning";
+  | "office-wifi-planning"
+  | "how-to-choose-it-system-integrator";
 
 interface LocalizedArticle {
   title: string;
@@ -29,6 +30,27 @@ export interface Article {
 }
 
 export const ARTICLES: Article[] = [
+  {
+    slug: "how-to-choose-it-system-integrator",
+    published: "2026-09-30",
+    image: "/images/it-supply-1280.webp",
+    service: "it-supply",
+    content: {
+      en: {
+        title: "How to Choose an IT System Integrator in Saudi Arabia: 8 Questions to Ask",
+        metaTitle: "How to Choose an IT System Integrator in Saudi Arabia | Thoughts House",
+        description:
+          "A practical checklist for choosing an IT system integrator or reseller in Saudi Arabia: vendor partnerships, certified engineers, local presence, compliance knowledge, support and references.",
+      },
+      ar: {
+        title: "كيف تختار شركة تكامل أنظمة تقنية المعلومات في السعودية: 8 أسئلة قبل التعاقد",
+        metaTitle: "كيف تختار شركة تكامل أنظمة تقنية المعلومات في السعودية | بيت الأفكار",
+        description:
+          "قائمة عملية لاختيار شركة تكامل أنظمة أو موزّع تقنية معلومات في المملكة: الشراكات مع الشركات المصنّعة، والمهندسون المعتمدون، والتواجد المحلي، ومعرفة متطلبات الالتزام، والدعم، والمراجع.",
+      },
+    },
+  },
+
   {
     slug: "nca-essential-cybersecurity-controls",
     published: "2026-09-27",

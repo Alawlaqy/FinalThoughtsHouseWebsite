@@ -5,7 +5,7 @@
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Mail, Phone, MapPin } from "lucide-react";
 import { SERVICES, SERVICE_SLUGS } from "@/content/services";
-import { insightsPath, servicePath } from "@/seo";
+import { aboutPath, insightsPath, servicePath } from "@/seo";
 
 export default function Footer() {
   const { t, lang, homeHref } = useLanguage();
@@ -70,6 +70,14 @@ export default function Footer() {
                   </a>
                 </li>
               ))}
+              <li>
+                <a
+                  href={aboutPath(lang)}
+                  className="text-sm text-white/60 hover:text-[#60A5FA] transition-colors duration-200"
+                >
+                  {t("nav.about")}
+                </a>
+              </li>
               <li>
                 <a
                   href={insightsPath(lang)}

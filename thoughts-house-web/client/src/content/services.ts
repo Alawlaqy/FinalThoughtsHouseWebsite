@@ -4,9 +4,18 @@
  */
 import type { Language } from "@/seo";
 
-export type ServiceSlug = "cybersecurity" | "network-infrastructure" | "cloud-backup" | "it-supply";
+export type ServiceSlug =
+  | "cybersecurity"
+  | "network-infrastructure"
+  | "cloud-backup"
+  | "it-supply";
 
-export const SERVICE_SLUGS: ServiceSlug[] = ["cybersecurity", "network-infrastructure", "cloud-backup", "it-supply"];
+export const SERVICE_SLUGS: ServiceSlug[] = [
+  "cybersecurity",
+  "network-infrastructure",
+  "cloud-backup",
+  "it-supply",
+];
 
 /** Responsive srcset for a service image ("/images/<name>-1280.webp" also exists at 720w). */
 export function imageSrcSet(src: string) {
@@ -20,6 +29,8 @@ interface Localized {
   /** Short name used in nav, breadcrumbs and cards */
   name: string;
   h1: string;
+  /** Answer-first summary: a self-contained 1–2 sentence answer that search and AI engines can quote. */
+  summary: string;
   intro: string;
   offeringsTitle: string;
   offerings: { title: string; text: string }[];
@@ -74,7 +85,15 @@ export const SERVICES: Record<ServiceSlug, Service> = {
   cybersecurity: {
     slug: "cybersecurity",
     image: "/images/cybersecurity-1280.webp",
-    vendors: ["Sophos", "Palo Alto Networks", "CrowdStrike", "Check Point", "Trend Micro", "Cisco", "Microsoft"],
+    vendors: [
+      "Sophos",
+      "Palo Alto Networks",
+      "CrowdStrike",
+      "Check Point",
+      "Trend Micro",
+      "Cisco",
+      "Microsoft",
+    ],
     content: {
       en: {
         metaTitle: "Cybersecurity Solutions in Saudi Arabia | Thoughts House",
@@ -82,6 +101,8 @@ export const SERVICES: Record<ServiceSlug, Service> = {
           "Endpoint protection, next-generation firewalls, network security monitoring, threat detection and security assessments for businesses in Dammam and across Saudi Arabia.",
         name: "Cybersecurity",
         h1: "Cybersecurity Solutions in Saudi Arabia",
+        summary:
+          "Thoughts House designs, supplies and supports layered cybersecurity for organizations in Saudi Arabia: endpoint protection and EDR, next-generation firewalls, network security monitoring, threat detection and response, and security assessments — working with vendors such as Sophos, Palo Alto Networks, CrowdStrike, Check Point, Trend Micro and Microsoft.",
         intro:
           "Cyber threats keep evolving, and a single weak point can disrupt your whole business. Thoughts House designs, deploys and supports layered cybersecurity solutions that protect your users, devices, network and data — from the endpoint to the perimeter.",
         offeringsTitle: "What we deliver",
@@ -128,7 +149,8 @@ export const SERVICES: Record<ServiceSlug, Service> = {
           },
         ],
         ctaTitle: "Let's secure your business",
-        ctaText: "Tell us about your environment and we will get back to you with a recommendation.",
+        ctaText:
+          "Tell us about your environment and we will get back to you with a recommendation.",
       },
       ar: {
         metaTitle: "حلول الأمن السيبراني في السعودية | بيت الأفكار",
@@ -136,6 +158,8 @@ export const SERVICES: Record<ServiceSlug, Service> = {
           "حماية نقاط النهاية وجدران الحماية من الجيل التالي ومراقبة أمن الشبكات وكشف التهديدات وتقييم الأمان للشركات في الدمام وجميع مناطق المملكة.",
         name: "الأمن السيبراني",
         h1: "حلول الأمن السيبراني في المملكة العربية السعودية",
+        summary:
+          "يصمم بيت الأفكار حلول أمن سيبراني متعددة الطبقات للمنشآت في المملكة ويورّدها ويدعمها: حماية نقاط النهاية وEDR، وجدران الحماية من الجيل التالي، ومراقبة أمن الشبكات، وكشف التهديدات والاستجابة لها، وتقييم الأمان، بالتعاون مع شركات مثل Sophos وPalo Alto Networks وCrowdStrike وCheck Point وTrend Micro وMicrosoft.",
         intro:
           "تتطور التهديدات السيبرانية باستمرار، ونقطة ضعف واحدة قد تعطّل أعمالك بالكامل. في بيت الأفكار نصمم وننفذ وندعم حلول أمن سيبراني متعددة الطبقات تحمي المستخدمين والأجهزة والشبكة والبيانات، من نقاط النهاية وحتى حدود الشبكة.",
         offeringsTitle: "ماذا نقدّم",
@@ -162,7 +186,8 @@ export const SERVICES: Record<ServiceSlug, Service> = {
           },
         ],
         vendorsTitle: "التقنيات التي نعمل بها",
-        vendorsText: "نعمل مع أبرز شركات الأمن السيبراني ونرشّح المزيج الأنسب لبيئتك وحجم فريقك وميزانيتك.",
+        vendorsText:
+          "نعمل مع أبرز شركات الأمن السيبراني ونرشّح المزيج الأنسب لبيئتك وحجم فريقك وميزانيتك.",
         whyTitle: "لماذا بيت الأفكار",
         why: WHY_AR,
         faqTitle: "الأسئلة الشائعة",
@@ -192,11 +217,14 @@ export const SERVICES: Record<ServiceSlug, Service> = {
     vendors: ["Cisco", "HP", "Dell", "Lenovo", "Supermicro", "ASUS"],
     content: {
       en: {
-        metaTitle: "Network Infrastructure Solutions in Saudi Arabia | Thoughts House",
+        metaTitle:
+          "Network Infrastructure Solutions in Saudi Arabia | Thoughts House",
         metaDescription:
           "Enterprise routing, switching, wireless, network design and performance optimization for businesses in Dammam and across Saudi Arabia.",
         name: "Network Infrastructure",
         h1: "Network Infrastructure Solutions in Saudi Arabia",
+        summary:
+          "Thoughts House plans, builds and upgrades enterprise networks in Saudi Arabia — routing, switching, Wi-Fi, network design and performance optimization — using hardware from manufacturers such as Cisco, HP and Dell, and supports them after go-live.",
         intro:
           "Every application, phone call and cloud service depends on your network. Thoughts House plans, builds and upgrades reliable, scalable enterprise networks — wired and wireless — designed for uptime, performance and room to grow.",
         offeringsTitle: "What we deliver",
@@ -243,7 +271,8 @@ export const SERVICES: Record<ServiceSlug, Service> = {
           },
         ],
         ctaTitle: "Build a network you can rely on",
-        ctaText: "Tell us about your sites and requirements and we will propose the right design.",
+        ctaText:
+          "Tell us about your sites and requirements and we will propose the right design.",
       },
       ar: {
         metaTitle: "حلول البنية التحتية للشبكات في السعودية | بيت الأفكار",
@@ -251,6 +280,8 @@ export const SERVICES: Record<ServiceSlug, Service> = {
           "التوجيه والتبديل المؤسسي والشبكات اللاسلكية وتصميم الشبكات وتحسين أدائها للشركات في الدمام وجميع مناطق المملكة.",
         name: "البنية التحتية للشبكات",
         h1: "حلول البنية التحتية للشبكات في المملكة العربية السعودية",
+        summary:
+          "يخطط بيت الأفكار للشبكات المؤسسية في المملكة ويبنيها ويطوّرها، من التوجيه والتبديل وشبكات Wi-Fi إلى تصميم الشبكات وتحسين أدائها، باستخدام معدات من شركات مثل Cisco وHP وDell، ويدعمها بعد التشغيل.",
         intro:
           "كل تطبيق ومكالمة وخدمة سحابية تعتمد على شبكتك. في بيت الأفكار نخطط ونبني ونطوّر شبكات مؤسسية موثوقة وقابلة للتوسع، سلكية ولاسلكية، مصممة لأعلى جاهزية وأداء مع مساحة للنمو.",
         offeringsTitle: "ماذا نقدّم",
@@ -277,7 +308,8 @@ export const SERVICES: Record<ServiceSlug, Service> = {
           },
         ],
         vendorsTitle: "التقنيات التي نعمل بها",
-        vendorsText: "نورّد وندمج معدات الشبكات والبنية التحتية من كبرى الشركات المصنّعة بما يتوافق مع احتياجات الأداء والميزانية.",
+        vendorsText:
+          "نورّد وندمج معدات الشبكات والبنية التحتية من كبرى الشركات المصنّعة بما يتوافق مع احتياجات الأداء والميزانية.",
         whyTitle: "لماذا بيت الأفكار",
         why: WHY_AR,
         faqTitle: "الأسئلة الشائعة",
@@ -304,7 +336,17 @@ export const SERVICES: Record<ServiceSlug, Service> = {
   "cloud-backup": {
     slug: "cloud-backup",
     image: "/images/cloud-backup-1280.webp",
-    vendors: ["Microsoft Azure", "AWS", "Veeam", "Veritas", "Acronis", "Backblaze", "NetApp", "Pure Storage", "Dell"],
+    vendors: [
+      "Microsoft Azure",
+      "AWS",
+      "Veeam",
+      "Veritas",
+      "Acronis",
+      "Backblaze",
+      "NetApp",
+      "Pure Storage",
+      "Dell",
+    ],
     content: {
       en: {
         metaTitle: "Cloud & Backup Solutions in Saudi Arabia | Thoughts House",
@@ -312,6 +354,8 @@ export const SERVICES: Record<ServiceSlug, Service> = {
           "Data center solutions, automated backup, disaster recovery, server management and cloud migration for businesses in Dammam and across Saudi Arabia.",
         name: "Cloud & Backup Solutions",
         h1: "Cloud & Backup Solutions in Saudi Arabia",
+        summary:
+          "Thoughts House builds server, storage, backup and disaster recovery environments and migrates workloads to Microsoft Azure or AWS for organizations in Saudi Arabia, using platforms such as Veeam, Veritas, Acronis, NetApp and Pure Storage.",
         intro:
           "Hardware fails, ransomware strikes and mistakes happen — what matters is how quickly you recover. Thoughts House builds reliable server, storage, backup and cloud environments so your data stays protected and your business keeps running.",
         offeringsTitle: "What we deliver",
@@ -358,7 +402,8 @@ export const SERVICES: Record<ServiceSlug, Service> = {
           },
         ],
         ctaTitle: "Protect your data and keep your business running",
-        ctaText: "Tell us about your servers and data and we will recommend the right backup and recovery setup.",
+        ctaText:
+          "Tell us about your servers and data and we will recommend the right backup and recovery setup.",
       },
       ar: {
         metaTitle: "الحلول السحابية والنسخ الاحتياطي في السعودية | بيت الأفكار",
@@ -366,6 +411,8 @@ export const SERVICES: Record<ServiceSlug, Service> = {
           "حلول مراكز البيانات والنسخ الاحتياطي التلقائي والتعافي من الكوارث وإدارة الخوادم والترحيل السحابي للشركات في الدمام وجميع مناطق المملكة.",
         name: "الحلول السحابية والنسخ الاحتياطي",
         h1: "الحلول السحابية والنسخ الاحتياطي في المملكة العربية السعودية",
+        summary:
+          "يبني بيت الأفكار بيئات الخوادم والتخزين والنسخ الاحتياطي والتعافي من الكوارث، وينقل الأنظمة إلى Microsoft Azure أو AWS للمنشآت في المملكة، باستخدام منصات مثل Veeam وVeritas وAcronis وNetApp وPure Storage.",
         intro:
           "قد تتعطل الأجهزة، وقد تهاجمك برامج الفدية، وقد تقع الأخطاء، والأهم هو سرعة التعافي. في بيت الأفكار نبني بيئات خوادم وتخزين ونسخ احتياطي وسحابة موثوقة لتبقى بياناتك محمية وتستمر أعمالك.",
         offeringsTitle: "ماذا نقدّم",
@@ -392,7 +439,8 @@ export const SERVICES: Record<ServiceSlug, Service> = {
           },
         ],
         vendorsTitle: "التقنيات التي نعمل بها",
-        vendorsText: "نعمل مع أبرز مزوّدي السحابة والنسخ الاحتياطي والتخزين، ونختار المنصة التي تحقق أهداف التعافي لديك ضمن ميزانيتك.",
+        vendorsText:
+          "نعمل مع أبرز مزوّدي السحابة والنسخ الاحتياطي والتخزين، ونختار المنصة التي تحقق أهداف التعافي لديك ضمن ميزانيتك.",
         whyTitle: "لماذا بيت الأفكار",
         why: WHY_AR,
         faqTitle: "الأسئلة الشائعة",
@@ -411,7 +459,8 @@ export const SERVICES: Record<ServiceSlug, Service> = {
           },
         ],
         ctaTitle: "احمِ بياناتك وحافظ على استمرارية أعمالك",
-        ctaText: "أخبرنا عن خوادمك وبياناتك وسنرشّح لك حل النسخ الاحتياطي والتعافي المناسب.",
+        ctaText:
+          "أخبرنا عن خوادمك وبياناتك وسنرشّح لك حل النسخ الاحتياطي والتعافي المناسب.",
       },
     },
   },
@@ -420,16 +469,33 @@ export const SERVICES: Record<ServiceSlug, Service> = {
     slug: "it-supply",
     image: "/images/it-supply-1280.webp",
     vendors: [
-      "Dell", "HP", "Lenovo", "Supermicro", "ASUS", "NVIDIA", "Apple", "Cisco", "Sophos", "Palo Alto Networks",
-      "Microsoft", "Veeam", "NetApp", "Pure Storage", "Western Digital", "Seagate",
+      "Dell",
+      "HP",
+      "Lenovo",
+      "Supermicro",
+      "ASUS",
+      "NVIDIA",
+      "Apple",
+      "Cisco",
+      "Sophos",
+      "Palo Alto Networks",
+      "Microsoft",
+      "Veeam",
+      "NetApp",
+      "Pure Storage",
+      "Western Digital",
+      "Seagate",
     ],
     content: {
       en: {
-        metaTitle: "IT Hardware Supplier & Reseller in Dammam, Saudi Arabia | Thoughts House",
+        metaTitle:
+          "IT Hardware Supplier & Reseller in Dammam, Saudi Arabia | Thoughts House",
         metaDescription:
           "Supply of servers, storage, network and security appliances, laptops, workstations and software licenses from leading brands — with sizing, delivery and installation in Saudi Arabia.",
         name: "IT Supply & Licensing",
         h1: "IT Hardware Supply & Software Licensing in Saudi Arabia",
+        summary:
+          "Thoughts House is an IT hardware supplier and reseller in Dammam: it supplies servers, storage, network and security appliances, laptops, workstations and software licenses from brands such as Dell, HP, Lenovo, Cisco, Sophos and Microsoft, and can size, install and support them anywhere in Saudi Arabia.",
         intro:
           "Buying IT equipment is easier when your supplier also understands how it will be used. Thoughts House supplies servers, storage, networking and security appliances, end-user devices and software licenses from leading brands — and helps you choose the right models, then delivers, installs and supports them.",
         offeringsTitle: "What we supply",
@@ -476,14 +542,18 @@ export const SERVICES: Record<ServiceSlug, Service> = {
           },
         ],
         ctaTitle: "Request a quotation",
-        ctaText: "Send us your requirements or bill of materials and we will get back to you with a quotation.",
+        ctaText:
+          "Send us your requirements or bill of materials and we will get back to you with a quotation.",
       },
       ar: {
-        metaTitle: "توريد أجهزة وسيرفرات وتراخيص تقنية المعلومات في الدمام | بيت الأفكار",
+        metaTitle:
+          "توريد أجهزة وسيرفرات وتراخيص تقنية المعلومات في الدمام | بيت الأفكار",
         metaDescription:
           "توريد السيرفرات وأنظمة التخزين وأجهزة الشبكات والحماية وأجهزة الحاسب والتراخيص من أبرز العلامات التجارية، مع اختيار المواصفات والتوصيل والتركيب في السعودية.",
         name: "التوريد والتراخيص",
         h1: "توريد أجهزة تقنية المعلومات وتراخيص البرمجيات في السعودية",
+        summary:
+          "بيت الأفكار مورّد وموزّع لأجهزة تقنية المعلومات في الدمام: يورّد السيرفرات وأنظمة التخزين وأجهزة الشبكات والحماية والحواسيب ومحطات العمل وتراخيص البرمجيات من علامات مثل Dell وHP وLenovo وCisco وSophos وMicrosoft، ويساعد في اختيار المواصفات والتركيب والدعم في جميع مناطق المملكة.",
         intro:
           "شراء معدات تقنية المعلومات أسهل عندما يفهم المورّد كيف ستُستخدم. في بيت الأفكار نورّد السيرفرات وأنظمة التخزين وأجهزة الشبكات والحماية وأجهزة المستخدمين وتراخيص البرمجيات من أبرز العلامات التجارية، ونساعدك في اختيار الطرازات المناسبة، ثم نوصلها ونركّبها وندعمها.",
         offeringsTitle: "ماذا نورّد",
@@ -510,7 +580,8 @@ export const SERVICES: Record<ServiceSlug, Service> = {
           },
         ],
         vendorsTitle: "العلامات التجارية التي نورّدها",
-        vendorsText: "نورّد الأجهزة والبرمجيات من كبرى الشركات المصنّعة، ونرشّح الطرازات المناسبة لاحتياجاتك وميزانيتك.",
+        vendorsText:
+          "نورّد الأجهزة والبرمجيات من كبرى الشركات المصنّعة، ونرشّح الطرازات المناسبة لاحتياجاتك وميزانيتك.",
         whyTitle: "لماذا تشتري من بيت الأفكار",
         why: WHY_AR,
         faqTitle: "الأسئلة الشائعة",

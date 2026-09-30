@@ -73,6 +73,18 @@ export default function ArticlePage({ slug }: { slug: ArticleSlug }) {
         {/* Body */}
         <article className="py-16 bg-white">
           <div className="container max-w-3xl text-[#334155] text-[17px] leading-[1.85]">
+            {body?.summary.length ? (
+              <div className="mb-10 p-6 rounded-2xl bg-[#EFF4FF] border border-[#2563EB]/15">
+                <h2 className="text-sm font-bold uppercase tracking-wider text-[#2563EB] mb-3">
+                  {lang === "ar" ? "الخلاصة" : "Key takeaways"}
+                </h2>
+                <ul className="space-y-2 list-disc ps-6 marker:text-[#2563EB]">
+                  {body.summary.map((s) => (
+                    <li key={s}>{s}</li>
+                  ))}
+                </ul>
+              </div>
+            ) : null}
             {body?.blocks.map((b, i) =>
               "h2" in b ? (
                 <h2 key={i} className="text-2xl font-extrabold text-[#1E293B] mt-12 mb-4">
@@ -90,6 +102,22 @@ export default function ArticlePage({ slug }: { slug: ArticleSlug }) {
                 </ul>
               ),
             )}
+
+            {body?.faq.length ? (
+              <div className="mt-12">
+                <h2 className="text-2xl font-extrabold text-[#1E293B] mb-4">
+                  {lang === "ar" ? "أسئلة شائعة" : "Frequently asked questions"}
+                </h2>
+                <div className="space-y-5">
+                  {body.faq.map((f) => (
+                    <div key={f.q}>
+                      <h3 className="font-bold text-[#1E293B] mb-1">{f.q}</h3>
+                      <p>{f.a}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ) : null}
 
             {body?.sources && (
               <div className="mt-12 pt-6 border-t border-gray-100">
