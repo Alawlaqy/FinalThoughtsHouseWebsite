@@ -21,6 +21,12 @@ import {
   type BrandSlug,
 } from "./content/brandPages";
 import { getArticleBody } from "./content/articleBodyStore";
+import {
+  LOCAL_PAGES,
+  NEARBY,
+  getLocalPage,
+  type LocalSlug,
+} from "./content/local";
 
 export type Language = "en" | "ar";
 
@@ -37,7 +43,9 @@ const ogImage = (route: Route) =>
         ? `${SITE_URL}/images/og-it-supply.jpg`
         : route.page === "industry"
           ? `${SITE_URL}/images/og-it-support-amc.jpg`
-          : OG_IMAGE;
+          : route.page === "local"
+            ? `${SITE_URL}/images/og-${getLocalPage(route.slug).service}.jpg`
+            : OG_IMAGE;
 
 const ORG_ID = `${SITE_URL}/#organization`;
 
@@ -50,6 +58,7 @@ export type Route =
   | { page: "privacy"; lang: Language; path: string }
   | { page: "industry"; lang: Language; path: string; slug: IndustrySlug }
   | { page: "brand"; lang: Language; path: string; slug: BrandSlug }
+  | { page: "local"; lang: Language; path: string; slug: LocalSlug }
   | { page: "insights"; lang: Language; path: string }
   | { page: "article"; lang: Language; path: string; slug: ArticleSlug };
 
@@ -73,6 +82,10 @@ export function industryPath(slug: IndustrySlug, lang: Language) {
 
 export function brandPagePath(slug: BrandSlug, lang: Language) {
   return `${brandsPath(lang)}${slug}/`;
+}
+
+export function localPath(slug: LocalSlug, lang: Language) {
+  return `${lang === "ar" ? "/ar" : ""}/${slug}/`;
 }
 
 export function privacyPath(lang: Language) {
@@ -104,6 +117,12 @@ export const ROUTES: Route[] = (["en", "ar"] as Language[]).flatMap(lang => [
   { page: "coverage" as const, lang, path: coveragePath(lang) },
   { page: "brands" as const, lang, path: brandsPath(lang) },
   { page: "privacy" as const, lang, path: privacyPath(lang) },
+  ...LOCAL_PAGES.map(p => ({
+    page: "local" as const,
+    lang,
+    slug: p.slug,
+    path: localPath(p.slug, lang),
+  })),
   ...INDUSTRIES.map(i => ({
     page: "industry" as const,
     lang,
@@ -155,6 +174,8 @@ export function alternatePath(route: Route): string {
       return industryPath(route.slug, other);
     case "brand":
       return brandPagePath(route.slug, other);
+    case "local":
+      return localPath(route.slug, other);
     case "insights":
       return insightsPath(other);
     case "article":
@@ -233,6 +254,10 @@ export function getMeta(route: Route) {
     }
     case "brand": {
       const c = getBrandPage(route.slug).content[route.lang];
+      return { title: c.metaTitle, description: c.metaDescription };
+    }
+    case "local": {
+      const c = getLocalPage(route.slug).content[route.lang];
       return { title: c.metaTitle, description: c.metaDescription };
     }
     case "insights":
@@ -604,6 +629,58 @@ function structuredData(route: Route) {
         })),
       }
     );
+  } else if (route.page === "local") {
+    const p = getLocalPage(route.slug);
+    const c = p.content[route.lang];
+    graph.push(
+      {
+        "@type": "Service",
+        "@id": `${url}#service`,
+        name: c.h1,
+        serviceType: p.serviceType,
+        description: c.summary,
+        url,
+        inLanguage: route.lang,
+        provider: { "@id": ORG_ID },
+        areaServed: [
+          { "@type": "City", name: "Dammam" },
+          ...NEARBY.en
+            .replace(" and ", ", ")
+            .split(", ")
+            .slice(1)
+            .map(name => ({ "@type": "City", name })),
+        ],
+        hasOfferCatalog: {
+          "@type": "OfferCatalog",
+          name: c.offersTitle,
+          itemListElement: c.offers.map(o => ({
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: o.title,
+              description: o.text,
+              url: SITE_URL + servicePath(o.service, route.lang),
+            },
+          })),
+        },
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          homeCrumb,
+          { "@type": "ListItem", position: 2, name: c.name, item: url },
+        ],
+      },
+      {
+        "@type": "FAQPage",
+        inLanguage: route.lang,
+        mainEntity: c.faq.map(f => ({
+          "@type": "Question",
+          name: f.q,
+          acceptedAnswer: { "@type": "Answer", text: f.a },
+        })),
+      }
+    );
   } else if (route.page === "privacy") {
     graph.push({
       "@type": "BreadcrumbList",
@@ -791,6 +868,12 @@ export function renderLlmsTxt(): string {
     "## Coverage",
     `- [${COVERAGE.en.h1}](${SITE_URL}${coveragePath("en")}): ${COVERAGE.en.summary}`,
     "",
+    "## Dammam",
+    ...LOCAL_PAGES.map(
+      p =>
+        `- [${p.content.en.h1}](${SITE_URL}${localPath(p.slug, "en")}): ${p.content.en.summary}`
+    ),
+    "",
     "## Brands supplied",
     `- [${BRANDS_COPY.en.h1}](${SITE_URL}${brandsPath("en")}): ${BRANDS_COPY.en.summary}`,
     ...BRAND_GROUPS.map(
@@ -823,6 +906,9 @@ export function renderLlmsTxt(): string {
         `- [${SERVICES[slug].content.ar.name}](${SITE_URL}${servicePath(slug, "ar")})`
     ),
     `- [${COVERAGE.ar.h1}](${SITE_URL}${coveragePath("ar")})`,
+    ...LOCAL_PAGES.map(
+      p => `- [${p.content.ar.h1}](${SITE_URL}${localPath(p.slug, "ar")})`
+    ),
     `- [${BRANDS_COPY.ar.h1}](${SITE_URL}${brandsPath("ar")})`,
     `- [${INSIGHTS_META.ar.h1}](${SITE_URL}${insightsPath("ar")})`,
     "",

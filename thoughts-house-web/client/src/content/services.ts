@@ -108,11 +108,11 @@ export const SERVICES: Record<ServiceSlug, Service> = {
     ],
     content: {
       en: {
-        metaTitle: "Cybersecurity Solutions in Saudi Arabia | Thoughts House",
+        metaTitle: "Cybersecurity Company in Saudi Arabia | Thoughts House",
         metaDescription:
-          "Endpoint protection, next-generation firewalls, network security monitoring, threat detection and security assessments for businesses across Saudi Arabia.",
+          "Cybersecurity company serving Dammam and all of Saudi Arabia: firewalls, endpoint security and EDR, network protection, MDR and security assessments.",
         name: "Cybersecurity",
-        h1: "Cybersecurity Solutions in Saudi Arabia",
+        h1: "Cybersecurity Company & Solutions in Saudi Arabia",
         summary:
           "Thoughts House designs, supplies and supports layered cybersecurity for organizations in Saudi Arabia: endpoint protection and EDR, next-generation firewalls, network security monitoring, threat detection and response, and security assessments — working with vendors such as Sophos, Palo Alto Networks, CrowdStrike, Check Point, Trend Micro and Microsoft.",
         intro:
@@ -177,7 +177,7 @@ export const SERVICES: Record<ServiceSlug, Service> = {
           "Tell us about your environment and we will get back to you with a recommendation.",
       },
       ar: {
-        metaTitle: "حلول الأمن السيبراني في السعودية | بيت الأفكار",
+        metaTitle: "شركة أمن سيبراني في السعودية | بيت الأفكار",
         metaDescription:
           "حماية نقاط النهاية وجدران الحماية من الجيل التالي ومراقبة أمن الشبكات وكشف التهديدات وتقييم الأمان للشركات في الدمام وجميع مناطق المملكة.",
         name: "الأمن السيبراني",

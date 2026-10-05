@@ -12,7 +12,11 @@ export type ArticleSlug =
   | "how-to-choose-a-firewall"
   | "3-2-1-backup-ransomware"
   | "office-wifi-planning"
-  | "how-to-choose-it-system-integrator";
+  | "how-to-choose-it-system-integrator"
+  | "pdpl-gap-assessment"
+  | "nca-ecc-compliance-checklist"
+  | "edr-vs-xdr-vs-mdr"
+  | "cloud-disaster-recovery-saudi-arabia";
 
 interface LocalizedArticle {
   title: string;
@@ -30,6 +34,94 @@ export interface Article {
 }
 
 export const ARTICLES: Article[] = [
+  {
+    slug: "pdpl-gap-assessment",
+    published: "2026-10-06",
+    image: "/images/cybersecurity-1280.webp",
+    service: "cybersecurity",
+    content: {
+      en: {
+        title:
+          "PDPL Gap Assessment: How to Check Your Compliance in Saudi Arabia",
+        metaTitle: "PDPL Gap Assessment for Saudi Organizations",
+        description:
+          "How to run a PDPL gap assessment in Saudi Arabia: map personal data, review legal basis, notices, rights handling, security controls and breach response.",
+      },
+      ar: {
+        title:
+          "تقييم الفجوات لنظام حماية البيانات الشخصية: كيف تتحقق من امتثالك",
+        metaTitle: "تقييم الفجوات لنظام حماية البيانات الشخصية PDPL",
+        description:
+          "خطوات عملية لتقييم فجوات الامتثال لنظام حماية البيانات الشخصية في السعودية: حصر البيانات، والأساس النظامي، والحقوق، والضوابط الأمنية، والإبلاغ عن التسرب.",
+      },
+    },
+  },
+
+  {
+    slug: "nca-ecc-compliance-checklist",
+    published: "2026-10-06",
+    image: "/images/firewall-installation-1280.webp",
+    service: "cybersecurity",
+    content: {
+      en: {
+        title: "NCA ECC Compliance Checklist: 20 Controls to Check First",
+        metaTitle: "NCA ECC Compliance Checklist for Saudi Organizations",
+        description:
+          "A practical NCA ECC compliance checklist: governance, asset and access management, patching, logging, backup, incident response, third parties and cloud.",
+      },
+      ar: {
+        title:
+          "قائمة التحقق من الامتثال للضوابط الأساسية للأمن السيبراني (ECC)",
+        metaTitle: "قائمة التحقق من الامتثال لضوابط ECC | بيت الأفكار",
+        description:
+          "قائمة عملية للتحقق من الامتثال للضوابط الأساسية للأمن السيبراني: الحوكمة، والأصول، والصلاحيات، والتحديثات، والسجلات، والنسخ الاحتياطي، والأطراف الخارجية.",
+      },
+    },
+  },
+
+  {
+    slug: "edr-vs-xdr-vs-mdr",
+    published: "2026-10-06",
+    image: "/images/cybersecurity-1280.webp",
+    service: "cybersecurity",
+    content: {
+      en: {
+        title:
+          "EDR vs XDR vs MDR: What's the Difference and Which Do You Need?",
+        metaTitle: "EDR vs XDR vs MDR: Differences and How to Choose",
+        description:
+          "EDR, XDR and MDR explained: what each one does, how they differ from antivirus, and how Saudi organizations can choose the right option for their team.",
+      },
+      ar: {
+        title: "الفرق بين EDR وXDR وMDR: أيها تحتاج منشأتك؟",
+        metaTitle: "الفرق بين EDR وXDR وMDR وكيف تختار | بيت الأفكار",
+        description:
+          "شرح مبسّط لحلول EDR وXDR وخدمة MDR: ماذا يفعل كل منها، وكيف تختلف عن مضاد الفيروسات، وكيف تختار المنشآت في السعودية الخيار المناسب لفريقها.",
+      },
+    },
+  },
+
+  {
+    slug: "cloud-disaster-recovery-saudi-arabia",
+    published: "2026-10-06",
+    image: "/images/cloud-backup-1280.webp",
+    service: "cloud-backup",
+    content: {
+      en: {
+        title: "Cloud Disaster Recovery in Saudi Arabia: A Practical Guide",
+        metaTitle: "Cloud Disaster Recovery in Saudi Arabia: A Guide",
+        description:
+          "How to plan cloud disaster recovery in Saudi Arabia: RPO and RTO, DR options from backup restore to warm standby, data residency and regular DR testing.",
+      },
+      ar: {
+        title: "التعافي من الكوارث سحابياً في السعودية: دليل عملي",
+        metaTitle: "التعافي من الكوارث سحابياً في السعودية | بيت الأفكار",
+        description:
+          "كيف تخطط للتعافي من الكوارث عبر السحابة في السعودية: أهداف RPO وRTO، وخيارات التعافي، ومتطلبات بقاء البيانات داخل المملكة، واختبار خطة التعافي.",
+      },
+    },
+  },
+
   {
     slug: "how-to-choose-it-system-integrator",
     published: "2026-09-30",

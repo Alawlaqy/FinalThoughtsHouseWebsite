@@ -790,4 +790,719 @@ export const ARTICLE_BODIES: Record<
       ],
     },
   },
+  "pdpl-gap-assessment": {
+    en: {
+      summary: [
+        "A PDPL gap assessment compares how your organization handles personal data today with what Saudi Arabia's Personal Data Protection Law and its regulations require.",
+        "It covers both legal and technical areas: data inventory, legal basis, privacy notices, data subject rights, transfers outside the Kingdom, security controls and breach notification.",
+        "The output is a prioritized remediation plan, so you fix the highest-risk gaps first.",
+      ],
+      faq: [
+        {
+          q: "What is a PDPL gap assessment?",
+          a: "A structured review that compares your current personal data practices with the requirements of the Saudi Personal Data Protection Law and its Implementing Regulations, and lists the gaps with a plan to close them.",
+        },
+        {
+          q: "Who supervises the PDPL in Saudi Arabia?",
+          a: "The Saudi Data and AI Authority (SDAIA) is the competent authority for the PDPL. Its official portal publishes the law, regulations and guidance.",
+        },
+        {
+          q: "How long does a PDPL gap assessment take?",
+          a: "For a small or mid-sized organization it usually takes a few weeks, depending on how many systems hold personal data and how well processes are documented.",
+        },
+      ],
+      blocks: [
+        {
+          p: "Saudi Arabia's Personal Data Protection Law (PDPL) applies to organizations that process personal data of individuals in the Kingdom. A gap assessment is the fastest way to find out where you stand and what to fix. This guide explains what to review and how to turn findings into a plan. It is practical guidance, not legal advice; confirm details with the official SDAIA documents or a legal adviser.",
+        },
+        {
+          h2: "Step 1: Map your personal data",
+        },
+        {
+          p: "You cannot protect data you do not know about. Build a data inventory that answers, for each system or process:",
+        },
+        {
+          ul: [
+            "What personal data is collected (customers, employees, visitors, suppliers)?",
+            "Why it is collected and on what legal basis.",
+            "Where it is stored: on-premises servers, cloud services, email, file shares, spreadsheets.",
+            "Who can access it, inside and outside the organization.",
+            "How long it is kept, and how it is deleted.",
+            "Whether it leaves the Kingdom, for example through a cloud or SaaS provider.",
+          ],
+        },
+        {
+          p: "This inventory becomes your record of processing activities, which the regulations expect controllers to maintain.",
+        },
+        {
+          h2: "Step 2: Review the legal and governance areas",
+        },
+        {
+          ul: [
+            "Legal basis: consent, contract, legal obligation or legitimate interest, documented for each purpose.",
+            "Privacy notice: clear, available in Arabic, and describes purposes, retention and rights.",
+            "Data subject rights: a process to handle requests to access, correct, obtain a copy of or destroy personal data within the required time.",
+            "Transfers outside the Kingdom: identify each transfer and check it against the transfer regulation.",
+            "Processors: contracts with vendors that process data on your behalf.",
+            "Roles: who is responsible for data protection, and whether you need a data protection officer.",
+          ],
+        },
+        {
+          h2: "Step 3: Review the technical security controls",
+        },
+        {
+          p: "The PDPL requires appropriate organizational and technical measures to protect personal data. In practice, review:",
+        },
+        {
+          ul: [
+            "Access control: least privilege, multi-factor authentication and removal of leavers' accounts.",
+            "Encryption of laptops, databases and backups, and of data in transit.",
+            "Endpoint and email security, including protection against phishing and ransomware.",
+            "Central logging so you can investigate who accessed what.",
+            "Backups that are protected from ransomware and tested.",
+            "Secure disposal of devices and media.",
+          ],
+        },
+        {
+          h2: "Step 4: Test your breach response",
+        },
+        {
+          p: "The Implementing Regulations require notifying SDAIA within 72 hours of becoming aware of a personal data breach, and informing affected individuals where the breach may harm them. Check that you have a written incident response plan, a named owner, and the logs needed to understand what happened. Run a short tabletop exercise to test it.",
+        },
+        {
+          h2: "Step 5: Prioritize and fix",
+        },
+        {
+          p: "Score each gap by risk and effort. Quick wins such as MFA, an Arabic privacy notice and a rights-request process often close a large part of the risk. Larger items, such as moving data hosted abroad or adding central logging, go into a roadmap with owners and dates.",
+        },
+        {
+          h2: "How Thoughts House can help",
+        },
+        {
+          p: "We support the technical side of PDPL compliance across Saudi Arabia: data mapping workshops, security control reviews, and implementation of MFA, encryption, endpoint protection, logging and backup. We work alongside your legal adviser for the legal review.",
+        },
+      ],
+      sources: [
+        {
+          label: "SDAIA — Personal Data Protection Law portal",
+          url: "https://dgp.sdaia.gov.sa/",
+        },
+      ],
+    },
+    ar: {
+      summary: [
+        "تقييم الفجوات لنظام حماية البيانات الشخصية يقارن طريقة تعامل منشأتك مع البيانات الشخصية اليوم بما يتطلبه النظام ولوائحه في المملكة.",
+        "يشمل الجوانب النظامية والتقنية: حصر البيانات، والأساس النظامي، وإشعار الخصوصية، وحقوق أصحاب البيانات، والنقل خارج المملكة، والضوابط الأمنية، والإبلاغ عن التسرب.",
+        "النتيجة خطة معالجة مرتبة حسب الأولوية، لتبدأ بالفجوات الأعلى خطورة.",
+      ],
+      faq: [
+        {
+          q: "ما هو تقييم الفجوات لنظام حماية البيانات الشخصية؟",
+          a: "مراجعة منظمة تقارن ممارساتك الحالية في معالجة البيانات الشخصية بمتطلبات نظام حماية البيانات الشخصية ولوائحه التنفيذية، وتحدد الفجوات مع خطة لمعالجتها.",
+        },
+        {
+          q: "من الجهة المشرفة على نظام حماية البيانات الشخصية في السعودية؟",
+          a: "الهيئة السعودية للبيانات والذكاء الاصطناعي (سدايا) هي الجهة المختصة، وتنشر بوابتها الرسمية النظام ولوائحه والأدلة الإرشادية.",
+        },
+        {
+          q: "كم يستغرق تقييم الفجوات؟",
+          a: "في المنشآت الصغيرة والمتوسطة يستغرق عادةً بضعة أسابيع، بحسب عدد الأنظمة التي تحتوي بيانات شخصية ومدى توثيق الإجراءات.",
+        },
+      ],
+      blocks: [
+        {
+          p: "ينطبق نظام حماية البيانات الشخصية على الجهات التي تعالج بيانات شخصية لأفراد في المملكة. وتقييم الفجوات أسرع طريقة لمعرفة وضعك الحالي وما يجب إصلاحه. يشرح هذا الدليل ما تراجعه وكيف تحوّل النتائج إلى خطة عمل. وهو إرشاد عملي وليس استشارة قانونية، فتحقق من التفاصيل في وثائق سدايا الرسمية أو مع مستشار قانوني.",
+        },
+        {
+          h2: "الخطوة 1: حصر البيانات الشخصية",
+        },
+        {
+          p: "لا يمكنك حماية بيانات لا تعرف بوجودها. أعدّ سجلاً للبيانات يجيب لكل نظام أو إجراء عن الأسئلة التالية:",
+        },
+        {
+          ul: [
+            "ما البيانات الشخصية التي تُجمع (العملاء، الموظفون، الزوار، الموردون)؟",
+            "لماذا تُجمع، وما أساسها النظامي؟",
+            "أين تُخزَّن: خوادم داخلية، خدمات سحابية، بريد إلكتروني، مجلدات مشتركة، جداول بيانات.",
+            "من يستطيع الوصول إليها داخل المنشأة وخارجها؟",
+            "كم تُحفظ، وكيف تُتلف؟",
+            "هل تخرج من المملكة، مثلاً عبر مزوّد سحابي أو تطبيق خارجي؟",
+          ],
+        },
+        {
+          p: "يصبح هذا الحصر سجل أنشطة المعالجة الذي تتوقع اللوائح من جهة التحكم الاحتفاظ به.",
+        },
+        {
+          h2: "الخطوة 2: مراجعة الجوانب النظامية والحوكمة",
+        },
+        {
+          ul: [
+            "الأساس النظامي: الموافقة أو العقد أو الالتزام النظامي أو المصلحة المشروعة، موثقاً لكل غرض.",
+            "إشعار الخصوصية: واضح ومتاح بالعربية، ويبين الأغراض ومدة الحفظ والحقوق.",
+            "حقوق أصحاب البيانات: إجراء للتعامل مع طلبات الاطلاع والتصحيح والحصول على نسخة والإتلاف خلال المدة المطلوبة.",
+            "النقل خارج المملكة: حصر كل عملية نقل والتحقق منها وفق لائحة نقل البيانات.",
+            "جهات المعالجة: عقود مع الموردين الذين يعالجون البيانات نيابةً عنك.",
+            "الأدوار: من المسؤول عن حماية البيانات، وهل تحتاج إلى مسؤول حماية بيانات.",
+          ],
+        },
+        {
+          h2: "الخطوة 3: مراجعة الضوابط الأمنية التقنية",
+        },
+        {
+          p: "يتطلب النظام اتخاذ تدابير تنظيمية وتقنية مناسبة لحماية البيانات الشخصية. وعملياً راجع ما يلي:",
+        },
+        {
+          ul: [
+            "التحكم في الصلاحيات: أقل صلاحية لازمة، والتحقق متعدد العوامل، وإلغاء حسابات المغادرين.",
+            "تشفير الحواسيب وقواعد البيانات والنسخ الاحتياطية، والبيانات أثناء النقل.",
+            "حماية الأجهزة والبريد الإلكتروني من التصيد وبرامج الفدية.",
+            "السجلات المركزية لمعرفة من اطّلع على ماذا.",
+            "نسخ احتياطية محمية من برامج الفدية ومختبرة.",
+            "الإتلاف الآمن للأجهزة ووسائط التخزين.",
+          ],
+        },
+        {
+          h2: "الخطوة 4: اختبار الاستجابة للتسرب",
+        },
+        {
+          p: "تتطلب اللوائح التنفيذية إبلاغ سدايا خلال 72 ساعة من العلم بتسرب البيانات الشخصية، وإبلاغ الأفراد المتأثرين إذا كان التسرب قد يضر بهم. تأكد من وجود خطة مكتوبة للاستجابة للحوادث، ومسؤول محدد، والسجلات اللازمة لفهم ما حدث، ونفّذ تمريناً قصيراً لاختبارها.",
+        },
+        {
+          h2: "الخطوة 5: ترتيب الأولويات والمعالجة",
+        },
+        {
+          p: "قيّم كل فجوة حسب الخطورة والجهد. فالإجراءات السريعة مثل التحقق متعدد العوامل وإشعار خصوصية بالعربية وإجراء لطلبات الحقوق تعالج جزءاً كبيراً من المخاطر. أما البنود الأكبر، مثل نقل بيانات مستضافة خارج المملكة أو إضافة سجلات مركزية، فتدخل في خارطة طريق بمسؤولين وتواريخ.",
+        },
+        {
+          h2: "كيف يساعدك بيت الأفكار",
+        },
+        {
+          p: "ندعم الجانب التقني من الامتثال لنظام حماية البيانات الشخصية في جميع مناطق المملكة: ورش حصر البيانات، ومراجعة الضوابط الأمنية، وتنفيذ التحقق متعدد العوامل والتشفير وحماية الأجهزة والسجلات والنسخ الاحتياطي، بالتعاون مع مستشارك القانوني في المراجعة النظامية.",
+        },
+      ],
+      sources: [
+        {
+          label: "سدايا — بوابة نظام حماية البيانات الشخصية",
+          url: "https://dgp.sdaia.gov.sa/",
+        },
+      ],
+    },
+  },
+  "nca-ecc-compliance-checklist": {
+    en: {
+      summary: [
+        "This checklist turns the NCA Essential Cybersecurity Controls (ECC 2-2024) into 20 practical checks you can review with your IT team.",
+        "It follows the ECC domains: governance, defense, resilience, third-party and cloud security, and industrial control systems where relevant.",
+        "Organizations using cloud, critical systems or operational technology should also review the NCA's related control sets, such as the CCC, CSCC and OTCC.",
+      ],
+      faq: [
+        {
+          q: "Is this checklist enough to prove ECC compliance?",
+          a: "No. It is a starting point to find gaps quickly. Compliance is measured against the full official ECC document and, for regulated entities, through the NCA's assessment process.",
+        },
+        {
+          q: "What other NCA control sets might apply?",
+          a: "Depending on your environment, the NCA also publishes control sets such as the Cloud Cybersecurity Controls (CCC), Critical Systems Cybersecurity Controls (CSCC) and Operational Technology Cybersecurity Controls (OTCC). Check the NCA website for the ones that apply to you.",
+        },
+        {
+          q: "Which ECC controls should we fix first?",
+          a: "Usually multi-factor authentication, patching, endpoint protection, backups protected from ransomware and central logging, because they reduce the most common attack paths.",
+        },
+      ],
+      blocks: [
+        {
+          p: "Our guide to the NCA Essential Cybersecurity Controls explains what the ECC are and who they apply to. This article is the hands-on companion: a checklist you can go through with your IT team to see where you stand. Use the official ECC document as the final reference.",
+        },
+        {
+          h2: "Governance",
+        },
+        {
+          ul: [
+            "1. A cybersecurity strategy and policies are approved by management.",
+            "2. Cybersecurity roles are defined, with a responsible person or function.",
+            "3. Cybersecurity risks are assessed and reviewed regularly.",
+            "4. Cybersecurity requirements are included in IT projects and changes.",
+            "5. Staff receive regular security awareness training.",
+          ],
+        },
+        {
+          h2: "Defense",
+        },
+        {
+          ul: [
+            "6. An up-to-date inventory of hardware, software and information assets exists.",
+            "7. Access follows least privilege, with multi-factor authentication for remote and privileged access.",
+            "8. Leavers' and unused accounts are removed promptly.",
+            "9. Systems and network devices are hardened and patched on a schedule.",
+            "10. Endpoint protection (ideally EDR) runs on all laptops, desktops and servers.",
+            "11. Email is protected against phishing, spoofing and malicious attachments.",
+            "12. The network is segmented and protected by firewalls with reviewed rules.",
+            "13. Sensitive data is classified and encrypted where required.",
+            "14. Backups are made, protected from ransomware and restore-tested.",
+            "15. Vulnerability scans run regularly and findings are fixed.",
+            "16. Security logs are collected centrally and monitored.",
+            "17. An incident response plan exists and has been tested.",
+          ],
+        },
+        {
+          h2: "Resilience",
+        },
+        {
+          ul: [
+            "18. Cybersecurity is part of business continuity and disaster recovery plans.",
+          ],
+        },
+        {
+          h2: "Third parties and cloud",
+        },
+        {
+          ul: [
+            "19. Contracts with suppliers and service providers include cybersecurity requirements.",
+            "20. Cloud services are assessed for security and data hosting location before use.",
+          ],
+        },
+        {
+          p: "If your organization uses industrial control systems or operational technology, the ECC add requirements for those environments, and the OTCC go further.",
+        },
+        {
+          h2: "How to use the checklist",
+        },
+        {
+          p: "Mark each item as in place, partial or missing, and note the evidence (a policy, a report, a screenshot). Then rank the gaps by risk. Missing MFA, unpatched systems and untested backups are usually the first items to fix.",
+        },
+        {
+          h2: "How Thoughts House can help",
+        },
+        {
+          p: "We help organizations across Saudi Arabia run ECC gap assessments and implement the technical controls: firewalls, EDR, email security, MFA, central logging and protected backups, with documentation you can use as evidence.",
+        },
+      ],
+      sources: [
+        {
+          label: "NCA — Essential Cybersecurity Controls (ECC)",
+          url: "https://nca.gov.sa/en/regulatory-documents/controls-list/ecc/",
+        },
+      ],
+    },
+    ar: {
+      summary: [
+        "تحوّل هذه القائمة الضوابط الأساسية للأمن السيبراني (ECC 2-2024) إلى 20 بنداً عملياً تراجعها مع فريق تقنية المعلومات.",
+        "تتبع محاور الضوابط: الحوكمة، والتعزيز (الدفاع)، والصمود، والأطراف الخارجية والحوسبة السحابية، وأنظمة التحكم الصناعي عند وجودها.",
+        "الجهات التي تستخدم السحابة أو الأنظمة الحساسة أو التقنيات التشغيلية يجب أن تراجع أيضاً مجموعات الضوابط الأخرى للهيئة مثل CCC وCSCC وOTCC.",
+      ],
+      faq: [
+        {
+          q: "هل تكفي هذه القائمة لإثبات الامتثال لضوابط ECC؟",
+          a: "لا. هي نقطة بداية لاكتشاف الفجوات بسرعة. ويُقاس الامتثال وفق وثيقة الضوابط الرسمية كاملة، ومن خلال آلية التقييم لدى الهيئة للجهات الملزمة.",
+        },
+        {
+          q: "ما مجموعات الضوابط الأخرى التي قد تنطبق علينا؟",
+          a: "بحسب بيئتك، تصدر الهيئة الوطنية للأمن السيبراني مجموعات أخرى مثل ضوابط الأمن السيبراني للحوسبة السحابية (CCC)، وضوابط الأمن السيبراني للأنظمة الحساسة (CSCC)، وضوابط الأمن السيبراني للأنظمة التشغيلية (OTCC). راجع موقع الهيئة لمعرفة ما ينطبق عليك.",
+        },
+        {
+          q: "بأي الضوابط نبدأ؟",
+          a: "غالباً التحقق متعدد العوامل، والتحديثات الأمنية، وحماية الأجهزة، والنسخ الاحتياطية المحمية من برامج الفدية، والسجلات المركزية، لأنها تسد أكثر طرق الهجوم شيوعاً.",
+        },
+      ],
+      blocks: [
+        {
+          p: "يشرح دليلنا عن الضوابط الأساسية للأمن السيبراني ماهيتها ومن تنطبق عليه. أما هذا المقال فهو الجانب العملي: قائمة تراجعها مع فريق تقنية المعلومات لتعرف موقعك. واعتمد وثيقة الضوابط الرسمية مرجعاً نهائياً.",
+        },
+        {
+          h2: "الحوكمة",
+        },
+        {
+          ul: [
+            "1. استراتيجية وسياسات للأمن السيبراني معتمدة من الإدارة.",
+            "2. أدوار الأمن السيبراني محددة، مع شخص أو إدارة مسؤولة.",
+            "3. تقييم مخاطر الأمن السيبراني ومراجعتها دورياً.",
+            "4. تضمين متطلبات الأمن السيبراني في مشاريع التقنية والتغييرات.",
+            "5. توعية الموظفين بالأمن السيبراني بشكل دوري.",
+          ],
+        },
+        {
+          h2: "التعزيز (الدفاع)",
+        },
+        {
+          ul: [
+            "6. سجل محدّث للأجهزة والبرمجيات والأصول المعلوماتية.",
+            "7. صلاحيات بأقل قدر لازم، مع تحقق متعدد العوامل للوصول عن بُعد والحسابات ذات الصلاحيات العالية.",
+            "8. إلغاء حسابات المغادرين والحسابات غير المستخدمة فوراً.",
+            "9. تقوية إعدادات الأنظمة وأجهزة الشبكة وتحديثها بجدول منتظم.",
+            "10. حماية الأجهزة (ويفضّل EDR) على جميع الحواسيب والخوادم.",
+            "11. حماية البريد الإلكتروني من التصيد والانتحال والمرفقات الضارة.",
+            "12. تقسيم الشبكة وحمايتها بجدران حماية ذات قواعد مراجعة.",
+            "13. تصنيف البيانات الحساسة وتشفيرها عند الحاجة.",
+            "14. نسخ احتياطية محمية من برامج الفدية ومختبرة الاستعادة.",
+            "15. فحص الثغرات بانتظام ومعالجة نتائجه.",
+            "16. جمع السجلات الأمنية مركزياً ومراقبتها.",
+            "17. خطة للاستجابة للحوادث تم اختبارها.",
+          ],
+        },
+        {
+          h2: "الصمود",
+        },
+        {
+          ul: [
+            "18. الأمن السيبراني جزء من خطط استمرارية الأعمال والتعافي من الكوارث.",
+          ],
+        },
+        {
+          h2: "الأطراف الخارجية والحوسبة السحابية",
+        },
+        {
+          ul: [
+            "19. عقود الموردين ومقدمي الخدمات تتضمن متطلبات الأمن السيبراني.",
+            "20. تقييم أمن الخدمات السحابية وموقع استضافة البيانات قبل استخدامها.",
+          ],
+        },
+        {
+          p: "إذا كانت منشأتك تستخدم أنظمة تحكم صناعي أو تقنيات تشغيلية، فالضوابط الأساسية تضيف متطلبات لهذه البيئات، وضوابط OTCC تتوسع فيها أكثر.",
+        },
+        {
+          h2: "كيف تستخدم القائمة",
+        },
+        {
+          p: "صنّف كل بند: مطبّق أو جزئي أو غير مطبّق، ودوّن الدليل (سياسة، تقرير، لقطة شاشة). ثم رتّب الفجوات حسب الخطورة. وعادةً يأتي غياب التحقق متعدد العوامل والأنظمة غير المحدّثة والنسخ غير المختبرة في مقدمة ما يُعالج.",
+        },
+        {
+          h2: "كيف يساعدك بيت الأفكار",
+        },
+        {
+          p: "نساعد المنشآت في جميع مناطق المملكة على تقييم الفجوات وفق الضوابط الأساسية وتنفيذ الضوابط التقنية: جدران الحماية، وEDR، وحماية البريد، والتحقق متعدد العوامل، والسجلات المركزية، والنسخ الاحتياطية المحمية، مع توثيق يصلح دليلاً على التطبيق.",
+        },
+      ],
+      sources: [
+        {
+          label:
+            "الهيئة الوطنية للأمن السيبراني — الضوابط الأساسية للأمن السيبراني",
+          url: "https://nca.gov.sa/ar/regulatory-documents/controls-list/ecc/",
+        },
+      ],
+    },
+  },
+  "edr-vs-xdr-vs-mdr": {
+    en: {
+      summary: [
+        "EDR (endpoint detection and response) watches laptops and servers for suspicious behavior and lets you isolate and investigate an affected device.",
+        "XDR (extended detection and response) correlates signals from endpoints, network, email, identity and cloud in one platform.",
+        "MDR (managed detection and response) is a service: a team of analysts monitors and responds 24/7 using EDR or XDR tools.",
+      ],
+      faq: [
+        {
+          q: "Is EDR the same as antivirus?",
+          a: "No. Traditional antivirus blocks known malware. EDR also records activity on the device, detects suspicious behavior such as ransomware encryption or credential theft, and lets you isolate the device and investigate.",
+        },
+        {
+          q: "Do small companies need XDR?",
+          a: "Not always. A small company with no security team usually gets more value from EDR combined with an MDR service. XDR becomes valuable when you have several security tools and someone to act on the correlated alerts.",
+        },
+        {
+          q: "What does MDR include?",
+          a: "Typically 24/7 monitoring of alerts, investigation, threat hunting, guided or direct response such as isolating devices, and regular reports. Scope differs by provider, so check what response actions are included.",
+        },
+      ],
+      blocks: [
+        {
+          p: "EDR, XDR and MDR appear in almost every cybersecurity proposal today, and the terms are often mixed up. They are related but solve different problems. This guide explains each one and how to choose.",
+        },
+        {
+          h2: "EDR: endpoint detection and response",
+        },
+        {
+          p: "EDR is software installed on laptops, desktops and servers. Beyond blocking known malware, it records process, file and network activity, detects suspicious behavior, and gives you response actions such as isolating a device, killing a process or rolling back changes. It is the foundation of modern endpoint security.",
+        },
+        {
+          h2: "XDR: extended detection and response",
+        },
+        {
+          p: "XDR extends the same idea beyond the endpoint. It collects signals from endpoints, firewalls, email, identity and cloud services, and correlates them into a single incident. For example, a phishing email, a suspicious login and malware on a laptop appear as one attack instead of three separate alerts.",
+        },
+        {
+          h2: "MDR: managed detection and response",
+        },
+        {
+          p: "MDR is not a product but a service. A provider's security analysts monitor your EDR or XDR alerts around the clock, investigate them, hunt for threats and respond, either by taking action directly or by guiding your team. It gives you a 24/7 security operations capability without building one.",
+        },
+        {
+          h2: "Quick comparison",
+        },
+        {
+          ul: [
+            "What it is: EDR and XDR are technology; MDR is a service delivered by people.",
+            "Coverage: EDR covers endpoints; XDR covers endpoints plus network, email, identity and cloud; MDR covers whatever tools it monitors.",
+            "Who responds: with EDR and XDR, your team; with MDR, the provider's analysts, 24/7.",
+            "Best for: EDR for every organization; XDR for teams with several security tools; MDR for organizations without a 24/7 security team.",
+          ],
+        },
+        {
+          h2: "How to choose",
+        },
+        {
+          ul: [
+            "Start with EDR on every endpoint and server. It is now a baseline control.",
+            "Ask who will watch the alerts at night and on weekends. If nobody, add MDR.",
+            "Consider XDR when you already run several security products from one vendor ecosystem and want fewer, better alerts.",
+            "Check that the solution supports your compliance needs, such as log retention for NCA ECC.",
+          ],
+        },
+        {
+          h2: "How Thoughts House can help",
+        },
+        {
+          p: "We supply, deploy and support EDR and XDR platforms from leading vendors such as Sophos and Palo Alto Networks across Saudi Arabia, and arrange MDR services for organizations that need 24/7 monitoring and response.",
+        },
+      ],
+      sources: [
+        {
+          label: "NIST Cybersecurity Framework 2.0",
+          url: "https://www.nist.gov/cyberframework",
+        },
+      ],
+    },
+    ar: {
+      summary: [
+        "EDR (الكشف والاستجابة لنقاط النهاية) يراقب الحواسيب والخوادم لاكتشاف السلوك المشبوه، ويتيح عزل الجهاز المصاب والتحقيق فيه.",
+        "XDR (الكشف والاستجابة الموسّعة) يربط إشارات الأجهزة والشبكة والبريد والهوية والسحابة في منصة واحدة.",
+        "MDR (الكشف والاستجابة المُدارة) خدمة: فريق محللين يراقب ويستجيب على مدار الساعة باستخدام أدوات EDR أو XDR.",
+      ],
+      faq: [
+        {
+          q: "هل EDR هو نفسه مضاد الفيروسات؟",
+          a: "لا. مضاد الفيروسات التقليدي يمنع البرمجيات الضارة المعروفة، أما EDR فيسجّل أيضاً النشاط على الجهاز، ويكتشف السلوك المشبوه مثل تشفير برامج الفدية أو سرقة كلمات المرور، ويتيح عزل الجهاز والتحقيق.",
+        },
+        {
+          q: "هل تحتاج الشركات الصغيرة إلى XDR؟",
+          a: "ليس دائماً. الشركة الصغيرة التي لا تملك فريق أمن تستفيد غالباً أكثر من EDR مع خدمة MDR. ويصبح XDR مفيداً عند وجود عدة أدوات أمنية وفريق يتعامل مع التنبيهات المترابطة.",
+        },
+        {
+          q: "ماذا تشمل خدمة MDR؟",
+          a: "عادةً مراقبة التنبيهات على مدار الساعة، والتحقيق، والبحث عن التهديدات، والاستجابة المباشرة أو الموجّهة مثل عزل الأجهزة، وتقارير دورية. ويختلف النطاق بين المزوّدين، فتحقق من إجراءات الاستجابة المشمولة.",
+        },
+      ],
+      blocks: [
+        {
+          p: "تظهر مصطلحات EDR وXDR وMDR في معظم عروض الأمن السيبراني اليوم، وكثيراً ما يُخلط بينها. هي مترابطة لكنها تحل مشكلات مختلفة. يشرح هذا الدليل كل واحد منها وكيف تختار.",
+        },
+        {
+          h2: "EDR: الكشف والاستجابة لنقاط النهاية",
+        },
+        {
+          p: "برنامج يُثبَّت على الحواسيب والخوادم. وإلى جانب منع البرمجيات الضارة المعروفة، يسجل نشاط العمليات والملفات والشبكة، ويكتشف السلوك المشبوه، ويوفر إجراءات استجابة مثل عزل الجهاز أو إيقاف عملية أو التراجع عن التغييرات. وهو أساس حماية الأجهزة الحديثة.",
+        },
+        {
+          h2: "XDR: الكشف والاستجابة الموسّعة",
+        },
+        {
+          p: "يوسّع الفكرة نفسها لما بعد الجهاز، فيجمع الإشارات من الأجهزة وجدران الحماية والبريد والهوية والخدمات السحابية ويربطها في حادثة واحدة. فمثلاً تظهر رسالة تصيد وتسجيل دخول مشبوه وبرمجية ضارة على حاسوب كهجوم واحد بدلاً من ثلاثة تنبيهات منفصلة.",
+        },
+        {
+          h2: "MDR: الكشف والاستجابة المُدارة",
+        },
+        {
+          p: "ليس منتجاً بل خدمة. يراقب محللو الأمن لدى المزوّد تنبيهات EDR أو XDR على مدار الساعة، ويحققون فيها، ويبحثون عن التهديدات، ويستجيبون مباشرةً أو بتوجيه فريقك. فتحصل على قدرة عمليات أمنية على مدار الساعة دون بنائها داخلياً.",
+        },
+        {
+          h2: "مقارنة سريعة",
+        },
+        {
+          ul: [
+            "الطبيعة: EDR وXDR تقنية، وMDR خدمة يقدمها أشخاص.",
+            "النطاق: EDR يغطي الأجهزة، وXDR يغطي الأجهزة والشبكة والبريد والهوية والسحابة، وMDR يغطي الأدوات التي يراقبها.",
+            "من يستجيب: مع EDR وXDR فريقك، ومع MDR محللو المزوّد على مدار الساعة.",
+            "الأنسب: EDR لكل منشأة، وXDR للفرق التي تستخدم عدة أدوات أمنية، وMDR للمنشآت التي لا تملك فريق أمن يعمل على مدار الساعة.",
+          ],
+        },
+        {
+          h2: "كيف تختار",
+        },
+        {
+          ul: [
+            "ابدأ بتثبيت EDR على كل جهاز وخادم، فهو اليوم ضابط أساسي.",
+            "اسأل: من سيراقب التنبيهات ليلاً وفي العطل؟ إن لم يوجد أحد، فأضف MDR.",
+            "فكّر في XDR عندما تستخدم عدة منتجات أمنية من منظومة واحدة وتريد تنبيهات أقل وأدق.",
+            "تأكد أن الحل يدعم متطلبات الامتثال لديك، مثل حفظ السجلات وفق الضوابط الأساسية للأمن السيبراني.",
+          ],
+        },
+        {
+          h2: "كيف يساعدك بيت الأفكار",
+        },
+        {
+          p: "نورّد وننفذ وندعم منصات EDR وXDR من شركات رائدة مثل Sophos وPalo Alto Networks في جميع مناطق المملكة، ونرتّب خدمات MDR للمنشآت التي تحتاج مراقبة واستجابة على مدار الساعة.",
+        },
+      ],
+      sources: [
+        {
+          label: "NIST — إطار الأمن السيبراني 2.0",
+          url: "https://www.nist.gov/cyberframework",
+        },
+      ],
+    },
+  },
+  "cloud-disaster-recovery-saudi-arabia": {
+    en: {
+      summary: [
+        "Disaster recovery (DR) is how you bring critical systems back after a major outage, such as ransomware, hardware failure or a site incident.",
+        "Start by setting two targets per system: RPO (how much data you can lose) and RTO (how long you can be down).",
+        "In Saudi Arabia, also check data classification and residency rules before choosing where to recover, and test the DR plan regularly.",
+      ],
+      faq: [
+        {
+          q: "What is the difference between backup and disaster recovery?",
+          a: "Backup keeps copies of your data. Disaster recovery is the plan and infrastructure to run your systems again after an outage, within an agreed time. You need backups for DR, but backups alone do not guarantee a fast recovery.",
+        },
+        {
+          q: "What are RPO and RTO?",
+          a: "RPO (recovery point objective) is the maximum amount of data, measured in time, you can afford to lose. RTO (recovery time objective) is the maximum time a system can be unavailable before it must be running again.",
+        },
+        {
+          q: "Can we recover to a cloud region outside Saudi Arabia?",
+          a: "It depends on the data. Some data, particularly government and sensitive data, must stay in the Kingdom under national regulations. Classify your data first and check the applicable NCA and SDAIA requirements before choosing a recovery location.",
+        },
+      ],
+      blocks: [
+        {
+          p: "Ransomware, hardware failures, power or cooling incidents and human error can all take critical systems offline. Disaster recovery (DR) is the plan and infrastructure that brings them back within an agreed time. Cloud services have made DR affordable for organizations that could never justify a second data center.",
+        },
+        {
+          h2: "Step 1: Define RPO and RTO",
+        },
+        {
+          p: "List your critical systems, such as ERP, email, file servers and line-of-business applications, and agree two targets for each with the business:",
+        },
+        {
+          ul: [
+            "RPO: how much data you can afford to lose, for example 15 minutes or 24 hours.",
+            "RTO: how long the system can be down, for example 1 hour or 2 days.",
+          ],
+        },
+        {
+          p: "Tighter targets cost more, so not every system needs the same level.",
+        },
+        {
+          h2: "Step 2: Choose a DR model",
+        },
+        {
+          ul: [
+            "Backup and restore: backups are copied to the cloud and restored when needed. Lowest cost, longest recovery time.",
+            "Pilot light: core systems such as databases are replicated continuously, while other servers are started only during a disaster.",
+            "Warm standby: a smaller copy of the environment is always running and is scaled up during a disaster.",
+            "Active-active: two sites run at the same time. Fastest recovery, highest cost.",
+          ],
+        },
+        {
+          h2: "Step 3: Consider data residency in Saudi Arabia",
+        },
+        {
+          p: "Before choosing where to recover, classify your data. National regulations require some data, particularly government and sensitive data, to stay inside the Kingdom, and organizations subject to NCA controls must also meet cloud cybersecurity requirements. Several global and local cloud providers now operate data centers in Saudi Arabia, which makes in-Kingdom DR more practical.",
+        },
+        {
+          h2: "Step 4: Protect against ransomware",
+        },
+        {
+          p: "A DR copy that ransomware can encrypt is not a DR copy. Use immutable or isolated backups, separate credentials for the DR environment, and multi-factor authentication for its management.",
+        },
+        {
+          h2: "Step 5: Document and test",
+        },
+        {
+          p: "Write a DR runbook: who declares a disaster, the order systems are recovered, and how users reconnect. Test it at least once a year, and after major changes. A DR plan that has never been tested is an assumption, not a plan.",
+        },
+        {
+          h2: "How Thoughts House can help",
+        },
+        {
+          p: "We design and implement backup and cloud disaster recovery across Saudi Arabia, using platforms such as Veeam: recovery targets, replication of critical servers, immutable backups, runbooks and regular DR tests.",
+        },
+      ],
+      sources: [
+        {
+          label: "NIST SP 800-34 — Contingency Planning Guide",
+          url: "https://csrc.nist.gov/pubs/sp/800/34/r1/upd1/final",
+        },
+      ],
+    },
+    ar: {
+      summary: [
+        "التعافي من الكوارث هو طريقة إعادة تشغيل الأنظمة الحرجة بعد انقطاع كبير، مثل برامج الفدية أو أعطال الأجهزة أو حادث في الموقع.",
+        "ابدأ بتحديد هدفين لكل نظام: RPO (كم من البيانات يمكنك تحمّل فقده) وRTO (كم من الوقت يمكنك تحمّل التوقف).",
+        "في السعودية، تحقق أيضاً من تصنيف البيانات ومتطلبات بقائها داخل المملكة قبل اختيار موقع الاستعادة، واختبر خطة التعافي بانتظام.",
+      ],
+      faq: [
+        {
+          q: "ما الفرق بين النسخ الاحتياطي والتعافي من الكوارث؟",
+          a: "النسخ الاحتياطي يحتفظ بنسخ من بياناتك، أما التعافي من الكوارث فهو الخطة والبنية اللازمة لإعادة تشغيل أنظمتك بعد الانقطاع خلال وقت متفق عليه. تحتاج النسخ للتعافي، لكنها وحدها لا تضمن استعادة سريعة.",
+        },
+        {
+          q: "ما معنى RPO وRTO؟",
+          a: "RPO (هدف نقطة الاستعادة) هو أقصى قدر من البيانات، مقاساً بالوقت، يمكنك تحمّل فقده. وRTO (هدف وقت الاستعادة) هو أقصى مدة يمكن أن يتوقف فيها النظام قبل أن يجب إعادته للعمل.",
+        },
+        {
+          q: "هل يمكن الاستعادة إلى منطقة سحابية خارج السعودية؟",
+          a: "يعتمد ذلك على البيانات. فبعض البيانات، خاصةً الحكومية والحساسة، يجب أن تبقى داخل المملكة وفق الأنظمة الوطنية. صنّف بياناتك أولاً وراجع متطلبات الهيئة الوطنية للأمن السيبراني وسدايا قبل اختيار موقع الاستعادة.",
+        },
+      ],
+      blocks: [
+        {
+          p: "برامج الفدية وأعطال الأجهزة وحوادث الكهرباء أو التبريد والأخطاء البشرية قد توقف الأنظمة الحرجة. والتعافي من الكوارث هو الخطة والبنية التي تعيدها للعمل خلال وقت متفق عليه. وقد جعلت الخدمات السحابية التعافي في متناول منشآت لم يكن بإمكانها تبرير مركز بيانات ثانٍ.",
+        },
+        {
+          h2: "الخطوة 1: تحديد RPO وRTO",
+        },
+        {
+          p: "حدد أنظمتك الحرجة، مثل نظام تخطيط الموارد والبريد وخوادم الملفات وتطبيقات العمل، واتفق مع الإدارة على هدفين لكل منها:",
+        },
+        {
+          ul: [
+            "RPO: كم من البيانات يمكن تحمّل فقده، مثلاً 15 دقيقة أو 24 ساعة.",
+            "RTO: كم يمكن أن يتوقف النظام، مثلاً ساعة أو يومين.",
+          ],
+        },
+        {
+          p: "كلما ضاقت الأهداف ارتفعت التكلفة، ولذلك لا تحتاج كل الأنظمة المستوى نفسه.",
+        },
+        {
+          h2: "الخطوة 2: اختيار نموذج التعافي",
+        },
+        {
+          ul: [
+            "النسخ والاستعادة: تُنسخ البيانات إلى السحابة وتُستعاد عند الحاجة. أقل تكلفة وأطول وقت استعادة.",
+            "الشعلة الدائمة (Pilot light): تُنسخ الأنظمة الأساسية مثل قواعد البيانات باستمرار، وتُشغَّل بقية الخوادم عند الكارثة فقط.",
+            "الاستعداد الدافئ (Warm standby): نسخة مصغرة من البيئة تعمل دائماً وتُوسَّع عند الكارثة.",
+            "التشغيل المتزامن (Active-active): موقعان يعملان في الوقت نفسه. أسرع استعادة وأعلى تكلفة.",
+          ],
+        },
+        {
+          h2: "الخطوة 3: مراعاة بقاء البيانات داخل المملكة",
+        },
+        {
+          p: "قبل اختيار موقع الاستعادة صنّف بياناتك. فالأنظمة الوطنية تتطلب بقاء بعض البيانات، خاصةً الحكومية والحساسة، داخل المملكة، والجهات الخاضعة لضوابط الهيئة الوطنية للأمن السيبراني يجب أن تلتزم أيضاً بمتطلبات الأمن السيبراني للحوسبة السحابية. ويشغّل اليوم عدد من مزوّدي السحابة العالميين والمحليين مراكز بيانات في المملكة، مما يجعل التعافي داخلها أكثر عملية.",
+        },
+        {
+          h2: "الخطوة 4: الحماية من برامج الفدية",
+        },
+        {
+          p: "نسخة التعافي التي تستطيع برامج الفدية تشفيرها ليست نسخة تعافٍ. استخدم نسخاً غير قابلة للتعديل أو معزولة، وبيانات دخول منفصلة لبيئة التعافي، وتحققاً متعدد العوامل لإدارتها.",
+        },
+        {
+          h2: "الخطوة 5: التوثيق والاختبار",
+        },
+        {
+          p: "اكتب دليل تشغيل للتعافي: من يعلن الكارثة، وترتيب استعادة الأنظمة، وكيف يعود المستخدمون للاتصال. واختبره مرة في السنة على الأقل وبعد التغييرات الكبيرة. فخطة التعافي التي لم تُختبر افتراض وليست خطة.",
+        },
+        {
+          h2: "كيف يساعدك بيت الأفكار",
+        },
+        {
+          p: "نصمم وننفذ النسخ الاحتياطي والتعافي من الكوارث سحابياً في جميع مناطق المملكة باستخدام منصات مثل Veeam: أهداف الاستعادة، ونسخ الخوادم الحرجة، والنسخ غير القابلة للتعديل، وأدلة التشغيل، واختبارات التعافي الدورية.",
+        },
+      ],
+      sources: [
+        {
+          label: "NIST SP 800-34 — دليل تخطيط الطوارئ",
+          url: "https://csrc.nist.gov/pubs/sp/800/34/r1/upd1/final",
+        },
+      ],
+    },
+  },
 };

@@ -12,6 +12,7 @@ import PrivacyPage from "./pages/PrivacyPage";
 import IndustryPage from "./pages/IndustryPage";
 import BrandPage from "./pages/BrandPage";
 import ArticlePage from "./pages/ArticlePage";
+import LocalPage from "./pages/LocalPage";
 import { alternatePath, HOME_PATHS, langFromPath, resolveRoute } from "./seo";
 
 /** `path` is the request path — passed explicitly during prerendering, read from the URL in the browser. */
@@ -50,6 +51,8 @@ function App({ path }: { path: string }) {
             <IndustryPage slug={route.slug} />
           ) : route.page === "brand" ? (
             <BrandPage slug={route.slug} />
+          ) : route.page === "local" ? (
+            <LocalPage slug={route.slug} />
           ) : route.page === "insights" ? (
             <InsightsPage />
           ) : (

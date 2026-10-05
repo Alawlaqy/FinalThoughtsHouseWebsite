@@ -5,11 +5,13 @@
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Mail, Phone, MapPin } from "lucide-react";
 import { SERVICES, SERVICE_SLUGS } from "@/content/services";
+import { LOCAL_PAGES } from "@/content/local";
 import {
   aboutPath,
   brandsPath,
   coveragePath,
   insightsPath,
+  localPath,
   privacyPath,
   servicePath,
 } from "@/seo";
@@ -127,6 +129,21 @@ export default function Footer() {
                     className="text-sm text-white/60 hover:text-[#60A5FA] transition-colors duration-200"
                   >
                     {SERVICES[slug].content[lang].name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+            <h2 className="text-sm font-bold uppercase tracking-wider text-white/80 mt-8 mb-5">
+              {lang === "ar" ? "في الدمام" : "In Dammam"}
+            </h2>
+            <ul className="space-y-3">
+              {LOCAL_PAGES.map(p => (
+                <li key={p.slug}>
+                  <a
+                    href={localPath(p.slug, lang)}
+                    className="text-sm text-white/60 hover:text-[#60A5FA] transition-colors duration-200"
+                  >
+                    {p.content[lang].name}
                   </a>
                 </li>
               ))}
