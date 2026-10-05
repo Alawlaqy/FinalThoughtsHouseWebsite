@@ -36,10 +36,9 @@ interface AboutCopy {
 
 export const ABOUT: Record<Language, AboutCopy> = {
   en: {
-    metaTitle:
-      "About Thoughts House | IT System Integrator in Dammam, Saudi Arabia",
+    metaTitle: "About Thoughts House | IT Company in Dammam, Saudi Arabia",
     metaDescription:
-      "Thoughts House is an IT system integrator and IT supplier based in Dammam, Saudi Arabia, delivering cybersecurity, networking, cloud and backup solutions and IT hardware and software supply.",
+      "Thoughts House is a Saudi IT company and system integrator in Dammam: cybersecurity, networks, cloud & backup, IT maintenance and hardware supply.",
     h1: "About Thoughts House",
     summary:
       "Thoughts House (بيت الأفكار) is an IT system integrator and IT supplier based in Dammam, in Saudi Arabia's Eastern Province. It designs, supplies, installs and supports cybersecurity, network infrastructure, cloud and backup solutions, and supplies IT hardware and software licenses, for organizations across the Kingdom.",

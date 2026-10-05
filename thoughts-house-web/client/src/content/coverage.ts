@@ -49,10 +49,9 @@ export const SERVED_PLACES = [
 
 export const COVERAGE: Record<Language, CoverageCopy> = {
   en: {
-    metaTitle:
-      "IT Services Across Saudi Arabia: Riyadh, Jeddah, Eastern Province | Thoughts House",
+    metaTitle: "IT Services Across Saudi Arabia | Thoughts House",
     metaDescription:
-      "Thoughts House serves organizations in every region of Saudi Arabia, including Riyadh, Jeddah, Makkah, Madinah, Dammam, Khobar and Jubail, with IT supply, system integration, cybersecurity and support.",
+      "Thoughts House serves organizations in every Saudi region, including Riyadh, Jeddah, Makkah, Madinah, Dammam, Khobar and Jubail, from supply to support.",
     h1: "IT Services Across Saudi Arabia",
     summary:
       "Thoughts House is a Saudi IT company headquartered in Dammam that serves organizations in every region of the Kingdom, including Riyadh, Jeddah, Makkah, Madinah, the Eastern Province, Qassim, Asir and Tabuk, with IT hardware and software supply, system integration, cybersecurity, networking, cloud and backup, and IT maintenance contracts.",
@@ -118,10 +117,9 @@ export const COVERAGE: Record<Language, CoverageCopy> = {
     ],
   },
   ar: {
-    metaTitle:
-      "خدمات تقنية المعلومات في جميع مناطق السعودية: الرياض وجدة والشرقية | بيت الأفكار",
+    metaTitle: "تقنية المعلومات في جميع مناطق السعودية | بيت الأفكار",
     metaDescription:
-      "يخدم بيت الأفكار المنشآت في جميع مناطق المملكة، ومنها الرياض وجدة ومكة والمدينة والدمام والخبر والجبيل، بتوريد الأجهزة وتكامل الأنظمة والأمن السيبراني والدعم الفني.",
+      "يخدم بيت الأفكار المنشآت في الرياض وجدة ومكة والمدينة والدمام والخبر والجبيل بتوريد الأجهزة وتكامل الأنظمة والأمن السيبراني والدعم الفني.",
     h1: "خدمات تقنية المعلومات في جميع مناطق المملكة",
     summary:
       "بيت الأفكار شركة تقنية معلومات سعودية مقرّها الدمام، تخدم المنشآت في جميع مناطق المملكة، ومنها الرياض وجدة ومكة والمدينة والمنطقة الشرقية والقصيم وعسير وتبوك، بتوريد الأجهزة والتراخيص وتكامل الأنظمة والأمن السيبراني والشبكات والسحابة والنسخ الاحتياطي وعقود الصيانة.",

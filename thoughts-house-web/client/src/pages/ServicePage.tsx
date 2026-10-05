@@ -16,7 +16,8 @@ import {
   imageSrcSet,
   type ServiceSlug,
 } from "@/content/services";
-import { servicePath } from "@/seo";
+import { articlePath, servicePath } from "@/seo";
+import { ARTICLES } from "@/content/articles";
 import {
   CheckCircle2,
   ChevronDown,
@@ -44,6 +45,12 @@ export default function ServicePage({ slug }: { slug: ServiceSlug }) {
   const Chevron = lang === "ar" ? ChevronLeft : ChevronRight;
   const Arrow = lang === "ar" ? ArrowLeft : ArrowRight;
   const others = SERVICE_SLUGS.filter(s => s !== slug);
+  // Guides tagged with this service; the AMC page shares the supply page's guide.
+  const related = ARTICLES.filter(
+    a =>
+      a.service === slug ||
+      (slug === "it-support-amc" && a.service === "it-supply")
+  ).slice(0, 3);
   const logos = service.vendors
     .map(name => partners.find(p => p.name === name))
     .filter((p): p is (typeof partners)[number] => Boolean(p));
@@ -241,6 +248,33 @@ export default function ServicePage({ slug }: { slug: ServiceSlug }) {
             </div>
           </div>
         </section>
+
+        {/* Related guides */}
+        {related.length > 0 && (
+          <section className="py-16 bg-[#F8FAFC]">
+            <div className="container">
+              <h2 className="text-2xl font-extrabold text-[#1E293B] mb-8 text-center">
+                {lang === "ar" ? "أدلة ذات صلة" : "Related guides"}
+              </h2>
+              <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+                {related.map(a => (
+                  <a
+                    key={a.slug}
+                    href={articlePath(a.slug, lang)}
+                    className="group p-6 bg-white rounded-2xl border border-gray-100 hover:border-[#2563EB]/30 hover:shadow-md transition-all"
+                  >
+                    <h3 className="font-bold text-[#1E293B] group-hover:text-[#2563EB] transition-colors mb-2">
+                      {a.content[lang].title}
+                    </h3>
+                    <p className="text-sm text-[#64748B] leading-relaxed line-clamp-3">
+                      {a.content[lang].description}
+                    </p>
+                  </a>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
 
         {/* Other services */}
         <section className="py-16 bg-white">

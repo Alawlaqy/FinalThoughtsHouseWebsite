@@ -5,6 +5,7 @@
  */
 import { useState } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { privacyPath } from "@/seo";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { Mail, Phone, MapPin, Send, CheckCircle, Loader2 } from "lucide-react";
 
@@ -228,6 +229,16 @@ export default function ContactSection() {
                     </>
                   )}
                 </button>
+                <p className="text-xs text-[#64748B]">
+                  {t("contact.privacyNote")}{" "}
+                  <a
+                    href={privacyPath(lang)}
+                    className="underline hover:text-[#2563EB]"
+                  >
+                    {t("nav.privacy")}
+                  </a>
+                  .
+                </p>
                 <p role="status" aria-live="polite" className="text-sm">
                   {submitted && (
                     <span className="text-green-700 font-medium">

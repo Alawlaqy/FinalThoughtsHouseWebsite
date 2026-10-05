@@ -10,6 +10,7 @@ import {
   brandsPath,
   coveragePath,
   insightsPath,
+  privacyPath,
   servicePath,
 } from "@/seo";
 
@@ -175,7 +176,13 @@ export default function Footer() {
         <div className="mt-12 pt-8 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-sm text-white/60">
             &copy; {new Date().getFullYear()} Thoughts House.{" "}
-            {t("footer.rights")}
+            {t("footer.rights")}{" "}
+            <a
+              href={privacyPath(lang)}
+              className="underline hover:text-[#60A5FA]"
+            >
+              {t("nav.privacy")}
+            </a>
           </p>
           <div className="flex items-center gap-1">
             {[...Array(3)].map((_, i) => (

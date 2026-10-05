@@ -100,7 +100,7 @@ export const SERVICES: Record<ServiceSlug, Service> = {
       en: {
         metaTitle: "Cybersecurity Solutions in Saudi Arabia | Thoughts House",
         metaDescription:
-          "Endpoint protection, next-generation firewalls, network security monitoring, threat detection and security assessments for businesses in Dammam and across Saudi Arabia.",
+          "Endpoint protection, next-generation firewalls, network security monitoring, threat detection and security assessments for businesses across Saudi Arabia.",
         name: "Cybersecurity",
         h1: "Cybersecurity Solutions in Saudi Arabia",
         summary:
@@ -219,8 +219,7 @@ export const SERVICES: Record<ServiceSlug, Service> = {
     vendors: ["Cisco", "HP", "Dell", "Lenovo", "Supermicro", "ASUS"],
     content: {
       en: {
-        metaTitle:
-          "Network Infrastructure Solutions in Saudi Arabia | Thoughts House",
+        metaTitle: "Network Infrastructure Solutions in Saudi Arabia",
         metaDescription:
           "Enterprise routing, switching, wireless, network design and performance optimization for businesses in Dammam and across Saudi Arabia.",
         name: "Network Infrastructure",
@@ -490,10 +489,9 @@ export const SERVICES: Record<ServiceSlug, Service> = {
     ],
     content: {
       en: {
-        metaTitle:
-          "IT Hardware Supplier & Reseller in Dammam, Saudi Arabia | Thoughts House",
+        metaTitle: "IT Hardware Supplier & Reseller in Saudi Arabia",
         metaDescription:
-          "Supply of servers, storage, network and security appliances, laptops, workstations and software licenses from leading brands — with sizing, delivery and installation in Saudi Arabia.",
+          "Servers, storage, network and security appliances, laptops and software licenses from Dell, HP, Lenovo, Cisco, Sophos and Microsoft, across Saudi Arabia.",
         name: "IT Supply & Licensing",
         h1: "IT Hardware Supply & Software Licensing in Saudi Arabia",
         summary:
@@ -548,8 +546,7 @@ export const SERVICES: Record<ServiceSlug, Service> = {
           "Send us your requirements or bill of materials and we will get back to you with a quotation.",
       },
       ar: {
-        metaTitle:
-          "توريد أجهزة وسيرفرات وتراخيص تقنية المعلومات في الدمام | بيت الأفكار",
+        metaTitle: "توريد أجهزة وسيرفرات وتراخيص في السعودية | بيت الأفكار",
         metaDescription:
           "توريد السيرفرات وأنظمة التخزين وأجهزة الشبكات والحماية وأجهزة الحاسب والتراخيص من أبرز العلامات التجارية، مع اختيار المواصفات والتوصيل والتركيب في السعودية.",
         name: "التوريد والتراخيص",
@@ -621,10 +618,9 @@ export const SERVICES: Record<ServiceSlug, Service> = {
     ],
     content: {
       en: {
-        metaTitle:
-          "IT Support & Annual Maintenance Contracts (AMC) in Saudi Arabia | Thoughts House",
+        metaTitle: "IT Support & Maintenance Contracts (AMC) in Saudi Arabia",
         metaDescription:
-          "IT annual maintenance contracts and ongoing support for servers, networks, firewalls, backups and end-user devices: preventive maintenance, monitoring and support across Saudi Arabia.",
+          "IT annual maintenance contracts for servers, networks, firewalls, backups and devices: preventive maintenance, monitoring and support across Saudi Arabia.",
         name: "IT Support & Maintenance (AMC)",
         h1: "IT Support & Annual Maintenance Contracts (AMC) in Saudi Arabia",
         summary:
@@ -679,8 +675,7 @@ export const SERVICES: Record<ServiceSlug, Service> = {
           "Tell us about your sites and systems and we will propose a maintenance scope that fits.",
       },
       ar: {
-        metaTitle:
-          "عقود صيانة تقنية المعلومات والدعم الفني في السعودية | بيت الأفكار",
+        metaTitle: "عقود صيانة تقنية المعلومات في السعودية | بيت الأفكار",
         metaDescription:
           "عقود صيانة سنوية ودعم فني للسيرفرات والشبكات وجدران الحماية والنسخ الاحتياطي وأجهزة المستخدمين: صيانة وقائية ومراقبة ودعم في جميع مناطق المملكة.",
         name: "الدعم الفني وعقود الصيانة",

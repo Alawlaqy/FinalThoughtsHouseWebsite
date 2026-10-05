@@ -66,7 +66,9 @@ export default function ArticlePage({ slug }: { slug: ArticleSlug }) {
   const service = SERVICES[article.service].content[lang];
   const Chevron = lang === "ar" ? ChevronLeft : ChevronRight;
   const Arrow = lang === "ar" ? ArrowLeft : ArrowRight;
-  const others = ARTICLES.filter(a => a.slug !== slug).slice(0, 3);
+  // The next three articles in order (wrapping), so every article is linked from others.
+  const index = ARTICLES.findIndex(a => a.slug === slug);
+  const others = [1, 2, 3].map(n => ARTICLES[(index + n) % ARTICLES.length]);
 
   return (
     <div className="min-h-screen flex flex-col">

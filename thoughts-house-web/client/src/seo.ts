@@ -9,6 +9,7 @@ import { HOME_FAQ } from "./content/homeFaq";
 import { ABOUT, COMPANY } from "./content/about";
 import { COVERAGE, SERVED_PLACES } from "./content/coverage";
 import { BRAND_GROUPS, BRANDS_COPY } from "./content/brands";
+import { PRIVACY } from "./content/privacy";
 import { getArticleBody } from "./content/articleBodyStore";
 
 export type Language = "en" | "ar";
@@ -34,6 +35,7 @@ export type Route =
   | { page: "about"; lang: Language; path: string }
   | { page: "coverage"; lang: Language; path: string }
   | { page: "brands"; lang: Language; path: string }
+  | { page: "privacy"; lang: Language; path: string }
   | { page: "insights"; lang: Language; path: string }
   | { page: "article"; lang: Language; path: string; slug: ArticleSlug };
 
@@ -49,6 +51,10 @@ export function coveragePath(lang: Language) {
 
 export function brandsPath(lang: Language) {
   return `${lang === "ar" ? "/ar" : ""}/brands/`;
+}
+
+export function privacyPath(lang: Language) {
+  return `${lang === "ar" ? "/ar" : ""}/privacy/`;
 }
 
 export function aboutPath(lang: Language) {
@@ -75,6 +81,7 @@ export const ROUTES: Route[] = (["en", "ar"] as Language[]).flatMap(lang => [
   { page: "about" as const, lang, path: aboutPath(lang) },
   { page: "coverage" as const, lang, path: coveragePath(lang) },
   { page: "brands" as const, lang, path: brandsPath(lang) },
+  { page: "privacy" as const, lang, path: privacyPath(lang) },
   { page: "insights" as const, lang, path: insightsPath(lang) },
   ...ARTICLES.map(a => ({
     page: "article" as const,
@@ -108,6 +115,8 @@ export function alternatePath(route: Route): string {
       return coveragePath(other);
     case "brands":
       return brandsPath(other);
+    case "privacy":
+      return privacyPath(other);
     case "insights":
       return insightsPath(other);
     case "article":
@@ -117,14 +126,12 @@ export function alternatePath(route: Route): string {
 
 const HOME_META: Record<Language, { title: string; description: string }> = {
   en: {
-    title:
-      "Thoughts House | IT Company, System Integrator & IT Reseller in Saudi Arabia",
+    title: "Thoughts House: IT Company & System Integrator in Saudi Arabia",
     description:
       "Saudi IT company & system integrator: cybersecurity, networks, cloud & backup, IT maintenance (AMC) and Dell, HP, Cisco & Microsoft supply across the Kingdom.",
   },
   ar: {
-    title:
-      "بيت الأفكار | شركة تقنية معلومات وتكامل أنظمة وتوريد أجهزة في السعودية",
+    title: "بيت الأفكار | شركة تقنية معلومات وتكامل أنظمة في السعودية",
     description:
       "شركة تقنية معلومات سعودية: تكامل أنظمة، أمن سيبراني، شبكات، حلول سحابية ونسخ احتياطي، عقود صيانة، وتوريد أجهزة وتراخيص في جميع مناطق المملكة.",
   },
@@ -137,7 +144,7 @@ export const INSIGHTS_META: Record<
   { title: string; description: string; h1: string; intro: string }
 > = {
   en: {
-    title: "IT & Cybersecurity Insights for Saudi Businesses | Thoughts House",
+    title: "IT & Cybersecurity Insights for Saudi Businesses",
     description:
       "Practical guides on cybersecurity compliance, firewalls, backup, Wi-Fi and IT infrastructure for organizations in Saudi Arabia.",
     h1: "Insights",
@@ -145,8 +152,7 @@ export const INSIGHTS_META: Record<
       "Practical guides for IT decision makers in Saudi Arabia — from cybersecurity compliance to backup and networking.",
   },
   ar: {
-    title:
-      "مقالات في تقنية المعلومات والأمن السيبراني للشركات في السعودية | بيت الأفكار",
+    title: "مقالات تقنية المعلومات والأمن السيبراني | بيت الأفكار",
     description:
       "أدلة عملية حول الالتزام بالأمن السيبراني وجدران الحماية والنسخ الاحتياطي وشبكات Wi-Fi والبنية التحتية للمنشآت في المملكة.",
     h1: "مقالات ومعرفة",
@@ -178,6 +184,11 @@ export function getMeta(route: Route) {
         title: BRANDS_COPY[route.lang].metaTitle,
         description: BRANDS_COPY[route.lang].metaDescription,
       };
+    case "privacy":
+      return {
+        title: PRIVACY[route.lang].metaTitle,
+        description: PRIVACY[route.lang].metaDescription,
+      };
     case "insights":
       return INSIGHTS_META[route.lang];
     case "article": {
@@ -203,8 +214,11 @@ const organization = {
   "@type": "ProfessionalService",
   "@id": ORG_ID,
   name: "Thoughts House",
-  alternateName: "بيت الأفكار",
-  description: HOME_META.en.description,
+  alternateName: ["بيت الأفكار", "ثوتس هاوس"],
+  description: [
+    { "@value": HOME_META.en.description, "@language": "en" },
+    { "@value": HOME_META.ar.description, "@language": "ar" },
+  ],
   url: `${SITE_URL}/`,
   logo: LOGO_URL,
   image: OG_IMAGE,
@@ -218,7 +232,10 @@ const organization = {
     postalCode: COMPANY.postalCode,
     addressCountry: COMPANY.country,
   },
-  slogan: "We Build & Protect Your Network",
+  slogan: [
+    { "@value": "We Build & Protect Your Network", "@language": "en" },
+    { "@value": "نبني ونحمي شبكتك", "@language": "ar" },
+  ],
   knowsLanguage: ["ar", "en"],
   areaServed: [
     { "@type": "Country", name: "Saudi Arabia" },
@@ -243,6 +260,7 @@ const organization = {
       "@type": "Offer",
       itemOffered: {
         "@type": "Service",
+        "@id": `${SITE_URL}${servicePath(slug, "en")}#service`,
         name: SERVICES[slug].content.en.name,
         url: SITE_URL + servicePath(slug, "en"),
       },
@@ -298,6 +316,7 @@ function structuredData(route: Route) {
         inLanguage: route.lang,
         hasPart: ARTICLES.map(a => ({
           "@type": "Article",
+          "@id": `${SITE_URL}${articlePath(a.slug, route.lang)}#article`,
           headline: a.content[route.lang].title,
           url: SITE_URL + articlePath(a.slug, route.lang),
         })),
@@ -424,8 +443,8 @@ function structuredData(route: Route) {
         mainEntityOfPage: url,
         image: `${SITE_URL}/images/og-${a.service}.jpg`,
         inLanguage: route.lang,
-        datePublished: a.published,
-        dateModified: a.published,
+        datePublished: `${a.published}T09:00:00+03:00`,
+        dateModified: `${a.published}T09:00:00+03:00`,
         author: { "@id": ORG_ID },
         publisher: { "@id": ORG_ID },
       },
@@ -443,6 +462,19 @@ function structuredData(route: Route) {
         ],
       }
     );
+  } else if (route.page === "privacy") {
+    graph.push({
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        homeCrumb,
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: PRIVACY[route.lang].h1,
+          item: url,
+        },
+      ],
+    });
   } else {
     const service = SERVICES[route.slug];
     const c = service.content[route.lang];
@@ -489,6 +521,45 @@ function structuredData(route: Route) {
       }
     );
   }
+
+  // Shared page layer: WebSite + WebPage with @ids, linked to the breadcrumb and main entity.
+  const WEBSITE_ID = `${SITE_URL}/#website`;
+  const pageId = `${url}#webpage`;
+  const nodes = graph as Record<string, unknown>[];
+  if (!nodes.some(n => n["@type"] === "WebSite")) {
+    nodes.push({
+      "@type": "WebSite",
+      "@id": WEBSITE_ID,
+      url: `${SITE_URL}/`,
+      name: "Thoughts House",
+      inLanguage: ["en", "ar"],
+      publisher: { "@id": ORG_ID },
+    });
+  }
+  const breadcrumb = nodes.find(n => n["@type"] === "BreadcrumbList");
+  if (breadcrumb) breadcrumb["@id"] = `${url}#breadcrumb`;
+  const mainEntity = nodes.find(
+    n => n["@type"] === "Service" || n["@type"] === "Article"
+  );
+  const pageNode =
+    nodes.find(n =>
+      ["WebPage", "AboutPage", "CollectionPage"].includes(n["@type"] as string)
+    ) ??
+    (nodes[nodes.push({ "@type": "WebPage" }) - 1] as Record<string, unknown>);
+  Object.assign(pageNode, {
+    "@id": pageId,
+    url,
+    name: getMeta(route).title,
+    inLanguage: route.lang,
+    isPartOf: { "@id": WEBSITE_ID },
+    ...(pageNode.about ? {} : { about: { "@id": ORG_ID } }),
+    ...(breadcrumb ? { breadcrumb: { "@id": `${url}#breadcrumb` } } : {}),
+    ...(mainEntity?.["@id"]
+      ? { mainEntity: { "@id": mainEntity["@id"] } }
+      : {}),
+  });
+  if (mainEntity && mainEntity["@type"] === "Article")
+    mainEntity.mainEntityOfPage = { "@id": pageId };
 
   return { "@context": "https://schema.org", "@graph": graph };
 }

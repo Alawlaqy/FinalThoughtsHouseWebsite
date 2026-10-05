@@ -260,18 +260,16 @@ export const BRANDS_COPY: Record<
   }
 > = {
   en: {
-    metaTitle:
-      "IT Brands We Supply in Saudi Arabia: Dell, HP, Cisco, Sophos, Microsoft | Thoughts House",
+    metaTitle: "IT Brands We Supply in Saudi Arabia | Thoughts House",
     metaDescription:
-      "Thoughts House supplies, integrates and supports products from Dell, HP, Lenovo, Cisco, Sophos, Palo Alto Networks, Microsoft, Veeam, NetApp and more across Saudi Arabia.",
+      "Dell, HP, Lenovo, Cisco, Sophos, Palo Alto Networks, Microsoft, Veeam, NetApp and more: supplied, installed and supported across Saudi Arabia.",
     h1: "IT Brands We Supply in Saudi Arabia",
     summary:
       "Thoughts House is an IT reseller and system integrator in Saudi Arabia that supplies, installs and supports products from 25 leading brands, including Dell, HP, Lenovo, Cisco, Sophos, Palo Alto Networks, CrowdStrike, Microsoft, Veeam, NetApp and Pure Storage.",
     cta: "Request a quotation",
   },
   ar: {
-    metaTitle:
-      "العلامات التجارية التي نورّدها في السعودية: Dell وHP وCisco وSophos وMicrosoft | بيت الأفكار",
+    metaTitle: "العلامات التجارية التي نورّدها في السعودية | بيت الأفكار",
     metaDescription:
       "يورّد بيت الأفكار ويركّب ويدعم منتجات Dell وHP وLenovo وCisco وSophos وPalo Alto Networks وMicrosoft وVeeam وNetApp وغيرها في جميع مناطق المملكة.",
     h1: "العلامات التجارية التي نورّدها في السعودية",

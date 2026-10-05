@@ -8,6 +8,7 @@ import InsightsPage from "./pages/InsightsPage";
 import AboutPage from "./pages/AboutPage";
 import CoveragePage from "./pages/CoveragePage";
 import BrandsPage from "./pages/BrandsPage";
+import PrivacyPage from "./pages/PrivacyPage";
 import ArticlePage from "./pages/ArticlePage";
 import { alternatePath, HOME_PATHS, langFromPath, resolveRoute } from "./seo";
 
@@ -21,7 +22,14 @@ function App({ path }: { path: string }) {
   return (
     <ErrorBoundary>
       <ThemeProvider defaultTheme="light">
-        <LanguageProvider lang={lang} altHref={route ? alternatePath(route) : HOME_PATHS[lang === "en" ? "ar" : "en"]}>
+        <LanguageProvider
+          lang={lang}
+          altHref={
+            route
+              ? alternatePath(route)
+              : HOME_PATHS[lang === "en" ? "ar" : "en"]
+          }
+        >
           {!route ? (
             <NotFound />
           ) : route.page === "home" ? (
@@ -34,6 +42,8 @@ function App({ path }: { path: string }) {
             <CoveragePage />
           ) : route.page === "brands" ? (
             <BrandsPage />
+          ) : route.page === "privacy" ? (
+            <PrivacyPage />
           ) : route.page === "insights" ? (
             <InsightsPage />
           ) : (

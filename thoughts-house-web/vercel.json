@@ -7,6 +7,27 @@
   "trailingSlash": true,
   "headers": [
     {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), microphone=(), geolocation=()"
+        }
+      ]
+    },
+    {
       "source": "/assets/(.*)",
       "headers": [
         {
@@ -23,6 +44,128 @@
           "value": "public, max-age=2592000, stale-while-revalidate=604800"
         }
       ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/security-solutions",
+      "destination": "/services/cybersecurity/",
+      "permanent": true
+    },
+    {
+      "source": "/security-solutions/",
+      "destination": "/services/cybersecurity/",
+      "permanent": true
+    },
+    {
+      "source": "/cloud-computing",
+      "destination": "/services/cloud-backup/",
+      "permanent": true
+    },
+    {
+      "source": "/cloud-computing/",
+      "destination": "/services/cloud-backup/",
+      "permanent": true
+    },
+    {
+      "source": "/why-thoughts-house",
+      "destination": "/about/",
+      "permanent": true
+    },
+    {
+      "source": "/why-thoughts-house/",
+      "destination": "/about/",
+      "permanent": true
+    },
+    {
+      "source": "/about-thoughts-house",
+      "destination": "/about/",
+      "permanent": true
+    },
+    {
+      "source": "/about-thoughts-house/",
+      "destination": "/about/",
+      "permanent": true
+    },
+    {
+      "source": "/our-team",
+      "destination": "/about/",
+      "permanent": true
+    },
+    {
+      "source": "/our-team/",
+      "destination": "/about/",
+      "permanent": true
+    },
+    {
+      "source": "/our-clients",
+      "destination": "/about/",
+      "permanent": true
+    },
+    {
+      "source": "/our-clients/",
+      "destination": "/about/",
+      "permanent": true
+    },
+    {
+      "source": "/partners",
+      "destination": "/brands/",
+      "permanent": true
+    },
+    {
+      "source": "/partners/",
+      "destination": "/brands/",
+      "permanent": true
+    },
+    {
+      "source": "/consulting-services",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/consulting-services/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/advanced-services",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/advanced-services/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/big-data-solutions",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/big-data-solutions/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/services",
+      "destination": "/#services",
+      "permanent": true
+    },
+    {
+      "source": "/services/",
+      "destination": "/#services",
+      "permanent": true
+    },
+    {
+      "source": "/contact",
+      "destination": "/#contact",
+      "permanent": true
+    },
+    {
+      "source": "/contact/",
+      "destination": "/#contact",
+      "permanent": true
     }
   ]
 }
