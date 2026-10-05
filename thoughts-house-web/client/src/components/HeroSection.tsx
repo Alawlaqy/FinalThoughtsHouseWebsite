@@ -128,7 +128,7 @@ export default function HeroSection() {
               label: lang === "en" ? "Support Coverage" : "تغطية الدعم",
             },
             {
-              value: "15+",
+              value: "25+",
               label: lang === "en" ? "Technology Partners" : "شريك تقني",
             },
           ].map((stat, i) => (

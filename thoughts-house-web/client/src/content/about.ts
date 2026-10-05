@@ -59,6 +59,7 @@ export const ABOUT: Record<Language, AboutCopy> = {
       },
       { label: "Service area", value: "All regions of Saudi Arabia" },
       { label: "Clients", value: "500+ organizations served" },
+      { label: "Support", value: "24/7 support coverage, 99.9% uptime SLA" },
       {
         label: "Services",
         value:
@@ -104,6 +105,7 @@ export const ABOUT: Record<Language, AboutCopy> = {
       { label: "العنوان", value: "شارع الملك خالد، حي العدامة، الدمام 32242" },
       { label: "نطاق الخدمة", value: "جميع مناطق المملكة" },
       { label: "العملاء", value: "أكثر من 500 منشأة" },
+      { label: "الدعم", value: "دعم على مدار الساعة طوال أيام الأسبوع، واتفاقية مستوى خدمة بجاهزية 99.9%" },
       {
         label: "الخدمات",
         value:
