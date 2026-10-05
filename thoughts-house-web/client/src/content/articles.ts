@@ -16,7 +16,12 @@ export type ArticleSlug =
   | "pdpl-gap-assessment"
   | "nca-ecc-compliance-checklist"
   | "edr-vs-xdr-vs-mdr"
-  | "cloud-disaster-recovery-saudi-arabia";
+  | "cloud-disaster-recovery-saudi-arabia"
+  | "cat6-vs-cat6a"
+  | "immutable-backup"
+  | "microsoft-licensing-oem-vs-volume"
+  | "how-to-choose-a-server-small-business"
+  | "sme-cybersecurity-checklist-saudi-arabia";
 
 interface LocalizedArticle {
   title: string;
@@ -34,6 +39,118 @@ export interface Article {
 }
 
 export const ARTICLES: Article[] = [
+  {
+    slug: "cat6-vs-cat6a",
+    published: "2026-10-06",
+    image: "/images/structured-cabling-1280.webp",
+    service: "structured-cabling",
+    content: {
+      en: {
+        title:
+          "Cat6 vs Cat6A: Which Network Cabling Should Saudi Businesses Install?",
+        metaTitle: "Cat6 vs Cat6A Cabling: Which Should You Install?",
+        description:
+          "Cat6 vs Cat6A for offices and warehouses in Saudi Arabia: speed, distance, PoE, Wi-Fi 6/7 access points, cost and when the upgrade is worth it.",
+      },
+      ar: {
+        title: "كابلات Cat6 أم Cat6A: أيهما تختار لشبكة شركتك؟",
+        metaTitle: "الفرق بين كابلات Cat6 وCat6A | بيت الأفكار",
+        description:
+          "مقارنة بين كابلات Cat6 وCat6A للمكاتب والمستودعات في السعودية: السرعة، والمسافة، وPoE، ونقاط وصول Wi-Fi 6 و7، والتكلفة، ومتى تستحق الترقية.",
+      },
+    },
+  },
+
+  {
+    slug: "immutable-backup",
+    published: "2026-10-06",
+    image: "/images/cloud-backup-1280.webp",
+    service: "cloud-backup",
+    content: {
+      en: {
+        title:
+          "Immutable Backup Explained: How It Stops Ransomware From Deleting Your Backups",
+        metaTitle: "Immutable Backup Explained: Protection From Ransomware",
+        description:
+          "What immutable backup is, how it differs from air-gapped and offsite copies, the 3-2-1-1-0 rule, and how to add immutability to your backups in Saudi Arabia.",
+      },
+      ar: {
+        title:
+          "النسخ الاحتياطي غير القابل للتعديل: كيف يمنع برامج الفدية من حذف نسخك",
+        metaTitle: "النسخ الاحتياطي غير القابل للتعديل (Immutable Backup)",
+        description:
+          "ما هو النسخ الاحتياطي غير القابل للتعديل، وكيف يختلف عن النسخ المعزولة وخارج الموقع، وقاعدة 3-2-1-1-0، وكيف تضيفه لنسخك الاحتياطية.",
+      },
+    },
+  },
+
+  {
+    slug: "microsoft-licensing-oem-vs-volume",
+    published: "2026-10-06",
+    image: "/images/it-supply-1280.webp",
+    service: "it-supply",
+    content: {
+      en: {
+        title: "Microsoft Licensing Explained: OEM vs Retail vs Volume and CSP",
+        metaTitle: "Microsoft OEM vs Volume Licensing vs CSP Explained",
+        description:
+          "How Microsoft OEM, retail, volume and CSP licenses differ for Windows, Windows Server and Microsoft 365, and which suits companies in Saudi Arabia.",
+      },
+      ar: {
+        title:
+          "شرح تراخيص Microsoft: الفرق بين OEM والتجزئة والتراخيص المؤسسية وCSP",
+        metaTitle: "الفرق بين تراخيص Microsoft OEM والمؤسسية وCSP",
+        description:
+          "كيف تختلف تراخيص Microsoft من نوع OEM والتجزئة والتراخيص المؤسسية وCSP لنظام Windows وWindows Server وMicrosoft 365، وأيها يناسب شركتك.",
+      },
+    },
+  },
+
+  {
+    slug: "how-to-choose-a-server-small-business",
+    published: "2026-10-06",
+    image: "/images/it-support-amc-1280.webp",
+    service: "it-supply",
+    content: {
+      en: {
+        title:
+          "How to Choose a Server for a Small Business: A Practical Sizing Guide",
+        metaTitle: "How to Choose a Server for a Small Business",
+        description:
+          "Do you need a server, and which one? Tower vs rack, CPU, RAM, storage and RAID, redundancy, licensing and warranty, explained for Saudi SMEs.",
+      },
+      ar: {
+        title: "كيف تختار سيرفر لشركة صغيرة أو متوسطة: دليل عملي للمواصفات",
+        metaTitle: "كيف تختار سيرفر لشركتك الصغيرة | بيت الأفكار",
+        description:
+          "هل تحتاج إلى سيرفر، وأي نوع؟ مقارنة البرج والرف، والمعالج والذاكرة والتخزين وRAID، والاحتياطية، والتراخيص، والضمان، للشركات في السعودية.",
+      },
+    },
+  },
+
+  {
+    slug: "sme-cybersecurity-checklist-saudi-arabia",
+    published: "2026-10-06",
+    image: "/images/cybersecurity-1280.webp",
+    service: "cybersecurity",
+    content: {
+      en: {
+        title:
+          "Cybersecurity Checklist for SMEs in Saudi Arabia: 15 Essentials",
+        metaTitle: "Cybersecurity Checklist for SMEs in Saudi Arabia",
+        description:
+          "15 practical cybersecurity essentials for small and mid-sized businesses in Saudi Arabia: MFA, patching, EDR, email security, backups, firewall and more.",
+      },
+      ar: {
+        title:
+          "قائمة الأمن السيبراني للشركات الصغيرة والمتوسطة في السعودية: 15 أساسية",
+        metaTitle: "قائمة الأمن السيبراني للشركات الصغيرة والمتوسطة",
+        description:
+          "15 إجراءً عملياً للأمن السيبراني للشركات الصغيرة والمتوسطة في السعودية: التحقق متعدد العوامل، والتحديثات، وEDR، وحماية البريد، والنسخ الاحتياطي، وجدار الحماية.",
+      },
+    },
+  },
+
   {
     slug: "pdpl-gap-assessment",
     published: "2026-10-06",

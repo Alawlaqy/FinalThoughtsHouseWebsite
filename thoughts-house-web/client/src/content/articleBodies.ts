@@ -1505,4 +1505,793 @@ export const ARTICLE_BODIES: Record<
       ],
     },
   },
+  "cat6-vs-cat6a": {
+    en: {
+      summary: [
+        "Cat6 is rated to 250 MHz and supports 1 Gbps to 100 m; 10 Gbps works only over short runs, typically up to about 55 m.",
+        "Cat6A is rated to 500 MHz and supports 10 Gbps over the full 100 m channel, with better resistance to crosstalk and heat from PoE.",
+        "For new offices that will run Wi-Fi 6, 6E or 7 access points or need 10 Gbps, Cat6A is usually the better long-term choice; Cat6 is still fine for desktops and phones.",
+      ],
+      faq: [
+        {
+          q: "Is Cat6 enough for Wi-Fi 6 access points?",
+          a: "For many Wi-Fi 6 access points with 1 Gbps uplinks, Cat6 works. Newer Wi-Fi 6E and Wi-Fi 7 access points often use 2.5 or 5 Gbps uplinks and higher PoE power, where Cat6A gives more headroom over long runs.",
+        },
+        {
+          q: "How much more does Cat6A cost?",
+          a: "Cat6A cable and components cost more and the cable is thicker, so it needs more space in trays and conduit and takes longer to install. The difference is usually a small part of a fit-out budget compared with recabling later.",
+        },
+        {
+          q: "Can I mix Cat6 and Cat6A?",
+          a: "Yes, but a link performs at the level of its weakest component. Use matching cable, jacks and patch cords within each link, and certify the links after installation.",
+        },
+      ],
+      blocks: [
+        {
+          p: "Cabling is installed once and expected to last 10 to 15 years, through several generations of switches and access points. Choosing between Cat6 and Cat6A is one of the few network decisions that is expensive to change later, so it is worth getting right at fit-out.",
+        },
+        {
+          h2: "The key differences",
+        },
+        {
+          ul: [
+            "Bandwidth: Cat6 is rated to 250 MHz; Cat6A to 500 MHz.",
+            "10 Gbps distance: Cat6 supports 10GBASE-T only over short runs, typically up to about 55 m; Cat6A supports it to the full 100 m channel.",
+            "Crosstalk: Cat6A is designed to limit alien crosstalk between neighboring cables, which matters in dense bundles.",
+            "PoE: Cat6A's larger conductors handle the heat of high-power PoE better in large bundles.",
+            "Size: Cat6A is thicker and less flexible, so trays, conduit and racks need more space.",
+          ],
+        },
+        {
+          h2: "When Cat6 is enough",
+        },
+        {
+          p: "For desktop computers, IP phones, printers and most CCTV cameras, 1 Gbps is plenty, and Cat6 delivers it over 100 m. Smaller offices with short cable runs and no plan for multi-gigabit access points can save with Cat6.",
+        },
+        {
+          h2: "When to choose Cat6A",
+        },
+        {
+          ul: [
+            "New Wi-Fi 6E or Wi-Fi 7 access points with 2.5 or 5 Gbps uplinks.",
+            "High-power PoE devices such as PTZ cameras or access points in large cable bundles.",
+            "Long horizontal runs where you want 10 Gbps headroom.",
+            "Warehouses, factories and other sites with electrical noise.",
+            "Buildings you expect to occupy for many years.",
+          ],
+        },
+        {
+          h2: "Do not forget the rest of the installation",
+        },
+        {
+          p: "Cable category is only part of a reliable network. Use components from one system, terminate and label properly, keep cables away from power lines, plan fiber for the backbone between floors or buildings, and certify every link with a cable tester. A badly installed Cat6A link can perform worse than a well-installed Cat6 one.",
+        },
+        {
+          h2: "How Thoughts House can help",
+        },
+        {
+          p: "We design and install structured cabling across Saudi Arabia, including Cat6, Cat6A and fiber backbones, with labelling, testing and documentation. Contact us for a site survey and recommendation.",
+        },
+      ],
+    },
+    ar: {
+      summary: [
+        "كابل Cat6 مصنّف حتى 250 ميجاهرتز ويدعم سرعة 1 جيجابت حتى 100 متر، أما سرعة 10 جيجابت فتعمل على مسافات قصيرة فقط، غالباً حتى نحو 55 متراً.",
+        "كابل Cat6A مصنّف حتى 500 ميجاهرتز ويدعم 10 جيجابت على كامل مسافة 100 متر، مع مقاومة أفضل للتداخل وحرارة PoE.",
+        "للمكاتب الجديدة التي ستستخدم نقاط وصول Wi-Fi 6 أو 6E أو 7 أو تحتاج 10 جيجابت، فإن Cat6A غالباً الخيار الأفضل على المدى الطويل، ويبقى Cat6 مناسباً للحواسيب والهواتف.",
+      ],
+      faq: [
+        {
+          q: "هل يكفي Cat6 لنقاط وصول Wi-Fi 6؟",
+          a: "لكثير من نقاط وصول Wi-Fi 6 بمنفذ 1 جيجابت، نعم. أما نقاط Wi-Fi 6E وWi-Fi 7 الأحدث فتستخدم غالباً منافذ 2.5 أو 5 جيجابت وطاقة PoE أعلى، وهنا يمنح Cat6A هامشاً أكبر على المسافات الطويلة.",
+        },
+        {
+          q: "كم تزيد تكلفة Cat6A؟",
+          a: "الكابلات والملحقات أغلى، والكابل أسمك فيحتاج مساحة أكبر في المسارات ووقتاً أطول للتركيب. لكن الفرق عادةً جزء صغير من ميزانية التجهيز مقارنةً بإعادة التمديد لاحقاً.",
+        },
+        {
+          q: "هل يمكن الجمع بين Cat6 وCat6A؟",
+          a: "نعم، لكن أداء كل وصلة يكون بمستوى أضعف مكوّن فيها. استخدم كابلات ومقابس وأسلاك توصيل متطابقة في كل وصلة، واختبر الوصلات بعد التركيب.",
+        },
+      ],
+      blocks: [
+        {
+          p: "تُركّب الكابلات مرة واحدة ويُتوقع أن تعمل من 10 إلى 15 سنة، عبر عدة أجيال من السويتشات ونقاط الوصول. والاختيار بين Cat6 وCat6A من القرارات القليلة في الشبكة التي يصعب تغييرها لاحقاً، لذلك يستحق الحسم عند التجهيز.",
+        },
+        {
+          h2: "أهم الفروق",
+        },
+        {
+          ul: [
+            "عرض النطاق: Cat6 مصنّف حتى 250 ميجاهرتز، وCat6A حتى 500 ميجاهرتز.",
+            "مسافة 10 جيجابت: Cat6 يدعمها على مسافات قصيرة فقط، غالباً حتى نحو 55 متراً، وCat6A حتى 100 متر كاملة.",
+            "التداخل: صُمم Cat6A للحد من التداخل بين الكابلات المتجاورة، وهذا مهم في الحزم الكثيفة.",
+            "PoE: موصلات Cat6A الأكبر تتحمل حرارة PoE عالي الطاقة بشكل أفضل في الحزم الكبيرة.",
+            "الحجم: Cat6A أسمك وأقل مرونة، فيحتاج مساحة أكبر في المسارات والأنابيب والكبائن.",
+          ],
+        },
+        {
+          h2: "متى يكفي Cat6",
+        },
+        {
+          p: "للحواسيب المكتبية وهواتف IP والطابعات ومعظم كاميرات المراقبة، تكفي سرعة 1 جيجابت، ويوفرها Cat6 حتى 100 متر. ويمكن للمكاتب الصغيرة ذات المسافات القصيرة وبدون خطط لنقاط وصول متعددة الجيجابت أن توفّر باختيار Cat6.",
+        },
+        {
+          h2: "متى تختار Cat6A",
+        },
+        {
+          ul: [
+            "نقاط وصول Wi-Fi 6E أو Wi-Fi 7 بمنافذ 2.5 أو 5 جيجابت.",
+            "أجهزة PoE عالية الطاقة مثل كاميرات PTZ أو نقاط الوصول في حزم كابلات كبيرة.",
+            "التمديدات الأفقية الطويلة التي تريد لها هامش 10 جيجابت.",
+            "المستودعات والمصانع والمواقع ذات التداخل الكهربائي.",
+            "المباني التي تتوقع البقاء فيها سنوات طويلة.",
+          ],
+        },
+        {
+          h2: "لا تنسَ بقية التركيب",
+        },
+        {
+          p: "فئة الكابل جزء فقط من شبكة موثوقة. استخدم مكونات من نظام واحد، وأحسن التوصيل والترقيم، وأبعد الكابلات عن خطوط الكهرباء، وخطط للألياف الضوئية بين الطوابق أو المباني، واختبر كل وصلة بجهاز فحص. فوصلة Cat6A سيئة التركيب قد تعمل أسوأ من وصلة Cat6 جيدة التركيب.",
+        },
+        {
+          h2: "كيف يساعدك بيت الأفكار",
+        },
+        {
+          p: "نصمم وننفذ تمديدات الشبكات في جميع مناطق المملكة، بما فيها Cat6 وCat6A والألياف الضوئية، مع الترقيم والاختبار والتوثيق. تواصل معنا لمسح الموقع والحصول على توصية.",
+        },
+      ],
+    },
+  },
+  "immutable-backup": {
+    en: {
+      summary: [
+        "An immutable backup cannot be changed or deleted until its retention period ends, even by an administrator account.",
+        "It protects against ransomware gangs that log in with stolen admin credentials and delete or encrypt backups before encrypting servers.",
+        "Combine immutability with the 3-2-1-1-0 rule: three copies, two media, one offsite, one immutable or offline, and zero errors in restore tests.",
+      ],
+      faq: [
+        {
+          q: "What is the difference between immutable and air-gapped backup?",
+          a: "An air-gapped backup is physically or logically disconnected from the network, such as tapes in a safe or a disconnected disk. An immutable backup stays online but cannot be modified or deleted until its lock expires. Both protect against ransomware; immutable storage is easier to automate.",
+        },
+        {
+          q: "Can immutable backups still be deleted?",
+          a: "Not through normal means before the retention period ends. That is why retention must be set carefully, and why access to the storage system itself and its management must be protected with separate credentials and MFA.",
+        },
+        {
+          q: "Does Microsoft 365 need its own backup?",
+          a: "Microsoft runs the service, but protecting your data against deletion, ransomware or account compromise is your responsibility under the shared responsibility model. A third-party backup with immutable copies is recommended.",
+        },
+      ],
+      blocks: [
+        {
+          p: "Modern ransomware attacks rarely start with encryption. Attackers first gain administrator access, look for backups and delete or encrypt them, and only then encrypt servers. If your backups can be deleted by an administrator account, a single stolen password can remove your only way to recover.",
+        },
+        {
+          h2: "What makes a backup immutable",
+        },
+        {
+          p: "Immutable storage uses write-once-read-many (WORM) behavior: once a backup is written, it cannot be changed or deleted until a set retention period ends. Common ways to achieve this:",
+        },
+        {
+          ul: [
+            "Object storage with object lock in compliance mode, on-premises or in the cloud.",
+            "A hardened Linux backup repository with immutability, such as the one supported by Veeam.",
+            "Backup appliances with built-in retention lock.",
+            "Cloud backup services that offer immutable or locked copies.",
+          ],
+        },
+        {
+          h2: "Immutable, offline or offsite?",
+        },
+        {
+          ul: [
+            "Offsite protects against fire, flood or theft at your site.",
+            "Offline or air-gapped protects because attackers cannot reach the copy at all.",
+            "Immutable protects because even a reachable copy cannot be changed.",
+          ],
+        },
+        {
+          p: "They are complementary. The 3-2-1-1-0 rule combines them: three copies of the data, on two different media, one offsite, one immutable or offline, and zero errors when you test restores.",
+        },
+        {
+          h2: "Setting it up correctly",
+        },
+        {
+          ul: [
+            "Choose a retention period that covers how long an attacker might stay hidden, often 14 to 30 days or more for critical systems.",
+            "Use separate credentials and MFA for the backup system and storage, not your domain admin account.",
+            "Monitor backup jobs and alert on failures or unusual deletions.",
+            "Test restores regularly, including a full server restore.",
+          ],
+        },
+        {
+          h2: "How Thoughts House can help",
+        },
+        {
+          p: "We design and run backup and recovery across Saudi Arabia with Veeam and other platforms, including immutable repositories, offsite and cloud copies, Microsoft 365 backup and regular restore testing.",
+        },
+      ],
+      sources: [
+        {
+          label: "CISA — #StopRansomware Guide",
+          url: "https://www.cisa.gov/stopransomware/ransomware-guide",
+        },
+        {
+          label: "Veeam — The 3-2-1 backup rule",
+          url: "https://www.veeam.com/blog/321-backup-rule.html",
+        },
+      ],
+    },
+    ar: {
+      summary: [
+        "النسخة الاحتياطية غير القابلة للتعديل لا يمكن تغييرها أو حذفها حتى تنتهي مدة الاحتفاظ بها، حتى من حساب المسؤول.",
+        "تحمي من مجموعات برامج الفدية التي تدخل بصلاحيات مسؤول مسروقة وتحذف النسخ أو تشفّرها قبل تشفير الخوادم.",
+        "اجمع عدم القابلية للتعديل مع قاعدة 3-2-1-1-0: ثلاث نسخ، على وسيطين، واحدة خارج الموقع، وواحدة غير قابلة للتعديل أو معزولة، وصفر أخطاء في اختبارات الاستعادة.",
+      ],
+      faq: [
+        {
+          q: "ما الفرق بين النسخ غير القابلة للتعديل والنسخ المعزولة؟",
+          a: "النسخة المعزولة مفصولة فعلياً أو منطقياً عن الشبكة، مثل الأشرطة في خزنة أو قرص مفصول. أما غير القابلة للتعديل فتبقى متصلة لكن لا يمكن تعديلها أو حذفها حتى ينتهي القفل. وكلاهما يحمي من برامج الفدية، والتخزين غير القابل للتعديل أسهل في الأتمتة.",
+        },
+        {
+          q: "هل يمكن حذف النسخ غير القابلة للتعديل؟",
+          a: "ليس بالطرق العادية قبل انتهاء مدة الاحتفاظ. لذلك يجب ضبط المدة بعناية، وحماية الوصول إلى نظام التخزين وإدارته ببيانات دخول منفصلة وتحقق متعدد العوامل.",
+        },
+        {
+          q: "هل يحتاج Microsoft 365 إلى نسخ احتياطي خاص؟",
+          a: "تدير Microsoft الخدمة، لكن حماية بياناتك من الحذف وبرامج الفدية واختراق الحسابات مسؤوليتك وفق نموذج المسؤولية المشتركة. ويُنصح بنسخ احتياطي من طرف ثالث مع نسخ غير قابلة للتعديل.",
+        },
+      ],
+      blocks: [
+        {
+          p: "نادراً ما تبدأ هجمات برامج الفدية الحديثة بالتشفير. يحصل المهاجمون أولاً على صلاحيات المسؤول، ويبحثون عن النسخ الاحتياطية ويحذفونها أو يشفّرونها، ثم يشفّرون الخوادم. فإذا كان حساب المسؤول يستطيع حذف نسخك، فإن كلمة مرور واحدة مسروقة قد تُفقدك طريقك الوحيد للاستعادة.",
+        },
+        {
+          h2: "ما الذي يجعل النسخة غير قابلة للتعديل",
+        },
+        {
+          p: "يعمل التخزين غير القابل للتعديل بمبدأ الكتابة مرة والقراءة مرات (WORM): بعد كتابة النسخة لا يمكن تغييرها أو حذفها حتى تنتهي مدة احتفاظ محددة. ومن الطرق الشائعة لذلك:",
+        },
+        {
+          ul: [
+            "تخزين الكائنات مع خاصية قفل الكائنات (Object Lock) بوضع الامتثال، داخلياً أو في السحابة.",
+            "مستودع نسخ احتياطي معزز على Linux يدعم عدم القابلية للتعديل، مثل المستودع الذي يدعمه Veeam.",
+            "أجهزة نسخ احتياطي بقفل احتفاظ مدمج.",
+            "خدمات نسخ سحابية توفر نسخاً مقفلة أو غير قابلة للتعديل.",
+          ],
+        },
+        {
+          h2: "غير قابلة للتعديل أم معزولة أم خارج الموقع؟",
+        },
+        {
+          ul: [
+            "خارج الموقع: تحمي من الحريق أو الغرق أو السرقة في موقعك.",
+            "معزولة: تحمي لأن المهاجم لا يستطيع الوصول إلى النسخة أصلاً.",
+            "غير قابلة للتعديل: تحمي لأن النسخة لا يمكن تغييرها حتى لو أمكن الوصول إليها.",
+          ],
+        },
+        {
+          p: "وهي متكاملة. وتجمعها قاعدة 3-2-1-1-0: ثلاث نسخ من البيانات، على وسيطين مختلفين، واحدة خارج الموقع، وواحدة غير قابلة للتعديل أو معزولة، وصفر أخطاء عند اختبار الاستعادة.",
+        },
+        {
+          h2: "الإعداد الصحيح",
+        },
+        {
+          ul: [
+            "اختر مدة احتفاظ تغطي المدة التي قد يبقى فيها المهاجم مختبئاً، وغالباً من 14 إلى 30 يوماً أو أكثر للأنظمة الحرجة.",
+            "استخدم بيانات دخول منفصلة وتحققاً متعدد العوامل لنظام النسخ والتخزين، وليس حساب مسؤول النطاق.",
+            "راقب مهام النسخ ونبّه عند الفشل أو عمليات الحذف غير المعتادة.",
+            "اختبر الاستعادة بانتظام، بما فيها استعادة خادم كامل.",
+          ],
+        },
+        {
+          h2: "كيف يساعدك بيت الأفكار",
+        },
+        {
+          p: "نصمم وندير النسخ الاحتياطي والاستعادة في جميع مناطق المملكة باستخدام Veeam وغيرها، بما في ذلك المستودعات غير القابلة للتعديل، والنسخ خارج الموقع والسحابية، ونسخ Microsoft 365، واختبارات الاستعادة الدورية.",
+        },
+      ],
+      sources: [
+        {
+          label: "CISA — #StopRansomware Guide",
+          url: "https://www.cisa.gov/stopransomware/ransomware-guide",
+        },
+        {
+          label: "Veeam — The 3-2-1 backup rule",
+          url: "https://www.veeam.com/blog/321-backup-rule.html",
+        },
+      ],
+    },
+  },
+  "microsoft-licensing-oem-vs-volume": {
+    en: {
+      summary: [
+        "OEM licenses come preinstalled with a new device and stay with that device; they cannot be moved to another computer.",
+        "Retail (FPP) licenses are bought separately and can usually be transferred to a new device, but cost more and are hard to manage at scale.",
+        "Most businesses now buy Microsoft 365 and many other products through Cloud Solution Provider (CSP) partners, while Windows Server is licensed per core plus client access licenses (CALs).",
+      ],
+      faq: [
+        {
+          q: "Can I move an OEM Windows license to a new laptop?",
+          a: "No. An OEM license is tied to the device it was first installed on and ends with that device. Retail licenses can generally be transferred.",
+        },
+        {
+          q: "How is Windows Server licensed?",
+          a: "Windows Server Standard and Datacenter are licensed per physical core, with minimums of 8 cores per processor and 16 cores per server, plus client access licenses (CALs) for users or devices that access the server. Check current Microsoft terms for your edition.",
+        },
+        {
+          q: "What is CSP?",
+          a: "The Cloud Solution Provider program lets Microsoft partners sell and manage Microsoft 365, Azure and other subscriptions for customers, typically billed monthly or annually, with the partner providing support.",
+        },
+      ],
+      blocks: [
+        {
+          p: "Microsoft licensing confuses many companies, and buying the wrong type can mean paying twice or falling out of compliance in an audit. This guide explains the main ways businesses buy Windows, Windows Server and Microsoft 365. Licensing terms change, so confirm details for your situation before buying.",
+        },
+        {
+          h2: "OEM licenses",
+        },
+        {
+          p: "OEM (original equipment manufacturer) licenses come preinstalled on new computers and servers from manufacturers such as Dell, HP and Lenovo. They are the cheapest way to get Windows on a new device, but the license is tied to that device and cannot be moved to another one.",
+        },
+        {
+          h2: "Retail licenses",
+        },
+        {
+          p: "Retail or full packaged product (FPP) licenses are bought separately. They can usually be transferred to another device, but they cost more and each key must be tracked individually, which becomes hard to manage as you grow.",
+        },
+        {
+          h2: "Volume and subscription licensing",
+        },
+        {
+          p: "Organizations buying many licenses use Microsoft's volume and subscription channels. Today, most small and mid-sized businesses buy Microsoft 365, Windows upgrades for business, and many server and cloud products through Cloud Solution Provider (CSP) partners, with monthly or annual billing. Larger organizations may also use enterprise agreements.",
+        },
+        {
+          h2: "Windows Server: cores and CALs",
+        },
+        {
+          ul: [
+            "Windows Server Standard and Datacenter are licensed per physical core.",
+            "Minimums apply: 8 core licenses per processor and 16 per server.",
+            "Standard covers a limited number of virtual machines; Datacenter covers unlimited virtual machines on the licensed host.",
+            "Users or devices that access the server also need client access licenses (CALs).",
+          ],
+        },
+        {
+          h2: "Which should you choose?",
+        },
+        {
+          ul: [
+            "New laptops and desktops: OEM Windows Pro included with the device is usually enough.",
+            "Email, Office apps and collaboration: Microsoft 365 business plans through CSP.",
+            "On-premises servers: Windows Server core licenses plus CALs, sized to your hardware and virtual machines.",
+            "Keep records of what you bought, for which devices or users, so renewals and audits are easy.",
+          ],
+        },
+        {
+          h2: "How Thoughts House can help",
+        },
+        {
+          p: "We supply Microsoft licenses to businesses across Saudi Arabia, including Microsoft 365, Windows and Windows Server, size licensing to your servers and users, and track renewals for you.",
+        },
+      ],
+    },
+    ar: {
+      summary: [
+        "تراخيص OEM تأتي مثبتة مع الجهاز الجديد وتبقى مرتبطة به، ولا يمكن نقلها إلى حاسوب آخر.",
+        "تراخيص التجزئة (FPP) تُشترى منفصلة ويمكن عادةً نقلها لجهاز جديد، لكنها أغلى وصعبة الإدارة عند كثرة الأجهزة.",
+        "تشتري معظم الشركات اليوم Microsoft 365 ومنتجات أخرى عبر شركاء برنامج CSP، بينما يُرخَّص Windows Server حسب عدد الأنوية مع تراخيص وصول العملاء (CAL).",
+      ],
+      faq: [
+        {
+          q: "هل يمكن نقل ترخيص Windows OEM إلى حاسوب جديد؟",
+          a: "لا. ترخيص OEM مرتبط بالجهاز الذي ثُبّت عليه أول مرة وينتهي بانتهائه. أما تراخيص التجزئة فيمكن نقلها عادةً.",
+        },
+        {
+          q: "كيف يُرخَّص Windows Server؟",
+          a: "يُرخَّص إصدارا Standard وDatacenter حسب عدد الأنوية الفعلية، بحد أدنى 8 أنوية لكل معالج و16 نواة لكل خادم، إضافة إلى تراخيص وصول العملاء (CAL) للمستخدمين أو الأجهزة التي تصل إلى الخادم. تحقق من شروط Microsoft الحالية لإصدارك.",
+        },
+        {
+          q: "ما هو برنامج CSP؟",
+          a: "برنامج مزوّدي الحلول السحابية الذي يتيح لشركاء Microsoft بيع اشتراكات Microsoft 365 وAzure وغيرها وإدارتها للعملاء، بفوترة شهرية أو سنوية عادةً، مع دعم من الشريك.",
+        },
+      ],
+      blocks: [
+        {
+          p: "تربك تراخيص Microsoft كثيراً من الشركات، وشراء النوع الخطأ قد يعني الدفع مرتين أو مخالفة الشروط عند التدقيق. يشرح هذا الدليل الطرق الرئيسية لشراء Windows وWindows Server وMicrosoft 365. وتتغير شروط الترخيص، فتأكد من التفاصيل لحالتك قبل الشراء.",
+        },
+        {
+          h2: "تراخيص OEM",
+        },
+        {
+          p: "تأتي تراخيص OEM مثبتة على الحواسيب والخوادم الجديدة من الشركات المصنعة مثل Dell وHP وLenovo. وهي أرخص طريقة للحصول على Windows لجهاز جديد، لكن الترخيص مرتبط بالجهاز ولا يمكن نقله إلى جهاز آخر.",
+        },
+        {
+          h2: "تراخيص التجزئة",
+        },
+        {
+          p: "تُشترى تراخيص التجزئة (FPP) منفصلة، ويمكن عادةً نقلها إلى جهاز آخر، لكنها أغلى ويجب تتبّع كل مفتاح على حدة، وهذا يصعب مع نمو الشركة.",
+        },
+        {
+          h2: "التراخيص المؤسسية والاشتراكات",
+        },
+        {
+          p: "تستخدم المنشآت التي تشتري تراخيص كثيرة قنوات Microsoft المؤسسية والاشتراكات. واليوم تشتري معظم الشركات الصغيرة والمتوسطة Microsoft 365 وترقيات Windows للأعمال وكثيراً من منتجات الخوادم والسحابة عبر شركاء برنامج CSP بفوترة شهرية أو سنوية، وقد تستخدم المنشآت الكبيرة اتفاقيات مؤسسية.",
+        },
+        {
+          h2: "Windows Server: الأنوية وتراخيص الوصول",
+        },
+        {
+          ul: [
+            "يُرخَّص إصدارا Standard وDatacenter حسب عدد الأنوية الفعلية.",
+            "يوجد حد أدنى: 8 تراخيص أنوية لكل معالج و16 لكل خادم.",
+            "يغطي Standard عدداً محدوداً من الأجهزة الافتراضية، ويغطي Datacenter عدداً غير محدود على الخادم المرخَّص.",
+            "يحتاج المستخدمون أو الأجهزة التي تصل إلى الخادم إلى تراخيص وصول العملاء (CAL).",
+          ],
+        },
+        {
+          h2: "أيها تختار؟",
+        },
+        {
+          ul: [
+            "الحواسيب الجديدة: يكفي غالباً ترخيص Windows Pro من نوع OEM المرفق بالجهاز.",
+            "البريد وتطبيقات Office والتعاون: باقات Microsoft 365 للأعمال عبر CSP.",
+            "الخوادم الداخلية: تراخيص أنوية Windows Server مع تراخيص الوصول، حسب الأجهزة والأجهزة الافتراضية.",
+            "احتفظ بسجل لما اشتريته ولأي أجهزة أو مستخدمين، لتسهل التجديدات والتدقيق.",
+          ],
+        },
+        {
+          h2: "كيف يساعدك بيت الأفكار",
+        },
+        {
+          p: "نورّد تراخيص Microsoft للشركات في جميع مناطق المملكة، ومنها Microsoft 365 وWindows وWindows Server، ونحدد التراخيص المناسبة لخوادمك ومستخدميك، ونتابع التجديدات نيابةً عنك.",
+        },
+      ],
+    },
+  },
+  "how-to-choose-a-server-small-business": {
+    en: {
+      summary: [
+        "First decide whether you need an on-premises server at all: email and file sharing often fit better in Microsoft 365, while ERP, databases, CCTV recording and local applications may need one.",
+        "Size the server for your workloads: CPU cores, RAM, storage capacity and speed, with RAID and redundant power supplies for reliability.",
+        "Budget for the full picture: Windows Server licensing, backup, a UPS, a suitable room or rack, and a warranty with fast onsite support.",
+      ],
+      faq: [
+        {
+          q: "Tower or rack server for a small office?",
+          a: "A tower server suits a small office without a rack and is quieter. A rack server suits companies that already have a network rack or plan to grow, and makes cabling and cooling easier to manage.",
+        },
+        {
+          q: "Which RAID level should a small business use?",
+          a: "RAID 1 (mirroring) for two drives, or RAID 10 for performance and resilience with four or more drives. RAID protects against drive failure but is not a backup; you still need separate backups.",
+        },
+        {
+          q: "How long does a server last?",
+          a: "Most businesses plan on five years, aligned with the warranty. After that, support costs and failure risk rise.",
+        },
+      ],
+      blocks: [
+        {
+          p: "Buying a server is a five-year decision. Too small and it slows the business; too large and you pay for capacity and licenses you never use. This guide walks through the questions we ask before recommending a server.",
+        },
+        {
+          h2: "1. Do you need a server?",
+        },
+        {
+          p: "Email, file sharing and Office apps often work better in Microsoft 365 than on a local server. You may still need one for an ERP or accounting database, line-of-business applications, CCTV recording, Active Directory, or when internet reliability or data residency make the cloud less suitable.",
+        },
+        {
+          h2: "2. Size it for your workloads",
+        },
+        {
+          ul: [
+            "CPU: list the applications and virtual machines you will run; most small businesses need one modern processor with enough cores for their VMs.",
+            "RAM: often the first bottleneck; plan for your VMs plus growth, and leave free slots.",
+            "Storage: SSDs for databases and virtual machines, larger HDDs for archives; plan capacity for three to five years of growth.",
+            "Network: at least two network ports, and 10 Gbps if you move large files or run storage over the network.",
+          ],
+        },
+        {
+          h2: "3. Build in reliability",
+        },
+        {
+          ul: [
+            "RAID 1 or RAID 10 so a single drive failure does not stop the business.",
+            "Redundant, hot-swappable power supplies.",
+            "Remote management (such as Dell iDRAC or HPE iLO) for monitoring and support.",
+            "A UPS sized to shut the server down safely during a power cut.",
+          ],
+        },
+        {
+          h2: "4. Tower or rack",
+        },
+        {
+          p: "Tower servers suit small offices with no rack and are quieter. Rack servers suit companies with a network rack or server room, and make expansion, cabling and cooling easier.",
+        },
+        {
+          h2: "5. Do not forget the costs around the server",
+        },
+        {
+          ul: [
+            "Windows Server licenses per core, plus client access licenses.",
+            "Backup software and storage, ideally with an immutable or offsite copy.",
+            "A cool, secure location; heat is a common cause of failures.",
+            "A warranty with next-business-day onsite support, or faster for critical systems.",
+          ],
+        },
+        {
+          h2: "How Thoughts House can help",
+        },
+        {
+          p: "We size, supply and install servers from Dell, HP and Lenovo across Saudi Arabia, including licensing, backup and support. Tell us what you run and we will recommend a configuration.",
+        },
+      ],
+    },
+    ar: {
+      summary: [
+        "قرر أولاً هل تحتاج إلى سيرفر داخلي أصلاً: البريد ومشاركة الملفات تناسب غالباً Microsoft 365، بينما قد تحتاج أنظمة ERP وقواعد البيانات وتسجيل الكاميرات والتطبيقات المحلية إلى سيرفر.",
+        "حدد المواصفات حسب أعمالك: عدد الأنوية، والذاكرة، وسعة التخزين وسرعته، مع RAID ومزودي طاقة احتياطيين للاعتمادية.",
+        "احسب الصورة كاملة: تراخيص Windows Server، والنسخ الاحتياطي، وجهاز UPS، والمكان أو الكبينة المناسبة، وضمان بدعم سريع في الموقع.",
+      ],
+      faq: [
+        {
+          q: "سيرفر برج أم رف لمكتب صغير؟",
+          a: "سيرفر البرج يناسب المكتب الصغير الذي لا يملك كبينة، وهو أهدأ صوتاً. وسيرفر الرف يناسب الشركات التي لديها كبينة شبكة أو تخطط للتوسع، ويسهّل تنظيم الكابلات والتبريد.",
+        },
+        {
+          q: "أي مستوى RAID تستخدم الشركة الصغيرة؟",
+          a: "RAID 1 (النسخ المتطابق) لقرصين، أو RAID 10 للأداء والاعتمادية مع أربعة أقراص أو أكثر. ويحمي RAID من تعطل القرص لكنه ليس نسخاً احتياطياً، فما زلت تحتاج نسخاً منفصلة.",
+        },
+        {
+          q: "كم يعيش السيرفر؟",
+          a: "تخطط معظم الشركات لخمس سنوات بما يتوافق مع الضمان، وبعدها ترتفع تكاليف الدعم واحتمال الأعطال.",
+        },
+      ],
+      blocks: [
+        {
+          p: "شراء السيرفر قرار لخمس سنوات. إذا كان صغيراً أبطأ العمل، وإذا كان كبيراً دفعت ثمن سعة وتراخيص لا تستخدمها. يمر هذا الدليل على الأسئلة التي نطرحها قبل التوصية بسيرفر.",
+        },
+        {
+          h2: "1. هل تحتاج إلى سيرفر؟",
+        },
+        {
+          p: "البريد ومشاركة الملفات وتطبيقات Office تعمل غالباً بشكل أفضل في Microsoft 365. وقد تحتاج إلى سيرفر لنظام ERP أو قاعدة بيانات محاسبية، أو تطبيقات أعمال، أو تسجيل الكاميرات، أو Active Directory، أو عندما تجعل جودة الإنترنت أو متطلبات بقاء البيانات السحابة أقل ملاءمة.",
+        },
+        {
+          h2: "2. حدد المواصفات حسب أعمالك",
+        },
+        {
+          ul: [
+            "المعالج: اكتب قائمة التطبيقات والأجهزة الافتراضية، فمعظم الشركات الصغيرة تحتاج معالجاً حديثاً واحداً بعدد أنوية كافٍ.",
+            "الذاكرة: غالباً أول عنق زجاجة، فخطط لأجهزتك الافتراضية مع النمو واترك فتحات فارغة.",
+            "التخزين: أقراص SSD لقواعد البيانات والأجهزة الافتراضية، وأقراص HDD أكبر للأرشيف، مع سعة تكفي نمو 3 إلى 5 سنوات.",
+            "الشبكة: منفذان على الأقل، و10 جيجابت إذا كنت تنقل ملفات كبيرة أو تستخدم تخزيناً عبر الشبكة.",
+          ],
+        },
+        {
+          h2: "3. أضف الاعتمادية",
+        },
+        {
+          ul: [
+            "RAID 1 أو RAID 10 حتى لا يوقف تعطل قرص واحد العمل.",
+            "مزودا طاقة احتياطيان قابلان للاستبدال أثناء التشغيل.",
+            "إدارة عن بُعد (مثل Dell iDRAC أو HPE iLO) للمراقبة والدعم.",
+            "جهاز UPS يكفي لإيقاف السيرفر بأمان عند انقطاع الكهرباء.",
+          ],
+        },
+        {
+          h2: "4. برج أم رف",
+        },
+        {
+          p: "سيرفرات البرج تناسب المكاتب الصغيرة التي لا تملك كبينة، وهي أهدأ. وسيرفرات الرف تناسب الشركات التي لديها كبينة شبكة أو غرفة خوادم، وتسهّل التوسع وتنظيم الكابلات والتبريد.",
+        },
+        {
+          h2: "5. لا تنسَ التكاليف المحيطة بالسيرفر",
+        },
+        {
+          ul: [
+            "تراخيص Windows Server حسب الأنوية، مع تراخيص وصول العملاء.",
+            "برنامج النسخ الاحتياطي والتخزين، ويُفضّل مع نسخة غير قابلة للتعديل أو خارج الموقع.",
+            "مكان بارد وآمن، فالحرارة سبب شائع للأعطال.",
+            "ضمان بدعم في الموقع في يوم العمل التالي، أو أسرع للأنظمة الحرجة.",
+          ],
+        },
+        {
+          h2: "كيف يساعدك بيت الأفكار",
+        },
+        {
+          p: "نحدد مواصفات السيرفرات ونورّدها ونركّبها من Dell وHP وLenovo في جميع مناطق المملكة، مع التراخيص والنسخ الاحتياطي والدعم. أخبرنا بما تشغّله وسنوصي بالإعداد المناسب.",
+        },
+      ],
+    },
+  },
+  "sme-cybersecurity-checklist-saudi-arabia": {
+    en: {
+      summary: [
+        "Most attacks on small and mid-sized businesses use the same paths: stolen passwords, phishing emails, unpatched systems and exposed remote access.",
+        "Fifteen essentials, from MFA and patching to EDR, email security and tested backups, close most of these paths without a large budget.",
+        "In Saudi Arabia, these controls also support PDPL requirements and align with the NCA Essential Cybersecurity Controls.",
+      ],
+      faq: [
+        {
+          q: "What is the most important cybersecurity step for a small business?",
+          a: "Turning on multi-factor authentication for email, remote access and admin accounts. It blocks most attacks that rely on stolen passwords.",
+        },
+        {
+          q: "Do small companies in Saudi Arabia need to follow the NCA controls?",
+          a: "The ECC are mandatory for national entities, such as government organizations and critical infrastructure. Other companies are encouraged to adopt them, and the PDPL requires appropriate security for personal data whatever the company size.",
+        },
+        {
+          q: "How much should a small business spend on cybersecurity?",
+          a: "It depends on size and risk. Many essentials, such as MFA, patching and Microsoft 365 security settings, cost little; EDR, email security and backup are modest per-user costs compared with the cost of an incident.",
+        },
+      ],
+      blocks: [
+        {
+          p: "Small and mid-sized businesses are attacked because they often have valuable data and weaker defenses. The good news is that most attacks use a few common paths. This checklist covers the fifteen essentials we recommend to every SME.",
+        },
+        {
+          h2: "Accounts and access",
+        },
+        {
+          ul: [
+            "1. Multi-factor authentication on email, VPN, remote desktop and every admin account.",
+            "2. Separate admin accounts, used only for administration.",
+            "3. Remove accounts of staff who leave on their last day.",
+            "4. A password manager and no shared passwords.",
+          ],
+        },
+        {
+          h2: "Devices",
+        },
+        {
+          ul: [
+            "5. Automatic updates for Windows, macOS, browsers and Office.",
+            "6. Endpoint protection with EDR on every laptop, desktop and server.",
+            "7. Disk encryption on laptops.",
+            "8. Users without local administrator rights.",
+          ],
+        },
+        {
+          h2: "Email and network",
+        },
+        {
+          ul: [
+            "9. Email security with anti-phishing, plus SPF, DKIM and DMARC on your domain.",
+            "10. A business firewall with current firmware and no unnecessary open ports.",
+            "11. A separate guest Wi-Fi network.",
+            "12. No remote desktop exposed directly to the internet; use VPN with MFA.",
+          ],
+        },
+        {
+          h2: "Data and recovery",
+        },
+        {
+          ul: [
+            "13. Backups following the 3-2-1 rule, with an immutable or offline copy and regular restore tests.",
+            "14. Know where personal data is stored, as required under the PDPL.",
+          ],
+        },
+        {
+          h2: "People and response",
+        },
+        {
+          ul: [
+            "15. Short, regular phishing awareness training, and a simple plan for who to call and what to do in an incident.",
+          ],
+        },
+        {
+          h2: "How Thoughts House can help",
+        },
+        {
+          p: "We help SMEs across Saudi Arabia put these essentials in place: firewalls, EDR, email security, MFA, backup and support, with a short assessment to show you where to start.",
+        },
+      ],
+      sources: [
+        {
+          label: "NCA — Essential Cybersecurity Controls (ECC)",
+          url: "https://nca.gov.sa/en/regulatory-documents/controls-list/ecc/",
+        },
+        {
+          label: "CISA — #StopRansomware Guide",
+          url: "https://www.cisa.gov/stopransomware/ransomware-guide",
+        },
+      ],
+    },
+    ar: {
+      summary: [
+        "تستخدم معظم الهجمات على الشركات الصغيرة والمتوسطة الطرق نفسها: كلمات مرور مسروقة، ورسائل تصيد، وأنظمة غير محدّثة، ووصول عن بُعد مكشوف.",
+        "خمسة عشر إجراءً أساسياً، من التحقق متعدد العوامل والتحديثات إلى EDR وحماية البريد والنسخ المختبرة، تسد معظم هذه الطرق دون ميزانية كبيرة.",
+        "في السعودية تدعم هذه الضوابط أيضاً متطلبات نظام حماية البيانات الشخصية وتتوافق مع الضوابط الأساسية للأمن السيبراني.",
+      ],
+      faq: [
+        {
+          q: "ما أهم خطوة أمنية للشركة الصغيرة؟",
+          a: "تفعيل التحقق متعدد العوامل للبريد والوصول عن بُعد وحسابات المسؤولين، فهو يمنع معظم الهجمات المعتمدة على كلمات المرور المسروقة.",
+        },
+        {
+          q: "هل يجب على الشركات الصغيرة في السعودية الالتزام بضوابط الهيئة الوطنية؟",
+          a: "الضوابط الأساسية إلزامية للجهات الوطنية مثل الجهات الحكومية والبنى التحتية الحساسة، وتُشجَّع بقية الشركات على تطبيقها. كما يتطلب نظام حماية البيانات الشخصية حماية مناسبة للبيانات الشخصية أياً كان حجم الشركة.",
+        },
+        {
+          q: "كم يجب أن تنفق الشركة الصغيرة على الأمن السيبراني؟",
+          a: "يعتمد ذلك على الحجم والمخاطر. فكثير من الأساسيات مثل التحقق متعدد العوامل والتحديثات وإعدادات أمان Microsoft 365 قليلة التكلفة، وتكلفة EDR وحماية البريد والنسخ الاحتياطي لكل مستخدم بسيطة مقارنةً بتكلفة حادثة واحدة.",
+        },
+      ],
+      blocks: [
+        {
+          p: "تُستهدف الشركات الصغيرة والمتوسطة لأنها تملك غالباً بيانات قيّمة ودفاعات أضعف. والخبر الجيد أن معظم الهجمات تستخدم طرقاً قليلة معروفة. تغطي هذه القائمة خمسة عشر إجراءً أساسياً نوصي بها لكل شركة.",
+        },
+        {
+          h2: "الحسابات والصلاحيات",
+        },
+        {
+          ul: [
+            "1. التحقق متعدد العوامل للبريد وVPN وسطح المكتب البعيد وكل حسابات المسؤولين.",
+            "2. حسابات مسؤول منفصلة تُستخدم للإدارة فقط.",
+            "3. إلغاء حسابات المغادرين في آخر يوم عمل لهم.",
+            "4. مدير كلمات مرور وعدم مشاركة كلمات المرور.",
+          ],
+        },
+        {
+          h2: "الأجهزة",
+        },
+        {
+          ul: [
+            "5. تحديثات تلقائية لنظامي Windows وmacOS والمتصفحات وOffice.",
+            "6. حماية الأجهزة مع EDR على كل حاسوب وخادم.",
+            "7. تشفير أقراص الحواسيب المحمولة.",
+            "8. المستخدمون بدون صلاحيات مسؤول محلي.",
+          ],
+        },
+        {
+          h2: "البريد والشبكة",
+        },
+        {
+          ul: [
+            "9. حماية البريد من التصيد، مع إعداد SPF وDKIM وDMARC لنطاقك.",
+            "10. جدار حماية للأعمال بإصدار محدّث وبدون منافذ مفتوحة غير ضرورية.",
+            "11. شبكة Wi-Fi منفصلة للزوار.",
+            "12. عدم كشف سطح المكتب البعيد على الإنترنت مباشرة، واستخدام VPN مع التحقق متعدد العوامل.",
+          ],
+        },
+        {
+          h2: "البيانات والاستعادة",
+        },
+        {
+          ul: [
+            "13. نسخ احتياطية وفق قاعدة 3-2-1، مع نسخة غير قابلة للتعديل أو معزولة واختبارات استعادة منتظمة.",
+            "14. معرفة أماكن تخزين البيانات الشخصية كما يتطلب نظام حماية البيانات الشخصية.",
+          ],
+        },
+        {
+          h2: "الموظفون والاستجابة",
+        },
+        {
+          ul: [
+            "15. توعية قصيرة ومنتظمة بالتصيد، وخطة بسيطة توضح بمن تتصل وماذا تفعل عند الحادثة.",
+          ],
+        },
+        {
+          h2: "كيف يساعدك بيت الأفكار",
+        },
+        {
+          p: "نساعد الشركات الصغيرة والمتوسطة في جميع مناطق المملكة على تطبيق هذه الأساسيات: جدران الحماية، وEDR، وحماية البريد، والتحقق متعدد العوامل، والنسخ الاحتياطي، والدعم، مع تقييم قصير يوضح لك من أين تبدأ.",
+        },
+      ],
+      sources: [
+        {
+          label:
+            "الهيئة الوطنية للأمن السيبراني — الضوابط الأساسية للأمن السيبراني",
+          url: "https://nca.gov.sa/ar/regulatory-documents/controls-list/ecc/",
+        },
+        {
+          label: "CISA — #StopRansomware Guide",
+          url: "https://www.cisa.gov/stopransomware/ransomware-guide",
+        },
+      ],
+    },
+  },
 };
