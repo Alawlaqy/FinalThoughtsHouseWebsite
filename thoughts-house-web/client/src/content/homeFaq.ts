@@ -1,7 +1,10 @@
 /* Home page FAQ (also emitted as FAQPage structured data). */
 import type { Language } from "@/seo";
 
-export const HOME_FAQ: Record<Language, { title: string; items: { q: string; a: string }[] }> = {
+export const HOME_FAQ: Record<
+  Language,
+  { title: string; items: { q: string; a: string }[] }
+> = {
   en: {
     title: "Frequently asked questions",
     items: [

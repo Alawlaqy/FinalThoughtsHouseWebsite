@@ -5,7 +5,7 @@
  */
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
-
+import { brandsPath } from "@/seo";
 
 interface Partner {
   name: string;
@@ -42,9 +42,18 @@ export const partners: Partner[] = [
 
 // The marquee repeats the list twice (animated by -50%) for a seamless loop; only the first copy is exposed
 // to screen readers / search engines, the repeats are decorative.
-function PartnerCard({ partner, decorative = false }: { partner: Partner; decorative?: boolean }) {
+function PartnerCard({
+  partner,
+  decorative = false,
+}: {
+  partner: Partner;
+  decorative?: boolean;
+}) {
   return (
-    <div aria-hidden={decorative || undefined} className="flex-shrink-0 mx-3 px-8 py-5 bg-white rounded-xl shadow-sm border border-gray-100 flex items-center justify-center hover:shadow-md hover:border-[#2563EB]/20 transition-all duration-300 group min-w-[160px] h-[80px]">
+    <div
+      aria-hidden={decorative || undefined}
+      className="flex-shrink-0 mx-3 px-8 py-5 bg-white rounded-xl shadow-sm border border-gray-100 flex items-center justify-center hover:shadow-md hover:border-[#2563EB]/20 transition-all duration-300 group min-w-[160px] h-[80px]"
+    >
       <img
         src={partner.logo}
         alt={decorative ? "" : partner.name}
@@ -86,6 +95,14 @@ export default function PartnersSection() {
           <p className="text-lg text-[#64748B] leading-relaxed">
             {t("partners.subtitle")}
           </p>
+          <a
+            href={brandsPath(lang)}
+            className="inline-block mt-4 font-semibold text-[#2563EB] hover:underline"
+          >
+            {lang === "ar"
+              ? "تعرّف على ما نورّده من كل علامة"
+              : "See what we supply from each brand"}
+          </a>
         </div>
       </div>
 
@@ -100,7 +117,11 @@ export default function PartnersSection() {
           style={{ width: "max-content" }}
         >
           {[...firstHalf, ...firstHalf].map((partner, i) => (
-            <PartnerCard key={`r1-${i}`} partner={partner} decorative={i >= firstHalf.length} />
+            <PartnerCard
+              key={`r1-${i}`}
+              partner={partner}
+              decorative={i >= firstHalf.length}
+            />
           ))}
         </div>
       </div>
@@ -116,7 +137,11 @@ export default function PartnersSection() {
           style={{ width: "max-content" }}
         >
           {[...secondHalf, ...secondHalf].map((partner, i) => (
-            <PartnerCard key={`r2-${i}`} partner={partner} decorative={i >= secondHalf.length} />
+            <PartnerCard
+              key={`r2-${i}`}
+              partner={partner}
+              decorative={i >= secondHalf.length}
+            />
           ))}
         </div>
       </div>

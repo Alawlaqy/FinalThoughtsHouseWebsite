@@ -18,6 +18,9 @@ const translations: Record<string, Record<Language, string>> = {
   "nav.partners": { en: "Partners", ar: "الشركاء" },
   "nav.insights": { en: "Insights", ar: "مقالات" },
   "nav.about": { en: "About Us", ar: "من نحن" },
+  "nav.coverage": { en: "Areas We Serve", ar: "المناطق التي نخدمها" },
+  "nav.brands": { en: "Brands We Supply", ar: "العلامات التي نورّدها" },
+  "services.amcCta": { en: "Need a maintenance contract?", ar: "تحتاج عقد صيانة؟" },
   "nav.contact": { en: "Contact Us", ar: "تواصل معنا" },
 
   // Hero

@@ -37,14 +37,18 @@ export const ARTICLES: Article[] = [
     service: "it-supply",
     content: {
       en: {
-        title: "How to Choose an IT System Integrator in Saudi Arabia: 8 Questions to Ask",
-        metaTitle: "How to Choose an IT System Integrator in Saudi Arabia | Thoughts House",
+        title:
+          "How to Choose an IT System Integrator in Saudi Arabia: 8 Questions to Ask",
+        metaTitle:
+          "How to Choose an IT System Integrator in Saudi Arabia | Thoughts House",
         description:
           "A practical checklist for choosing an IT system integrator or reseller in Saudi Arabia: vendor partnerships, certified engineers, local presence, compliance knowledge, support and references.",
       },
       ar: {
-        title: "كيف تختار شركة تكامل أنظمة تقنية المعلومات في السعودية: 8 أسئلة قبل التعاقد",
-        metaTitle: "كيف تختار شركة تكامل أنظمة تقنية المعلومات في السعودية | بيت الأفكار",
+        title:
+          "كيف تختار شركة تكامل أنظمة تقنية المعلومات في السعودية: 8 أسئلة قبل التعاقد",
+        metaTitle:
+          "كيف تختار شركة تكامل أنظمة تقنية المعلومات في السعودية | بيت الأفكار",
         description:
           "قائمة عملية لاختيار شركة تكامل أنظمة أو موزّع تقنية معلومات في المملكة: الشراكات مع الشركات المصنّعة، والمهندسون المعتمدون، والتواجد المحلي، ومعرفة متطلبات الالتزام، والدعم، والمراجع.",
       },
@@ -58,14 +62,17 @@ export const ARTICLES: Article[] = [
     service: "cybersecurity",
     content: {
       en: {
-        title: "NCA Essential Cybersecurity Controls (ECC): A Practical Starting Guide",
-        metaTitle: "NCA Essential Cybersecurity Controls (ECC) Explained | Thoughts House",
+        title:
+          "NCA Essential Cybersecurity Controls (ECC): A Practical Starting Guide",
+        metaTitle:
+          "NCA Essential Cybersecurity Controls (ECC) Explained | Thoughts House",
         description:
           "What the NCA Essential Cybersecurity Controls are, who they apply to, and a practical step-by-step way for Saudi organizations to start working towards compliance.",
       },
       ar: {
         title: "الضوابط الأساسية للأمن السيبراني (ECC): دليل عملي للبدء",
-        metaTitle: "شرح الضوابط الأساسية للأمن السيبراني ECC من الهيئة الوطنية | بيت الأفكار",
+        metaTitle:
+          "شرح الضوابط الأساسية للأمن السيبراني ECC من الهيئة الوطنية | بيت الأفكار",
         description:
           "ما هي الضوابط الأساسية للأمن السيبراني الصادرة عن الهيئة الوطنية للأمن السيبراني، ومن تنطبق عليه، وخطوات عملية تبدأ بها المنشآت في السعودية للامتثال لها.",
       },
@@ -80,13 +87,16 @@ export const ARTICLES: Article[] = [
     content: {
       en: {
         title: "Saudi PDPL: The Technical Measures Your IT Team Needs",
-        metaTitle: "Saudi PDPL Technical Requirements for IT Teams | Thoughts House",
+        metaTitle:
+          "Saudi PDPL Technical Requirements for IT Teams | Thoughts House",
         description:
           "An overview of Saudi Arabia's Personal Data Protection Law (PDPL) and the practical IT and security measures that help organizations meet it.",
       },
       ar: {
-        title: "نظام حماية البيانات الشخصية PDPL: الإجراءات التقنية التي يحتاجها فريق تقنية المعلومات",
-        metaTitle: "المتطلبات التقنية لنظام حماية البيانات الشخصية في السعودية | بيت الأفكار",
+        title:
+          "نظام حماية البيانات الشخصية PDPL: الإجراءات التقنية التي يحتاجها فريق تقنية المعلومات",
+        metaTitle:
+          "المتطلبات التقنية لنظام حماية البيانات الشخصية في السعودية | بيت الأفكار",
         description:
           "نظرة عامة على نظام حماية البيانات الشخصية في المملكة (PDPL) والإجراءات التقنية والأمنية العملية التي تساعد المنشآت على الالتزام به.",
       },
@@ -100,8 +110,10 @@ export const ARTICLES: Article[] = [
     service: "cybersecurity",
     content: {
       en: {
-        title: "How to Choose the Right Next-Generation Firewall for Your Business",
-        metaTitle: "How to Choose a Next-Generation Firewall (NGFW) | Thoughts House",
+        title:
+          "How to Choose the Right Next-Generation Firewall for Your Business",
+        metaTitle:
+          "How to Choose a Next-Generation Firewall (NGFW) | Thoughts House",
         description:
           "The criteria that matter when choosing a next-generation firewall: real-world throughput, features, licensing, management and support — explained without vendor bias.",
       },
@@ -122,13 +134,15 @@ export const ARTICLES: Article[] = [
     content: {
       en: {
         title: "The 3-2-1 Backup Rule: Your Best Defense Against Ransomware",
-        metaTitle: "The 3-2-1 Backup Rule and Ransomware Protection | Thoughts House",
+        metaTitle:
+          "The 3-2-1 Backup Rule and Ransomware Protection | Thoughts House",
         description:
           "What the 3-2-1 backup rule is, why ransomware targets backups, and how immutable copies, testing and clear recovery targets keep your business running.",
       },
       ar: {
         title: "قاعدة النسخ الاحتياطي 3-2-1: أفضل دفاع ضد برامج الفدية",
-        metaTitle: "قاعدة النسخ الاحتياطي 3-2-1 والحماية من برامج الفدية | بيت الأفكار",
+        metaTitle:
+          "قاعدة النسخ الاحتياطي 3-2-1 والحماية من برامج الفدية | بيت الأفكار",
         description:
           "ما هي قاعدة النسخ الاحتياطي 3-2-1، ولماذا تستهدف برامج الفدية النسخ الاحتياطية، وكيف تحافظ النسخ غير القابلة للتعديل والاختبار وأهداف الاستعادة على استمرارية أعمالك.",
       },
@@ -157,8 +171,8 @@ export const ARTICLES: Article[] = [
   },
 ];
 
-export const ARTICLE_SLUGS = ARTICLES.map((a) => a.slug);
+export const ARTICLE_SLUGS = ARTICLES.map(a => a.slug);
 
 export function getArticle(slug: ArticleSlug) {
-  return ARTICLES.find((a) => a.slug === slug)!;
+  return ARTICLES.find(a => a.slug === slug)!;
 }

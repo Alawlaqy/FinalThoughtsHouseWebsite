@@ -8,13 +8,15 @@ export type ServiceSlug =
   | "cybersecurity"
   | "network-infrastructure"
   | "cloud-backup"
-  | "it-supply";
+  | "it-supply"
+  | "it-support-amc";
 
 export const SERVICE_SLUGS: ServiceSlug[] = [
   "cybersecurity",
   "network-infrastructure",
   "cloud-backup",
   "it-supply",
+  "it-support-amc",
 ];
 
 /** Responsive srcset for a service image ("/images/<name>-1280.webp" also exists at 720w). */
@@ -601,6 +603,137 @@ export const SERVICES: Record<ServiceSlug, Service> = {
         ],
         ctaTitle: "اطلب عرض سعر",
         ctaText: "أرسل لنا احتياجاتك أو قائمة المعدات وسنعود إليك بعرض سعر.",
+      },
+    },
+  },
+  "it-support-amc": {
+    slug: "it-support-amc",
+    image: "/images/it-support-amc-1280.webp",
+    vendors: [
+      "Microsoft",
+      "Dell",
+      "HP",
+      "Lenovo",
+      "Cisco",
+      "Sophos",
+      "Veeam",
+      "Microsoft Azure",
+    ],
+    content: {
+      en: {
+        metaTitle:
+          "IT Support & Annual Maintenance Contracts (AMC) in Saudi Arabia | Thoughts House",
+        metaDescription:
+          "IT annual maintenance contracts and ongoing support for servers, networks, firewalls, backups and end-user devices: preventive maintenance, monitoring and support across Saudi Arabia.",
+        name: "IT Support & Maintenance (AMC)",
+        h1: "IT Support & Annual Maintenance Contracts (AMC) in Saudi Arabia",
+        summary:
+          "Thoughts House provides IT annual maintenance contracts (AMC) and ongoing support in Saudi Arabia: preventive maintenance, monitoring, patching, backup checks, license and warranty tracking, and technical support for servers, networks, firewalls and end-user devices.",
+        intro:
+          "Technology only pays off when it keeps running. With an IT maintenance contract from Thoughts House, a team that knows your systems looks after them, preventing problems before they stop your business and fixing issues quickly when they happen.",
+        offeringsTitle: "What our maintenance contracts cover",
+        offerings: [
+          {
+            title: "Preventive Maintenance",
+            text: "Scheduled health checks of servers, storage, network and security equipment, with findings and recommendations after each visit.",
+          },
+          {
+            title: "Monitoring & Patching",
+            text: "Monitoring of critical systems and regular operating system, firmware and security updates, applied in planned maintenance windows.",
+          },
+          {
+            title: "Backup Verification",
+            text: "Checks that backup jobs complete and periodic test restores, so you know your data can actually be recovered.",
+          },
+          {
+            title: "Technical Support",
+            text: "Support for your users and IT team by phone, remote session or site visit, with clear escalation to the hardware and software vendors.",
+          },
+          {
+            title: "License, Warranty & Asset Tracking",
+            text: "An up-to-date inventory of your equipment and reminders before licenses, subscriptions and warranties expire.",
+          },
+        ],
+        vendorsTitle: "Systems we maintain",
+        vendorsText:
+          "We support environments built on leading platforms, including equipment we did not originally supply, after an initial assessment.",
+        whyTitle: "Why choose Thoughts House for IT maintenance",
+        why: WHY_EN,
+        faqTitle: "Frequently asked questions",
+        faq: [
+          {
+            q: "What is an IT annual maintenance contract (AMC)?",
+            a: "An IT AMC is a yearly agreement in which an IT provider maintains and supports your systems (preventive maintenance, updates, monitoring and technical support) for a fixed scope and fee, instead of paying for each incident separately.",
+          },
+          {
+            q: "Can you maintain equipment that you did not supply?",
+            a: "Yes. We start with an assessment of your current servers, network and devices, document what you have, and then agree the scope of the contract.",
+          },
+          {
+            q: "How do we get a maintenance contract quotation?",
+            a: "Send us a list of your sites, servers, network devices and users through the contact form, by email to sales@thoughtshouse.com or on WhatsApp, and we will propose a scope and price.",
+          },
+        ],
+        ctaTitle: "Request a maintenance contract proposal",
+        ctaText:
+          "Tell us about your sites and systems and we will propose a maintenance scope that fits.",
+      },
+      ar: {
+        metaTitle:
+          "عقود صيانة تقنية المعلومات والدعم الفني في السعودية | بيت الأفكار",
+        metaDescription:
+          "عقود صيانة سنوية ودعم فني للسيرفرات والشبكات وجدران الحماية والنسخ الاحتياطي وأجهزة المستخدمين: صيانة وقائية ومراقبة ودعم في جميع مناطق المملكة.",
+        name: "الدعم الفني وعقود الصيانة",
+        h1: "عقود صيانة تقنية المعلومات والدعم الفني في السعودية",
+        summary:
+          "يقدم بيت الأفكار عقود صيانة سنوية لتقنية المعلومات ودعماً فنياً مستمراً في المملكة: صيانة وقائية، ومراقبة، وتحديثات، وفحص النسخ الاحتياطي، ومتابعة التراخيص والضمانات، ودعم فني للسيرفرات والشبكات وجدران الحماية وأجهزة المستخدمين.",
+        intro:
+          "لا تحقق التقنية قيمتها إلا عندما تستمر في العمل. مع عقد صيانة من بيت الأفكار يعتني بأنظمتك فريق يعرفها، فيمنع المشكلات قبل أن توقف عملك ويعالجها بسرعة عند حدوثها.",
+        offeringsTitle: "ماذا تشمل عقود الصيانة",
+        offerings: [
+          {
+            title: "الصيانة الوقائية",
+            text: "فحوصات دورية للسيرفرات والتخزين وأجهزة الشبكات والحماية، مع تقرير بالملاحظات والتوصيات بعد كل زيارة.",
+          },
+          {
+            title: "المراقبة والتحديثات",
+            text: "مراقبة الأنظمة الحرجة وتطبيق تحديثات أنظمة التشغيل والبرامج الثابتة والتحديثات الأمنية في نوافذ صيانة مخططة.",
+          },
+          {
+            title: "التحقق من النسخ الاحتياطي",
+            text: "التأكد من اكتمال مهام النسخ الاحتياطي واختبار الاستعادة دورياً، لتطمئن أن بياناتك قابلة للاستعادة فعلاً.",
+          },
+          {
+            title: "الدعم الفني",
+            text: "دعم المستخدمين وفريق تقنية المعلومات هاتفياً أو عن بُعد أو بزيارة ميدانية، مع تصعيد واضح إلى الشركات المصنّعة.",
+          },
+          {
+            title: "متابعة التراخيص والضمانات والأصول",
+            text: "سجل محدّث لأجهزتك وتنبيهات قبل انتهاء التراخيص والاشتراكات والضمانات.",
+          },
+        ],
+        vendorsTitle: "الأنظمة التي ندعمها",
+        vendorsText:
+          "ندعم البيئات المبنية على أبرز المنصات، بما فيها أجهزة لم نورّدها نحن، بعد تقييم مبدئي.",
+        whyTitle: "لماذا تختار بيت الأفكار لصيانة تقنية المعلومات",
+        why: WHY_AR,
+        faqTitle: "الأسئلة الشائعة",
+        faq: [
+          {
+            q: "ما هو عقد الصيانة السنوي لتقنية المعلومات؟",
+            a: "عقد الصيانة السنوي (AMC) اتفاق لمدة عام يتولى فيه مزوّد تقنية المعلومات صيانة أنظمتك ودعمها، من الصيانة الوقائية والتحديثات إلى المراقبة والدعم الفني، بنطاق وتكلفة محددين بدلاً من الدفع عن كل عطل.",
+          },
+          {
+            q: "هل تصونون أجهزة لم تورّدوها؟",
+            a: "نعم. نبدأ بتقييم السيرفرات والشبكة والأجهزة الحالية، ونوثّق ما لديك، ثم نتفق على نطاق العقد.",
+          },
+          {
+            q: "كيف نطلب عرض سعر لعقد صيانة؟",
+            a: "أرسل قائمة بالمواقع والسيرفرات وأجهزة الشبكة وعدد المستخدمين عبر نموذج التواصل أو البريد sales@thoughtshouse.com أو واتساب، وسنقترح النطاق والسعر.",
+          },
+        ],
+        ctaTitle: "اطلب عرضاً لعقد صيانة",
+        ctaText: "أخبرنا عن مواقعك وأنظمتك وسنقترح نطاق صيانة يناسبك.",
       },
     },
   },

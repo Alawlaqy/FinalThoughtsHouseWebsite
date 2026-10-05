@@ -19,7 +19,10 @@ export default function HeroSection() {
   };
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center overflow-hidden">
+    <section
+      id="home"
+      className="relative min-h-screen flex items-center overflow-hidden"
+    >
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
@@ -38,15 +41,22 @@ export default function HeroSection() {
 
       {/* Geometric accent - diagonal line */}
       <div className="absolute bottom-0 left-0 right-0 h-24 overflow-hidden">
-        <svg viewBox="0 0 1440 96" className="absolute bottom-0 w-full" preserveAspectRatio="none">
+        <svg
+          viewBox="0 0 1440 96"
+          className="absolute bottom-0 w-full"
+          preserveAspectRatio="none"
+        >
           <path d="M0 96L1440 96L1440 0L0 96Z" fill="white" />
         </svg>
       </div>
 
       {/* Subtle geometric pattern overlay */}
-      <div className="absolute inset-0 opacity-[0.03]" style={{
-        backgroundImage: `url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23ffffff' stroke-width='1'%3E%3Cpath d='M0 0h80v80H0z'/%3E%3Cpath d='M0 40h80M40 0v80'/%3E%3C/g%3E%3C/svg%3E")`,
-      }} />
+      <div
+        className="absolute inset-0 opacity-[0.03]"
+        style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23ffffff' stroke-width='1'%3E%3Cpath d='M0 0h80v80H0z'/%3E%3Cpath d='M0 40h80M40 0v80'/%3E%3C/g%3E%3C/svg%3E")`,
+        }}
+      />
 
       {/* Content */}
       <div className="container relative z-10 pt-28 pb-32">
@@ -57,17 +67,18 @@ export default function HeroSection() {
             className="reveal-up inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full mb-8"
           >
             <Shield className="w-4 h-4 text-[#60A5FA]" />
-            <span className="text-sm font-medium text-white/90">
-              {lang === "en" ? "Trusted IT System Integrator" : "شريك موثوق في تكامل أنظمة تقنية المعلومات"}
-            </span>
+            {/* The page's H1 names what the company is (for search engines); the slogan below is the visual headline */}
+            <h1 className="text-sm font-medium text-white/90">
+              {lang === "en"
+                ? "IT Company, System Integrator & IT Reseller in Saudi Arabia"
+                : "شركة تقنية معلومات وتكامل أنظمة وتوريد أجهزة في السعودية"}
+            </h1>
           </div>
 
           {/* Headline */}
-          <h1
-            className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-[1.1] mb-6"
-          >
+          <p className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-[1.1] mb-6">
             {t("hero.slogan")}
-          </h1>
+          </p>
 
           {/* Subtitle */}
           <p
@@ -104,13 +115,27 @@ export default function HeroSection() {
           className="reveal-up mt-20 grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8"
         >
           {[
-            { value: "50+", label: lang === "en" ? "Enterprise Clients" : "عميل مؤسسي" },
-            { value: "99.9%", label: lang === "en" ? "Uptime SLA" : "اتفاقية وقت التشغيل" },
-            { value: "24/7", label: lang === "en" ? "Support Coverage" : "تغطية الدعم" },
-            { value: "15+", label: lang === "en" ? "Technology Partners" : "شريك تقني" },
+            {
+              value: "50+",
+              label: lang === "en" ? "Enterprise Clients" : "عميل مؤسسي",
+            },
+            {
+              value: "99.9%",
+              label: lang === "en" ? "Uptime SLA" : "اتفاقية وقت التشغيل",
+            },
+            {
+              value: "24/7",
+              label: lang === "en" ? "Support Coverage" : "تغطية الدعم",
+            },
+            {
+              value: "15+",
+              label: lang === "en" ? "Technology Partners" : "شريك تقني",
+            },
           ].map((stat, i) => (
             <div key={i} className="text-center md:text-start">
-              <div className="text-2xl sm:text-3xl font-bold text-white mb-1">{stat.value}</div>
+              <div className="text-2xl sm:text-3xl font-bold text-white mb-1">
+                {stat.value}
+              </div>
               <div className="text-sm text-white/60">{stat.label}</div>
             </div>
           ))}

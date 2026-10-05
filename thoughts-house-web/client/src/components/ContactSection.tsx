@@ -35,7 +35,10 @@ export default function ContactSection() {
     try {
       const res = await fetch(CONTACT_ENDPOINT, {
         method: "POST",
-        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
         body: JSON.stringify({
           name: formData.name,
           company: formData.company,
@@ -113,40 +116,60 @@ export default function ContactSection() {
             <div className="bg-[#F8FAFC] rounded-2xl p-8 border border-gray-100">
               <form onSubmit={handleSubmit} className="space-y-5">
                 {/* Honeypot: hidden from people, bots tend to fill it */}
-                <input type="text" name="_honey" tabIndex={-1} autoComplete="off" aria-hidden="true" className="hidden" />
+                <input
+                  type="text"
+                  name="_honey"
+                  tabIndex={-1}
+                  autoComplete="off"
+                  aria-hidden="true"
+                  className="hidden"
+                />
                 <div className="grid sm:grid-cols-2 gap-5">
                   <div>
-                    <label htmlFor="contact-name" className="block text-sm font-semibold text-[#1E293B] mb-2">
+                    <label
+                      htmlFor="contact-name"
+                      className="block text-sm font-semibold text-[#1E293B] mb-2"
+                    >
                       {t("contact.name")}
                     </label>
                     <input
-                    id="contact-name"
-                    name="name"
+                      id="contact-name"
+                      name="name"
                       type="text"
                       required
                       value={formData.name}
-                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                      onChange={e =>
+                        setFormData({ ...formData, name: e.target.value })
+                      }
                       placeholder={t("contact.namePlaceholder")}
                       className="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl text-[#1E293B] placeholder:text-[#94A3B8] focus:outline-none focus:border-[#2563EB] focus:ring-2 focus:ring-[#2563EB]/20 transition-all"
                     />
                   </div>
                   <div>
-                    <label htmlFor="contact-company" className="block text-sm font-semibold text-[#1E293B] mb-2">
+                    <label
+                      htmlFor="contact-company"
+                      className="block text-sm font-semibold text-[#1E293B] mb-2"
+                    >
                       {t("contact.company")}
                     </label>
                     <input
-                    id="contact-company"
-                    name="company"
+                      id="contact-company"
+                      name="company"
                       type="text"
                       value={formData.company}
-                      onChange={(e) => setFormData({ ...formData, company: e.target.value })}
+                      onChange={e =>
+                        setFormData({ ...formData, company: e.target.value })
+                      }
                       placeholder={t("contact.companyPlaceholder")}
                       className="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl text-[#1E293B] placeholder:text-[#94A3B8] focus:outline-none focus:border-[#2563EB] focus:ring-2 focus:ring-[#2563EB]/20 transition-all"
                     />
                   </div>
                 </div>
                 <div>
-                  <label htmlFor="contact-email" className="block text-sm font-semibold text-[#1E293B] mb-2">
+                  <label
+                    htmlFor="contact-email"
+                    className="block text-sm font-semibold text-[#1E293B] mb-2"
+                  >
                     {t("contact.email")}
                   </label>
                   <input
@@ -156,13 +179,18 @@ export default function ContactSection() {
                     autoComplete="email"
                     required
                     value={formData.email}
-                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                    onChange={e =>
+                      setFormData({ ...formData, email: e.target.value })
+                    }
                     placeholder={t("contact.emailPlaceholder")}
                     className="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl text-[#1E293B] placeholder:text-[#94A3B8] focus:outline-none focus:border-[#2563EB] focus:ring-2 focus:ring-[#2563EB]/20 transition-all"
                   />
                 </div>
                 <div>
-                  <label htmlFor="contact-message" className="block text-sm font-semibold text-[#1E293B] mb-2">
+                  <label
+                    htmlFor="contact-message"
+                    className="block text-sm font-semibold text-[#1E293B] mb-2"
+                  >
                     {t("contact.message")}
                   </label>
                   <textarea
@@ -171,7 +199,9 @@ export default function ContactSection() {
                     required
                     rows={5}
                     value={formData.message}
-                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                    onChange={e =>
+                      setFormData({ ...formData, message: e.target.value })
+                    }
                     placeholder={t("contact.messagePlaceholder")}
                     className="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl text-[#1E293B] placeholder:text-[#94A3B8] focus:outline-none focus:border-[#2563EB] focus:ring-2 focus:ring-[#2563EB]/20 transition-all resize-none"
                   />
@@ -199,8 +229,16 @@ export default function ContactSection() {
                   )}
                 </button>
                 <p role="status" aria-live="polite" className="text-sm">
-                  {submitted && <span className="text-green-700 font-medium">{t("contact.sent")}</span>}
-                  {error && <span className="text-red-600 font-medium">{t("contact.error")}</span>}
+                  {submitted && (
+                    <span className="text-green-700 font-medium">
+                      {t("contact.sent")}
+                    </span>
+                  )}
+                  {error && (
+                    <span className="text-red-600 font-medium">
+                      {t("contact.error")}
+                    </span>
+                  )}
                 </p>
               </form>
             </div>
@@ -217,7 +255,11 @@ export default function ContactSection() {
                     key={i}
                     href={info.href}
                     target={info.href.startsWith("http") ? "_blank" : undefined}
-                    rel={info.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                    rel={
+                      info.href.startsWith("http")
+                        ? "noopener noreferrer"
+                        : undefined
+                    }
                     className="flex items-center gap-4 p-4 bg-[#F8FAFC] rounded-xl border border-gray-100 hover:border-[#2563EB]/20 hover:shadow-md transition-all duration-300 group"
                   >
                     <div className="w-12 h-12 rounded-xl bg-[#2563EB]/10 flex items-center justify-center flex-shrink-0 group-hover:bg-[#2563EB]/20 transition-colors">

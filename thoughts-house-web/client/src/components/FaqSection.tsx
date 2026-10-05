@@ -13,10 +13,15 @@ export default function FaqSection() {
   return (
     <section id="faq" className="py-24 bg-white">
       <div className="container max-w-3xl">
-        <h2 className="text-3xl sm:text-4xl font-extrabold text-[#1E293B] mb-10 text-center">{faq.title}</h2>
+        <h2 className="text-3xl sm:text-4xl font-extrabold text-[#1E293B] mb-10 text-center">
+          {faq.title}
+        </h2>
         <div className="space-y-4">
-          {faq.items.map((f) => (
-            <details key={f.q} className="group bg-[#F8FAFC] rounded-xl border border-gray-100">
+          {faq.items.map(f => (
+            <details
+              key={f.q}
+              className="group bg-[#F8FAFC] rounded-xl border border-gray-100"
+            >
               <summary className="flex items-center justify-between gap-4 cursor-pointer list-none p-5 font-semibold text-[#1E293B]">
                 <h3 className="text-base">{f.q}</h3>
                 <ChevronDown

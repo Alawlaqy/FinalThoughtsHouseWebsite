@@ -12,13 +12,21 @@ export default function NotFound() {
     <main className="min-h-screen flex items-center justify-center bg-[#0F172A] text-white px-4 py-16">
       <div className="w-full max-w-xl text-center">
         <a href="/" className="inline-flex items-center gap-2 mb-10">
-          <img src={LOGO} alt="Thoughts House Logo" width={48} height={48} className="w-12 h-12 object-contain brightness-0 invert" />
+          <img
+            src={LOGO}
+            alt="Thoughts House Logo"
+            width={48}
+            height={48}
+            className="w-12 h-12 object-contain brightness-0 invert"
+          />
           <span className="text-lg font-bold">Thoughts House</span>
         </a>
 
         <p className="text-7xl font-extrabold text-[#60A5FA] mb-4">404</p>
         <h1 className="text-2xl sm:text-3xl font-bold mb-3">Page not found</h1>
-        <p className="text-white/60 mb-2">The page you are looking for doesn't exist or has moved.</p>
+        <p className="text-white/60 mb-2">
+          The page you are looking for doesn't exist or has moved.
+        </p>
         <p dir="rtl" lang="ar" className="text-white/60 mb-10">
           الصفحة التي تبحث عنها غير موجودة أو تم نقلها.
         </p>
@@ -39,11 +47,16 @@ export default function NotFound() {
           </a>
         </div>
 
-        <h2 className="text-sm font-bold uppercase tracking-wider text-white/50 mb-4">Our services · خدماتنا</h2>
+        <h2 className="text-sm font-bold uppercase tracking-wider text-white/50 mb-4">
+          Our services · خدماتنا
+        </h2>
         <ul className="grid sm:grid-cols-3 gap-3 text-sm">
-          {SERVICE_SLUGS.map((slug) => (
+          {SERVICE_SLUGS.map(slug => (
             <li key={slug}>
-              <a href={servicePath(slug, "en")} className="text-white/70 hover:text-[#60A5FA] transition-colors">
+              <a
+                href={servicePath(slug, "en")}
+                className="text-white/70 hover:text-[#60A5FA] transition-colors"
+              >
                 {SERVICES[slug].content.en.name}
               </a>
             </li>

@@ -8,10 +8,15 @@ import type { ArticleBody } from "./articleBodies";
 
 let bodies: Record<ArticleSlug, Record<Language, ArticleBody>> | undefined;
 
-export function provideArticleBodies(b: Record<ArticleSlug, Record<Language, ArticleBody>>) {
+export function provideArticleBodies(
+  b: Record<ArticleSlug, Record<Language, ArticleBody>>
+) {
   bodies = b;
 }
 
-export function getArticleBody(slug: ArticleSlug, lang: Language): ArticleBody | undefined {
+export function getArticleBody(
+  slug: ArticleSlug,
+  lang: Language
+): ArticleBody | undefined {
   return bodies?.[slug][lang];
 }

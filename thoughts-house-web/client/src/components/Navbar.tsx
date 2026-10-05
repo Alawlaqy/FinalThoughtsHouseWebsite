@@ -50,7 +50,7 @@ export default function Navbar() {
         {/* Logo */}
         <a
           href={homeHref}
-          onClick={(e) => handleNavClick(e, "#home")}
+          onClick={e => handleNavClick(e, "#home")}
           className="flex items-center gap-2 group"
         >
           <img
@@ -61,10 +61,14 @@ export default function Navbar() {
             className="w-11 h-11 object-contain"
           />
           <div className="flex flex-col">
-            <span className={`text-lg font-bold leading-tight ${scrolled ? "text-[#1E293B]" : "text-white"} transition-colors duration-300`}>
+            <span
+              className={`text-lg font-bold leading-tight ${scrolled ? "text-[#1E293B]" : "text-white"} transition-colors duration-300`}
+            >
               Thoughts House
             </span>
-            <span className={`text-[10px] font-medium tracking-wider uppercase ${scrolled ? "text-[#64748B]" : "text-white/70"} transition-colors duration-300`}>
+            <span
+              className={`text-[10px] font-medium tracking-wider uppercase ${scrolled ? "text-[#64748B]" : "text-white/70"} transition-colors duration-300`}
+            >
               IT System Integrator
             </span>
           </div>
@@ -72,13 +76,15 @@ export default function Navbar() {
 
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-1">
-          {navLinks.map((link) => (
+          {navLinks.map(link => (
             <a
               key={link.key}
               href={homeHref + link.href}
-              onClick={(e) => handleNavClick(e, link.href)}
+              onClick={e => handleNavClick(e, link.href)}
               className={`px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 hover:bg-[#2563EB]/10 ${
-                scrolled ? "text-[#1E293B] hover:text-[#2563EB]" : "text-white/90 hover:text-white"
+                scrolled
+                  ? "text-[#1E293B] hover:text-[#2563EB]"
+                  : "text-white/90 hover:text-white"
               }`}
             >
               {t(link.key)}
@@ -87,7 +93,9 @@ export default function Navbar() {
           <a
             href={insightsPath(lang)}
             className={`px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 hover:bg-[#2563EB]/10 ${
-              scrolled ? "text-[#1E293B] hover:text-[#2563EB]" : "text-white/90 hover:text-white"
+              scrolled
+                ? "text-[#1E293B] hover:text-[#2563EB]"
+                : "text-white/90 hover:text-white"
             }`}
           >
             {t(INSIGHTS_KEY)}
@@ -110,7 +118,7 @@ export default function Navbar() {
           {/* CTA */}
           <a
             href={homeHref + "#contact"}
-            onClick={(e) => handleNavClick(e, "#contact")}
+            onClick={e => handleNavClick(e, "#contact")}
             className="ml-2 px-5 py-2.5 bg-[#2563EB] text-white text-sm font-semibold rounded-lg hover:bg-[#1D4ED8] transition-all duration-200 hover:shadow-lg hover:shadow-[#2563EB]/25 active:scale-[0.98]"
           >
             {t("hero.contact")}
@@ -131,49 +139,59 @@ export default function Navbar() {
           </a>
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            aria-label={mobileOpen ? (lang === "en" ? "Close menu" : "إغلاق القائمة") : (lang === "en" ? "Open menu" : "فتح القائمة")}
+            aria-label={
+              mobileOpen
+                ? lang === "en"
+                  ? "Close menu"
+                  : "إغلاق القائمة"
+                : lang === "en"
+                  ? "Open menu"
+                  : "فتح القائمة"
+            }
             aria-expanded={mobileOpen}
             className={`p-2.5 rounded-lg transition-colors ${
               scrolled ? "text-[#1E293B]" : "text-white"
             }`}
           >
-            {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {mobileOpen ? (
+              <X className="w-6 h-6" />
+            ) : (
+              <Menu className="w-6 h-6" />
+            )}
           </button>
         </div>
       </nav>
 
       {/* Mobile Menu */}
       {mobileOpen && (
-          <div
-            className="pop-in md:hidden bg-white border-t border-gray-100 shadow-lg overflow-hidden"
-          >
-            <div className="container py-4 flex flex-col gap-1">
-              {navLinks.map((link) => (
-                <a
-                  key={link.key}
-                  href={homeHref + link.href}
-                  onClick={(e) => handleNavClick(e, link.href)}
-                  className="px-4 py-3 text-[#1E293B] font-medium rounded-lg hover:bg-[#2563EB]/10 hover:text-[#2563EB] transition-colors"
-                >
-                  {t(link.key)}
-                </a>
-              ))}
+        <div className="pop-in md:hidden bg-white border-t border-gray-100 shadow-lg overflow-hidden">
+          <div className="container py-4 flex flex-col gap-1">
+            {navLinks.map(link => (
               <a
-                href={insightsPath(lang)}
+                key={link.key}
+                href={homeHref + link.href}
+                onClick={e => handleNavClick(e, link.href)}
                 className="px-4 py-3 text-[#1E293B] font-medium rounded-lg hover:bg-[#2563EB]/10 hover:text-[#2563EB] transition-colors"
               >
-                {t(INSIGHTS_KEY)}
+                {t(link.key)}
               </a>
-              <a
-                href={homeHref + "#contact"}
-                onClick={(e) => handleNavClick(e, "#contact")}
-                className="mt-2 px-4 py-3 bg-[#2563EB] text-white font-semibold rounded-lg text-center hover:bg-[#1D4ED8] transition-colors"
-              >
-                {t("hero.contact")}
-              </a>
-            </div>
+            ))}
+            <a
+              href={insightsPath(lang)}
+              className="px-4 py-3 text-[#1E293B] font-medium rounded-lg hover:bg-[#2563EB]/10 hover:text-[#2563EB] transition-colors"
+            >
+              {t(INSIGHTS_KEY)}
+            </a>
+            <a
+              href={homeHref + "#contact"}
+              onClick={e => handleNavClick(e, "#contact")}
+              className="mt-2 px-4 py-3 bg-[#2563EB] text-white font-semibold rounded-lg text-center hover:bg-[#1D4ED8] transition-colors"
+            >
+              {t("hero.contact")}
+            </a>
           </div>
-        )}
+        </div>
+      )}
     </header>
   );
 }

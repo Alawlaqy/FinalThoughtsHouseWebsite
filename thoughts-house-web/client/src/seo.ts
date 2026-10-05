@@ -7,6 +7,8 @@ import { SERVICES, SERVICE_SLUGS, type ServiceSlug } from "./content/services";
 import { ARTICLES, getArticle, type ArticleSlug } from "./content/articles";
 import { HOME_FAQ } from "./content/homeFaq";
 import { ABOUT, COMPANY } from "./content/about";
+import { COVERAGE, SERVED_PLACES } from "./content/coverage";
+import { BRAND_GROUPS, BRANDS_COPY } from "./content/brands";
 import { getArticleBody } from "./content/articleBodyStore";
 
 export type Language = "en" | "ar";
@@ -20,7 +22,9 @@ const ogImage = (route: Route) =>
     ? `${SITE_URL}/images/og-${route.slug}.jpg`
     : route.page === "article"
       ? `${SITE_URL}/images/og-${getArticle(route.slug).service}.jpg`
-      : OG_IMAGE;
+      : route.page === "brands"
+        ? `${SITE_URL}/images/og-it-supply.jpg`
+        : OG_IMAGE;
 
 const ORG_ID = `${SITE_URL}/#organization`;
 
@@ -28,6 +32,8 @@ export type Route =
   | { page: "home"; lang: Language; path: string }
   | { page: "service"; lang: Language; path: string; slug: ServiceSlug }
   | { page: "about"; lang: Language; path: string }
+  | { page: "coverage"; lang: Language; path: string }
+  | { page: "brands"; lang: Language; path: string }
   | { page: "insights"; lang: Language; path: string }
   | { page: "article"; lang: Language; path: string; slug: ArticleSlug };
 
@@ -35,6 +41,14 @@ export const HOME_PATHS: Record<Language, string> = { en: "/", ar: "/ar/" };
 
 export function servicePath(slug: ServiceSlug, lang: Language) {
   return `${lang === "ar" ? "/ar" : ""}/services/${slug}/`;
+}
+
+export function coveragePath(lang: Language) {
+  return `${lang === "ar" ? "/ar" : ""}/saudi-arabia/`;
+}
+
+export function brandsPath(lang: Language) {
+  return `${lang === "ar" ? "/ar" : ""}/brands/`;
 }
 
 export function aboutPath(lang: Language) {
@@ -50,18 +64,30 @@ export function articlePath(slug: ArticleSlug, lang: Language) {
 }
 
 /** Every prerendered page. */
-export const ROUTES: Route[] = (["en", "ar"] as Language[]).flatMap((lang) => [
+export const ROUTES: Route[] = (["en", "ar"] as Language[]).flatMap(lang => [
   { page: "home" as const, lang, path: HOME_PATHS[lang] },
-  ...SERVICE_SLUGS.map((slug) => ({ page: "service" as const, lang, slug, path: servicePath(slug, lang) })),
+  ...SERVICE_SLUGS.map(slug => ({
+    page: "service" as const,
+    lang,
+    slug,
+    path: servicePath(slug, lang),
+  })),
   { page: "about" as const, lang, path: aboutPath(lang) },
+  { page: "coverage" as const, lang, path: coveragePath(lang) },
+  { page: "brands" as const, lang, path: brandsPath(lang) },
   { page: "insights" as const, lang, path: insightsPath(lang) },
-  ...ARTICLES.map((a) => ({ page: "article" as const, lang, slug: a.slug, path: articlePath(a.slug, lang) })),
+  ...ARTICLES.map(a => ({
+    page: "article" as const,
+    lang,
+    slug: a.slug,
+    path: articlePath(a.slug, lang),
+  })),
 ]);
 
 /** Matches a URL path (with or without trailing slash) to a route. */
 export function resolveRoute(pathname: string): Route | undefined {
   const normalized = pathname.endsWith("/") ? pathname : `${pathname}/`;
-  return ROUTES.find((r) => r.path === normalized);
+  return ROUTES.find(r => r.path === normalized);
 }
 
 export function langFromPath(pathname: string): Language {
@@ -78,6 +104,10 @@ export function alternatePath(route: Route): string {
       return servicePath(route.slug, other);
     case "about":
       return aboutPath(other);
+    case "coverage":
+      return coveragePath(other);
+    case "brands":
+      return brandsPath(other);
     case "insights":
       return insightsPath(other);
     case "article":
@@ -87,33 +117,41 @@ export function alternatePath(route: Route): string {
 
 const HOME_META: Record<Language, { title: string; description: string }> = {
   en: {
-    title: "Thoughts House | IT System Integrator & Cybersecurity in Saudi Arabia",
+    title:
+      "Thoughts House | IT Company, System Integrator & IT Reseller in Saudi Arabia",
     description:
-      "IT system integrator in Dammam, Saudi Arabia: cybersecurity, network infrastructure, cloud and backup solutions with Sophos, Cisco, Dell, Microsoft and more.",
+      "Saudi IT company & system integrator: cybersecurity, networks, cloud & backup, IT maintenance (AMC) and Dell, HP, Cisco & Microsoft supply across the Kingdom.",
   },
   ar: {
-    title: "بيت الأفكار | تكامل أنظمة تقنية المعلومات والأمن السيبراني في السعودية",
+    title:
+      "بيت الأفكار | شركة تقنية معلومات وتكامل أنظمة وتوريد أجهزة في السعودية",
     description:
-      "بيت الأفكار شركة تكامل أنظمة تقنية معلومات في الدمام: حلول الأمن السيبراني والبنية التحتية للشبكات والحلول السحابية والنسخ الاحتياطي في السعودية.",
+      "شركة تقنية معلومات سعودية: تكامل أنظمة، أمن سيبراني، شبكات، حلول سحابية ونسخ احتياطي، عقود صيانة، وتوريد أجهزة وتراخيص في جميع مناطق المملكة.",
   },
 };
 
 const LOCALE: Record<Language, string> = { en: "en_US", ar: "ar_SA" };
 
-export const INSIGHTS_META: Record<Language, { title: string; description: string; h1: string; intro: string }> = {
+export const INSIGHTS_META: Record<
+  Language,
+  { title: string; description: string; h1: string; intro: string }
+> = {
   en: {
     title: "IT & Cybersecurity Insights for Saudi Businesses | Thoughts House",
     description:
       "Practical guides on cybersecurity compliance, firewalls, backup, Wi-Fi and IT infrastructure for organizations in Saudi Arabia.",
     h1: "Insights",
-    intro: "Practical guides for IT decision makers in Saudi Arabia — from cybersecurity compliance to backup and networking.",
+    intro:
+      "Practical guides for IT decision makers in Saudi Arabia — from cybersecurity compliance to backup and networking.",
   },
   ar: {
-    title: "مقالات في تقنية المعلومات والأمن السيبراني للشركات في السعودية | بيت الأفكار",
+    title:
+      "مقالات في تقنية المعلومات والأمن السيبراني للشركات في السعودية | بيت الأفكار",
     description:
       "أدلة عملية حول الالتزام بالأمن السيبراني وجدران الحماية والنسخ الاحتياطي وشبكات Wi-Fi والبنية التحتية للمنشآت في المملكة.",
     h1: "مقالات ومعرفة",
-    intro: "أدلة عملية لمتخذي قرارات تقنية المعلومات في المملكة، من الالتزام بالأمن السيبراني إلى النسخ الاحتياطي والشبكات.",
+    intro:
+      "أدلة عملية لمتخذي قرارات تقنية المعلومات في المملكة، من الالتزام بالأمن السيبراني إلى النسخ الاحتياطي والشبكات.",
   },
 };
 
@@ -126,7 +164,20 @@ export function getMeta(route: Route) {
       return { title: c.metaTitle, description: c.metaDescription };
     }
     case "about":
-      return { title: ABOUT[route.lang].metaTitle, description: ABOUT[route.lang].metaDescription };
+      return {
+        title: ABOUT[route.lang].metaTitle,
+        description: ABOUT[route.lang].metaDescription,
+      };
+    case "coverage":
+      return {
+        title: COVERAGE[route.lang].metaTitle,
+        description: COVERAGE[route.lang].metaDescription,
+      };
+    case "brands":
+      return {
+        title: BRANDS_COPY[route.lang].metaTitle,
+        description: BRANDS_COPY[route.lang].metaDescription,
+      };
     case "insights":
       return INSIGHTS_META[route.lang];
     case "article": {
@@ -141,7 +192,11 @@ export function getTitle(route: Route) {
 }
 
 function esc(s: string) {
-  return s.replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+  return s
+    .replace(/&/g, "&amp;")
+    .replace(/"/g, "&quot;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;");
 }
 
 const organization = {
@@ -165,7 +220,10 @@ const organization = {
   },
   slogan: "We Build & Protect Your Network",
   knowsLanguage: ["ar", "en"],
-  areaServed: { "@type": "Country", name: "Saudi Arabia" },
+  areaServed: [
+    { "@type": "Country", name: "Saudi Arabia" },
+    ...SERVED_PLACES.map(name => ({ "@type": "City", name })),
+  ],
   hasMap: COMPANY.mapUrl,
   knowsAbout: [
     "Cybersecurity",
@@ -181,7 +239,7 @@ const organization = {
   hasOfferCatalog: {
     "@type": "OfferCatalog",
     name: "IT Services",
-    itemListElement: SERVICE_SLUGS.map((slug) => ({
+    itemListElement: SERVICE_SLUGS.map(slug => ({
       "@type": "Offer",
       itemOffered: {
         "@type": "Service",
@@ -204,7 +262,12 @@ function structuredData(route: Route) {
   const graph: object[] = [organization];
 
   const home = HOME_PATHS[route.lang];
-  const homeCrumb = { "@type": "ListItem", position: 1, name: route.lang === "ar" ? "الرئيسية" : "Home", item: SITE_URL + home };
+  const homeCrumb = {
+    "@type": "ListItem",
+    position: 1,
+    name: route.lang === "ar" ? "الرئيسية" : "Home",
+    item: SITE_URL + home,
+  };
 
   if (route.page === "home") {
     graph.push(
@@ -219,12 +282,12 @@ function structuredData(route: Route) {
       {
         "@type": "FAQPage",
         inLanguage: route.lang,
-        mainEntity: HOME_FAQ[route.lang].items.map((f) => ({
+        mainEntity: HOME_FAQ[route.lang].items.map(f => ({
           "@type": "Question",
           name: f.q,
           acceptedAnswer: { "@type": "Answer", text: f.a },
         })),
-      },
+      }
     );
   } else if (route.page === "insights") {
     graph.push(
@@ -233,7 +296,7 @@ function structuredData(route: Route) {
         name: INSIGHTS_META[route.lang].h1,
         url,
         inLanguage: route.lang,
-        hasPart: ARTICLES.map((a) => ({
+        hasPart: ARTICLES.map(a => ({
           "@type": "Article",
           headline: a.content[route.lang].title,
           url: SITE_URL + articlePath(a.slug, route.lang),
@@ -241,8 +304,75 @@ function structuredData(route: Route) {
       },
       {
         "@type": "BreadcrumbList",
-        itemListElement: [homeCrumb, { "@type": "ListItem", position: 2, name: INSIGHTS_META[route.lang].h1, item: url }],
+        itemListElement: [
+          homeCrumb,
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: INSIGHTS_META[route.lang].h1,
+            item: url,
+          },
+        ],
+      }
+    );
+  } else if (route.page === "coverage") {
+    const c = COVERAGE[route.lang];
+    graph.push(
+      {
+        "@type": "WebPage",
+        name: c.h1,
+        description: c.summary,
+        url,
+        inLanguage: route.lang,
+        about: { "@id": ORG_ID },
       },
+      {
+        "@type": "FAQPage",
+        inLanguage: route.lang,
+        mainEntity: c.faq.map(f => ({
+          "@type": "Question",
+          name: f.q,
+          acceptedAnswer: { "@type": "Answer", text: f.a },
+        })),
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          homeCrumb,
+          { "@type": "ListItem", position: 2, name: c.h1, item: url },
+        ],
+      }
+    );
+  } else if (route.page === "brands") {
+    const c = BRANDS_COPY[route.lang];
+    graph.push(
+      {
+        "@type": "CollectionPage",
+        name: c.h1,
+        description: c.summary,
+        url,
+        inLanguage: route.lang,
+        about: { "@id": ORG_ID },
+        mainEntity: {
+          "@type": "ItemList",
+          itemListElement: BRAND_GROUPS.flatMap(g => g.brands).map((b, i) => ({
+            "@type": "ListItem",
+            position: i + 1,
+            item: {
+              "@type": "Brand",
+              name: b.name,
+              description: b.products[route.lang],
+            },
+          })),
+        },
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          homeCrumb,
+          { "@type": "ListItem", position: 2, name: c.h1, item: url },
+        ],
+      }
     );
   } else if (route.page === "about") {
     graph.push(
@@ -256,8 +386,16 @@ function structuredData(route: Route) {
       },
       {
         "@type": "BreadcrumbList",
-        itemListElement: [homeCrumb, { "@type": "ListItem", position: 2, name: ABOUT[route.lang].h1, item: url }],
-      },
+        itemListElement: [
+          homeCrumb,
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: ABOUT[route.lang].h1,
+            item: url,
+          },
+        ],
+      }
     );
   } else if (route.page === "article") {
     const a = getArticle(route.slug);
@@ -268,7 +406,7 @@ function structuredData(route: Route) {
       graph.push({
         "@type": "FAQPage",
         inLanguage: route.lang,
-        mainEntity: body.faq.map((f) => ({
+        mainEntity: body.faq.map(f => ({
           "@type": "Question",
           name: f.q,
           acceptedAnswer: { "@type": "Answer", text: f.a },
@@ -295,10 +433,15 @@ function structuredData(route: Route) {
         "@type": "BreadcrumbList",
         itemListElement: [
           homeCrumb,
-          { "@type": "ListItem", position: 2, name: INSIGHTS_META[route.lang].h1, item: SITE_URL + insightsPath(route.lang) },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: INSIGHTS_META[route.lang].h1,
+            item: SITE_URL + insightsPath(route.lang),
+          },
           { "@type": "ListItem", position: 3, name: c.title, item: url },
         ],
-      },
+      }
     );
   } else {
     const service = SERVICES[route.slug];
@@ -318,9 +461,13 @@ function structuredData(route: Route) {
         hasOfferCatalog: {
           "@type": "OfferCatalog",
           name: c.offeringsTitle,
-          itemListElement: c.offerings.map((o) => ({
+          itemListElement: c.offerings.map(o => ({
             "@type": "Offer",
-            itemOffered: { "@type": "Service", name: o.title, description: o.text },
+            itemOffered: {
+              "@type": "Service",
+              name: o.title,
+              description: o.text,
+            },
           })),
         },
       },
@@ -334,12 +481,12 @@ function structuredData(route: Route) {
       {
         "@type": "FAQPage",
         inLanguage: route.lang,
-        mainEntity: c.faq.map((f) => ({
+        mainEntity: c.faq.map(f => ({
           "@type": "Question",
           name: f.q,
           acceptedAnswer: { "@type": "Answer", text: f.a },
         })),
-      },
+      }
     );
   }
 
@@ -381,7 +528,7 @@ export function renderHead(route: Route): string {
 
 /** sitemap.xml covering every route, with hreflang alternates. */
 export function renderSitemap(lastmod: string): string {
-  const urls = ROUTES.map((route) => {
+  const urls = ROUTES.map(route => {
     const enPath = route.lang === "en" ? route.path : alternatePath(route);
     const arPath = route.lang === "ar" ? route.path : alternatePath(route);
     return [
@@ -419,22 +566,39 @@ export function renderLlmsTxt(): string {
     `> ${ABOUT.en.summary}`,
     "",
     "## Company facts",
-    ...ABOUT.en.facts.map((f) => `- ${f.label}: ${f.value}`),
+    ...ABOUT.en.facts.map(f => `- ${f.label}: ${f.value}`),
     `- About page: ${SITE_URL}${aboutPath("en")}`,
     "",
     "## Services",
-    ...SERVICE_SLUGS.map((slug) => {
+    ...SERVICE_SLUGS.map(slug => {
       const c = SERVICES[slug].content.en;
       return `- [${c.name}](${SITE_URL}${servicePath(slug, "en")}): ${c.summary}`;
     }),
     "",
+    "## Coverage",
+    `- [${COVERAGE.en.h1}](${SITE_URL}${coveragePath("en")}): ${COVERAGE.en.summary}`,
+    "",
+    "## Brands supplied",
+    `- [${BRANDS_COPY.en.h1}](${SITE_URL}${brandsPath("en")}): ${BRANDS_COPY.en.summary}`,
+    ...BRAND_GROUPS.map(
+      g => `- ${g.title.en}: ${g.brands.map(b => b.name).join(", ")}`
+    ),
+    "",
     "## Insights",
-    ...ARTICLES.map((a) => `- [${a.content.en.title}](${SITE_URL}${articlePath(a.slug, "en")}): ${a.content.en.description}`),
+    ...ARTICLES.map(
+      a =>
+        `- [${a.content.en.title}](${SITE_URL}${articlePath(a.slug, "en")}): ${a.content.en.description}`
+    ),
     "",
     "## Arabic",
     `- [الصفحة الرئيسية](${SITE_URL}/ar/)`,
     `- [${ABOUT.ar.h1}](${SITE_URL}${aboutPath("ar")}): ${ABOUT.ar.summary}`,
-    ...SERVICE_SLUGS.map((slug) => `- [${SERVICES[slug].content.ar.name}](${SITE_URL}${servicePath(slug, "ar")})`),
+    ...SERVICE_SLUGS.map(
+      slug =>
+        `- [${SERVICES[slug].content.ar.name}](${SITE_URL}${servicePath(slug, "ar")})`
+    ),
+    `- [${COVERAGE.ar.h1}](${SITE_URL}${coveragePath("ar")})`,
+    `- [${BRANDS_COPY.ar.h1}](${SITE_URL}${brandsPath("ar")})`,
     `- [${INSIGHTS_META.ar.h1}](${SITE_URL}${insightsPath("ar")})`,
     "",
   ];

@@ -24,14 +24,18 @@ export default function InsightsPage() {
       <main>
         <section id="home" className="bg-[#0F172A]">
           <div className="container pt-32 pb-14 md:pt-40 md:pb-16">
-            <h1 className="text-4xl sm:text-5xl font-extrabold text-white mb-4">{m.h1}</h1>
-            <p className="max-w-2xl text-lg text-white/70 leading-relaxed">{m.intro}</p>
+            <h1 className="text-4xl sm:text-5xl font-extrabold text-white mb-4">
+              {m.h1}
+            </h1>
+            <p className="max-w-2xl text-lg text-white/70 leading-relaxed">
+              {m.intro}
+            </p>
           </div>
         </section>
 
         <section className="py-16 bg-[#F8FAFC]">
           <div className="container grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {ARTICLES.map((a) => {
+            {ARTICLES.map(a => {
               const c = a.content[lang];
               return (
                 <article
@@ -50,15 +54,23 @@ export default function InsightsPage() {
                     className="w-full h-44 object-cover"
                   />
                   <div className="p-6 flex flex-col flex-1">
-                    <time dateTime={a.published} className="text-xs text-[#94A3B8] mb-2">
+                    <time
+                      dateTime={a.published}
+                      className="text-xs text-[#94A3B8] mb-2"
+                    >
                       {formatDate(a.published, lang)}
                     </time>
                     <h2 className="text-lg font-bold text-[#1E293B] mb-3">
-                      <a href={articlePath(a.slug, lang)} className="group-hover:text-[#2563EB] transition-colors">
+                      <a
+                        href={articlePath(a.slug, lang)}
+                        className="group-hover:text-[#2563EB] transition-colors"
+                      >
                         {c.title}
                       </a>
                     </h2>
-                    <p className="text-sm text-[#64748B] leading-relaxed mb-5 flex-1">{c.description}</p>
+                    <p className="text-sm text-[#64748B] leading-relaxed mb-5 flex-1">
+                      {c.description}
+                    </p>
                     <a
                       href={articlePath(a.slug, lang)}
                       className="inline-flex items-center gap-2 text-sm font-semibold text-[#2563EB]"

@@ -36,7 +36,8 @@ interface AboutCopy {
 
 export const ABOUT: Record<Language, AboutCopy> = {
   en: {
-    metaTitle: "About Thoughts House | IT System Integrator in Dammam, Saudi Arabia",
+    metaTitle:
+      "About Thoughts House | IT System Integrator in Dammam, Saudi Arabia",
     metaDescription:
       "Thoughts House is an IT system integrator and IT supplier based in Dammam, Saudi Arabia, delivering cybersecurity, networking, cloud and backup solutions and IT hardware and software supply.",
     h1: "About Thoughts House",
@@ -45,14 +46,31 @@ export const ABOUT: Record<Language, AboutCopy> = {
     factsTitle: "Company facts",
     facts: [
       { label: "Company name", value: "Thoughts House (بيت الأفكار)" },
-      { label: "Type", value: "IT system integrator and IT supplier / reseller" },
-      { label: "Headquarters", value: "Dammam, Eastern Province, Saudi Arabia" },
-      { label: "Address", value: "King Khaled St, Al 'Adamah, Dammam 32242, Saudi Arabia" },
+      {
+        label: "Type",
+        value: "IT system integrator and IT supplier / reseller",
+      },
+      {
+        label: "Headquarters",
+        value: "Dammam, Eastern Province, Saudi Arabia",
+      },
+      {
+        label: "Address",
+        value: "King Khaled St, Al 'Adamah, Dammam 32242, Saudi Arabia",
+      },
       { label: "Service area", value: "All regions of Saudi Arabia" },
-      { label: "Services", value: "Cybersecurity · Network infrastructure · Cloud & backup · IT supply & licensing · Support & maintenance" },
+      {
+        label: "Services",
+        value:
+          "Cybersecurity · Network infrastructure · Cloud & backup · IT supply & licensing · Support & maintenance",
+      },
       { label: "Technology partners", value: PARTNER_BRANDS },
       { label: "Languages", value: "Arabic, English" },
-      { label: "Contact", value: "sales@thoughtshouse.com · +966 54 102 2995 (phone and WhatsApp)" },
+      {
+        label: "Contact",
+        value:
+          "sales@thoughtshouse.com · +966 54 102 2995 (phone and WhatsApp)",
+      },
     ],
     whatTitle: "What we do",
     what: [
@@ -75,14 +93,27 @@ export const ABOUT: Record<Language, AboutCopy> = {
     factsTitle: "معلومات الشركة",
     facts: [
       { label: "اسم الشركة", value: "بيت الأفكار (Thoughts House)" },
-      { label: "النشاط", value: "تكامل أنظمة تقنية المعلومات وتوريد أجهزتها وتراخيصها" },
-      { label: "المقر", value: "الدمام، المنطقة الشرقية، المملكة العربية السعودية" },
+      {
+        label: "النشاط",
+        value: "تكامل أنظمة تقنية المعلومات وتوريد أجهزتها وتراخيصها",
+      },
+      {
+        label: "المقر",
+        value: "الدمام، المنطقة الشرقية، المملكة العربية السعودية",
+      },
       { label: "العنوان", value: "شارع الملك خالد، حي العدامة، الدمام 32242" },
       { label: "نطاق الخدمة", value: "جميع مناطق المملكة" },
-      { label: "الخدمات", value: "الأمن السيبراني · البنية التحتية للشبكات · السحابة والنسخ الاحتياطي · التوريد والتراخيص · الدعم والصيانة" },
+      {
+        label: "الخدمات",
+        value:
+          "الأمن السيبراني · البنية التحتية للشبكات · السحابة والنسخ الاحتياطي · التوريد والتراخيص · الدعم والصيانة",
+      },
       { label: "الشركاء التقنيون", value: PARTNER_BRANDS },
       { label: "اللغات", value: "العربية، الإنجليزية" },
-      { label: "التواصل", value: "sales@thoughtshouse.com · ‎+966 54 102 2995 (هاتف وواتساب)" },
+      {
+        label: "التواصل",
+        value: "sales@thoughtshouse.com · ‎+966 54 102 2995 (هاتف وواتساب)",
+      },
     ],
     whatTitle: "ماذا نقدّم",
     what: [

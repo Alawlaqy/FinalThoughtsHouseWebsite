@@ -6,6 +6,8 @@ import Home from "./pages/Home";
 import ServicePage from "./pages/ServicePage";
 import InsightsPage from "./pages/InsightsPage";
 import AboutPage from "./pages/AboutPage";
+import CoveragePage from "./pages/CoveragePage";
+import BrandsPage from "./pages/BrandsPage";
 import ArticlePage from "./pages/ArticlePage";
 import { alternatePath, HOME_PATHS, langFromPath, resolveRoute } from "./seo";
 
@@ -28,6 +30,10 @@ function App({ path }: { path: string }) {
             <ServicePage slug={route.slug} />
           ) : route.page === "about" ? (
             <AboutPage />
+          ) : route.page === "coverage" ? (
+            <CoveragePage />
+          ) : route.page === "brands" ? (
+            <BrandsPage />
           ) : route.page === "insights" ? (
             <InsightsPage />
           ) : (

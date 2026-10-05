@@ -5,7 +5,13 @@
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Mail, Phone, MapPin } from "lucide-react";
 import { SERVICES, SERVICE_SLUGS } from "@/content/services";
-import { aboutPath, insightsPath, servicePath } from "@/seo";
+import {
+  aboutPath,
+  brandsPath,
+  coveragePath,
+  insightsPath,
+  servicePath,
+} from "@/seo";
 
 export default function Footer() {
   const { t, lang, homeHref } = useLanguage();
@@ -45,7 +51,9 @@ export default function Footer() {
               />
               <div>
                 <div className="text-lg font-bold">Thoughts House</div>
-                <div className="text-xs text-white/50">IT System Integrator</div>
+                <div className="text-xs text-white/50">
+                  IT System Integrator
+                </div>
               </div>
             </div>
             <p className="text-white/60 text-sm leading-relaxed mb-4 max-w-xs">
@@ -59,11 +67,11 @@ export default function Footer() {
               {t("footer.quickLinks")}
             </h2>
             <ul className="space-y-3">
-              {navLinks.map((link) => (
+              {navLinks.map(link => (
                 <li key={link.key}>
                   <a
                     href={homeHref + link.href}
-                    onClick={(e) => handleNavClick(e, link.href)}
+                    onClick={e => handleNavClick(e, link.href)}
                     className="text-sm text-white/60 hover:text-[#60A5FA] transition-colors duration-200"
                   >
                     {t(link.key)}
@@ -76,6 +84,22 @@ export default function Footer() {
                   className="text-sm text-white/60 hover:text-[#60A5FA] transition-colors duration-200"
                 >
                   {t("nav.about")}
+                </a>
+              </li>
+              <li>
+                <a
+                  href={coveragePath(lang)}
+                  className="text-sm text-white/60 hover:text-[#60A5FA] transition-colors duration-200"
+                >
+                  {t("nav.coverage")}
+                </a>
+              </li>
+              <li>
+                <a
+                  href={brandsPath(lang)}
+                  className="text-sm text-white/60 hover:text-[#60A5FA] transition-colors duration-200"
+                >
+                  {t("nav.brands")}
                 </a>
               </li>
               <li>
@@ -95,7 +119,7 @@ export default function Footer() {
               {t("footer.services")}
             </h2>
             <ul className="space-y-3">
-              {SERVICE_SLUGS.map((slug) => (
+              {SERVICE_SLUGS.map(slug => (
                 <li key={slug}>
                   <a
                     href={servicePath(slug, lang)}
@@ -115,13 +139,19 @@ export default function Footer() {
             </h2>
             <ul className="space-y-3">
               <li>
-                <a href="mailto:sales@thoughtshouse.com" className="flex items-center gap-3 text-sm text-white/60 hover:text-[#60A5FA] transition-colors">
+                <a
+                  href="mailto:sales@thoughtshouse.com"
+                  className="flex items-center gap-3 text-sm text-white/60 hover:text-[#60A5FA] transition-colors"
+                >
                   <Mail className="w-4 h-4 flex-shrink-0" />
                   sales@thoughtshouse.com
                 </a>
               </li>
               <li>
-                <a href="tel:+966541022995" className="flex items-center gap-3 text-sm text-white/60 hover:text-[#60A5FA] transition-colors">
+                <a
+                  href="tel:+966541022995"
+                  className="flex items-center gap-3 text-sm text-white/60 hover:text-[#60A5FA] transition-colors"
+                >
                   <Phone className="w-4 h-4 flex-shrink-0" />
                   +966 54 102 2995
                 </a>
@@ -144,11 +174,15 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="mt-12 pt-8 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-sm text-white/60">
-            &copy; {new Date().getFullYear()} Thoughts House. {t("footer.rights")}
+            &copy; {new Date().getFullYear()} Thoughts House.{" "}
+            {t("footer.rights")}
           </p>
           <div className="flex items-center gap-1">
             {[...Array(3)].map((_, i) => (
-              <div key={i} className="w-1.5 h-1.5 rounded-full bg-[#2563EB]/60" />
+              <div
+                key={i}
+                className="w-1.5 h-1.5 rounded-full bg-[#2563EB]/60"
+              />
             ))}
           </div>
         </div>

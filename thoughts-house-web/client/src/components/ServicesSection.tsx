@@ -7,7 +7,12 @@ import { useState } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { servicePath } from "@/seo";
 import { imageSrcSet } from "@/content/services";
-import type { ServiceSlug } from "@/content/services";
+import { SERVICES, type ServiceSlug } from "@/content/services";
+
+const SERVICES_NAMES = {
+  en: SERVICES["it-support-amc"].content.en.name,
+  ar: SERVICES["it-support-amc"].content.ar.name,
+};
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import {
   ShieldCheck,
@@ -91,7 +96,11 @@ export default function ServicesSection() {
   const { ref: sectionRef, isVisible } = useScrollReveal({ threshold: 0.05 });
 
   return (
-    <section id="services" className="py-24 bg-white geometric-pattern" ref={sectionRef}>
+    <section
+      id="services"
+      className="py-24 bg-white geometric-pattern"
+      ref={sectionRef}
+    >
       <div className="container">
         {/* Section Header */}
         <div
@@ -120,7 +129,7 @@ export default function ServicesSection() {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
-          {tabs.map((tab) => {
+          {tabs.map(tab => {
             const Icon = tab.icon;
             const isActive = activeTab === tab.key;
             return (
@@ -137,7 +146,9 @@ export default function ServicesSection() {
                     : "bg-[#F8FAFC] text-[#64748B] hover:bg-[#2563EB]/10 hover:text-[#2563EB]"
                 }`}
               >
-                <Icon className={`w-5 h-5 transition-colors ${isActive ? "text-white" : "text-[#94A3B8] group-hover:text-[#2563EB]"}`} />
+                <Icon
+                  className={`w-5 h-5 transition-colors ${isActive ? "text-white" : "text-[#94A3B8] group-hover:text-[#2563EB]"}`}
+                />
                 {t(tab.titleKey)}
               </button>
             );
@@ -152,7 +163,7 @@ export default function ServicesSection() {
         >
           {/* All panels are rendered so every service is in the HTML for search engines;
               inactive ones are hidden until their tab is selected. */}
-          {tabs.map((tab) => {
+          {tabs.map(tab => {
             const isActive = tab.key === activeTab;
             const Icon = tab.icon;
             return (
@@ -162,7 +173,12 @@ export default function ServicesSection() {
                 role="tabpanel"
                 aria-labelledby={`service-tab-${tab.key}`}
                 hidden={!isActive}
-                style={{ "--reveal-y": "20px", "--reveal-duration": "0.4s" } as React.CSSProperties}
+                style={
+                  {
+                    "--reveal-y": "20px",
+                    "--reveal-duration": "0.4s",
+                  } as React.CSSProperties
+                }
                 className="reveal-up grid lg:grid-cols-2 gap-10 items-center"
               >
                 {/* Image */}
@@ -182,7 +198,9 @@ export default function ServicesSection() {
                   <div className="absolute bottom-6 left-6 right-6">
                     <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/95 backdrop-blur-sm rounded-lg shadow-lg">
                       <Icon className="w-5 h-5 text-[#2563EB]" />
-                      <span className="font-bold text-[#1E293B]">{t(tab.titleKey)}</span>
+                      <span className="font-bold text-[#1E293B]">
+                        {t(tab.titleKey)}
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -196,15 +214,20 @@ export default function ServicesSection() {
                     {t(tab.descKey)}
                   </p>
                   <ul className="space-y-3">
-                    {tab.features.map((featureKey) => (
+                    {tab.features.map(featureKey => (
                       <li
                         key={featureKey}
                         className="flex items-center gap-3 p-3 rounded-lg hover:bg-[#F8FAFC] transition-colors group"
                       >
                         <div className="w-8 h-8 rounded-lg bg-[#2563EB]/10 flex items-center justify-center flex-shrink-0 group-hover:bg-[#2563EB]/20 transition-colors">
-                          <CheckCircle2 className="w-4 h-4 text-[#2563EB]" aria-hidden="true" />
+                          <CheckCircle2
+                            className="w-4 h-4 text-[#2563EB]"
+                            aria-hidden="true"
+                          />
                         </div>
-                        <span className="font-medium text-[#334155]">{t(featureKey)}</span>
+                        <span className="font-medium text-[#334155]">
+                          {t(featureKey)}
+                        </span>
                       </li>
                     ))}
                   </ul>
@@ -223,8 +246,21 @@ export default function ServicesSection() {
 
         <p className="mt-14 text-center text-[#64748B]">
           {t("services.supplyCta")}{" "}
-          <a href={servicePath("it-supply", lang)} className="font-semibold text-[#2563EB] hover:underline">
+          <a
+            href={servicePath("it-supply", lang)}
+            className="font-semibold text-[#2563EB] hover:underline"
+          >
             {t("services.supplyLink")}
+          </a>
+          <span className="mx-3 text-[#CBD5E1]" aria-hidden="true">
+            |
+          </span>
+          {t("services.amcCta")}{" "}
+          <a
+            href={servicePath("it-support-amc", lang)}
+            className="font-semibold text-[#2563EB] hover:underline"
+          >
+            {SERVICES_NAMES[lang]}
           </a>
         </p>
       </div>
