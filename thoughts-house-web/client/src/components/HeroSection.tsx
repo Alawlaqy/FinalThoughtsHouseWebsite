@@ -82,8 +82,7 @@ export default function HeroSection() {
 
           {/* Subtitle */}
           <p
-            style={{ "--reveal-delay": "0.2s" } as React.CSSProperties}
-            className="reveal-up text-lg sm:text-xl text-white/75 leading-relaxed mb-10 max-w-2xl"
+            className="text-lg sm:text-xl text-white/75 leading-relaxed mb-10 max-w-2xl"
           >
             {t("hero.subtitle")}
           </p>
