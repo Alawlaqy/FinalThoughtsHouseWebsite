@@ -58,6 +58,7 @@ export const ABOUT: Record<Language, AboutCopy> = {
         value: "King Khaled St, Al 'Adamah, Dammam 32242, Saudi Arabia",
       },
       { label: "Service area", value: "All regions of Saudi Arabia" },
+      { label: "Clients", value: "500+ organizations served" },
       {
         label: "Services",
         value:
@@ -102,6 +103,7 @@ export const ABOUT: Record<Language, AboutCopy> = {
       },
       { label: "العنوان", value: "شارع الملك خالد، حي العدامة، الدمام 32242" },
       { label: "نطاق الخدمة", value: "جميع مناطق المملكة" },
+      { label: "العملاء", value: "أكثر من 500 منشأة" },
       {
         label: "الخدمات",
         value:

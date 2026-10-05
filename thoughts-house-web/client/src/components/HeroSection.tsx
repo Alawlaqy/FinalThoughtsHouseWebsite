@@ -116,7 +116,7 @@ export default function HeroSection() {
         >
           {[
             {
-              value: "50+",
+              value: "500+",
               label: lang === "en" ? "Enterprise Clients" : "عميل مؤسسي",
             },
             {
