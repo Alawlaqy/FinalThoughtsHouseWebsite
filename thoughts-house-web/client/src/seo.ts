@@ -10,6 +10,16 @@ import { ABOUT, COMPANY } from "./content/about";
 import { COVERAGE, SERVED_PLACES } from "./content/coverage";
 import { BRAND_GROUPS, BRANDS_COPY } from "./content/brands";
 import { PRIVACY } from "./content/privacy";
+import {
+  INDUSTRIES,
+  getIndustry,
+  type IndustrySlug,
+} from "./content/industries";
+import {
+  BRAND_PAGES,
+  getBrandPage,
+  type BrandSlug,
+} from "./content/brandPages";
 import { getArticleBody } from "./content/articleBodyStore";
 
 export type Language = "en" | "ar";
@@ -23,9 +33,11 @@ const ogImage = (route: Route) =>
     ? `${SITE_URL}/images/og-${route.slug}.jpg`
     : route.page === "article"
       ? `${SITE_URL}/images/og-${getArticle(route.slug).service}.jpg`
-      : route.page === "brands"
+      : route.page === "brands" || route.page === "brand"
         ? `${SITE_URL}/images/og-it-supply.jpg`
-        : OG_IMAGE;
+        : route.page === "industry"
+          ? `${SITE_URL}/images/og-it-support-amc.jpg`
+          : OG_IMAGE;
 
 const ORG_ID = `${SITE_URL}/#organization`;
 
@@ -36,6 +48,8 @@ export type Route =
   | { page: "coverage"; lang: Language; path: string }
   | { page: "brands"; lang: Language; path: string }
   | { page: "privacy"; lang: Language; path: string }
+  | { page: "industry"; lang: Language; path: string; slug: IndustrySlug }
+  | { page: "brand"; lang: Language; path: string; slug: BrandSlug }
   | { page: "insights"; lang: Language; path: string }
   | { page: "article"; lang: Language; path: string; slug: ArticleSlug };
 
@@ -51,6 +65,14 @@ export function coveragePath(lang: Language) {
 
 export function brandsPath(lang: Language) {
   return `${lang === "ar" ? "/ar" : ""}/brands/`;
+}
+
+export function industryPath(slug: IndustrySlug, lang: Language) {
+  return `${servicePath("it-support-amc", lang)}${slug}/`;
+}
+
+export function brandPagePath(slug: BrandSlug, lang: Language) {
+  return `${brandsPath(lang)}${slug}/`;
 }
 
 export function privacyPath(lang: Language) {
@@ -82,6 +104,18 @@ export const ROUTES: Route[] = (["en", "ar"] as Language[]).flatMap(lang => [
   { page: "coverage" as const, lang, path: coveragePath(lang) },
   { page: "brands" as const, lang, path: brandsPath(lang) },
   { page: "privacy" as const, lang, path: privacyPath(lang) },
+  ...INDUSTRIES.map(i => ({
+    page: "industry" as const,
+    lang,
+    slug: i.slug,
+    path: industryPath(i.slug, lang),
+  })),
+  ...BRAND_PAGES.map(b => ({
+    page: "brand" as const,
+    lang,
+    slug: b.slug,
+    path: brandPagePath(b.slug, lang),
+  })),
   { page: "insights" as const, lang, path: insightsPath(lang) },
   ...ARTICLES.map(a => ({
     page: "article" as const,
@@ -117,6 +151,10 @@ export function alternatePath(route: Route): string {
       return brandsPath(other);
     case "privacy":
       return privacyPath(other);
+    case "industry":
+      return industryPath(route.slug, other);
+    case "brand":
+      return brandPagePath(route.slug, other);
     case "insights":
       return insightsPath(other);
     case "article":
@@ -189,6 +227,14 @@ export function getMeta(route: Route) {
         title: PRIVACY[route.lang].metaTitle,
         description: PRIVACY[route.lang].metaDescription,
       };
+    case "industry": {
+      const c = getIndustry(route.slug).content[route.lang];
+      return { title: c.metaTitle, description: c.metaDescription };
+    }
+    case "brand": {
+      const c = getBrandPage(route.slug).content[route.lang];
+      return { title: c.metaTitle, description: c.metaDescription };
+    }
     case "insights":
       return INSIGHTS_META[route.lang];
     case "article": {
@@ -462,6 +508,102 @@ function structuredData(route: Route) {
         ],
       }
     );
+  } else if (route.page === "industry") {
+    const ind = getIndustry(route.slug);
+    const c = ind.content[route.lang];
+    const amc = SERVICES["it-support-amc"].content[route.lang];
+    graph.push(
+      {
+        "@type": "Service",
+        "@id": `${url}#service`,
+        name: c.h1,
+        serviceType: "IT annual maintenance contract (AMC)",
+        description: c.summary,
+        url,
+        image: SITE_URL + ind.image,
+        inLanguage: route.lang,
+        provider: { "@id": ORG_ID },
+        areaServed: { "@type": "Country", name: "Saudi Arabia" },
+        audience: { "@type": "BusinessAudience", name: c.name },
+        isRelatedTo: {
+          "@id": `${SITE_URL}${servicePath("it-support-amc", route.lang)}#service`,
+        },
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          homeCrumb,
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: amc.name,
+            item: SITE_URL + servicePath("it-support-amc", route.lang),
+          },
+          { "@type": "ListItem", position: 3, name: c.name, item: url },
+        ],
+      },
+      {
+        "@type": "FAQPage",
+        inLanguage: route.lang,
+        mainEntity: c.faq.map(f => ({
+          "@type": "Question",
+          name: f.q,
+          acceptedAnswer: { "@type": "Answer", text: f.a },
+        })),
+      }
+    );
+  } else if (route.page === "brand") {
+    const b = getBrandPage(route.slug);
+    const c = b.content[route.lang];
+    graph.push(
+      {
+        "@type": "Service",
+        "@id": `${url}#service`,
+        name: c.h1,
+        serviceType: "IT hardware and software supply",
+        description: c.summary,
+        url,
+        inLanguage: route.lang,
+        provider: { "@id": ORG_ID },
+        areaServed: { "@type": "Country", name: "Saudi Arabia" },
+        brand: { "@type": "Brand", name: b.name },
+        hasOfferCatalog: {
+          "@type": "OfferCatalog",
+          name: c.linesTitle,
+          itemListElement: c.lines.map(l => ({
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Product",
+              name: l.title,
+              description: l.text,
+              brand: { "@type": "Brand", name: b.name },
+            },
+          })),
+        },
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          homeCrumb,
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: route.lang === "ar" ? "العلامات التجارية" : "Brands",
+            item: SITE_URL + brandsPath(route.lang),
+          },
+          { "@type": "ListItem", position: 3, name: b.name, item: url },
+        ],
+      },
+      {
+        "@type": "FAQPage",
+        inLanguage: route.lang,
+        mainEntity: c.faq.map(f => ({
+          "@type": "Question",
+          name: f.q,
+          acceptedAnswer: { "@type": "Answer", text: f.a },
+        })),
+      }
+    );
   } else if (route.page === "privacy") {
     graph.push({
       "@type": "BreadcrumbList",
@@ -653,6 +795,18 @@ export function renderLlmsTxt(): string {
     `- [${BRANDS_COPY.en.h1}](${SITE_URL}${brandsPath("en")}): ${BRANDS_COPY.en.summary}`,
     ...BRAND_GROUPS.map(
       g => `- ${g.title.en}: ${g.brands.map(b => b.name).join(", ")}`
+    ),
+    "",
+    "## IT maintenance contracts by industry",
+    ...INDUSTRIES.map(
+      i =>
+        `- [${i.content.en.h1}](${SITE_URL}${industryPath(i.slug, "en")}): ${i.content.en.summary}`
+    ),
+    "",
+    "## Brand supply pages",
+    ...BRAND_PAGES.map(
+      b =>
+        `- [${b.content.en.h1}](${SITE_URL}${brandPagePath(b.slug, "en")}): ${b.content.en.summary}`
     ),
     "",
     "## Insights",

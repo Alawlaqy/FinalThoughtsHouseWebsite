@@ -16,7 +16,9 @@ import {
   imageSrcSet,
   type ServiceSlug,
 } from "@/content/services";
-import { articlePath, servicePath } from "@/seo";
+import { articlePath, brandPagePath, industryPath, servicePath } from "@/seo";
+import { BRAND_PAGES } from "@/content/brandPages";
+import { INDUSTRIES } from "@/content/industries";
 import { ARTICLES } from "@/content/articles";
 import {
   CheckCircle2,
@@ -46,6 +48,7 @@ export default function ServicePage({ slug }: { slug: ServiceSlug }) {
   const Arrow = lang === "ar" ? ArrowLeft : ArrowRight;
   const others = SERVICE_SLUGS.filter(s => s !== slug);
   // Guides tagged with this service; the AMC page shares the supply page's guide.
+  const brandLinks = BRAND_PAGES.filter(b => service.vendors.includes(b.name));
   const related = ARTICLES.filter(
     a =>
       a.service === slug ||
@@ -163,34 +166,80 @@ export default function ServicePage({ slug }: { slug: ServiceSlug }) {
         </section>
 
         {/* Technologies */}
-        <section className="py-20 bg-[#F8FAFC]">
-          <div className="container text-center">
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-[#1E293B] mb-4">
-              {c.vendorsTitle}
-            </h2>
-            <p className="text-lg text-[#64748B] leading-relaxed max-w-2xl mx-auto mb-10">
-              {c.vendorsText}
-            </p>
-            <ul className="flex flex-wrap justify-center gap-4">
-              {logos.map(p => (
-                <li
-                  key={p.name}
-                  className="px-6 py-4 bg-white rounded-xl shadow-sm border border-gray-100 flex items-center justify-center min-w-[150px] h-[76px]"
-                >
-                  <img
-                    src={p.logo}
-                    alt={p.name}
-                    width={120}
-                    height={44}
-                    loading="lazy"
-                    decoding="async"
-                    className="max-h-[40px] max-w-[110px] object-contain"
-                  />
-                </li>
-              ))}
-            </ul>
-          </div>
-        </section>
+        {logos.length > 0 && (
+          <section className="py-20 bg-[#F8FAFC]">
+            <div className="container text-center">
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-[#1E293B] mb-4">
+                {c.vendorsTitle}
+              </h2>
+              <p className="text-lg text-[#64748B] leading-relaxed max-w-2xl mx-auto mb-10">
+                {c.vendorsText}
+              </p>
+              <ul className="flex flex-wrap justify-center gap-4">
+                {logos.map(p => (
+                  <li
+                    key={p.name}
+                    className="px-6 py-4 bg-white rounded-xl shadow-sm border border-gray-100 flex items-center justify-center min-w-[150px] h-[76px]"
+                  >
+                    <img
+                      src={p.logo}
+                      alt={p.name}
+                      width={120}
+                      height={44}
+                      loading="lazy"
+                      decoding="async"
+                      className="max-h-[40px] max-w-[110px] object-contain"
+                    />
+                  </li>
+                ))}
+              </ul>
+              {brandLinks.length > 0 && (
+                <p className="mt-8 text-[#64748B]">
+                  {lang === "ar" ? "صفحات العلامات: " : "Brand pages: "}
+                  {brandLinks.map((b, i) => (
+                    <span key={b.slug}>
+                      {i > 0 && " · "}
+                      <a
+                        href={brandPagePath(b.slug, lang)}
+                        className="font-semibold text-[#2563EB] hover:underline"
+                      >
+                        {b.name}
+                      </a>
+                    </span>
+                  ))}
+                </p>
+              )}
+            </div>
+          </section>
+        )}
+
+        {slug === "it-support-amc" && (
+          <section className="py-16 bg-white">
+            <div className="container">
+              <h2 className="text-2xl sm:text-3xl font-extrabold text-[#1E293B] mb-8 text-center">
+                {lang === "ar"
+                  ? "عقود الصيانة حسب القطاع"
+                  : "Maintenance contracts by industry"}
+              </h2>
+              <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                {INDUSTRIES.map(ind => (
+                  <a
+                    key={ind.slug}
+                    href={industryPath(ind.slug, lang)}
+                    className="group p-6 bg-[#F8FAFC] rounded-2xl border border-gray-100 hover:border-[#2563EB]/30 hover:shadow-md transition-all"
+                  >
+                    <h3 className="font-bold text-[#1E293B] group-hover:text-[#2563EB] transition-colors mb-2">
+                      {ind.content[lang].name}
+                    </h3>
+                    <p className="text-sm text-[#64748B] leading-relaxed line-clamp-3">
+                      {ind.content[lang].metaDescription}
+                    </p>
+                  </a>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
 
         {/* Why us */}
         <section className="py-20 bg-white">

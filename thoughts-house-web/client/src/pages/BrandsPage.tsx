@@ -11,7 +11,8 @@ import { partners } from "@/components/PartnersSection";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { BRAND_GROUPS, BRANDS_COPY } from "@/content/brands";
 import { SERVICES } from "@/content/services";
-import { servicePath } from "@/seo";
+import { brandPagePath, servicePath } from "@/seo";
+import { BRAND_PAGES } from "@/content/brandPages";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 
 export default function BrandsPage() {
@@ -80,7 +81,21 @@ export default function BrandsPage() {
                         )}
                       </div>
                       <div>
-                        <h3 className="font-bold text-[#1E293B]">{b.name}</h3>
+                        <h3 className="font-bold text-[#1E293B]">
+                          {BRAND_PAGES.some(p => p.name === b.name) ? (
+                            <a
+                              href={brandPagePath(
+                                BRAND_PAGES.find(p => p.name === b.name)!.slug,
+                                lang
+                              )}
+                              className="hover:text-[#2563EB] underline decoration-[#2563EB]/30 underline-offset-4"
+                            >
+                              {b.name}
+                            </a>
+                          ) : (
+                            b.name
+                          )}
+                        </h3>
                         <p className="text-sm text-[#64748B] leading-relaxed">
                           {b.products[lang]}
                         </p>

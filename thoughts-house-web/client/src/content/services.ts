@@ -9,7 +9,11 @@ export type ServiceSlug =
   | "network-infrastructure"
   | "cloud-backup"
   | "it-supply"
-  | "it-support-amc";
+  | "it-support-amc"
+  | "firewall-installation"
+  | "wifi-installation"
+  | "structured-cabling"
+  | "cctv-installation";
 
 export const SERVICE_SLUGS: ServiceSlug[] = [
   "cybersecurity",
@@ -17,6 +21,10 @@ export const SERVICE_SLUGS: ServiceSlug[] = [
   "cloud-backup",
   "it-supply",
   "it-support-amc",
+  "firewall-installation",
+  "wifi-installation",
+  "structured-cabling",
+  "cctv-installation",
 ];
 
 /** Responsive srcset for a service image ("/images/<name>-1280.webp" also exists at 720w). */
@@ -729,6 +737,493 @@ export const SERVICES: Record<ServiceSlug, Service> = {
         ],
         ctaTitle: "اطلب عرضاً لعقد صيانة",
         ctaText: "أخبرنا عن مواقعك وأنظمتك وسنقترح نطاق صيانة يناسبك.",
+      },
+    },
+  },
+  "firewall-installation": {
+    slug: "firewall-installation",
+    image: "/images/firewall-installation-1280.webp",
+    vendors: ["Sophos", "Palo Alto Networks", "Check Point", "Cisco"],
+    content: {
+      en: {
+        metaTitle: "Firewall Installation & Configuration in Saudi Arabia",
+        metaDescription:
+          "Firewall supply, installation and configuration in Saudi Arabia: Sophos, Palo Alto Networks, Check Point and Cisco, with VPN, policies and support.",
+        name: "Firewall Installation",
+        h1: "Firewall Installation & Configuration in Saudi Arabia",
+        summary:
+          "Thoughts House supplies, installs and configures next-generation firewalls for organizations across Saudi Arabia, including Sophos, Palo Alto Networks, Check Point and Cisco, covering security policies, VPN, high availability, migration from old firewalls and ongoing support.",
+        intro:
+          "A firewall protects nothing until it is configured properly. We size the right model for your bandwidth and users, install it with minimal downtime, build a clean security policy and hand it over with documentation your team can follow.",
+        offeringsTitle: "What our firewall installation includes",
+        offerings: [
+          {
+            title: "Sizing and model selection",
+            text: "We size the firewall on real throughput with threat protection enabled, your users, sites and growth, and compare licensing over three to five years.",
+          },
+          {
+            title: "Installation and cut-over",
+            text: "Rack mounting, cabling, firmware updates and a planned cut-over window so your office stays online.",
+          },
+          {
+            title: "Security policy design",
+            text: "Clear rules for users, servers and guests, with application control, web filtering, intrusion prevention and TLS inspection where appropriate.",
+          },
+          {
+            title: "VPN and branch connectivity",
+            text: "Remote-access VPN with multi-factor authentication, and site-to-site VPN or SD-WAN between branches.",
+          },
+          {
+            title: "Migration and high availability",
+            text: "Rule migration from your old firewall, cleanup of unused rules, and active-passive pairs for critical sites.",
+          },
+        ],
+        vendorsTitle: "Firewall brands we install",
+        vendorsText:
+          "We install and configure firewalls from leading vendors and recommend the one that fits your network and budget.",
+        whyTitle: "Why Thoughts House for firewall installation",
+        why: WHY_EN,
+        faqTitle: "Frequently asked questions",
+        faq: [
+          {
+            q: "How long does a firewall installation take?",
+            a: "A single-site installation is usually completed in one planned maintenance window after the design is agreed. Multi-site projects and rule migrations from older firewalls are scheduled in phases.",
+          },
+          {
+            q: "Can you migrate the rules from our existing firewall?",
+            a: "Yes. We review and migrate your existing rules, remove unused or risky ones, and document the new policy.",
+          },
+          {
+            q: "Do you support the firewall after installation?",
+            a: "Yes. We offer ongoing support and maintenance contracts covering updates, policy changes, monitoring and license renewals.",
+          },
+        ],
+        ctaTitle: "Plan your firewall installation",
+        ctaText:
+          "Tell us about your sites, users and internet links and we will recommend and quote the right firewall.",
+      },
+      ar: {
+        metaTitle: "تركيب وإعداد جدران الحماية في السعودية | بيت الأفكار",
+        metaDescription:
+          "توريد وتركيب وإعداد جدران الحماية من الجيل التالي في السعودية: Sophos وPalo Alto Networks وCheck Point وCisco، مع VPN والسياسات الأمنية والدعم.",
+        name: "تركيب جدران الحماية",
+        h1: "تركيب وإعداد جدران الحماية في المملكة العربية السعودية",
+        summary:
+          "يورّد بيت الأفكار جدران الحماية من الجيل التالي ويركّبها ويُعدّها للمنشآت في جميع مناطق المملكة، ومنها Sophos وPalo Alto Networks وCheck Point وCisco، بما يشمل السياسات الأمنية والشبكات الافتراضية الخاصة والجاهزية العالية والترحيل من الأجهزة القديمة والدعم المستمر.",
+        intro:
+          "لا يحمي جدار الحماية شيئاً ما لم يُعدّ بشكل صحيح. نختار الطراز المناسب لسرعة الإنترنت وعدد المستخدمين، ونركّبه بأقل توقف ممكن، ونبني سياسة أمنية واضحة، ونسلّمه مع توثيق يستطيع فريقك الرجوع إليه.",
+        offeringsTitle: "ماذا يشمل تركيب جدار الحماية",
+        offerings: [
+          {
+            title: "اختيار الطراز والسعة",
+            text: "نحدد السعة بناءً على الأداء الفعلي مع تفعيل الحماية، وعدد المستخدمين والفروع والنمو المتوقع، ونقارن تكلفة التراخيص على ثلاث إلى خمس سنوات.",
+          },
+          {
+            title: "التركيب والانتقال",
+            text: "التركيب في الخزانة والتوصيل وتحديث البرامج الثابتة، مع نافذة انتقال مخططة ليبقى مكتبك متصلاً.",
+          },
+          {
+            title: "تصميم السياسة الأمنية",
+            text: "قواعد واضحة للمستخدمين والخوادم والزوار، مع التحكم بالتطبيقات وتصفية الويب ومنع الاختراق وفحص الاتصالات المشفرة عند الحاجة.",
+          },
+          {
+            title: "الشبكات الافتراضية وربط الفروع",
+            text: "وصول آمن عن بُعد (VPN) مع التحقق متعدد العوامل، وربط الفروع عبر VPN أو SD-WAN.",
+          },
+          {
+            title: "الترحيل والجاهزية العالية",
+            text: "نقل القواعد من الجهاز القديم وتنظيفها، وتركيب زوج احتياطي للمواقع الحرجة.",
+          },
+        ],
+        vendorsTitle: "علامات جدران الحماية التي نركّبها",
+        vendorsText:
+          "نركّب جدران الحماية من أبرز الشركات ونُعدّها، ونرشّح ما يناسب شبكتك وميزانيتك.",
+        whyTitle: "لماذا بيت الأفكار لتركيب جدران الحماية",
+        why: WHY_AR,
+        faqTitle: "الأسئلة الشائعة",
+        faq: [
+          {
+            q: "كم يستغرق تركيب جدار الحماية؟",
+            a: "يُنجز التركيب لموقع واحد عادةً في نافذة صيانة واحدة مخططة بعد اعتماد التصميم، أما المشاريع متعددة الفروع وترحيل القواعد من الأجهزة القديمة فتُنفذ على مراحل.",
+          },
+          {
+            q: "هل يمكنكم نقل القواعد من جدار الحماية الحالي؟",
+            a: "نعم. نراجع القواعد الحالية وننقلها، ونحذف غير المستخدم منها أو الخطِر، ونوثّق السياسة الجديدة.",
+          },
+          {
+            q: "هل تدعمون جدار الحماية بعد التركيب؟",
+            a: "نعم. نقدم دعماً وعقود صيانة تشمل التحديثات وتعديل السياسات والمراقبة وتجديد التراخيص.",
+          },
+        ],
+        ctaTitle: "خطط لتركيب جدار الحماية",
+        ctaText:
+          "أخبرنا عن مواقعك وعدد المستخدمين وخطوط الإنترنت، وسنرشّح جدار الحماية المناسب ونرسل عرض السعر.",
+      },
+    },
+  },
+
+  "wifi-installation": {
+    slug: "wifi-installation",
+    image: "/images/wifi-installation-1280.webp",
+    vendors: ["Cisco"],
+    content: {
+      en: {
+        metaTitle: "Wi-Fi & Access Point Installation in Saudi Arabia",
+        metaDescription:
+          "Business Wi-Fi design and access point installation in Saudi Arabia: site surveys, capacity planning, PoE switching, guest networks and central management.",
+        name: "Wi-Fi & Access Point Installation",
+        h1: "Wi-Fi & Access Point Installation in Saudi Arabia",
+        summary:
+          "Thoughts House designs and installs business Wi-Fi for offices, warehouses, schools, clinics and hotels across Saudi Arabia: site surveys, access point placement, PoE switching, secure staff and guest networks and central management.",
+        intro:
+          "Reliable Wi-Fi is planned around your building and the number of devices, not by adding a stronger router. We survey the site, place access points where they are needed, and configure the network so staff, guests and devices each get the right access.",
+        offeringsTitle: "What our Wi-Fi installation includes",
+        offerings: [
+          {
+            title: "Site survey",
+            text: "A predictive and on-site survey that maps walls, materials and interference, and shows where access points should go.",
+          },
+          {
+            title: "Coverage and capacity design",
+            text: "Enough access points for the number of active devices in each area, not only for signal coverage.",
+          },
+          {
+            title: "Access point installation",
+            text: "Ceiling or wall mounting, cabling and PoE from switches with enough power budget.",
+          },
+          {
+            title: "Secure networks",
+            text: "Separate networks for staff, guests and devices such as printers and cameras, with WPA3 and enterprise authentication where supported.",
+          },
+          {
+            title: "Central management",
+            text: "One controller or cloud dashboard for all access points, with monitoring and updates.",
+          },
+        ],
+        vendorsTitle: "Wireless brands we install",
+        vendorsText:
+          "We install enterprise wireless and the switching behind it, and recommend the platform that suits your site.",
+        whyTitle: "Why Thoughts House for Wi-Fi installation",
+        why: WHY_EN,
+        faqTitle: "Frequently asked questions",
+        faq: [
+          {
+            q: "How many access points does our office need?",
+            a: "It depends on the floor area, building materials and how many devices connect at the same time. A site survey gives an accurate number; open-plan offices and meeting rooms usually need more access points than corridors.",
+          },
+          {
+            q: "Can you cover warehouses and outdoor areas?",
+            a: "Yes. We design for high ceilings, racking and outdoor areas, using suitable access points and mounting.",
+          },
+          {
+            q: "Do you provide a separate guest Wi-Fi?",
+            a: "Yes. Guests get internet-only access on a separate network that cannot reach your internal systems.",
+          },
+        ],
+        ctaTitle: "Request a Wi-Fi site survey",
+        ctaText:
+          "Tell us about your building, floors and number of users and we will plan the right Wi-Fi coverage.",
+      },
+      ar: {
+        metaTitle: "تركيب شبكات Wi-Fi ونقاط الوصول في السعودية | بيت الأفكار",
+        metaDescription:
+          "تصميم شبكات Wi-Fi للشركات وتركيب نقاط الوصول في السعودية: المسح الميداني وتخطيط التغطية والسعة ومبدّلات PoE وشبكات الزوار والإدارة المركزية.",
+        name: "تركيب Wi-Fi ونقاط الوصول",
+        h1: "تركيب شبكات Wi-Fi ونقاط الوصول في المملكة العربية السعودية",
+        summary:
+          "يصمم بيت الأفكار شبكات Wi-Fi للشركات ويركّبها للمكاتب والمستودعات والمدارس والعيادات والفنادق في جميع مناطق المملكة: المسح الميداني وتوزيع نقاط الوصول ومبدّلات PoE وشبكات آمنة للموظفين والزوار والإدارة المركزية.",
+        intro:
+          "تُخطط شبكة Wi-Fi الموثوقة حسب المبنى وعدد الأجهزة، لا بإضافة راوتر أقوى. نمسح الموقع ونضع نقاط الوصول حيث تُحتاج، ونُعدّ الشبكة ليحصل الموظفون والزوار والأجهزة كلٌّ على الوصول المناسب.",
+        offeringsTitle: "ماذا يشمل تركيب شبكة Wi-Fi",
+        offerings: [
+          {
+            title: "المسح الميداني",
+            text: "مسح تنبؤي وميداني يحدد الجدران والمواد ومصادر التداخل، ويوضح أماكن نقاط الوصول المناسبة.",
+          },
+          {
+            title: "تصميم التغطية والسعة",
+            text: "عدد كافٍ من نقاط الوصول للأجهزة النشطة في كل منطقة، لا لقوة الإشارة فقط.",
+          },
+          {
+            title: "تركيب نقاط الوصول",
+            text: "التركيب في السقف أو الجدار والتمديدات وتغذية PoE من مبدّلات بسعة طاقة كافية.",
+          },
+          {
+            title: "شبكات آمنة",
+            text: "شبكات منفصلة للموظفين والزوار والأجهزة كالطابعات والكاميرات، مع WPA3 ومصادقة المؤسسات حيث يتوفر.",
+          },
+          {
+            title: "الإدارة المركزية",
+            text: "وحدة تحكم أو لوحة سحابية واحدة لكل نقاط الوصول مع المراقبة والتحديثات.",
+          },
+        ],
+        vendorsTitle: "علامات الشبكات اللاسلكية التي نركّبها",
+        vendorsText:
+          "نركّب الشبكات اللاسلكية المؤسسية والمبدّلات التي تدعمها، ونرشّح المنصة المناسبة لموقعك.",
+        whyTitle: "لماذا بيت الأفكار لتركيب شبكات Wi-Fi",
+        why: WHY_AR,
+        faqTitle: "الأسئلة الشائعة",
+        faq: [
+          {
+            q: "كم نقطة وصول يحتاج مكتبنا؟",
+            a: "يعتمد ذلك على المساحة ومواد البناء وعدد الأجهزة المتصلة في الوقت نفسه. يعطي المسح الميداني عدداً دقيقاً، وتحتاج المكاتب المفتوحة وقاعات الاجتماعات عادةً نقاطاً أكثر من الممرات.",
+          },
+          {
+            q: "هل تغطون المستودعات والمساحات الخارجية؟",
+            a: "نعم. نصمم للأسقف العالية والأرفف والمساحات الخارجية باستخدام نقاط وصول وطرق تركيب مناسبة.",
+          },
+          {
+            q: "هل توفرون شبكة منفصلة للزوار؟",
+            a: "نعم. يحصل الزوار على إنترنت فقط عبر شبكة منفصلة لا تصل إلى أنظمتك الداخلية.",
+          },
+        ],
+        ctaTitle: "اطلب مسحاً لشبكة Wi-Fi",
+        ctaText:
+          "أخبرنا عن مبناك وعدد الطوابق والمستخدمين، وسنخطط التغطية المناسبة.",
+      },
+    },
+  },
+
+  "structured-cabling": {
+    slug: "structured-cabling",
+    image: "/images/structured-cabling-1280.webp",
+    vendors: [],
+    content: {
+      en: {
+        metaTitle: "Structured Cabling Installation in Saudi Arabia",
+        metaDescription:
+          "Structured cabling for offices, warehouses and data rooms in Saudi Arabia: copper and fiber, racks, patch panels, labeling, testing and documentation.",
+        name: "Structured Cabling",
+        h1: "Structured Cabling Installation in Saudi Arabia",
+        summary:
+          "Thoughts House installs structured cabling for offices, warehouses, schools and data rooms across Saudi Arabia: copper and fiber links, network racks, patch panels, labeling, certification testing and as-built documentation.",
+        intro:
+          "Every network, Wi-Fi access point and camera depends on the cabling behind it. We plan and install cabling that is neat, labeled, tested and documented, so it supports your network for years and is easy to maintain.",
+        offeringsTitle: "What our structured cabling covers",
+        offerings: [
+          {
+            title: "Design and survey",
+            text: "Cable routes, outlet positions, rack locations and capacity for growth, agreed before work starts.",
+          },
+          {
+            title: "Copper cabling",
+            text: "Category 6 and 6A cabling for desks, access points, cameras and phones.",
+          },
+          {
+            title: "Fiber backbone",
+            text: "Fiber links between floors, buildings and racks for high-speed, long-distance connections.",
+          },
+          {
+            title: "Racks and patch panels",
+            text: "Network racks, patch panels, cable management and power distribution, installed and dressed neatly.",
+          },
+          {
+            title: "Testing, labeling and documentation",
+            text: "Every link tested and labeled, with as-built drawings and test results handed over.",
+          },
+        ],
+        vendorsTitle: "Quality standards",
+        vendorsText:
+          "We use quality cabling components and follow structured cabling practices for routing, separation, labeling and testing.",
+        whyTitle: "Why Thoughts House for structured cabling",
+        why: WHY_EN,
+        faqTitle: "Frequently asked questions",
+        faq: [
+          {
+            q: "Do you cable new buildings and renovations?",
+            a: "Yes. We work on new fit-outs and on upgrades of existing offices, coordinating with your contractor or facility team.",
+          },
+          {
+            q: "Should we choose Cat 6 or Cat 6A?",
+            a: "Cat 6 suits most desks and phones. Cat 6A is recommended for Wi-Fi 6/6E/7 access points and links that may need 10 Gbps in the future.",
+          },
+          {
+            q: "Do you provide documentation after installation?",
+            a: "Yes. You receive labeled outlets and panels, test results and as-built documentation.",
+          },
+        ],
+        ctaTitle: "Request a cabling survey",
+        ctaText:
+          "Tell us about your site and number of outlets and we will plan and quote the cabling.",
+      },
+      ar: {
+        metaTitle: "تمديدات الشبكات (Structured Cabling) في السعودية",
+        metaDescription:
+          "تمديدات الشبكات للمكاتب والمستودعات وغرف البيانات في السعودية: النحاس والألياف الضوئية والخزائن ولوحات التوصيل والترقيم والاختبار والتوثيق.",
+        name: "تمديدات الشبكات",
+        h1: "تمديدات الشبكات (Structured Cabling) في المملكة العربية السعودية",
+        summary:
+          "ينفذ بيت الأفكار تمديدات الشبكات للمكاتب والمستودعات والمدارس وغرف البيانات في جميع مناطق المملكة: كابلات نحاسية وألياف ضوئية، وخزائن الشبكات ولوحات التوصيل، والترقيم، واختبارات الاعتماد، والتوثيق النهائي.",
+        intro:
+          "تعتمد كل شبكة ونقطة وصول وكاميرا على التمديدات التي خلفها. نخطط وننفذ تمديدات مرتبة ومرقّمة ومختبرة وموثقة، لتخدم شبكتك سنوات طويلة وتسهل صيانتها.",
+        offeringsTitle: "ماذا تشمل تمديدات الشبكات",
+        offerings: [
+          {
+            title: "التصميم والمسح",
+            text: "مسارات الكابلات ومواقع المنافذ والخزائن والسعة المستقبلية، يُتفق عليها قبل بدء العمل.",
+          },
+          {
+            title: "الكابلات النحاسية",
+            text: "كابلات Cat 6 وCat 6A للمكاتب ونقاط الوصول والكاميرات والهواتف.",
+          },
+          {
+            title: "العمود الفقري بالألياف الضوئية",
+            text: "وصلات ألياف بين الطوابق والمباني والخزائن للاتصالات السريعة والمسافات الطويلة.",
+          },
+          {
+            title: "الخزائن ولوحات التوصيل",
+            text: "خزائن الشبكات ولوحات التوصيل وتنظيم الكابلات وتوزيع الطاقة، مركّبة بشكل مرتب.",
+          },
+          {
+            title: "الاختبار والترقيم والتوثيق",
+            text: "اختبار كل وصلة وترقيمها، وتسليم المخططات النهائية ونتائج الاختبار.",
+          },
+        ],
+        vendorsTitle: "معايير الجودة",
+        vendorsText:
+          "نستخدم مكونات تمديدات عالية الجودة ونتّبع ممارسات التمديدات المهيكلة في المسارات والفصل والترقيم والاختبار.",
+        whyTitle: "لماذا بيت الأفكار لتمديدات الشبكات",
+        why: WHY_AR,
+        faqTitle: "الأسئلة الشائعة",
+        faq: [
+          {
+            q: "هل تنفذون التمديدات للمباني الجديدة والتجديدات؟",
+            a: "نعم. نعمل في تجهيز المكاتب الجديدة وتحديث المكاتب القائمة بالتنسيق مع المقاول أو فريق المرافق لديك.",
+          },
+          {
+            q: "هل نختار Cat 6 أم Cat 6A؟",
+            a: "يناسب Cat 6 معظم المكاتب والهواتف، ويُنصح بـ Cat 6A لنقاط الوصول بمعايير Wi-Fi 6/6E/7 والوصلات التي قد تحتاج 10 جيجابت مستقبلاً.",
+          },
+          {
+            q: "هل تسلّمون توثيقاً بعد التنفيذ؟",
+            a: "نعم. تستلم منافذ ولوحات مرقّمة ونتائج الاختبار والمخططات النهائية.",
+          },
+        ],
+        ctaTitle: "اطلب مسحاً للتمديدات",
+        ctaText:
+          "أخبرنا عن موقعك وعدد المنافذ، وسنخطط التمديدات ونرسل عرض السعر.",
+      },
+    },
+  },
+
+  "cctv-installation": {
+    slug: "cctv-installation",
+    image: "/images/cctv-installation-1280.webp",
+    vendors: [],
+    content: {
+      en: {
+        metaTitle: "CCTV Camera Supply & Installation in Saudi Arabia",
+        metaDescription:
+          "IP CCTV camera supply and installation for offices, warehouses, schools and shops in Saudi Arabia: design, cabling, recording, remote viewing and maintenance.",
+        name: "CCTV Installation",
+        h1: "CCTV Camera Supply & Installation in Saudi Arabia",
+        summary:
+          "Thoughts House supplies and installs IP CCTV systems for offices, warehouses, schools, clinics and shops across Saudi Arabia: camera placement design, cabling and PoE, network video recorders, secure remote viewing and maintenance.",
+        intro:
+          "A camera system is only useful if it covers the right areas, records reliably and is secure. We design camera coverage around your site, install it on a properly segmented network, and set up recording and remote viewing your team can rely on.",
+        offeringsTitle: "What our CCTV installation includes",
+        offerings: [
+          {
+            title: "Coverage design",
+            text: "A camera plan for entrances, perimeters, cash points, stores and corridors, choosing the right lens and resolution for each area.",
+          },
+          {
+            title: "Supply and installation",
+            text: "IP cameras, mounting, cabling and PoE switching installed neatly and tested.",
+          },
+          {
+            title: "Recording and storage",
+            text: "Network video recorders sized for the number of cameras and the retention period you need.",
+          },
+          {
+            title: "Secure remote viewing",
+            text: "Viewing on phones and PCs through secure access, with cameras kept on a separate network segment.",
+          },
+          {
+            title: "Maintenance",
+            text: "Health checks, firmware updates and recording verification under a maintenance contract.",
+          },
+        ],
+        vendorsTitle: "Equipment",
+        vendorsText:
+          "We supply professional IP camera systems and recommend the equipment that fits your site, coverage and budget.",
+        whyTitle: "Why Thoughts House for CCTV",
+        why: WHY_EN,
+        faqTitle: "Frequently asked questions",
+        faq: [
+          {
+            q: "How long are recordings kept?",
+            a: "Retention depends on the number of cameras, resolution and recorder storage. We size the storage for the retention period you need, or that applies to your sector.",
+          },
+          {
+            q: "Can we watch the cameras from our phones?",
+            a: "Yes. We set up secure remote viewing on phones and computers, without exposing the cameras directly to the internet.",
+          },
+          {
+            q: "Can you add cameras to our existing system?",
+            a: "Often yes, depending on the recorder and camera models. We assess your current system first.",
+          },
+        ],
+        ctaTitle: "Plan your CCTV system",
+        ctaText:
+          "Tell us about your site and the areas you need to cover and we will design and quote the system.",
+      },
+      ar: {
+        metaTitle: "توريد وتركيب كاميرات المراقبة في السعودية | بيت الأفكار",
+        metaDescription:
+          "توريد وتركيب كاميرات المراقبة IP للمكاتب والمستودعات والمدارس والمحلات في السعودية: التصميم والتمديدات والتسجيل والمشاهدة عن بُعد والصيانة.",
+        name: "تركيب كاميرات المراقبة",
+        h1: "توريد وتركيب كاميرات المراقبة في المملكة العربية السعودية",
+        summary:
+          "يورّد بيت الأفكار أنظمة كاميرات المراقبة IP ويركّبها للمكاتب والمستودعات والمدارس والعيادات والمحلات في جميع مناطق المملكة: تصميم توزيع الكاميرات، والتمديدات وتغذية PoE، وأجهزة التسجيل الشبكية، والمشاهدة الآمنة عن بُعد، والصيانة.",
+        intro:
+          "لا يفيد نظام الكاميرات إلا إذا غطى المناطق الصحيحة وسجّل بموثوقية وكان آمناً. نصمم التغطية حسب موقعك، ونركّب النظام على شبكة مفصولة بشكل صحيح، ونُعدّ التسجيل والمشاهدة عن بُعد بما يعتمد عليه فريقك.",
+        offeringsTitle: "ماذا يشمل تركيب كاميرات المراقبة",
+        offerings: [
+          {
+            title: "تصميم التغطية",
+            text: "مخطط للكاميرات عند المداخل والأسوار ونقاط الدفع والمخازن والممرات، مع اختيار العدسة والدقة المناسبة لكل منطقة.",
+          },
+          {
+            title: "التوريد والتركيب",
+            text: "كاميرات IP والتثبيت والتمديدات ومبدّلات PoE، مركّبة بشكل مرتب ومختبرة.",
+          },
+          {
+            title: "التسجيل والتخزين",
+            text: "أجهزة تسجيل شبكية بسعة تناسب عدد الكاميرات ومدة الاحتفاظ المطلوبة.",
+          },
+          {
+            title: "المشاهدة الآمنة عن بُعد",
+            text: "المشاهدة على الجوال والحاسب عبر وصول آمن، مع إبقاء الكاميرات على شبكة منفصلة.",
+          },
+          {
+            title: "الصيانة",
+            text: "فحوصات دورية وتحديث البرامج الثابتة والتحقق من التسجيل ضمن عقد صيانة.",
+          },
+        ],
+        vendorsTitle: "المعدات",
+        vendorsText:
+          "نورّد أنظمة كاميرات IP احترافية ونرشّح المعدات المناسبة لموقعك والتغطية والميزانية.",
+        whyTitle: "لماذا بيت الأفكار لكاميرات المراقبة",
+        why: WHY_AR,
+        faqTitle: "الأسئلة الشائعة",
+        faq: [
+          {
+            q: "كم مدة الاحتفاظ بالتسجيلات؟",
+            a: "تعتمد المدة على عدد الكاميرات والدقة وسعة جهاز التسجيل، ونحدد سعة التخزين حسب مدة الاحتفاظ المطلوبة لك أو لقطاعك.",
+          },
+          {
+            q: "هل يمكننا مشاهدة الكاميرات من الجوال؟",
+            a: "نعم. نُعدّ المشاهدة الآمنة عن بُعد على الجوال والحاسب دون كشف الكاميرات مباشرة على الإنترنت.",
+          },
+          {
+            q: "هل يمكنكم إضافة كاميرات إلى نظامنا الحالي؟",
+            a: "غالباً نعم حسب طراز جهاز التسجيل والكاميرات، ونبدأ بتقييم نظامك الحالي.",
+          },
+        ],
+        ctaTitle: "خطط لنظام كاميرات المراقبة",
+        ctaText:
+          "أخبرنا عن موقعك والمناطق المطلوب تغطيتها، وسنصمم النظام ونرسل عرض السعر.",
       },
     },
   },
