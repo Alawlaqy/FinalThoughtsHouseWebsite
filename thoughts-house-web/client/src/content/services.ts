@@ -48,6 +48,8 @@ interface Localized {
   vendorsText: string;
   whyTitle: string;
   why: { title: string; text: string }[];
+  /** Optional deeper sections (e.g. managed backup, DR, EDR/XDR/MDR) */
+  extra?: { title: string; text: string; points: string[] }[];
   faqTitle: string;
   faq: { q: string; a: string }[];
   ctaTitle: string;
@@ -143,6 +145,18 @@ export const SERVICES: Record<ServiceSlug, Service> = {
           "We work with leading security vendors and recommend the combination that suits your environment, team size and budget.",
         whyTitle: "Why Thoughts House",
         why: WHY_EN,
+        extra: [
+          {
+            title: "EDR, XDR and MDR services",
+            text: "Endpoint detection and response (EDR) records activity on laptops and servers so attacks can be detected and stopped. Extended detection and response (XDR) correlates endpoint, firewall, email and cloud signals in one place. Managed detection and response (MDR) adds a team of analysts who watch the alerts around the clock and respond for you.",
+            points: [
+              "EDR deployment and tuning on laptops, desktops and servers",
+              "XDR integration across endpoint, firewall and email security",
+              "MDR services with 24/7 monitoring and response",
+              "Incident response support and post-incident hardening",
+            ],
+          },
+        ],
         faqTitle: "Frequently asked questions",
         faq: [
           {
@@ -200,6 +214,18 @@ export const SERVICES: Record<ServiceSlug, Service> = {
           "نعمل مع أبرز شركات الأمن السيبراني ونرشّح المزيج الأنسب لبيئتك وحجم فريقك وميزانيتك.",
         whyTitle: "لماذا بيت الأفكار",
         why: WHY_AR,
+        extra: [
+          {
+            title: "خدمات EDR وXDR وMDR",
+            text: "تسجّل حلول الكشف والاستجابة لنقاط النهاية (EDR) النشاط على الحواسيب والخوادم لاكتشاف الهجمات وإيقافها. وتربط حلول الكشف والاستجابة الموسّعة (XDR) إشارات الأجهزة وجدار الحماية والبريد والسحابة في مكان واحد. أما خدمة الكشف والاستجابة المُدارة (MDR) فتضيف فريق محللين يراقب التنبيهات على مدار الساعة ويستجيب نيابةً عنك.",
+            points: [
+              "تنفيذ حلول EDR وضبطها على الحواسيب والخوادم",
+              "تكامل XDR بين حماية الأجهزة وجدار الحماية والبريد",
+              "خدمات MDR بمراقبة واستجابة على مدار الساعة",
+              "دعم الاستجابة للحوادث وتعزيز الحماية بعدها",
+            ],
+          },
+        ],
         faqTitle: "الأسئلة الشائعة",
         faq: [
           {
@@ -358,7 +384,7 @@ export const SERVICES: Record<ServiceSlug, Service> = {
     ],
     content: {
       en: {
-        metaTitle: "Cloud & Backup Solutions in Saudi Arabia | Thoughts House",
+        metaTitle: "Cloud Backup & Disaster Recovery in KSA | Thoughts House",
         metaDescription:
           "Data center solutions, automated backup, disaster recovery, server management and cloud migration for businesses in Dammam and across Saudi Arabia.",
         name: "Cloud & Backup Solutions",
@@ -395,6 +421,28 @@ export const SERVICES: Record<ServiceSlug, Service> = {
           "We work with leading cloud, backup and storage providers and choose the platform that matches your recovery goals and budget.",
         whyTitle: "Why Thoughts House",
         why: WHY_EN,
+        extra: [
+          {
+            title: "Managed backup services",
+            text: "We run your backups for you: we design the backup policy, monitor every job, fix failures and test restores, so you have proof your data can be recovered.",
+            points: [
+              "Backup of servers, virtual machines and Microsoft 365",
+              "Immutable and offsite copies against ransomware",
+              "Daily job monitoring and failure follow-up",
+              "Scheduled restore tests with reports",
+            ],
+          },
+          {
+            title: "Cloud disaster recovery",
+            text: "Disaster recovery keeps critical systems available after a major outage. We define recovery targets (RPO and RTO) with you and build the right option, from restoring backups in the cloud to a standby environment ready to take over.",
+            points: [
+              "Recovery targets and a written DR plan",
+              "Replication of critical servers to the cloud or a second site",
+              "Data residency considered when choosing where to recover",
+              "Regular DR tests so the plan works when needed",
+            ],
+          },
+        ],
         faqTitle: "Frequently asked questions",
         faq: [
           {
@@ -452,6 +500,28 @@ export const SERVICES: Record<ServiceSlug, Service> = {
           "نعمل مع أبرز مزوّدي السحابة والنسخ الاحتياطي والتخزين، ونختار المنصة التي تحقق أهداف التعافي لديك ضمن ميزانيتك.",
         whyTitle: "لماذا بيت الأفكار",
         why: WHY_AR,
+        extra: [
+          {
+            title: "خدمات النسخ الاحتياطي المُدارة",
+            text: "نتولى النسخ الاحتياطي نيابةً عنك: نصمم سياسة النسخ، ونراقب كل مهمة، ونعالج الأخطاء، ونختبر الاستعادة، لتملك ما يثبت أن بياناتك قابلة للاستعادة.",
+            points: [
+              "نسخ الخوادم والأجهزة الافتراضية وMicrosoft 365",
+              "نسخ غير قابلة للتعديل وخارج الموقع ضد برامج الفدية",
+              "مراقبة يومية للمهام ومتابعة الأخطاء",
+              "اختبارات استعادة مجدولة مع تقارير",
+            ],
+          },
+          {
+            title: "التعافي من الكوارث سحابياً",
+            text: "يحافظ التعافي من الكوارث على عمل الأنظمة الحرجة بعد أي انقطاع كبير. نحدد معك أهداف الاستعادة (RPO وRTO) ونبني الخيار المناسب، من استعادة النسخ في السحابة إلى بيئة احتياطية جاهزة لتولي العمل.",
+            points: [
+              "أهداف استعادة وخطة تعافٍ مكتوبة",
+              "نسخ الخوادم الحرجة إلى السحابة أو موقع ثانٍ",
+              "مراعاة متطلبات بقاء البيانات داخل المملكة عند اختيار موقع الاستعادة",
+              "اختبارات دورية لخطة التعافي",
+            ],
+          },
+        ],
         faqTitle: "الأسئلة الشائعة",
         faq: [
           {

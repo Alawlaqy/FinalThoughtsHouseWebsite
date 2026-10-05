@@ -165,6 +165,33 @@ export default function ServicePage({ slug }: { slug: ServiceSlug }) {
           </div>
         </section>
 
+        {c.extra?.map(x => (
+          <section
+            key={x.title}
+            className="py-16 bg-white border-t border-gray-100"
+          >
+            <div className="container max-w-4xl">
+              <h2 className="text-2xl sm:text-3xl font-extrabold text-[#1E293B] mb-4">
+                {x.title}
+              </h2>
+              <p className="text-lg text-[#334155] leading-relaxed mb-6">
+                {x.text}
+              </p>
+              <ul className="grid sm:grid-cols-2 gap-3">
+                {x.points.map(pt => (
+                  <li key={pt} className="flex gap-3 text-[#334155]">
+                    <CheckCircle2
+                      className="w-5 h-5 text-[#2563EB] flex-shrink-0 mt-0.5"
+                      aria-hidden="true"
+                    />
+                    <span>{pt}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </section>
+        ))}
+
         {/* Technologies */}
         {logos.length > 0 && (
           <section className="py-20 bg-[#F8FAFC]">
