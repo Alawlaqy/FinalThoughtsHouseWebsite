@@ -21,12 +21,7 @@ import {
   type BrandSlug,
 } from "./content/brandPages";
 import { getArticleBody } from "./content/articleBodyStore";
-import {
-  LOCAL_PAGES,
-  NEARBY,
-  getLocalPage,
-  type LocalSlug,
-} from "./content/local";
+import { LOCAL_PAGES, getLocalPage, type LocalSlug } from "./content/local";
 
 export type Language = "en" | "ar";
 
@@ -642,14 +637,7 @@ function structuredData(route: Route) {
         url,
         inLanguage: route.lang,
         provider: { "@id": ORG_ID },
-        areaServed: [
-          { "@type": "City", name: "Dammam" },
-          ...NEARBY.en
-            .replace(" and ", ", ")
-            .split(", ")
-            .slice(1)
-            .map(name => ({ "@type": "City", name })),
-        ],
+        areaServed: p.areaServed.map(name => ({ "@type": "City", name })),
         hasOfferCatalog: {
           "@type": "OfferCatalog",
           name: c.offersTitle,
@@ -868,7 +856,7 @@ export function renderLlmsTxt(): string {
     "## Coverage",
     `- [${COVERAGE.en.h1}](${SITE_URL}${coveragePath("en")}): ${COVERAGE.en.summary}`,
     "",
-    "## Dammam",
+    "## Dammam and other cities",
     ...LOCAL_PAGES.map(
       p =>
         `- [${p.content.en.h1}](${SITE_URL}${localPath(p.slug, "en")}): ${p.content.en.summary}`

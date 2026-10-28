@@ -10,7 +10,8 @@ import Chatbot from "@/components/Chatbot";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { COVERAGE } from "@/content/coverage";
 import { SERVICES, SERVICE_SLUGS } from "@/content/services";
-import { servicePath } from "@/seo";
+import { LOCAL_PAGES } from "@/content/local";
+import { localPath, servicePath } from "@/seo";
 import {
   MapPin,
   PenTool,
@@ -117,6 +118,23 @@ export default function CoveragePage() {
                   className="px-4 py-2 bg-[#F8FAFC] border border-gray-200 rounded-lg text-sm font-semibold text-[#2563EB] hover:border-[#2563EB] transition-colors"
                 >
                   {SERVICES[slug].content[lang].name}
+                </a>
+              ))}
+            </div>
+
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-[#1E293B] mb-6">
+              {lang === "ar" ? "صفحات المدن" : "City pages"}
+            </h2>
+            <div className="flex flex-wrap gap-3 mb-14">
+              {LOCAL_PAGES.filter(
+                p => p.group === "city" || p.slug === "it-company-dammam"
+              ).map(p => (
+                <a
+                  key={p.slug}
+                  href={localPath(p.slug, lang)}
+                  className="px-4 py-2 bg-[#F8FAFC] border border-gray-200 rounded-lg text-sm font-semibold text-[#2563EB] hover:border-[#2563EB] transition-colors"
+                >
+                  {p.content[lang].name}
                 </a>
               ))}
             </div>

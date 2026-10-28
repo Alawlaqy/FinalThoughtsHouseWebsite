@@ -137,13 +137,28 @@ export default function Footer() {
               {lang === "ar" ? "في الدمام" : "In Dammam"}
             </h2>
             <ul className="space-y-3">
-              {LOCAL_PAGES.map(p => (
+              {LOCAL_PAGES.filter(p => p.group === "dammam").map(p => (
                 <li key={p.slug}>
                   <a
                     href={localPath(p.slug, lang)}
                     className="text-sm text-white/60 hover:text-[#60A5FA] transition-colors duration-200"
                   >
                     {p.content[lang].name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+            <h2 className="text-sm font-bold uppercase tracking-wider text-white/80 mt-8 mb-5">
+              {lang === "ar" ? "مدن نخدمها" : "Cities we serve"}
+            </h2>
+            <ul className="space-y-3">
+              {LOCAL_PAGES.filter(p => p.group === "city").map(p => (
+                <li key={p.slug}>
+                  <a
+                    href={localPath(p.slug, lang)}
+                    className="text-sm text-white/60 hover:text-[#60A5FA] transition-colors duration-200"
+                  >
+                    {p.city[lang]}
                   </a>
                 </li>
               ))}

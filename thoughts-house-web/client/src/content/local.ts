@@ -4,8 +4,10 @@
  */
 import type { Language } from "@/seo";
 import type { ServiceSlug } from "./services";
+import { CITY_PAGES, type CitySlug } from "./cities";
 
 export type LocalSlug =
+  | CitySlug
   | "it-company-dammam"
   | "it-support-dammam"
   | "cybersecurity-dammam"
@@ -32,20 +34,40 @@ export interface LocalPage {
   /** Main related service: hero image and share image */
   service: ServiceSlug;
   serviceType: string;
+  /** "dammam": pages for the office city; "city": other cities served */
+  group: "dammam" | "city";
+  city: Record<Language, string>;
+  /** City names (English) for areaServed in structured data */
+  areaServed: string[];
+  /** Served remotely with scheduled on-site visits (no local team) */
+  remote?: boolean;
   content: Record<Language, LocalCopy>;
 }
 
 /** Nearby cities served from the Dammam office (shown on every local page). */
+const DAMMAM_AREA = [
+  "Dammam",
+  "Khobar",
+  "Dhahran",
+  "Qatif",
+  "Jubail",
+  "Ras Tanura",
+  "Al-Ahsa",
+];
+
 export const NEARBY: Record<Language, string> = {
   en: "Dammam, Khobar, Dhahran, Qatif, Jubail, Ras Tanura and Al-Ahsa",
   ar: "الدمام، الخبر، الظهران، القطيف، الجبيل، رأس تنورة، الأحساء",
 };
 
-export const LOCAL_PAGES: LocalPage[] = [
+const DAMMAM_PAGES: LocalPage[] = [
   {
     slug: "it-company-dammam",
     service: "it-supply",
     serviceType: "IT services and system integration",
+    group: "dammam",
+    city: { en: "Dammam", ar: "الدمام" },
+    areaServed: DAMMAM_AREA,
     content: {
       en: {
         metaTitle: "IT Company in Dammam | Thoughts House",
@@ -183,6 +205,9 @@ export const LOCAL_PAGES: LocalPage[] = [
     slug: "it-support-dammam",
     service: "it-support-amc",
     serviceType: "Managed IT services and IT support",
+    group: "dammam",
+    city: { en: "Dammam", ar: "الدمام" },
+    areaServed: DAMMAM_AREA,
     content: {
       en: {
         metaTitle: "IT Support & Managed IT Services in Dammam",
@@ -320,6 +345,9 @@ export const LOCAL_PAGES: LocalPage[] = [
     slug: "cybersecurity-dammam",
     service: "cybersecurity",
     serviceType: "Cybersecurity services",
+    group: "dammam",
+    city: { en: "Dammam", ar: "الدمام" },
+    areaServed: DAMMAM_AREA,
     content: {
       en: {
         metaTitle: "Cybersecurity Company in Dammam | Thoughts House",
@@ -447,6 +475,9 @@ export const LOCAL_PAGES: LocalPage[] = [
     slug: "network-solutions-dammam",
     service: "network-infrastructure",
     serviceType: "Network installation and infrastructure",
+    group: "dammam",
+    city: { en: "Dammam", ar: "الدمام" },
+    areaServed: DAMMAM_AREA,
     content: {
       en: {
         metaTitle: "Network Solutions & Installation in Dammam",
@@ -574,6 +605,9 @@ export const LOCAL_PAGES: LocalPage[] = [
     slug: "it-hardware-supplier-dammam",
     service: "it-supply",
     serviceType: "IT hardware and software supply",
+    group: "dammam",
+    city: { en: "Dammam", ar: "الدمام" },
+    areaServed: DAMMAM_AREA,
     content: {
       en: {
         metaTitle: "IT Hardware Supplier in Dammam | Thoughts House",
@@ -698,6 +732,8 @@ export const LOCAL_PAGES: LocalPage[] = [
     },
   },
 ];
+
+export const LOCAL_PAGES: LocalPage[] = [...DAMMAM_PAGES, ...CITY_PAGES];
 
 export function getLocalPage(slug: LocalSlug) {
   const page = LOCAL_PAGES.find(p => p.slug === slug);

@@ -1,6 +1,7 @@
 /*
  * Design: Precision Shield — Corporate-Minimal
- * Dammam landing page: local services, office details and links to the nationwide service pages.
+ * City landing page (Dammam and other cities): local services, how we serve the city,
+ * office details and links to the nationwide service pages.
  */
 import Navbar from "@/components/Navbar";
 import ContactSection from "@/components/ContactSection";
@@ -161,9 +162,17 @@ export default function LocalPage({ slug }: { slug: LocalSlug }) {
                 </a>
               </p>
               <p className="text-sm text-[#64748B] mb-4">
-                {lang === "ar"
-                  ? `نخدم ${NEARBY.ar}، وجميع مناطق المملكة.`
-                  : `Serving ${NEARBY.en}, and all of Saudi Arabia.`}
+                {page.group === "dammam"
+                  ? lang === "ar"
+                    ? `نخدم ${NEARBY.ar}، وجميع مناطق المملكة.`
+                    : `Serving ${NEARBY.en}, and all of Saudi Arabia.`
+                  : page.remote
+                    ? lang === "ar"
+                      ? `نخدم ${page.city.ar} من الدمام: دعم عن بُعد وزيارات ميدانية مجدولة مسبقاً.`
+                      : `We serve ${page.city.en} from Dammam: remote support and on-site visits scheduled in advance.`
+                    : lang === "ar"
+                      ? `نخدم ${page.city.ar} من الدمام، بزيارات ميدانية من فريقنا في المنطقة الشرقية.`
+                      : `We serve ${page.city.en} from Dammam, with on-site visits by our Eastern Province team.`}
               </p>
               <a
                 href={COMPANY.mapUrl}
@@ -196,12 +205,20 @@ export default function LocalPage({ slug }: { slug: LocalSlug }) {
               ))}
             </div>
             <h2 className="text-xl font-extrabold text-[#1E293B] mb-4 text-center">
-              {lang === "ar"
-                ? "خدماتنا في الدمام"
-                : "More IT services in Dammam"}
+              {page.group === "dammam"
+                ? lang === "ar"
+                  ? "خدماتنا في الدمام"
+                  : "More IT services in Dammam"
+                : lang === "ar"
+                  ? "مدن أخرى نخدمها"
+                  : "Other cities we serve"}
             </h2>
             <div className="flex flex-wrap justify-center gap-3">
-              {LOCAL_PAGES.filter(p => p.slug !== slug).map(p => (
+              {LOCAL_PAGES.filter(
+                p =>
+                  p.slug !== slug &&
+                  (p.group === page.group || p.slug === "it-company-dammam")
+              ).map(p => (
                 <a
                   key={p.slug}
                   href={localPath(p.slug, lang)}
