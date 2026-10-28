@@ -696,9 +696,9 @@ export const SERVICES: Record<ServiceSlug, Service> = {
     ],
     content: {
       en: {
-        metaTitle: "IT Support & Maintenance Contracts (AMC) in Saudi Arabia",
+        metaTitle: "IT AMC Services in Saudi Arabia | Thoughts House",
         metaDescription:
-          "IT annual maintenance contracts for servers, networks, firewalls, backups and devices: preventive maintenance, monitoring and support across Saudi Arabia.",
+          "IT AMC services in Saudi Arabia, from Dammam to Riyadh and Jeddah: annual maintenance contracts for servers, networks, firewalls, backups and devices.",
         name: "IT Support & Maintenance (AMC)",
         h1: "IT Support & Annual Maintenance Contracts (AMC) in Saudi Arabia",
         summary:
@@ -738,6 +738,10 @@ export const SERVICES: Record<ServiceSlug, Service> = {
           {
             q: "What is an IT annual maintenance contract (AMC)?",
             a: "An IT AMC is a yearly agreement in which an IT provider maintains and supports your systems (preventive maintenance, updates, monitoring and technical support) for a fixed scope and fee, instead of paying for each incident separately.",
+          },
+          {
+            q: "Do you provide IT AMC services in Riyadh and Jeddah?",
+            a: "Yes. Our office is in Dammam and we provide IT maintenance contracts across Saudi Arabia, including Riyadh and Jeddah, combining remote support and monitoring with scheduled on-site visits.",
           },
           {
             q: "Can you maintain equipment that you did not supply?",

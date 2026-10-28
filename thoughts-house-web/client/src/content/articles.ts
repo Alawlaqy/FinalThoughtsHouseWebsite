@@ -92,9 +92,9 @@ export const ARTICLES: Article[] = [
     content: {
       en: {
         title: "Microsoft Licensing Explained: OEM vs Retail vs Volume and CSP",
-        metaTitle: "Microsoft OEM vs Volume Licensing vs CSP Explained",
+        metaTitle: "Microsoft OEM vs Retail (FPP) vs Volume License",
         description:
-          "How Microsoft OEM, retail, volume and CSP licenses differ for Windows, Windows Server and Microsoft 365, and which suits companies in Saudi Arabia.",
+          "OEM vs retail (FPP) vs volume vs CSP: can you transfer an OEM license, how Windows Server core licensing works, and which Microsoft license your business needs.",
       },
       ar: {
         title:
@@ -226,9 +226,9 @@ export const ARTICLES: Article[] = [
     content: {
       en: {
         title: "Cloud Disaster Recovery in Saudi Arabia: A Practical Guide",
-        metaTitle: "Cloud Disaster Recovery in Saudi Arabia: A Guide",
+        metaTitle: "Cloud Disaster Recovery in Saudi Arabia (KSA)",
         description:
-          "How to plan cloud disaster recovery in Saudi Arabia: RPO and RTO, DR options from backup restore to warm standby, data residency and regular DR testing.",
+          "Cloud disaster recovery in KSA: set RPO and RTO, choose backup restore, pilot light or warm standby, keep data in the Kingdom, and test your DR plan.",
       },
       ar: {
         title: "التعافي من الكوارث سحابياً في السعودية: دليل عملي",
