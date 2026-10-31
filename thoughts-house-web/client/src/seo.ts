@@ -590,14 +590,14 @@ function structuredData(route: Route) {
         hasOfferCatalog: {
           "@type": "OfferCatalog",
           name: c.linesTitle,
-          itemListElement: c.lines.map(l => ({
-            "@type": "Offer",
-            itemOffered: {
-              "@type": "Product",
-              name: l.title,
-              description: l.text,
-              brand: { "@type": "Brand", name: b.name },
-            },
+          // Product lines are categories, not priced products. Typing them as
+          // Product makes Google demand offers/review/aggregateRating (GSC
+          // "Product snippets" error), so list them as plain ListItems.
+          itemListElement: c.lines.map((l, i) => ({
+            "@type": "ListItem",
+            position: i + 1,
+            name: l.title,
+            description: l.text,
           })),
         },
       },
