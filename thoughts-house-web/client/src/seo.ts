@@ -292,10 +292,8 @@ const organization = {
   telephone: COMPANY.phone,
   address: {
     "@type": "PostalAddress",
-    streetAddress: COMPANY.streetAddress,
     addressLocality: COMPANY.locality,
     addressRegion: COMPANY.region,
-    postalCode: COMPANY.postalCode,
     addressCountry: COMPANY.country,
   },
   slogan: [
@@ -307,7 +305,6 @@ const organization = {
     { "@type": "Country", name: "Saudi Arabia" },
     ...SERVED_PLACES.map(name => ({ "@type": "City", name })),
   ],
-  hasMap: COMPANY.mapUrl,
   knowsAbout: [
     "Cybersecurity",
     "Endpoint Protection",

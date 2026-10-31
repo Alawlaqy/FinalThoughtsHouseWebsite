@@ -76,7 +76,7 @@ const DAMMAM_PAGES: LocalPage[] = [
         name: "IT Company in Dammam",
         h1: "IT Company & System Integrator in Dammam",
         summary:
-          "Thoughts House is an IT company and system integrator with its office on King Khaled Street in Dammam. We design, supply, install and support IT for businesses in Dammam, Khobar, Dhahran and the rest of the Eastern Province, and serve customers across Saudi Arabia.",
+          "Thoughts House is an IT company and system integrator based in Dammam. We design, supply, install and support IT for businesses in Dammam, Khobar, Dhahran and the rest of the Eastern Province, and serve customers across Saudi Arabia.",
         intro:
           "Businesses in Dammam usually need more than one IT supplier: someone for laptops and servers, someone for the network, someone for security and someone for support. We bring these under one team, so one company is responsible for the design, the equipment, the installation and the support afterwards.",
         offersTitle: "What we do for Dammam businesses",
@@ -121,8 +121,8 @@ const DAMMAM_PAGES: LocalPage[] = [
         ],
         faq: [
           {
-            q: "Where is the Thoughts House office in Dammam?",
-            a: "Our office is on King Khaled Street, Al 'Adamah, Dammam 32242. Contact us before visiting so the right engineer is available.",
+            q: "Can I visit the Thoughts House office in Dammam?",
+            a: "We don't receive walk-in visits. Our engineers come to you: contact us by phone, email or the contact form and we will schedule an on-site visit or remote session.",
           },
           {
             q: "Do you only work with companies in Dammam?",
@@ -141,7 +141,7 @@ const DAMMAM_PAGES: LocalPage[] = [
         name: "شركة تقنية معلومات في الدمام",
         h1: "شركة تقنية معلومات وتكامل أنظمة في الدمام",
         summary:
-          "بيت الأفكار شركة تقنية معلومات وتكامل أنظمة مقرّها شارع الملك خالد في الدمام. نصمم ونورّد وننفذ وندعم أنظمة تقنية المعلومات للشركات في الدمام والخبر والظهران وبقية المنطقة الشرقية، ونخدم العملاء في جميع مناطق المملكة.",
+          "بيت الأفكار شركة تقنية معلومات وتكامل أنظمة مقرّها الدمام. نصمم ونورّد وننفذ وندعم أنظمة تقنية المعلومات للشركات في الدمام والخبر والظهران وبقية المنطقة الشرقية، ونخدم العملاء في جميع مناطق المملكة.",
         intro:
           "تحتاج الشركات في الدمام عادةً إلى أكثر من مورّد: واحد للأجهزة والسيرفرات، وآخر للشبكات، وثالث للحماية، ورابع للدعم. نحن نجمعها في فريق واحد، فتكون جهة واحدة مسؤولة عن التصميم والأجهزة والتركيب والدعم بعد التشغيل.",
         offersTitle: "ما نقدمه للشركات في الدمام",
@@ -186,8 +186,8 @@ const DAMMAM_PAGES: LocalPage[] = [
         ],
         faq: [
           {
-            q: "أين يقع مكتب بيت الأفكار في الدمام؟",
-            a: "مكتبنا في شارع الملك خالد، حي العدامة، الدمام 32242. تواصل معنا قبل الزيارة ليكون المهندس المناسب متاحاً.",
+            q: "هل يمكنني زيارة مكتب بيت الأفكار في الدمام؟",
+            a: "لا نستقبل زيارات بدون موعد؛ فريقنا هو من يأتي إليك. تواصل معنا بالهاتف أو البريد أو نموذج التواصل وسنحدد زيارة ميدانية أو جلسة دعم عن بُعد.",
           },
           {
             q: "هل تعملون مع الشركات في الدمام فقط؟",

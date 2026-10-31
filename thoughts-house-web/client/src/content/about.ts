@@ -10,12 +10,9 @@ export const COMPANY = {
   email: "sales@thoughtshouse.com",
   phone: "+966541022995",
   phoneDisplay: "+966 54 102 2995",
-  streetAddress: "King Khaled St, Al 'Adamah",
   locality: "Dammam",
   region: "Eastern Province",
-  postalCode: "32242",
   country: "SA",
-  mapUrl: "https://maps.app.goo.gl/SECK4KzVH42TiTxD6",
 };
 
 export const PARTNER_BRANDS =
@@ -55,7 +52,7 @@ export const ABOUT: Record<Language, AboutCopy> = {
       },
       {
         label: "Address",
-        value: "King Khaled St, Al 'Adamah, Dammam 32242, Saudi Arabia",
+        value: "Dammam, Eastern Province, Saudi Arabia (service by appointment, on-site and remote)",
       },
       { label: "Service area", value: "All regions of Saudi Arabia" },
       { label: "Clients", value: "500+ organizations served" },
@@ -102,7 +99,7 @@ export const ABOUT: Record<Language, AboutCopy> = {
         label: "المقر",
         value: "الدمام، المنطقة الشرقية، المملكة العربية السعودية",
       },
-      { label: "العنوان", value: "شارع الملك خالد، حي العدامة، الدمام 32242" },
+      { label: "العنوان", value: "الدمام، المنطقة الشرقية (الخدمة بموعد مسبق، ميدانياً أو عن بُعد)" },
       { label: "نطاق الخدمة", value: "جميع مناطق المملكة" },
       { label: "العملاء", value: "أكثر من 500 منشأة" },
       {

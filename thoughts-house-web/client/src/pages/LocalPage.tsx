@@ -139,12 +139,12 @@ export default function LocalPage({ slug }: { slug: LocalSlug }) {
             <div className="p-6 bg-white rounded-2xl border border-gray-100 self-start">
               <h2 className="flex items-center gap-2 text-xl font-extrabold text-[#1E293B] mb-4">
                 <MapPin className="w-5 h-5 text-[#2563EB]" aria-hidden="true" />
-                {lang === "ar" ? "مكتبنا في الدمام" : "Our Dammam office"}
+                {lang === "ar" ? "مقرّنا في الدمام" : "Based in Dammam"}
               </h2>
               <p className="text-[#334155] mb-1">
                 {lang === "ar"
-                  ? "شارع الملك خالد، حي العدامة، الدمام 32242، المملكة العربية السعودية"
-                  : `${COMPANY.streetAddress}, ${COMPANY.locality} ${COMPANY.postalCode}, Saudi Arabia`}
+                  ? "الدمام، المنطقة الشرقية، المملكة العربية السعودية. الخدمة بموعد مسبق، ميدانياً أو عن بُعد."
+                  : "Dammam, Eastern Province, Saudi Arabia. Service by appointment, on-site or remote."}
               </p>
               <p className="text-[#334155] mb-4" dir="ltr">
                 <a
@@ -174,16 +174,6 @@ export default function LocalPage({ slug }: { slug: LocalSlug }) {
                       ? `نخدم ${page.city.ar} من الدمام، بزيارات ميدانية من فريقنا في المنطقة الشرقية.`
                       : `We serve ${page.city.en} from Dammam, with on-site visits by our Eastern Province team.`}
               </p>
-              <a
-                href={COMPANY.mapUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-sm font-semibold text-[#2563EB] hover:underline"
-              >
-                {lang === "ar"
-                  ? "الموقع على خرائط Google"
-                  : "View on Google Maps"}
-              </a>
             </div>
           </div>
         </section>

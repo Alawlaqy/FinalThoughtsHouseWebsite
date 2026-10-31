@@ -80,7 +80,7 @@ export default function ContactSection() {
     {
       icon: MapPin,
       label: t("contact.address"),
-      href: "https://maps.app.goo.gl/SECK4KzVH42TiTxD6",
+      href: "",
     },
   ];
 
@@ -255,7 +255,7 @@ export default function ContactSection() {
             </div>
           </div>
 
-          {/* Contact Info + Map - 2 cols */}
+          {/* Contact Info - 2 cols */}
           <div className="lg:col-span-2 space-y-6">
             {/* Contact Info Cards */}
             <div className="space-y-3">
@@ -264,7 +264,7 @@ export default function ContactSection() {
                 return (
                   <a
                     key={i}
-                    href={info.href}
+                    href={info.href || undefined}
                     target={info.href.startsWith("http") ? "_blank" : undefined}
                     rel={
                       info.href.startsWith("http")
@@ -282,20 +282,6 @@ export default function ContactSection() {
                   </a>
                 );
               })}
-            </div>
-
-            {/* Map */}
-            <div className="rounded-2xl overflow-hidden border border-gray-100 shadow-sm h-[280px]">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3576.0!2d50.1033!3d26.4333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e49e6d4b1d1e5c1%3A0x1!2sDammam%2C+Saudi+Arabia!5e0!3m2!1sen!2ssa!4v1"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Thoughts House Location"
-              />
             </div>
           </div>
         </div>

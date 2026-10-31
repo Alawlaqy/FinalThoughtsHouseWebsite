@@ -29,7 +29,7 @@ export const PRIVACY: Record<Language, PrivacyCopy> = {
       {
         h2: "Who we are",
         body: [
-          "Thoughts House (بيت الأفكار) is the controller responsible for the personal data described in this policy. Address: King Khaled St, Al 'Adamah, Dammam 32242, Saudi Arabia. Email: sales@thoughtshouse.com. Phone: +966 54 102 2995.",
+          "Thoughts House (بيت الأفكار) is the controller responsible for the personal data described in this policy. Location: Dammam, Saudi Arabia. Email: sales@thoughtshouse.com. Phone: +966 54 102 2995.",
         ],
       },
       {
@@ -112,7 +112,7 @@ export const PRIVACY: Record<Language, PrivacyCopy> = {
       {
         h2: "من نحن",
         body: [
-          "بيت الأفكار (Thoughts House) هو جهة التحكم المسؤولة عن البيانات الشخصية الموضحة في هذه السياسة. العنوان: شارع الملك خالد، حي العدامة، الدمام 32242، المملكة العربية السعودية. البريد: sales@thoughtshouse.com. الهاتف: \u2066+966 54 102 2995\u2069.",
+          "بيت الأفكار (Thoughts House) هو جهة التحكم المسؤولة عن البيانات الشخصية الموضحة في هذه السياسة. الموقع: الدمام، المملكة العربية السعودية. البريد: sales@thoughtshouse.com. الهاتف: \u2066+966 54 102 2995\u2069.",
         ],
       },
       {

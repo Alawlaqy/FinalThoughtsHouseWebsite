@@ -190,15 +190,10 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a
-                  href="https://maps.app.goo.gl/SECK4KzVH42TiTxD6"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-3 text-sm text-white/60 hover:text-[#60A5FA] transition-colors"
-                >
+                <span className="flex items-center gap-3 text-sm text-white/60">
                   <MapPin className="w-4 h-4 flex-shrink-0" />
                   {t("contact.address")}
-                </a>
+                </span>
               </li>
             </ul>
           </div>
