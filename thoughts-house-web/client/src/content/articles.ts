@@ -21,7 +21,8 @@ export type ArticleSlug =
   | "immutable-backup"
   | "microsoft-licensing-oem-vs-volume"
   | "how-to-choose-a-server-small-business"
-  | "sme-cybersecurity-checklist-saudi-arabia";
+  | "sme-cybersecurity-checklist-saudi-arabia"
+  | "microsoft-365-business-plans-saudi-arabia";
 
 interface LocalizedArticle {
   title: string;
@@ -39,6 +40,29 @@ export interface Article {
 }
 
 export const ARTICLES: Article[] = [
+  {
+    slug: "microsoft-365-business-plans-saudi-arabia",
+    published: "2026-11-01",
+    image: "/images/it-supply-1280.webp",
+    service: "it-supply",
+    content: {
+      en: {
+        title:
+          "Microsoft 365 for Businesses in Saudi Arabia: Plans and CSP Licensing Explained",
+        metaTitle: "Microsoft 365 Business Plans in Saudi Arabia via CSP",
+        description:
+          "Compare Microsoft 365 Business Basic, Standard, Premium and E3, see how CSP licensing and NCE terms work, and pick the right plan for your Saudi business.",
+      },
+      ar: {
+        title:
+          "Microsoft 365 للشركات في السعودية: الباقات والترخيص عبر شريك CSP",
+        metaTitle: "باقات Microsoft 365 للشركات في السعودية | بيت الأفكار",
+        description:
+          "مقارنة بين باقات Microsoft 365 Business Basic وStandard وPremium وE3، وكيف يعمل الترخيص عبر شريك CSP والالتزام الشهري والسنوي، وأي باقة تناسب شركتك.",
+      },
+    },
+  },
+
   {
     slug: "cat6-vs-cat6a",
     published: "2026-10-06",

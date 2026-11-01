@@ -2294,4 +2294,280 @@ export const ARTICLE_BODIES: Record<
       ],
     },
   },
+  "microsoft-365-business-plans-saudi-arabia": {
+    en: {
+      summary: [
+        "For most Saudi companies under 300 users, Microsoft 365 Business Premium is the best fit: it adds device management, identity protection and advanced email and endpoint security to everything in Business Standard.",
+        "Business plans are capped at 300 users across the Business family; larger organizations, or those that need enterprise-only features, move to Microsoft 365 E3 or E5.",
+        "Buying through a Cloud Solution Provider (CSP) partner means choosing a monthly, annual or multi-year commitment: annual terms cost less but can only be reduced in the first seven days.",
+      ],
+      faq: [
+        {
+          q: "Which Microsoft 365 plan is best for a small business in Saudi Arabia?",
+          a: "Business Premium suits most companies that handle customer, financial or personal data, because it includes Intune, Entra ID P1, Defender for Business and Defender for Office 365 Plan 1. Business Standard fits teams that need the desktop Office apps but already have strong security elsewhere, and Business Basic suits staff who only need email, Teams and the web apps.",
+        },
+        {
+          q: "What is a Microsoft CSP partner?",
+          a: "A Cloud Solution Provider is a Microsoft partner authorized to sell, bill and support Microsoft 365, Azure and other cloud subscriptions. The partner manages your licenses in Microsoft Partner Center, invoices you locally and is your first line of support.",
+        },
+        {
+          q: "Can I reduce Microsoft 365 licenses in the middle of the year?",
+          a: "On an annual commitment you can add licenses at any time, but you can only cancel or reduce them within the first seven days of the term or of a renewal. If your headcount changes often, keep a small part of your licenses on a monthly term, which costs more but can be reduced each month.",
+        },
+        {
+          q: "Did Microsoft 365 prices change in 2026?",
+          a: "Yes. Microsoft raised prices for several suites on 1 July 2026, including Business Basic, Business Standard, Apps for business, E3 and E5. Existing annual subscriptions keep their price until their next renewal after that date. Ask your CSP partner for a current quotation in Saudi riyals.",
+        },
+        {
+          q: "Is Microsoft 365 data stored in Saudi Arabia?",
+          a: "Microsoft announced that its Saudi Arabia East datacenter region, in the Eastern Province, becomes available to customers in November 2026 for eligible workloads and data. Before assuming in-country storage for Microsoft 365, confirm with Microsoft or your partner which services are covered and check the data location shown in your Microsoft 365 admin center.",
+        },
+      ],
+      blocks: [
+        {
+          p: "Microsoft 365 is the default productivity platform for many companies in Saudi Arabia: business email on Exchange Online, Word, Excel and Outlook, file storage in OneDrive and SharePoint, and meetings in Teams. Choosing the plan is the easy part to get wrong. Buy a plan that is too small and you pay later for separate security add-ons; buy one that is too large and you pay for features nobody uses. This guide explains the main plans, how licensing through a Cloud Solution Provider (CSP) partner works, and what to check before you commit.",
+        },
+        { h2: "The main Microsoft 365 plans for businesses" },
+        {
+          p: "Microsoft groups its business offers into two families: Business plans for organizations with up to 300 users, and Enterprise plans with no user cap. The plans most Saudi SMEs compare are:",
+        },
+        {
+          ul: [
+            "Microsoft 365 Business Basic: business email, Teams, OneDrive and SharePoint, with the web and mobile versions of the Office apps only.",
+            "Microsoft 365 Business Standard: everything in Basic plus the installable desktop apps (Word, Excel, PowerPoint, Outlook) on up to five PCs or Macs, five tablets and five phones per user.",
+            "Microsoft 365 Business Premium: everything in Standard plus Intune for device management, Entra ID P1 for conditional access, Defender for Business for endpoint protection, Defender for Office 365 Plan 1 for email protection, and Purview information protection.",
+            "Microsoft 365 Apps for business: the desktop apps and OneDrive without business email, useful when email is hosted elsewhere.",
+            "Microsoft 365 E3 and E5: Enterprise suites with no 300-user limit and deeper compliance, security and management capabilities; E5 adds advanced threat protection, analytics and voice features.",
+            "Microsoft 365 F1 and F3: lower-cost licenses for frontline staff such as warehouse, retail and field teams who share devices or mainly use mobile apps.",
+          ],
+        },
+        { h2: "Business Premium or Enterprise E3?" },
+        {
+          p: "The 300-user limit applies to the whole Business family combined, so 250 Business Premium users leave room for only 50 more Business seats. If you expect to pass 300 users, or you need enterprise compliance features, plan the move to E3 or E5 early, because changing suites later means re-planning security policies and renewals. Below that size, Business Premium usually gives an SME the best security for the money, because it bundles tools that would otherwise be bought as separate add-ons.",
+        },
+        { h2: "Matching plans to people" },
+        {
+          p: "You don't need to give every employee the same license. You can mix plans in one tenant and assign each person the license their role needs:",
+        },
+        {
+          ul: [
+            "Office staff, managers and finance: Business Premium, because they handle sensitive data and are the main targets of phishing.",
+            "Staff who only need email, Teams and shared files: Business Basic, combined with conditional access and multi-factor authentication.",
+            "Frontline and shift workers on shared devices: F1 or F3.",
+            "Shared mailboxes such as sales@ or info@: usually no license needed, as long as they stay within Microsoft's size limits and nobody signs in to them directly.",
+          ],
+        },
+        { h2: "With or without Teams" },
+        {
+          p: "Microsoft now sells suites both with Teams and without Teams, in line with regional regulations. For most companies the suites that include Teams are the simpler choice, because adding Teams later means buying a separate license. Choose a no-Teams suite only if you already use another meeting platform, and check that it covers chat, meetings and calling for every user.",
+        },
+        { h2: "What buying through a CSP partner means" },
+        {
+          p: "Most businesses in the Kingdom buy Microsoft 365 through a CSP partner rather than directly with a credit card. The partner provisions your licenses in Microsoft Partner Center, invoices you locally, tracks renewals and gives you first-line support. A good partner also reviews your tenant settings, because many companies pay for Business Premium but never switch on the security features it includes.",
+        },
+        { h2: "Monthly, annual or three-year commitments" },
+        {
+          p: "Under Microsoft's new commerce rules for CSP, every subscription has a term length and a billing frequency, and the choice affects both price and flexibility:",
+        },
+        {
+          ul: [
+            "Monthly term: the most flexible option, since licenses can be reduced each month, but priced about 20% higher than an annual term.",
+            "Annual term: the usual choice for a stable team. You can add licenses or upgrade at any time, but you can only cancel or reduce within the first seven days of the term or of a renewal.",
+            "Annual term billed monthly: spreads the cost across the year; since April 2025 Microsoft adds a 5% uplift compared with paying the year upfront.",
+            "Three-year term: offered for some products, and useful only when your headcount and plan choice are very stable.",
+          ],
+        },
+        {
+          p: "A practical approach is to put your core staff on an annual term and keep a small buffer of licenses for temporary staff and contractors on a monthly term.",
+        },
+        { h2: "2026 price changes" },
+        {
+          p: "Microsoft raised prices for several Microsoft 365 suites on 1 July 2026, including Business Basic, Business Standard, Apps for business, E3 and E5, while adding new capabilities to the enterprise suites. Existing annual subscriptions keep their current price until their next renewal after that date. Prices in Saudi Arabia are set in the local market and quoted by your partner, so compare quotations on the same plan, term and billing frequency.",
+        },
+        { h2: "Data residency and the Saudi Arabia East region" },
+        {
+          p: "Data location matters for companies working under the Personal Data Protection Law (PDPL) or the NCA cybersecurity controls. Microsoft has announced that its Saudi Arabia East datacenter region, in the Eastern Province, becomes available to customers in November 2026 for eligible workloads and data. Which Microsoft 365 services store data in-country, and whether existing tenants can move, depends on Microsoft's published terms, so confirm this before you rely on it for a compliance requirement.",
+        },
+        { h2: "Copilot add-ons" },
+        {
+          p: "Microsoft 365 Copilot is sold as an add-on to an existing Microsoft 365 license. For organizations with up to 300 users, Microsoft offers Microsoft 365 Copilot Business, with a US list price of USD 21 per user per month on an annual commitment; promotional prices are sometimes available. Start with a pilot group, and tidy up SharePoint and OneDrive permissions first, because Copilot can surface any file a user already has access to.",
+        },
+        { h2: "Checklist before you buy or renew" },
+        {
+          ul: [
+            "Count active users and remove licenses from staff who have left.",
+            "Decide which roles need desktop apps, advanced security or only email and Teams.",
+            "Check whether you are close to the 300-user Business limit.",
+            "Choose term length and billing frequency per group of users, not for everyone at once.",
+            "Turn on multi-factor authentication and the security features your plan already includes.",
+            "Note renewal dates, because reductions are only possible in the first seven days of a term.",
+            "Back up Microsoft 365 data separately; Microsoft keeps the service running, but recovering deleted or encrypted data is your responsibility.",
+          ],
+        },
+        { h2: "How Thoughts House can help" },
+        {
+          p: "Thoughts House supplies Microsoft 365 and other Microsoft licenses to businesses across Saudi Arabia. We review your users and current licenses, recommend the right mix of plans and terms, migrate email from other platforms, configure the security features you are paying for, and track renewals so nothing expires unnoticed. We are based in Dammam, Saudi Arabia, and work on-site by appointment or remotely. Contact sales@thoughtshouse.com or +966 54 102 2995 for a licensing review and quotation.",
+        },
+      ],
+      sources: [
+        {
+          label: "Microsoft — Microsoft 365 Packaging and Pricing Updates FAQ",
+          url: "https://www.microsoft.com/en-us/licensing/news/2026-m365-packaging-pricing-updates-faq",
+        },
+        {
+          label: "Microsoft Learn — Microsoft 365 Business Premium FAQ",
+          url: "https://learn.microsoft.com/en-us/microsoft-365/business-premium/microsoft-365-business-faqs",
+        },
+        {
+          label: "Microsoft Learn — New commerce license-based overview",
+          url: "https://learn.microsoft.com/en-us/partner-center/customers/new-commerce-license-based",
+        },
+        {
+          label: "Microsoft — Saudi Arabia East datacenter region availability",
+          url: "https://news.microsoft.com/source/emea/2026/08/microsoft-announces-saudi-arabia-east-datacenter-region-will-be-available-in-november-2026/",
+        },
+        {
+          label: "Microsoft — Microsoft 365 Copilot Business",
+          url: "https://www.microsoft.com/en-us/copilot/blog/2025/12/02/microsoft-365-copilot-business-the-future-of-work-for-small-businesses/",
+        },
+      ],
+    },
+    ar: {
+      summary: [
+        "باقة Microsoft 365 Business Premium هي الأنسب لمعظم الشركات السعودية التي يقل عدد مستخدميها عن 300، لأنها تضيف إدارة الأجهزة وحماية الهويات والحماية المتقدمة للبريد والأجهزة إلى كل ما في Business Standard.",
+        "باقات Business محدودة بـ 300 مستخدم لمجموعة باقات Business مجتمعة، وتنتقل المنشآت الأكبر أو التي تحتاج مزايا مؤسسية إلى Microsoft 365 E3 أو E5.",
+        "الشراء عبر شريك CSP يعني اختيار التزام شهري أو سنوي أو متعدد السنوات؛ الالتزام السنوي أرخص، لكن لا يمكن تخفيض عدد التراخيص فيه إلا خلال الأيام السبعة الأولى.",
+      ],
+      faq: [
+        {
+          q: "ما أفضل باقة Microsoft 365 للشركة الصغيرة في السعودية؟",
+          a: "تناسب Business Premium معظم الشركات التي تتعامل مع بيانات العملاء أو البيانات المالية أو الشخصية، لأنها تشمل Intune وEntra ID P1 وDefender for Business وDefender for Office 365 Plan 1. وتناسب Business Standard الفرق التي تحتاج تطبيقات Office المكتبية ولديها حماية قوية من مصدر آخر، بينما تكفي Business Basic للموظفين الذين يحتاجون البريد وTeams والتطبيقات عبر المتصفح فقط.",
+        },
+        {
+          q: "ما هو شريك Microsoft CSP؟",
+          a: "شريك مزوّد الحلول السحابية (CSP) هو شريك معتمد من Microsoft لبيع اشتراكات Microsoft 365 وAzure وغيرها وفوترتها ودعمها. يدير الشريك تراخيصك عبر Microsoft Partner Center، ويصدر لك الفواتير محلياً، ويكون جهة الدعم الأولى لك.",
+        },
+        {
+          q: "هل يمكن تخفيض تراخيص Microsoft 365 خلال السنة؟",
+          a: "في الالتزام السنوي يمكنك إضافة تراخيص في أي وقت، لكن الإلغاء أو التخفيض متاح فقط خلال الأيام السبعة الأولى من بداية المدة أو من التجديد. وإذا كان عدد موظفيك يتغير كثيراً، فاجعل جزءاً صغيراً من التراخيص بالتزام شهري؛ فهو أعلى سعراً لكنه قابل للتخفيض كل شهر.",
+        },
+        {
+          q: "هل تغيّرت أسعار Microsoft 365 في 2026؟",
+          a: "نعم. رفعت Microsoft أسعار عدة باقات في 1 يوليو 2026، منها Business Basic وBusiness Standard وApps for business وE3 وE5. وتحتفظ الاشتراكات السنوية القائمة بسعرها حتى أول تجديد بعد هذا التاريخ. اطلب من شريكك عرض سعر محدّثاً بالريال السعودي.",
+        },
+        {
+          q: "هل تُخزَّن بيانات Microsoft 365 داخل المملكة؟",
+          a: "أعلنت Microsoft أن منطقة مراكز البيانات Saudi Arabia East في المنطقة الشرقية تصبح متاحة للعملاء في نوفمبر 2026 لأحمال العمل والبيانات المؤهلة. وقبل أن تفترض تخزين بيانات Microsoft 365 داخل المملكة، تأكد من Microsoft أو من شريكك من الخدمات المشمولة، وراجع موقع البيانات الظاهر في مركز إدارة Microsoft 365.",
+        },
+      ],
+      blocks: [
+        {
+          p: "أصبحت Microsoft 365 المنصة الأساسية للعمل اليومي في كثير من الشركات السعودية: بريد الأعمال عبر Exchange Online، وتطبيقات Word وExcel وOutlook، وتخزين الملفات في OneDrive وSharePoint، والاجتماعات عبر Teams. لكن اختيار الباقة هو الجزء الذي يسهل الخطأ فيه؛ فالباقة الأصغر من حاجتك تجعلك تدفع لاحقاً ثمن إضافات أمنية منفصلة، والأكبر منها تحمّلك تكلفة مزايا لا يستخدمها أحد. يشرح هذا الدليل الباقات الرئيسية، وكيف يعمل الترخيص عبر شريك مزوّد الحلول السحابية (CSP)، وما الذي يجب التحقق منه قبل الالتزام.",
+        },
+        { h2: "باقات Microsoft 365 الرئيسية للشركات" },
+        {
+          p: "تقسّم Microsoft عروضها للشركات إلى مجموعتين: باقات Business للمنشآت التي لا يتجاوز عدد مستخدميها 300، وباقات Enterprise دون حد أقصى للمستخدمين. وأكثر الباقات التي تقارن بينها الشركات الصغيرة والمتوسطة في المملكة:",
+        },
+        {
+          ul: [
+            "Microsoft 365 Business Basic: بريد الأعمال وTeams وOneDrive وSharePoint، مع نسخ تطبيقات Office عبر المتصفح والجوال فقط.",
+            "Microsoft 365 Business Standard: كل ما في Basic مع تطبيقات Office المكتبية القابلة للتثبيت (Word وExcel وPowerPoint وOutlook) على ما يصل إلى خمسة حواسيب وخمسة أجهزة لوحية وخمسة هواتف لكل مستخدم.",
+            "Microsoft 365 Business Premium: كل ما في Standard مع Intune لإدارة الأجهزة، وEntra ID P1 للوصول المشروط، وDefender for Business لحماية الأجهزة، وDefender for Office 365 Plan 1 لحماية البريد، وأدوات Purview لحماية المعلومات.",
+            "Microsoft 365 Apps for business: التطبيقات المكتبية وOneDrive دون بريد الأعمال، وتفيد عندما يكون البريد مستضافاً لدى جهة أخرى.",
+            "Microsoft 365 E3 وE5: باقات مؤسسية دون حد الـ 300 مستخدم، مع قدرات أعمق في الامتثال والأمن والإدارة، وتضيف E5 الحماية المتقدمة من التهديدات والتحليلات ومزايا الاتصال الصوتي.",
+            "Microsoft 365 F1 وF3: تراخيص أقل تكلفة للعاملين في الميدان، مثل فرق المستودعات والفروع والمواقع، الذين يتشاركون الأجهزة أو يعتمدون على تطبيقات الجوال.",
+          ],
+        },
+        { h2: "Business Premium أم Enterprise E3؟" },
+        {
+          p: "ينطبق حد الـ 300 مستخدم على باقات Business مجتمعة، فإذا كان لديك 250 مستخدماً على Business Premium فلن يتبقى لك سوى 50 ترخيصاً من باقات Business الأخرى. وإذا كنت تتوقع تجاوز 300 مستخدم أو تحتاج مزايا الامتثال المؤسسية، فخطط للانتقال إلى E3 أو E5 مبكراً، لأن تغيير الباقات لاحقاً يعني إعادة تخطيط سياسات الأمان والتجديدات. أما دون هذا الحجم، فتمنح Business Premium الشركة الصغيرة والمتوسطة غالباً أفضل حماية مقابل التكلفة، لأنها تجمع أدوات كانت ستُشترى إضافات منفصلة.",
+        },
+        { h2: "اختيار الترخيص حسب طبيعة العمل" },
+        {
+          p: "لا يلزم أن يحصل كل موظف على الترخيص نفسه؛ إذ يمكنك الجمع بين عدة باقات في المستأجر (Tenant) الواحد، وتخصيص الترخيص المناسب لدور كل موظف:",
+        },
+        {
+          ul: [
+            "موظفو المكاتب والمديرون والإدارة المالية: Business Premium، لأنهم يتعاملون مع بيانات حساسة وهم الهدف الأول لرسائل التصيد.",
+            "الموظفون الذين يحتاجون البريد وTeams والملفات المشتركة فقط: Business Basic، مع الوصول المشروط والتحقق متعدد العوامل.",
+            "العاملون في الميدان وفي الورديات على أجهزة مشتركة: F1 أو F3.",
+            "صناديق البريد المشتركة مثل sales@ أو info@: لا تحتاج ترخيصاً في الغالب ما دامت ضمن حدود الحجم التي تحددها Microsoft ولا يسجّل أحد الدخول إليها مباشرة.",
+          ],
+        },
+        { h2: "مع Teams أم بدونه" },
+        {
+          p: "تبيع Microsoft اليوم الباقات بنسختين: مع Teams وبدونه، وفق الأنظمة المعمول بها في كل منطقة. والباقات التي تشمل Teams هي الخيار الأبسط لمعظم الشركات، لأن إضافته لاحقاً تعني شراء ترخيص منفصل. فلا تختر باقة دون Teams إلا إذا كنت تستخدم منصة اجتماعات أخرى، وتأكدت أنها تغطي المحادثات والاجتماعات والمكالمات لجميع المستخدمين.",
+        },
+        { h2: "ماذا يعني الشراء عبر شريك CSP" },
+        {
+          p: "تشتري معظم الشركات في المملكة Microsoft 365 عبر شريك CSP بدلاً من الشراء المباشر ببطاقة ائتمان. يفعّل الشريك تراخيصك عبر Microsoft Partner Center، ويصدر الفواتير محلياً، ويتابع التجديدات، ويقدم الدعم الأولي. والشريك الجيد يراجع أيضاً إعدادات المستأجر لديك، فكثير من الشركات تدفع ثمن Business Premium ولا تفعّل أبداً مزايا الأمان المضمّنة فيها.",
+        },
+        { h2: "الالتزام الشهري أو السنوي أو لثلاث سنوات" },
+        {
+          p: "وفق قواعد Microsoft الجديدة للشراء عبر CSP، لكل اشتراك مدة التزام ودورة فوترة، ويؤثر اختيارهما في السعر والمرونة معاً:",
+        },
+        {
+          ul: [
+            "الالتزام الشهري: الأكثر مرونة، إذ يمكن تخفيض التراخيص كل شهر، لكن سعره أعلى بنحو 20% من الالتزام السنوي.",
+            "الالتزام السنوي: الخيار المعتاد للفرق المستقرة؛ يمكنك إضافة تراخيص أو الترقية في أي وقت، لكن الإلغاء أو التخفيض متاح فقط خلال الأيام السبعة الأولى من المدة أو من التجديد.",
+            "الالتزام السنوي بفوترة شهرية: يوزّع التكلفة على أشهر السنة، لكن Microsoft تضيف منذ أبريل 2025 زيادة قدرها 5% مقارنة بالدفع السنوي المقدم.",
+            "الالتزام لثلاث سنوات: متاح لبعض المنتجات، ولا يفيد إلا إذا كان عدد الموظفين ونوع الباقة مستقرين جداً.",
+          ],
+        },
+        {
+          p: "والأسلوب العملي أن تضع الموظفين الأساسيين على التزام سنوي، وتحتفظ بعدد محدود من التراخيص بالتزام شهري للموظفين المؤقتين والمتعاقدين.",
+        },
+        { h2: "تغييرات الأسعار في 2026" },
+        {
+          p: "رفعت Microsoft أسعار عدة باقات من Microsoft 365 في 1 يوليو 2026، منها Business Basic وBusiness Standard وApps for business وE3 وE5، مع إضافة قدرات جديدة إلى الباقات المؤسسية. وتحتفظ الاشتراكات السنوية القائمة بسعرها الحالي حتى أول تجديد بعد هذا التاريخ. وتُحدَّد الأسعار في المملكة حسب السوق المحلي ويقدّمها لك الشريك، لذا قارن عروض الأسعار على الباقة نفسها ومدة الالتزام نفسها ودورة الفوترة نفسها.",
+        },
+        { h2: "موقع البيانات ومنطقة Saudi Arabia East" },
+        {
+          p: "يهم موقع البيانات الشركات الخاضعة لنظام حماية البيانات الشخصية أو لضوابط الهيئة الوطنية للأمن السيبراني. وقد أعلنت Microsoft أن منطقة مراكز البيانات Saudi Arabia East في المنطقة الشرقية تصبح متاحة للعملاء في نوفمبر 2026 لأحمال العمل والبيانات المؤهلة. أما الخدمات التي تُخزَّن بياناتها داخل المملكة من Microsoft 365، وإمكانية نقل المستأجرين الحاليين، فتعتمد على الشروط التي تنشرها Microsoft، فتأكد من ذلك قبل أن تعتمد عليه لتلبية متطلب امتثال.",
+        },
+        { h2: "إضافات Copilot" },
+        {
+          p: "يُباع Microsoft 365 Copilot إضافةً إلى ترخيص Microsoft 365 قائم. وللمنشآت التي لا يتجاوز عدد مستخدميها 300 تقدم Microsoft باقة Microsoft 365 Copilot Business بسعر قائمة أمريكي قدره 21 دولاراً للمستخدم شهرياً بالتزام سنوي، وقد تتوفر أحياناً أسعار ترويجية. ابدأ بمجموعة تجريبية صغيرة، ونظّم صلاحيات SharePoint وOneDrive أولاً، لأن Copilot قد يُظهر أي ملف يملك المستخدم صلاحية الوصول إليه.",
+        },
+        { h2: "قائمة تحقق قبل الشراء أو التجديد" },
+        {
+          ul: [
+            "احصر المستخدمين الفعليين وأزل التراخيص عن الموظفين المغادرين.",
+            "حدد الأدوار التي تحتاج التطبيقات المكتبية أو الحماية المتقدمة، والأدوار التي يكفيها البريد وTeams.",
+            "تحقق إن كنت تقترب من حد الـ 300 مستخدم لباقات Business.",
+            "اختر مدة الالتزام ودورة الفوترة لكل مجموعة من المستخدمين، لا للجميع دفعة واحدة.",
+            "فعّل التحقق متعدد العوامل ومزايا الأمان المضمّنة في باقتك أصلاً.",
+            "دوّن تواريخ التجديد، فالتخفيض متاح فقط في الأيام السبعة الأولى من المدة.",
+            "انسخ بيانات Microsoft 365 احتياطياً بشكل مستقل؛ فـ Microsoft تضمن استمرار الخدمة، لكن استعادة البيانات المحذوفة أو المشفّرة مسؤوليتك أنت.",
+          ],
+        },
+        { h2: "كيف يساعدك بيت الأفكار" },
+        {
+          p: "يورّد بيت الأفكار تراخيص Microsoft 365 وغيرها من تراخيص Microsoft للشركات في جميع مناطق المملكة. نراجع المستخدمين والتراخيص الحالية، ونقترح المزيج المناسب من الباقات ومدد الالتزام، وننقل البريد من المنصات الأخرى، ونهيّئ مزايا الأمان التي تدفع ثمنها، ونتابع التجديدات حتى لا ينتهي أي اشتراك دون علمك. مقرنا في الدمام بالمملكة العربية السعودية، ونقدّم خدماتنا في موقعك بموعد مسبق أو عن بُعد. تواصل معنا عبر sales@thoughtshouse.com أو على الرقم ⁦+966 54 102 2995⁩ لمراجعة تراخيصك والحصول على عرض سعر.",
+        },
+      ],
+      sources: [
+        {
+          label: "Microsoft — Microsoft 365 Packaging and Pricing Updates FAQ",
+          url: "https://www.microsoft.com/en-us/licensing/news/2026-m365-packaging-pricing-updates-faq",
+        },
+        {
+          label: "Microsoft Learn — Microsoft 365 Business Premium FAQ",
+          url: "https://learn.microsoft.com/en-us/microsoft-365/business-premium/microsoft-365-business-faqs",
+        },
+        {
+          label: "Microsoft Learn — New commerce license-based overview",
+          url: "https://learn.microsoft.com/en-us/partner-center/customers/new-commerce-license-based",
+        },
+        {
+          label: "Microsoft — Saudi Arabia East datacenter region availability",
+          url: "https://news.microsoft.com/source/emea/2026/08/microsoft-announces-saudi-arabia-east-datacenter-region-will-be-available-in-november-2026/",
+        },
+        {
+          label: "Microsoft — Microsoft 365 Copilot Business",
+          url: "https://www.microsoft.com/en-us/copilot/blog/2025/12/02/microsoft-365-copilot-business-the-future-of-work-for-small-businesses/",
+        },
+      ],
+    },
+  },
 };
