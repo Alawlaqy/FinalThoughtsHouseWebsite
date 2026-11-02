@@ -11,6 +11,9 @@ import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { Mail, Phone, MapPin, Send, CheckCircle, Loader2 } from "lucide-react";
 
 const CONTACT_ENDPOINT = "https://formsubmit.co/ajax/sales@thoughtshouse.com";
+const WHATSAPP_URL = "https://wa.me/966541022995";
+// FormSubmit can take 30+ seconds to answer; after this long, offer WhatsApp instead.
+const SLOW_NOTICE_MS = 8000;
 
 export default function ContactSection() {
   const { t, lang } = useLanguage();
@@ -24,6 +27,7 @@ export default function ContactSection() {
   const [submitted, setSubmitted] = useState(false);
   const [sending, setSending] = useState(false);
   const [error, setError] = useState(false);
+  const [slow, setSlow] = useState(false);
 
   // Messages are delivered to the sales inbox via FormSubmit (https://formsubmit.co).
   // The very first submission triggers a one-time activation email to that inbox.
@@ -34,6 +38,7 @@ export default function ContactSection() {
 
     setSending(true);
     setError(false);
+    const slowTimer = setTimeout(() => setSlow(true), SLOW_NOTICE_MS);
     try {
       const res = await fetch(CONTACT_ENDPOINT, {
         method: "POST",
@@ -63,6 +68,8 @@ export default function ContactSection() {
       console.error("Contact form failed", err);
       setError(true);
     } finally {
+      clearTimeout(slowTimer);
+      setSlow(false);
       setSending(false);
     }
   };
@@ -241,6 +248,20 @@ export default function ContactSection() {
                   .
                 </p>
                 <p role="status" aria-live="polite" className="text-sm">
+                  {slow && (
+                    <span className="text-[#334155] font-medium">
+                      {t("contact.slow")}{" "}
+                      <a
+                        href={WHATSAPP_URL}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="underline text-[#2563EB]"
+                      >
+                        {t("contact.slowWhatsapp")}
+                      </a>
+                      .
+                    </span>
+                  )}
                   {submitted && (
                     <span className="text-green-700 font-medium">
                       {t("contact.sent")}

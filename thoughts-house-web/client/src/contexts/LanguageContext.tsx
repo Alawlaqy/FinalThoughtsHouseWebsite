@@ -184,6 +184,14 @@ const translations: Record<string, Record<Language, string>> = {
     ar: "تم إرسال الرسالة بنجاح!",
   },
   "contact.sending": { en: "Sending...", ar: "جارٍ الإرسال..." },
+  "contact.slow": {
+    en: "Still sending. Please keep this page open, or",
+    ar: "ما زال الإرسال جارياً. أبقِ هذه الصفحة مفتوحة، أو",
+  },
+  "contact.slowWhatsapp": {
+    en: "message us on WhatsApp",
+    ar: "راسلنا على واتساب",
+  },
   "contact.error": {
     en: "Sorry, your message could not be sent. Please email sales@thoughtshouse.com or call +966 54 102 2995.",
     ar: "عذراً، تعذّر إرسال الرسالة. يرجى مراسلتنا على sales@thoughtshouse.com أو الاتصال على ⁦+966 54 102 2995⁩.",
