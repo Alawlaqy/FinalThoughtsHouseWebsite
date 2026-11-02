@@ -11,6 +11,7 @@ import { COVERAGE, SERVED_PLACES } from "./content/coverage";
 import { BRAND_GROUPS, BRANDS_COPY } from "./content/brands";
 import { PRIVACY } from "./content/privacy";
 import { PROJECTS, PROJECTS_COPY } from "./content/projects";
+import { CONTACT_PAGE, SERVICES_HUB } from "./content/hubs";
 import {
   INDUSTRIES,
   getIndustry,
@@ -52,6 +53,8 @@ export type Route =
   | { page: "coverage"; lang: Language; path: string }
   | { page: "brands"; lang: Language; path: string }
   | { page: "projects"; lang: Language; path: string }
+  | { page: "servicesHub"; lang: Language; path: string }
+  | { page: "contact"; lang: Language; path: string }
   | { page: "privacy"; lang: Language; path: string }
   | { page: "industry"; lang: Language; path: string; slug: IndustrySlug }
   | { page: "brand"; lang: Language; path: string; slug: BrandSlug }
@@ -71,6 +74,14 @@ export function coveragePath(lang: Language) {
 
 export function brandsPath(lang: Language) {
   return `${lang === "ar" ? "/ar" : ""}/brands/`;
+}
+
+export function servicesHubPath(lang: Language) {
+  return `${lang === "ar" ? "/ar" : ""}/services/`;
+}
+
+export function contactPath(lang: Language) {
+  return `${lang === "ar" ? "/ar" : ""}/contact/`;
 }
 
 export function projectsPath(lang: Language) {
@@ -118,6 +129,8 @@ export const ROUTES: Route[] = (["en", "ar"] as Language[]).flatMap(lang => [
   { page: "coverage" as const, lang, path: coveragePath(lang) },
   { page: "brands" as const, lang, path: brandsPath(lang) },
   { page: "projects" as const, lang, path: projectsPath(lang) },
+  { page: "servicesHub" as const, lang, path: servicesHubPath(lang) },
+  { page: "contact" as const, lang, path: contactPath(lang) },
   { page: "privacy" as const, lang, path: privacyPath(lang) },
   ...LOCAL_PAGES.map(p => ({
     page: "local" as const,
@@ -172,6 +185,10 @@ export function alternatePath(route: Route): string {
       return brandsPath(other);
     case "projects":
       return projectsPath(other);
+    case "servicesHub":
+      return servicesHubPath(other);
+    case "contact":
+      return contactPath(other);
     case "privacy":
       return privacyPath(other);
     case "industry":
@@ -189,7 +206,7 @@ export function alternatePath(route: Route): string {
 
 const HOME_META: Record<Language, { title: string; description: string }> = {
   en: {
-    title: "Thoughts House: IT Company & System Integrator in Saudi Arabia",
+    title: "Thoughts House: IT Company & System Integrator in KSA",
     description:
       "Saudi IT company & system integrator: cybersecurity, networks, cloud & backup, IT maintenance (AMC) and Dell, HP, Cisco & Microsoft supply across the Kingdom.",
   },
@@ -246,6 +263,16 @@ export function getMeta(route: Route) {
       return {
         title: BRANDS_COPY[route.lang].metaTitle,
         description: BRANDS_COPY[route.lang].metaDescription,
+      };
+    case "servicesHub":
+      return {
+        title: SERVICES_HUB[route.lang].metaTitle,
+        description: SERVICES_HUB[route.lang].metaDescription,
+      };
+    case "contact":
+      return {
+        title: CONTACT_PAGE[route.lang].metaTitle,
+        description: CONTACT_PAGE[route.lang].metaDescription,
       };
     case "projects":
       return {
@@ -359,9 +386,18 @@ const organization = {
   },
 };
 
+/** Short reference for pages that are not about the company itself; the full entity stays on home, about and contact. */
+const organizationRef = {
+  "@type": "ProfessionalService",
+  "@id": ORG_ID,
+  name: organization.name,
+  url: organization.url,
+};
+
 function structuredData(route: Route) {
   const url = SITE_URL + route.path;
-  const graph: object[] = [organization];
+  const isEntityPage = ["home", "about", "contact"].includes(route.page);
+  const graph: object[] = [isEntityPage ? organization : organizationRef];
 
   const home = HOME_PATHS[route.lang];
   const homeCrumb = {
@@ -438,6 +474,43 @@ function structuredData(route: Route) {
           acceptedAnswer: { "@type": "Answer", text: f.a },
         })),
       },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          homeCrumb,
+          { "@type": "ListItem", position: 2, name: c.h1, item: url },
+        ],
+      }
+    );
+  } else if (route.page === "servicesHub") {
+    const c = SERVICES_HUB[route.lang];
+    graph.push(
+      {
+        "@type": "CollectionPage",
+        name: c.h1,
+        description: c.summary,
+        mainEntity: {
+          "@type": "ItemList",
+          itemListElement: SERVICE_SLUGS.map((slug, i) => ({
+            "@type": "ListItem",
+            position: i + 1,
+            name: SERVICES[slug].content[route.lang].name,
+            url: SITE_URL + servicePath(slug, route.lang),
+          })),
+        },
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          homeCrumb,
+          { "@type": "ListItem", position: 2, name: c.h1, item: url },
+        ],
+      }
+    );
+  } else if (route.page === "contact") {
+    const c = CONTACT_PAGE[route.lang];
+    graph.push(
+      { "@type": "ContactPage", name: c.h1, description: c.summary },
       {
         "@type": "BreadcrumbList",
         itemListElement: [
@@ -795,7 +868,9 @@ function structuredData(route: Route) {
   );
   const pageNode =
     nodes.find(n =>
-      ["WebPage", "AboutPage", "CollectionPage"].includes(n["@type"] as string)
+      ["WebPage", "AboutPage", "CollectionPage", "ContactPage"].includes(
+        n["@type"] as string
+      )
     ) ??
     (nodes[nodes.push({ "@type": "WebPage" }) - 1] as Record<string, unknown>);
   Object.assign(pageNode, {
@@ -900,6 +975,9 @@ export function renderLlmsTxt(): string {
     "",
     "## Coverage",
     `- [${COVERAGE.en.h1}](${SITE_URL}${coveragePath("en")}): ${COVERAGE.en.summary}`,
+    "",
+    "## Contact",
+    `- [${CONTACT_PAGE.en.h1}](${SITE_URL}${contactPath("en")}): ${CONTACT_PAGE.en.address}. ${CONTACT_PAGE.en.appointment}`,
     "",
     "## Our work",
     `- [${PROJECTS_COPY.en.h1}](${SITE_URL}${projectsPath("en")}): ${PROJECTS_COPY.en.summary} ${PROJECTS_COPY.en.privacyNote}`,

@@ -10,12 +10,14 @@ import { COMPANY } from "@/content/about";
 import {
   aboutPath,
   brandsPath,
+  contactPath,
   coveragePath,
   insightsPath,
   localPath,
   privacyPath,
   projectsPath,
   servicePath,
+  servicesHubPath,
 } from "@/seo";
 
 export default function Footer() {
@@ -33,7 +35,6 @@ export default function Footer() {
     { key: "nav.home", href: "#home" },
     { key: "nav.services", href: "#services" },
     { key: "nav.partners", href: "#partners" },
-    { key: "nav.contact", href: "#contact" },
   ];
 
   return (
@@ -68,9 +69,9 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h2 className="text-sm font-bold uppercase tracking-wider text-white/80 mb-5">
+            <p className="text-sm font-bold uppercase tracking-wider text-white/80 mb-5">
               {t("footer.quickLinks")}
-            </h2>
+            </p>
             <ul className="space-y-3">
               {navLinks.map(link => (
                 <li key={link.key}>
@@ -83,6 +84,22 @@ export default function Footer() {
                   </a>
                 </li>
               ))}
+              <li>
+                <a
+                  href={servicesHubPath(lang)}
+                  className="text-sm text-white/60 hover:text-[#60A5FA] transition-colors duration-200"
+                >
+                  {t("nav.allServices")}
+                </a>
+              </li>
+              <li>
+                <a
+                  href={contactPath(lang)}
+                  className="text-sm text-white/60 hover:text-[#60A5FA] transition-colors duration-200"
+                >
+                  {t("nav.contact")}
+                </a>
+              </li>
               <li>
                 <a
                   href={aboutPath(lang)}
@@ -128,9 +145,9 @@ export default function Footer() {
 
           {/* Services */}
           <div>
-            <h2 className="text-sm font-bold uppercase tracking-wider text-white/80 mb-5">
+            <p className="text-sm font-bold uppercase tracking-wider text-white/80 mb-5">
               {t("footer.services")}
-            </h2>
+            </p>
             <ul className="space-y-3">
               {SERVICE_SLUGS.map(slug => (
                 <li key={slug}>
@@ -143,9 +160,9 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
-            <h2 className="text-sm font-bold uppercase tracking-wider text-white/80 mt-8 mb-5">
+            <p className="text-sm font-bold uppercase tracking-wider text-white/80 mt-8 mb-5">
               {lang === "ar" ? "في الدمام" : "In Dammam"}
-            </h2>
+            </p>
             <ul className="space-y-3">
               {LOCAL_PAGES.filter(p => p.group === "dammam").map(p => (
                 <li key={p.slug}>
@@ -158,9 +175,9 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
-            <h2 className="text-sm font-bold uppercase tracking-wider text-white/80 mt-8 mb-5">
+            <p className="text-sm font-bold uppercase tracking-wider text-white/80 mt-8 mb-5">
               {lang === "ar" ? "مدن نخدمها" : "Cities we serve"}
-            </h2>
+            </p>
             <ul className="space-y-3">
               {LOCAL_PAGES.filter(p => p.group === "city").map(p => (
                 <li key={p.slug}>
@@ -177,9 +194,9 @@ export default function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h2 className="text-sm font-bold uppercase tracking-wider text-white/80 mb-5">
+            <p className="text-sm font-bold uppercase tracking-wider text-white/80 mb-5">
               {t("footer.contactInfo")}
-            </h2>
+            </p>
             <ul className="space-y-3">
               <li>
                 <a

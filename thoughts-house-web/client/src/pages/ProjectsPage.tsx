@@ -3,6 +3,7 @@
  * Our Work page: completed projects, without client names or values.
  */
 import Navbar from "@/components/Navbar";
+import QuickContact from "@/components/QuickContact";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import WhatsAppWidget from "@/components/WhatsAppWidget";
@@ -81,6 +82,7 @@ export default function ProjectsPage() {
           </div>
         </section>
 
+        <QuickContact />
         <ContactSection />
       </main>
       <Footer />

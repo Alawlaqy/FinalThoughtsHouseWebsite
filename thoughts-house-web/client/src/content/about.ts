@@ -39,7 +39,7 @@ export const ABOUT: Record<Language, AboutCopy> = {
     metaTitle: "About Thoughts House | IT Company in Dammam, Saudi Arabia",
     metaDescription:
       "Thoughts House is a Saudi IT company and system integrator in Dammam: cybersecurity, networks, cloud & backup, IT maintenance and hardware supply.",
-    h1: "About Thoughts House",
+    h1: "About Thoughts House: IT Company in Dammam",
     summary:
       "Thoughts House (بيت الأفكار) is an IT system integrator and IT supplier based in Dammam, in Saudi Arabia's Eastern Province. It designs, supplies, installs and supports cybersecurity, network infrastructure, cloud and backup solutions, and supplies IT hardware and software licenses, for organizations across the Kingdom.",
     factsTitle: "Company facts",
@@ -89,7 +89,7 @@ export const ABOUT: Record<Language, AboutCopy> = {
     metaTitle: "من نحن | بيت الأفكار لتكامل أنظمة تقنية المعلومات في الدمام",
     metaDescription:
       "بيت الأفكار شركة تكامل أنظمة ومورّد تقنية معلومات مقرّها الدمام، تقدم حلول الأمن السيبراني والشبكات والسحابة والنسخ الاحتياطي وتوريد الأجهزة وتراخيص البرمجيات.",
-    h1: "من نحن",
+    h1: "من نحن: شركة تقنية معلومات في الدمام",
     summary:
       "بيت الأفكار (Thoughts House) شركة تكامل أنظمة تقنية معلومات ومورّد لأجهزة وتراخيص تقنية المعلومات، مقرّها الدمام في المنطقة الشرقية. تصمم حلول الأمن السيبراني والبنية التحتية للشبكات والسحابة والنسخ الاحتياطي وتورّدها وتركّبها وتدعمها، وتورّد الأجهزة وتراخيص البرمجيات للمنشآت في جميع مناطق المملكة.",
     factsTitle: "معلومات الشركة",

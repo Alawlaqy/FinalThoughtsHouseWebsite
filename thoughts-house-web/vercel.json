@@ -119,52 +119,32 @@
     },
     {
       "source": "/consulting-services",
-      "destination": "/",
+      "destination": "/services/",
       "permanent": true
     },
     {
       "source": "/consulting-services/",
-      "destination": "/",
+      "destination": "/services/",
       "permanent": true
     },
     {
       "source": "/advanced-services",
-      "destination": "/",
+      "destination": "/services/",
       "permanent": true
     },
     {
       "source": "/advanced-services/",
-      "destination": "/",
+      "destination": "/services/",
       "permanent": true
     },
     {
       "source": "/big-data-solutions",
-      "destination": "/",
+      "destination": "/services/cloud-backup/",
       "permanent": true
     },
     {
       "source": "/big-data-solutions/",
-      "destination": "/",
-      "permanent": true
-    },
-    {
-      "source": "/services",
-      "destination": "/#services",
-      "permanent": true
-    },
-    {
-      "source": "/services/",
-      "destination": "/#services",
-      "permanent": true
-    },
-    {
-      "source": "/contact",
-      "destination": "/#contact",
-      "permanent": true
-    },
-    {
-      "source": "/contact/",
-      "destination": "/#contact",
+      "destination": "/services/cloud-backup/",
       "permanent": true
     }
   ]

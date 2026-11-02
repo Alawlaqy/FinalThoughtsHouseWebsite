@@ -9,6 +9,8 @@ import AboutPage from "./pages/AboutPage";
 import CoveragePage from "./pages/CoveragePage";
 import BrandsPage from "./pages/BrandsPage";
 import ProjectsPage from "./pages/ProjectsPage";
+import ServicesHubPage from "./pages/ServicesHubPage";
+import ContactPage from "./pages/ContactPage";
 import PrivacyPage from "./pages/PrivacyPage";
 import IndustryPage from "./pages/IndustryPage";
 import BrandPage from "./pages/BrandPage";
@@ -48,6 +50,10 @@ function App({ path }: { path: string }) {
             <BrandsPage />
           ) : route.page === "projects" ? (
             <ProjectsPage />
+          ) : route.page === "servicesHub" ? (
+            <ServicesHubPage />
+          ) : route.page === "contact" ? (
+            <ContactPage />
           ) : route.page === "privacy" ? (
             <PrivacyPage />
           ) : route.page === "industry" ? (

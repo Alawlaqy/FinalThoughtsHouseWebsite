@@ -4,6 +4,7 @@
  * office details and links to the nationwide service pages.
  */
 import Navbar from "@/components/Navbar";
+import QuickContact from "@/components/QuickContact";
 import ContactSection from "@/components/ContactSection";
 import ProjectsHighlight from "@/components/ProjectsHighlight";
 import Footer from "@/components/Footer";
@@ -18,7 +19,7 @@ import {
 } from "@/content/local";
 import { SERVICES, imageSrcSet } from "@/content/services";
 import { COMPANY } from "@/content/about";
-import { localPath, servicePath } from "@/seo";
+import { localPath, projectsPath, servicePath } from "@/seo";
 import {
   CheckCircle2,
   ChevronLeft,
@@ -185,6 +186,14 @@ export default function LocalPage({ slug }: { slug: LocalSlug }) {
                   ? "الموقع على خرائط Google"
                   : "View on Google Maps"}
               </a>
+              <a
+                href={projectsPath(lang)}
+                className="block mt-2 text-sm font-semibold text-[#2563EB] hover:underline"
+              >
+                {lang === "ar"
+                  ? "نماذج من أعمالنا"
+                  : "See examples of our work"}
+              </a>
             </div>
           </div>
         </section>
@@ -262,8 +271,9 @@ export default function LocalPage({ slug }: { slug: LocalSlug }) {
           </div>
         </section>
 
-        <ProjectsHighlight />
+        {page.group === "dammam" && <ProjectsHighlight />}
 
+        <QuickContact />
         <ContactSection />
       </main>
       <Footer />

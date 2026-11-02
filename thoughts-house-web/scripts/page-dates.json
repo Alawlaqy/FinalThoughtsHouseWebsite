@@ -1,46 +1,46 @@
 {
  "/": {
-  "hash": "9907e0a71ec04300",
+  "hash": "0c72e7d5c5d160e1",
   "date": "2026-11-02"
  },
  "/services/cybersecurity/": {
-  "hash": "dc1472af599d0b8f",
+  "hash": "e7810d7d559a6afe",
   "date": "2026-11-02"
  },
  "/services/network-infrastructure/": {
-  "hash": "8a7904d1becdae23",
+  "hash": "aa8ab64acb1dfaf7",
   "date": "2026-11-02"
  },
  "/services/cloud-backup/": {
-  "hash": "7b912d9a8c597a07",
+  "hash": "fba2a3fda7edd62f",
   "date": "2026-11-02"
  },
  "/services/it-supply/": {
-  "hash": "67c2714f5faa6bfa",
+  "hash": "718eff8da1422523",
   "date": "2026-11-02"
  },
  "/services/it-support-amc/": {
-  "hash": "dcd1a1d5d06b6c75",
+  "hash": "4788d91160a93e11",
   "date": "2026-11-02"
  },
  "/services/firewall-installation/": {
-  "hash": "2e464fa6a76d753f",
+  "hash": "8871eadbbac3bb93",
   "date": "2026-11-02"
  },
  "/services/wifi-installation/": {
-  "hash": "212527808cdadfa4",
+  "hash": "21a8dada46ab35ff",
   "date": "2026-11-02"
  },
  "/services/structured-cabling/": {
-  "hash": "3b1f1371feda8105",
+  "hash": "b24c7b121b93ebd6",
   "date": "2026-11-02"
  },
  "/services/cctv-installation/": {
-  "hash": "624b1baf4d7052b5",
+  "hash": "ad3d61612fa8c77b",
   "date": "2026-11-02"
  },
  "/about/": {
-  "hash": "c21eeebf37b31fa6",
+  "hash": "102722ec6df3cbee",
   "date": "2026-11-02"
  },
  "/saudi-arabia/": {
@@ -52,7 +52,15 @@
   "date": "2026-11-02"
  },
  "/projects/": {
-  "hash": "42e59a54b97d8d7f",
+  "hash": "6a1288e81b7ba160",
+  "date": "2026-11-02"
+ },
+ "/services/": {
+  "hash": "8345dc3f98fc8814",
+  "date": "2026-11-02"
+ },
+ "/contact/": {
+  "hash": "f0e3d8aec0fc05dc",
   "date": "2026-11-02"
  },
  "/privacy/": {
@@ -60,107 +68,107 @@
   "date": "2026-11-02"
  },
  "/it-company-dammam/": {
-  "hash": "f080c7a590bf2c24",
+  "hash": "7f80517aec291c76",
   "date": "2026-11-02"
  },
  "/it-support-dammam/": {
-  "hash": "806ac1bc7ceed093",
+  "hash": "ed0cd8b16db4d23b",
   "date": "2026-11-02"
  },
  "/cybersecurity-dammam/": {
-  "hash": "4d1a9dacc6fa1b26",
+  "hash": "674035bf3f6b018d",
   "date": "2026-11-02"
  },
  "/network-solutions-dammam/": {
-  "hash": "81891aade70c2e8d",
+  "hash": "a45af90adbe5326d",
   "date": "2026-11-02"
  },
  "/it-hardware-supplier-dammam/": {
-  "hash": "9a40a23551d2266b",
+  "hash": "69b2618fafea5766",
   "date": "2026-11-02"
  },
  "/it-company-khobar/": {
-  "hash": "0f0fa1027b137c73",
+  "hash": "0ae461f2a4fb843c",
   "date": "2026-11-02"
  },
  "/it-company-dhahran/": {
-  "hash": "a485ccdce838500e",
+  "hash": "3b3f50ad35675718",
   "date": "2026-11-02"
  },
  "/it-company-jubail/": {
-  "hash": "e19ef1944b772be2",
+  "hash": "c95bc7ea12447dbd",
   "date": "2026-11-02"
  },
  "/it-company-al-ahsa/": {
-  "hash": "65318b5d2efbccd6",
+  "hash": "2b566f1cf688657a",
   "date": "2026-11-02"
  },
  "/it-company-riyadh/": {
-  "hash": "f6de0e4551ea8836",
+  "hash": "aa39359ef78db165",
   "date": "2026-11-02"
  },
  "/it-company-jeddah/": {
-  "hash": "c7b0e34d7c25c7f4",
+  "hash": "a10d4417c771271b",
   "date": "2026-11-02"
  },
  "/services/it-support-amc/healthcare/": {
-  "hash": "dbbffce9cb492c91",
+  "hash": "0fbe5e1d63d8b9c7",
   "date": "2026-11-02"
  },
  "/services/it-support-amc/education/": {
-  "hash": "e0df3b0b4664dda1",
+  "hash": "15ed76895b5c2ca0",
   "date": "2026-11-02"
  },
  "/services/it-support-amc/hospitality/": {
-  "hash": "d14ceb3d5150ff1a",
+  "hash": "7386bfc8b920a444",
   "date": "2026-11-02"
  },
  "/services/it-support-amc/logistics-industrial/": {
-  "hash": "53e7311e31ad81ff",
+  "hash": "5548151147c5abec",
   "date": "2026-11-02"
  },
  "/brands/dell/": {
-  "hash": "98e0d99eaf1a296b",
-  "date": "2026-10-06"
+  "hash": "9d366077e6ece909",
+  "date": "2026-11-02"
  },
  "/brands/hp/": {
-  "hash": "085d1a39a2860997",
-  "date": "2026-10-06"
+  "hash": "5dda9a92d12beca6",
+  "date": "2026-11-02"
  },
  "/brands/lenovo/": {
-  "hash": "c98c391bdeb87191",
-  "date": "2026-10-06"
+  "hash": "68e62e759da28cf0",
+  "date": "2026-11-02"
  },
  "/brands/cisco/": {
-  "hash": "f88ef75e2f2a56ec",
-  "date": "2026-10-06"
+  "hash": "a0d87fe2a7badb3c",
+  "date": "2026-11-02"
  },
  "/brands/sophos/": {
-  "hash": "3e8ed8c2573291e5",
-  "date": "2026-10-06"
+  "hash": "c03b036bf7d5a334",
+  "date": "2026-11-02"
  },
  "/brands/microsoft/": {
-  "hash": "be05ed329534e939",
+  "hash": "5438bc7800561841",
   "date": "2026-11-02"
  },
  "/brands/palo-alto-networks/": {
-  "hash": "2ef36141ab433729",
-  "date": "2026-10-06"
+  "hash": "27e5b8a7ed3622db",
+  "date": "2026-11-02"
  },
  "/brands/veeam/": {
-  "hash": "c5c92723f8fd5cf0",
-  "date": "2026-10-06"
+  "hash": "63398eb0222b292c",
+  "date": "2026-11-02"
  },
  "/brands/dynamics-365/": {
-  "hash": "017a36d7501cab9b",
+  "hash": "51a74bafc1106d04",
   "date": "2026-11-02"
  },
  "/brands/qnap/": {
-  "hash": "2ff989cbcb10b461",
+  "hash": "a1c4848783b967b4",
   "date": "2026-11-02"
  },
  "/brands/veritas/": {
-  "hash": "8463bb716a7ea0d5",
+  "hash": "8a5fbfe4b3e2df82",
   "date": "2026-11-02"
  },
  "/insights/": {
@@ -248,43 +256,43 @@
   "date": "2026-11-02"
  },
  "/ar/services/cybersecurity/": {
-  "hash": "44f3b4b99c786512",
+  "hash": "c719ca78c2383c2b",
   "date": "2026-11-02"
  },
  "/ar/services/network-infrastructure/": {
-  "hash": "1eb2fbf85673a47c",
+  "hash": "46235b5d234a97fb",
   "date": "2026-11-02"
  },
  "/ar/services/cloud-backup/": {
-  "hash": "fd1faa9735c999ab",
+  "hash": "cd0eb3fcaf20d5ca",
   "date": "2026-11-02"
  },
  "/ar/services/it-supply/": {
-  "hash": "a3bad976a38a51af",
+  "hash": "8442522e666b2994",
   "date": "2026-11-02"
  },
  "/ar/services/it-support-amc/": {
-  "hash": "4a7bf4f9b1884619",
+  "hash": "b2bbb6b363bcfd0b",
   "date": "2026-11-02"
  },
  "/ar/services/firewall-installation/": {
-  "hash": "635378f4e6f9effc",
+  "hash": "794fc06c25ceb38b",
   "date": "2026-11-02"
  },
  "/ar/services/wifi-installation/": {
-  "hash": "41eaea55bbc2630e",
+  "hash": "9ea53c793ef266ed",
   "date": "2026-11-02"
  },
  "/ar/services/structured-cabling/": {
-  "hash": "2691d66cf5809abc",
+  "hash": "13e15c28c7008492",
   "date": "2026-11-02"
  },
  "/ar/services/cctv-installation/": {
-  "hash": "cab694433e92d521",
+  "hash": "555b965d7d301a4b",
   "date": "2026-11-02"
  },
  "/ar/about/": {
-  "hash": "04374fad728627cf",
+  "hash": "8fb59e7e597b6870",
   "date": "2026-11-02"
  },
  "/ar/saudi-arabia/": {
@@ -296,7 +304,15 @@
   "date": "2026-11-02"
  },
  "/ar/projects/": {
-  "hash": "a557319e20a61a35",
+  "hash": "640ae498d11bc84a",
+  "date": "2026-11-02"
+ },
+ "/ar/services/": {
+  "hash": "16402a58296a667e",
+  "date": "2026-11-02"
+ },
+ "/ar/contact/": {
+  "hash": "57d904ead9c0ade8",
   "date": "2026-11-02"
  },
  "/ar/privacy/": {
@@ -304,107 +320,107 @@
   "date": "2026-11-02"
  },
  "/ar/it-company-dammam/": {
-  "hash": "22eb0e8b17b2198a",
+  "hash": "a69ce3826e7babea",
   "date": "2026-11-02"
  },
  "/ar/it-support-dammam/": {
-  "hash": "6d10a1d8aae1c2a5",
+  "hash": "25746a6590670d39",
   "date": "2026-11-02"
  },
  "/ar/cybersecurity-dammam/": {
-  "hash": "37f5d6d26070d9d9",
+  "hash": "33e31fc46f03a769",
   "date": "2026-11-02"
  },
  "/ar/network-solutions-dammam/": {
-  "hash": "e784a3b69938fcff",
+  "hash": "791011fe7af26b89",
   "date": "2026-11-02"
  },
  "/ar/it-hardware-supplier-dammam/": {
-  "hash": "d1257a7437589dd9",
+  "hash": "c5136cdef46bfddf",
   "date": "2026-11-02"
  },
  "/ar/it-company-khobar/": {
-  "hash": "0275b0bc0b612229",
+  "hash": "548ba7ed4c03a2c3",
   "date": "2026-11-02"
  },
  "/ar/it-company-dhahran/": {
-  "hash": "e7860a3c92e9b4aa",
+  "hash": "c97280fa9bf14a17",
   "date": "2026-11-02"
  },
  "/ar/it-company-jubail/": {
-  "hash": "5601a5ff9494523b",
+  "hash": "4c5cada4108abe39",
   "date": "2026-11-02"
  },
  "/ar/it-company-al-ahsa/": {
-  "hash": "b81a53df499ffe72",
+  "hash": "08f120916f10120a",
   "date": "2026-11-02"
  },
  "/ar/it-company-riyadh/": {
-  "hash": "025c2b1efe38b116",
+  "hash": "5f6163b9ecebb8a0",
   "date": "2026-11-02"
  },
  "/ar/it-company-jeddah/": {
-  "hash": "e3feefd384c354d8",
+  "hash": "38c89f7f3cfaa702",
   "date": "2026-11-02"
  },
  "/ar/services/it-support-amc/healthcare/": {
-  "hash": "d800f918f54ab9bd",
-  "date": "2026-10-06"
+  "hash": "1ab1cf23413bea5c",
+  "date": "2026-11-02"
  },
  "/ar/services/it-support-amc/education/": {
-  "hash": "70d351f493795692",
-  "date": "2026-10-06"
+  "hash": "622065413dfad14c",
+  "date": "2026-11-02"
  },
  "/ar/services/it-support-amc/hospitality/": {
-  "hash": "06df46cbd7d8a1a2",
-  "date": "2026-10-06"
+  "hash": "9e89d4ddfcd36d6a",
+  "date": "2026-11-02"
  },
  "/ar/services/it-support-amc/logistics-industrial/": {
-  "hash": "3c7c23893ae4f012",
-  "date": "2026-10-06"
+  "hash": "36b93df8fee41c80",
+  "date": "2026-11-02"
  },
  "/ar/brands/dell/": {
-  "hash": "45bdb562b77028a8",
-  "date": "2026-10-06"
+  "hash": "78b47af7958aba19",
+  "date": "2026-11-02"
  },
  "/ar/brands/hp/": {
-  "hash": "1e60137199185bb3",
-  "date": "2026-10-06"
+  "hash": "c750df684c74707a",
+  "date": "2026-11-02"
  },
  "/ar/brands/lenovo/": {
-  "hash": "cb7728d1d080af34",
-  "date": "2026-10-06"
+  "hash": "4431fd3c0586e3d6",
+  "date": "2026-11-02"
  },
  "/ar/brands/cisco/": {
-  "hash": "9a87ab2ff15fd238",
-  "date": "2026-10-06"
+  "hash": "0c95f9b3b3ad73b3",
+  "date": "2026-11-02"
  },
  "/ar/brands/sophos/": {
-  "hash": "4c6aeeda56557912",
-  "date": "2026-10-06"
+  "hash": "c1b0a9b02c7316c2",
+  "date": "2026-11-02"
  },
  "/ar/brands/microsoft/": {
-  "hash": "3421a5cb75707bf4",
+  "hash": "67e7877243962485",
   "date": "2026-11-02"
  },
  "/ar/brands/palo-alto-networks/": {
-  "hash": "4d5d5b5c7f1ab761",
-  "date": "2026-10-06"
+  "hash": "5d591aeaf8e39958",
+  "date": "2026-11-02"
  },
  "/ar/brands/veeam/": {
-  "hash": "51ea6ea59fc2f452",
-  "date": "2026-10-06"
+  "hash": "6504f7c1c89c89af",
+  "date": "2026-11-02"
  },
  "/ar/brands/dynamics-365/": {
-  "hash": "fed3142a2f2ed827",
+  "hash": "74caae4b36fe16c6",
   "date": "2026-11-02"
  },
  "/ar/brands/qnap/": {
-  "hash": "d0e9b0dc07f35960",
+  "hash": "b1025806b2f26044",
   "date": "2026-11-02"
  },
  "/ar/brands/veritas/": {
-  "hash": "a5dff7d1e32c873d",
+  "hash": "391d5a8a0bcffc18",
   "date": "2026-11-02"
  },
  "/ar/insights/": {

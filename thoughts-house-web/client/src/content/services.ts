@@ -160,6 +160,10 @@ export const SERVICES: Record<ServiceSlug, Service> = {
         faqTitle: "Frequently asked questions",
         faq: [
           {
+            q: "Which companies provide cybersecurity solutions in Saudi Arabia?",
+            a: "Saudi providers range from NCA-licensed security operations companies to IT integrators and resellers. Thoughts House supplies and supports firewalls, endpoint protection and EDR for organizations in Saudi Arabia, and has supplied Sophos EDR to a financial institution.",
+          },
+          {
             q: "What does your cybersecurity service include?",
             a: "It covers endpoint protection, next-generation firewalls, network security monitoring, threat detection and response, and security assessments. We can deliver a single component or a complete, layered solution.",
           },
@@ -181,7 +185,7 @@ export const SERVICES: Record<ServiceSlug, Service> = {
         metaDescription:
           "حماية نقاط النهاية وجدران الحماية من الجيل التالي ومراقبة أمن الشبكات وكشف التهديدات وتقييم الأمان للشركات في الدمام وجميع مناطق المملكة.",
         name: "الأمن السيبراني",
-        h1: "حلول الأمن السيبراني في المملكة العربية السعودية",
+        h1: "شركة أمن سيبراني في السعودية وحلول حماية الشركات",
         summary:
           "يصمم بيت الأفكار حلول أمن سيبراني متعددة الطبقات للمنشآت في المملكة ويورّدها ويدعمها: حماية نقاط النهاية وEDR، وجدران الحماية من الجيل التالي، ومراقبة أمن الشبكات، وكشف التهديدات والاستجابة لها، وتقييم الأمان، بالتعاون مع شركات مثل Sophos وPalo Alto Networks وCrowdStrike وCheck Point وTrend Micro وMicrosoft.",
         intro:
@@ -229,6 +233,10 @@ export const SERVICES: Record<ServiceSlug, Service> = {
         faqTitle: "الأسئلة الشائعة",
         faq: [
           {
+            q: "ما الشركات التي تقدم حلول الأمن السيبراني في السعودية؟",
+            a: "تتنوع الجهات بين شركات مرخصة من الهيئة الوطنية للأمن السيبراني لمراكز العمليات الأمنية، وشركات تكامل الأنظمة والتوريد. يورّد بيت الأفكار جدران الحماية وحلول حماية الأجهزة وEDR ويدعمها للمنشآت في المملكة، ومن ذلك توريد Sophos EDR لمؤسسة مالية.",
+          },
+          {
             q: "ماذا تشمل خدمة الأمن السيبراني لديكم؟",
             a: "تشمل حماية نقاط النهاية وجدران الحماية من الجيل التالي ومراقبة أمن الشبكات وكشف التهديدات والاستجابة لها وتقييم الأمان. يمكننا تنفيذ عنصر واحد أو حل متكامل متعدد الطبقات.",
           },
@@ -253,11 +261,11 @@ export const SERVICES: Record<ServiceSlug, Service> = {
     vendors: ["Cisco", "HP", "Dell", "Lenovo", "Supermicro", "ASUS"],
     content: {
       en: {
-        metaTitle: "Network Infrastructure Solutions in Saudi Arabia",
+        metaTitle: "Network Solutions Company in Saudi Arabia | Thoughts House",
         metaDescription:
-          "Enterprise routing, switching, wireless, network design and performance optimization for businesses in Dammam and across Saudi Arabia.",
+          "Network design, switching, routing and Wi-Fi for offices, warehouses and factories in Saudi Arabia, from planning and supply to installation and support.",
         name: "Network Infrastructure",
-        h1: "Network Infrastructure Solutions in Saudi Arabia",
+        h1: "Network Solutions & Infrastructure in Saudi Arabia",
         summary:
           "Thoughts House plans, builds and upgrades enterprise networks in Saudi Arabia — routing, switching, Wi-Fi, network design and performance optimization — using hardware from manufacturers such as Cisco, HP and Dell, and supports them after go-live.",
         intro:
@@ -293,6 +301,10 @@ export const SERVICES: Record<ServiceSlug, Service> = {
         faqTitle: "Frequently asked questions",
         faq: [
           {
+            q: "Which IT company provides server and network infrastructure in Saudi Arabia?",
+            a: "Thoughts House provides server, storage and network infrastructure for businesses in Dammam and across Saudi Arabia, from design and supply to installation and support.",
+          },
+          {
             q: "Can you upgrade our existing network instead of replacing everything?",
             a: "Yes. We start by assessing what you already have, keep what still performs well, and plan upgrades where they make the biggest difference.",
           },
@@ -310,11 +322,11 @@ export const SERVICES: Record<ServiceSlug, Service> = {
           "Tell us about your sites and requirements and we will propose the right design.",
       },
       ar: {
-        metaTitle: "حلول البنية التحتية للشبكات في السعودية | بيت الأفكار",
+        metaTitle: "حلول الشبكات والبنية التحتية في السعودية | بيت الأفكار",
         metaDescription:
           "التوجيه والتبديل المؤسسي والشبكات اللاسلكية وتصميم الشبكات وتحسين أدائها للشركات في الدمام وجميع مناطق المملكة.",
         name: "البنية التحتية للشبكات",
-        h1: "حلول البنية التحتية للشبكات في المملكة العربية السعودية",
+        h1: "حلول الشبكات والبنية التحتية في السعودية",
         summary:
           "يخطط بيت الأفكار للشبكات المؤسسية في المملكة ويبنيها ويطوّرها، من التوجيه والتبديل وشبكات Wi-Fi إلى تصميم الشبكات وتحسين أدائها، باستخدام معدات من شركات مثل Cisco وHP وDell، ويدعمها بعد التشغيل.",
         intro:
@@ -349,6 +361,10 @@ export const SERVICES: Record<ServiceSlug, Service> = {
         why: WHY_AR,
         faqTitle: "الأسئلة الشائعة",
         faq: [
+          {
+            q: "ما الشركة التي تقدم حلول السيرفرات والشبكات في السعودية؟",
+            a: "يقدم بيت الأفكار حلول السيرفرات والتخزين والشبكات للشركات في الدمام وجميع مناطق المملكة، من التصميم والتوريد إلى التركيب والدعم.",
+          },
           {
             q: "هل يمكنكم تطوير شبكتنا الحالية بدلاً من استبدالها بالكامل؟",
             a: "نعم. نبدأ بتقييم ما لديك، ونحتفظ بما يعمل بكفاءة، ونخطط للتحديث حيث يُحدث الفرق الأكبر.",
@@ -386,9 +402,9 @@ export const SERVICES: Record<ServiceSlug, Service> = {
       en: {
         metaTitle: "Cloud Backup & Disaster Recovery in KSA | Thoughts House",
         metaDescription:
-          "Data center solutions, automated backup, disaster recovery, server management and cloud migration for businesses in Dammam and across Saudi Arabia.",
+          "Cloud backup, immutable backup and disaster recovery for businesses in Saudi Arabia, with on-site and remote support from Dammam to Riyadh and Jeddah.",
         name: "Cloud & Backup Solutions",
-        h1: "Cloud & Backup Solutions in Saudi Arabia",
+        h1: "Cloud Backup & Disaster Recovery in Saudi Arabia",
         summary:
           "Thoughts House builds server, storage, backup and disaster recovery environments and migrates workloads to Microsoft Azure or AWS for organizations in Saudi Arabia, using platforms such as Veeam, Veritas, Acronis, NetApp and Pure Storage.",
         intro:
@@ -467,7 +483,7 @@ export const SERVICES: Record<ServiceSlug, Service> = {
         metaDescription:
           "حلول مراكز البيانات والنسخ الاحتياطي التلقائي والتعافي من الكوارث وإدارة الخوادم والترحيل السحابي للشركات في الدمام وجميع مناطق المملكة.",
         name: "الحلول السحابية والنسخ الاحتياطي",
-        h1: "الحلول السحابية والنسخ الاحتياطي في المملكة العربية السعودية",
+        h1: "النسخ الاحتياطي السحابي والتعافي من الكوارث في السعودية",
         summary:
           "يبني بيت الأفكار بيئات الخوادم والتخزين والنسخ الاحتياطي والتعافي من الكوارث، وينقل الأنظمة إلى Microsoft Azure أو AWS للمنشآت في المملكة، باستخدام منصات مثل Veeam وVeritas وAcronis وNetApp وPure Storage.",
         intro:
@@ -607,6 +623,10 @@ export const SERVICES: Record<ServiceSlug, Service> = {
         faqTitle: "Frequently asked questions",
         faq: [
           {
+            q: "Where can businesses buy enterprise IT equipment in Saudi Arabia?",
+            a: "Businesses can buy enterprise IT equipment from IT resellers and system integrators. Thoughts House supplies servers, storage, network devices, computers and software licenses across Saudi Arabia, as supply only or with installation.",
+          },
+          {
             q: "Can you help us choose the right hardware before we buy?",
             a: "Yes. Tell us about your users, workloads and budget and we will recommend suitable models and quantities, so you do not over- or under-buy.",
           },
@@ -663,6 +683,10 @@ export const SERVICES: Record<ServiceSlug, Service> = {
         why: WHY_AR,
         faqTitle: "الأسئلة الشائعة",
         faq: [
+          {
+            q: "من أين تشتري الشركات أجهزة تقنية المعلومات في السعودية؟",
+            a: "تشتري الشركات أجهزة تقنية المعلومات من الموردين وشركات تكامل الأنظمة. يورّد بيت الأفكار السيرفرات والتخزين وأجهزة الشبكات والحواسيب والتراخيص في جميع مناطق المملكة، توريداً فقط أو مع التركيب.",
+          },
           {
             q: "هل تساعدوننا في اختيار الأجهزة المناسبة قبل الشراء؟",
             a: "نعم. أخبرنا عن عدد المستخدمين وطبيعة العمل والميزانية، وسنرشّح الطرازات والكميات المناسبة حتى لا تشتري أكثر أو أقل من حاجتك.",

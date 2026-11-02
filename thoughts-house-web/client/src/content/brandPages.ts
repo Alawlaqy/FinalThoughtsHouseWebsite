@@ -454,6 +454,10 @@ export const BRAND_PAGES: BrandPage[] = [
         ],
         faq: [
           {
+            q: "Who provides Sophos solutions in Saudi Arabia?",
+            a: "Sophos products are sold through partners in Saudi Arabia. Thoughts House supplies Sophos firewalls and endpoint protection, including Sophos EDR supplied to a financial institution.",
+          },
+          {
             q: "Do you supply Sophos licenses in Saudi Arabia?",
             a: "Yes. We supply Sophos firewall and endpoint subscriptions and track renewals so protection does not lapse.",
           },
@@ -496,6 +500,10 @@ export const BRAND_PAGES: BrandPage[] = [
           },
         ],
         faq: [
+          {
+            q: "من يوفر حلول Sophos في السعودية؟",
+            a: "تُباع منتجات Sophos عبر الشركاء في المملكة. يورّد بيت الأفكار جدران حماية Sophos وحلول حماية الأجهزة، ومن ذلك توريد Sophos EDR لمؤسسة مالية.",
+          },
           {
             q: "هل تورّدون تراخيص Sophos في السعودية؟",
             a: "نعم. نورّد اشتراكات جدران حماية Sophos وحماية الأجهزة ونتابع تجديدها حتى لا تتوقف الحماية.",

@@ -3,6 +3,7 @@
  * Brand supply page: what we supply, install and support from one manufacturer.
  */
 import Navbar from "@/components/Navbar";
+import QuickContact from "@/components/QuickContact";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import WhatsAppWidget from "@/components/WhatsAppWidget";
@@ -248,6 +249,7 @@ export default function BrandPage({ slug }: { slug: BrandSlug }) {
           </div>
         </section>
 
+        <QuickContact />
         <ContactSection />
       </main>
       <Footer />

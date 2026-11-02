@@ -4,6 +4,7 @@
  * technologies, reasons to choose us, FAQ and the contact form.
  */
 import Navbar from "@/components/Navbar";
+import QuickContact from "@/components/QuickContact";
 import ContactSection from "@/components/ContactSection";
 import ProjectsHighlight from "@/components/ProjectsHighlight";
 import Footer from "@/components/Footer";
@@ -382,6 +383,7 @@ export default function ServicePage({ slug }: { slug: ServiceSlug }) {
         </section>
 
         <ProjectsHighlight service={slug} />
+        <QuickContact />
         <ContactSection />
       </main>
       <Footer />

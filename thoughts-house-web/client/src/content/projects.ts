@@ -35,7 +35,7 @@ export const PROJECTS_COPY: Record<Language, ProjectsCopy> = {
     metaTitle: "Our Work: IT Projects in Saudi Arabia | Thoughts House",
     metaDescription:
       "Examples of Thoughts House IT projects in Saudi Arabia: computer deployment, enterprise storage, Microsoft 365 licensing, Sophos EDR, Cisco and Veritas supply.",
-    h1: "Our Work",
+    h1: "Our Work: IT Projects in Saudi Arabia",
     summary:
       "Examples of projects Thoughts House has delivered for organizations in Saudi Arabia, including computer supply and deployment, enterprise storage, Microsoft 365 and Dynamics 365 licensing, endpoint protection and network equipment.",
     privacyNote:
@@ -47,7 +47,7 @@ export const PROJECTS_COPY: Record<Language, ProjectsCopy> = {
     metaTitle: "أعمالنا: مشاريع تقنية المعلومات في السعودية | بيت الأفكار",
     metaDescription:
       "نماذج من مشاريع بيت الأفكار في المملكة: تجهيز أجهزة الحاسب، والتخزين المؤسسي، وتراخيص Microsoft 365، وتوريد Sophos EDR وCisco وVeritas.",
-    h1: "أعمالنا",
+    h1: "أعمالنا: مشاريع تقنية المعلومات في السعودية",
     summary:
       "نماذج من المشاريع التي نفذها بيت الأفكار لمنشآت في المملكة العربية السعودية، منها توريد أجهزة الحاسب وتجهيزها، والتخزين المؤسسي، وتراخيص Microsoft 365 وDynamics 365، وحماية الأجهزة الطرفية، وأجهزة الشبكات.",
     privacyNote:
