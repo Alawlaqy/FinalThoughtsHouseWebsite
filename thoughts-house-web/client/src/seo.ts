@@ -850,7 +850,7 @@ export function renderHead(route: Route): string {
 }
 
 /** sitemap.xml covering every route, with hreflang alternates. */
-export function renderSitemap(lastmod: string): string {
+export function renderSitemap(lastmod: (path: string) => string): string {
   const urls = ROUTES.map(route => {
     const enPath = route.lang === "en" ? route.path : alternatePath(route);
     const arPath = route.lang === "ar" ? route.path : alternatePath(route);
@@ -860,7 +860,7 @@ export function renderSitemap(lastmod: string): string {
       `    <xhtml:link rel="alternate" hreflang="en" href="${SITE_URL}${enPath}" />`,
       `    <xhtml:link rel="alternate" hreflang="ar" href="${SITE_URL}${arPath}" />`,
       `    <xhtml:link rel="alternate" hreflang="x-default" href="${SITE_URL}${enPath}" />`,
-      `    <lastmod>${lastmod}</lastmod>`,
+      `    <lastmod>${lastmod(route.path)}</lastmod>`,
       "  </url>",
     ].join("\n");
   });

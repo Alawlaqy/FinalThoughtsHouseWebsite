@@ -6,6 +6,7 @@
 import { useState } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { COMPANY } from "@/content/about";
+import { SERVICES, SERVICE_SLUGS } from "@/content/services";
 import { privacyPath } from "@/seo";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { trackLead, whatsappUrl } from "@/lib/leads";
@@ -30,6 +31,8 @@ export default function ContactSection() {
     name: "",
     company: "",
     email: "",
+    phone: "",
+    service: "",
     source: "",
     message: "",
   });
@@ -59,6 +62,8 @@ export default function ContactSection() {
           name: formData.name,
           company: formData.company,
           email: formData.email,
+          phone: formData.phone || "Not provided",
+          service: formData.service || "Not selected",
           source: formData.source || "Not answered",
           message: formData.message,
           _replyto: formData.email,
@@ -77,6 +82,8 @@ export default function ContactSection() {
         name: "",
         company: "",
         email: "",
+        phone: "",
+        service: "",
         source: "",
         message: "",
       });
@@ -191,50 +198,102 @@ export default function ContactSection() {
                     />
                   </div>
                 </div>
-                <div>
-                  <label
-                    htmlFor="contact-email"
-                    className="block text-sm font-semibold text-[#1E293B] mb-2"
-                  >
-                    {t("contact.email")}
-                  </label>
-                  <input
-                    id="contact-email"
-                    name="email"
-                    type="email"
-                    autoComplete="email"
-                    required
-                    value={formData.email}
-                    onChange={e =>
-                      setFormData({ ...formData, email: e.target.value })
-                    }
-                    placeholder={t("contact.emailPlaceholder")}
-                    className="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl text-[#1E293B] placeholder:text-[#94A3B8] focus:outline-none focus:border-[#2563EB] focus:ring-2 focus:ring-[#2563EB]/20 transition-all"
-                  />
+                <div className="grid sm:grid-cols-2 gap-5">
+                  <div>
+                    <label
+                      htmlFor="contact-email"
+                      className="block text-sm font-semibold text-[#1E293B] mb-2"
+                    >
+                      {t("contact.email")}
+                    </label>
+                    <input
+                      id="contact-email"
+                      name="email"
+                      type="email"
+                      autoComplete="email"
+                      required
+                      value={formData.email}
+                      onChange={e =>
+                        setFormData({ ...formData, email: e.target.value })
+                      }
+                      placeholder={t("contact.emailPlaceholder")}
+                      className="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl text-[#1E293B] placeholder:text-[#94A3B8] focus:outline-none focus:border-[#2563EB] focus:ring-2 focus:ring-[#2563EB]/20 transition-all"
+                    />
+                  </div>
+                  <div>
+                    <label
+                      htmlFor="contact-phone"
+                      className="block text-sm font-semibold text-[#1E293B] mb-2"
+                    >
+                      {t("contact.phoneField")}
+                    </label>
+                    <input
+                      id="contact-phone"
+                      name="phone"
+                      type="tel"
+                      dir="ltr"
+                      autoComplete="tel"
+                      value={formData.phone}
+                      onChange={e =>
+                        setFormData({ ...formData, phone: e.target.value })
+                      }
+                      placeholder="05X XXX XXXX"
+                      className="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl text-[#1E293B] placeholder:text-[#94A3B8] focus:outline-none focus:border-[#2563EB] focus:ring-2 focus:ring-[#2563EB]/20 transition-all"
+                    />
+                  </div>
                 </div>
-                <div>
-                  <label
-                    htmlFor="contact-source"
-                    className="block text-sm font-semibold text-[#1E293B] mb-2"
-                  >
-                    {t("contact.source")}
-                  </label>
-                  <select
-                    id="contact-source"
-                    name="source"
-                    value={formData.source}
-                    onChange={e =>
-                      setFormData({ ...formData, source: e.target.value })
-                    }
-                    className="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl text-[#1E293B] focus:outline-none focus:border-[#2563EB] focus:ring-2 focus:ring-[#2563EB]/20 transition-all"
-                  >
-                    <option value="">{t("contact.sourcePlaceholder")}</option>
-                    {FIND_US_OPTIONS.map(o => (
-                      <option key={o} value={o}>
-                        {t(`contact.source.${o}`)}
-                      </option>
-                    ))}
-                  </select>
+                <div className="grid sm:grid-cols-2 gap-5">
+                  <div>
+                    <label
+                      htmlFor="contact-service"
+                      className="block text-sm font-semibold text-[#1E293B] mb-2"
+                    >
+                      {t("contact.serviceField")}
+                    </label>
+                    <select
+                      id="contact-service"
+                      name="service"
+                      value={formData.service}
+                      onChange={e =>
+                        setFormData({ ...formData, service: e.target.value })
+                      }
+                      className="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl text-[#1E293B] focus:outline-none focus:border-[#2563EB] focus:ring-2 focus:ring-[#2563EB]/20 transition-all"
+                    >
+                      <option value="">{t("contact.sourcePlaceholder")}</option>
+                      {SERVICE_SLUGS.map(slug => (
+                        <option
+                          key={slug}
+                          value={SERVICES[slug].content.en.name}
+                        >
+                          {SERVICES[slug].content[lang].name}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+                  <div>
+                    <label
+                      htmlFor="contact-source"
+                      className="block text-sm font-semibold text-[#1E293B] mb-2"
+                    >
+                      {t("contact.source")}
+                    </label>
+                    <select
+                      id="contact-source"
+                      name="source"
+                      value={formData.source}
+                      onChange={e =>
+                        setFormData({ ...formData, source: e.target.value })
+                      }
+                      className="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl text-[#1E293B] focus:outline-none focus:border-[#2563EB] focus:ring-2 focus:ring-[#2563EB]/20 transition-all"
+                    >
+                      <option value="">{t("contact.sourcePlaceholder")}</option>
+                      {FIND_US_OPTIONS.map(o => (
+                        <option key={o} value={o}>
+                          {t(`contact.source.${o}`)}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
                 </div>
                 <div>
                   <label

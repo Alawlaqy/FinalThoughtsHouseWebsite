@@ -35,7 +35,7 @@ export const PRIVACY: Record<Language, PrivacyCopy> = {
       {
         h2: "What we collect",
         body: [
-          "Contact form: your name, company name (optional), email address, how you found us (optional) and the message you write.",
+          "Contact form: your name, company name (optional), email address, phone number (optional), the service you need (optional), how you found us (optional) and the message you write.",
           "WhatsApp, email and phone: if you contact us this way, we receive the details you share, such as your name, number and message.",
           "Technical data: like any website, our hosting provider processes your IP address and basic request information (such as browser type and the page requested) to deliver the site and keep it secure.",
           "Usage statistics: we use Vercel Web Analytics to count page visits and clicks on our contact links. It works without cookies and shows us totals, not who you are.",
@@ -119,7 +119,7 @@ export const PRIVACY: Record<Language, PrivacyCopy> = {
       {
         h2: "ما الذي نجمعه",
         body: [
-          "نموذج التواصل: اسمك واسم شركتك (اختياري) وبريدك الإلكتروني وكيف عرفتنا (اختياري) والرسالة التي تكتبها.",
+          "نموذج التواصل: اسمك واسم شركتك (اختياري) وبريدك الإلكتروني ورقم جوالك (اختياري) والخدمة المطلوبة (اختياري) وكيف عرفتنا (اختياري) والرسالة التي تكتبها.",
           "واتساب والبريد والهاتف: إذا تواصلت معنا بهذه الطرق نتلقى البيانات التي تشاركها، مثل اسمك ورقمك ورسالتك.",
           "البيانات التقنية: كأي موقع إلكتروني، يعالج مزوّد الاستضافة عنوان IP ومعلومات الطلب الأساسية (مثل نوع المتصفح والصفحة المطلوبة) لعرض الموقع وحمايته.",
           "إحصاءات الاستخدام: نستخدم Vercel Web Analytics لحساب زيارات الصفحات والنقرات على روابط التواصل. وهي تعمل دون ملفات تعريف الارتباط، وتعرض لنا أرقاماً إجمالية ولا تحدد هويتك.",

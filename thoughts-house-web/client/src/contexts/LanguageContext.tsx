@@ -161,6 +161,14 @@ const translations: Record<string, Record<Language, string>> = {
     en: "4028 Al Malek Khaled, As Suq Dist., Dammam 32242-8181, Saudi Arabia",
     ar: "\u20664028\u2069 الملك خالد، حي السوق، الدمام \u206632242-8181\u2069، المملكة العربية السعودية",
   },
+  "contact.phoneField": {
+    en: "Phone (optional)",
+    ar: "رقم الجوال (اختياري)",
+  },
+  "contact.serviceField": {
+    en: "Service you need (optional)",
+    ar: "الخدمة المطلوبة (اختياري)",
+  },
   "contact.source": {
     en: "How did you find us? (optional)",
     ar: "كيف عرفتنا؟ (اختياري)",

@@ -1,0 +1,490 @@
+{
+ "/": {
+  "hash": "9907e0a71ec04300",
+  "date": "2026-11-02"
+ },
+ "/services/cybersecurity/": {
+  "hash": "dc1472af599d0b8f",
+  "date": "2026-11-02"
+ },
+ "/services/network-infrastructure/": {
+  "hash": "8a7904d1becdae23",
+  "date": "2026-11-02"
+ },
+ "/services/cloud-backup/": {
+  "hash": "7b912d9a8c597a07",
+  "date": "2026-11-02"
+ },
+ "/services/it-supply/": {
+  "hash": "67c2714f5faa6bfa",
+  "date": "2026-11-02"
+ },
+ "/services/it-support-amc/": {
+  "hash": "dcd1a1d5d06b6c75",
+  "date": "2026-11-02"
+ },
+ "/services/firewall-installation/": {
+  "hash": "2e464fa6a76d753f",
+  "date": "2026-11-02"
+ },
+ "/services/wifi-installation/": {
+  "hash": "212527808cdadfa4",
+  "date": "2026-11-02"
+ },
+ "/services/structured-cabling/": {
+  "hash": "3b1f1371feda8105",
+  "date": "2026-11-02"
+ },
+ "/services/cctv-installation/": {
+  "hash": "624b1baf4d7052b5",
+  "date": "2026-11-02"
+ },
+ "/about/": {
+  "hash": "c21eeebf37b31fa6",
+  "date": "2026-11-02"
+ },
+ "/saudi-arabia/": {
+  "hash": "d65e1f9cab9b9d3c",
+  "date": "2026-11-02"
+ },
+ "/brands/": {
+  "hash": "26b763677284f8ab",
+  "date": "2026-11-02"
+ },
+ "/projects/": {
+  "hash": "42e59a54b97d8d7f",
+  "date": "2026-11-02"
+ },
+ "/privacy/": {
+  "hash": "320ff09f4243c556",
+  "date": "2026-11-02"
+ },
+ "/it-company-dammam/": {
+  "hash": "f080c7a590bf2c24",
+  "date": "2026-11-02"
+ },
+ "/it-support-dammam/": {
+  "hash": "806ac1bc7ceed093",
+  "date": "2026-11-02"
+ },
+ "/cybersecurity-dammam/": {
+  "hash": "4d1a9dacc6fa1b26",
+  "date": "2026-11-02"
+ },
+ "/network-solutions-dammam/": {
+  "hash": "81891aade70c2e8d",
+  "date": "2026-11-02"
+ },
+ "/it-hardware-supplier-dammam/": {
+  "hash": "9a40a23551d2266b",
+  "date": "2026-11-02"
+ },
+ "/it-company-khobar/": {
+  "hash": "0f0fa1027b137c73",
+  "date": "2026-11-02"
+ },
+ "/it-company-dhahran/": {
+  "hash": "a485ccdce838500e",
+  "date": "2026-11-02"
+ },
+ "/it-company-jubail/": {
+  "hash": "e19ef1944b772be2",
+  "date": "2026-11-02"
+ },
+ "/it-company-al-ahsa/": {
+  "hash": "65318b5d2efbccd6",
+  "date": "2026-11-02"
+ },
+ "/it-company-riyadh/": {
+  "hash": "f6de0e4551ea8836",
+  "date": "2026-11-02"
+ },
+ "/it-company-jeddah/": {
+  "hash": "c7b0e34d7c25c7f4",
+  "date": "2026-11-02"
+ },
+ "/services/it-support-amc/healthcare/": {
+  "hash": "dbbffce9cb492c91",
+  "date": "2026-11-02"
+ },
+ "/services/it-support-amc/education/": {
+  "hash": "e0df3b0b4664dda1",
+  "date": "2026-11-02"
+ },
+ "/services/it-support-amc/hospitality/": {
+  "hash": "d14ceb3d5150ff1a",
+  "date": "2026-11-02"
+ },
+ "/services/it-support-amc/logistics-industrial/": {
+  "hash": "53e7311e31ad81ff",
+  "date": "2026-11-02"
+ },
+ "/brands/dell/": {
+  "hash": "98e0d99eaf1a296b",
+  "date": "2026-10-06"
+ },
+ "/brands/hp/": {
+  "hash": "085d1a39a2860997",
+  "date": "2026-10-06"
+ },
+ "/brands/lenovo/": {
+  "hash": "c98c391bdeb87191",
+  "date": "2026-10-06"
+ },
+ "/brands/cisco/": {
+  "hash": "f88ef75e2f2a56ec",
+  "date": "2026-10-06"
+ },
+ "/brands/sophos/": {
+  "hash": "3e8ed8c2573291e5",
+  "date": "2026-10-06"
+ },
+ "/brands/microsoft/": {
+  "hash": "be05ed329534e939",
+  "date": "2026-11-02"
+ },
+ "/brands/palo-alto-networks/": {
+  "hash": "2ef36141ab433729",
+  "date": "2026-10-06"
+ },
+ "/brands/veeam/": {
+  "hash": "c5c92723f8fd5cf0",
+  "date": "2026-10-06"
+ },
+ "/brands/dynamics-365/": {
+  "hash": "017a36d7501cab9b",
+  "date": "2026-11-02"
+ },
+ "/brands/qnap/": {
+  "hash": "2ff989cbcb10b461",
+  "date": "2026-11-02"
+ },
+ "/brands/veritas/": {
+  "hash": "8463bb716a7ea0d5",
+  "date": "2026-11-02"
+ },
+ "/insights/": {
+  "hash": "a69351b47d586c88",
+  "date": "2026-11-02"
+ },
+ "/insights/how-to-choose-it-company-dammam/": {
+  "hash": "f29b379573348925",
+  "date": "2026-11-02"
+ },
+ "/insights/what-is-it-amc-saudi-arabia/": {
+  "hash": "70ecb4745df8e0f4",
+  "date": "2026-11-02"
+ },
+ "/insights/microsoft-365-e3-vs-e5-vs-e7/": {
+  "hash": "47d8cc2599a930ed",
+  "date": "2026-11-02"
+ },
+ "/insights/microsoft-365-business-plans-saudi-arabia/": {
+  "hash": "b14eebbf1f851413",
+  "date": "2026-11-01"
+ },
+ "/insights/cat6-vs-cat6a/": {
+  "hash": "888160de2f6812c7",
+  "date": "2026-10-06"
+ },
+ "/insights/immutable-backup/": {
+  "hash": "e80ebf398d83bd8f",
+  "date": "2026-10-06"
+ },
+ "/insights/microsoft-licensing-oem-vs-volume/": {
+  "hash": "9f4adc09541311a2",
+  "date": "2026-11-02"
+ },
+ "/insights/how-to-choose-a-server-small-business/": {
+  "hash": "8deb5c4e890310c5",
+  "date": "2026-10-06"
+ },
+ "/insights/sme-cybersecurity-checklist-saudi-arabia/": {
+  "hash": "a5657c9dcd7a4956",
+  "date": "2026-10-06"
+ },
+ "/insights/pdpl-gap-assessment/": {
+  "hash": "0ce52456ba3ba760",
+  "date": "2026-10-06"
+ },
+ "/insights/nca-ecc-compliance-checklist/": {
+  "hash": "36ce4b2f0b7d78a9",
+  "date": "2026-10-06"
+ },
+ "/insights/edr-vs-xdr-vs-mdr/": {
+  "hash": "019dedb66506fe8a",
+  "date": "2026-10-06"
+ },
+ "/insights/cloud-disaster-recovery-saudi-arabia/": {
+  "hash": "c134ca68f24269ca",
+  "date": "2026-10-06"
+ },
+ "/insights/how-to-choose-it-system-integrator/": {
+  "hash": "fa7ea052630aae7f",
+  "date": "2026-09-30"
+ },
+ "/insights/nca-essential-cybersecurity-controls/": {
+  "hash": "31e93382b1ef31a5",
+  "date": "2026-09-27"
+ },
+ "/insights/pdpl-technical-requirements/": {
+  "hash": "d62e9c70e4126c36",
+  "date": "2026-09-27"
+ },
+ "/insights/how-to-choose-a-firewall/": {
+  "hash": "bacbcae3fe19dd3b",
+  "date": "2026-09-27"
+ },
+ "/insights/3-2-1-backup-ransomware/": {
+  "hash": "c7a4391693f20e49",
+  "date": "2026-09-27"
+ },
+ "/insights/office-wifi-planning/": {
+  "hash": "d6e40a0f735a9e2b",
+  "date": "2026-09-27"
+ },
+ "/ar/": {
+  "hash": "711d2a12defa5be7",
+  "date": "2026-11-02"
+ },
+ "/ar/services/cybersecurity/": {
+  "hash": "44f3b4b99c786512",
+  "date": "2026-11-02"
+ },
+ "/ar/services/network-infrastructure/": {
+  "hash": "1eb2fbf85673a47c",
+  "date": "2026-11-02"
+ },
+ "/ar/services/cloud-backup/": {
+  "hash": "fd1faa9735c999ab",
+  "date": "2026-11-02"
+ },
+ "/ar/services/it-supply/": {
+  "hash": "a3bad976a38a51af",
+  "date": "2026-11-02"
+ },
+ "/ar/services/it-support-amc/": {
+  "hash": "4a7bf4f9b1884619",
+  "date": "2026-11-02"
+ },
+ "/ar/services/firewall-installation/": {
+  "hash": "635378f4e6f9effc",
+  "date": "2026-11-02"
+ },
+ "/ar/services/wifi-installation/": {
+  "hash": "41eaea55bbc2630e",
+  "date": "2026-11-02"
+ },
+ "/ar/services/structured-cabling/": {
+  "hash": "2691d66cf5809abc",
+  "date": "2026-11-02"
+ },
+ "/ar/services/cctv-installation/": {
+  "hash": "cab694433e92d521",
+  "date": "2026-11-02"
+ },
+ "/ar/about/": {
+  "hash": "04374fad728627cf",
+  "date": "2026-11-02"
+ },
+ "/ar/saudi-arabia/": {
+  "hash": "cbc03f13dad99dc7",
+  "date": "2026-11-02"
+ },
+ "/ar/brands/": {
+  "hash": "8b489fd93645fcc1",
+  "date": "2026-11-02"
+ },
+ "/ar/projects/": {
+  "hash": "a557319e20a61a35",
+  "date": "2026-11-02"
+ },
+ "/ar/privacy/": {
+  "hash": "0d0d28efa52bc319",
+  "date": "2026-11-02"
+ },
+ "/ar/it-company-dammam/": {
+  "hash": "22eb0e8b17b2198a",
+  "date": "2026-11-02"
+ },
+ "/ar/it-support-dammam/": {
+  "hash": "6d10a1d8aae1c2a5",
+  "date": "2026-11-02"
+ },
+ "/ar/cybersecurity-dammam/": {
+  "hash": "37f5d6d26070d9d9",
+  "date": "2026-11-02"
+ },
+ "/ar/network-solutions-dammam/": {
+  "hash": "e784a3b69938fcff",
+  "date": "2026-11-02"
+ },
+ "/ar/it-hardware-supplier-dammam/": {
+  "hash": "d1257a7437589dd9",
+  "date": "2026-11-02"
+ },
+ "/ar/it-company-khobar/": {
+  "hash": "0275b0bc0b612229",
+  "date": "2026-11-02"
+ },
+ "/ar/it-company-dhahran/": {
+  "hash": "e7860a3c92e9b4aa",
+  "date": "2026-11-02"
+ },
+ "/ar/it-company-jubail/": {
+  "hash": "5601a5ff9494523b",
+  "date": "2026-11-02"
+ },
+ "/ar/it-company-al-ahsa/": {
+  "hash": "b81a53df499ffe72",
+  "date": "2026-11-02"
+ },
+ "/ar/it-company-riyadh/": {
+  "hash": "025c2b1efe38b116",
+  "date": "2026-11-02"
+ },
+ "/ar/it-company-jeddah/": {
+  "hash": "e3feefd384c354d8",
+  "date": "2026-11-02"
+ },
+ "/ar/services/it-support-amc/healthcare/": {
+  "hash": "d800f918f54ab9bd",
+  "date": "2026-10-06"
+ },
+ "/ar/services/it-support-amc/education/": {
+  "hash": "70d351f493795692",
+  "date": "2026-10-06"
+ },
+ "/ar/services/it-support-amc/hospitality/": {
+  "hash": "06df46cbd7d8a1a2",
+  "date": "2026-10-06"
+ },
+ "/ar/services/it-support-amc/logistics-industrial/": {
+  "hash": "3c7c23893ae4f012",
+  "date": "2026-10-06"
+ },
+ "/ar/brands/dell/": {
+  "hash": "45bdb562b77028a8",
+  "date": "2026-10-06"
+ },
+ "/ar/brands/hp/": {
+  "hash": "1e60137199185bb3",
+  "date": "2026-10-06"
+ },
+ "/ar/brands/lenovo/": {
+  "hash": "cb7728d1d080af34",
+  "date": "2026-10-06"
+ },
+ "/ar/brands/cisco/": {
+  "hash": "9a87ab2ff15fd238",
+  "date": "2026-10-06"
+ },
+ "/ar/brands/sophos/": {
+  "hash": "4c6aeeda56557912",
+  "date": "2026-10-06"
+ },
+ "/ar/brands/microsoft/": {
+  "hash": "3421a5cb75707bf4",
+  "date": "2026-11-02"
+ },
+ "/ar/brands/palo-alto-networks/": {
+  "hash": "4d5d5b5c7f1ab761",
+  "date": "2026-10-06"
+ },
+ "/ar/brands/veeam/": {
+  "hash": "51ea6ea59fc2f452",
+  "date": "2026-10-06"
+ },
+ "/ar/brands/dynamics-365/": {
+  "hash": "fed3142a2f2ed827",
+  "date": "2026-11-02"
+ },
+ "/ar/brands/qnap/": {
+  "hash": "d0e9b0dc07f35960",
+  "date": "2026-11-02"
+ },
+ "/ar/brands/veritas/": {
+  "hash": "a5dff7d1e32c873d",
+  "date": "2026-11-02"
+ },
+ "/ar/insights/": {
+  "hash": "f9d692ad10f5cdb5",
+  "date": "2026-11-02"
+ },
+ "/ar/insights/how-to-choose-it-company-dammam/": {
+  "hash": "7169d9d12924b84a",
+  "date": "2026-11-02"
+ },
+ "/ar/insights/what-is-it-amc-saudi-arabia/": {
+  "hash": "cf5b9029ce275efa",
+  "date": "2026-11-02"
+ },
+ "/ar/insights/microsoft-365-e3-vs-e5-vs-e7/": {
+  "hash": "0a9ed80d6a65c6f3",
+  "date": "2026-11-02"
+ },
+ "/ar/insights/microsoft-365-business-plans-saudi-arabia/": {
+  "hash": "bc334e433bf4a27e",
+  "date": "2026-11-01"
+ },
+ "/ar/insights/cat6-vs-cat6a/": {
+  "hash": "06a0d78e0cb38726",
+  "date": "2026-10-06"
+ },
+ "/ar/insights/immutable-backup/": {
+  "hash": "ab2f664f65d37ab7",
+  "date": "2026-10-06"
+ },
+ "/ar/insights/microsoft-licensing-oem-vs-volume/": {
+  "hash": "4f02f7abed4f9bf3",
+  "date": "2026-10-06"
+ },
+ "/ar/insights/how-to-choose-a-server-small-business/": {
+  "hash": "79fddd5489015e07",
+  "date": "2026-10-06"
+ },
+ "/ar/insights/sme-cybersecurity-checklist-saudi-arabia/": {
+  "hash": "62ad89126b5964f2",
+  "date": "2026-10-06"
+ },
+ "/ar/insights/pdpl-gap-assessment/": {
+  "hash": "7093ef9bf8c5703e",
+  "date": "2026-10-06"
+ },
+ "/ar/insights/nca-ecc-compliance-checklist/": {
+  "hash": "9e7bc7abf3b18b7b",
+  "date": "2026-10-06"
+ },
+ "/ar/insights/edr-vs-xdr-vs-mdr/": {
+  "hash": "a13d9f2c21b4fe64",
+  "date": "2026-10-06"
+ },
+ "/ar/insights/cloud-disaster-recovery-saudi-arabia/": {
+  "hash": "20d717c87d4b4ea6",
+  "date": "2026-10-06"
+ },
+ "/ar/insights/how-to-choose-it-system-integrator/": {
+  "hash": "59708c1f0753e4ea",
+  "date": "2026-09-30"
+ },
+ "/ar/insights/nca-essential-cybersecurity-controls/": {
+  "hash": "51bd363a4571711c",
+  "date": "2026-09-27"
+ },
+ "/ar/insights/pdpl-technical-requirements/": {
+  "hash": "3becc5f5e5010294",
+  "date": "2026-09-27"
+ },
+ "/ar/insights/how-to-choose-a-firewall/": {
+  "hash": "f5caa3de18034b5e",
+  "date": "2026-09-27"
+ },
+ "/ar/insights/3-2-1-backup-ransomware/": {
+  "hash": "7c07488cbc55f61e",
+  "date": "2026-09-27"
+ },
+ "/ar/insights/office-wifi-planning/": {
+  "hash": "f9a5aa169a0f88bf",
+  "date": "2026-09-27"
+ }
+}
