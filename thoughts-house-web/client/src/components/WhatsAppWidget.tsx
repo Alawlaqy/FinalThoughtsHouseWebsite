@@ -4,9 +4,8 @@
  */
 import { useState, useEffect } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { whatsappUrl } from "@/lib/leads";
 import { X } from "lucide-react";
-
-const WHATSAPP_NUMBER = "966541022995";
 
 export default function WhatsAppWidget() {
   const { lang } = useLanguage();
@@ -24,8 +23,6 @@ export default function WhatsAppWidget() {
       return () => clearTimeout(tooltipTimer);
     }
   }, [visible]);
-
-  const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}`;
 
   if (!visible) return null;
 
@@ -53,7 +50,7 @@ export default function WhatsAppWidget() {
 
       {/* WhatsApp Button */}
       <a
-        href={whatsappUrl}
+        href={whatsappUrl(lang)}
         target="_blank"
         rel="noopener noreferrer"
         className="pop-in relative w-14 h-14 bg-[#25D366] rounded-full flex items-center justify-center shadow-lg shadow-[#25D366]/30 hover:shadow-xl hover:shadow-[#25D366]/40 hover:scale-110 transition-all duration-300 group"

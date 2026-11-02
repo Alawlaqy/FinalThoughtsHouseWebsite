@@ -161,6 +161,26 @@ const translations: Record<string, Record<Language, string>> = {
     en: "4028 Al Malek Khaled, As Suq Dist., Dammam 32242-8181, Saudi Arabia",
     ar: "\u20664028\u2069 الملك خالد، حي السوق، الدمام \u206632242-8181\u2069، المملكة العربية السعودية",
   },
+  "contact.source": {
+    en: "How did you find us? (optional)",
+    ar: "كيف عرفتنا؟ (اختياري)",
+  },
+  "contact.sourcePlaceholder": { en: "Choose one", ar: "اختر إجابة" },
+  "contact.source.google": { en: "Google search", ar: "بحث Google" },
+  "contact.source.maps": { en: "Google Maps", ar: "خرائط Google" },
+  "contact.source.ai": {
+    en: "ChatGPT or another AI assistant",
+    ar: "ChatGPT أو مساعد ذكاء اصطناعي آخر",
+  },
+  "contact.source.referral": {
+    en: "Someone recommended you",
+    ar: "توصية من شخص",
+  },
+  "contact.source.social": {
+    en: "LinkedIn or social media",
+    ar: "LinkedIn أو وسائل التواصل",
+  },
+  "contact.source.other": { en: "Other", ar: "مصدر آخر" },
   "contact.phone": { en: "+966 54 102 2995", ar: "⁦+966 54 102 2995⁩" },
   "contact.emailAddress": {
     en: "sales@thoughtshouse.com",

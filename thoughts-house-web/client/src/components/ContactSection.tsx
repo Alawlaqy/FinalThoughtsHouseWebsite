@@ -8,12 +8,20 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { COMPANY } from "@/content/about";
 import { privacyPath } from "@/seo";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
+import { trackLead, whatsappUrl } from "@/lib/leads";
 import { Mail, Phone, MapPin, Send, CheckCircle, Loader2 } from "lucide-react";
 
 const CONTACT_ENDPOINT = "https://formsubmit.co/ajax/sales@thoughtshouse.com";
-const WHATSAPP_URL = "https://wa.me/966541022995";
 // FormSubmit can take 30+ seconds to answer; after this long, offer WhatsApp instead.
 const SLOW_NOTICE_MS = 8000;
+const FIND_US_OPTIONS = [
+  "google",
+  "maps",
+  "ai",
+  "referral",
+  "social",
+  "other",
+] as const;
 
 export default function ContactSection() {
   const { t, lang } = useLanguage();
@@ -22,6 +30,7 @@ export default function ContactSection() {
     name: "",
     company: "",
     email: "",
+    source: "",
     message: "",
   });
   const [submitted, setSubmitted] = useState(false);
@@ -50,6 +59,7 @@ export default function ContactSection() {
           name: formData.name,
           company: formData.company,
           email: formData.email,
+          source: formData.source || "Not answered",
           message: formData.message,
           _replyto: formData.email,
           _subject: `New website inquiry from ${formData.name}${formData.company ? ` (${formData.company})` : ""}`,
@@ -61,8 +71,15 @@ export default function ContactSection() {
       if (!res.ok || data.success === false || data.success === "false") {
         throw new Error(data.message || `HTTP ${res.status}`);
       }
+      trackLead("form", formData.source);
       setSubmitted(true);
-      setFormData({ name: "", company: "", email: "", message: "" });
+      setFormData({
+        name: "",
+        company: "",
+        email: "",
+        source: "",
+        message: "",
+      });
       setTimeout(() => setSubmitted(false), 6000);
     } catch (err) {
       console.error("Contact form failed", err);
@@ -197,6 +214,30 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <label
+                    htmlFor="contact-source"
+                    className="block text-sm font-semibold text-[#1E293B] mb-2"
+                  >
+                    {t("contact.source")}
+                  </label>
+                  <select
+                    id="contact-source"
+                    name="source"
+                    value={formData.source}
+                    onChange={e =>
+                      setFormData({ ...formData, source: e.target.value })
+                    }
+                    className="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl text-[#1E293B] focus:outline-none focus:border-[#2563EB] focus:ring-2 focus:ring-[#2563EB]/20 transition-all"
+                  >
+                    <option value="">{t("contact.sourcePlaceholder")}</option>
+                    {FIND_US_OPTIONS.map(o => (
+                      <option key={o} value={o}>
+                        {t(`contact.source.${o}`)}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+                <div>
+                  <label
                     htmlFor="contact-message"
                     className="block text-sm font-semibold text-[#1E293B] mb-2"
                   >
@@ -252,7 +293,7 @@ export default function ContactSection() {
                     <span className="text-[#334155] font-medium">
                       {t("contact.slow")}{" "}
                       <a
-                        href={WHATSAPP_URL}
+                        href={whatsappUrl(lang)}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="underline text-[#2563EB]"

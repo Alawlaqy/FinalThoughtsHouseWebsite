@@ -4,6 +4,7 @@
  */
 import Navbar from "@/components/Navbar";
 import ContactSection from "@/components/ContactSection";
+import ProjectsHighlight from "@/components/ProjectsHighlight";
 import Footer from "@/components/Footer";
 import WhatsAppWidget from "@/components/WhatsAppWidget";
 import Chatbot from "@/components/Chatbot";
@@ -164,6 +165,8 @@ export default function CoveragePage() {
             </div>
           </div>
         </section>
+
+        <ProjectsHighlight />
 
         <ContactSection />
       </main>

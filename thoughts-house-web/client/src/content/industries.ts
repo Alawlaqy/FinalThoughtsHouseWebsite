@@ -36,7 +36,7 @@ export const INDUSTRIES: Industry[] = [
     image: "/images/cybersecurity-1280.webp",
     content: {
       en: {
-        metaTitle: "IT AMC for Hospitals & Clinics in Saudi Arabia",
+        metaTitle: "IT Support for Hospitals & Clinics | Thoughts House",
         metaDescription:
           "IT maintenance contracts for hospitals, clinics and labs in Saudi Arabia: uptime for clinical systems, network security, backups and patient data protection.",
         name: "Healthcare",
@@ -144,7 +144,7 @@ export const INDUSTRIES: Industry[] = [
     image: "/images/wifi-installation-1280.webp",
     content: {
       en: {
-        metaTitle: "IT AMC for Schools & Universities in Saudi Arabia",
+        metaTitle: "IT Support for Schools & Universities | Thoughts House",
         metaDescription:
           "IT maintenance contracts for schools and universities in Saudi Arabia: classroom technology, Wi-Fi, computer labs, content filtering and backups.",
         name: "Education",
@@ -252,7 +252,7 @@ export const INDUSTRIES: Industry[] = [
     image: "/images/it-supply-1280.webp",
     content: {
       en: {
-        metaTitle: "IT AMC for Hotels & Hospitality in Saudi Arabia",
+        metaTitle: "IT Support for Hotels & Restaurants | Thoughts House",
         metaDescription:
           "IT maintenance contracts for hotels and restaurants in Saudi Arabia: guest Wi-Fi, front-desk and POS systems, CCTV, network security and support.",
         name: "Hospitality",
@@ -360,8 +360,7 @@ export const INDUSTRIES: Industry[] = [
     image: "/images/network-infrastructure-1280.webp",
     content: {
       en: {
-        metaTitle:
-          "IT AMC for Warehouses, Logistics & Factories in Saudi Arabia",
+        metaTitle: "IT Support for Warehouses & Factories | Thoughts House",
         metaDescription:
           "IT maintenance contracts for warehouses and factories in Saudi Arabia: warehouse Wi-Fi, scanners, servers, network security and multi-site support.",
         name: "Logistics & Industrial",

@@ -116,9 +116,9 @@ export const ARTICLES: Article[] = [
     content: {
       en: {
         title: "Microsoft Licensing Explained: OEM vs Retail vs Volume and CSP",
-        metaTitle: "Microsoft OEM vs Retail (FPP) vs Volume License",
+        metaTitle: "Microsoft OEM vs Retail vs Volume Licensing Explained",
         description:
-          "OEM vs retail (FPP) vs volume vs CSP: can you transfer an OEM license, how Windows Server core licensing works, and which Microsoft license your business needs.",
+          "Is a Microsoft OEM license transferable? Compare OEM, retail (FPP), volume and CSP licensing, see the Windows Server core rules, and choose the right option.",
       },
       ar: {
         title:
