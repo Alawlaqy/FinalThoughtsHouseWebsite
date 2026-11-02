@@ -22,14 +22,14 @@ export const PRIVACY: Record<Language, PrivacyCopy> = {
     metaDescription:
       "How Thoughts House collects, uses and protects personal data sent through thoughtshouse.com, in line with Saudi Arabia's PDPL.",
     h1: "Privacy Policy",
-    updated: "Last updated: 6 October 2026",
+    updated: "Last updated: 2 November 2026",
     intro:
       "This policy explains what personal data Thoughts House collects through this website, why we collect it, and the rights you have under Saudi Arabia's Personal Data Protection Law (PDPL).",
     sections: [
       {
         h2: "Who we are",
         body: [
-          "Thoughts House (بيت الأفكار) is the controller responsible for the personal data described in this policy. Location: Dammam, Saudi Arabia. Email: sales@thoughtshouse.com. Phone: +966 54 102 2995.",
+          "Thoughts House (بيت الأفكار) is the controller responsible for the personal data described in this policy. Address: 4028 Al Malek Khaled, As Suq Dist., Dammam 32242-8181, Saudi Arabia. Email: sales@thoughtshouse.com. Phone: +966 54 102 2995.",
         ],
       },
       {
@@ -105,14 +105,14 @@ export const PRIVACY: Record<Language, PrivacyCopy> = {
     metaDescription:
       "كيف يجمع بيت الأفكار البيانات الشخصية المرسلة عبر موقع thoughtshouse.com ويستخدمها ويحميها، وفقاً لنظام حماية البيانات الشخصية في المملكة.",
     h1: "سياسة الخصوصية",
-    updated: "آخر تحديث: 6 أكتوبر 2026",
+    updated: "آخر تحديث: 2 نوفمبر 2026",
     intro:
       "توضح هذه السياسة البيانات الشخصية التي يجمعها بيت الأفكار عبر هذا الموقع، وسبب جمعها، وحقوقك وفقاً لنظام حماية البيانات الشخصية في المملكة العربية السعودية.",
     sections: [
       {
         h2: "من نحن",
         body: [
-          "بيت الأفكار (Thoughts House) هو جهة التحكم المسؤولة عن البيانات الشخصية الموضحة في هذه السياسة. الموقع: الدمام، المملكة العربية السعودية. البريد: sales@thoughtshouse.com. الهاتف: \u2066+966 54 102 2995\u2069.",
+          "بيت الأفكار (Thoughts House) هو جهة التحكم المسؤولة عن البيانات الشخصية الموضحة في هذه السياسة. العنوان: \u20664028\u2069 الملك خالد، حي السوق، الدمام \u206632242-8181\u2069، المملكة العربية السعودية. البريد: sales@thoughtshouse.com. الهاتف: \u2066+966 54 102 2995\u2069.",
         ],
       },
       {

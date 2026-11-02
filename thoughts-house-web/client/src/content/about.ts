@@ -13,8 +13,6 @@ export const COMPANY = {
   locality: "Dammam",
   region: "Eastern Province",
   country: "SA",
-  // Structured data only, never shown on a page (no walk-in visits): keeps the site
-  // consistent with the Google Maps listing for local search.
   streetAddress: "4028 Al Malek Khaled, As Suq Dist.",
   postalCode: "32242-8181",
   mapUrl: "https://maps.app.goo.gl/SECK4KzVH42TiTxD6",
@@ -57,7 +55,8 @@ export const ABOUT: Record<Language, AboutCopy> = {
       },
       {
         label: "Address",
-        value: "Dammam, Eastern Province, Saudi Arabia (service by appointment, on-site and remote)",
+        value:
+          "4028 Al Malek Khaled, As Suq Dist., Dammam 32242-8181, Saudi Arabia (service by appointment, on-site and remote)",
       },
       { label: "Service area", value: "All regions of Saudi Arabia" },
       { label: "Clients", value: "500+ organizations served" },
@@ -104,7 +103,11 @@ export const ABOUT: Record<Language, AboutCopy> = {
         label: "المقر",
         value: "الدمام، المنطقة الشرقية، المملكة العربية السعودية",
       },
-      { label: "العنوان", value: "الدمام، المنطقة الشرقية (الخدمة بموعد مسبق، ميدانياً أو عن بُعد)" },
+      {
+        label: "العنوان",
+        value:
+          "\u20664028\u2069 الملك خالد، حي السوق، الدمام \u206632242-8181\u2069 (الخدمة بموعد مسبق، ميدانياً أو عن بُعد)",
+      },
       { label: "نطاق الخدمة", value: "جميع مناطق المملكة" },
       { label: "العملاء", value: "أكثر من 500 منشأة" },
       {

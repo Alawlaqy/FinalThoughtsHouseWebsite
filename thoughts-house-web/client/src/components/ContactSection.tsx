@@ -5,6 +5,7 @@
  */
 import { useState } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { COMPANY } from "@/content/about";
 import { privacyPath } from "@/seo";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { Mail, Phone, MapPin, Send, CheckCircle, Loader2 } from "lucide-react";
@@ -80,7 +81,7 @@ export default function ContactSection() {
     {
       icon: MapPin,
       label: t("contact.address"),
-      href: "",
+      href: COMPANY.mapUrl,
     },
   ];
 

@@ -6,6 +6,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { Mail, Phone, MapPin } from "lucide-react";
 import { SERVICES, SERVICE_SLUGS } from "@/content/services";
 import { LOCAL_PAGES } from "@/content/local";
+import { COMPANY } from "@/content/about";
 import {
   aboutPath,
   brandsPath,
@@ -190,10 +191,15 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <span className="flex items-center gap-3 text-sm text-white/60">
+                <a
+                  href={COMPANY.mapUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 text-sm text-white/60 hover:text-[#60A5FA] transition-colors"
+                >
                   <MapPin className="w-4 h-4 flex-shrink-0" />
                   {t("contact.address")}
-                </span>
+                </a>
               </li>
             </ul>
           </div>
