@@ -14,6 +14,7 @@ import {
   insightsPath,
   localPath,
   privacyPath,
+  projectsPath,
   servicePath,
 } from "@/seo";
 
@@ -88,6 +89,14 @@ export default function Footer() {
                   className="text-sm text-white/60 hover:text-[#60A5FA] transition-colors duration-200"
                 >
                   {t("nav.about")}
+                </a>
+              </li>
+              <li>
+                <a
+                  href={projectsPath(lang)}
+                  className="text-sm text-white/60 hover:text-[#60A5FA] transition-colors duration-200"
+                >
+                  {t("nav.projects")}
                 </a>
               </li>
               <li>

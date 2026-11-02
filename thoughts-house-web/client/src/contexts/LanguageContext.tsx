@@ -22,6 +22,7 @@ const translations: Record<string, Record<Language, string>> = {
   "nav.home": { en: "Home", ar: "الرئيسية" },
   "nav.services": { en: "Services", ar: "الخدمات" },
   "nav.partners": { en: "Partners", ar: "الشركاء" },
+  "nav.projects": { en: "Our Work", ar: "أعمالنا" },
   "nav.insights": { en: "Insights", ar: "مقالات" },
   "nav.about": { en: "About Us", ar: "من نحن" },
   "nav.privacy": { en: "Privacy Policy", ar: "سياسة الخصوصية" },

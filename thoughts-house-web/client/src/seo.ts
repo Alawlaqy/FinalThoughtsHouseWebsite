@@ -10,6 +10,7 @@ import { ABOUT, COMPANY } from "./content/about";
 import { COVERAGE, SERVED_PLACES } from "./content/coverage";
 import { BRAND_GROUPS, BRANDS_COPY } from "./content/brands";
 import { PRIVACY } from "./content/privacy";
+import { PROJECTS, PROJECTS_COPY } from "./content/projects";
 import {
   INDUSTRIES,
   getIndustry,
@@ -50,6 +51,7 @@ export type Route =
   | { page: "about"; lang: Language; path: string }
   | { page: "coverage"; lang: Language; path: string }
   | { page: "brands"; lang: Language; path: string }
+  | { page: "projects"; lang: Language; path: string }
   | { page: "privacy"; lang: Language; path: string }
   | { page: "industry"; lang: Language; path: string; slug: IndustrySlug }
   | { page: "brand"; lang: Language; path: string; slug: BrandSlug }
@@ -69,6 +71,10 @@ export function coveragePath(lang: Language) {
 
 export function brandsPath(lang: Language) {
   return `${lang === "ar" ? "/ar" : ""}/brands/`;
+}
+
+export function projectsPath(lang: Language) {
+  return `${lang === "ar" ? "/ar" : ""}/projects/`;
 }
 
 export function industryPath(slug: IndustrySlug, lang: Language) {
@@ -111,6 +117,7 @@ export const ROUTES: Route[] = (["en", "ar"] as Language[]).flatMap(lang => [
   { page: "about" as const, lang, path: aboutPath(lang) },
   { page: "coverage" as const, lang, path: coveragePath(lang) },
   { page: "brands" as const, lang, path: brandsPath(lang) },
+  { page: "projects" as const, lang, path: projectsPath(lang) },
   { page: "privacy" as const, lang, path: privacyPath(lang) },
   ...LOCAL_PAGES.map(p => ({
     page: "local" as const,
@@ -163,6 +170,8 @@ export function alternatePath(route: Route): string {
       return coveragePath(other);
     case "brands":
       return brandsPath(other);
+    case "projects":
+      return projectsPath(other);
     case "privacy":
       return privacyPath(other);
     case "industry":
@@ -237,6 +246,11 @@ export function getMeta(route: Route) {
       return {
         title: BRANDS_COPY[route.lang].metaTitle,
         description: BRANDS_COPY[route.lang].metaDescription,
+      };
+    case "projects":
+      return {
+        title: PROJECTS_COPY[route.lang].metaTitle,
+        description: PROJECTS_COPY[route.lang].metaDescription,
       };
     case "privacy":
       return {
@@ -419,6 +433,33 @@ function structuredData(route: Route) {
           name: f.q,
           acceptedAnswer: { "@type": "Answer", text: f.a },
         })),
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          homeCrumb,
+          { "@type": "ListItem", position: 2, name: c.h1, item: url },
+        ],
+      }
+    );
+  } else if (route.page === "projects") {
+    const c = PROJECTS_COPY[route.lang];
+    graph.push(
+      {
+        "@type": "CollectionPage",
+        name: c.h1,
+        description: c.summary,
+        url,
+        inLanguage: route.lang,
+        about: { "@id": ORG_ID },
+        mainEntity: {
+          "@type": "ItemList",
+          itemListElement: PROJECTS.map((p, i) => ({
+            "@type": "ListItem",
+            position: i + 1,
+            name: p.content[route.lang].title,
+          })),
+        },
       },
       {
         "@type": "BreadcrumbList",
@@ -856,6 +897,10 @@ export function renderLlmsTxt(): string {
     "## Coverage",
     `- [${COVERAGE.en.h1}](${SITE_URL}${coveragePath("en")}): ${COVERAGE.en.summary}`,
     "",
+    "## Our work",
+    `- [${PROJECTS_COPY.en.h1}](${SITE_URL}${projectsPath("en")}): ${PROJECTS_COPY.en.summary} ${PROJECTS_COPY.en.privacyNote}`,
+    ...PROJECTS.map(p => `- ${p.content.en.title}: ${p.content.en.text}`),
+    "",
     "## Dammam and other cities",
     ...LOCAL_PAGES.map(
       p =>
@@ -897,6 +942,7 @@ export function renderLlmsTxt(): string {
     ...LOCAL_PAGES.map(
       p => `- [${p.content.ar.h1}](${SITE_URL}${localPath(p.slug, "ar")})`
     ),
+    `- [${PROJECTS_COPY.ar.h1}](${SITE_URL}${projectsPath("ar")})`,
     `- [${BRANDS_COPY.ar.h1}](${SITE_URL}${brandsPath("ar")})`,
     `- [${INSIGHTS_META.ar.h1}](${SITE_URL}${insightsPath("ar")})`,
     "",

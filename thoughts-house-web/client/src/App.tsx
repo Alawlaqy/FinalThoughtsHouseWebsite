@@ -8,6 +8,7 @@ import InsightsPage from "./pages/InsightsPage";
 import AboutPage from "./pages/AboutPage";
 import CoveragePage from "./pages/CoveragePage";
 import BrandsPage from "./pages/BrandsPage";
+import ProjectsPage from "./pages/ProjectsPage";
 import PrivacyPage from "./pages/PrivacyPage";
 import IndustryPage from "./pages/IndustryPage";
 import BrandPage from "./pages/BrandPage";
@@ -45,6 +46,8 @@ function App({ path }: { path: string }) {
             <CoveragePage />
           ) : route.page === "brands" ? (
             <BrandsPage />
+          ) : route.page === "projects" ? (
+            <ProjectsPage />
           ) : route.page === "privacy" ? (
             <PrivacyPage />
           ) : route.page === "industry" ? (

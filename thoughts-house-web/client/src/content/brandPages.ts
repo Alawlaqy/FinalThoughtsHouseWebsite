@@ -526,6 +526,10 @@ export const BRAND_PAGES: BrandPage[] = [
             text: "Business and enterprise plans for email, Teams, OneDrive and Office apps.",
           },
           {
+            title: "Dynamics 365 and Copilot",
+            text: "Dynamics 365 business applications, Microsoft 365 Copilot, Power BI, Project and Visio licenses.",
+          },
+          {
             title: "Windows and Windows Server",
             text: "Desktop and server operating system licensing, including client access licenses.",
           },
@@ -567,6 +571,10 @@ export const BRAND_PAGES: BrandPage[] = [
           {
             title: "Microsoft 365",
             text: "خطط الأعمال والمؤسسات للبريد وTeams وOneDrive وتطبيقات Office.",
+          },
+          {
+            title: "Dynamics 365 وCopilot",
+            text: "تراخيص تطبيقات الأعمال Dynamics 365 وMicrosoft 365 Copilot وPower BI وProject وVisio.",
           },
           {
             title: "Windows وWindows Server",
