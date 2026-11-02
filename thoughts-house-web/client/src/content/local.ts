@@ -26,6 +26,8 @@ interface LocalCopy {
   offers: { title: string; text: string; service: ServiceSlug }[];
   whyTitle: string;
   why: string[];
+  /** Longer sections shown after the reasons to choose us */
+  guide?: { title: string; text: string; points?: string[] }[];
   faq: { q: string; a: string }[];
 }
 
@@ -119,6 +121,36 @@ const DAMMAM_PAGES: LocalPage[] = [
           "Supply and support for 25+ technology brands, including Cisco, Sophos, Palo Alto Networks, Dell, HP, Lenovo, Microsoft and Veeam.",
           "500+ organizations served, with 24/7 support coverage.",
         ],
+        guide: [
+          {
+            title: "How a project works with us",
+            text: "Every project follows the same steps, whether it is a single server or several sites. Supply-only orders skip the steps you do not need.",
+            points: [
+              "Assessment: we review your current systems, sites and requirements.",
+              "Design and quotation: we propose the solution, the equipment and the scope in writing.",
+              "Supply: we source the hardware and licenses and deliver them to your sites.",
+              "Installation: our engineers install, configure and test the system on site or remotely.",
+              "Handover: you receive the documentation and asset details.",
+              "Support: we stay available through warranty, renewals and maintenance contracts.",
+            ],
+          },
+          {
+            title: "Sectors we have delivered for",
+            text: "Our work includes training institutes, cement and manufacturing, financial institutions, holding groups, contracting companies and technology companies. We do not name our clients, but you can read examples on our Our Work page.",
+          },
+          {
+            title: "How to choose an IT company in Dammam",
+            text: "A few questions will separate a reliable IT partner from a box seller:",
+            points: [
+              "Who is responsible when something fails: one company, or several suppliers?",
+              "Will they survey your site before quoting, or quote from a list?",
+              "Can they show examples of similar projects, even without client names?",
+              "Is the support scope written down, including what is covered on site?",
+              "Do you receive documentation and passwords at handover?",
+              "Can they support equipment they did not supply?",
+            ],
+          },
+        ],
         faq: [
           {
             q: "Is Thoughts House an IT company in Dammam?",
@@ -135,6 +167,14 @@ const DAMMAM_PAGES: LocalPage[] = [
           {
             q: "What size of company do you work with?",
             a: "We work with small and mid-sized businesses as well as larger organizations with several sites.",
+          },
+          {
+            q: "Can you supply equipment without installing it?",
+            a: "Yes. Many of our projects are supply only, such as storage systems, network devices and software licenses. We can also install and configure what we supply if you need it.",
+          },
+          {
+            q: "Do you serve Khobar and Dhahran from Dammam?",
+            a: "Yes. We serve Khobar, Dhahran, Qatif, Jubail, Ras Tanura and Al-Ahsa from our Dammam office, with site visits scheduled in advance.",
           },
         ],
       },
@@ -188,6 +228,36 @@ const DAMMAM_PAGES: LocalPage[] = [
           "توريد ودعم لأكثر من 25 علامة تقنية، منها Cisco وSophos وPalo Alto Networks وDell وHP وLenovo وMicrosoft وVeeam.",
           "أكثر من 500 منشأة خدمناها، مع تغطية دعم على مدار الساعة.",
         ],
+        guide: [
+          {
+            title: "كيف ننفذ المشروع معك",
+            text: "نتبع الخطوات نفسها في كل مشروع، سواء كان سيرفراً واحداً أو عدة مواقع. وفي طلبات التوريد فقط نتجاوز الخطوات التي لا تحتاجها.",
+            points: [
+              "التقييم: نراجع أنظمتك الحالية ومواقعك ومتطلباتك.",
+              "التصميم وعرض السعر: نقترح الحل والأجهزة والنطاق كتابياً.",
+              "التوريد: نؤمّن الأجهزة والتراخيص ونسلّمها إلى مواقعك.",
+              "التركيب: يركّب مهندسونا النظام ويُعدّونه ويختبرونه في الموقع أو عن بُعد.",
+              "التسليم: تستلم الوثائق وبيانات الأصول.",
+              "الدعم: نبقى معك خلال الضمان والتجديدات وعقود الصيانة.",
+            ],
+          },
+          {
+            title: "قطاعات عملنا معها",
+            text: "تشمل أعمالنا معاهد التدريب، وشركات الإسمنت والتصنيع، والمؤسسات المالية، والمجموعات القابضة، وشركات المقاولات، والشركات التقنية. لا نذكر أسماء عملائنا، ويمكنك الاطلاع على نماذج في صفحة أعمالنا.",
+          },
+          {
+            title: "كيف تختار شركة تقنية معلومات في الدمام",
+            text: "تساعدك هذه الأسئلة على تمييز الشريك الموثوق من مجرد بائع أجهزة:",
+            points: [
+              "من المسؤول عند حدوث عطل: جهة واحدة أم عدة موردين؟",
+              "هل تعاين الشركة موقعك قبل عرض السعر؟",
+              "هل تعرض أمثلة لمشاريع مشابهة، ولو دون أسماء العملاء؟",
+              "هل نطاق الدعم مكتوب، بما في ذلك الزيارات الميدانية؟",
+              "هل تستلم الوثائق وكلمات المرور عند التسليم؟",
+              "هل تدعم الشركة أجهزة لم تورّدها؟",
+            ],
+          },
+        ],
         faq: [
           {
             q: "هل بيت الأفكار شركة تقنية معلومات في الدمام؟",
@@ -204,6 +274,14 @@ const DAMMAM_PAGES: LocalPage[] = [
           {
             q: "ما حجم الشركات التي تعملون معها؟",
             a: "نعمل مع الشركات الصغيرة والمتوسطة ومع المنشآت الأكبر متعددة الفروع.",
+          },
+          {
+            q: "هل يمكنكم توريد الأجهزة دون تركيبها؟",
+            a: "نعم. كثير من مشاريعنا توريد فقط، مثل أنظمة التخزين وأجهزة الشبكات وتراخيص البرمجيات. ويمكننا أيضاً تركيب ما نورّده وإعداده عند الحاجة.",
+          },
+          {
+            q: "هل تخدمون الخبر والظهران من الدمام؟",
+            a: "نعم. نخدم الخبر والظهران والقطيف والجبيل ورأس تنورة والأحساء من مكتبنا في الدمام، بزيارات ميدانية مجدولة مسبقاً.",
           },
         ],
       },

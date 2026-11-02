@@ -2570,4 +2570,360 @@ export const ARTICLE_BODIES: Record<
       ],
     },
   },
+  "how-to-choose-it-company-dammam": {
+    en: {
+      summary: [
+        "Choose an IT company that takes responsibility for the whole result, not only for selling equipment.",
+        "Ask for a site survey, a written scope, examples of similar work and clear support terms before you sign.",
+        "A company based in Dammam makes on-site work in the Eastern Province easier to schedule, but location alone is not enough.",
+      ],
+      faq: [
+        {
+          q: "What should I ask an IT company in Dammam before signing?",
+          a: "Ask who is responsible for the full project, whether they will survey your site, what the support scope includes, what you receive at handover and whether they can show examples of similar work.",
+        },
+        {
+          q: "Does an IT company need to be based in Dammam?",
+          a: "Not always, but a local team makes site surveys, installation and on-site support easier to schedule, especially for businesses in Dammam, Khobar and Dhahran.",
+        },
+      ],
+      blocks: [
+        {
+          p: "Most businesses in Dammam need the same things from an IT company: equipment that fits, systems that work together, and someone who answers when something fails. Price matters, but the cheapest quotation can cost more if nobody owns the problem later. These eight questions help you compare companies on what matters.",
+        },
+        { h2: "1. Who is responsible for the whole result?" },
+        {
+          p: "If your laptops, network, firewall and support come from different suppliers, each one can blame the others. Ask whether one company will take responsibility for design, supply, installation and support.",
+        },
+        { h2: "2. Will they survey your site first?" },
+        {
+          p: "Network, Wi-Fi, cabling and CCTV quotations depend on the building. A company that quotes without seeing the site, or without asking for detailed information, is guessing.",
+        },
+        { h2: "3. Can they show similar work?" },
+        {
+          p: "Many clients do not allow their names to be published, so do not expect a logo wall. Ask for examples of the project type, size and sector instead.",
+        },
+        { h2: "4. Is the scope written down?" },
+        {
+          p: "A good quotation lists the equipment, the work, what is excluded and who provides what. Vague wording causes most disputes later.",
+        },
+        { h2: "5. What happens after installation?" },
+        {
+          p: "Ask about warranty handling, support hours, on-site visits and how issues are reported. If you need ongoing cover, ask for an annual maintenance contract with a defined scope.",
+        },
+        { h2: "6. Can they support what you already own?" },
+        {
+          p: "You may not want to replace everything. Check whether the company will assess and support equipment it did not supply.",
+        },
+        { h2: "7. What do you receive at handover?" },
+        {
+          p: "You should receive documentation, asset details, license records and admin credentials. Your systems should not depend on one supplier's memory.",
+        },
+        { h2: "8. Do they recommend what you need?" },
+        {
+          p: "A reseller tied to one brand will recommend that brand. Ask why a product was chosen, and whether a simpler option would do the job.",
+        },
+        { h2: "How Thoughts House works in Dammam" },
+        {
+          p: "Thoughts House is an IT company and system integrator with an office in Dammam. We design, supply, install and support IT for businesses across the Eastern Province and Saudi Arabia, and our Our Work page shows examples of our projects without naming clients.",
+        },
+      ],
+    },
+    ar: {
+      summary: [
+        "اختر شركة تقنية معلومات تتحمل مسؤولية النتيجة كاملة، وليس بيع الأجهزة فقط.",
+        "اطلب معاينة الموقع ونطاقاً مكتوباً وأمثلة لأعمال مشابهة وشروط دعم واضحة قبل التوقيع.",
+        "وجود الشركة في الدمام يسهّل جدولة العمل الميداني في المنطقة الشرقية، لكن الموقع وحده لا يكفي.",
+      ],
+      faq: [
+        {
+          q: "ماذا أسأل شركة تقنية المعلومات في الدمام قبل التعاقد؟",
+          a: "اسأل من المسؤول عن المشروع كاملاً، وهل ستعاين الموقع، وما نطاق الدعم، وماذا تستلم عند التسليم، وهل يمكنها عرض أمثلة لأعمال مشابهة.",
+        },
+        {
+          q: "هل يجب أن تكون شركة تقنية المعلومات في الدمام؟",
+          a: "ليس دائماً، لكن الفريق المحلي يسهّل جدولة المعاينة والتركيب والدعم الميداني، خصوصاً للشركات في الدمام والخبر والظهران.",
+        },
+      ],
+      blocks: [
+        {
+          p: "تحتاج معظم الشركات في الدمام إلى الأمور نفسها من شركة تقنية المعلومات: أجهزة مناسبة، وأنظمة تعمل معاً، وجهة تستجيب عند حدوث عطل. السعر مهم، لكن أرخص عرض قد يكلفك أكثر إذا لم يتحمل أحد المسؤولية لاحقاً. تساعدك هذه الأسئلة الثمانية على المقارنة بين الشركات فيما يهم فعلاً.",
+        },
+        { h2: "1. من المسؤول عن النتيجة كاملة؟" },
+        {
+          p: "إذا جاءت الأجهزة والشبكة وجدار الحماية والدعم من موردين مختلفين، فقد يلقي كل منهم المسؤولية على الآخر. اسأل هل ستتحمل شركة واحدة التصميم والتوريد والتركيب والدعم.",
+        },
+        { h2: "2. هل ستعاين موقعك أولاً؟" },
+        {
+          p: "تعتمد عروض الشبكات وWi-Fi والتمديدات والكاميرات على المبنى. والشركة التي تقدم عرضها دون معاينة أو معلومات مفصلة تعتمد على التخمين.",
+        },
+        { h2: "3. هل يمكنها عرض أعمال مشابهة؟" },
+        {
+          p: "لا يسمح كثير من العملاء بنشر أسمائهم، فلا تتوقع قائمة شعارات. اطلب بدلاً من ذلك أمثلة على نوع المشروع وحجمه وقطاعه.",
+        },
+        { h2: "4. هل النطاق مكتوب؟" },
+        {
+          p: "يوضح العرض الجيد الأجهزة والأعمال والاستثناءات ومسؤولية كل طرف. فالصياغة الغامضة هي سبب معظم الخلافات لاحقاً.",
+        },
+        { h2: "5. ماذا يحدث بعد التركيب؟" },
+        {
+          p: "اسأل عن التعامل مع الضمان وساعات الدعم والزيارات الميدانية وطريقة الإبلاغ عن الأعطال. وإذا احتجت إلى تغطية مستمرة، فاطلب عقد صيانة سنوياً بنطاق محدد.",
+        },
+        { h2: "6. هل تدعم ما تملكه حالياً؟" },
+        {
+          p: "قد لا ترغب في استبدال كل شيء. تأكد أن الشركة ستقيّم الأجهزة التي لم تورّدها وتدعمها.",
+        },
+        { h2: "7. ماذا تستلم عند التسليم؟" },
+        {
+          p: "يجب أن تستلم الوثائق وبيانات الأصول وسجلات التراخيص وبيانات دخول المسؤول، حتى لا تعتمد أنظمتك على ذاكرة مورد واحد.",
+        },
+        { h2: "8. هل ترشح ما تحتاجه فعلاً؟" },
+        {
+          p: "الموزع المرتبط بعلامة واحدة سيرشحها غالباً. اسأل لماذا اختير المنتج، وهل يكفي خيار أبسط.",
+        },
+        { h2: "كيف يعمل بيت الأفكار في الدمام" },
+        {
+          p: "بيت الأفكار شركة تقنية معلومات وتكامل أنظمة، مكتبها في الدمام. نصمم ونورّد ونركّب وندعم أنظمة تقنية المعلومات للشركات في المنطقة الشرقية وجميع مناطق المملكة، وتعرض صفحة أعمالنا نماذج من مشاريعنا دون ذكر أسماء العملاء.",
+        },
+      ],
+    },
+  },
+  "what-is-it-amc-saudi-arabia": {
+    en: {
+      summary: [
+        "An IT AMC is a yearly contract in which a provider maintains and supports your systems for an agreed scope and fee.",
+        "It usually covers preventive maintenance, updates, backup checks, technical support and asset tracking.",
+        "The price depends on users, devices, sites, support hours and whether parts are included.",
+      ],
+      faq: [
+        {
+          q: "What does IT AMC stand for?",
+          a: "AMC stands for annual maintenance contract. An IT AMC covers the maintenance and support of IT systems for a year.",
+        },
+        {
+          q: "How much does an IT AMC cost in Saudi Arabia?",
+          a: "There is no fixed price, because the cost depends on the number of users, devices and sites, the support hours and what is included. Share your asset list to get a quotation you can compare.",
+        },
+      ],
+      blocks: [
+        {
+          p: "An IT annual maintenance contract (AMC) is an agreement in which an IT provider looks after your systems for a year. You agree the scope and the fee in advance, so maintenance happens on a schedule, and you are not looking for a technician when something fails.",
+        },
+        { h2: "What an IT AMC usually covers" },
+        {
+          ul: [
+            "Preventive maintenance of servers, storage, network and security equipment.",
+            "Operating system, firmware and security updates in planned windows.",
+            "Backup checks and periodic test restores.",
+            "Technical support by phone, remote session or site visit.",
+            "An asset register with warranty and license dates.",
+          ],
+        },
+        { h2: "What it often excludes" },
+        {
+          p: "Check these items, because they are a common source of disputes: spare parts, new projects, data recovery, work on systems added after signing, and support outside agreed hours. Exclusions are normal, as long as they are written down.",
+        },
+        { h2: "What affects the price" },
+        {
+          ul: [
+            "The number of users, servers and network devices.",
+            "The number of sites and the distance between them.",
+            "The number of preventive visits each year.",
+            "Support hours, and whether critical systems need out-of-hours cover.",
+            "Whether parts and vendor support are included.",
+          ],
+        },
+        { h2: "How to compare AMC quotations" },
+        {
+          p: "Compare the scope first and the price second. Check which devices are listed, how many visits are included, how issues are reported and what happens to equipment that fails. Two quotations with the same price can cover very different work.",
+        },
+        { h2: "How Thoughts House provides IT AMC" },
+        {
+          p: "Thoughts House provides IT maintenance contracts across Saudi Arabia from our Dammam office, combining remote support with scheduled site visits. We start with an assessment of your systems, including equipment we did not supply.",
+        },
+      ],
+    },
+    ar: {
+      summary: [
+        "عقد صيانة تقنية المعلومات اتفاق سنوي يتولى فيه المزوّد صيانة أنظمتك ودعمها بنطاق وتكلفة محددين.",
+        "يشمل عادةً الصيانة الوقائية والتحديثات وفحص النسخ الاحتياطي والدعم الفني وتتبع الأصول.",
+        "يعتمد السعر على عدد المستخدمين والأجهزة والمواقع وساعات الدعم وهل تشمل التكلفة قطع الغيار.",
+      ],
+      faq: [
+        {
+          q: "ما معنى AMC في تقنية المعلومات؟",
+          a: "AMC اختصار لعقد الصيانة السنوي (Annual Maintenance Contract)، وهو يغطي صيانة أنظمة تقنية المعلومات ودعمها لمدة عام.",
+        },
+        {
+          q: "كم تكلفة عقد صيانة تقنية المعلومات في السعودية؟",
+          a: "لا يوجد سعر ثابت، لأن التكلفة تعتمد على عدد المستخدمين والأجهزة والمواقع وساعات الدعم وما يشمله العقد. أرسل قائمة أصولك لتحصل على عرض يمكن مقارنته.",
+        },
+      ],
+      blocks: [
+        {
+          p: "عقد الصيانة السنوي لتقنية المعلومات (AMC) اتفاق يتولى فيه مزوّد تقنية المعلومات رعاية أنظمتك لمدة عام. تتفقان مسبقاً على النطاق والتكلفة، فتتم الصيانة بجدول محدد، ولا تبحث عن فني عند حدوث العطل.",
+        },
+        { h2: "ماذا يشمل عقد الصيانة عادةً" },
+        {
+          ul: [
+            "الصيانة الوقائية للسيرفرات والتخزين وأجهزة الشبكات والحماية.",
+            "تحديثات أنظمة التشغيل والبرامج الثابتة والتحديثات الأمنية في نوافذ مخططة.",
+            "فحص النسخ الاحتياطي واختبار الاستعادة دورياً.",
+            "الدعم الفني بالهاتف أو عن بُعد أو بزيارة ميدانية.",
+            "سجل أصول يتضمن مواعيد الضمان والتراخيص.",
+          ],
+        },
+        { h2: "ما الذي يستثنيه غالباً" },
+        {
+          p: "راجع هذه البنود، فهي مصدر شائع للخلاف: قطع الغيار، والمشاريع الجديدة، واستعادة البيانات المفقودة، والأنظمة المضافة بعد التوقيع، والدعم خارج الساعات المتفق عليها. الاستثناءات طبيعية ما دامت مكتوبة.",
+        },
+        { h2: "ما الذي يحدد السعر" },
+        {
+          ul: [
+            "عدد المستخدمين والسيرفرات وأجهزة الشبكة.",
+            "عدد المواقع والمسافة بينها.",
+            "عدد الزيارات الوقائية في السنة.",
+            "ساعات الدعم، وهل تحتاج الأنظمة الحرجة إلى تغطية خارج الدوام.",
+            "هل تشمل التكلفة قطع الغيار ودعم الشركات المصنّعة.",
+          ],
+        },
+        { h2: "كيف تقارن عروض الصيانة" },
+        {
+          p: "قارن النطاق أولاً ثم السعر. تحقق من الأجهزة المذكورة، وعدد الزيارات، وطريقة الإبلاغ عن الأعطال، وما يحدث للجهاز المعطل. فقد يتساوى عرضان في السعر ويختلفان كثيراً في العمل الذي يغطيانه.",
+        },
+        { h2: "كيف يقدم بيت الأفكار عقود الصيانة" },
+        {
+          p: "يقدم بيت الأفكار عقود صيانة تقنية المعلومات في جميع مناطق المملكة من مكتبنا في الدمام، بدعم عن بُعد وزيارات ميدانية مجدولة. ونبدأ بتقييم أنظمتك، بما فيها الأجهزة التي لم نورّدها.",
+        },
+      ],
+    },
+  },
+  "microsoft-365-e3-vs-e5-vs-e7": {
+    en: {
+      summary: [
+        "E3 is the standard enterprise plan, E5 adds advanced security, compliance and analytics, and E7 adds AI and agent governance on top of E5.",
+        "Microsoft describes E7 as E5 plus Microsoft 365 Copilot, Microsoft Entra Suite and Agent 365.",
+        "Most organizations should mix plans by user role, instead of giving everyone the highest plan.",
+      ],
+      faq: [
+        {
+          q: "What is the difference between Microsoft 365 E3 and E5?",
+          a: "E5 includes everything in E3 and adds stronger security, compliance and analytics, including Microsoft Entra ID P2, the wider Defender suite and advanced Purview capabilities.",
+        },
+        {
+          q: "Does Microsoft 365 E7 include Copilot?",
+          a: "Yes. Microsoft 365 E7 includes Microsoft 365 Copilot, along with Microsoft Entra Suite and Agent 365. With E3 and E5, Copilot is licensed as an add-on.",
+        },
+        {
+          q: "Can we mix E3 and E5 licenses?",
+          a: "Yes. Many organizations assign E5 to users with higher risk or compliance needs and E3 to others. Check the licensing terms for any features that require all users to be licensed.",
+        },
+      ],
+      blocks: [
+        {
+          p: "Microsoft 365 E3, E5 and E7 are the main enterprise plans. They differ in security, compliance and AI, and the right choice depends on the risk and the work of each group of users. Microsoft 365 E7 became generally available on 1 May 2026.",
+        },
+        { h2: "Microsoft 365 E3" },
+        {
+          p: "E3 covers the core needs of most office users: Microsoft 365 apps, email, file storage, device management and baseline security and compliance. It suits organizations with standard security needs, or those that add security from other vendors.",
+        },
+        { h2: "Microsoft 365 E5" },
+        {
+          p: "E5 includes everything in E3 and adds Microsoft Entra ID P2, the wider Microsoft Defender suite, advanced Purview compliance features and Power BI Pro. It suits regulated organizations and users who handle sensitive data.",
+        },
+        { h2: "Microsoft 365 E7" },
+        {
+          p: "E7 is the top tier. It contains everything in E5, plus Microsoft 365 Copilot, Microsoft Entra Suite and Agent 365, which is used to govern and secure AI agents. It suits organizations that have decided to roll out Copilot and agents widely.",
+        },
+        { h2: "How to choose" },
+        {
+          ul: [
+            "List your user groups: office staff, finance, management, IT and frontline workers.",
+            "Match each group to its security and compliance needs.",
+            "Check which security tools you already pay for, to avoid paying twice.",
+            "Pilot Copilot with a small group before buying it for everyone.",
+            "Use F plans for frontline staff, and E1 where desktop apps are not needed.",
+          ],
+        },
+        { h2: "Mixing plans is normal" },
+        {
+          p: "Few organizations need one plan for everyone. A common approach is E3 for most staff, E5 for sensitive roles, and Copilot only where it pays for itself. Microsoft changes plans and prices over time, so confirm the current details before you order.",
+        },
+        { h2: "How Thoughts House can help" },
+        {
+          p: "We supply Microsoft 365 and Dynamics 365 licenses in Saudi Arabia, including a mixed enterprise license project of more than 300 Microsoft 365 licenses for a technology company. Tell us your user groups and we will propose the right mix.",
+        },
+      ],
+      sources: [
+        {
+          label:
+            "Microsoft Learn — Microsoft 365 Copilot license feature overview",
+          url: "https://learn.microsoft.com/en-us/copilot/microsoft-365/microsoft-365-copilot-license-feature-overview",
+        },
+      ],
+    },
+    ar: {
+      summary: [
+        "E3 هي الباقة المؤسسية الأساسية، وتضيف E5 حماية وامتثالاً وتحليلات متقدمة، وتضيف E7 الذكاء الاصطناعي وحوكمة الوكلاء فوق E5.",
+        "تصف Microsoft باقة E7 بأنها E5 مضافاً إليها Microsoft 365 Copilot وMicrosoft Entra Suite وAgent 365.",
+        "الأفضل لمعظم المنشآت الجمع بين الباقات حسب دور المستخدم، بدل منح الجميع أعلى باقة.",
+      ],
+      faq: [
+        {
+          q: "ما الفرق بين Microsoft 365 E3 وE5؟",
+          a: "تشمل E5 كل ما في E3، وتضيف حماية وامتثالاً وتحليلات أقوى، ومنها Microsoft Entra ID P2 ومجموعة Defender الأوسع وإمكانات Purview المتقدمة.",
+        },
+        {
+          q: "هل تشمل Microsoft 365 E7 خدمة Copilot؟",
+          a: "نعم. تشمل Microsoft 365 E7 خدمة Microsoft 365 Copilot، إضافة إلى Microsoft Entra Suite وAgent 365. أما مع E3 وE5 فيُرخَّص Copilot كإضافة.",
+        },
+        {
+          q: "هل يمكن الجمع بين تراخيص E3 وE5؟",
+          a: "نعم. تمنح منشآت كثيرة E5 للمستخدمين الأعلى خطورة أو احتياجاً للامتثال، وE3 لغيرهم. راجع شروط الترخيص للميزات التي تتطلب ترخيص جميع المستخدمين.",
+        },
+      ],
+      blocks: [
+        {
+          p: "باقات Microsoft 365 E3 وE5 وE7 هي الباقات المؤسسية الرئيسية. وتختلف في الحماية والامتثال والذكاء الاصطناعي، ويعتمد الاختيار على مخاطر كل فئة من المستخدمين وطبيعة عملها. وقد أصبحت Microsoft 365 E7 متاحة في 1 مايو 2026.",
+        },
+        { h2: "Microsoft 365 E3" },
+        {
+          p: "تغطي E3 الاحتياجات الأساسية لمعظم الموظفين: تطبيقات Microsoft 365 والبريد وتخزين الملفات وإدارة الأجهزة والحماية والامتثال الأساسيين. وتناسب المنشآت ذات الاحتياجات الأمنية المعتادة، أو التي تضيف الحماية من شركات أخرى.",
+        },
+        { h2: "Microsoft 365 E5" },
+        {
+          p: "تشمل E5 كل ما في E3، وتضيف Microsoft Entra ID P2 ومجموعة Microsoft Defender الأوسع وميزات Purview المتقدمة للامتثال وPower BI Pro. وتناسب المنشآت الخاضعة لتنظيمات صارمة والمستخدمين الذين يتعاملون مع بيانات حساسة.",
+        },
+        { h2: "Microsoft 365 E7" },
+        {
+          p: "E7 هي الفئة الأعلى، وتشمل كل ما في E5 مع Microsoft 365 Copilot وMicrosoft Entra Suite وAgent 365 المستخدم في حوكمة وكلاء الذكاء الاصطناعي وحمايتهم. وتناسب المنشآت التي قررت نشر Copilot والوكلاء على نطاق واسع.",
+        },
+        { h2: "كيف تختار" },
+        {
+          ul: [
+            "حدد فئات المستخدمين: الموظفون، والمالية، والإدارة، وتقنية المعلومات، والعاملون الميدانيون.",
+            "طابق كل فئة مع احتياجاتها من الحماية والامتثال.",
+            "راجع أدوات الحماية التي تدفع مقابلها حالياً، حتى لا تدفع مرتين.",
+            "جرّب Copilot مع مجموعة صغيرة قبل شرائه للجميع.",
+            "استخدم باقات F للعاملين الميدانيين، وE1 عندما لا تحتاج إلى تطبيقات سطح المكتب.",
+          ],
+        },
+        { h2: "الجمع بين الباقات أمر طبيعي" },
+        {
+          p: "قليل من المنشآت تحتاج إلى باقة واحدة للجميع. والنهج الشائع هو E3 لمعظم الموظفين، وE5 للأدوار الحساسة، وCopilot حيث يحقق عائداً واضحاً. وتغيّر Microsoft الباقات والأسعار من وقت لآخر، فتأكد من التفاصيل الحالية قبل الطلب.",
+        },
+        { h2: "كيف يساعدك بيت الأفكار" },
+        {
+          p: "نورّد تراخيص Microsoft 365 وDynamics 365 في المملكة، ومن ذلك مشروع تراخيص مؤسسية متنوعة تجاوز 300 ترخيص Microsoft 365 لشركة تقنية. أخبرنا بفئات مستخدميك وسنقترح المزيج المناسب.",
+        },
+      ],
+      sources: [
+        {
+          label:
+            "Microsoft Learn — نظرة عامة على ميزات تراخيص Microsoft 365 Copilot",
+          url: "https://learn.microsoft.com/en-us/copilot/microsoft-365/microsoft-365-copilot-license-feature-overview",
+        },
+      ],
+    },
+  },
 };

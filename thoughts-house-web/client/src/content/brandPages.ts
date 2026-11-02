@@ -14,7 +14,10 @@ export type BrandSlug =
   | "sophos"
   | "microsoft"
   | "palo-alto-networks"
-  | "veeam";
+  | "veeam"
+  | "dynamics-365"
+  | "qnap"
+  | "veritas";
 
 interface BrandPageCopy {
   metaTitle: string;
@@ -527,7 +530,7 @@ export const BRAND_PAGES: BrandPage[] = [
           },
           {
             title: "Dynamics 365 and Copilot",
-            text: "Dynamics 365 business applications, Microsoft 365 Copilot, Power BI, Project and Visio licenses.",
+            text: "Dynamics 365 business applications, Microsoft 365 Copilot, Power BI, Project and Visio licenses. See our Dynamics 365 page below.",
           },
           {
             title: "Windows and Windows Server",
@@ -787,6 +790,301 @@ export const BRAND_PAGES: BrandPage[] = [
           {
             q: "هل يمكنكم حماية النسخ الاحتياطية من برامج الفدية؟",
             a: "نعم. نُعدّ نسخاً غير قابلة للتعديل أو منفصلة، وبيانات دخول منفصلة ومراقبة، ونختبر الاستعادة دورياً.",
+          },
+        ],
+      },
+    },
+  },
+  {
+    slug: "dynamics-365",
+    name: "Microsoft Dynamics 365",
+    services: ["it-supply"],
+    content: {
+      en: {
+        metaTitle: "Microsoft Dynamics 365 Licensing in Saudi Arabia",
+        metaDescription:
+          "Dynamics 365 Finance, Supply Chain, Customer Service and Human Resources licenses in Saudi Arabia, with Copilot, Power BI and Microsoft technical support.",
+        h1: "Microsoft Dynamics 365 and Copilot Licensing in Saudi Arabia",
+        summary:
+          "Thoughts House supplies Microsoft Dynamics 365, Microsoft 365 Copilot, Copilot Studio and Power BI licenses to organizations in Saudi Arabia, alongside Microsoft 365 plans and technical support for Azure and on-premises Microsoft products.",
+        intro:
+          "Dynamics 365 is licensed by application and by user, and attach licenses can lower the cost when a user already holds a qualifying license. We review who needs which application, so you do not buy more than you use.",
+        linesTitle: "Licenses we supply",
+        lines: [
+          {
+            title: "Dynamics 365 Finance",
+            text: "Financial management licenses for finance teams.",
+          },
+          {
+            title: "Dynamics 365 Supply Chain Management",
+            text: "Supply chain licenses, including attach licenses for qualifying users.",
+          },
+          {
+            title: "Dynamics 365 Customer Service",
+            text: "Customer service licenses for support teams.",
+          },
+          {
+            title: "Dynamics 365 Human Resources",
+            text: "Licenses for HR teams and related applications.",
+          },
+          {
+            title: "Microsoft 365 Copilot and Copilot Studio",
+            text: "Copilot for Microsoft 365 users, and Copilot Studio for building agents.",
+          },
+          {
+            title: "Power BI, Project and Visio",
+            text: "Reporting, project management and diagramming licenses.",
+          },
+        ],
+        faq: [
+          {
+            q: "Can you supply Dynamics 365 licenses in Saudi Arabia?",
+            a: "Yes. We supply Dynamics 365 licenses together with Microsoft 365, Copilot and Power BI, and we have delivered this kind of mixed Microsoft licensing for a technology company.",
+          },
+          {
+            q: "What is a Dynamics 365 attach license?",
+            a: "An attach license is a lower-cost license for a user who already holds a qualifying Dynamics 365 base license. Microsoft sets the rules for each application, so check eligibility before ordering.",
+          },
+          {
+            q: "Do you provide support with Microsoft licenses?",
+            a: "Yes. We can provide technical support for Azure and on-premises Microsoft products, including troubleshooting, configuration review and technical recommendations.",
+          },
+        ],
+      },
+      ar: {
+        metaTitle: "تراخيص Microsoft Dynamics 365 في السعودية | بيت الأفكار",
+        metaDescription:
+          "تراخيص Dynamics 365 للمالية وسلاسل الإمداد وخدمة العملاء والموارد البشرية في السعودية، مع Copilot وPower BI والدعم الفني لمنتجات Microsoft.",
+        h1: "تراخيص Microsoft Dynamics 365 وCopilot في السعودية",
+        summary:
+          "يورّد بيت الأفكار تراخيص Microsoft Dynamics 365 وMicrosoft 365 Copilot وCopilot Studio وPower BI للمنشآت في المملكة، إلى جانب باقات Microsoft 365 والدعم الفني لمنتجات Microsoft على Azure وفي البيئات المحلية.",
+        intro:
+          "تُرخَّص Dynamics 365 بحسب التطبيق والمستخدم، وقد تخفض تراخيص الإلحاق التكلفة عندما يملك المستخدم ترخيصاً مؤهلاً. نراجع من يحتاج إلى كل تطبيق، حتى لا تشتري أكثر مما تستخدم.",
+        linesTitle: "التراخيص التي نورّدها",
+        lines: [
+          {
+            title: "Dynamics 365 Finance",
+            text: "تراخيص الإدارة المالية للفرق المالية.",
+          },
+          {
+            title: "Dynamics 365 Supply Chain Management",
+            text: "تراخيص سلاسل الإمداد، بما فيها تراخيص الإلحاق للمستخدمين المؤهلين.",
+          },
+          {
+            title: "Dynamics 365 Customer Service",
+            text: "تراخيص خدمة العملاء لفرق الدعم.",
+          },
+          {
+            title: "Dynamics 365 Human Resources",
+            text: "تراخيص فرق الموارد البشرية والتطبيقات المرتبطة بها.",
+          },
+          {
+            title: "Microsoft 365 Copilot وCopilot Studio",
+            text: "Copilot لمستخدمي Microsoft 365، وCopilot Studio لبناء الوكلاء.",
+          },
+          {
+            title: "Power BI وProject وVisio",
+            text: "تراخيص التقارير وإدارة المشاريع والرسوم التخطيطية.",
+          },
+        ],
+        faq: [
+          {
+            q: "هل تورّدون تراخيص Dynamics 365 في السعودية؟",
+            a: "نعم. نورّد تراخيص Dynamics 365 مع Microsoft 365 وCopilot وPower BI، وقد نفذنا هذا النوع من التراخيص المتنوعة لشركة تقنية.",
+          },
+          {
+            q: "ما هو ترخيص الإلحاق في Dynamics 365؟",
+            a: "ترخيص الإلحاق (Attach) ترخيص أقل تكلفة لمستخدم يملك ترخيص Dynamics 365 أساسياً مؤهلاً. وتحدد Microsoft قواعد كل تطبيق، لذلك تحقق من الأهلية قبل الطلب.",
+          },
+          {
+            q: "هل تقدمون دعماً مع تراخيص Microsoft؟",
+            a: "نعم. يمكننا تقديم الدعم الفني لمنتجات Microsoft على Azure وفي البيئات المحلية، ويشمل معالجة الأعطال ومراجعة الإعدادات والتوصيات التقنية.",
+          },
+        ],
+      },
+    },
+  },
+  {
+    slug: "qnap",
+    name: "QNAP",
+    services: ["cloud-backup", "it-supply"],
+    content: {
+      en: {
+        metaTitle: "QNAP NAS Supplier in Saudi Arabia | Thoughts House",
+        metaDescription:
+          "QNAP NAS systems and SSD storage supplied across Saudi Arabia for backup, file sharing and large capacity projects, with supply-only or installation options.",
+        h1: "QNAP NAS Supply in Saudi Arabia",
+        summary:
+          "Thoughts House supplies QNAP network-attached storage (NAS) and SSD drives to organizations in Saudi Arabia, including a supply project equal to 600 TB of SSD storage for a Saudi cement company.",
+        intro:
+          "A NAS gives your team shared storage and a backup target without a full server. The right model depends on capacity, performance, the drives you choose and how you plan to protect the data.",
+        linesTitle: "QNAP solutions we supply",
+        lines: [
+          {
+            title: "Rack NAS systems",
+            text: "Rackmount NAS for server rooms and data centers.",
+          },
+          {
+            title: "Tower NAS systems",
+            text: "Compact NAS for offices and branches.",
+          },
+          {
+            title: "SSD and hard drives",
+            text: "Drives sized to your capacity and performance needs.",
+          },
+          {
+            title: "Backup targets",
+            text: "NAS as a destination for backup software, with snapshots where the model supports them.",
+          },
+        ],
+        faq: [
+          {
+            q: "Can you supply QNAP NAS in Saudi Arabia?",
+            a: "Yes. We supply QNAP NAS systems and drives across Saudi Arabia, as supply only or with installation and configuration.",
+          },
+          {
+            q: "Should we choose SSD or hard drives in a NAS?",
+            a: "SSDs are faster and suit active workloads. Hard drives cost less per terabyte and suit large archives and backups. Many organizations use a mix of both.",
+          },
+          {
+            q: "Is a NAS enough as a backup?",
+            a: "A NAS is a good backup target, but it should not hold your only copy. Keep another copy offsite or in the cloud, and protect it from ransomware.",
+          },
+        ],
+      },
+      ar: {
+        metaTitle: "مورد أجهزة QNAP NAS في السعودية | بيت الأفكار",
+        metaDescription:
+          "توريد أجهزة QNAP NAS وأقراص SSD في جميع مناطق المملكة للنسخ الاحتياطي ومشاركة الملفات والمشاريع كبيرة السعة، توريداً فقط أو مع التركيب.",
+        h1: "توريد أجهزة QNAP NAS في السعودية",
+        summary:
+          "يورّد بيت الأفكار أجهزة التخزين الشبكي QNAP NAS وأقراص SSD للمنشآت في المملكة، ومن ذلك مشروع توريد بسعة تعادل 600 تيرابايت من أقراص SSD لشركة إسمنت سعودية.",
+        intro:
+          "يوفر NAS لفريقك تخزيناً مشتركاً ووجهة للنسخ الاحتياطي دون سيرفر كامل. ويعتمد الطراز المناسب على السعة والأداء ونوع الأقراص وطريقة حماية البيانات.",
+        linesTitle: "حلول QNAP التي نورّدها",
+        lines: [
+          {
+            title: "أجهزة NAS للرف",
+            text: "أجهزة NAS لغرف السيرفرات ومراكز البيانات.",
+          },
+          {
+            title: "أجهزة NAS مكتبية",
+            text: "أجهزة NAS صغيرة للمكاتب والفروع.",
+          },
+          {
+            title: "أقراص SSD والأقراص الصلبة",
+            text: "أقراص بحسب السعة والأداء المطلوبين.",
+          },
+          {
+            title: "وجهات النسخ الاحتياطي",
+            text: "استخدام NAS وجهةً لبرامج النسخ الاحتياطي، مع اللقطات عندما يدعمها الطراز.",
+          },
+        ],
+        faq: [
+          {
+            q: "هل تورّدون أجهزة QNAP NAS في السعودية؟",
+            a: "نعم. نورّد أجهزة QNAP NAS والأقراص في جميع مناطق المملكة، توريداً فقط أو مع التركيب والإعداد.",
+          },
+          {
+            q: "هل نختار أقراص SSD أم أقراصاً صلبة في NAS؟",
+            a: "أقراص SSD أسرع وتناسب الأعمال النشطة، والأقراص الصلبة أقل تكلفة لكل تيرابايت وتناسب الأرشيف الكبير والنسخ الاحتياطي. وتجمع منشآت كثيرة بين النوعين.",
+          },
+          {
+            q: "هل يكفي NAS للنسخ الاحتياطي؟",
+            a: "NAS وجهة جيدة للنسخ الاحتياطي، لكن لا ينبغي أن يحمل نسختك الوحيدة. احتفظ بنسخة أخرى خارج الموقع أو في السحابة، واحمها من برامج الفدية.",
+          },
+        ],
+      },
+    },
+  },
+  {
+    slug: "veritas",
+    name: "Veritas",
+    services: ["cloud-backup"],
+    content: {
+      en: {
+        metaTitle: "Veritas License Renewal in Saudi Arabia | Thoughts House",
+        metaDescription:
+          "Veritas backup license supply and renewal in Saudi Arabia. Confirm your product, current owner and renewal path before your support contract expires.",
+        h1: "Veritas License Renewal in Saudi Arabia",
+        summary:
+          "Thoughts House supplies and renews Veritas licenses for organizations in Saudi Arabia, including a license renewal project for a contracting company.",
+        intro:
+          "Backup licenses are easy to forget until support expires. We help you confirm what you own, what you need to renew and when, so your backup environment stays supported.",
+        linesTitle: "Veritas services we provide",
+        lines: [
+          {
+            title: "License renewal",
+            text: "Renewal of existing licenses and support before they expire.",
+          },
+          {
+            title: "New licenses",
+            text: "Additional licenses sized to your data and workloads.",
+          },
+          {
+            title: "Renewal tracking",
+            text: "Records of your licenses and reminders before renewal dates.",
+          },
+          {
+            title: "Backup review",
+            text: "A check that backups complete and that data can be restored.",
+          },
+        ],
+        faq: [
+          {
+            q: "Can you renew Veritas licenses in Saudi Arabia?",
+            a: "Yes. Send us your current license or contract details and we will prepare a renewal quotation.",
+          },
+          {
+            q: "Who owns NetBackup and Backup Exec now?",
+            a: "Veritas sold its data protection business to Cohesity, which now owns NetBackup, while Backup Exec moved to Arctera. Check the current owner of your product before renewing, as the renewal path can differ.",
+          },
+          {
+            q: "What details do you need for a renewal quotation?",
+            a: "We need the product name, license type, quantity or capacity, and the current expiry date.",
+          },
+        ],
+      },
+      ar: {
+        metaTitle: "تجديد تراخيص Veritas في السعودية | بيت الأفكار",
+        metaDescription:
+          "توريد وتجديد تراخيص Veritas للنسخ الاحتياطي في السعودية. تأكد من منتجك والشركة المالكة له ومسار التجديد قبل انتهاء عقد الدعم.",
+        h1: "تجديد تراخيص Veritas في السعودية",
+        summary:
+          "يورّد بيت الأفكار تراخيص Veritas ويجددها للمنشآت في المملكة، ومن ذلك مشروع تجديد تراخيص لشركة مقاولات.",
+        intro:
+          "من السهل نسيان تراخيص النسخ الاحتياطي حتى ينتهي الدعم. نساعدك في تحديد ما تملكه وما يجب تجديده وموعده، حتى تبقى بيئة النسخ الاحتياطي مدعومة.",
+        linesTitle: "خدمات Veritas التي نقدمها",
+        lines: [
+          {
+            title: "تجديد التراخيص",
+            text: "تجديد التراخيص الحالية والدعم قبل انتهائها.",
+          },
+          {
+            title: "تراخيص جديدة",
+            text: "تراخيص إضافية بحسب حجم البيانات وأحمال العمل.",
+          },
+          {
+            title: "متابعة التجديد",
+            text: "سجل بالتراخيص وتنبيهات قبل مواعيد التجديد.",
+          },
+          {
+            title: "مراجعة النسخ الاحتياطي",
+            text: "التأكد من اكتمال النسخ وإمكانية استعادة البيانات.",
+          },
+        ],
+        faq: [
+          {
+            q: "هل تجددون تراخيص Veritas في السعودية؟",
+            a: "نعم. أرسل بيانات الترخيص أو العقد الحالي وسنجهز عرض سعر للتجديد.",
+          },
+          {
+            q: "من يملك NetBackup وBackup Exec الآن؟",
+            a: "باعت Veritas قطاع حماية البيانات إلى Cohesity التي أصبحت تملك NetBackup، بينما انتقل Backup Exec إلى Arctera. تأكد من الشركة المالكة لمنتجك قبل التجديد، فقد يختلف مسار التجديد.",
+          },
+          {
+            q: "ما البيانات المطلوبة لعرض سعر التجديد؟",
+            a: "نحتاج إلى اسم المنتج ونوع الترخيص والكمية أو السعة وتاريخ الانتهاء الحالي.",
           },
         ],
       },

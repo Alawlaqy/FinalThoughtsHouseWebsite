@@ -49,7 +49,7 @@ interface Localized {
   whyTitle: string;
   why: { title: string; text: string }[];
   /** Optional deeper sections (e.g. managed backup, DR, EDR/XDR/MDR) */
-  extra?: { title: string; text: string; points: string[] }[];
+  extra?: { title: string; text: string; points?: string[] }[];
   faqTitle: string;
   faq: { q: string; a: string }[];
   ctaTitle: string;
@@ -728,6 +728,33 @@ export const SERVICES: Record<ServiceSlug, Service> = {
             text: "An up-to-date inventory of your equipment and reminders before licenses, subscriptions and warranties expire.",
           },
         ],
+        extra: [
+          {
+            title: "How an IT AMC starts",
+            text: "We begin by documenting what you have, so the contract matches your real systems.",
+            points: [
+              "List your sites, servers, network devices, firewalls and users.",
+              "Agree what is covered, what is excluded and how issues are reported.",
+              "Set the schedule of preventive visits and remote checks.",
+              "Record warranties, licenses and renewal dates in one register.",
+            ],
+          },
+          {
+            title: "What affects the cost of an IT AMC",
+            text: "The price depends on the scope of the contract. These are the main factors:",
+            points: [
+              "Number of users, servers and network devices.",
+              "Number of sites and the distance between them.",
+              "How many preventive visits are included each year.",
+              "Support hours, and whether critical systems need out-of-hours cover.",
+              "Whether spare parts and vendor support are included.",
+            ],
+          },
+          {
+            title: "AMC or pay per incident?",
+            text: "Paying per incident can suit a small office with few systems. A contract usually makes more sense when downtime is expensive, because preventive work happens on a schedule and the provider already knows your systems when something fails.",
+          },
+        ],
         vendorsTitle: "Systems we maintain",
         vendorsText:
           "We support environments built on leading platforms, including equipment we did not originally supply, after an initial assessment.",
@@ -789,6 +816,33 @@ export const SERVICES: Record<ServiceSlug, Service> = {
             text: "سجل محدّث لأجهزتك وتنبيهات قبل انتهاء التراخيص والاشتراكات والضمانات.",
           },
         ],
+        extra: [
+          {
+            title: "كيف يبدأ عقد الصيانة",
+            text: "نبدأ بتوثيق ما لديك، حتى يطابق العقد أنظمتك الفعلية.",
+            points: [
+              "حصر المواقع والسيرفرات وأجهزة الشبكة وجدران الحماية والمستخدمين.",
+              "الاتفاق على ما يشمله العقد وما يستثنيه، وطريقة الإبلاغ عن الأعطال.",
+              "تحديد جدول الزيارات الوقائية والفحوصات عن بُعد.",
+              "تسجيل الضمانات والتراخيص ومواعيد التجديد في سجل واحد.",
+            ],
+          },
+          {
+            title: "ما الذي يحدد تكلفة عقد الصيانة",
+            text: "يعتمد السعر على نطاق العقد، وأهم العوامل:",
+            points: [
+              "عدد المستخدمين والسيرفرات وأجهزة الشبكة.",
+              "عدد المواقع والمسافة بينها.",
+              "عدد الزيارات الوقائية في السنة.",
+              "ساعات الدعم، وهل تحتاج الأنظمة الحرجة إلى تغطية خارج الدوام.",
+              "هل تشمل التكلفة قطع الغيار ودعم الشركات المصنّعة.",
+            ],
+          },
+          {
+            title: "عقد صيانة أم الدفع عند كل عطل؟",
+            text: "قد يناسب الدفع عند كل عطل مكتباً صغيراً بأنظمة قليلة. أما العقد فيكون غالباً الخيار الأفضل عندما يكون توقف العمل مكلفاً، لأن الصيانة الوقائية تتم بجدول محدد، ويعرف المزوّد أنظمتك مسبقاً عند حدوث العطل.",
+          },
+        ],
         vendorsTitle: "الأنظمة التي ندعمها",
         vendorsText:
           "ندعم البيئات المبنية على أبرز المنصات، بما فيها أجهزة لم نورّدها نحن، بعد تقييم مبدئي.",
@@ -799,6 +853,10 @@ export const SERVICES: Record<ServiceSlug, Service> = {
           {
             q: "ما هو عقد الصيانة السنوي لتقنية المعلومات؟",
             a: "عقد الصيانة السنوي (AMC) اتفاق لمدة عام يتولى فيه مزوّد تقنية المعلومات صيانة أنظمتك ودعمها، من الصيانة الوقائية والتحديثات إلى المراقبة والدعم الفني، بنطاق وتكلفة محددين بدلاً من الدفع عن كل عطل.",
+          },
+          {
+            q: "هل تقدمون عقود صيانة في الرياض وجدة؟",
+            a: "نعم. مكتبنا في الدمام، ونقدم عقود الصيانة في جميع مناطق المملكة، ومنها الرياض وجدة، بدعم ومراقبة عن بُعد وزيارات ميدانية مجدولة.",
           },
           {
             q: "هل تصونون أجهزة لم تورّدوها؟",

@@ -189,6 +189,36 @@ export default function LocalPage({ slug }: { slug: LocalSlug }) {
           </div>
         </section>
 
+        {c.guide && (
+          <section className="py-16 bg-white">
+            <div className="container max-w-3xl space-y-10">
+              {c.guide.map(g => (
+                <div key={g.title}>
+                  <h2 className="text-2xl font-extrabold text-[#1E293B] mb-3">
+                    {g.title}
+                  </h2>
+                  <p className="text-[#334155] leading-relaxed mb-3">
+                    {g.text}
+                  </p>
+                  {g.points && (
+                    <ul className="space-y-2">
+                      {g.points.map(point => (
+                        <li key={point} className="flex gap-3 text-[#334155]">
+                          <CheckCircle2
+                            className="w-5 h-5 text-[#2563EB] flex-shrink-0 mt-0.5"
+                            aria-hidden="true"
+                          />
+                          <span>{point}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
+
         <section className="py-16 bg-white">
           <div className="container max-w-3xl">
             <h2 className="text-2xl font-extrabold text-[#1E293B] mb-6 text-center">

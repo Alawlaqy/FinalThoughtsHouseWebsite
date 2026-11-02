@@ -332,6 +332,10 @@ const organization = {
     "Disaster Recovery",
     "Backup Solutions",
     "Data Center Solutions",
+    "Microsoft 365 Licensing",
+    "Microsoft Dynamics 365 Licensing",
+    "Network Attached Storage",
+    "IT Annual Maintenance Contracts",
   ],
   hasOfferCatalog: {
     "@type": "OfferCatalog",

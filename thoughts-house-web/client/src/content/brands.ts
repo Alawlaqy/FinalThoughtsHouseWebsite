@@ -245,6 +245,14 @@ export const BRAND_GROUPS: BrandGroup[] = [
         logoName: "Buffalo",
         products: { en: "NAS and storage devices", ar: "أجهزة NAS والتخزين" },
       },
+      {
+        name: "QNAP",
+        logoName: "QNAP",
+        products: {
+          en: "NAS systems for backup and file storage",
+          ar: "أنظمة NAS للنسخ الاحتياطي وتخزين الملفات",
+        },
+      },
     ],
   },
 ];
@@ -265,7 +273,7 @@ export const BRANDS_COPY: Record<
       "Dell, HP, Lenovo, Cisco, Sophos, Palo Alto Networks, Microsoft, Veeam, NetApp and more: supplied, installed and supported across Saudi Arabia.",
     h1: "IT Brands We Supply in Saudi Arabia",
     summary:
-      "Thoughts House is an IT reseller and system integrator in Saudi Arabia that supplies, installs and supports products from 25 leading brands, including Dell, HP, Lenovo, Cisco, Sophos, Palo Alto Networks, CrowdStrike, Microsoft, Veeam, NetApp and Pure Storage.",
+      "Thoughts House is an IT reseller and system integrator in Saudi Arabia that supplies, installs and supports products from 26 leading brands, including Dell, HP, Lenovo, Cisco, Sophos, Palo Alto Networks, CrowdStrike, Microsoft, Veeam, NetApp and Pure Storage.",
     cta: "Request a quotation",
   },
   ar: {
@@ -274,7 +282,7 @@ export const BRANDS_COPY: Record<
       "يورّد بيت الأفكار ويركّب ويدعم منتجات Dell وHP وLenovo وCisco وSophos وPalo Alto Networks وMicrosoft وVeeam وNetApp وغيرها في جميع مناطق المملكة.",
     h1: "العلامات التجارية التي نورّدها في السعودية",
     summary:
-      "بيت الأفكار موزّع وشركة تكامل أنظمة تقنية معلومات في السعودية، يورّد ويركّب ويدعم منتجات 25 علامة تجارية رائدة، منها Dell وHP وLenovo وCisco وSophos وPalo Alto Networks وCrowdStrike وMicrosoft وVeeam وNetApp وPure Storage.",
+      "بيت الأفكار موزّع وشركة تكامل أنظمة تقنية معلومات في السعودية، يورّد ويركّب ويدعم منتجات 26 علامة تجارية رائدة، منها Dell وHP وLenovo وCisco وSophos وPalo Alto Networks وCrowdStrike وMicrosoft وVeeam وNetApp وPure Storage.",
     cta: "اطلب عرض سعر",
   },
 };

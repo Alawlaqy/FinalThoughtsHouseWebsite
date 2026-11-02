@@ -25,6 +25,10 @@ export const HOME_FAQ: Record<
         a: "We work with vendors including Sophos, Cisco, Palo Alto Networks, CrowdStrike, Check Point, Microsoft, Dell, HP, Lenovo, AWS, Veeam and NetApp, and recommend the solution that fits your needs rather than a single brand.",
       },
       {
+        q: "What kind of projects has Thoughts House delivered?",
+        a: "Examples include more than 230 computers supplied and installed for a training institute, 600 TB of storage for a cement company, Microsoft 365 licensing for a technology company and Sophos EDR for a financial institution. We do not name our clients.",
+      },
+      {
         q: "Do you provide support after installation?",
         a: "Yes. We stay with you after go-live with maintenance, updates and technical support.",
       },
@@ -52,6 +56,10 @@ export const HOME_FAQ: Record<
       {
         q: "ما العلامات التجارية التي تتعاملون معها؟",
         a: "نتعامل مع شركات منها Sophos وCisco وPalo Alto Networks وCrowdStrike وCheck Point وMicrosoft وDell وHP وLenovo وAWS وVeeam وNetApp، ونرشّح الحل المناسب لاحتياجاتك لا علامة واحدة بعينها.",
+      },
+      {
+        q: "ما المشاريع التي نفذها بيت الأفكار؟",
+        a: "من الأمثلة توريد وتركيب أكثر من 230 جهازاً لمعهد تدريب، وتخزين بسعة 600 تيرابايت لشركة إسمنت، وتراخيص Microsoft 365 لشركة تقنية، وحل Sophos EDR لمؤسسة مالية. ولا نذكر أسماء عملائنا.",
       },
       {
         q: "هل تقدمون الدعم بعد التركيب؟",

@@ -77,6 +77,7 @@ export const PROJECTS: Project[] = [
   },
   {
     service: "cloud-backup",
+    brand: "qnap",
     content: {
       en: {
         title: "600 TB of storage for a Saudi cement company",
@@ -141,6 +142,7 @@ export const PROJECTS: Project[] = [
   },
   {
     service: "cloud-backup",
+    brand: "veritas",
     content: {
       en: {
         title: "Veritas license renewal for a contracting company",

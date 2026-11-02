@@ -22,7 +22,10 @@ export type ArticleSlug =
   | "microsoft-licensing-oem-vs-volume"
   | "how-to-choose-a-server-small-business"
   | "sme-cybersecurity-checklist-saudi-arabia"
-  | "microsoft-365-business-plans-saudi-arabia";
+  | "microsoft-365-business-plans-saudi-arabia"
+  | "microsoft-365-e3-vs-e5-vs-e7"
+  | "how-to-choose-it-company-dammam"
+  | "what-is-it-amc-saudi-arabia";
 
 interface LocalizedArticle {
   title: string;
@@ -40,6 +43,71 @@ export interface Article {
 }
 
 export const ARTICLES: Article[] = [
+  {
+    slug: "how-to-choose-it-company-dammam",
+    published: "2026-11-02",
+    image: "/images/it-supply-1280.webp",
+    service: "it-support-amc",
+    content: {
+      en: {
+        title: "How to Choose an IT Company in Dammam: 8 Questions to Ask",
+        metaTitle: "How to Choose an IT Company in Dammam | Thoughts House",
+        description:
+          "Eight practical questions for choosing an IT company in Dammam or the Eastern Province, from accountability and site surveys to support scope and handover.",
+      },
+      ar: {
+        title: "كيف تختار شركة تقنية معلومات في الدمام: 8 أسئلة قبل التعاقد",
+        metaTitle: "كيف تختار شركة تقنية معلومات في الدمام | بيت الأفكار",
+        description:
+          "ثمانية أسئلة عملية لاختيار شركة تقنية معلومات في الدمام والمنطقة الشرقية، من المسؤولية والمعاينة إلى نطاق الدعم والتسليم.",
+      },
+    },
+  },
+
+  {
+    slug: "what-is-it-amc-saudi-arabia",
+    published: "2026-11-02",
+    image: "/images/it-support-amc-1280.webp",
+    service: "it-support-amc",
+    content: {
+      en: {
+        title: "What Is an IT AMC? What It Covers and What Affects the Cost",
+        metaTitle: "What Is an IT AMC? Coverage and Cost in Saudi Arabia",
+        description:
+          "What an IT annual maintenance contract covers, what it usually excludes, what affects the price, and how to compare AMC quotations in Saudi Arabia.",
+      },
+      ar: {
+        title:
+          "ما هو عقد صيانة تقنية المعلومات؟ ماذا يشمل وما الذي يحدد تكلفته",
+        metaTitle: "ما هو عقد صيانة تقنية المعلومات AMC؟ | بيت الأفكار",
+        description:
+          "ماذا يشمل عقد الصيانة السنوي لتقنية المعلومات، وما الذي يستثنيه عادةً، وما الذي يحدد سعره، وكيف تقارن عروض الصيانة في السعودية.",
+      },
+    },
+  },
+
+  {
+    slug: "microsoft-365-e3-vs-e5-vs-e7",
+    published: "2026-11-02",
+    image: "/images/it-supply-1280.webp",
+    service: "it-supply",
+    content: {
+      en: {
+        title:
+          "Microsoft 365 E3 vs E5 vs E7: Which Enterprise Plan Do You Need?",
+        metaTitle: "Microsoft 365 E3 vs E5 vs E7: Differences Explained",
+        description:
+          "Compare Microsoft 365 E3, E5 and E7: security, compliance, Copilot, Entra Suite and Agent 365, with guidance on mixing plans across your users.",
+      },
+      ar: {
+        title: "الفرق بين Microsoft 365 E3 وE5 وE7: أي باقة تحتاج شركتك؟",
+        metaTitle: "الفرق بين Microsoft 365 E3 وE5 وE7 | بيت الأفكار",
+        description:
+          "مقارنة بين Microsoft 365 E3 وE5 وE7 من حيث الحماية والامتثال وCopilot وEntra Suite وAgent 365، مع إرشادات للجمع بين الباقات حسب المستخدمين.",
+      },
+    },
+  },
+
   {
     slug: "microsoft-365-business-plans-saudi-arabia",
     published: "2026-11-01",
