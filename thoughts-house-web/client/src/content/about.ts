@@ -13,6 +13,11 @@ export const COMPANY = {
   locality: "Dammam",
   region: "Eastern Province",
   country: "SA",
+  // Structured data only, never shown on a page (no walk-in visits): keeps the site
+  // consistent with the Google Maps listing for local search.
+  streetAddress: "4028 Al Malek Khaled, As Suq Dist.",
+  postalCode: "32242-8181",
+  mapUrl: "https://maps.app.goo.gl/SECK4KzVH42TiTxD6",
 };
 
 export const PARTNER_BRANDS =

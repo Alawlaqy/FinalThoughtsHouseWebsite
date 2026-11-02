@@ -292,10 +292,13 @@ const organization = {
   telephone: COMPANY.phone,
   address: {
     "@type": "PostalAddress",
+    streetAddress: COMPANY.streetAddress,
     addressLocality: COMPANY.locality,
     addressRegion: COMPANY.region,
+    postalCode: COMPANY.postalCode,
     addressCountry: COMPANY.country,
   },
+  hasMap: COMPANY.mapUrl,
   slogan: [
     { "@value": "We Build & Protect Your Network", "@language": "en" },
     { "@value": "نبني ونحمي شبكتك", "@language": "ar" },
