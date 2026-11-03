@@ -340,6 +340,12 @@ const organization = {
     addressCountry: COMPANY.country,
   },
   hasMap: COMPANY.mapUrl,
+  openingHoursSpecification: {
+    "@type": "OpeningHoursSpecification",
+    dayOfWeek: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday"],
+    opens: "09:00",
+    closes: "17:00",
+  },
   slogan: [
     { "@value": "We Build & Protect Your Network", "@language": "en" },
     { "@value": "نبني ونحمي شبكتك", "@language": "ar" },

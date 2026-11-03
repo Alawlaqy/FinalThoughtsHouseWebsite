@@ -46,6 +46,9 @@ export default function ContactPage() {
               <p className="text-sm text-[#64748B] leading-relaxed mb-2">
                 {c.address}. {c.appointment}
               </p>
+              <p className="text-sm text-[#64748B] leading-relaxed mb-2">
+                {c.hours}
+              </p>
               <a
                 href={COMPANY.mapUrl}
                 target="_blank"

@@ -58,6 +58,11 @@ export const ABOUT: Record<Language, AboutCopy> = {
         value:
           "4028 Al Malek Khaled, As Suq Dist., Dammam 32242-8181, Saudi Arabia (service by appointment, on-site and remote)",
       },
+      {
+        label: "Office hours",
+        value:
+          "Sunday to Thursday, 9:00 am to 5:00 pm (closed Friday and Saturday)",
+      },
       { label: "Service area", value: "All regions of Saudi Arabia" },
       { label: "Clients", value: "500+ organizations served" },
       { label: "Support", value: "24/7 support coverage, 99.9% uptime SLA" },
@@ -107,6 +112,11 @@ export const ABOUT: Record<Language, AboutCopy> = {
         label: "العنوان",
         value:
           "\u20664028\u2069 الملك خالد، حي السوق، الدمام \u206632242-8181\u2069 (الخدمة بموعد مسبق، ميدانياً أو عن بُعد)",
+      },
+      {
+        label: "ساعات العمل",
+        value:
+          "الأحد إلى الخميس، من 9:00 صباحاً إلى 5:00 مساءً (الجمعة والسبت إجازة)",
       },
       { label: "نطاق الخدمة", value: "جميع مناطق المملكة" },
       { label: "العملاء", value: "أكثر من 500 منشأة" },

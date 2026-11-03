@@ -31,7 +31,12 @@ export const SERVICES_HUB: Record<Language, HubCopy> = {
 
 export const CONTACT_PAGE: Record<
   Language,
-  HubCopy & { address: string; appointment: string; mapLabel: string }
+  HubCopy & {
+    address: string;
+    appointment: string;
+    hours: string;
+    mapLabel: string;
+  }
 > = {
   en: {
     metaTitle: "Contact Thoughts House | IT Company in Dammam",
@@ -43,6 +48,8 @@ export const CONTACT_PAGE: Record<
     address:
       "4028 Al Malek Khaled, As Suq Dist., Dammam 32242-8181, Saudi Arabia",
     appointment: "Service by appointment, on-site or remote.",
+    hours:
+      "Sunday to Thursday, 9:00 am to 5:00 pm. Closed Friday and Saturday.",
     mapLabel: "View on Google Maps",
   },
   ar: {
@@ -55,6 +62,8 @@ export const CONTACT_PAGE: Record<
     address:
       "⁦4028⁩ الملك خالد، حي السوق، الدمام ⁦32242-8181⁩، المملكة العربية السعودية",
     appointment: "الخدمة بموعد مسبق، ميدانياً أو عن بُعد.",
+    hours:
+      "الأحد إلى الخميس، من 9:00 صباحاً إلى 5:00 مساءً. الجمعة والسبت إجازة.",
     mapLabel: "الموقع على خرائط Google",
   },
 };
