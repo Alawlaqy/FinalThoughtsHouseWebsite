@@ -15,7 +15,7 @@ export const COMPANY = {
   country: "SA",
   streetAddress: "4028 Al Malek Khaled, As Suq Dist.",
   postalCode: "32242-8181",
-  mapUrl: "https://maps.app.goo.gl/SECK4KzVH42TiTxD6",
+  mapUrl: "https://maps.google.com/?cid=4896148726544240992",
 };
 
 export const PARTNER_BRANDS =
