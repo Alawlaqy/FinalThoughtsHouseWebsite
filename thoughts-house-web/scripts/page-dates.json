@@ -68,28 +68,32 @@
   "date": "2026-11-02"
  },
  "/it-company-dammam/": {
-  "hash": "88f3da4970532272",
-  "date": "2026-11-03"
+  "hash": "c01d6378ce12e091",
+  "date": "2026-11-04"
  },
  "/it-support-dammam/": {
-  "hash": "949eecfd7c89ba0f",
-  "date": "2026-11-03"
+  "hash": "fc36326d6d480af3",
+  "date": "2026-11-04"
  },
  "/cybersecurity-dammam/": {
-  "hash": "6edcdd5376ecb141",
-  "date": "2026-11-03"
+  "hash": "f3647d72b775a908",
+  "date": "2026-11-04"
  },
  "/network-solutions-dammam/": {
-  "hash": "4b6cba1d90598642",
-  "date": "2026-11-03"
+  "hash": "674e79ae1f621c82",
+  "date": "2026-11-04"
  },
  "/it-hardware-supplier-dammam/": {
-  "hash": "6eb56951dd2d24f7",
-  "date": "2026-11-03"
+  "hash": "0febb317557f4f28",
+  "date": "2026-11-04"
+ },
+ "/structured-cabling-dammam/": {
+  "hash": "4c5f161605aa6f1d",
+  "date": "2026-11-04"
  },
  "/it-company-khobar/": {
-  "hash": "25567e1c16a97417",
-  "date": "2026-11-03"
+  "hash": "cdc12b1d430f8651",
+  "date": "2026-11-04"
  },
  "/it-company-dhahran/": {
   "hash": "90c2addb0bcc2939",
@@ -128,8 +132,8 @@
   "date": "2026-11-02"
  },
  "/brands/dell/": {
-  "hash": "9d366077e6ece909",
-  "date": "2026-11-02"
+  "hash": "5d0319b63deff097",
+  "date": "2026-11-04"
  },
  "/brands/hp/": {
   "hash": "5dda9a92d12beca6",
@@ -320,28 +324,32 @@
   "date": "2026-11-02"
  },
  "/ar/it-company-dammam/": {
-  "hash": "17ddcfbb3bd442a2",
-  "date": "2026-11-03"
+  "hash": "4ed1b04e851972ab",
+  "date": "2026-11-04"
  },
  "/ar/it-support-dammam/": {
-  "hash": "b310d2c2401832e7",
-  "date": "2026-11-03"
+  "hash": "a90d6efea8d9e688",
+  "date": "2026-11-04"
  },
  "/ar/cybersecurity-dammam/": {
-  "hash": "62ca08555f9284ac",
-  "date": "2026-11-03"
+  "hash": "dc75987cc6d1cfdf",
+  "date": "2026-11-04"
  },
  "/ar/network-solutions-dammam/": {
-  "hash": "177c104c337aa567",
-  "date": "2026-11-03"
+  "hash": "1bb4deb3f705bab4",
+  "date": "2026-11-04"
  },
  "/ar/it-hardware-supplier-dammam/": {
-  "hash": "c95a88fb5d513324",
-  "date": "2026-11-03"
+  "hash": "bc6efc82b277ab30",
+  "date": "2026-11-04"
+ },
+ "/ar/structured-cabling-dammam/": {
+  "hash": "6cae695953e37a25",
+  "date": "2026-11-04"
  },
  "/ar/it-company-khobar/": {
-  "hash": "c41a5a4f5a001144",
-  "date": "2026-11-03"
+  "hash": "b9657b3cc6c43653",
+  "date": "2026-11-04"
  },
  "/ar/it-company-dhahran/": {
   "hash": "f9537d03308544fb",
@@ -380,8 +388,8 @@
   "date": "2026-11-02"
  },
  "/ar/brands/dell/": {
-  "hash": "78b47af7958aba19",
-  "date": "2026-11-02"
+  "hash": "e82bc07c83467946",
+  "date": "2026-11-04"
  },
  "/ar/brands/hp/": {
   "hash": "c750df684c74707a",

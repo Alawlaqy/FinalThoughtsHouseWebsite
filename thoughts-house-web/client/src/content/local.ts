@@ -12,7 +12,8 @@ export type LocalSlug =
   | "it-support-dammam"
   | "cybersecurity-dammam"
   | "network-solutions-dammam"
-  | "it-hardware-supplier-dammam";
+  | "it-hardware-supplier-dammam"
+  | "structured-cabling-dammam";
 
 interface LocalCopy {
   metaTitle: string;
@@ -345,7 +346,23 @@ const DAMMAM_PAGES: LocalPage[] = [
           "Contracts sized to your business, from a single office to several branches.",
           "The same team that can design and supply your next upgrade.",
         ],
+        guide: [
+          {
+            title: "IT equipment maintenance for businesses in Dammam",
+            text: "We maintain business IT, not home appliances: computers, servers, network devices and firewalls in offices, warehouses and factories.",
+            points: [
+              "Preventive visits to check servers, network and security equipment.",
+              "Fault diagnosis, repair coordination and warranty claims with the manufacturer.",
+              "An inventory of your devices with warranty and license dates.",
+              "Remote support for users, with site visits when needed.",
+            ],
+          },
+        ],
         faq: [
+          {
+            q: "Do you maintain business computers in Dammam?",
+            a: "Yes. We maintain computers, servers, network devices and firewalls for businesses in Dammam, Khobar and Dhahran, under an annual maintenance contract after an initial assessment.",
+          },
           {
             q: "What is an IT annual maintenance contract (AMC)?",
             a: "A yearly agreement where an IT company supports and maintains your systems: helpdesk, on-site visits, preventive maintenance and agreed response times.",
@@ -361,11 +378,11 @@ const DAMMAM_PAGES: LocalPage[] = [
         ],
       },
       ar: {
-        metaTitle: "دعم فني للشركات في الدمام | بيت الأفكار",
+        metaTitle: "الدعم الفني وصيانة أجهزة الشركات في الدمام | بيت الأفكار",
         metaDescription:
           "دعم فني وخدمات تقنية معلومات مُدارة للشركات في الدمام: عقود صيانة سنوية، ودعم عن بُعد، وزيارات ميدانية، ومراقبة وتحديثات وفحص النسخ الاحتياطية.",
         name: "الدعم الفني في الدمام",
-        h1: "دعم فني وخدمات تقنية معلومات مُدارة في الدمام",
+        h1: "دعم فني وصيانة أجهزة الشركات في الدمام",
         summary:
           "يقدم بيت الأفكار الدعم الفني وخدمات تقنية المعلومات المُدارة للشركات في الدمام والخبر والظهران، عبر عقود صيانة سنوية تجمع الدعم عن بُعد والزيارات الميدانية والصيانة الوقائية.",
         intro:
@@ -410,7 +427,23 @@ const DAMMAM_PAGES: LocalPage[] = [
           "عقود بحجم منشأتك، من مكتب واحد إلى عدة فروع.",
           "الفريق نفسه يصمم ويورّد التحديث القادم لأنظمتك.",
         ],
+        guide: [
+          {
+            title: "صيانة أجهزة الشركات في الدمام",
+            text: "نصون أجهزة تقنية المعلومات للشركات، وليس الأجهزة المنزلية: الحواسيب والسيرفرات وأجهزة الشبكات وجدران الحماية في المكاتب والمستودعات والمصانع.",
+            points: [
+              "زيارات وقائية لفحص السيرفرات والشبكة وأجهزة الحماية.",
+              "تشخيص الأعطال ومتابعة الإصلاح ومطالبات الضمان مع الشركة المصنعة.",
+              "سجل بأجهزتك ومواعيد الضمان والتراخيص.",
+              "دعم المستخدمين عن بُعد، مع زيارات ميدانية عند الحاجة.",
+            ],
+          },
+        ],
         faq: [
+          {
+            q: "هل تقدمون صيانة أجهزة الكمبيوتر للشركات في الدمام؟",
+            a: "نعم. نصون أجهزة الحاسب والسيرفرات وأجهزة الشبكات وجدران الحماية للشركات في الدمام والخبر والظهران، ضمن عقد صيانة سنوي بعد تقييم أولي للأجهزة.",
+          },
           {
             q: "ما هو عقد الصيانة السنوي لتقنية المعلومات؟",
             a: "اتفاقية سنوية تتولى فيها شركة تقنية المعلومات دعم أنظمتك وصيانتها: دعم عن بُعد، وزيارات ميدانية، وصيانة وقائية، وأوقات استجابة متفق عليها.",
@@ -812,6 +845,182 @@ const DAMMAM_PAGES: LocalPage[] = [
           {
             q: "كيف أحصل على عرض سعر؟",
             a: "أرسل احتياجاتك عبر نموذج التواصل أو البريد الإلكتروني أو واتساب، وسنرد عليك بعرض سعر.",
+          },
+        ],
+      },
+    },
+  },
+  {
+    slug: "structured-cabling-dammam",
+    service: "structured-cabling",
+    serviceType: "Structured cabling installation",
+    group: "dammam",
+    areaServed: DAMMAM_AREA,
+    city: { en: "Dammam", ar: "الدمام" },
+    content: {
+      en: {
+        metaTitle: "Structured Cabling in Dammam | Thoughts House",
+        metaDescription:
+          "Network cabling installation in Dammam and Khobar: Cat6 and Cat6A, fiber, racks, labeling and testing for offices, warehouses and factories in the Eastern Province.",
+        name: "Structured Cabling in Dammam",
+        h1: "Structured Cabling & Network Cabling Installation in Dammam",
+        summary:
+          "Thoughts House installs structured cabling for offices, warehouses and factories in Dammam, Khobar, Dhahran and the rest of the Eastern Province: copper and fiber links, network racks, labeling, testing and documentation, planned and installed by our team in Dammam.",
+        intro:
+          "New offices, warehouse extensions and building fit-outs all need cabling that is planned before the ceilings close. Because our team is in Dammam, we can survey the site, follow the fit-out schedule and come back to test and hand over.",
+        offersTitle: "What we install in Dammam",
+        offers: [
+          {
+            title: "Cat6 and Cat6A cabling",
+            text: "Copper cabling for desks, access points, cameras and phones.",
+            service: "structured-cabling",
+          },
+          {
+            title: "Fiber backbone",
+            text: "Fiber links between floors, buildings and racks.",
+            service: "structured-cabling",
+          },
+          {
+            title: "Racks and patch panels",
+            text: "Network racks, patch panels and cable management, installed and dressed neatly.",
+            service: "structured-cabling",
+          },
+          {
+            title: "Wi-Fi access points",
+            text: "Access point cabling and installation for offices and warehouses.",
+            service: "wifi-installation",
+          },
+          {
+            title: "CCTV cabling",
+            text: "Cabling and installation for IP camera systems.",
+            service: "cctv-installation",
+          },
+          {
+            title: "Network switching",
+            text: "Switches and network setup once the cabling is in place.",
+            service: "network-infrastructure",
+          },
+        ],
+        whyTitle: "Why choose us for cabling in Dammam",
+        why: [
+          "Site surveys in Dammam, Khobar and Dhahran are easy to schedule from our Dammam office.",
+          "One team for cabling, switches, Wi-Fi, cameras and firewall, so the network works when the cabling is finished.",
+          "Every link labeled and tested, with documentation handed over.",
+          "Cabling planned around your fit-out contractor's schedule.",
+        ],
+        guide: [
+          {
+            title: "How a cabling project runs",
+            text: "Most projects follow the same steps:",
+            points: [
+              "Site survey and an outlet plan for every room.",
+              "A quotation with cable runs, outlets and rack equipment listed.",
+              "Installation during the fit-out, before ceilings and walls close.",
+              "Testing and labeling of every link.",
+              "Handover of drawings and test results.",
+              "Network setup: switches, Wi-Fi and firewall.",
+            ],
+          },
+          {
+            title: "Cat6 or Cat6A?",
+            text: "Cat6 suits most offices today. Cat6A costs more but supports 10 Gbps over the full 100 m run and suits newer Wi-Fi access points, so it is worth considering for new buildings. Our Cat6 vs Cat6A guide explains the difference.",
+          },
+        ],
+        faq: [
+          {
+            q: "Do you install network cabling in Dammam and Khobar?",
+            a: "Yes. We install structured cabling in Dammam, Khobar, Dhahran and the rest of the Eastern Province, from site survey to testing and handover.",
+          },
+          {
+            q: "Can you work with our fit-out contractor?",
+            a: "Yes. We plan cable routes and outlet positions with your contractor so the cabling is installed before ceilings and walls are closed.",
+          },
+          {
+            q: "Do you install cabling in warehouses and factories?",
+            a: "Yes. We install cabling for warehouses and industrial sites, including fiber links between buildings and cabling for access points and cameras.",
+          },
+        ],
+      },
+      ar: {
+        metaTitle: "تمديد شبكات في الدمام | بيت الأفكار",
+        metaDescription:
+          "تمديد شبكات وكابلات للشركات في الدمام والخبر: كابلات Cat6 وCat6A والألياف الضوئية والرفوف والترقيم والاختبار للمكاتب والمستودعات والمصانع في المنطقة الشرقية.",
+        name: "تمديد الشبكات في الدمام",
+        h1: "تمديد شبكات وكابلات للشركات في الدمام",
+        summary:
+          "يمدد بيت الأفكار شبكات الكابلات للمكاتب والمستودعات والمصانع في الدمام والخبر والظهران وبقية المنطقة الشرقية: كابلات نحاسية وألياف ضوئية، ورفوف شبكات، وترقيم واختبار وتوثيق، يخطط لها وينفذها فريقنا في الدمام.",
+        intro:
+          "تحتاج المكاتب الجديدة وتوسعات المستودعات وأعمال التشطيب إلى تمديدات مخططة قبل إغلاق الأسقف. ولأن فريقنا في الدمام، نعاين الموقع ونتابع جدول التشطيب ونعود للاختبار والتسليم.",
+        offersTitle: "ما ننفذه في الدمام",
+        offers: [
+          {
+            title: "كابلات Cat6 وCat6A",
+            text: "تمديدات نحاسية للمكاتب ونقاط الوصول والكاميرات والهواتف.",
+            service: "structured-cabling",
+          },
+          {
+            title: "الألياف الضوئية",
+            text: "وصلات ألياف بين الطوابق والمباني والرفوف.",
+            service: "structured-cabling",
+          },
+          {
+            title: "الرفوف ولوحات التوصيل",
+            text: "رفوف الشبكة ولوحات التوصيل وتنظيم الكابلات بشكل مرتب.",
+            service: "structured-cabling",
+          },
+          {
+            title: "نقاط وصول Wi-Fi",
+            text: "تمديد وتركيب نقاط الوصول للمكاتب والمستودعات.",
+            service: "wifi-installation",
+          },
+          {
+            title: "تمديدات الكاميرات",
+            text: "تمديد وتركيب أنظمة كاميرات IP.",
+            service: "cctv-installation",
+          },
+          {
+            title: "السويتشات وإعداد الشبكة",
+            text: "تركيب السويتشات وإعداد الشبكة بعد اكتمال التمديدات.",
+            service: "network-infrastructure",
+          },
+        ],
+        whyTitle: "لماذا تختارنا لتمديد الشبكات في الدمام",
+        why: [
+          "يسهل جدولة المعاينة في الدمام والخبر والظهران من مكتبنا في الدمام.",
+          "فريق واحد للتمديدات والسويتشات وWi-Fi والكاميرات وجدار الحماية، فتعمل الشبكة فور انتهاء التمديد.",
+          "ترقيم واختبار كل نقطة، وتسليم الوثائق.",
+          "تخطيط التمديدات بحسب جدول مقاول التشطيب.",
+        ],
+        guide: [
+          {
+            title: "كيف ينفذ مشروع تمديد الشبكات",
+            text: "تمر معظم المشاريع بالخطوات نفسها:",
+            points: [
+              "معاينة الموقع ومخطط النقاط لكل غرفة.",
+              "عرض سعر يحدد مسارات الكابلات والنقاط ومعدات الرف.",
+              "التمديد أثناء التشطيب وقبل إغلاق الأسقف والجدران.",
+              "اختبار كل نقطة وترقيمها.",
+              "تسليم المخططات ونتائج الاختبار.",
+              "إعداد الشبكة: السويتشات وWi-Fi وجدار الحماية.",
+            ],
+          },
+          {
+            title: "Cat6 أم Cat6A؟",
+            text: "تناسب Cat6 معظم المكاتب اليوم. أما Cat6A فأعلى تكلفة لكنها تدعم 10 جيجابت على كامل مسافة 100 متر وتناسب نقاط الوصول الحديثة، لذلك تستحق النظر في المباني الجديدة. ويشرح دليل الفرق بين Cat6 وCat6A ذلك بالتفصيل.",
+          },
+        ],
+        faq: [
+          {
+            q: "هل تنفذون تمديد الشبكات في الدمام والخبر؟",
+            a: "نعم. ننفذ تمديد الشبكات في الدمام والخبر والظهران وبقية المنطقة الشرقية، من المعاينة حتى الاختبار والتسليم.",
+          },
+          {
+            q: "هل يمكنكم العمل مع مقاول التشطيب؟",
+            a: "نعم. نخطط مسارات الكابلات ومواقع النقاط مع المقاول، حتى تُمدد الكابلات قبل إغلاق الأسقف والجدران.",
+          },
+          {
+            q: "هل تمددون الشبكات في المستودعات والمصانع؟",
+            a: "نعم. نمدد شبكات المستودعات والمواقع الصناعية، ومنها وصلات الألياف بين المباني وتمديدات نقاط الوصول والكاميرات.",
           },
         ],
       },

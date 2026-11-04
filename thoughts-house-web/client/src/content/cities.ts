@@ -66,7 +66,38 @@ export const CITY_PAGES: LocalPage[] = [
           "25+ technology brands, including Cisco, Sophos, Dell, HP, Lenovo and Microsoft.",
           "24/7 support coverage for critical systems.",
         ],
+        guide: [
+          {
+            title: "How we serve Khobar from Dammam",
+            text: "Our office is in Dammam, about 25 km from central Khobar. Most day-to-day support is remote, and site visits in Khobar, such as surveys, installations and maintenance visits, are scheduled in advance.",
+          },
+          {
+            title: "Projects we can help with in Khobar",
+            text: "Khobar businesses usually come to us for:",
+            points: [
+              "Office fit-outs and moves, including cabling, network and Wi-Fi.",
+              "Retail and showroom networks, cameras and point-of-sale connectivity.",
+              "Guest and staff Wi-Fi for hotels and serviced apartments.",
+              "IT support contracts for professional services firms.",
+            ],
+          },
+          {
+            title: "Moving to a new office in Khobar?",
+            text: "Plan these early to avoid delays:",
+            points: [
+              "Agree cabling and outlet positions before ceilings close.",
+              "Order the internet line weeks before the move.",
+              "Prepare the firewall and Wi-Fi before staff arrive.",
+              "Move servers and backups with a tested restore.",
+              "Label and document the new network.",
+            ],
+          },
+        ],
         faq: [
+          {
+            q: "Do you have an office in Khobar?",
+            a: "No. We serve Khobar from our Dammam office, about 25 km away, with remote support and site visits scheduled in advance.",
+          },
           {
             q: "Do you provide on-site IT support in Khobar?",
             a: "Yes. Our team is based in Dammam and visits customers in Khobar for installations, surveys and support.",
@@ -126,7 +157,38 @@ export const CITY_PAGES: LocalPage[] = [
           "أكثر من 25 علامة تقنية، منها Cisco وSophos وDell وHP وLenovo وMicrosoft.",
           "تغطية دعم على مدار الساعة للأنظمة الحرجة.",
         ],
+        guide: [
+          {
+            title: "كيف نخدم الخبر من الدمام",
+            text: "مكتبنا في الدمام، على بعد نحو 25 كم من وسط الخبر. ويتم معظم الدعم اليومي عن بُعد، أما الزيارات الميدانية في الخبر، مثل المعاينة والتركيب وزيارات الصيانة، فتُجدول مسبقاً.",
+          },
+          {
+            title: "مشاريع نساعد فيها في الخبر",
+            text: "تتواصل معنا شركات الخبر عادةً من أجل:",
+            points: [
+              "تجهيز المكاتب الجديدة ونقلها، ومنها التمديدات والشبكة وWi-Fi.",
+              "شبكات المحلات وصالات العرض والكاميرات واتصال نقاط البيع.",
+              "شبكات Wi-Fi للنزلاء والموظفين في الفنادق والشقق الفندقية.",
+              "عقود الدعم الفني لشركات الخدمات المهنية.",
+            ],
+          },
+          {
+            title: "هل تنتقل إلى مكتب جديد في الخبر؟",
+            text: "خطط لهذه الأمور مبكراً لتجنب التأخير:",
+            points: [
+              "الاتفاق على التمديدات ومواقع النقاط قبل إغلاق الأسقف.",
+              "طلب خط الإنترنت قبل الانتقال بأسابيع.",
+              "تجهيز جدار الحماية وWi-Fi قبل وصول الموظفين.",
+              "نقل السيرفرات والنسخ الاحتياطية مع اختبار الاستعادة.",
+              "ترقيم الشبكة الجديدة وتوثيقها.",
+            ],
+          },
+        ],
         faq: [
+          {
+            q: "هل لديكم مكتب في الخبر؟",
+            a: "لا. نخدم الخبر من مكتبنا في الدمام، على بعد نحو 25 كم، بدعم عن بُعد وزيارات ميدانية مجدولة مسبقاً.",
+          },
           {
             q: "هل تقدمون دعماً فنياً في الموقع بالخبر؟",
             a: "نعم. فريقنا في الدمام ويزور العملاء في الخبر للتركيب والمسح الميداني والدعم.",

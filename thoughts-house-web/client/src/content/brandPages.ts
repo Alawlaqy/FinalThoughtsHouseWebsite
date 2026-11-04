@@ -48,10 +48,10 @@ export const BRAND_PAGES: BrandPage[] = [
     services: ["it-supply", "cloud-backup", "it-support-amc"],
     content: {
       en: {
-        metaTitle: "Dell Servers, Laptops & Storage Supplier in Saudi Arabia",
+        metaTitle: "Dell Supplier in Dammam & Saudi Arabia: Servers & Laptops",
         metaDescription:
           "Dell PowerEdge servers, storage, Latitude laptops, OptiPlex desktops and Precision workstations supplied across Saudi Arabia, with installation and support.",
-        h1: "Dell Servers, Laptops & Storage Supplier in Saudi Arabia",
+        h1: "Dell Servers, Laptops & Storage Supplier in Dammam & Saudi Arabia",
         summary:
           "Thoughts House supplies Dell PowerEdge servers, Dell storage, Latitude laptops, OptiPlex desktops and Precision workstations to organizations across Saudi Arabia, and sizes, installs and supports them.",
         intro:
@@ -81,6 +81,10 @@ export const BRAND_PAGES: BrandPage[] = [
         ],
         faq: [
           {
+            q: "Do you supply Dell computers in Dammam?",
+            a: "Yes. We supply Dell servers, laptops, desktops and workstations in Dammam and across Saudi Arabia, and have supplied and installed more than 230 Dell computers for a training institute in the Eastern Province.",
+          },
+          {
             q: "Do you supply Dell servers in Saudi Arabia?",
             a: "Yes. We supply Dell PowerEdge servers and storage to organizations across Saudi Arabia, and can size, install and configure them.",
           },
@@ -91,10 +95,10 @@ export const BRAND_PAGES: BrandPage[] = [
         ],
       },
       ar: {
-        metaTitle: "توريد سيرفرات وأجهزة Dell في السعودية | بيت الأفكار",
+        metaTitle: "توريد أجهزة Dell في الدمام والسعودية | بيت الأفكار",
         metaDescription:
           "توريد سيرفرات Dell PowerEdge وأنظمة التخزين وأجهزة Latitude المحمولة وOptiPlex المكتبية ومحطات Precision في السعودية، مع اختيار المواصفات والتركيب والدعم.",
-        h1: "توريد سيرفرات وأجهزة وأنظمة تخزين Dell في السعودية",
+        h1: "توريد سيرفرات وأجهزة وأنظمة تخزين Dell في الدمام والسعودية",
         summary:
           "يورّد بيت الأفكار سيرفرات Dell PowerEdge وأنظمة تخزين Dell وأجهزة Latitude المحمولة وOptiPlex المكتبية ومحطات عمل Precision للمنشآت في جميع مناطق المملكة، ويحدد مواصفاتها ويركّبها ويدعمها.",
         intro:
@@ -123,6 +127,10 @@ export const BRAND_PAGES: BrandPage[] = [
           },
         ],
         faq: [
+          {
+            q: "هل تورّدون أجهزة Dell في الدمام؟",
+            a: "نعم. نورّد سيرفرات Dell وأجهزتها المحمولة والمكتبية ومحطات العمل في الدمام وجميع مناطق المملكة، وقد ورّدنا وركّبنا أكثر من 230 جهاز Dell لمعهد تدريب في المنطقة الشرقية.",
+          },
           {
             q: "هل تورّدون سيرفرات Dell في السعودية؟",
             a: "نعم. نورّد سيرفرات Dell PowerEdge وأنظمة التخزين للمنشآت في جميع مناطق المملكة، ويمكننا تحديد مواصفاتها وتركيبها وإعدادها.",
