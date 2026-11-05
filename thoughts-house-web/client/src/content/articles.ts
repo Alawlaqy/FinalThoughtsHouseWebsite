@@ -25,7 +25,8 @@ export type ArticleSlug =
   | "microsoft-365-business-plans-saudi-arabia"
   | "microsoft-365-e3-vs-e5-vs-e7"
   | "how-to-choose-it-company-dammam"
-  | "what-is-it-amc-saudi-arabia";
+  | "what-is-it-amc-saudi-arabia"
+  | "how-to-read-it-amc-contract";
 
 interface LocalizedArticle {
   title: string;
@@ -43,6 +44,27 @@ export interface Article {
 }
 
 export const ARTICLES: Article[] = [
+  {
+    slug: "how-to-read-it-amc-contract",
+    published: "2026-11-05",
+    image: "/images/it-support-amc-1280.webp",
+    service: "it-support-amc",
+    content: {
+      en: {
+        title: "How to Read an IT Maintenance Contract (AMC) Before You Sign",
+        metaTitle: "How to Read an IT AMC Contract Before You Sign",
+        description:
+          "What to check in an IT annual maintenance contract in Saudi Arabia: scope, asset list, response terms, visits, exclusions, spare parts, renewal and handover.",
+      },
+      ar: {
+        title: "كيف تقرأ عقد صيانة تقنية المعلومات قبل التوقيع",
+        metaTitle:
+          "كيف تقرأ عقد صيانة تقنية المعلومات قبل التوقيع | بيت الأفكار",
+        description:
+          "ما الذي تراجعه في عقد الصيانة السنوي لتقنية المعلومات: النطاق، وقائمة الأجهزة، وزمن الاستجابة، والزيارات، والاستثناءات، وقطع الغيار، والتجديد والتسليم.",
+      },
+    },
+  },
   {
     slug: "how-to-choose-it-company-dammam",
     published: "2026-11-02",

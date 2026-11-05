@@ -2926,4 +2926,154 @@ export const ARTICLE_BODIES: Record<
       ],
     },
   },
+  "how-to-read-it-amc-contract": {
+    en: {
+      summary: [
+        "Read the scope and the asset list first: anything not listed is usually not covered.",
+        "Check response times, visit schedules, exclusions and who pays for spare parts, in writing.",
+        "Make sure you keep your passwords and documentation, and that you can leave the contract cleanly.",
+      ],
+      faq: [
+        {
+          q: "What should an IT AMC contract include?",
+          a: "A list of covered sites and devices, the services included, response and visit terms, exclusions, spare parts and warranty handling, reporting, confidentiality, renewal and handover terms.",
+        },
+        {
+          q: "Are spare parts included in an IT AMC?",
+          a: "Not always. Some contracts include labor only, others include parts for listed devices. The contract should say which, and how replacement parts are approved and priced.",
+        },
+        {
+          q: "What happens to our passwords when the contract ends?",
+          a: "They should stay with you. The contract should require the provider to hand over admin credentials, documentation and configuration backups at the end of the term.",
+        },
+      ],
+      blocks: [
+        {
+          p: "An IT annual maintenance contract (AMC) decides who fixes what, how fast and at what cost for the next year. Most disputes come from wording that looked harmless at signing. These are the clauses to read carefully before you sign.",
+        },
+        { h2: "1. Scope and asset list" },
+        {
+          p: "The contract should list the sites, servers, network devices, firewalls, storage and user devices it covers. Anything not on the list is usually outside the contract. Ask how new devices are added during the year and what that costs.",
+        },
+        { h2: "2. Response and resolution times" },
+        {
+          p: "Response time is how quickly the provider starts working on a reported issue; resolution time is how quickly it is fixed. Check whether times differ by priority, whether they apply outside working hours, and how a critical issue is defined.",
+        },
+        { h2: "3. Preventive visits and remote support" },
+        {
+          p: "Look for the number of preventive visits per year, what each visit checks, and whether you receive a report afterwards. Confirm which support is remote and when an engineer comes on site.",
+        },
+        { h2: "4. Exclusions" },
+        {
+          p: "Common exclusions are new projects, data recovery, damage from power or misuse, and systems added after signing. Exclusions are normal, but they should be written down so there are no surprises.",
+        },
+        { h2: "5. Spare parts and manufacturer warranty" },
+        {
+          p: "Check whether parts are included, who orders replacements, and who handles warranty claims with the manufacturer. If parts are not included, ask how they are approved and priced.",
+        },
+        { h2: "6. Reporting and records" },
+        {
+          p: "A good contract gives you a record of tickets, visits and changes, plus an asset register with warranty and license dates. These records are useful even if you change provider later.",
+        },
+        { h2: "7. Access, passwords and confidentiality" },
+        {
+          p: "The provider will have admin access to your systems. The contract should cover confidentiality, how access is controlled, and that admin credentials stay yours. If personal data is involved, check that the terms fit your obligations under Saudi Arabia's Personal Data Protection Law.",
+        },
+        { h2: "8. Renewal, termination and handover" },
+        {
+          p: "Read how the contract renews, how much notice ends it, and what the provider must hand over at the end: credentials, documentation and configuration backups. A clean exit protects you if the relationship does not work.",
+        },
+        { h2: "Checklist before you sign" },
+        {
+          ul: [
+            "Every site and device you expect to be covered is listed.",
+            "Response times and priorities are written down.",
+            "The number of preventive visits is stated.",
+            "Exclusions are clear.",
+            "Spare parts and warranty handling are defined.",
+            "You keep admin credentials and documentation.",
+            "Renewal and termination terms are clear.",
+          ],
+        },
+        { h2: "How Thoughts House can help" },
+        {
+          p: "Thoughts House provides IT maintenance contracts in Dammam and across Saudi Arabia. We start with an assessment of your systems and put the scope, visits and exclusions in writing before you sign.",
+        },
+      ],
+    },
+    ar: {
+      summary: [
+        "اقرأ النطاق وقائمة الأجهزة أولاً، فما لا يرد في القائمة لا يشمله العقد عادةً.",
+        "تأكد أن زمن الاستجابة وجدول الزيارات والاستثناءات ومسؤولية قطع الغيار مكتوبة.",
+        "احرص على بقاء كلمات المرور والوثائق لديك، وعلى إمكانية إنهاء العقد بسلاسة.",
+      ],
+      faq: [
+        {
+          q: "ماذا يجب أن يتضمن عقد صيانة تقنية المعلومات؟",
+          a: "قائمة المواقع والأجهزة المشمولة، والخدمات، وشروط الاستجابة والزيارات، والاستثناءات، وقطع الغيار والضمان، والتقارير، والسرية، وشروط التجديد والتسليم.",
+        },
+        {
+          q: "هل تشمل عقود الصيانة قطع الغيار؟",
+          a: "ليس دائماً. بعض العقود تشمل العمل فقط، وبعضها يشمل قطع الأجهزة المذكورة. يجب أن يوضح العقد ذلك، وكيف تُعتمد القطع البديلة وتُسعّر.",
+        },
+        {
+          q: "ماذا يحدث لكلمات المرور عند انتهاء العقد؟",
+          a: "يجب أن تبقى لديك. وينبغي أن يُلزم العقد المزوّد بتسليم بيانات دخول المسؤول والوثائق ونسخ الإعدادات عند انتهاء المدة.",
+        },
+      ],
+      blocks: [
+        {
+          p: "يحدد عقد الصيانة السنوي لتقنية المعلومات (AMC) من يصلح ماذا، وبأي سرعة، وبأي تكلفة خلال العام. ومعظم الخلافات تأتي من صياغة بدت عادية عند التوقيع. هذه هي البنود التي تستحق القراءة بعناية قبل أن توقع.",
+        },
+        { h2: "1. النطاق وقائمة الأجهزة" },
+        {
+          p: "يجب أن يذكر العقد المواقع والسيرفرات وأجهزة الشبكة وجدران الحماية والتخزين وأجهزة المستخدمين المشمولة. وما لا يرد في القائمة يكون غالباً خارج العقد. اسأل كيف تُضاف الأجهزة الجديدة خلال العام وكم تكلف.",
+        },
+        { h2: "2. زمن الاستجابة وزمن الحل" },
+        {
+          p: "زمن الاستجابة هو سرعة بدء المزوّد في العمل على البلاغ، وزمن الحل هو سرعة إصلاحه. تحقق هل يختلفان حسب الأولوية، وهل يسريان خارج ساعات العمل، وكيف يُعرَّف العطل الحرج.",
+        },
+        { h2: "3. الزيارات الوقائية والدعم عن بُعد" },
+        {
+          p: "ابحث عن عدد الزيارات الوقائية في السنة، وما تفحصه كل زيارة، وهل تستلم تقريراً بعدها. وتأكد أي دعم يتم عن بُعد، ومتى يحضر المهندس إلى الموقع.",
+        },
+        { h2: "4. الاستثناءات" },
+        {
+          p: "من الاستثناءات الشائعة: المشاريع الجديدة، واستعادة البيانات، والأضرار الناتجة عن الكهرباء أو سوء الاستخدام، والأنظمة المضافة بعد التوقيع. الاستثناءات طبيعية، لكن يجب أن تكون مكتوبة حتى لا تفاجأ.",
+        },
+        { h2: "5. قطع الغيار وضمان الشركة المصنّعة" },
+        {
+          p: "تحقق هل تشمل التكلفة قطع الغيار، ومن يطلب البدائل، ومن يتابع مطالبات الضمان مع الشركة المصنّعة. وإن لم تكن القطع مشمولة، فاسأل كيف تُعتمد وتُسعّر.",
+        },
+        { h2: "6. التقارير والسجلات" },
+        {
+          p: "يمنحك العقد الجيد سجلاً بالبلاغات والزيارات والتغييرات، وسجلاً للأصول بمواعيد الضمان والتراخيص. وتفيدك هذه السجلات حتى لو غيّرت المزوّد لاحقاً.",
+        },
+        { h2: "7. الصلاحيات وكلمات المرور والسرية" },
+        {
+          p: "سيملك المزوّد صلاحيات المسؤول على أنظمتك. لذلك يجب أن يغطي العقد السرية، وكيف تُضبط الصلاحيات، وأن بيانات دخول المسؤول ملك لك. وإن كانت هناك بيانات شخصية، فتأكد أن الشروط تتوافق مع التزاماتك وفق نظام حماية البيانات الشخصية في المملكة.",
+        },
+        { h2: "8. التجديد والإنهاء والتسليم" },
+        {
+          p: "اقرأ كيف يتجدد العقد، وما مدة الإشعار لإنهائه، وما يجب على المزوّد تسليمه في النهاية: بيانات الدخول والوثائق ونسخ الإعدادات. فالخروج المنظم يحميك إن لم تنجح العلاقة.",
+        },
+        { h2: "قائمة تحقق قبل التوقيع" },
+        {
+          ul: [
+            "كل موقع وجهاز تتوقع شموله مذكور في العقد.",
+            "زمن الاستجابة والأولويات مكتوبة.",
+            "عدد الزيارات الوقائية محدد.",
+            "الاستثناءات واضحة.",
+            "قطع الغيار والتعامل مع الضمان محددان.",
+            "بيانات دخول المسؤول والوثائق تبقى لديك.",
+            "شروط التجديد والإنهاء واضحة.",
+          ],
+        },
+        { h2: "كيف يساعدك بيت الأفكار" },
+        {
+          p: "يقدم بيت الأفكار عقود صيانة تقنية المعلومات في الدمام وجميع مناطق المملكة. نبدأ بتقييم أنظمتك، ونكتب النطاق والزيارات والاستثناءات بوضوح قبل التوقيع.",
+        },
+      ],
+    },
+  },
 };
