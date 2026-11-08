@@ -3076,4 +3076,304 @@ export const ARTICLE_BODIES: Record<
       ],
     },
   },
+  "nas-vs-san-vs-cloud-storage": {
+    en: {
+      summary: [
+        "A NAS shares files over the network and suits most small and mid-sized offices; a SAN gives servers fast block storage and suits virtualization clusters and busy databases; cloud storage removes hardware from your site and suits remote teams, branches and offsite copies.",
+        "Most Saudi companies end up with a mix: shared documents in Microsoft 365 or a NAS, virtual machines on a SAN or shared server storage, and backups copied to the cloud.",
+        "None of the three is a backup on its own. RAID, snapshots and sync protect against hardware faults, not against deletion or ransomware, so keep a separate, ideally immutable, backup copy.",
+      ],
+      faq: [
+        {
+          q: "Is a NAS enough for a small business?",
+          a: "For many offices of up to a few dozen users, yes. A business-grade NAS with RAID, user permissions, snapshots and a cloud backup copy handles shared folders, scanned documents and large design or CCTV files well. It becomes a limit when you need high availability for virtual machines or many users working on very large files at once.",
+        },
+        {
+          q: "Do I need a SAN if I run virtual machines?",
+          a: "Not always. One or two hosts often run well on internal server disks. Shared storage becomes important when you run a cluster of hosts and want virtual machines to move or restart on another host if one fails. That shared storage can be an iSCSI or Fibre Channel SAN, or a hyperconverged setup that pools the disks inside the servers.",
+        },
+        {
+          q: "Can Saudi companies keep their data in the cloud?",
+          a: "Yes, but check what the data is and where it will be stored. The Personal Data Protection Law (PDPL) sets conditions for transferring personal data outside the Kingdom, and organizations covered by NCA controls must follow the Cloud Cybersecurity Controls. Cloud regions inside Saudi Arabia, such as Google Cloud's Dammam region and Microsoft's Saudi Arabia East region, make in-country storage easier to arrange.",
+        },
+        {
+          q: "Does RAID replace backup?",
+          a: "No. RAID keeps storage running when a drive fails, but a deleted folder, a corrupted database or files encrypted by ransomware are deleted or encrypted on every drive in the array at once. You still need separate backup copies, at least one of them offsite or immutable.",
+        },
+      ],
+      blocks: [
+        {
+          p: "Every company reaches the point where files on individual PCs and a single old server are no longer enough. The usual question is whether to buy a NAS, invest in a SAN or move everything to the cloud. The three are not really competitors: they solve different problems, and most well-run IT environments in Saudi Arabia use more than one. This guide explains what each option is, where it fits, what it costs to run, and what to check about backup and data residency before you decide.",
+        },
+        { h2: "The three options in one paragraph each" },
+        {
+          ul: [
+            "NAS (network-attached storage): a storage device on your network that shares folders to users and servers over standard file protocols such as SMB for Windows and NFS for Linux. Users see it as mapped drives or shared folders.",
+            "SAN (storage area network): a dedicated network that gives servers block-level storage, so a server sees a SAN volume as if it were a local disk. It runs over iSCSI on Ethernet, Fibre Channel, or newer NVMe over Fabrics, and usually sits behind virtualization hosts and databases rather than serving users directly.",
+            "Cloud storage: capacity rented from a provider and reached over the internet, either as file sync and sharing (such as OneDrive and SharePoint in Microsoft 365), managed file shares (such as Azure Files), or object storage used for backups and archives.",
+          ],
+        },
+        { h2: "When a NAS makes sense" },
+        {
+          p: "A NAS is the simplest way to give a team central, permission-controlled shared folders. Business models from vendors such as Synology, QNAP, Dell and HPE include RAID, snapshots, Active Directory integration and built-in tools to copy data to the cloud. A NAS fits well when:",
+        },
+        {
+          ul: [
+            "Teams work with large files, such as engineering drawings, video, survey data or scanned archives, that are slow to sync from the cloud.",
+            "Internet bandwidth at the office is limited or shared by many users.",
+            "You need local storage for CCTV recordings or for a backup target on site.",
+            "You want predictable, one-time hardware cost instead of a monthly fee that grows with capacity.",
+          ],
+        },
+        {
+          p: "The limits are worth knowing. A single NAS is usually a single point of failure unless you buy a high-availability pair; performance drops when many users open large files at once on a 1 Gbps network; and someone has to patch its firmware, because internet-exposed NAS devices are a frequent ransomware target.",
+        },
+        { h2: "When a SAN makes sense" },
+        {
+          p: "A SAN is built for servers, not for end users. Its job is to give several virtualization hosts or database servers fast, shared block storage with low latency and high availability, usually with dual controllers, redundant paths and redundant switches so that no single failure stops the system. It fits when:",
+        },
+        {
+          ul: [
+            "You run a cluster of two or more VMware, Hyper-V or Proxmox hosts and want virtual machines to keep running or restart on another host after a failure.",
+            "ERP, accounting or other database systems need consistent, low-latency storage performance.",
+            "You need storage features such as replication to a second site for disaster recovery.",
+          ],
+        },
+        {
+          p: "A SAN costs more to buy and needs more skill to design and run: the storage network, multipathing, zoning or iSCSI configuration, and firmware updates all have to be done carefully. Smaller environments often get the same benefits from an entry-level iSCSI array or from hyperconverged infrastructure, which pools the disks inside the servers into shared storage.",
+        },
+        { h2: "When cloud storage makes sense" },
+        {
+          p: "Cloud storage moves the hardware, power, cooling and replacement cycle to a provider. For many companies the first step is already paid for: Microsoft 365 business plans include OneDrive and SharePoint, which handle everyday documents, sharing with external parties and access from home or a branch. Cloud storage fits when:",
+        },
+        {
+          ul: [
+            "Staff work from several sites, from home or on mobile devices.",
+            "You want an offsite copy of your backups without building a second server room.",
+            "Capacity needs are hard to predict and you would rather pay as you grow.",
+            "You prefer an operating cost to a capital purchase.",
+          ],
+        },
+        {
+          p: "The trade-offs are an ongoing monthly cost that rises with capacity and, for some services, with data retrieval; dependence on your internet link for every file you open; and the need to check where the data is physically stored.",
+        },
+        { h2: "Side-by-side comparison" },
+        {
+          ul: [
+            "What it serves: NAS serves files to users and servers; SAN serves disks to servers; cloud serves files, shares or objects over the internet.",
+            "Performance: SAN gives the lowest latency for databases and virtual machines; a NAS is fast on the local network; cloud speed depends on your internet connection.",
+            "Cost model: NAS and SAN are mainly upfront hardware plus support renewals; cloud is a monthly subscription.",
+            "Skills needed: NAS is the easiest to run; SAN needs storage and networking expertise; cloud needs good identity, permission and cost management.",
+            "Resilience: depends on design in every case; dual controllers for SAN, replicated pairs for NAS, and redundancy options chosen per cloud service.",
+          ],
+        },
+        { h2: "Data residency and regulation in Saudi Arabia" },
+        {
+          p: "Where the data sits matters as much as the technology. The Personal Data Protection Law, overseen by SDAIA, only allows personal data to be transferred outside the Kingdom under the conditions set out in its transfer regulation. Organizations covered by the National Cybersecurity Authority's controls must also apply the Cloud Cybersecurity Controls (CCC-2:2024), which set requirements for both cloud providers and their customers. In practice, keep sensitive and personal data on premises or in a cloud region inside the Kingdom unless you have confirmed that a transfer is allowed.",
+        },
+        {
+          p: "In-country options are growing. Google Cloud's Dammam region is available to Saudi-based customers who buy through its local reseller, CNTXT, and Microsoft has announced that its Saudi Arabia East region, in the Eastern Province, becomes available to customers in November 2026 for eligible workloads and data. Before relying on either for a compliance requirement, confirm which specific services store data in the region.",
+        },
+        { h2: "None of them is a backup" },
+        {
+          p: "A common and expensive mistake is treating the storage itself as protection. RAID protects against a failed drive. Snapshots help you roll back recent changes, but they live on the same device. OneDrive and SharePoint sync deletions and encrypted files just as quickly as good files. Whatever storage you choose, follow the 3-2-1 rule: three copies of your data, on two different types of media, with one copy offsite, and make at least one copy immutable so ransomware cannot delete it. Test restores regularly, not only backups.",
+        },
+        { h2: "Which combination fits your company?" },
+        {
+          ul: [
+            "Office of 10 to 50 users working mainly on Office documents: Microsoft 365 for documents and sharing, with a separate backup of Microsoft 365 data. Add a small NAS only if you have large files or CCTV recordings.",
+            "Engineering, design or media firm with large files: a NAS with 10 Gbps networking for working files, snapshots for quick recovery, and a cloud or offsite backup copy.",
+            "Company running ERP and several virtual servers: a cluster of hosts on a SAN or hyperconverged storage, a NAS or backup appliance as the local backup target, and an offsite copy in an in-Kingdom cloud region.",
+            "Company with several branches: cloud file shares or Microsoft 365 for collaboration, with local caching or a small NAS at branches where links are slow.",
+          ],
+        },
+        { h2: "Questions to answer before you buy" },
+        {
+          ul: [
+            "How much data do you have today, and how fast has it grown over the last two years?",
+            "Which applications need low-latency storage, and which only need shared folders?",
+            "How long can each system be down, and how much data can you afford to lose?",
+            "Is any of the data personal or classified, and where is it allowed to be stored?",
+            "What is your office internet bandwidth, and is there a backup link?",
+            "Who will patch, monitor and replace the storage over the next five years?",
+          ],
+        },
+        { h2: "How Thoughts House can help" },
+        {
+          p: "Thoughts House designs and supplies storage, server and backup solutions for companies across Saudi Arabia, from a single NAS for a growing office to shared storage for virtualization clusters and offsite backup in the cloud. We start with an assessment of your data, applications and recovery needs, then recommend a vendor-neutral design and support it after installation. Our cloud backup and data center services cover the full setup. We are based in Dammam, Saudi Arabia, and work on-site by appointment or remotely. Contact sales@thoughtshouse.com or +966 54 102 2995 to arrange a storage review.",
+        },
+      ],
+      sources: [
+        {
+          label: "NCA — Cloud Cybersecurity Controls (CCC-2:2024)",
+          url: "https://nca.gov.sa/en/regulatory-documents/controls-list/ccc/",
+        },
+        {
+          label: "SDAIA — Regulation on Personal Data Transfer outside the Kingdom",
+          url: "https://sdaia.gov.sa/Documents/RegulationonPersonalDataEN.pdf",
+        },
+        {
+          label: "Microsoft — Saudi Arabia East datacenter region availability",
+          url: "https://news.microsoft.com/source/emea/2026/08/microsoft-announces-saudi-arabia-east-datacenter-region-will-be-available-in-november-2026/",
+        },
+        {
+          label: "Google Cloud — Dammam region access",
+          url: "https://docs.cloud.google.com/docs/dammam-region-access",
+        },
+        {
+          label: "Microsoft Learn — What is Azure Files?",
+          url: "https://learn.microsoft.com/en-us/azure/storage/files/storage-files-introduction",
+        },
+      ],
+    },
+    ar: {
+      summary: [
+        "جهاز NAS يشارك الملفات عبر الشبكة ويناسب أغلب المكاتب الصغيرة والمتوسطة، وشبكة SAN تمنح السيرفرات تخزيناً سريعاً على مستوى الكتل وتناسب بيئات المحاكاة الافتراضية وقواعد البيانات المزدحمة، والتخزين السحابي يُخرج الأجهزة من مقرك ويناسب الفرق الموزعة والفروع والنسخ خارج الموقع.",
+        "تنتهي أغلب الشركات في المملكة إلى مزيج من الثلاثة: المستندات المشتركة في Microsoft 365 أو على NAS، والأجهزة الافتراضية على SAN أو تخزين مشترك للسيرفرات، والنسخ الاحتياطية في السحابة.",
+        "لا يُعد أيٌّ منها نسخاً احتياطياً بحد ذاته؛ فـ RAID واللقطات والمزامنة تحمي من أعطال الأجهزة لا من الحذف أو برامج الفدية، لذا احتفظ بنسخة احتياطية منفصلة، ويُفضّل أن تكون غير قابلة للتعديل.",
+      ],
+      faq: [
+        {
+          q: "هل يكفي جهاز NAS لشركة صغيرة؟",
+          a: "في كثير من المكاتب التي يصل عدد مستخدميها إلى بضع عشرات، نعم. فجهاز NAS مخصص للأعمال مع RAID وصلاحيات للمستخدمين ولقطات ونسخة احتياطية في السحابة يكفي للمجلدات المشتركة والمستندات الممسوحة ضوئياً وملفات التصميم أو تسجيلات الكاميرات الكبيرة. ويصبح عائقاً عندما تحتاج إلى توافر عالٍ للأجهزة الافتراضية، أو عندما يعمل عدد كبير من المستخدمين على ملفات ضخمة في الوقت نفسه.",
+        },
+        {
+          q: "هل أحتاج إلى SAN إذا كنت أشغّل أجهزة افتراضية؟",
+          a: "ليس دائماً. فسيرفر أو اثنان يعملان غالباً بشكل جيد على أقراصهما الداخلية. ويصبح التخزين المشترك مهماً عندما تشغّل مجموعة (Cluster) من السيرفرات وتريد أن تنتقل الأجهزة الافتراضية أو تعيد التشغيل على سيرفر آخر إذا تعطل أحدها. وقد يكون هذا التخزين المشترك شبكة SAN تعمل بـ iSCSI أو Fibre Channel، أو بنية متقاربة (Hyperconverged) تجمع أقراص السيرفرات في مخزن واحد.",
+        },
+        {
+          q: "هل يمكن للشركات السعودية حفظ بياناتها في السحابة؟",
+          a: "نعم، لكن تحقق من نوع البيانات ومكان تخزينها. فنظام حماية البيانات الشخصية يضع شروطاً لنقل البيانات الشخصية إلى خارج المملكة، والجهات المشمولة بضوابط الهيئة الوطنية للأمن السيبراني ملزمة بضوابط الأمن السيبراني للحوسبة السحابية. كما أن المناطق السحابية داخل المملكة، مثل منطقة Google Cloud في الدمام ومنطقة Microsoft المسماة Saudi Arabia East، تسهّل إبقاء البيانات داخل البلاد.",
+        },
+        {
+          q: "هل يغني RAID عن النسخ الاحتياطي؟",
+          a: "لا. يحافظ RAID على استمرار التخزين عند تعطل قرص، لكن المجلد المحذوف أو قاعدة البيانات التالفة أو الملفات التي شفّرتها برامج الفدية تُحذف أو تُشفَّر على جميع أقراص المصفوفة في اللحظة نفسها. لذلك ما زلت تحتاج نسخاً احتياطية منفصلة، إحداها على الأقل خارج الموقع أو غير قابلة للتعديل.",
+        },
+      ],
+      blocks: [
+        {
+          p: "تصل كل شركة إلى مرحلة لا تعود فيها الملفات المحفوظة على أجهزة الموظفين وسيرفر قديم واحد كافية. وعندها يتكرر السؤال: هل نشتري جهاز NAS، أم نستثمر في شبكة SAN، أم ننقل كل شيء إلى السحابة؟ والحقيقة أن الخيارات الثلاثة ليست متنافسة بالمعنى الدقيق، فكل منها يحل مشكلة مختلفة، ومعظم بيئات تقنية المعلومات المنظمة في المملكة تستخدم أكثر من خيار. يشرح هذا الدليل كل خيار، ومتى يناسب، وتكلفة تشغيله، وما يجب التحقق منه في النسخ الاحتياطي وبقاء البيانات داخل المملكة قبل اتخاذ القرار.",
+        },
+        { h2: "الخيارات الثلاثة باختصار" },
+        {
+          ul: [
+            "NAS (التخزين المتصل بالشبكة): جهاز تخزين على شبكتك يشارك المجلدات مع المستخدمين والسيرفرات عبر بروتوكولات الملفات المعتادة، مثل SMB لأنظمة Windows وNFS لأنظمة Linux، ويظهر للمستخدم كمحرك أقراص أو مجلد مشترك.",
+            "SAN (شبكة منطقة التخزين): شبكة مخصصة تمنح السيرفرات تخزيناً على مستوى الكتل (Block)، فيرى السيرفر وحدة التخزين كأنها قرص داخلي. تعمل عبر iSCSI على شبكة Ethernet أو عبر Fibre Channel أو تقنية NVMe over Fabrics الأحدث، وتخدم عادةً سيرفرات المحاكاة الافتراضية وقواعد البيانات لا المستخدمين مباشرة.",
+            "التخزين السحابي: سعة تستأجرها من مزوّد وتصل إليها عبر الإنترنت، سواء كانت مزامنة ومشاركة ملفات (مثل OneDrive وSharePoint في Microsoft 365)، أو مجلدات مشتركة مُدارة (مثل Azure Files)، أو تخزين كائنات يُستخدم للنسخ الاحتياطي والأرشفة.",
+          ],
+        },
+        { h2: "متى يكون NAS هو الخيار المناسب" },
+        {
+          p: "جهاز NAS هو أبسط طريقة لمنح فريق العمل مجلدات مركزية مشتركة بصلاحيات محددة. وتأتي الطرازات المخصصة للأعمال من شركات مثل Synology وQNAP وDell وHPE مع RAID واللقطات والتكامل مع Active Directory وأدوات مدمجة لنسخ البيانات إلى السحابة. ويناسب NAS في الحالات التالية:",
+        },
+        {
+          ul: [
+            "عندما يتعامل الفريق مع ملفات كبيرة، مثل المخططات الهندسية أو الفيديو أو بيانات المسح أو الأرشيف الممسوح ضوئياً، والتي تكون مزامنتها من السحابة بطيئة.",
+            "عندما يكون عرض نطاق الإنترنت في المكتب محدوداً أو مشتركاً بين عدد كبير من المستخدمين.",
+            "عندما تحتاج إلى تخزين محلي لتسجيلات الكاميرات أو وجهة محلية للنسخ الاحتياطي.",
+            "عندما تفضّل تكلفة أجهزة واضحة تُدفع مرة واحدة بدلاً من اشتراك شهري يرتفع مع السعة.",
+          ],
+        },
+        {
+          p: "ومن المهم معرفة حدوده أيضاً: جهاز NAS واحد يمثل غالباً نقطة تعطل وحيدة ما لم تشترِ زوجاً بتوافر عالٍ، ويتراجع أداؤه حين يفتح عدد كبير من المستخدمين ملفات ضخمة في آن واحد على شبكة 1 جيجابت، ويحتاج إلى من يحدّث نظامه باستمرار، لأن أجهزة NAS المكشوفة على الإنترنت هدف متكرر لبرامج الفدية.",
+        },
+        { h2: "متى تكون SAN هي الخيار المناسب" },
+        {
+          p: "صُممت شبكة SAN لخدمة السيرفرات لا المستخدمين. ومهمتها أن تمنح عدة سيرفرات محاكاة افتراضية أو قواعد بيانات تخزيناً مشتركاً سريعاً بزمن استجابة منخفض وتوافر عالٍ، وذلك عادةً بوحدتي تحكم ومسارات ومبدّلات احتياطية حتى لا يوقف عطل واحد النظام كله. وتناسب في الحالات التالية:",
+        },
+        {
+          ul: [
+            "عندما تشغّل مجموعة من سيرفرين أو أكثر بنظام VMware أو Hyper-V أو Proxmox، وتريد أن تستمر الأجهزة الافتراضية أو يُعاد تشغيلها على سيرفر آخر عند حدوث عطل.",
+            "عندما تحتاج أنظمة ERP أو المحاسبة أو قواعد البيانات الأخرى إلى أداء تخزين ثابت وزمن استجابة منخفض.",
+            "عندما تحتاج إلى مزايا مثل النسخ المتزامن إلى موقع ثانٍ للتعافي من الكوارث.",
+          ],
+        },
+        {
+          p: "تكلفة شراء SAN أعلى، وتصميمها وتشغيلها يحتاجان إلى خبرة أكبر؛ فشبكة التخزين وتعدد المسارات وإعدادات Zoning أو iSCSI وتحديثات البرامج الثابتة كلها تتطلب عناية. ولهذا تحصل البيئات الأصغر غالباً على الفوائد نفسها من مصفوفة iSCSI بمستوى مبتدئ، أو من البنية المتقاربة التي تجمع الأقراص الموجودة داخل السيرفرات في تخزين مشترك.",
+        },
+        { h2: "متى يكون التخزين السحابي هو الخيار المناسب" },
+        {
+          p: "ينقل التخزين السحابي عبء الأجهزة والكهرباء والتبريد ودورة الاستبدال إلى المزوّد. وكثير من الشركات دفعت بالفعل ثمن الخطوة الأولى، إذ تتضمن باقات Microsoft 365 للأعمال خدمتي OneDrive وSharePoint اللتين تكفيان للمستندات اليومية، والمشاركة مع جهات خارجية، والوصول من المنزل أو من الفروع. ويناسب التخزين السحابي في الحالات التالية:",
+        },
+        {
+          ul: [
+            "عندما يعمل الموظفون من عدة مواقع أو من المنزل أو من الأجهزة المحمولة.",
+            "عندما تريد نسخة احتياطية خارج الموقع دون بناء غرفة خوادم ثانية.",
+            "عندما يصعب توقع احتياجك من السعة وتفضّل الدفع بقدر النمو.",
+            "عندما تفضّل مصروفاً تشغيلياً على شراء رأسمالي.",
+          ],
+        },
+        {
+          p: "وفي المقابل، هناك تكلفة شهرية مستمرة ترتفع مع السعة، ومع استرجاع البيانات في بعض الخدمات، واعتماد على اتصال الإنترنت في كل ملف تفتحه، وضرورة التحقق من المكان الفعلي لتخزين البيانات.",
+        },
+        { h2: "مقارنة مباشرة" },
+        {
+          ul: [
+            "ما الذي يقدمه: NAS يقدم الملفات للمستخدمين والسيرفرات، وSAN تقدم أقراصاً للسيرفرات، والسحابة تقدم ملفات أو مجلدات مشتركة أو كائنات عبر الإنترنت.",
+            "الأداء: SAN تعطي أقل زمن استجابة لقواعد البيانات والأجهزة الافتراضية، وNAS سريع على الشبكة المحلية، وسرعة السحابة مرتبطة باتصال الإنترنت.",
+            "نموذج التكلفة: NAS وSAN تكلفة أجهزة مقدّمة في الأساس مع تجديد الدعم، والسحابة اشتراك شهري.",
+            "الخبرة المطلوبة: NAS الأسهل تشغيلاً، وSAN تحتاج خبرة في التخزين والشبكات، والسحابة تحتاج إدارة جيدة للهويات والصلاحيات والتكاليف.",
+            "الاعتمادية: تعتمد على التصميم في كل الحالات؛ وحدتا تحكم في SAN، وزوج متزامن في NAS، وخيارات احتياطية تختارها لكل خدمة سحابية.",
+          ],
+        },
+        { h2: "بقاء البيانات داخل المملكة والمتطلبات التنظيمية" },
+        {
+          p: "مكان البيانات لا يقل أهمية عن التقنية نفسها. فنظام حماية البيانات الشخصية، الذي تشرف عليه الهيئة السعودية للبيانات والذكاء الاصطناعي (سدايا)، لا يسمح بنقل البيانات الشخصية إلى خارج المملكة إلا وفق الشروط المحددة في لائحة نقل البيانات. كما يجب على الجهات المشمولة بضوابط الهيئة الوطنية للأمن السيبراني تطبيق ضوابط الأمن السيبراني للحوسبة السحابية (CCC-2:2024)، وهي تضع متطلبات على مزوّدي الخدمات السحابية وعملائهم معاً. وعملياً، احتفظ بالبيانات الحساسة والشخصية في مقرك أو في منطقة سحابية داخل المملكة، ما لم تتأكد من أن النقل مسموح.",
+        },
+        {
+          p: "والخيارات داخل المملكة في ازدياد. فمنطقة Google Cloud في الدمام متاحة للعملاء المقيمين في المملكة عبر موزّعها المحلي CNTXT، وأعلنت Microsoft أن منطقتها Saudi Arabia East في المنطقة الشرقية تصبح متاحة للعملاء في نوفمبر 2026 لأحمال العمل والبيانات المؤهلة. وقبل الاعتماد على أي منهما لتلبية متطلب تنظيمي، تأكد من الخدمات المحددة التي تحفظ بياناتها داخل تلك المنطقة.",
+        },
+        { h2: "لا شيء منها يُعد نسخاً احتياطياً" },
+        {
+          p: "من الأخطاء الشائعة والمكلفة اعتبار التخزين نفسه وسيلة حماية. فـ RAID يحمي من تعطل قرص، واللقطات تساعد على التراجع عن التغييرات الحديثة لكنها محفوظة على الجهاز نفسه، وOneDrive وSharePoint يزامنان الحذف والملفات المشفّرة بالسرعة نفسها التي يزامنان بها الملفات السليمة. وأياً كان التخزين الذي تختاره، طبّق قاعدة 3-2-1: ثلاث نسخ من بياناتك، على نوعين مختلفين من الوسائط، وإحداها خارج الموقع، واجعل نسخة واحدة على الأقل غير قابلة للتعديل حتى لا تستطيع برامج الفدية حذفها. واختبر الاستعادة بانتظام، لا النسخ فقط.",
+        },
+        { h2: "أي مزيج يناسب شركتك؟" },
+        {
+          ul: [
+            "مكتب من 10 إلى 50 مستخدماً يعمل غالباً على مستندات Office: استخدم Microsoft 365 للمستندات والمشاركة مع نسخ احتياطي مستقل لبياناته، وأضف جهاز NAS صغيراً فقط إذا كانت لديك ملفات كبيرة أو تسجيلات كاميرات.",
+            "شركة هندسية أو تصميم أو إنتاج إعلامي بملفات كبيرة: جهاز NAS مع شبكة 10 جيجابت لملفات العمل، ولقطات للاستعادة السريعة، ونسخة احتياطية في السحابة أو خارج الموقع.",
+            "شركة تشغّل نظام ERP وعدة سيرفرات افتراضية: مجموعة سيرفرات على SAN أو تخزين متقارب، وجهاز NAS أو جهاز نسخ احتياطي كوجهة محلية للنسخ، ونسخة خارج الموقع في منطقة سحابية داخل المملكة.",
+            "شركة لها عدة فروع: مجلدات سحابية مشتركة أو Microsoft 365 للعمل المشترك، مع تخزين مؤقت محلي أو جهاز NAS صغير في الفروع ذات الاتصال البطيء.",
+          ],
+        },
+        { h2: "أسئلة تجيب عنها قبل الشراء" },
+        {
+          ul: [
+            "كم حجم بياناتك اليوم، وبأي سرعة نمت خلال السنتين الماضيتين؟",
+            "أي التطبيقات تحتاج إلى تخزين بزمن استجابة منخفض، وأيها يكفيه مجلد مشترك؟",
+            "كم من الوقت يمكن أن يتوقف كل نظام، وكم من البيانات يمكنك تحمّل فقدانها؟",
+            "هل بين بياناتك بيانات شخصية أو مصنّفة، وأين يُسمح بتخزينها؟",
+            "ما سرعة الإنترنت في مكتبك، وهل لديك خط احتياطي؟",
+            "من سيتولى تحديث التخزين ومراقبته واستبداله خلال السنوات الخمس القادمة؟",
+          ],
+        },
+        { h2: "كيف يساعدك بيت الأفكار" },
+        {
+          p: "يصمم بيت الأفكار ويورّد حلول التخزين والسيرفرات والنسخ الاحتياطي للشركات في جميع مناطق المملكة، من جهاز NAS واحد لمكتب في طور النمو، إلى التخزين المشترك لمجموعات المحاكاة الافتراضية، والنسخ الاحتياطي خارج الموقع في السحابة. نبدأ بتقييم بياناتك وتطبيقاتك واحتياجات الاستعادة لديك، ثم نوصي بتصميم محايد تجاه الشركات المصنّعة وندعمه بعد التركيب، وتغطي خدماتنا للنسخ الاحتياطي السحابي ومراكز البيانات الإعداد كاملاً. مقرنا في الدمام بالمملكة العربية السعودية، ونقدّم خدماتنا في موقعك بموعد مسبق أو عن بُعد. تواصل معنا عبر sales@thoughtshouse.com أو على الرقم ⁦+966 54 102 2995⁩ لترتيب مراجعة لبيئة التخزين لديك.",
+        },
+      ],
+      sources: [
+        {
+          label: "الهيئة الوطنية للأمن السيبراني — ضوابط الأمن السيبراني للحوسبة السحابية (CCC-2:2024)",
+          url: "https://nca.gov.sa/en/regulatory-documents/controls-list/ccc/",
+        },
+        {
+          label: "سدايا — لائحة نقل البيانات الشخصية إلى خارج المملكة",
+          url: "https://sdaia.gov.sa/Documents/RegulationonPersonalDataEN.pdf",
+        },
+        {
+          label: "Microsoft — إتاحة منطقة Saudi Arabia East",
+          url: "https://news.microsoft.com/source/emea/2026/08/microsoft-announces-saudi-arabia-east-datacenter-region-will-be-available-in-november-2026/",
+        },
+        {
+          label: "Google Cloud — الوصول إلى منطقة الدمام",
+          url: "https://docs.cloud.google.com/docs/dammam-region-access",
+        },
+        {
+          label: "Microsoft Learn — ما هي خدمة Azure Files؟",
+          url: "https://learn.microsoft.com/en-us/azure/storage/files/storage-files-introduction",
+        },
+      ],
+    },
+  },
 };

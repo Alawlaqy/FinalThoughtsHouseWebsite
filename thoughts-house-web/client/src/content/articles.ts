@@ -26,7 +26,8 @@ export type ArticleSlug =
   | "microsoft-365-e3-vs-e5-vs-e7"
   | "how-to-choose-it-company-dammam"
   | "what-is-it-amc-saudi-arabia"
-  | "how-to-read-it-amc-contract";
+  | "how-to-read-it-amc-contract"
+  | "nas-vs-san-vs-cloud-storage";
 
 interface LocalizedArticle {
   title: string;
@@ -44,6 +45,26 @@ export interface Article {
 }
 
 export const ARTICLES: Article[] = [
+  {
+    slug: "nas-vs-san-vs-cloud-storage",
+    published: "2026-11-08",
+    image: "/images/cloud-backup-1280.webp",
+    service: "cloud-backup",
+    content: {
+      en: {
+        title: "NAS vs SAN vs Cloud Storage: Where Should Company Data Live?",
+        metaTitle: "NAS vs SAN vs Cloud Storage for Business Data",
+        description:
+          "NAS, SAN or cloud storage for company data? Compare how each works, performance, cost, backup and data residency in Saudi Arabia, and when to combine them.",
+      },
+      ar: {
+        title: "NAS أم SAN أم التخزين السحابي: أين تحفظ بيانات شركتك؟",
+        metaTitle: "الفرق بين NAS وSAN والتخزين السحابي | بيت الأفكار",
+        description:
+          "مقارنة عملية بين NAS وSAN والتخزين السحابي لبيانات الشركات: طريقة العمل والأداء والتكلفة والنسخ الاحتياطي وبقاء البيانات داخل المملكة، ومتى تجمع بينها.",
+      },
+    },
+  },
   {
     slug: "how-to-read-it-amc-contract",
     published: "2026-11-05",
