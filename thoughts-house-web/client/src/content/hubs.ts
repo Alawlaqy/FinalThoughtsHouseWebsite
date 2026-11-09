@@ -41,13 +41,13 @@ export const CONTACT_PAGE: Record<
   en: {
     metaTitle: "Contact Thoughts House | IT Company in Dammam",
     metaDescription:
-      "Contact Thoughts House in Dammam for a quotation or technical advice by phone, WhatsApp or email. Service by appointment, on-site or remote.",
+      "Contact Thoughts House in Dammam for a quotation or technical advice by phone, WhatsApp or email. We work on-site and remotely across Saudi Arabia.",
     h1: "Contact Thoughts House",
     summary:
       "Tell us what you need and we will reply with a clear next step. You can call, send a WhatsApp message, email us or use the form below.",
-    address:
-      "4028 Al Malek Khaled, As Suq Dist., Dammam 32242-8181, Saudi Arabia",
-    appointment: "Service by appointment, on-site or remote.",
+    address: "Dammam, Eastern Province, Saudi Arabia",
+    appointment:
+      "We work on-site at your premises and remotely. Meetings by appointment, at your site or online.",
     hours:
       "Sunday to Thursday, 9:00 am to 5:00 pm. Closed Friday and Saturday.",
     mapLabel: "View on Google Maps",
@@ -55,13 +55,13 @@ export const CONTACT_PAGE: Record<
   ar: {
     metaTitle: "تواصل مع بيت الأفكار | شركة تقنية معلومات في الدمام",
     metaDescription:
-      "تواصل مع بيت الأفكار في الدمام لطلب عرض سعر أو استشارة تقنية عبر الهاتف أو واتساب أو البريد. الخدمة بموعد مسبق، ميدانياً أو عن بُعد.",
+      "تواصل مع بيت الأفكار في الدمام لطلب عرض سعر أو استشارة تقنية عبر الهاتف أو واتساب أو البريد. نعمل ميدانياً وعن بُعد في جميع مناطق المملكة.",
     h1: "تواصل مع بيت الأفكار",
     summary:
       "أخبرنا بما تحتاج إليه وسنرد عليك بالخطوة التالية. يمكنك الاتصال، أو مراسلتنا على واتساب، أو البريد، أو استخدام النموذج أدناه.",
-    address:
-      "⁦4028⁩ الملك خالد، حي السوق، الدمام ⁦32242-8181⁩، المملكة العربية السعودية",
-    appointment: "الخدمة بموعد مسبق، ميدانياً أو عن بُعد.",
+    address: "الدمام، المنطقة الشرقية، المملكة العربية السعودية",
+    appointment:
+      "نعمل ميدانياً في موقعكم وعن بُعد. الاجتماعات بموعد مسبق، في موقعكم أو عبر الإنترنت.",
     hours:
       "الأحد إلى الخميس، من 9:00 صباحاً إلى 5:00 مساءً. الجمعة والسبت إجازة.",
     mapLabel: "الموقع على خرائط Google",

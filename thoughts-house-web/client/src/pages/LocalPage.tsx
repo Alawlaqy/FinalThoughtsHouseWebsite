@@ -141,12 +141,12 @@ export default function LocalPage({ slug }: { slug: LocalSlug }) {
             <div className="p-6 bg-white rounded-2xl border border-gray-100 self-start">
               <h2 className="flex items-center gap-2 text-xl font-extrabold text-[#1E293B] mb-4">
                 <MapPin className="w-5 h-5 text-[#2563EB]" aria-hidden="true" />
-                {lang === "ar" ? "مكتبنا في الدمام" : "Our Dammam office"}
+                {lang === "ar" ? "مقرّنا في الدمام" : "Based in Dammam"}
               </h2>
               <p className="text-[#334155] mb-1">
                 {lang === "ar"
-                  ? "\u20664028\u2069 الملك خالد، حي السوق، الدمام \u206632242-8181\u2069، المملكة العربية السعودية. الخدمة بموعد مسبق، ميدانياً أو عن بُعد."
-                  : "4028 Al Malek Khaled, As Suq Dist., Dammam 32242-8181, Saudi Arabia. Service by appointment, on-site or remote."}
+                  ? "الدمام، المنطقة الشرقية، المملكة العربية السعودية. نعمل ميدانياً في موقعكم وعن بُعد، والاجتماعات بموعد مسبق."
+                  : "Dammam, Eastern Province, Saudi Arabia. We work on-site at your premises and remotely; meetings by appointment."}
               </p>
               <p className="text-[#334155] mb-4" dir="ltr">
                 <a

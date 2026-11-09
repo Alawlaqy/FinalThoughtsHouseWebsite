@@ -159,8 +159,8 @@ const translations: Record<string, Record<Language, string>> = {
   "contact.send": { en: "Send Message", ar: "إرسال الرسالة" },
   "contact.info": { en: "Contact Information", ar: "معلومات التواصل" },
   "contact.address": {
-    en: "4028 Al Malek Khaled, As Suq Dist., Dammam 32242-8181, Saudi Arabia",
-    ar: "\u20664028\u2069 الملك خالد، حي السوق، الدمام \u206632242-8181\u2069، المملكة العربية السعودية",
+    en: "Dammam, Eastern Province, Saudi Arabia",
+    ar: "الدمام، المنطقة الشرقية، المملكة العربية السعودية",
   },
   "contact.phoneField": {
     en: "Phone (optional)",

@@ -792,7 +792,7 @@ export const SERVICES: Record<ServiceSlug, Service> = {
           },
           {
             q: "Do you provide IT AMC services in Riyadh and Jeddah?",
-            a: "Yes. Our office is in Dammam and we provide IT maintenance contracts across Saudi Arabia, including Riyadh and Jeddah, combining remote support and monitoring with scheduled on-site visits.",
+            a: "Yes. We are based in Dammam and we provide IT maintenance contracts across Saudi Arabia, including Riyadh and Jeddah, combining remote support and monitoring with scheduled on-site visits.",
           },
           {
             q: "Can you maintain equipment that you did not supply?",
@@ -880,7 +880,7 @@ export const SERVICES: Record<ServiceSlug, Service> = {
           },
           {
             q: "هل تقدمون عقود صيانة في الرياض وجدة؟",
-            a: "نعم. مكتبنا في الدمام، ونقدم عقود الصيانة في جميع مناطق المملكة، ومنها الرياض وجدة، بدعم ومراقبة عن بُعد وزيارات ميدانية مجدولة.",
+            a: "نعم. مقرّنا في الدمام، ونقدم عقود الصيانة في جميع مناطق المملكة، ومنها الرياض وجدة، بدعم ومراقبة عن بُعد وزيارات ميدانية مجدولة.",
           },
           {
             q: "هل تصونون أجهزة لم تورّدوها؟",

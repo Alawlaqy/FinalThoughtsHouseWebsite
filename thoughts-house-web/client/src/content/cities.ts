@@ -24,11 +24,11 @@ export const CITY_PAGES: LocalPage[] = [
       en: {
         metaTitle: "IT Company in Khobar | Thoughts House",
         metaDescription:
-          "IT company serving Khobar from our nearby Dammam office: IT support contracts, cybersecurity, networks, Wi-Fi and IT hardware supply for Khobar businesses.",
+          "IT company serving Khobar from our base in nearby Dammam: IT support contracts, cybersecurity, networks, Wi-Fi and IT hardware supply for Khobar businesses.",
         name: "IT Company in Khobar",
         h1: "IT Company & IT Support in Khobar",
         summary:
-          "Thoughts House serves businesses in Al Khobar from our office in nearby Dammam, with IT support and maintenance contracts, cybersecurity, networks and Wi-Fi, and IT hardware and licensing supply.",
+          "Thoughts House serves businesses in Al Khobar from our base in nearby Dammam, with IT support and maintenance contracts, cybersecurity, networks and Wi-Fi, and IT hardware and licensing supply.",
         intro:
           "Khobar is home to corporate offices, retail, hospitality and professional services firms. Our engineers are based minutes away in Dammam, so site surveys, installations and on-site support in Khobar are part of our everyday work.",
         offersTitle: "IT services for Khobar businesses",
@@ -69,7 +69,7 @@ export const CITY_PAGES: LocalPage[] = [
         guide: [
           {
             title: "How we serve Khobar from Dammam",
-            text: "Our office is in Dammam, about 25 km from central Khobar. Most day-to-day support is remote, and site visits in Khobar, such as surveys, installations and maintenance visits, are scheduled in advance.",
+            text: "We are based in Dammam, about 25 km from central Khobar. Most day-to-day support is remote, and site visits in Khobar, such as surveys, installations and maintenance visits, are scheduled in advance.",
           },
           {
             title: "Projects we can help with in Khobar",
@@ -96,7 +96,7 @@ export const CITY_PAGES: LocalPage[] = [
         faq: [
           {
             q: "Do you have an office in Khobar?",
-            a: "No. We serve Khobar from our Dammam office, about 25 km away, with remote support and site visits scheduled in advance.",
+            a: "No. We serve Khobar from our Dammam base, about 25 km away, with remote support and site visits scheduled in advance.",
           },
           {
             q: "Do you provide on-site IT support in Khobar?",
@@ -115,11 +115,11 @@ export const CITY_PAGES: LocalPage[] = [
       ar: {
         metaTitle: "شركة تقنية معلومات في الخبر | بيت الأفكار",
         metaDescription:
-          "شركة تقنية معلومات تخدم الخبر من مكتبنا القريب في الدمام: عقود صيانة ودعم فني، وأمن سيبراني، وشبكات وWi-Fi، وتوريد أجهزة وتراخيص للشركات.",
+          "شركة تقنية معلومات تخدم الخبر من مقرّنا القريب في الدمام: عقود صيانة ودعم فني، وأمن سيبراني، وشبكات وWi-Fi، وتوريد أجهزة وتراخيص للشركات.",
         name: "شركة تقنية معلومات في الخبر",
         h1: "شركة تقنية معلومات ودعم فني في الخبر",
         summary:
-          "يخدم بيت الأفكار الشركات في الخبر من مكتبنا القريب في الدمام، بعقود الدعم الفني والصيانة، والأمن السيبراني، والشبكات وWi-Fi، وتوريد الأجهزة والتراخيص.",
+          "يخدم بيت الأفكار الشركات في الخبر من مقرّنا القريب في الدمام، بعقود الدعم الفني والصيانة، والأمن السيبراني، والشبكات وWi-Fi، وتوريد الأجهزة والتراخيص.",
         intro:
           "تضم الخبر مكاتب الشركات والمحلات والفنادق ومكاتب الخدمات المهنية. ومهندسونا على بُعد دقائق في الدمام، فالمسح الميداني والتركيب والدعم في الموقع بالخبر جزء من عملنا اليومي.",
         offersTitle: "خدمات تقنية المعلومات لشركات الخبر",
@@ -160,7 +160,7 @@ export const CITY_PAGES: LocalPage[] = [
         guide: [
           {
             title: "كيف نخدم الخبر من الدمام",
-            text: "مكتبنا في الدمام، على بعد نحو 25 كم من وسط الخبر. ويتم معظم الدعم اليومي عن بُعد، أما الزيارات الميدانية في الخبر، مثل المعاينة والتركيب وزيارات الصيانة، فتُجدول مسبقاً.",
+            text: "مقرّنا في الدمام، على بعد نحو 25 كم من وسط الخبر. ويتم معظم الدعم اليومي عن بُعد، أما الزيارات الميدانية في الخبر، مثل المعاينة والتركيب وزيارات الصيانة، فتُجدول مسبقاً.",
           },
           {
             title: "مشاريع نساعد فيها في الخبر",
@@ -187,7 +187,7 @@ export const CITY_PAGES: LocalPage[] = [
         faq: [
           {
             q: "هل لديكم مكتب في الخبر؟",
-            a: "لا. نخدم الخبر من مكتبنا في الدمام، على بعد نحو 25 كم، بدعم عن بُعد وزيارات ميدانية مجدولة مسبقاً.",
+            a: "لا. نخدم الخبر من مقرّنا في الدمام، على بعد نحو 25 كم، بدعم عن بُعد وزيارات ميدانية مجدولة مسبقاً.",
           },
           {
             q: "هل تقدمون دعماً فنياً في الموقع بالخبر؟",
@@ -216,11 +216,11 @@ export const CITY_PAGES: LocalPage[] = [
       en: {
         metaTitle: "IT Company in Dhahran | Thoughts House",
         metaDescription:
-          "IT services in Dhahran from our Dammam office: cybersecurity, networks, IT support contracts, servers and IT supply for companies and contractors.",
+          "IT services in Dhahran from our Dammam base: cybersecurity, networks, IT support contracts, servers and IT supply for companies and contractors.",
         name: "IT Company in Dhahran",
         h1: "IT Services & Cybersecurity in Dhahran",
         summary:
-          "Thoughts House provides IT services to organizations in Dhahran from our nearby Dammam office: cybersecurity, networks, servers and storage, IT support contracts and IT hardware supply.",
+          "Thoughts House provides IT services to organizations in Dhahran from our base in nearby Dammam: cybersecurity, networks, servers and storage, IT support contracts and IT hardware supply.",
         intro:
           "Many organizations in Dhahran work in or alongside the energy sector, where security expectations are high and downtime is costly. We help them secure, connect and support their IT, with engineers who can be on site from Dammam.",
         offersTitle: "IT services in Dhahran",
@@ -276,11 +276,11 @@ export const CITY_PAGES: LocalPage[] = [
       ar: {
         metaTitle: "شركة تقنية معلومات في الظهران | بيت الأفكار",
         metaDescription:
-          "خدمات تقنية المعلومات في الظهران من مكتبنا في الدمام: أمن سيبراني، وشبكات، وعقود دعم فني، وسيرفرات، وتوريد أجهزة للشركات والمقاولين.",
+          "خدمات تقنية المعلومات في الظهران من مقرّنا في الدمام: أمن سيبراني، وشبكات، وعقود دعم فني، وسيرفرات، وتوريد أجهزة للشركات والمقاولين.",
         name: "شركة تقنية معلومات في الظهران",
         h1: "خدمات تقنية المعلومات والأمن السيبراني في الظهران",
         summary:
-          "يقدم بيت الأفكار خدمات تقنية المعلومات للمنشآت في الظهران من مكتبنا القريب في الدمام: الأمن السيبراني، والشبكات، والسيرفرات والتخزين، وعقود الدعم الفني، وتوريد الأجهزة.",
+          "يقدم بيت الأفكار خدمات تقنية المعلومات للمنشآت في الظهران من مقرّنا القريب في الدمام: الأمن السيبراني، والشبكات، والسيرفرات والتخزين، وعقود الدعم الفني، وتوريد الأجهزة.",
         intro:
           "تعمل منشآت كثيرة في الظهران في قطاع الطاقة أو معه، حيث توقعات الأمن عالية والتوقف مكلف. نساعدها على حماية أنظمتها وربطها ودعمها، بمهندسين يحضرون إلى الموقع من الدمام.",
         offersTitle: "خدمات تقنية المعلومات في الظهران",
@@ -350,7 +350,7 @@ export const CITY_PAGES: LocalPage[] = [
         name: "IT Company in Jubail",
         h1: "IT & Network Solutions in Jubail",
         summary:
-          "Thoughts House supports plants, contractors, warehouses and offices in Jubail with networks and Wi-Fi, structured cabling, cybersecurity, servers and IT support contracts, delivered from our Dammam office around 100 km away.",
+          "Thoughts House supports plants, contractors, warehouses and offices in Jubail with networks and Wi-Fi, structured cabling, cybersecurity, servers and IT support contracts, delivered from our Dammam base around 100 km away.",
         intro:
           "Jubail's industrial city brings large sites, harsh environments and many contractors working side by side. Networks must cover wide areas, security must separate office and industrial systems, and support must be reliable. We plan on-site work in Jubail in advance and support customers remotely in between.",
         offersTitle: "IT services in Jubail",
@@ -410,7 +410,7 @@ export const CITY_PAGES: LocalPage[] = [
         name: "شركة تقنية معلومات في الجبيل",
         h1: "حلول تقنية المعلومات والشبكات في الجبيل",
         summary:
-          "يدعم بيت الأفكار المصانع والمقاولين والمستودعات والمكاتب في الجبيل بالشبكات وWi-Fi، وتمديدات الشبكات، والأمن السيبراني، والسيرفرات، وعقود الدعم الفني، من مكتبنا في الدمام على بُعد نحو 100 كم.",
+          "يدعم بيت الأفكار المصانع والمقاولين والمستودعات والمكاتب في الجبيل بالشبكات وWi-Fi، وتمديدات الشبكات، والأمن السيبراني، والسيرفرات، وعقود الدعم الفني، من مقرّنا في الدمام على بُعد نحو 100 كم.",
         intro:
           "تضم مدينة الجبيل الصناعية مواقع كبيرة وبيئات قاسية ومقاولين كثيرين يعملون جنباً إلى جنب. فيجب أن تغطي الشبكات مساحات واسعة، وأن تفصل الحماية بين أنظمة المكاتب والأنظمة الصناعية، وأن يكون الدعم موثوقاً. نخطط للعمل الميداني في الجبيل مسبقاً، وندعم العملاء عن بُعد فيما بين الزيارات.",
         offersTitle: "خدمات تقنية المعلومات في الجبيل",
@@ -611,7 +611,7 @@ export const CITY_PAGES: LocalPage[] = [
         name: "IT Services in Riyadh",
         h1: "IT Services & IT Support for Riyadh Businesses",
         summary:
-          "Thoughts House serves organizations in Riyadh from our Dammam office: IT support and maintenance contracts delivered remotely, cybersecurity and NCA ECC alignment, IT hardware and licensing supply, and on-site visits scheduled in advance for surveys, installation and maintenance.",
+          "Thoughts House serves organizations in Riyadh from our Dammam base: IT support and maintenance contracts delivered remotely, cybersecurity and NCA ECC alignment, IT hardware and licensing supply, and on-site visits scheduled in advance for surveys, installation and maintenance.",
         intro:
           "Many Riyadh companies, especially those with branches in the Eastern Province or across the Kingdom, want one IT partner for every site. Most support, monitoring and configuration work is done remotely, equipment is delivered to your office, and our engineers travel to Riyadh for planned on-site work.",
         offersTitle: "IT services for Riyadh organizations",
@@ -652,7 +652,7 @@ export const CITY_PAGES: LocalPage[] = [
         faq: [
           {
             q: "Do you have an office in Riyadh?",
-            a: "No. Our office is in Dammam. We serve Riyadh customers remotely and schedule on-site visits in advance for surveys, installation and maintenance.",
+            a: "No. We are based in Dammam. We serve Riyadh customers remotely and schedule on-site visits in advance for surveys, installation and maintenance.",
           },
           {
             q: "Can you provide an IT maintenance contract (AMC) in Riyadh?",
@@ -671,7 +671,7 @@ export const CITY_PAGES: LocalPage[] = [
         name: "خدمات تقنية المعلومات في الرياض",
         h1: "خدمات تقنية المعلومات والدعم الفني لشركات الرياض",
         summary:
-          "يخدم بيت الأفكار المنشآت في الرياض من مكتبنا في الدمام: عقود الدعم الفني والصيانة عن بُعد، والأمن السيبراني والتوافق مع الضوابط الأساسية، وتوريد الأجهزة والتراخيص، مع زيارات ميدانية مجدولة مسبقاً للمسح والتركيب والصيانة.",
+          "يخدم بيت الأفكار المنشآت في الرياض من مقرّنا في الدمام: عقود الدعم الفني والصيانة عن بُعد، والأمن السيبراني والتوافق مع الضوابط الأساسية، وتوريد الأجهزة والتراخيص، مع زيارات ميدانية مجدولة مسبقاً للمسح والتركيب والصيانة.",
         intro:
           "تريد شركات كثيرة في الرياض، خاصةً التي لديها فروع في المنطقة الشرقية أو في أنحاء المملكة، شريك تقنية معلومات واحداً لكل مواقعها. ننجز معظم أعمال الدعم والمراقبة والإعداد عن بُعد، ونوصل الأجهزة إلى مكتبك، ويسافر مهندسونا إلى الرياض للأعمال الميدانية المخطط لها.",
         offersTitle: "خدمات تقنية المعلومات لمنشآت الرياض",
@@ -712,7 +712,7 @@ export const CITY_PAGES: LocalPage[] = [
         faq: [
           {
             q: "هل لديكم مكتب في الرياض؟",
-            a: "لا. مكتبنا في الدمام، ونخدم عملاء الرياض عن بُعد مع زيارات ميدانية مجدولة مسبقاً للمسح والتركيب والصيانة.",
+            a: "لا. مقرّنا في الدمام، ونخدم عملاء الرياض عن بُعد مع زيارات ميدانية مجدولة مسبقاً للمسح والتركيب والصيانة.",
           },
           {
             q: "هل تقدمون عقد صيانة تقنية معلومات في الرياض؟",
@@ -742,7 +742,7 @@ export const CITY_PAGES: LocalPage[] = [
         name: "IT Services in Jeddah",
         h1: "IT Services & IT Support for Jeddah Businesses",
         summary:
-          "Thoughts House serves organizations in Jeddah from our Dammam office: remote IT support and maintenance contracts, multi-branch networks, cybersecurity, IT hardware and licensing supply, and on-site visits scheduled in advance.",
+          "Thoughts House serves organizations in Jeddah from our Dammam base: remote IT support and maintenance contracts, multi-branch networks, cybersecurity, IT hardware and licensing supply, and on-site visits scheduled in advance.",
         intro:
           "Jeddah's trade, logistics, retail and hospitality companies often run several branches that need the same reliable network, security and support. We manage and support them remotely, deliver equipment to each site, and schedule on-site visits for installations and maintenance.",
         offersTitle: "IT services for Jeddah organizations",
@@ -783,7 +783,7 @@ export const CITY_PAGES: LocalPage[] = [
         faq: [
           {
             q: "Do you have an office in Jeddah?",
-            a: "No. Our office is in Dammam. We serve Jeddah customers remotely and schedule on-site visits in advance for surveys, installation and maintenance.",
+            a: "No. We are based in Dammam. We serve Jeddah customers remotely and schedule on-site visits in advance for surveys, installation and maintenance.",
           },
           {
             q: "Can you support a company with branches in Jeddah and other cities?",
@@ -802,7 +802,7 @@ export const CITY_PAGES: LocalPage[] = [
         name: "خدمات تقنية المعلومات في جدة",
         h1: "خدمات تقنية المعلومات والدعم الفني لشركات جدة",
         summary:
-          "يخدم بيت الأفكار المنشآت في جدة من مكتبنا في الدمام: عقود الدعم الفني والصيانة عن بُعد، وشبكات الفروع المتعددة، والأمن السيبراني، وتوريد الأجهزة والتراخيص، مع زيارات ميدانية مجدولة مسبقاً.",
+          "يخدم بيت الأفكار المنشآت في جدة من مقرّنا في الدمام: عقود الدعم الفني والصيانة عن بُعد، وشبكات الفروع المتعددة، والأمن السيبراني، وتوريد الأجهزة والتراخيص، مع زيارات ميدانية مجدولة مسبقاً.",
         intro:
           "تدير شركات التجارة والخدمات اللوجستية والتجزئة والضيافة في جدة غالباً عدة فروع تحتاج الشبكة والحماية والدعم نفسها. نحن ندير هذه الفروع وندعمها عن بُعد، ونوصل الأجهزة لكل موقع، ونجدول زيارات ميدانية للتركيب والصيانة.",
         offersTitle: "خدمات تقنية المعلومات لمنشآت جدة",
@@ -843,7 +843,7 @@ export const CITY_PAGES: LocalPage[] = [
         faq: [
           {
             q: "هل لديكم مكتب في جدة؟",
-            a: "لا. مكتبنا في الدمام، ونخدم عملاء جدة عن بُعد مع زيارات ميدانية مجدولة مسبقاً للمسح والتركيب والصيانة.",
+            a: "لا. مقرّنا في الدمام، ونخدم عملاء جدة عن بُعد مع زيارات ميدانية مجدولة مسبقاً للمسح والتركيب والصيانة.",
           },
           {
             q: "هل تدعمون شركة لها فروع في جدة ومدن أخرى؟",

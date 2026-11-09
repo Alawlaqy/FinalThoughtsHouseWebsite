@@ -79,7 +79,7 @@ const DAMMAM_PAGES: LocalPage[] = [
         name: "IT Company in Dammam",
         h1: "IT Company & System Integrator in Dammam",
         summary:
-          "Thoughts House is an IT company and system integrator at 4028 Al Malek Khaled, As Suq Dist., Dammam 32242-8181. We design, supply, install and support IT for businesses in Dammam, Khobar, Dhahran and the rest of the Eastern Province, and serve customers across Saudi Arabia.",
+          "Thoughts House is an IT company and system integrator based in Dammam. We design, supply, install and support IT for businesses in Dammam, Khobar, Dhahran and the rest of the Eastern Province, and serve customers across Saudi Arabia.",
         intro:
           "Businesses in Dammam usually need more than one IT supplier: someone for laptops and servers, someone for the network, someone for security and someone for support. We bring these under one team, so one company is responsible for the design, the equipment, the installation and the support afterwards.",
         offersTitle: "What we do for Dammam businesses",
@@ -155,11 +155,11 @@ const DAMMAM_PAGES: LocalPage[] = [
         faq: [
           {
             q: "Is Thoughts House an IT company in Dammam?",
-            a: "Yes. Thoughts House is an IT company, system integrator and IT reseller at 4028 Al Malek Khaled, As Suq Dist., Dammam 32242-8181. It provides cybersecurity, networks, servers and storage, cloud and backup, IT hardware supply and IT support to businesses in Dammam and across Saudi Arabia.",
+            a: "Yes. Thoughts House is an IT company, system integrator and IT reseller based in Dammam. It provides cybersecurity, networks, servers and storage, cloud and backup, IT hardware supply and IT support to businesses in Dammam and across Saudi Arabia.",
           },
           {
-            q: "Can I visit the Thoughts House office in Dammam?",
-            a: "Our office is at 4028 Al Malek Khaled, As Suq Dist., Dammam 32242-8181, and service is by appointment. Our engineers usually come to you: contact us by phone, email or the contact form and we will schedule an on-site visit or remote session.",
+            q: "How do I meet the Thoughts House team in Dammam?",
+            a: "Our team comes to you. Contact us by phone, WhatsApp, email or the contact form, and we will arrange a meeting or site survey at your premises, or an online session. Our working hours are Sunday to Thursday, 9:00 am to 5:00 pm.",
           },
           {
             q: "Do you only work with companies in Dammam?",
@@ -175,7 +175,7 @@ const DAMMAM_PAGES: LocalPage[] = [
           },
           {
             q: "Do you serve Khobar and Dhahran from Dammam?",
-            a: "Yes. We serve Khobar, Dhahran, Qatif, Jubail, Ras Tanura and Al-Ahsa from our Dammam office, with site visits scheduled in advance.",
+            a: "Yes. We serve Khobar, Dhahran, Qatif, Jubail, Ras Tanura and Al-Ahsa from our Dammam base, with site visits scheduled in advance.",
           },
         ],
       },
@@ -186,7 +186,7 @@ const DAMMAM_PAGES: LocalPage[] = [
         name: "شركة تقنية معلومات في الدمام",
         h1: "شركة تقنية معلومات وتكامل أنظمة في الدمام",
         summary:
-          "بيت الأفكار شركة تقنية معلومات وتكامل أنظمة، مكتبها في \u20664028\u2069 الملك خالد، حي السوق، الدمام \u206632242-8181\u2069. نصمم ونورّد وننفذ وندعم أنظمة تقنية المعلومات للشركات في الدمام والخبر والظهران وبقية المنطقة الشرقية، ونخدم العملاء في جميع مناطق المملكة.",
+          "بيت الأفكار شركة تقنية معلومات وتكامل أنظمة مقرّها الدمام. نصمم ونورّد وننفذ وندعم أنظمة تقنية المعلومات للشركات في الدمام والخبر والظهران وبقية المنطقة الشرقية، ونخدم العملاء في جميع مناطق المملكة.",
         intro:
           "تحتاج الشركات في الدمام عادةً إلى أكثر من مورّد: واحد للأجهزة والسيرفرات، وآخر للشبكات، وثالث للحماية، ورابع للدعم. نحن نجمعها في فريق واحد، فتكون جهة واحدة مسؤولة عن التصميم والأجهزة والتركيب والدعم بعد التشغيل.",
         offersTitle: "ما نقدمه للشركات في الدمام",
@@ -262,11 +262,11 @@ const DAMMAM_PAGES: LocalPage[] = [
         faq: [
           {
             q: "هل بيت الأفكار شركة تقنية معلومات في الدمام؟",
-            a: "نعم. بيت الأفكار شركة تقنية معلومات وتكامل أنظمة وتوريد أجهزة، مكتبها في \u20664028\u2069 الملك خالد، حي السوق، الدمام \u206632242-8181\u2069. تقدم الأمن السيبراني والشبكات والسيرفرات والتخزين والحلول السحابية والنسخ الاحتياطي وتوريد الأجهزة والدعم الفني للشركات في الدمام وجميع مناطق المملكة.",
+            a: "نعم. بيت الأفكار شركة تقنية معلومات وتكامل أنظمة وتوريد أجهزة مقرّها الدمام. تقدم الأمن السيبراني والشبكات والسيرفرات والتخزين والحلول السحابية والنسخ الاحتياطي وتوريد الأجهزة والدعم الفني للشركات في الدمام وجميع مناطق المملكة.",
           },
           {
-            q: "هل يمكنني زيارة مكتب بيت الأفكار في الدمام؟",
-            a: "مكتبنا في \u20664028\u2069 الملك خالد، حي السوق، الدمام \u206632242-8181\u2069، والخدمة بموعد مسبق. وغالباً يأتي فريقنا إليك: تواصل معنا بالهاتف أو البريد أو نموذج التواصل وسنحدد زيارة ميدانية أو جلسة دعم عن بُعد.",
+            q: "كيف ألتقي بفريق بيت الأفكار في الدمام؟",
+            a: "يأتي فريقنا إليك. تواصل معنا بالهاتف أو واتساب أو البريد أو نموذج التواصل، وسنرتب اجتماعاً أو معاينة في موقعك، أو جلسة عبر الإنترنت. ساعات العمل من الأحد إلى الخميس، من 9:00 صباحاً إلى 5:00 مساءً.",
           },
           {
             q: "هل تعملون مع الشركات في الدمام فقط؟",
@@ -282,7 +282,7 @@ const DAMMAM_PAGES: LocalPage[] = [
           },
           {
             q: "هل تخدمون الخبر والظهران من الدمام؟",
-            a: "نعم. نخدم الخبر والظهران والقطيف والجبيل ورأس تنورة والأحساء من مكتبنا في الدمام، بزيارات ميدانية مجدولة مسبقاً.",
+            a: "نعم. نخدم الخبر والظهران والقطيف والجبيل ورأس تنورة والأحساء من مقرّنا في الدمام، بزيارات ميدانية مجدولة مسبقاً.",
           },
         ],
       },
@@ -903,7 +903,7 @@ const DAMMAM_PAGES: LocalPage[] = [
         ],
         whyTitle: "Why choose us for cabling in Dammam",
         why: [
-          "Site surveys in Dammam, Khobar and Dhahran are easy to schedule from our Dammam office.",
+          "Site surveys in Dammam, Khobar and Dhahran are easy to schedule from our Dammam base.",
           "One team for cabling, switches, Wi-Fi, cameras and firewall, so the network works when the cabling is finished.",
           "Every link labeled and tested, with documentation handed over.",
           "Cabling planned around your fit-out contractor's schedule.",
@@ -986,7 +986,7 @@ const DAMMAM_PAGES: LocalPage[] = [
         ],
         whyTitle: "لماذا تختارنا لتمديد الشبكات في الدمام",
         why: [
-          "يسهل جدولة المعاينة في الدمام والخبر والظهران من مكتبنا في الدمام.",
+          "يسهل جدولة المعاينة في الدمام والخبر والظهران من مقرّنا في الدمام.",
           "فريق واحد للتمديدات والسويتشات وWi-Fi والكاميرات وجدار الحماية، فتعمل الشبكة فور انتهاء التمديد.",
           "ترقيم واختبار كل نقطة، وتسليم الوثائق.",
           "تخطيط التمديدات بحسب جدول مقاول التشطيب.",

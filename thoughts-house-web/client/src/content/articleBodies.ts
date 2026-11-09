@@ -2625,7 +2625,7 @@ export const ARTICLE_BODIES: Record<
         },
         { h2: "How Thoughts House works in Dammam" },
         {
-          p: "Thoughts House is an IT company and system integrator with an office in Dammam. We design, supply, install and support IT for businesses across the Eastern Province and Saudi Arabia, and our Our Work page shows examples of our projects without naming clients.",
+          p: "Thoughts House is an IT company and system integrator based in Dammam. We design, supply, install and support IT for businesses across the Eastern Province and Saudi Arabia, and our Our Work page shows examples of our projects without naming clients.",
         },
       ],
     },
@@ -2683,7 +2683,7 @@ export const ARTICLE_BODIES: Record<
         },
         { h2: "كيف يعمل بيت الأفكار في الدمام" },
         {
-          p: "بيت الأفكار شركة تقنية معلومات وتكامل أنظمة، مكتبها في الدمام. نصمم ونورّد ونركّب وندعم أنظمة تقنية المعلومات للشركات في المنطقة الشرقية وجميع مناطق المملكة، وتعرض صفحة أعمالنا نماذج من مشاريعنا دون ذكر أسماء العملاء.",
+          p: "بيت الأفكار شركة تقنية معلومات وتكامل أنظمة مقرّها الدمام. نصمم ونورّد ونركّب وندعم أنظمة تقنية المعلومات للشركات في المنطقة الشرقية وجميع مناطق المملكة، وتعرض صفحة أعمالنا نماذج من مشاريعنا دون ذكر أسماء العملاء.",
         },
       ],
     },
@@ -2739,7 +2739,7 @@ export const ARTICLE_BODIES: Record<
         },
         { h2: "How Thoughts House provides IT AMC" },
         {
-          p: "Thoughts House provides IT maintenance contracts across Saudi Arabia from our Dammam office, combining remote support with scheduled site visits. We start with an assessment of your systems, including equipment we did not supply.",
+          p: "Thoughts House provides IT maintenance contracts across Saudi Arabia from our Dammam base, combining remote support with scheduled site visits. We start with an assessment of your systems, including equipment we did not supply.",
         },
       ],
     },
@@ -2793,7 +2793,7 @@ export const ARTICLE_BODIES: Record<
         },
         { h2: "كيف يقدم بيت الأفكار عقود الصيانة" },
         {
-          p: "يقدم بيت الأفكار عقود صيانة تقنية المعلومات في جميع مناطق المملكة من مكتبنا في الدمام، بدعم عن بُعد وزيارات ميدانية مجدولة. ونبدأ بتقييم أنظمتك، بما فيها الأجهزة التي لم نورّدها.",
+          p: "يقدم بيت الأفكار عقود صيانة تقنية المعلومات في جميع مناطق المملكة من مقرّنا في الدمام، بدعم عن بُعد وزيارات ميدانية مجدولة. ونبدأ بتقييم أنظمتك، بما فيها الأجهزة التي لم نورّدها.",
         },
       ],
     },
@@ -3209,7 +3209,8 @@ export const ARTICLE_BODIES: Record<
           url: "https://nca.gov.sa/en/regulatory-documents/controls-list/ccc/",
         },
         {
-          label: "SDAIA — Regulation on Personal Data Transfer outside the Kingdom",
+          label:
+            "SDAIA — Regulation on Personal Data Transfer outside the Kingdom",
           url: "https://sdaia.gov.sa/Documents/RegulationonPersonalDataEN.pdf",
         },
         {
@@ -3354,7 +3355,8 @@ export const ARTICLE_BODIES: Record<
       ],
       sources: [
         {
-          label: "الهيئة الوطنية للأمن السيبراني — ضوابط الأمن السيبراني للحوسبة السحابية (CCC-2:2024)",
+          label:
+            "الهيئة الوطنية للأمن السيبراني — ضوابط الأمن السيبراني للحوسبة السحابية (CCC-2:2024)",
           url: "https://nca.gov.sa/en/regulatory-documents/controls-list/ccc/",
         },
         {

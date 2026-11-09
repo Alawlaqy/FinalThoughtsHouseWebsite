@@ -333,10 +333,8 @@ const organization = {
   telephone: COMPANY.phone,
   address: {
     "@type": "PostalAddress",
-    streetAddress: COMPANY.streetAddress,
     addressLocality: COMPANY.locality,
     addressRegion: COMPANY.region,
-    postalCode: COMPANY.postalCode,
     addressCountry: COMPANY.country,
   },
   hasMap: COMPANY.mapUrl,

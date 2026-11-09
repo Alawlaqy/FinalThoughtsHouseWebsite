@@ -41,7 +41,7 @@ export default function ContactPage() {
                 aria-hidden="true"
               />
               <h2 className="font-bold text-[#1E293B] mb-2">
-                {lang === "ar" ? "العنوان" : "Address"}
+                {lang === "ar" ? "الموقع" : "Location"}
               </h2>
               <p className="text-sm text-[#64748B] leading-relaxed mb-2">
                 {c.address}. {c.appointment}
