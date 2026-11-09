@@ -23,7 +23,7 @@ export const COMPANY = {
 };
 
 export const PARTNER_BRANDS =
-  "Sophos, Cisco, Palo Alto Networks, CrowdStrike, Check Point, Trend Micro, Microsoft, Microsoft Azure, AWS, Dell, HP, Lenovo, Supermicro, ASUS, NVIDIA, Apple, Veeam, Veritas, Acronis, Backblaze, NetApp, Pure Storage, Western Digital, Seagate, Buffalo, QNAP";
+  "Sophos, Fortinet, Cisco, Huawei, Avaya, Palo Alto Networks, CrowdStrike, Check Point, Trend Micro, Microsoft, Microsoft Azure, AWS, Dell, HP, Lenovo, Supermicro, ASUS, NVIDIA, Apple, Veeam, Veritas, Acronis, Backblaze, NetApp, Pure Storage, Western Digital, Seagate, Buffalo, QNAP";
 
 interface AboutCopy {
   metaTitle: string;

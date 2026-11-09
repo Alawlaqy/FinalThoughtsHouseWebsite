@@ -40,7 +40,7 @@
   "date": "2026-11-02"
  },
  "/about/": {
-  "hash": "740cdf88f2242871",
+  "hash": "1ece7718964ca229",
   "date": "2026-11-09"
  },
  "/saudi-arabia/": {
@@ -48,8 +48,8 @@
   "date": "2026-11-02"
  },
  "/brands/": {
-  "hash": "26b763677284f8ab",
-  "date": "2026-11-02"
+  "hash": "8f473c72c3e4e9c5",
+  "date": "2026-11-09"
  },
  "/projects/": {
   "hash": "6a1288e81b7ba160",
@@ -132,48 +132,60 @@
   "date": "2026-11-02"
  },
  "/brands/dell/": {
-  "hash": "5d0319b63deff097",
-  "date": "2026-11-04"
+  "hash": "5853ac8fbe9070fc",
+  "date": "2026-11-09"
  },
  "/brands/hp/": {
-  "hash": "5dda9a92d12beca6",
-  "date": "2026-11-02"
+  "hash": "9307b4f92b70347d",
+  "date": "2026-11-09"
  },
  "/brands/lenovo/": {
-  "hash": "68e62e759da28cf0",
-  "date": "2026-11-02"
+  "hash": "4aea9acd6b1181f7",
+  "date": "2026-11-09"
  },
  "/brands/cisco/": {
-  "hash": "a0d87fe2a7badb3c",
-  "date": "2026-11-02"
+  "hash": "9ef32d0b963dad82",
+  "date": "2026-11-09"
  },
  "/brands/sophos/": {
-  "hash": "c03b036bf7d5a334",
-  "date": "2026-11-02"
+  "hash": "e61d7278f6292c77",
+  "date": "2026-11-09"
  },
  "/brands/microsoft/": {
-  "hash": "5438bc7800561841",
-  "date": "2026-11-02"
+  "hash": "7e8102a3b19ed0fd",
+  "date": "2026-11-09"
  },
  "/brands/palo-alto-networks/": {
-  "hash": "27e5b8a7ed3622db",
-  "date": "2026-11-02"
+  "hash": "9d341e1139a61d41",
+  "date": "2026-11-09"
  },
  "/brands/veeam/": {
-  "hash": "63398eb0222b292c",
-  "date": "2026-11-02"
+  "hash": "d3c02a98b05d6c7e",
+  "date": "2026-11-09"
  },
  "/brands/dynamics-365/": {
-  "hash": "51a74bafc1106d04",
-  "date": "2026-11-02"
+  "hash": "363df3a1b37d3bad",
+  "date": "2026-11-09"
  },
  "/brands/qnap/": {
-  "hash": "a1c4848783b967b4",
-  "date": "2026-11-02"
+  "hash": "d414ec8e938dce09",
+  "date": "2026-11-09"
  },
  "/brands/veritas/": {
-  "hash": "8a5fbfe4b3e2df82",
-  "date": "2026-11-02"
+  "hash": "0f61ad587a8cc233",
+  "date": "2026-11-09"
+ },
+ "/brands/fortinet/": {
+  "hash": "42d6f4e668f17241",
+  "date": "2026-11-09"
+ },
+ "/brands/huawei/": {
+  "hash": "cc6f8e826e2a3893",
+  "date": "2026-11-09"
+ },
+ "/brands/avaya/": {
+  "hash": "2282a0b0d7327e94",
+  "date": "2026-11-09"
  },
  "/insights/": {
   "hash": "03f67da136c9ea8e",
@@ -308,7 +320,7 @@
   "date": "2026-11-02"
  },
  "/ar/about/": {
-  "hash": "4bd1db4f7a4a0679",
+  "hash": "e3653c4f6932aec3",
   "date": "2026-11-09"
  },
  "/ar/saudi-arabia/": {
@@ -316,8 +328,8 @@
   "date": "2026-11-02"
  },
  "/ar/brands/": {
-  "hash": "8b489fd93645fcc1",
-  "date": "2026-11-02"
+  "hash": "08468bd03819d7a3",
+  "date": "2026-11-09"
  },
  "/ar/projects/": {
   "hash": "640ae498d11bc84a",
@@ -400,48 +412,60 @@
   "date": "2026-11-02"
  },
  "/ar/brands/dell/": {
-  "hash": "e82bc07c83467946",
-  "date": "2026-11-04"
+  "hash": "586ca0ac07ed386b",
+  "date": "2026-11-09"
  },
  "/ar/brands/hp/": {
-  "hash": "c750df684c74707a",
-  "date": "2026-11-02"
+  "hash": "8e8f67a35711160f",
+  "date": "2026-11-09"
  },
  "/ar/brands/lenovo/": {
-  "hash": "4431fd3c0586e3d6",
-  "date": "2026-11-02"
+  "hash": "4280a6aa61997f04",
+  "date": "2026-11-09"
  },
  "/ar/brands/cisco/": {
-  "hash": "0c95f9b3b3ad73b3",
-  "date": "2026-11-02"
+  "hash": "9b42d7c9496ee0c5",
+  "date": "2026-11-09"
  },
  "/ar/brands/sophos/": {
-  "hash": "c1b0a9b02c7316c2",
-  "date": "2026-11-02"
+  "hash": "268ca5b7dc089541",
+  "date": "2026-11-09"
  },
  "/ar/brands/microsoft/": {
-  "hash": "67e7877243962485",
-  "date": "2026-11-02"
+  "hash": "eec15a5ba2618eef",
+  "date": "2026-11-09"
  },
  "/ar/brands/palo-alto-networks/": {
-  "hash": "5d591aeaf8e39958",
-  "date": "2026-11-02"
+  "hash": "fe11ccc245a6d600",
+  "date": "2026-11-09"
  },
  "/ar/brands/veeam/": {
-  "hash": "6504f7c1c89c89af",
-  "date": "2026-11-02"
+  "hash": "3c554cedfbfe8486",
+  "date": "2026-11-09"
  },
  "/ar/brands/dynamics-365/": {
-  "hash": "74caae4b36fe16c6",
-  "date": "2026-11-02"
+  "hash": "5c646eabc8b1ac60",
+  "date": "2026-11-09"
  },
  "/ar/brands/qnap/": {
-  "hash": "b1025806b2f26044",
-  "date": "2026-11-02"
+  "hash": "f6faa7842de71a9c",
+  "date": "2026-11-09"
  },
  "/ar/brands/veritas/": {
-  "hash": "391d5a8a0bcffc18",
-  "date": "2026-11-02"
+  "hash": "dad979af49fca857",
+  "date": "2026-11-09"
+ },
+ "/ar/brands/fortinet/": {
+  "hash": "6482b34621176086",
+  "date": "2026-11-09"
+ },
+ "/ar/brands/huawei/": {
+  "hash": "aec38f3c9c825d24",
+  "date": "2026-11-09"
+ },
+ "/ar/brands/avaya/": {
+  "hash": "088bc240e522a073",
+  "date": "2026-11-09"
  },
  "/ar/insights/": {
   "hash": "61ae55cf6bcd3de0",

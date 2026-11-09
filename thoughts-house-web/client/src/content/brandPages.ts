@@ -17,7 +17,10 @@ export type BrandSlug =
   | "veeam"
   | "dynamics-365"
   | "qnap"
-  | "veritas";
+  | "veritas"
+  | "fortinet"
+  | "huawei"
+  | "avaya";
 
 interface BrandPageCopy {
   metaTitle: string;
@@ -1101,6 +1104,289 @@ export const BRAND_PAGES: BrandPage[] = [
           {
             q: "ما البيانات المطلوبة لعرض سعر التجديد؟",
             a: "نحتاج إلى اسم المنتج ونوع الترخيص والكمية أو السعة وتاريخ الانتهاء الحالي.",
+          },
+        ],
+      },
+    },
+  },
+  {
+    slug: "fortinet",
+    name: "Fortinet",
+    services: ["firewall-installation", "cybersecurity"],
+    content: {
+      en: {
+        metaTitle:
+          "Fortinet FortiGate Supplier in Saudi Arabia | Thoughts House",
+        metaDescription:
+          "Fortinet FortiGate firewalls supplied, installed and supported in Dammam and across Saudi Arabia, with license renewals, VPN setup and ongoing support.",
+        h1: "Fortinet FortiGate Firewall Supply in Saudi Arabia",
+        summary:
+          "Thoughts House supplies, installs and supports Fortinet FortiGate firewalls for government and private organizations in Dammam and across Saudi Arabia.",
+        intro:
+          "A FortiGate protects the edge of your network, controls internet access and gives staff secure remote access. The right model depends on your internet speed, the number of users and sites, and the security services you turn on.",
+        linesTitle: "Fortinet solutions we supply",
+        lines: [
+          {
+            title: "FortiGate firewalls",
+            text: "Next-generation firewalls for head offices, branches and data centers.",
+          },
+          {
+            title: "Security subscriptions",
+            text: "FortiGuard licenses for web filtering, intrusion prevention and antivirus, with renewal dates tracked.",
+          },
+          {
+            title: "Secure remote access",
+            text: "VPN for staff working from home or other sites.",
+          },
+          {
+            title: "Installation and support",
+            text: "Configuration, migration from an older firewall, and ongoing support.",
+          },
+        ],
+        faq: [
+          {
+            q: "Can you supply Fortinet firewalls in Saudi Arabia?",
+            a: "Yes. We supply FortiGate firewalls across Saudi Arabia, as supply only or with installation, configuration and support.",
+          },
+          {
+            q: "Does a FortiGate need a subscription?",
+            a: "The firewall works without one, but the security services such as web filtering, intrusion prevention and antivirus need an active FortiGuard license. We size the bundle with the hardware and remind you before it expires.",
+          },
+          {
+            q: "Fortinet or Sophos: which should we choose?",
+            a: "Both are strong next-generation firewalls. The choice usually depends on the features you need, the throughput, your team's familiarity and the total cost over the license term. We can quote both for comparison.",
+          },
+        ],
+      },
+      ar: {
+        metaTitle:
+          "مورد جدران حماية Fortinet FortiGate في السعودية | بيت الأفكار",
+        metaDescription:
+          "توريد جدران الحماية Fortinet FortiGate وتركيبها ودعمها في الدمام وجميع مناطق المملكة، مع تجديد التراخيص وإعداد VPN والدعم المستمر.",
+        h1: "توريد جدران حماية Fortinet FortiGate في السعودية",
+        summary:
+          "يورّد بيت الأفكار جدران الحماية Fortinet FortiGate ويركّبها ويدعمها للجهات الحكومية والشركات الخاصة في الدمام وجميع مناطق المملكة.",
+        intro:
+          "يحمي جهاز FortiGate حدود شبكتك، ويضبط الوصول إلى الإنترنت، ويوفر للموظفين اتصالاً آمناً عن بُعد. ويعتمد الطراز المناسب على سرعة الإنترنت وعدد المستخدمين والفروع وخدمات الحماية التي تفعّلها.",
+        linesTitle: "حلول Fortinet التي نورّدها",
+        lines: [
+          {
+            title: "جدران حماية FortiGate",
+            text: "جدران حماية من الجيل التالي للمقرات الرئيسية والفروع ومراكز البيانات.",
+          },
+          {
+            title: "اشتراكات الحماية",
+            text: "تراخيص FortiGuard لتصفية المواقع ومنع الاختراق ومكافحة الفيروسات، مع متابعة مواعيد التجديد.",
+          },
+          {
+            title: "الاتصال الآمن عن بُعد",
+            text: "VPN للموظفين الذين يعملون من المنزل أو من فروع أخرى.",
+          },
+          {
+            title: "التركيب والدعم",
+            text: "الإعداد، والانتقال من جدار حماية قديم، والدعم المستمر.",
+          },
+        ],
+        faq: [
+          {
+            q: "هل تورّدون جدران حماية Fortinet في السعودية؟",
+            a: "نعم. نورّد جدران FortiGate في جميع مناطق المملكة، توريداً فقط أو مع التركيب والإعداد والدعم.",
+          },
+          {
+            q: "هل يحتاج FortiGate إلى اشتراك؟",
+            a: "يعمل الجهاز دون اشتراك، لكن خدمات الحماية مثل تصفية المواقع ومنع الاختراق ومكافحة الفيروسات تحتاج إلى ترخيص FortiGuard فعّال. نحدد الباقة مع الجهاز وننبهك قبل انتهائها.",
+          },
+          {
+            q: "Fortinet أم Sophos: أيهما نختار؟",
+            a: "كلاهما جدار حماية قوي من الجيل التالي. ويعتمد الاختيار عادة على المزايا المطلوبة والسرعة وخبرة فريقك والتكلفة الإجمالية طوال مدة الترخيص. ويمكننا تقديم عرض للاثنين للمقارنة.",
+          },
+        ],
+      },
+    },
+  },
+  {
+    slug: "huawei",
+    name: "Huawei",
+    services: ["network-infrastructure", "it-supply"],
+    content: {
+      en: {
+        metaTitle:
+          "Huawei Network Switches Supplier in Saudi Arabia | Thoughts House",
+        metaDescription:
+          "Huawei network switches and other Huawei products supplied, installed and configured for organizations in Dammam and across Saudi Arabia.",
+        h1: "Huawei Switch Supply in Saudi Arabia",
+        summary:
+          "Thoughts House supplies, installs and configures Huawei network switches and other Huawei products for organizations in Dammam and across Saudi Arabia.",
+        intro:
+          "Switches connect every computer, phone, camera and access point in your building. Choosing the right Huawei models means matching port counts, speeds and PoE power to what you connect today and what you plan to add.",
+        linesTitle: "Huawei products we supply",
+        lines: [
+          {
+            title: "Access switches",
+            text: "Switches for users, phones, cameras and access points, with PoE where needed.",
+          },
+          {
+            title: "Core and aggregation switches",
+            text: "Higher-capacity switches that connect floors, server rooms and buildings.",
+          },
+          {
+            title: "Other Huawei products",
+            text: "Send us the model or requirement and we will quote it.",
+          },
+          {
+            title: "Installation and configuration",
+            text: "Rack mounting, VLANs, uplinks and documentation of the setup.",
+          },
+        ],
+        faq: [
+          {
+            q: "Can you supply Huawei switches in Saudi Arabia?",
+            a: "Yes. We supply Huawei switches and other Huawei products across Saudi Arabia, as supply only or with installation and configuration.",
+          },
+          {
+            q: "How do we choose the right switch?",
+            a: "Count the devices you need to connect now and in the next few years, check which need PoE power, and decide the uplink speed to the core. We can survey the site and size the switches for you.",
+          },
+          {
+            q: "Can Huawei switches work with our existing network?",
+            a: "In most cases, yes. Standard protocols let Huawei switches work with equipment from other vendors. We check your current setup before recommending models.",
+          },
+        ],
+      },
+      ar: {
+        metaTitle: "مورد سويتشات Huawei في السعودية | بيت الأفكار",
+        metaDescription:
+          "توريد سويتشات Huawei ومنتجات Huawei الأخرى وتركيبها وإعدادها للمنشآت في الدمام وجميع مناطق المملكة.",
+        h1: "توريد سويتشات Huawei في السعودية",
+        summary:
+          "يورّد بيت الأفكار سويتشات الشبكات من Huawei ومنتجات Huawei الأخرى، ويركّبها ويُعدّها للمنشآت في الدمام وجميع مناطق المملكة.",
+        intro:
+          "تربط السويتشات كل جهاز كمبيوتر وهاتف وكاميرا ونقطة وصول في المبنى. واختيار طرازات Huawei المناسبة يعني مطابقة عدد المنافذ والسرعات وطاقة PoE لما تربطه اليوم وما تخطط لإضافته.",
+        linesTitle: "منتجات Huawei التي نورّدها",
+        lines: [
+          {
+            title: "سويتشات الوصول",
+            text: "سويتشات للمستخدمين والهواتف والكاميرات ونقاط الوصول، مع PoE عند الحاجة.",
+          },
+          {
+            title: "سويتشات المركز والتجميع",
+            text: "سويتشات بسعة أعلى تربط الطوابق وغرف السيرفرات والمباني.",
+          },
+          {
+            title: "منتجات Huawei الأخرى",
+            text: "أرسل لنا الطراز أو المتطلبات ونقدم لك عرض سعر.",
+          },
+          {
+            title: "التركيب والإعداد",
+            text: "التركيب في الرف، وإعداد VLAN والوصلات، وتوثيق الإعدادات.",
+          },
+        ],
+        faq: [
+          {
+            q: "هل تورّدون سويتشات Huawei في السعودية؟",
+            a: "نعم. نورّد سويتشات Huawei ومنتجات Huawei الأخرى في جميع مناطق المملكة، توريداً فقط أو مع التركيب والإعداد.",
+          },
+          {
+            q: "كيف نختار السويتش المناسب؟",
+            a: "احسب الأجهزة التي تحتاج إلى ربطها الآن وفي السنوات القادمة، وحدد ما يحتاج منها إلى طاقة PoE، وسرعة الربط مع المركز. ويمكننا معاينة الموقع وتحديد السويتشات لك.",
+          },
+          {
+            q: "هل تعمل سويتشات Huawei مع شبكتنا الحالية؟",
+            a: "غالباً نعم، فالبروتوكولات القياسية تسمح لسويتشات Huawei بالعمل مع أجهزة الشركات الأخرى. ونراجع إعداداتك الحالية قبل اقتراح الطرازات.",
+          },
+        ],
+      },
+    },
+  },
+  {
+    slug: "avaya",
+    name: "Avaya",
+    services: ["network-infrastructure", "it-supply"],
+    content: {
+      en: {
+        metaTitle:
+          "Avaya Communication Devices Supplier in Saudi Arabia | Thoughts House",
+        metaDescription:
+          "Avaya phones and communication devices supplied and installed for organizations in Dammam and across Saudi Arabia, including additions to existing Avaya systems.",
+        h1: "Avaya Communication Devices in Saudi Arabia",
+        summary:
+          "Thoughts House supplies and installs Avaya phones and communication devices for organizations in Dammam and across Saudi Arabia.",
+        intro:
+          "Many organizations in Saudi Arabia run Avaya phone systems and need to add devices, replace old ones or expand to a new floor or branch. We help you choose devices that fit your system and get them installed.",
+        linesTitle: "Avaya products we supply",
+        lines: [
+          {
+            title: "Avaya IP phones",
+            text: "Desk phones for offices, reception and meeting rooms.",
+          },
+          {
+            title: "Communication devices",
+            text: "Avaya devices for your phone system, matched to your current setup.",
+          },
+          {
+            title: "Expansion of existing systems",
+            text: "Additional devices for new staff, floors or branches.",
+          },
+          {
+            title: "Installation and setup",
+            text: "Installation, network readiness and handover to your team.",
+          },
+        ],
+        faq: [
+          {
+            q: "Can you supply Avaya devices in Saudi Arabia?",
+            a: "Yes. We supply and install Avaya phones and communication devices across Saudi Arabia.",
+          },
+          {
+            q: "Can you add phones to our existing Avaya system?",
+            a: "Usually, yes. Send us your current system details and we will confirm which devices are compatible before we quote.",
+          },
+          {
+            q: "Does our network need changes for IP phones?",
+            a: "IP phones need network ports, often PoE power and a voice VLAN for good call quality. We check your switches and cabling as part of the job.",
+          },
+        ],
+      },
+      ar: {
+        metaTitle: "مورد أجهزة اتصالات Avaya في السعودية | بيت الأفكار",
+        metaDescription:
+          "توريد هواتف وأجهزة اتصالات Avaya وتركيبها للمنشآت في الدمام وجميع مناطق المملكة، ومنها إضافة أجهزة لأنظمة Avaya القائمة.",
+        h1: "أجهزة اتصالات Avaya في السعودية",
+        summary:
+          "يورّد بيت الأفكار هواتف وأجهزة اتصالات Avaya ويركّبها للمنشآت في الدمام وجميع مناطق المملكة.",
+        intro:
+          "تعتمد منشآت كثيرة في المملكة على أنظمة هاتف Avaya، وتحتاج إلى إضافة أجهزة أو استبدال القديم منها أو التوسع إلى طابق أو فرع جديد. نساعدك على اختيار الأجهزة المتوافقة مع نظامك وتركيبها.",
+        linesTitle: "منتجات Avaya التي نورّدها",
+        lines: [
+          {
+            title: "هواتف Avaya IP",
+            text: "هواتف مكتبية للمكاتب والاستقبال وغرف الاجتماعات.",
+          },
+          {
+            title: "أجهزة الاتصالات",
+            text: "أجهزة Avaya لنظام الهاتف لديك، متوافقة مع إعداداتك الحالية.",
+          },
+          {
+            title: "توسعة الأنظمة القائمة",
+            text: "أجهزة إضافية للموظفين الجدد أو الطوابق أو الفروع.",
+          },
+          {
+            title: "التركيب والإعداد",
+            text: "التركيب، وتجهيز الشبكة، والتسليم لفريقك.",
+          },
+        ],
+        faq: [
+          {
+            q: "هل تورّدون أجهزة Avaya في السعودية؟",
+            a: "نعم. نورّد هواتف وأجهزة اتصالات Avaya ونركّبها في جميع مناطق المملكة.",
+          },
+          {
+            q: "هل يمكن إضافة هواتف إلى نظام Avaya القائم لدينا؟",
+            a: "غالباً نعم. أرسل لنا بيانات نظامك الحالي، ونؤكد لك الأجهزة المتوافقة قبل تقديم العرض.",
+          },
+          {
+            q: "هل تحتاج شبكتنا إلى تعديل من أجل هواتف IP؟",
+            a: "تحتاج هواتف IP إلى منافذ شبكة، وغالباً إلى طاقة PoE وشبكة VLAN مخصصة للصوت لجودة المكالمات. ونراجع السويتشات والتمديدات ضمن العمل.",
           },
         ],
       },
