@@ -8,8 +8,8 @@
   "date": "2026-11-02"
  },
  "/services/network-infrastructure/": {
-  "hash": "aa8ab64acb1dfaf7",
-  "date": "2026-11-02"
+  "hash": "a36102514f26d98f",
+  "date": "2026-11-09"
  },
  "/services/cloud-backup/": {
   "hash": "f12ca271f5b12697",
@@ -176,7 +176,11 @@
   "date": "2026-11-02"
  },
  "/insights/": {
-  "hash": "c8346b1006580327",
+  "hash": "03f67da136c9ea8e",
+  "date": "2026-11-09"
+ },
+ "/insights/it-company-vs-system-integrator/": {
+  "hash": "68b718fc50baabc7",
   "date": "2026-11-09"
  },
  "/insights/nas-vs-san-vs-cloud-storage/": {
@@ -252,15 +256,15 @@
   "date": "2026-09-27"
  },
  "/insights/how-to-choose-a-firewall/": {
-  "hash": "2fe8ae12fa07a2dc",
+  "hash": "3730bc2c817d959e",
   "date": "2026-11-09"
  },
  "/insights/3-2-1-backup-ransomware/": {
-  "hash": "5767f82b9613f05e",
+  "hash": "154a3e68f499a53a",
   "date": "2026-11-09"
  },
  "/insights/office-wifi-planning/": {
-  "hash": "758c0039621f43c4",
+  "hash": "8bcee7dca47ede27",
   "date": "2026-11-09"
  },
  "/ar/": {
@@ -272,8 +276,8 @@
   "date": "2026-11-02"
  },
  "/ar/services/network-infrastructure/": {
-  "hash": "46235b5d234a97fb",
-  "date": "2026-11-02"
+  "hash": "6b23d85fe112c230",
+  "date": "2026-11-09"
  },
  "/ar/services/cloud-backup/": {
   "hash": "108989c42306418b",
@@ -440,7 +444,11 @@
   "date": "2026-11-02"
  },
  "/ar/insights/": {
-  "hash": "069d1fe0aa4fb268",
+  "hash": "61ae55cf6bcd3de0",
+  "date": "2026-11-09"
+ },
+ "/ar/insights/it-company-vs-system-integrator/": {
+  "hash": "c6d98b39237a31f3",
   "date": "2026-11-09"
  },
  "/ar/insights/nas-vs-san-vs-cloud-storage/": {
@@ -516,15 +524,15 @@
   "date": "2026-09-27"
  },
  "/ar/insights/how-to-choose-a-firewall/": {
-  "hash": "51cd20e2d179671e",
+  "hash": "2415c49b975e0272",
   "date": "2026-11-09"
  },
  "/ar/insights/3-2-1-backup-ransomware/": {
-  "hash": "a0d9f8b83a521bd2",
+  "hash": "d318ea2f5688460b",
   "date": "2026-11-09"
  },
  "/ar/insights/office-wifi-planning/": {
-  "hash": "a03972ce2a469d5c",
+  "hash": "df8eba0d81423e90",
   "date": "2026-11-09"
  }
 }

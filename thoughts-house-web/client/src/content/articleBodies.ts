@@ -3378,4 +3378,192 @@ export const ARTICLE_BODIES: Record<
       ],
     },
   },
+  "it-company-vs-system-integrator": {
+    en: {
+      summary: [
+        "An IT company is a broad term: it can supply equipment and licenses, fix computers, or manage your IT day to day.",
+        "A system integrator designs a solution, brings products from different vendors together, installs and configures them, and makes them work as one system.",
+        "Simple purchases and routine support need an IT company; projects that touch several systems, sites or vendors need integration work, and many companies offer both.",
+      ],
+      faq: [
+        {
+          q: "Is a system integrator the same as an IT company?",
+          a: "A system integrator is a type of IT company. Every integrator works in IT, but not every IT company does integration. Some only supply products or provide support for systems that already exist.",
+        },
+        {
+          q: "When do I need a system integrator instead of a supplier?",
+          a: "When the project involves design and several connected parts, such as a new office network, a firewall and VPN rollout, a storage and backup system, or moving users to new devices without stopping work. If you only need equipment delivered, a supplier is enough.",
+        },
+        {
+          q: "Can one company be both?",
+          a: "Yes. Many companies, including Thoughts House, supply hardware and licenses and also design, install and support complete solutions. Ask which role they will play in your project and put it in the scope.",
+        },
+      ],
+      blocks: [
+        {
+          p: 'Businesses often use "IT company" and "system integrator" as if they mean the same thing. They overlap, but they are not identical, and the difference matters when you plan a project. Choosing the wrong kind of partner usually shows up later as equipment that does not work together, or as a gap that nobody takes responsibility for.',
+        },
+        { h2: "What an IT company does" },
+        {
+          p: '"IT company" is a broad label. It can describe a business that does one or more of these things:',
+        },
+        {
+          ul: [
+            "Supplies hardware and software: computers, servers, network devices and licenses.",
+            "Provides support and maintenance for existing systems, on site or remotely.",
+            "Manages day-to-day IT for a company that has no internal IT team, or a small one.",
+            "Offers specific services such as cabling, CCTV or Wi-Fi installation.",
+          ],
+        },
+        {
+          p: "An IT company that mainly supplies products is often called a reseller. Its main job is to deliver the right items, with the right warranty and licenses, on time.",
+        },
+        { h2: "What a system integrator adds" },
+        {
+          p: "A system integrator starts from the outcome you need, not from a product list. The work usually follows these steps:",
+        },
+        {
+          ul: [
+            "Understanding your requirements: users, sites, applications, security needs and growth.",
+            "Designing the solution and producing a bill of materials.",
+            "Choosing products from different vendors that fit together.",
+            "Installing, configuring and connecting them with the systems you already have.",
+            "Testing, documenting and handing over, then supporting the result.",
+          ],
+        },
+        {
+          p: "The key word is integration. A firewall, a set of switches, a Wi-Fi system and a backup appliance may each work on their own. The integrator's job is to make them work together, with consistent settings, security and documentation.",
+        },
+        { h2: "A simple way to tell them apart" },
+        {
+          p: "Ask what the partner is responsible for. A supplier is responsible for delivering items. A support company is responsible for keeping existing systems running. An integrator is responsible for a working solution, from design to handover.",
+        },
+        { h2: "Examples: which one do you need?" },
+        {
+          ul: [
+            "Buying 20 laptops of a model you already use: a supplier is enough.",
+            "Renewing licenses you already have: a supplier, ideally one that tracks your renewal dates.",
+            "Monthly support for an existing office: an IT support or maintenance provider.",
+            "Fitting out a new office with cabling, network, Wi-Fi and firewall: a system integrator.",
+            "Replacing a file server with storage and backup: a system integrator, because data, permissions and backup must move together.",
+            "Replacing hundreds of computers while staff keep working: integration and project planning, not only supply.",
+          ],
+        },
+        { h2: "Why the difference matters" },
+        {
+          p: "When a project needs integration but is bought as separate supply orders, the business itself becomes the integrator, often without the time or skills to do it. Common results are devices that do not match the design, missing licenses discovered at installation, and disputes between suppliers about whose problem it is.",
+        },
+        {
+          p: "The opposite also happens: paying for a full integration project when you only need a straightforward purchase. A good partner will tell you which case you are in.",
+        },
+        { h2: "Questions to ask before you choose" },
+        {
+          ul: [
+            "Will you design the solution, or only quote the items we list?",
+            "Who is responsible if two products do not work together?",
+            "Will you survey our site before quoting?",
+            "What documentation and credentials do we receive at handover?",
+            "Who supports the solution after go-live?",
+          ],
+        },
+        { h2: "How Thoughts House can help" },
+        {
+          p: "Thoughts House is an IT company and system integrator based in Dammam, serving organizations across Saudi Arabia. We supply hardware and licenses when that is all you need, and design, install and support complete solutions when the project calls for it. Our About page explains how we work, and our Services page lists what we deliver.",
+        },
+      ],
+    },
+    ar: {
+      summary: [
+        "شركة تقنية المعلومات وصف واسع، فقد تورّد الأجهزة والتراخيص، أو تصلح الأعطال، أو تدير تقنية المعلومات لديك يوماً بيوم.",
+        "شركة تكامل الأنظمة تصمم الحل، وتجمع منتجات من موردين مختلفين، وتركّبها وتضبطها حتى تعمل كنظام واحد.",
+        "المشتريات البسيطة والدعم المعتاد تكفيها شركة تقنية معلومات، أما المشاريع التي تمس عدة أنظمة أو مواقع أو موردين فتحتاج إلى تكامل، وكثير من الشركات تقدم الاثنين.",
+      ],
+      faq: [
+        {
+          q: "هل شركة تكامل الأنظمة هي نفسها شركة تقنية المعلومات؟",
+          a: "شركة تكامل الأنظمة نوع من شركات تقنية المعلومات. فكل شركة تكامل تعمل في تقنية المعلومات، لكن ليست كل شركة تقنية معلومات تقدم التكامل؛ فبعضها يكتفي بالتوريد أو بدعم الأنظمة القائمة.",
+        },
+        {
+          q: "متى أحتاج إلى شركة تكامل أنظمة بدلاً من مورّد؟",
+          a: "عندما يحتاج المشروع إلى تصميم وأجزاء مترابطة، مثل شبكة مكتب جديد، أو تركيب جدار حماية وVPN، أو نظام تخزين ونسخ احتياطي، أو نقل الموظفين إلى أجهزة جديدة دون إيقاف العمل. أما إذا كنت تحتاج إلى توريد الأجهزة فقط، فالمورّد يكفي.",
+        },
+        {
+          q: "هل يمكن أن تجمع شركة واحدة بين الدورين؟",
+          a: "نعم. كثير من الشركات، ومنها بيت الأفكار، تورّد الأجهزة والتراخيص، وتصمم الحلول المتكاملة وتركّبها وتدعمها أيضاً. اسأل عن الدور الذي ستؤديه الشركة في مشروعك، واكتبه في النطاق.",
+        },
+      ],
+      blocks: [
+        {
+          p: "يستخدم كثيرون عبارتي «شركة تقنية معلومات» و«شركة تكامل أنظمة» وكأنهما شيء واحد. بينهما تداخل واضح، لكنهما ليستا متطابقتين، ويظهر الفرق عند التخطيط لأي مشروع. فاختيار الشريك غير المناسب يظهر لاحقاً في صورة أجهزة لا تعمل معاً، أو ثغرة لا يتحمل أحد مسؤوليتها.",
+        },
+        { h2: "ماذا تقدم شركة تقنية المعلومات؟" },
+        {
+          p: "«شركة تقنية معلومات» وصف عام يشمل شركات تقوم بعمل واحد أو أكثر مما يلي:",
+        },
+        {
+          ul: [
+            "توريد الأجهزة والبرمجيات: أجهزة الحاسب والسيرفرات وأجهزة الشبكات والتراخيص.",
+            "دعم الأنظمة القائمة وصيانتها، في الموقع أو عن بُعد.",
+            "إدارة تقنية المعلومات اليومية لشركة ليس لديها فريق تقنية داخلي، أو لديها فريق صغير.",
+            "خدمات محددة مثل التمديدات أو كاميرات المراقبة أو تركيب شبكات Wi-Fi.",
+          ],
+        },
+        {
+          p: "والشركة التي يغلب على عملها التوريد تُسمى غالباً «موزّعاً» أو «مورّداً»، ومهمتها الأساسية تسليم المنتجات الصحيحة بالضمان والتراخيص المناسبة وفي الوقت المحدد.",
+        },
+        { h2: "ما الذي تضيفه شركة تكامل الأنظمة؟" },
+        {
+          p: "تبدأ شركة تكامل الأنظمة من النتيجة التي تحتاجها، لا من قائمة المنتجات. ويسير عملها عادةً بهذه الخطوات:",
+        },
+        {
+          ul: [
+            "فهم احتياجاتك: المستخدمون والمواقع والتطبيقات ومتطلبات الأمن والتوسع المتوقع.",
+            "تصميم الحل وإعداد قائمة المواد.",
+            "اختيار منتجات من موردين مختلفين تعمل معاً بشكل صحيح.",
+            "التركيب والإعداد وربط الحل بالأنظمة الموجودة لديك.",
+            "الاختبار والتوثيق والتسليم، ثم دعم الحل بعد التشغيل.",
+          ],
+        },
+        {
+          p: "والكلمة المفتاحية هنا هي «التكامل». فجدار الحماية والسويتشات وشبكة Wi-Fi وجهاز النسخ الاحتياطي قد يعمل كل منها منفرداً، لكن مهمة شركة التكامل أن تجعلها تعمل معاً بإعدادات متسقة وحماية موحدة ووثائق واضحة.",
+        },
+        { h2: "طريقة بسيطة للتمييز بينهما" },
+        {
+          p: "اسأل: ما الذي يتحمل الشريك مسؤوليته؟ المورّد مسؤول عن تسليم المنتجات، وشركة الدعم مسؤولة عن استمرار عمل الأنظمة القائمة، أما شركة التكامل فمسؤولة عن حل يعمل فعلاً، من التصميم حتى التسليم.",
+        },
+        { h2: "أمثلة: أيهما تحتاج؟" },
+        {
+          ul: [
+            "شراء 20 جهاز لابتوب من طراز تستخدمه حالياً: يكفيك مورّد.",
+            "تجديد تراخيص تملكها: يكفيك مورّد، ويفضل أن يتابع مواعيد التجديد عنك.",
+            "دعم شهري لمكتب قائم: مزوّد دعم أو عقد صيانة.",
+            "تجهيز مكتب جديد بالتمديدات والشبكة وWi-Fi وجدار الحماية: شركة تكامل أنظمة.",
+            "استبدال سيرفر الملفات بنظام تخزين ونسخ احتياطي: شركة تكامل، لأن البيانات والصلاحيات والنسخ الاحتياطي يجب أن تنتقل معاً.",
+            "استبدال مئات الأجهزة والموظفون مستمرون في العمل: تكامل وتخطيط مشروع، لا توريد فقط.",
+          ],
+        },
+        { h2: "لماذا يهم هذا الفرق؟" },
+        {
+          p: "حين يحتاج المشروع إلى تكامل لكنه يُشترى على شكل طلبات توريد منفصلة، تصبح الشركة نفسها هي من يقوم بالتكامل، وغالباً دون وقت كافٍ أو خبرة لازمة. والنتيجة المعتادة: أجهزة لا تطابق التصميم، وتراخيص ناقصة تُكتشف أثناء التركيب، وخلاف بين الموردين حول المسؤول عن المشكلة.",
+        },
+        {
+          p: "ويحدث العكس أيضاً: أن تدفع مقابل مشروع تكامل كامل وأنت لا تحتاج إلا إلى شراء مباشر. والشريك الجيد يخبرك بصراحة أي الحالتين تنطبق عليك.",
+        },
+        { h2: "أسئلة قبل أن تختار" },
+        {
+          ul: [
+            "هل ستصممون الحل، أم ستسعّرون فقط ما نطلبه؟",
+            "من المسؤول إذا لم يعمل منتجان معاً؟",
+            "هل ستعاينون الموقع قبل تقديم العرض؟",
+            "ما الوثائق وبيانات الدخول التي نستلمها عند التسليم؟",
+            "من يدعم الحل بعد التشغيل؟",
+          ],
+        },
+        { h2: "كيف يساعدك بيت الأفكار" },
+        {
+          p: "بيت الأفكار شركة تقنية معلومات وتكامل أنظمة مقرها الدمام، تخدم المنشآت في جميع مناطق المملكة. نورّد الأجهزة والتراخيص حين يكون هذا كل ما تحتاجه، ونصمم الحلول المتكاملة ونركّبها وندعمها حين يتطلب المشروع ذلك. تعرّف على طريقة عملنا في صفحة «من نحن»، وعلى ما نقدمه في صفحة الخدمات.",
+        },
+      ],
+    },
+  },
 };

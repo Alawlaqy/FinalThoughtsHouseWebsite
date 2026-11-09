@@ -27,7 +27,8 @@ export type ArticleSlug =
   | "how-to-choose-it-company-dammam"
   | "what-is-it-amc-saudi-arabia"
   | "how-to-read-it-amc-contract"
-  | "nas-vs-san-vs-cloud-storage";
+  | "nas-vs-san-vs-cloud-storage"
+  | "it-company-vs-system-integrator";
 
 interface LocalizedArticle {
   title: string;
@@ -45,6 +46,26 @@ export interface Article {
 }
 
 export const ARTICLES: Article[] = [
+  {
+    slug: "it-company-vs-system-integrator",
+    published: "2026-11-08",
+    image: "/images/network-infrastructure-1280.webp",
+    service: "network-infrastructure",
+    content: {
+      en: {
+        title: "IT Company vs System Integrator: What Is the Difference?",
+        metaTitle: "IT Company vs System Integrator: The Difference",
+        description:
+          "What an IT company does, what a system integrator adds, and how to tell which one your project needs, with practical examples for businesses in Saudi Arabia.",
+      },
+      ar: {
+        title: "الفرق بين شركة تقنية المعلومات وشركة تكامل الأنظمة",
+        metaTitle: "الفرق بين شركة تقنية المعلومات وشركة تكامل الأنظمة",
+        description:
+          "ما الذي تقدمه شركة تقنية المعلومات، وما الذي تضيفه شركة تكامل الأنظمة، وكيف تعرف أيهما يحتاجه مشروعك القادم، مع أمثلة عملية للشركات في السعودية.",
+      },
+    },
+  },
   {
     slug: "nas-vs-san-vs-cloud-storage",
     published: "2026-11-08",
