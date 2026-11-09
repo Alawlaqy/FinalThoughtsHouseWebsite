@@ -33,6 +33,14 @@ export const BRAND_GROUPS: BrandGroup[] = [
         },
       },
       {
+        name: "Fortinet",
+        logoName: "Fortinet",
+        products: {
+          en: "FortiGate firewalls and security subscriptions",
+          ar: "جدران حماية FortiGate واشتراكات الحماية",
+        },
+      },
+      {
         name: "Palo Alto Networks",
         logoName: "Palo Alto Networks",
         products: {
@@ -76,6 +84,22 @@ export const BRAND_GROUPS: BrandGroup[] = [
         products: {
           en: "Switches, routers, wireless and security",
           ar: "المبدّلات والموجّهات والشبكات اللاسلكية والحماية",
+        },
+      },
+      {
+        name: "Huawei",
+        logoName: "Huawei",
+        products: {
+          en: "Network switches and other Huawei products",
+          ar: "سويتشات الشبكات ومنتجات Huawei الأخرى",
+        },
+      },
+      {
+        name: "Avaya",
+        logoName: "Avaya",
+        products: {
+          en: "IP phones and communication devices",
+          ar: "هواتف IP وأجهزة الاتصالات",
         },
       },
     ],
@@ -273,7 +297,7 @@ export const BRANDS_COPY: Record<
       "Dell, HP, Lenovo, Cisco, Sophos, Palo Alto Networks, Microsoft, Veeam, NetApp and more: supplied, installed and supported across Saudi Arabia.",
     h1: "IT Brands We Supply in Saudi Arabia",
     summary:
-      "Thoughts House is an IT reseller and system integrator in Saudi Arabia that supplies, installs and supports products from 26 leading brands, including Dell, HP, Lenovo, Cisco, Sophos, Palo Alto Networks, CrowdStrike, Microsoft, Veeam, NetApp and Pure Storage.",
+      "Thoughts House is an IT reseller and system integrator in Saudi Arabia that supplies, installs and supports products from 29 leading brands, including Dell, HP, Lenovo, Cisco, Huawei, Sophos, Fortinet, Palo Alto Networks, CrowdStrike, Microsoft, Veeam, NetApp and Pure Storage.",
     cta: "Request a quotation",
   },
   ar: {
@@ -282,7 +306,7 @@ export const BRANDS_COPY: Record<
       "يورّد بيت الأفكار ويركّب ويدعم منتجات Dell وHP وLenovo وCisco وSophos وPalo Alto Networks وMicrosoft وVeeam وNetApp وغيرها في جميع مناطق المملكة.",
     h1: "العلامات التجارية التي نورّدها في السعودية",
     summary:
-      "بيت الأفكار موزّع وشركة تكامل أنظمة تقنية معلومات في السعودية، يورّد ويركّب ويدعم منتجات 26 علامة تجارية رائدة، منها Dell وHP وLenovo وCisco وSophos وPalo Alto Networks وCrowdStrike وMicrosoft وVeeam وNetApp وPure Storage.",
+      "بيت الأفكار موزّع وشركة تكامل أنظمة تقنية معلومات في السعودية، يورّد ويركّب ويدعم منتجات 29 علامة تجارية رائدة، منها Dell وHP وLenovo وCisco وHuawei وSophos وFortinet وPalo Alto Networks وCrowdStrike وMicrosoft وVeeam وNetApp وPure Storage.",
     cta: "اطلب عرض سعر",
   },
 };
