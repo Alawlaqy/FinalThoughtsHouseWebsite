@@ -178,7 +178,7 @@
       "permanent": true
     },
     {
-      "source": "/big-data-solutions/:path+",
+      "source": "/big-data-solutions/(.+)",
       "destination": "/services/cloud-backup/",
       "permanent": true
     },
@@ -190,6 +190,36 @@
     {
       "source": "/t-ar-sa/",
       "destination": "/ar/",
+      "permanent": true
+    },
+    {
+      "source": "/%D8%A7%D9%84%D8%B9%D8%B1%D9%88%D8%B6",
+      "destination": "/ar/services/",
+      "permanent": true
+    },
+    {
+      "source": "/%D8%A7%D9%84%D8%B9%D8%B1%D9%88%D8%B6/",
+      "destination": "/ar/services/",
+      "permanent": true
+    },
+    {
+      "source": "/%D8%A7%D9%84%D8%B9%D8%B1%D9%88%D8%B6-1",
+      "destination": "/ar/services/",
+      "permanent": true
+    },
+    {
+      "source": "/%D8%A7%D9%84%D8%B9%D8%B1%D9%88%D8%B6-1/",
+      "destination": "/ar/services/",
+      "permanent": true
+    },
+    {
+      "source": "/our-team-1",
+      "destination": "/about/",
+      "permanent": true
+    },
+    {
+      "source": "/our-team-1/",
+      "destination": "/about/",
       "permanent": true
     }
   ]
