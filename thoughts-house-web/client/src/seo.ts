@@ -206,14 +206,14 @@ export function alternatePath(route: Route): string {
 
 const HOME_META: Record<Language, { title: string; description: string }> = {
   en: {
-    title: "Thoughts House: IT Company & System Integrator in KSA",
+    title: "Thoughts House: IT Company in Dammam, Saudi Arabia",
     description:
-      "Saudi IT company & system integrator: cybersecurity, networks, cloud & backup, IT maintenance (AMC) and Dell, HP, Cisco & Microsoft supply across the Kingdom.",
+      "IT company in Dammam serving businesses across Saudi Arabia: cybersecurity, networks, servers, IT support contracts (AMC) and Dell, HP, Cisco & Microsoft supply.",
   },
   ar: {
-    title: "بيت الأفكار | شركة تقنية معلومات وتكامل أنظمة في السعودية",
+    title: "بيت الأفكار | شركة تقنية معلومات في الدمام والسعودية",
     description:
-      "شركة تقنية معلومات سعودية: تكامل أنظمة، أمن سيبراني، شبكات، حلول سحابية ونسخ احتياطي، عقود صيانة، وتوريد أجهزة وتراخيص في جميع مناطق المملكة.",
+      "شركة تقنية معلومات في الدمام تخدم الشركات في جميع مناطق المملكة: أمن سيبراني، شبكات، سيرفرات، عقود صيانة، وتوريد أجهزة وتراخيص Dell وHP وCisco وMicrosoft.",
   },
 };
 

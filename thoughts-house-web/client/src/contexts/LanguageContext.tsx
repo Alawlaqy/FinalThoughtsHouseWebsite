@@ -45,8 +45,8 @@ const translations: Record<string, Record<Language, string>> = {
     ar: "نبني ونحمي شبكتك",
   },
   "hero.subtitle": {
-    en: "Your trusted IT system integrator delivering enterprise-grade cybersecurity, network infrastructure, and cloud solutions across Saudi Arabia.",
-    ar: "شريكك الموثوق في تكامل أنظمة تقنية المعلومات، نقدم حلول الأمن السيبراني والبنية التحتية للشبكات والحلول السحابية على مستوى المؤسسات في المملكة العربية السعودية.",
+    en: "An IT company based in Dammam. We supply, install and support cybersecurity, networks, servers and IT equipment for businesses across Saudi Arabia.",
+    ar: "شركة تقنية معلومات مقرّها الدمام. نورّد وننفذ وندعم الأمن السيبراني والشبكات والسيرفرات وأجهزة تقنية المعلومات للشركات في جميع مناطق المملكة.",
   },
   "hero.explore": { en: "Explore Services", ar: "استكشف خدماتنا" },
   "hero.contact": { en: "Contact Us", ar: "تواصل معنا" },

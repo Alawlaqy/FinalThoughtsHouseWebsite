@@ -70,8 +70,8 @@ export default function HeroSection() {
             {/* The page's H1 names what the company is (for search engines); the slogan below is the visual headline */}
             <h1 className="text-sm font-medium text-white/90">
               {lang === "en"
-                ? "IT Company, System Integrator & IT Reseller in Saudi Arabia"
-                : "شركة تقنية معلومات وتكامل أنظمة وتوريد أجهزة في السعودية"}
+                ? "IT Company in Dammam, Serving All of Saudi Arabia"
+                : "شركة تقنية معلومات في الدمام، نخدم جميع مناطق المملكة"}
             </h1>
           </div>
 
@@ -81,9 +81,7 @@ export default function HeroSection() {
           </p>
 
           {/* Subtitle */}
-          <p
-            className="text-lg sm:text-xl text-white/75 leading-relaxed mb-10 max-w-2xl"
-          >
+          <p className="text-lg sm:text-xl text-white/75 leading-relaxed mb-10 max-w-2xl">
             {t("hero.subtitle")}
           </p>
 
