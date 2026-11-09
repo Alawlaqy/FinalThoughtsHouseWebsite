@@ -242,6 +242,16 @@ export default function Footer() {
             >
               {t("nav.privacy")}
             </a>
+            {" · "}
+            <a
+              href="https://techbehemoths.com/company/thoughts-house"
+              target="_blank"
+              rel="noopener"
+              data-techbehemoths-verification=""
+              className="underline hover:text-[#60A5FA]"
+            >
+              Verified on TechBehemoths
+            </a>
           </p>
           <div className="flex items-center gap-1">
             {[...Array(3)].map((_, i) => (
