@@ -146,6 +146,51 @@
       "source": "/big-data-solutions/",
       "destination": "/services/cloud-backup/",
       "permanent": true
+    },
+    {
+      "source": "/join-our-team",
+      "destination": "/contact/",
+      "permanent": true
+    },
+    {
+      "source": "/join-our-team/",
+      "destination": "/contact/",
+      "permanent": true
+    },
+    {
+      "source": "/العروض",
+      "destination": "/ar/services/",
+      "permanent": true
+    },
+    {
+      "source": "/العروض/",
+      "destination": "/ar/services/",
+      "permanent": true
+    },
+    {
+      "source": "/العروض-1",
+      "destination": "/ar/services/",
+      "permanent": true
+    },
+    {
+      "source": "/العروض-1/",
+      "destination": "/ar/services/",
+      "permanent": true
+    },
+    {
+      "source": "/big-data-solutions/:path+",
+      "destination": "/services/cloud-backup/",
+      "permanent": true
+    },
+    {
+      "source": "/t-ar-sa",
+      "destination": "/ar/",
+      "permanent": true
+    },
+    {
+      "source": "/t-ar-sa/",
+      "destination": "/ar/",
+      "permanent": true
     }
   ]
 }
