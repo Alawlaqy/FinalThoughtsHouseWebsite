@@ -338,6 +338,7 @@ const organization = {
     addressCountry: COMPANY.country,
   },
   hasMap: COMPANY.mapUrl,
+  sameAs: [COMPANY.mapUrl, ...COMPANY.profiles],
   openingHoursSpecification: {
     "@type": "OpeningHoursSpecification",
     dayOfWeek: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday"],

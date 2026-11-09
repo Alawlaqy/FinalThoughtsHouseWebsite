@@ -14,6 +14,11 @@ export const COMPANY = {
   region: "Eastern Province",
   country: "SA",
   mapUrl: "https://maps.google.com/?cid=4896148726544240992",
+  /** Third-party profiles of the company, used as schema.org sameAs. */
+  profiles: [
+    "https://elioplus.com/profiles/channel-partners/229352/thoughts-house",
+    "https://www.sortlist.com/agency/thoughts-house",
+  ],
 };
 
 export const PARTNER_BRANDS =
