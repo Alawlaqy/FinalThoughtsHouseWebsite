@@ -71,6 +71,11 @@ export function trackLead(action: LeadAction, source?: string) {
   });
 }
 
+/** Records a named event in Google Analytics (does nothing until analytics has loaded). */
+export function trackEvent(name: string, params?: Record<string, unknown>) {
+  window.gtag?.("event", name, params ?? {});
+}
+
 /** One listener for every contact link on the site, including links added later. */
 export function trackContactClicks() {
   document.addEventListener("click", e => {

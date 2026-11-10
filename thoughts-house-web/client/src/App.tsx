@@ -11,6 +11,7 @@ import BrandsPage from "./pages/BrandsPage";
 import ProjectsPage from "./pages/ProjectsPage";
 import ServicesHubPage from "./pages/ServicesHubPage";
 import ContactPage from "./pages/ContactPage";
+import QuizPage from "./pages/QuizPage";
 import PrivacyPage from "./pages/PrivacyPage";
 import IndustryPage from "./pages/IndustryPage";
 import BrandPage from "./pages/BrandPage";
@@ -54,6 +55,8 @@ function App({ path }: { path: string }) {
             <ServicesHubPage />
           ) : route.page === "contact" ? (
             <ContactPage />
+          ) : route.page === "quiz" ? (
+            <QuizPage />
           ) : route.page === "privacy" ? (
             <PrivacyPage />
           ) : route.page === "industry" ? (

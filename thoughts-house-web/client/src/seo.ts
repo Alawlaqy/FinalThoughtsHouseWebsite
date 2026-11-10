@@ -12,6 +12,7 @@ import { BRAND_GROUPS, BRANDS_COPY } from "./content/brands";
 import { PRIVACY } from "./content/privacy";
 import { PROJECTS, PROJECTS_COPY } from "./content/projects";
 import { CONTACT_PAGE, SERVICES_HUB } from "./content/hubs";
+import { QUIZ_COPY } from "./content/quiz";
 import {
   INDUSTRIES,
   getIndustry,
@@ -55,6 +56,7 @@ export type Route =
   | { page: "projects"; lang: Language; path: string }
   | { page: "servicesHub"; lang: Language; path: string }
   | { page: "contact"; lang: Language; path: string }
+  | { page: "quiz"; lang: Language; path: string }
   | { page: "privacy"; lang: Language; path: string }
   | { page: "industry"; lang: Language; path: string; slug: IndustrySlug }
   | { page: "brand"; lang: Language; path: string; slug: BrandSlug }
@@ -82,6 +84,10 @@ export function servicesHubPath(lang: Language) {
 
 export function contactPath(lang: Language) {
   return `${lang === "ar" ? "/ar" : ""}/contact/`;
+}
+
+export function quizPath(lang: Language) {
+  return `${lang === "ar" ? "/ar" : ""}/phishing-test/`;
 }
 
 export function projectsPath(lang: Language) {
@@ -131,6 +137,7 @@ export const ROUTES: Route[] = (["en", "ar"] as Language[]).flatMap(lang => [
   { page: "projects" as const, lang, path: projectsPath(lang) },
   { page: "servicesHub" as const, lang, path: servicesHubPath(lang) },
   { page: "contact" as const, lang, path: contactPath(lang) },
+  { page: "quiz" as const, lang, path: quizPath(lang) },
   { page: "privacy" as const, lang, path: privacyPath(lang) },
   ...LOCAL_PAGES.map(p => ({
     page: "local" as const,
@@ -189,6 +196,8 @@ export function alternatePath(route: Route): string {
       return servicesHubPath(other);
     case "contact":
       return contactPath(other);
+    case "quiz":
+      return quizPath(other);
     case "privacy":
       return privacyPath(other);
     case "industry":
@@ -273,6 +282,11 @@ export function getMeta(route: Route) {
       return {
         title: CONTACT_PAGE[route.lang].metaTitle,
         description: CONTACT_PAGE[route.lang].metaDescription,
+      };
+    case "quiz":
+      return {
+        title: QUIZ_COPY[route.lang].metaTitle,
+        description: QUIZ_COPY[route.lang].metaDescription,
       };
     case "projects":
       return {
@@ -509,6 +523,35 @@ function structuredData(route: Route) {
         itemListElement: [
           homeCrumb,
           { "@type": "ListItem", position: 2, name: c.h1, item: url },
+        ],
+      }
+    );
+  } else if (route.page === "quiz") {
+    const c = QUIZ_COPY[route.lang];
+    graph.push(
+      {
+        "@type": "WebPage",
+        name: c.h1,
+        description: c.summary,
+        url,
+        inLanguage: route.lang,
+        isAccessibleForFree: true,
+        publisher: { "@id": ORG_ID },
+      },
+      {
+        "@type": "FAQPage",
+        inLanguage: route.lang,
+        mainEntity: c.faq.map(f => ({
+          "@type": "Question",
+          name: f.q,
+          acceptedAnswer: { "@type": "Answer", text: f.a },
+        })),
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          homeCrumb,
+          { "@type": "ListItem", position: 2, name: c.name, item: url },
         ],
       }
     );
@@ -983,6 +1026,9 @@ export function renderLlmsTxt(): string {
     "",
     "## Contact",
     `- [${CONTACT_PAGE.en.h1}](${SITE_URL}${contactPath("en")}): ${CONTACT_PAGE.en.address}. ${CONTACT_PAGE.en.appointment}`,
+    "",
+    "## Free tools",
+    `- [${QUIZ_COPY.en.h1}](${SITE_URL}${quizPath("en")}): ${QUIZ_COPY.en.summary}`,
     "",
     "## Our work",
     `- [${PROJECTS_COPY.en.h1}](${SITE_URL}${projectsPath("en")}): ${PROJECTS_COPY.en.summary} ${PROJECTS_COPY.en.privacyNote}`,

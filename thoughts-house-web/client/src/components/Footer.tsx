@@ -16,6 +16,7 @@ import {
   localPath,
   privacyPath,
   projectsPath,
+  quizPath,
   servicePath,
   servicesHubPath,
 } from "@/seo";
@@ -169,6 +170,14 @@ export default function Footer() {
                   className="text-sm text-white/60 hover:text-[#60A5FA] transition-colors duration-200"
                 >
                   {t("nav.insights")}
+                </a>
+              </li>
+              <li>
+                <a
+                  href={quizPath(lang)}
+                  className="text-sm text-white/60 hover:text-[#60A5FA] transition-colors duration-200"
+                >
+                  {t("nav.quiz")}
                 </a>
               </li>
             </ul>

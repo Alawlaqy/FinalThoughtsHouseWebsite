@@ -63,6 +63,10 @@
   "hash": "a975de0495c69e8a",
   "date": "2026-11-09"
  },
+ "/phishing-test/": {
+  "hash": "16da89c6aec2af03",
+  "date": "2026-11-10"
+ },
  "/privacy/": {
   "hash": "b9fad9f25583eac5",
   "date": "2026-11-10"
@@ -342,6 +346,10 @@
  "/ar/contact/": {
   "hash": "1d322dc643ebec78",
   "date": "2026-11-09"
+ },
+ "/ar/phishing-test/": {
+  "hash": "c982d0f19fcab5b9",
+  "date": "2026-11-10"
  },
  "/ar/privacy/": {
   "hash": "40c5fac94e3c9cdc",
