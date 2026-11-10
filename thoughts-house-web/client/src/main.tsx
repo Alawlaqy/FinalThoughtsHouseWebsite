@@ -2,12 +2,13 @@ import { createRoot, hydrateRoot } from "react-dom/client";
 import App from "./App";
 import { provideArticleBodies } from "./content/articleBodyStore";
 import { resolveRoute } from "./seo";
-import { trackContactClicks } from "./lib/leads";
+import { loadAnalytics, trackContactClicks } from "./lib/leads";
 import "./index.css";
 
 async function start() {
   const path = window.location.pathname;
   trackContactClicks();
+  loadAnalytics();
 
   // Article text is a separate chunk, only fetched on article pages (before hydrating, so the
   // client render matches the prerendered HTML).

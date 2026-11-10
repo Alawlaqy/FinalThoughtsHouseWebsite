@@ -5,7 +5,7 @@
  */
 import type { Language } from "@/seo";
 
-export const PRIVACY_UPDATED = "2026-10-06";
+export const PRIVACY_UPDATED = "2026-11-10";
 
 interface PrivacyCopy {
   metaTitle: string;
@@ -22,7 +22,7 @@ export const PRIVACY: Record<Language, PrivacyCopy> = {
     metaDescription:
       "How Thoughts House collects, uses and protects personal data sent through thoughtshouse.com, in line with Saudi Arabia's PDPL.",
     h1: "Privacy Policy",
-    updated: "Last updated: 2 November 2026",
+    updated: "Last updated: 10 November 2026",
     intro:
       "This policy explains what personal data Thoughts House collects through this website, why we collect it, and the rights you have under Saudi Arabia's Personal Data Protection Law (PDPL).",
     sections: [
@@ -38,7 +38,7 @@ export const PRIVACY: Record<Language, PrivacyCopy> = {
           "Contact form: your name, company name (optional), email address, phone number (optional), the service you need (optional), how you found us (optional) and the message you write.",
           "WhatsApp, email and phone: if you contact us this way, we receive the details you share, such as your name, number and message.",
           "Technical data: like any website, our hosting provider processes your IP address and basic request information (such as browser type and the page requested) to deliver the site and keep it secure.",
-          "Usage statistics: we use Vercel Web Analytics to count page visits and clicks on our contact links. It works without cookies and shows us totals, not who you are.",
+          "Usage statistics: we use Google Analytics to understand how visitors find and use the site, such as pages viewed, the page you came from, your approximate city and clicks on our contact links. It uses cookies and does not tell us your name or contact details. You can block these cookies in your browser settings.",
           "We do not use cookies or advertising trackers. The chat assistant on this site gives preset answers inside your browser; it does not send or store what you type.",
           "We do not ask for sensitive data. Please do not include it in your messages.",
         ],
@@ -61,6 +61,7 @@ export const PRIVACY: Record<Language, PrivacyCopy> = {
         body: [
           "Contact form delivery: messages are delivered to our inbox by FormSubmit (formsubmit.co).",
           "Website hosting: the site is hosted by Vercel.",
+          "Website statistics: Google Analytics (Google) processes usage data on our behalf.",
           "Fonts and map: pages load fonts from Google Fonts, and the contact section shows an embedded Google Map, so your browser connects to Google's servers.",
           "WhatsApp: messages you send us on WhatsApp are handled by WhatsApp (Meta) under its own privacy policy.",
           "Some of these providers process data outside Saudi Arabia. We use them only for the purposes above and in line with the PDPL's requirements for transferring personal data abroad. We may also disclose data where Saudi law requires it.",
@@ -106,7 +107,7 @@ export const PRIVACY: Record<Language, PrivacyCopy> = {
     metaDescription:
       "كيف يجمع بيت الأفكار البيانات الشخصية المرسلة عبر موقع thoughtshouse.com ويستخدمها ويحميها، وفقاً لنظام حماية البيانات الشخصية في المملكة.",
     h1: "سياسة الخصوصية",
-    updated: "آخر تحديث: 2 نوفمبر 2026",
+    updated: "آخر تحديث: 10 نوفمبر 2026",
     intro:
       "توضح هذه السياسة البيانات الشخصية التي يجمعها بيت الأفكار عبر هذا الموقع، وسبب جمعها، وحقوقك وفقاً لنظام حماية البيانات الشخصية في المملكة العربية السعودية.",
     sections: [
@@ -122,7 +123,7 @@ export const PRIVACY: Record<Language, PrivacyCopy> = {
           "نموذج التواصل: اسمك واسم شركتك (اختياري) وبريدك الإلكتروني ورقم جوالك (اختياري) والخدمة المطلوبة (اختياري) وكيف عرفتنا (اختياري) والرسالة التي تكتبها.",
           "واتساب والبريد والهاتف: إذا تواصلت معنا بهذه الطرق نتلقى البيانات التي تشاركها، مثل اسمك ورقمك ورسالتك.",
           "البيانات التقنية: كأي موقع إلكتروني، يعالج مزوّد الاستضافة عنوان IP ومعلومات الطلب الأساسية (مثل نوع المتصفح والصفحة المطلوبة) لعرض الموقع وحمايته.",
-          "إحصاءات الاستخدام: نستخدم Vercel Web Analytics لحساب زيارات الصفحات والنقرات على روابط التواصل. وهي تعمل دون ملفات تعريف الارتباط، وتعرض لنا أرقاماً إجمالية ولا تحدد هويتك.",
+          "إحصاءات الاستخدام: نستخدم Google Analytics لفهم كيف يصل الزوار إلى الموقع ويستخدمونه، مثل الصفحات التي تمت زيارتها، والصفحة التي جئت منها، ومدينتك التقريبية، والنقرات على روابط التواصل. وتستخدم ملفات تعريف الارتباط، ولا تعرّفنا باسمك أو بيانات تواصلك. ويمكنك حظر هذه الملفات من إعدادات متصفحك.",
           "لا نستخدم ملفات تعريف الارتباط أو أدوات التتبع الإعلانية. ويقدم المساعد الآلي في الموقع إجابات جاهزة داخل متصفحك، ولا يرسل ما تكتبه ولا يحفظه.",
           "لا نطلب بيانات حساسة، ونرجو عدم تضمينها في رسائلك.",
         ],
@@ -145,6 +146,7 @@ export const PRIVACY: Record<Language, PrivacyCopy> = {
         body: [
           "إيصال رسائل النموذج: تصل الرسائل إلى بريدنا عبر خدمة FormSubmit ‏(formsubmit.co).",
           "استضافة الموقع: الموقع مستضاف لدى Vercel.",
+          "إحصاءات الموقع: تعالج Google Analytics ‏(Google) بيانات الاستخدام نيابة عنا.",
           "الخطوط والخريطة: تُحمَّل الخطوط من Google Fonts، ويعرض قسم التواصل خريطة Google مضمّنة، لذلك يتصل متصفحك بخوادم Google.",
           "واتساب: تعالج WhatsApp ‏(Meta) الرسائل التي ترسلها إلينا عبر واتساب وفق سياسة الخصوصية الخاصة بها.",
           "يعالج بعض هؤلاء المزوّدين البيانات خارج المملكة، ونستخدمهم للأغراض المذكورة فقط ووفقاً لمتطلبات النظام بشأن نقل البيانات الشخصية خارج المملكة. وقد نفصح عن البيانات إذا اقتضت الأنظمة السعودية ذلك.",

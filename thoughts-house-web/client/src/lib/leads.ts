@@ -1,7 +1,7 @@
 /*
- * Lead tracking: records WhatsApp, phone, email and form actions in Vercel Web Analytics.
- * Custom events only show on Vercel plans that include them; the prefilled WhatsApp text and the
- * "how did you find us" form field show the source on every plan.
+ * Lead tracking: records WhatsApp, phone, email and form actions in Google Analytics 4
+ * (and in Vercel Web Analytics if it is ever enabled). The prefilled WhatsApp text and the
+ * "how did you find us" form field also show the source of each enquiry.
  */
 import type { Language } from "@/seo";
 
@@ -11,7 +11,34 @@ declare global {
   interface Window {
     va?: (...args: unknown[]) => void;
     vaq?: unknown[][];
+    dataLayer?: unknown[];
+    gtag?: (...args: unknown[]) => void;
   }
+}
+
+const GA_ID = "G-7WMEWBHN7Z";
+
+function gtag(...args: unknown[]) {
+  (window.dataLayer ??= []).push(args);
+}
+
+/** Loads Google Analytics after the page has finished loading, so it does not slow the first paint. */
+export function loadAnalytics() {
+  if (window.location.hostname !== "www.thoughtshouse.com") return;
+  window.gtag = gtag;
+  gtag("js", new Date());
+  gtag("config", GA_ID);
+  const inject = () => {
+    const s = document.createElement("script");
+    s.async = true;
+    s.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`;
+    document.head.appendChild(s);
+  };
+  if (document.readyState === "complete") setTimeout(inject, 1500);
+  else
+    window.addEventListener("load", () => setTimeout(inject, 1500), {
+      once: true,
+    });
 }
 
 const WHATSAPP_NUMBER = "966541022995";
@@ -25,6 +52,13 @@ export function whatsappUrl(lang: Language) {
 }
 
 export function trackLead(action: LeadAction, source?: string) {
+  const page = window.location.pathname;
+  window.gtag?.("event", "generate_lead", {
+    method: action,
+    page_path: page,
+    ...(source ? { lead_source: source } : {}),
+  });
+  window.gtag?.("event", `lead_${action}`, { page_path: page });
   // Same queue the Vercel script reads, so events sent before it loads are kept.
   window.va ??= (...args: unknown[]) => {
     (window.vaq ??= []).push(args);
