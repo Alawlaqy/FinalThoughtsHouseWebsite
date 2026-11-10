@@ -305,7 +305,7 @@ export default function ContactSection() {
                         ))}
                       </select>
                     </div>
-                    <div>
+                    <div className="sm:col-span-2">
                       <label
                         htmlFor="contact-source"
                         className="block text-sm font-semibold text-[#1E293B] mb-2"
