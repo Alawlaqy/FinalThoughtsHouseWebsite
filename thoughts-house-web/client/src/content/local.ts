@@ -861,7 +861,7 @@ const DAMMAM_PAGES: LocalPage[] = [
       en: {
         metaTitle: "Structured Cabling in Dammam | Thoughts House",
         metaDescription:
-          "Network cabling installation in Dammam and Khobar: Cat6 and Cat6A, fiber, racks, labeling and testing for offices, warehouses and factories in the Eastern Province.",
+          "Network cabling installation in Dammam and Khobar: Cat6, Cat6A and fiber, racks, labeling and testing for offices, warehouses and factories.",
         name: "Structured Cabling in Dammam",
         h1: "Structured Cabling & Network Cabling Installation in Dammam",
         summary:

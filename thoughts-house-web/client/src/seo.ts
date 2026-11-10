@@ -208,7 +208,7 @@ const HOME_META: Record<Language, { title: string; description: string }> = {
   en: {
     title: "Thoughts House: IT Company in Dammam, Saudi Arabia",
     description:
-      "IT company in Dammam serving businesses across Saudi Arabia: cybersecurity, networks, servers, IT support contracts (AMC) and Dell, HP, Cisco & Microsoft supply.",
+      "IT company in Dammam serving businesses across Saudi Arabia: cybersecurity, networks, servers, IT support contracts and Dell, HP, Cisco & Microsoft supply.",
   },
   ar: {
     title: "بيت الأفكار | شركة تقنية معلومات في الدمام والسعودية",
