@@ -151,6 +151,66 @@ const DAMMAM_PAGES: LocalPage[] = [
               "Can they support equipment they did not supply?",
             ],
           },
+          {
+            title: "IT services in Dammam, in detail",
+            text: "Most customers start with one need and add others over time. This is what each service covers when we deliver it in Dammam and the Eastern Province.",
+            points: [
+              "Cybersecurity: Sophos and Fortinet FortiGate firewalls, endpoint protection and EDR, secure VPN for remote staff, and license renewals tracked before they expire.",
+              "Networks: Cisco and Huawei switches, routing, business Wi-Fi sized from a site survey, and Cat6, Cat6A and fiber cabling with labeling and testing.",
+              "Communication: Avaya IP phones and communication devices, including additions to an existing Avaya system.",
+              "Servers and storage: Dell, HP and Lenovo servers, QNAP storage, and backup with Veeam and Veritas.",
+              "Computers and licensing: laptops, desktops and workstations, with Microsoft 365, Dynamics 365 and other business licenses.",
+              "Support: annual maintenance contracts with a helpdesk, preventive visits and escalation to the manufacturers.",
+            ],
+          },
+          {
+            title: "An IT company in Dammam since 2002",
+            text: "Thoughts House was founded in Dammam in 2002 and has served more than 500 organizations since then, including government entities, financial institutions, industrial companies, contractors and training institutes. Long experience in one region matters in practice: we know how local procurement works, what manufacturers and distributors stock in the Kingdom, and what support customers here expect after delivery.",
+          },
+          {
+            title: "Examples of our work",
+            text: "We do not publish client names, but these are real projects we delivered:",
+            points: [
+              "More than 230 Dell computers supplied and installed for a training institute in the Eastern Province.",
+              "QNAP storage with a capacity of 600 TB supplied to a Saudi cement company.",
+              "More than 300 Microsoft 365 licenses, with ongoing technical support, for a technology company.",
+              "Sophos endpoint protection (EDR) for a financial institution in the Kingdom.",
+              "Cisco network devices for a Saudi holding group.",
+              "Veritas backup license renewal for a contracting company.",
+            ],
+          },
+          {
+            title: "Where we work",
+            text: "Our engineers work at your premises and remotely. From Dammam we cover the whole Eastern Province and travel to other regions for planned work.",
+            points: [
+              "Dammam: offices, showrooms, warehouses and industrial sites across the city.",
+              "Khobar and Dhahran: close to Dammam, so site surveys and visits are easy to schedule.",
+              "Qatif, Ras Tanura, Jubail and Al-Ahsa: on-site visits scheduled in advance.",
+              "Riyadh, Jeddah and other regions: remote support, equipment delivered to your site, and planned on-site visits.",
+            ],
+          },
+          {
+            title: "What an IT maintenance contract covers",
+            text: "Many Dammam businesses have no in-house IT team, or a small one. An annual maintenance contract (AMC) gives them a team to call and a schedule of preventive work.",
+            points: [
+              "A helpdesk for users, by phone, remote session or site visit.",
+              "Preventive visits to check servers, network and security equipment, with a report after each visit.",
+              "Monitoring, updates and backup checks.",
+              "An asset register with warranty and license renewal dates.",
+              "Escalation to the manufacturer when hardware or software needs vendor support.",
+            ],
+          },
+          {
+            title: "What to send us for a quotation",
+            text: "A clear request gets you an accurate quotation faster. If you are not sure about any of these points, we can survey the site first.",
+            points: [
+              "What you need: supply only, or supply with installation and support.",
+              "The number of users, devices and sites.",
+              "Any brand or model you prefer, or the equipment you have today.",
+              "Where the equipment will be delivered and installed.",
+              "Your preferred delivery date.",
+            ],
+          },
         ],
         faq: [
           {
@@ -176,6 +236,30 @@ const DAMMAM_PAGES: LocalPage[] = [
           {
             q: "Do you serve Khobar and Dhahran from Dammam?",
             a: "Yes. We serve Khobar, Dhahran, Qatif, Jubail, Ras Tanura and Al-Ahsa from our Dammam base, with site visits scheduled in advance.",
+          },
+          {
+            q: "Which brands does Thoughts House supply in Dammam?",
+            a: "We supply and support products from 29 brands, including Dell, HP, Lenovo, Cisco, Huawei, Sophos, Fortinet, Palo Alto Networks, Microsoft, Veeam, Veritas, QNAP and Avaya.",
+          },
+          {
+            q: "How long has Thoughts House worked in Dammam?",
+            a: "Since 2002. The company was founded in Dammam and has served more than 500 organizations across Saudi Arabia.",
+          },
+          {
+            q: "Do you work with government entities?",
+            a: "Yes. Our customers include government entities as well as private companies of different sizes.",
+          },
+          {
+            q: "Can you support equipment we bought from another supplier?",
+            a: "Yes. Under a maintenance contract we start with an assessment of your systems, including equipment we did not supply.",
+          },
+          {
+            q: "Do you provide support in Arabic and English?",
+            a: "Yes. Our team works in both Arabic and English, on site and remotely.",
+          },
+          {
+            q: "How do I request a quotation from an IT company in Dammam?",
+            a: "Send us your requirements by WhatsApp, email or the contact form: what you need, the number of users and devices, and the delivery location. We reply with a written quotation, and we can survey the site first if the scope is not clear.",
           },
         ],
       },
@@ -258,6 +342,66 @@ const DAMMAM_PAGES: LocalPage[] = [
               "هل تدعم الشركة أجهزة لم تورّدها؟",
             ],
           },
+          {
+            title: "خدمات تقنية المعلومات في الدمام بالتفصيل",
+            text: "يبدأ معظم العملاء بحاجة واحدة ثم يضيفون غيرها مع الوقت. هذا ما تشمله كل خدمة حين ننفذها في الدمام والمنطقة الشرقية.",
+            points: [
+              "الأمن السيبراني: جدران حماية Sophos وFortinet FortiGate، وحماية الأجهزة وEDR، واتصال VPN آمن للموظفين عن بُعد، ومتابعة تجديد التراخيص قبل انتهائها.",
+              "الشبكات: سويتشات Cisco وHuawei، والتوجيه، وشبكات Wi-Fi للأعمال بعد معاينة الموقع، وتمديدات Cat6 وCat6A والألياف مع الترقيم والاختبار.",
+              "الاتصالات: هواتف IP وأجهزة اتصالات Avaya، ومنها إضافة أجهزة إلى نظام Avaya قائم.",
+              "السيرفرات والتخزين: سيرفرات Dell وHP وLenovo، وتخزين QNAP، والنسخ الاحتياطي ببرامج Veeam وVeritas.",
+              "الأجهزة والتراخيص: حواسيب محمولة ومكتبية ومحطات عمل، مع تراخيص Microsoft 365 وDynamics 365 وغيرها.",
+              "الدعم: عقود صيانة سنوية تشمل مكتب مساعدة وزيارات وقائية وتصعيداً إلى الشركات المصنّعة.",
+            ],
+          },
+          {
+            title: "شركة تقنية معلومات في الدمام منذ 2002",
+            text: "تأسس بيت الأفكار في الدمام عام 2002، وخدم منذ ذلك الحين أكثر من 500 منشأة، منها جهات حكومية ومؤسسات مالية وشركات صناعية ومقاولون ومعاهد تدريب. والخبرة الطويلة في منطقة واحدة لها أثر عملي: نعرف كيف تسير المشتريات محلياً، وما يتوفر لدى الشركات المصنّعة والموزعين في المملكة، وما يتوقعه العملاء هنا من دعم بعد التسليم.",
+          },
+          {
+            title: "أمثلة من أعمالنا",
+            text: "لا ننشر أسماء عملائنا، لكن هذه مشاريع حقيقية نفذناها:",
+            points: [
+              "توريد وتركيب أكثر من 230 جهاز Dell لمعهد تدريب في المنطقة الشرقية.",
+              "توريد تخزين QNAP بسعة 600 تيرابايت لشركة إسمنت سعودية.",
+              "أكثر من 300 ترخيص Microsoft 365 مع دعم فني مستمر لشركة تقنية.",
+              "حماية الأجهزة الطرفية Sophos EDR لمؤسسة مالية في المملكة.",
+              "أجهزة شبكات Cisco لمجموعة قابضة سعودية.",
+              "تجديد تراخيص النسخ الاحتياطي Veritas لشركة مقاولات.",
+            ],
+          },
+          {
+            title: "أين نعمل",
+            text: "يعمل مهندسونا في موقعك وعن بُعد. ومن الدمام نغطي المنطقة الشرقية كلها، وننتقل إلى المناطق الأخرى للأعمال المجدولة.",
+            points: [
+              "الدمام: المكاتب والمعارض والمستودعات والمواقع الصناعية في أنحاء المدينة.",
+              "الخبر والظهران: قريبتان من الدمام، فتسهل جدولة المعاينات والزيارات.",
+              "القطيف ورأس تنورة والجبيل والأحساء: زيارات ميدانية تُجدول مسبقاً.",
+              "الرياض وجدة وبقية المناطق: دعم عن بُعد، وتوصيل الأجهزة إلى موقعك، وزيارات ميدانية مجدولة.",
+            ],
+          },
+          {
+            title: "ماذا يشمل عقد صيانة تقنية المعلومات",
+            text: "كثير من الشركات في الدمام ليس لديها فريق تقنية داخلي، أو لديها فريق صغير. وعقد الصيانة السنوي (AMC) يوفر لها فريقاً تتصل به وجدولاً للأعمال الوقائية.",
+            points: [
+              "مكتب مساعدة للمستخدمين، بالهاتف أو عن بُعد أو بزيارة ميدانية.",
+              "زيارات وقائية لفحص السيرفرات وأجهزة الشبكة والحماية، مع تقرير بعد كل زيارة.",
+              "المراقبة والتحديثات وفحص النسخ الاحتياطي.",
+              "سجل للأصول بمواعيد الضمان وتجديد التراخيص.",
+              "التصعيد إلى الشركة المصنّعة عندما يحتاج الجهاز أو البرنامج إلى دعمها.",
+            ],
+          },
+          {
+            title: "ما الذي ترسله لنا لطلب عرض سعر",
+            text: "الطلب الواضح يوصلك إلى عرض سعر دقيق بسرعة. وإن لم تكن متأكداً من أي بند، يمكننا معاينة الموقع أولاً.",
+            points: [
+              "ما تحتاج إليه: توريد فقط، أو توريد مع التركيب والدعم.",
+              "عدد المستخدمين والأجهزة والمواقع.",
+              "أي علامة أو طراز تفضّله، أو الأجهزة الموجودة لديك حالياً.",
+              "مكان التوصيل والتركيب.",
+              "موعد التسليم المفضّل.",
+            ],
+          },
         ],
         faq: [
           {
@@ -283,6 +427,30 @@ const DAMMAM_PAGES: LocalPage[] = [
           {
             q: "هل تخدمون الخبر والظهران من الدمام؟",
             a: "نعم. نخدم الخبر والظهران والقطيف والجبيل ورأس تنورة والأحساء من مقرّنا في الدمام، بزيارات ميدانية مجدولة مسبقاً.",
+          },
+          {
+            q: "ما العلامات التي يورّدها بيت الأفكار في الدمام؟",
+            a: "نورّد وندعم منتجات 29 علامة، منها Dell وHP وLenovo وCisco وHuawei وSophos وFortinet وPalo Alto Networks وMicrosoft وVeeam وVeritas وQNAP وAvaya.",
+          },
+          {
+            q: "منذ متى يعمل بيت الأفكار في الدمام؟",
+            a: "منذ عام 2002. تأسست الشركة في الدمام، وخدمت أكثر من 500 منشأة في مناطق المملكة.",
+          },
+          {
+            q: "هل تعملون مع الجهات الحكومية؟",
+            a: "نعم. من عملائنا جهات حكومية وشركات خاصة بأحجام مختلفة.",
+          },
+          {
+            q: "هل تدعمون أجهزة اشتريناها من مورّد آخر؟",
+            a: "نعم. في عقد الصيانة نبدأ بتقييم أنظمتك، بما فيها الأجهزة التي لم نورّدها.",
+          },
+          {
+            q: "هل تقدمون الدعم بالعربية والإنجليزية؟",
+            a: "نعم. يعمل فريقنا باللغتين العربية والإنجليزية، ميدانياً وعن بُعد.",
+          },
+          {
+            q: "كيف أطلب عرض سعر من شركة تقنية معلومات في الدمام؟",
+            a: "أرسل لنا متطلباتك عبر واتساب أو البريد أو نموذج التواصل: ما تحتاج إليه، وعدد المستخدمين والأجهزة، ومكان التسليم. ونرد عليك بعرض سعر مكتوب، ويمكننا معاينة الموقع أولاً إن لم يكن النطاق واضحاً.",
           },
         ],
       },
