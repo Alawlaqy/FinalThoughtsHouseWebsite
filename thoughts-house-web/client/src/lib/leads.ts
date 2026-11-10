@@ -18,8 +18,10 @@ declare global {
 
 const GA_ID = "G-7WMEWBHN7Z";
 
-function gtag(...args: unknown[]) {
-  (window.dataLayer ??= []).push(args);
+// gtag.js only reads entries pushed as the \`arguments\` object, not as a plain array.
+function gtag(..._args: unknown[]) {
+  // eslint-disable-next-line prefer-rest-params
+  (window.dataLayer ??= []).push(arguments);
 }
 
 /** Loads Google Analytics after the page has finished loading, so it does not slow the first paint. */
