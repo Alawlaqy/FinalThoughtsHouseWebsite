@@ -1,5 +1,6 @@
 # Search engines and AI assistants are welcome to crawl and cite this site.
 User-agent: *
+Content-Signal: search=yes, ai-input=yes
 Allow: /
 Disallow: /__manus__/
 

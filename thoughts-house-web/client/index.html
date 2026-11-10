@@ -15,6 +15,8 @@
     <!-- Fonts load without blocking the first paint (text shows in a fallback font, then swaps) -->
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Cairo:wght@400;500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Cairo:wght@400;500;600;700;800&display=swap" /></noscript>
+    <!-- Prefetch internal pages on hover so the next page opens faster (browsers without support ignore it) -->
+    <script type="speculationrules">{"prefetch":[{"where":{"href_matches":"/*"},"eagerness":"moderate"}]}</script>
   </head>
 
   <body>
