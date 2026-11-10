@@ -166,6 +166,19 @@ const translations: Record<string, Record<Language, string>> = {
     en: "Phone (optional)",
     ar: "رقم الجوال (اختياري)",
   },
+  "contact.moreDetails": {
+    en: "Add more details (optional)",
+    ar: "تفاصيل إضافية (اختياري)",
+  },
+  "contact.whatsapp": { en: "Chat on WhatsApp", ar: "راسلنا على واتساب" },
+  "contact.whatsappNote": {
+    en: "The fastest way to reach us",
+    ar: "أسرع طريقة للتواصل معنا",
+  },
+  "contact.hours": {
+    en: "Sunday to Thursday, 9:00 am to 5:00 pm",
+    ar: "الأحد إلى الخميس، من 9:00 صباحاً إلى 5:00 مساءً",
+  },
   "contact.serviceField": {
     en: "Service you need (optional)",
     ar: "الخدمة المطلوبة (اختياري)",

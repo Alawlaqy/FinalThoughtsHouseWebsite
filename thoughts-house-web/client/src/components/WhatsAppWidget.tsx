@@ -17,11 +17,21 @@ export default function WhatsAppWidget() {
     return () => clearTimeout(timer);
   }, []);
 
+  // The hint shows once per visit and hides itself, so it does not keep covering the page.
   useEffect(() => {
-    if (visible) {
-      const tooltipTimer = setTimeout(() => setShowTooltip(true), 4000);
-      return () => clearTimeout(tooltipTimer);
+    if (!visible) return;
+    try {
+      if (sessionStorage.getItem("wa-hint")) return;
+      sessionStorage.setItem("wa-hint", "1");
+    } catch {
+      /* storage unavailable: still show the hint once on this page */
     }
+    const show = setTimeout(() => setShowTooltip(true), 4000);
+    const hide = setTimeout(() => setShowTooltip(false), 12000);
+    return () => {
+      clearTimeout(show);
+      clearTimeout(hide);
+    };
   }, [visible]);
 
   if (!visible) return null;
