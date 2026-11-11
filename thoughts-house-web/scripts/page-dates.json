@@ -64,8 +64,20 @@
   "date": "2026-11-09"
  },
  "/phishing-test/": {
-  "hash": "16da89c6aec2af03",
-  "date": "2026-11-10"
+  "hash": "f629adb71355d6a8",
+  "date": "2026-11-11"
+ },
+ "/tests/": {
+  "hash": "6d99d609898aa09b",
+  "date": "2026-11-11"
+ },
+ "/tests/backup-readiness/": {
+  "hash": "5c047033c57959fb",
+  "date": "2026-11-11"
+ },
+ "/tests/cybersecurity-readiness/": {
+  "hash": "c456f09b43907446",
+  "date": "2026-11-11"
  },
  "/privacy/": {
   "hash": "b9fad9f25583eac5",
@@ -348,8 +360,20 @@
   "date": "2026-11-09"
  },
  "/ar/phishing-test/": {
-  "hash": "c982d0f19fcab5b9",
-  "date": "2026-11-10"
+  "hash": "69cda0187a1a50c3",
+  "date": "2026-11-11"
+ },
+ "/ar/tests/": {
+  "hash": "78c8e152426218cb",
+  "date": "2026-11-11"
+ },
+ "/ar/tests/backup-readiness/": {
+  "hash": "4105e3ce83fd4dfe",
+  "date": "2026-11-11"
+ },
+ "/ar/tests/cybersecurity-readiness/": {
+  "hash": "aa94147515061ecb",
+  "date": "2026-11-11"
  },
  "/ar/privacy/": {
   "hash": "40c5fac94e3c9cdc",

@@ -14,6 +14,12 @@ import { PROJECTS, PROJECTS_COPY } from "./content/projects";
 import { CONTACT_PAGE, SERVICES_HUB } from "./content/hubs";
 import { QUIZ_COPY } from "./content/quiz";
 import {
+  ASSESSMENTS,
+  TESTS_HUB,
+  getAssessment,
+  type AssessmentSlug,
+} from "./content/assessments";
+import {
   INDUSTRIES,
   getIndustry,
   type IndustrySlug,
@@ -57,6 +63,8 @@ export type Route =
   | { page: "servicesHub"; lang: Language; path: string }
   | { page: "contact"; lang: Language; path: string }
   | { page: "quiz"; lang: Language; path: string }
+  | { page: "tests"; lang: Language; path: string }
+  | { page: "assessment"; lang: Language; path: string; slug: AssessmentSlug }
   | { page: "privacy"; lang: Language; path: string }
   | { page: "industry"; lang: Language; path: string; slug: IndustrySlug }
   | { page: "brand"; lang: Language; path: string; slug: BrandSlug }
@@ -84,6 +92,14 @@ export function servicesHubPath(lang: Language) {
 
 export function contactPath(lang: Language) {
   return `${lang === "ar" ? "/ar" : ""}/contact/`;
+}
+
+export function testsPath(lang: Language) {
+  return `${lang === "ar" ? "/ar" : ""}/tests/`;
+}
+
+export function assessmentPath(slug: AssessmentSlug, lang: Language) {
+  return `${lang === "ar" ? "/ar" : ""}/tests/${slug}/`;
 }
 
 export function quizPath(lang: Language) {
@@ -138,6 +154,13 @@ export const ROUTES: Route[] = (["en", "ar"] as Language[]).flatMap(lang => [
   { page: "servicesHub" as const, lang, path: servicesHubPath(lang) },
   { page: "contact" as const, lang, path: contactPath(lang) },
   { page: "quiz" as const, lang, path: quizPath(lang) },
+  { page: "tests" as const, lang, path: testsPath(lang) },
+  ...ASSESSMENTS.map(a => ({
+    page: "assessment" as const,
+    lang,
+    slug: a.slug,
+    path: assessmentPath(a.slug, lang),
+  })),
   { page: "privacy" as const, lang, path: privacyPath(lang) },
   ...LOCAL_PAGES.map(p => ({
     page: "local" as const,
@@ -198,6 +221,10 @@ export function alternatePath(route: Route): string {
       return contactPath(other);
     case "quiz":
       return quizPath(other);
+    case "tests":
+      return testsPath(other);
+    case "assessment":
+      return assessmentPath(route.slug, other);
     case "privacy":
       return privacyPath(other);
     case "industry":
@@ -288,6 +315,15 @@ export function getMeta(route: Route) {
         title: QUIZ_COPY[route.lang].metaTitle,
         description: QUIZ_COPY[route.lang].metaDescription,
       };
+    case "tests":
+      return {
+        title: TESTS_HUB[route.lang].metaTitle,
+        description: TESTS_HUB[route.lang].metaDescription,
+      };
+    case "assessment": {
+      const c = getAssessment(route.slug).content[route.lang];
+      return { title: c.metaTitle, description: c.metaDescription };
+    }
     case "projects":
       return {
         title: PROJECTS_COPY[route.lang].metaTitle,
@@ -523,6 +559,71 @@ function structuredData(route: Route) {
         itemListElement: [
           homeCrumb,
           { "@type": "ListItem", position: 2, name: c.h1, item: url },
+        ],
+      }
+    );
+  } else if (route.page === "tests") {
+    const c = TESTS_HUB[route.lang];
+    graph.push(
+      {
+        "@type": "CollectionPage",
+        name: c.h1,
+        description: c.summary,
+        url,
+        inLanguage: route.lang,
+        hasPart: [
+          {
+            "@type": "WebPage",
+            name: QUIZ_COPY[route.lang].name,
+            url: SITE_URL + quizPath(route.lang),
+          },
+          ...ASSESSMENTS.map(a => ({
+            "@type": "WebPage",
+            name: a.content[route.lang].name,
+            url: SITE_URL + assessmentPath(a.slug, route.lang),
+          })),
+        ],
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          homeCrumb,
+          { "@type": "ListItem", position: 2, name: c.name, item: url },
+        ],
+      }
+    );
+  } else if (route.page === "assessment") {
+    const c = getAssessment(route.slug).content[route.lang];
+    graph.push(
+      {
+        "@type": "WebPage",
+        name: c.h1,
+        description: c.summary,
+        url,
+        inLanguage: route.lang,
+        isAccessibleForFree: true,
+        publisher: { "@id": ORG_ID },
+      },
+      {
+        "@type": "FAQPage",
+        inLanguage: route.lang,
+        mainEntity: c.faq.map(f => ({
+          "@type": "Question",
+          name: f.q,
+          acceptedAnswer: { "@type": "Answer", text: f.a },
+        })),
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          homeCrumb,
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: TESTS_HUB[route.lang].name,
+            item: SITE_URL + testsPath(route.lang),
+          },
+          { "@type": "ListItem", position: 3, name: c.name, item: url },
         ],
       }
     );
@@ -1029,6 +1130,10 @@ export function renderLlmsTxt(): string {
     "",
     "## Free tools",
     `- [${QUIZ_COPY.en.h1}](${SITE_URL}${quizPath("en")}): ${QUIZ_COPY.en.summary}`,
+    ...ASSESSMENTS.map(
+      a =>
+        `- [${a.content.en.h1}](${SITE_URL}${assessmentPath(a.slug, "en")}): ${a.content.en.summary}`
+    ),
     "",
     "## Our work",
     `- [${PROJECTS_COPY.en.h1}](${SITE_URL}${projectsPath("en")}): ${PROJECTS_COPY.en.summary} ${PROJECTS_COPY.en.privacyNote}`,

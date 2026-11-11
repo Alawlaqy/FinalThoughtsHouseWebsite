@@ -12,6 +12,8 @@ import ProjectsPage from "./pages/ProjectsPage";
 import ServicesHubPage from "./pages/ServicesHubPage";
 import ContactPage from "./pages/ContactPage";
 import QuizPage from "./pages/QuizPage";
+import TestsPage from "./pages/TestsPage";
+import AssessmentPage from "./pages/AssessmentPage";
 import PrivacyPage from "./pages/PrivacyPage";
 import IndustryPage from "./pages/IndustryPage";
 import BrandPage from "./pages/BrandPage";
@@ -57,6 +59,10 @@ function App({ path }: { path: string }) {
             <ContactPage />
           ) : route.page === "quiz" ? (
             <QuizPage />
+          ) : route.page === "tests" ? (
+            <TestsPage />
+          ) : route.page === "assessment" ? (
+            <AssessmentPage slug={route.slug} />
           ) : route.page === "privacy" ? (
             <PrivacyPage />
           ) : route.page === "industry" ? (

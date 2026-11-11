@@ -26,6 +26,7 @@ const translations: Record<string, Record<Language, string>> = {
   "nav.allServices": { en: "All Services", ar: "جميع الخدمات" },
   "nav.insights": { en: "Insights", ar: "مقالات" },
   "nav.quiz": { en: "Phishing Test", ar: "اختبار التصيّد" },
+  "nav.tests": { en: "Free Tests", ar: "اختبارات" },
   "nav.about": { en: "About Us", ar: "من نحن" },
   "nav.privacy": { en: "Privacy Policy", ar: "سياسة الخصوصية" },
   "contact.privacyNote": {

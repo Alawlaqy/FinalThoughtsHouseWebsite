@@ -5,14 +5,13 @@
  */
 import { useState, useEffect } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
-import { insightsPath, projectsPath } from "@/seo";
+import { insightsPath, projectsPath, testsPath } from "@/seo";
 import { Menu, X, Globe } from "lucide-react";
 
 const navLinks = [
   { key: "nav.home", href: "#home" },
   { key: "nav.services", href: "#services" },
   { key: "nav.partners", href: "#partners" },
-  { key: "nav.contact", href: "#contact" },
 ];
 const INSIGHTS_KEY = "nav.insights";
 
@@ -99,6 +98,16 @@ export default function Navbar() {
             }`}
           >
             {t("nav.projects")}
+          </a>
+          <a
+            href={testsPath(lang)}
+            className={`px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 hover:bg-[#2563EB]/10 ${
+              scrolled
+                ? "text-[#1E293B] hover:text-[#2563EB]"
+                : "text-white/90 hover:text-white"
+            }`}
+          >
+            {t("nav.tests")}
           </a>
           <a
             href={insightsPath(lang)}
@@ -191,6 +200,12 @@ export default function Navbar() {
               className="px-4 py-3 text-[#1E293B] font-medium rounded-lg hover:bg-[#2563EB]/10 hover:text-[#2563EB] transition-colors"
             >
               {t("nav.projects")}
+            </a>
+            <a
+              href={testsPath(lang)}
+              className="px-4 py-3 text-[#1E293B] font-medium rounded-lg hover:bg-[#2563EB]/10 hover:text-[#2563EB] transition-colors"
+            >
+              {t("nav.tests")}
             </a>
             <a
               href={insightsPath(lang)}

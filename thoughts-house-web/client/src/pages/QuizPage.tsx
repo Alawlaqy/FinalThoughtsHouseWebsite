@@ -9,7 +9,7 @@ import Footer from "@/components/Footer";
 import WhatsAppWidget from "@/components/WhatsAppWidget";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { QUIZ_COPY, QUIZ_QUESTIONS, type QuizKind } from "@/content/quiz";
-import { contactPath, servicePath } from "@/seo";
+import { contactPath, servicePath, testsPath } from "@/seo";
 import { trackEvent, whatsappUrl } from "@/lib/leads";
 import {
   ArrowLeft,
@@ -304,7 +304,13 @@ export default function QuizPage() {
                 </li>
               ))}
             </ol>
-            <p className="mt-8">
+            <p className="mt-8 flex flex-wrap gap-x-6 gap-y-2">
+              <a
+                href={testsPath(lang)}
+                className="font-semibold text-[#2563EB] hover:underline"
+              >
+                {lang === "ar" ? "كل الاختبارات المجانية" : "All free tests"}
+              </a>
               <a
                 href={servicePath("cybersecurity", lang)}
                 className="font-semibold text-[#2563EB] hover:underline"
