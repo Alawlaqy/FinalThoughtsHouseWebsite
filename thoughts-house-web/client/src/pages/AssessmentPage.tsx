@@ -7,6 +7,7 @@ import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppWidget from "@/components/WhatsAppWidget";
+import ResultMoment, { tierOf } from "@/components/ResultMoment";
 import { useLanguage } from "@/contexts/LanguageContext";
 import {
   ASSESS_UI,
@@ -172,17 +173,12 @@ export default function AssessmentPage({ slug }: { slug: AssessmentSlug }) {
                 <p className="text-sm font-semibold text-[#2563EB] mb-2">
                   {ui.resultTitle}
                 </p>
-                <p className="text-5xl font-bold text-[#1E293B] mb-1">
-                  <span dir="ltr">
-                    {score} / {total}
-                  </span>
-                </p>
-                <p className="text-sm text-[#64748B] mb-5">
-                  {score} {ui.score} {total}
-                </p>
-                <h2 className="text-2xl font-bold text-[#1E293B] mb-2">
-                  {level.title}
-                </h2>
+                <ResultMoment
+                  tier={tierOf(c.levels.indexOf(level), c.levels.length)}
+                  score={score}
+                  total={total}
+                  title={level.title}
+                />
                 <p className="text-[#334155] leading-relaxed mb-6">
                   {level.text}
                 </p>

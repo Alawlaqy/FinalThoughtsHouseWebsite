@@ -15,8 +15,10 @@ import {
   ArrowLeft,
   ArrowRight,
   DatabaseBackup,
+  KeyRound,
   MailWarning,
   ShieldCheck,
+  Wifi,
 } from "lucide-react";
 
 export default function TestsPage() {
@@ -26,6 +28,8 @@ export default function TestsPage() {
   const icons = {
     "backup-readiness": DatabaseBackup,
     "cybersecurity-readiness": ShieldCheck,
+    "password-security": KeyRound,
+    "wifi-security": Wifi,
   };
 
   const cards = [

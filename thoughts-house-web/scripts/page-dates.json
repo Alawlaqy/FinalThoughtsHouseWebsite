@@ -68,7 +68,7 @@
   "date": "2026-11-13"
  },
  "/tests/": {
-  "hash": "7363a445aa8470fc",
+  "hash": "983ad2e9f3418b86",
   "date": "2026-11-13"
  },
  "/tests/backup-readiness/": {
@@ -77,6 +77,14 @@
  },
  "/tests/cybersecurity-readiness/": {
   "hash": "2d6f5ae09f83079a",
+  "date": "2026-11-13"
+ },
+ "/tests/password-security/": {
+  "hash": "022073b584d102e3",
+  "date": "2026-11-13"
+ },
+ "/tests/wifi-security/": {
+  "hash": "2960a6edbb671104",
   "date": "2026-11-13"
  },
  "/privacy/": {
@@ -364,7 +372,7 @@
   "date": "2026-11-13"
  },
  "/ar/tests/": {
-  "hash": "806875a42e89fc46",
+  "hash": "8a8bef2d507b2ae9",
   "date": "2026-11-13"
  },
  "/ar/tests/backup-readiness/": {
@@ -373,6 +381,14 @@
  },
  "/ar/tests/cybersecurity-readiness/": {
   "hash": "7207c1816c15db94",
+  "date": "2026-11-13"
+ },
+ "/ar/tests/password-security/": {
+  "hash": "796415380ed03ab0",
+  "date": "2026-11-13"
+ },
+ "/ar/tests/wifi-security/": {
+  "hash": "621003a35fe5ef44",
   "date": "2026-11-13"
  },
  "/ar/privacy/": {

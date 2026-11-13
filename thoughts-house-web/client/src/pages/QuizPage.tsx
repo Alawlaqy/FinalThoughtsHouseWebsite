@@ -7,6 +7,7 @@ import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppWidget from "@/components/WhatsAppWidget";
+import ResultMoment, { tierOf } from "@/components/ResultMoment";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { QUIZ_COPY, QUIZ_QUESTIONS, type QuizKind } from "@/content/quiz";
 import { contactPath, servicePath, testsPath } from "@/seo";
@@ -218,17 +219,12 @@ export default function QuizPage() {
                 <p className="text-sm font-semibold text-[#2563EB] mb-2">
                   {c.resultTitle}
                 </p>
-                <p className="text-5xl font-bold text-[#1E293B] mb-1">
-                  <span dir="ltr">
-                    {score} / {TOTAL}
-                  </span>
-                </p>
-                <p className="text-sm text-[#64748B] mb-5">
-                  {score} {c.score} {TOTAL}
-                </p>
-                <h2 className="text-2xl font-bold text-[#1E293B] mb-2">
-                  {level.title}
-                </h2>
+                <ResultMoment
+                  tier={tierOf(c.levels.indexOf(level), c.levels.length)}
+                  score={score}
+                  total={TOTAL}
+                  title={level.title}
+                />
                 <p className="text-[#334155] leading-relaxed mb-6">
                   {level.text}
                 </p>

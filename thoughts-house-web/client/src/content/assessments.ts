@@ -6,7 +6,11 @@
 import type { Language } from "@/seo";
 import type { ServiceSlug } from "./services";
 
-export type AssessmentSlug = "backup-readiness" | "cybersecurity-readiness";
+export type AssessmentSlug =
+  | "backup-readiness"
+  | "cybersecurity-readiness"
+  | "password-security"
+  | "wifi-security";
 
 interface AssessmentCopy {
   metaTitle: string;
@@ -419,6 +423,366 @@ export const ASSESSMENTS: Assessment[] = [
       },
     },
   },
+  {
+    slug: "password-security",
+    service: "cybersecurity",
+    content: {
+      en: {
+        metaTitle: "Password Security Test for Businesses | Thoughts House",
+        metaDescription:
+          "Free 8-question test on how your business handles passwords and accounts. Check for reused passwords, shared logins and missing two-step verification.",
+        name: "Password and Accounts Test",
+        h1: "Password and Accounts Test: How Safe Are Your Logins?",
+        summary:
+          "Eight yes-or-no questions about passwords and user accounts in your business. At the end you get a level and a short list of what to fix. It takes about two minutes and needs no sign-up.",
+        audience: "For business owners and IT managers",
+        minutes: "8 questions · 2 minutes",
+        questions: [
+          {
+            q: "Does every employee have their own account, with no shared logins for email or business systems?",
+            why: "With a shared login you cannot tell who did what, and you cannot remove one person's access without changing the password for everyone.",
+            fix: "Give each person their own account and close shared logins.",
+          },
+          {
+            q: "Is two-step verification turned on for email for all staff?",
+            why: "Most break-ins start with a stolen email password. A second step, such as an app prompt, stops the attacker even when the password is known.",
+            fix: "Turn on two-step verification for every mailbox, starting with managers and finance.",
+          },
+          {
+            q: "Do staff use a different password for each work system?",
+            why: "When one website is breached, attackers try the same email and password everywhere else. A reused password turns one leak into many.",
+            fix: "Ask staff to stop reusing passwords, and give them a password manager so it is practical.",
+          },
+          {
+            q: "Does the business provide a password manager for storing passwords?",
+            why: "People cannot remember dozens of long passwords, so they reuse them or write them in notes and spreadsheets. A password manager removes the need.",
+            fix: "Choose one password manager for the business and move stored passwords into it.",
+          },
+          {
+            q: "Are passwords at least 12 characters long on your main systems?",
+            why: "Length matters more than symbols. A long phrase is much harder to guess by trial than a short password with a number at the end.",
+            fix: "Set a minimum length of 12 characters and encourage phrases of several words.",
+          },
+          {
+            q: "Do administrators use a separate account for admin work, not their everyday account?",
+            why: "If an administrator's everyday account is tricked by a phishing email, the attacker gets full control. A separate admin account limits the damage.",
+            fix: "Create separate admin accounts and use them only for admin tasks.",
+          },
+          {
+            q: "Are accounts disabled on the same day an employee leaves?",
+            why: "Old accounts are a common way in. Nobody is watching them, and the former employee may still know the password.",
+            fix: "Add account removal to the leaving checklist and review active accounts every quarter.",
+          },
+          {
+            q: "Have the default passwords been changed on routers, cameras, printers and other devices?",
+            why: "Default passwords are published in manuals and online lists. Attackers try them first on any device they can reach.",
+            fix: "List your network devices and change every default password.",
+          },
+        ],
+        levels: [
+          {
+            min: 7,
+            title: "Strong habits",
+            text: "Your accounts follow good practice. Review the list of active accounts from time to time so it stays that way.",
+          },
+          {
+            min: 4,
+            title: "Some weak points",
+            text: "The basics are there, but a few gaps make a stolen password more dangerous than it should be. Start with the points below.",
+          },
+          {
+            min: 0,
+            title: "Easy to break into",
+            text: "One stolen or guessed password could open much of your business. The points below are the place to start.",
+          },
+        ],
+        ctaTitle: "Want help securing your accounts?",
+        ctaText:
+          "Thoughts House sets up two-step verification, account policies and email protection for organizations in Dammam and across Saudi Arabia.",
+        faq: [
+          {
+            q: "What makes a password strong?",
+            a: "Length and uniqueness. A phrase of several unrelated words that you use for one system only is stronger than a short password with symbols, and easier to remember.",
+          },
+          {
+            q: "Is two-step verification by text message enough?",
+            a: "It is far better than a password alone. An authenticator app or a security key is stronger, because text messages can be intercepted or redirected.",
+          },
+          {
+            q: "Should staff change passwords every few months?",
+            a: "Current guidance is to change a password when there is a sign it was exposed, not on a fixed schedule. Forced frequent changes lead people to pick weaker passwords.",
+          },
+        ],
+      },
+      ar: {
+        metaTitle: "اختبار أمان كلمات المرور للمنشآت | بيت الأفكار",
+        metaDescription:
+          "اختبار مجاني من 8 أسئلة عن تعامل منشأتك مع كلمات المرور والحسابات. اكشف كلمات المرور المكررة والحسابات المشتركة وغياب التحقق بخطوتين.",
+        name: "اختبار كلمات المرور والحسابات",
+        h1: "اختبار كلمات المرور والحسابات: ما مدى أمان حسابات منشأتك؟",
+        summary:
+          "ثمانية أسئلة بنعم أو لا عن كلمات المرور وحسابات المستخدمين في منشأتك. في النهاية تحصل على مستوى وقائمة قصيرة بما تصلحه. يستغرق نحو دقيقتين ولا يحتاج إلى تسجيل.",
+        audience: "لأصحاب المنشآت ومديري تقنية المعلومات",
+        minutes: "8 أسئلة · دقيقتان",
+        questions: [
+          {
+            q: "هل لكل موظف حسابه الخاص، دون حسابات مشتركة للبريد أو أنظمة العمل؟",
+            why: "مع الحساب المشترك لا تعرف من فعل ماذا، ولا تستطيع سحب صلاحية شخص واحد دون تغيير كلمة المرور على الجميع.",
+            fix: "خصّص لكل شخص حسابه، وأغلق الحسابات المشتركة.",
+          },
+          {
+            q: "هل التحقق بخطوتين مفعّل على البريد الإلكتروني لجميع الموظفين؟",
+            why: "أغلب الاختراقات تبدأ بكلمة مرور بريد مسروقة. الخطوة الثانية، مثل إشعار في التطبيق، توقف المهاجم حتى لو عرف كلمة المرور.",
+            fix: "فعّل التحقق بخطوتين على كل صناديق البريد، وابدأ بالمديرين والمالية.",
+          },
+          {
+            q: "هل يستخدم الموظفون كلمة مرور مختلفة لكل نظام عمل؟",
+            why: "عند اختراق موقع واحد يجرّب المهاجمون البريد وكلمة المرور نفسيهما في كل مكان آخر. الكلمة المكررة تحوّل تسريباً واحداً إلى عدة اختراقات.",
+            fix: "اطلب من الموظفين عدم تكرار كلمات المرور، ووفّر لهم مدير كلمات مرور ليصبح ذلك عملياً.",
+          },
+          {
+            q: "هل توفّر المنشأة مدير كلمات مرور لحفظ كلمات المرور؟",
+            why: "لا أحد يحفظ عشرات الكلمات الطويلة، فيكررها الناس أو يكتبونها في ملاحظات وجداول. مدير كلمات المرور يغني عن ذلك.",
+            fix: "اختر مدير كلمات مرور واحداً للمنشأة، وانقل إليه كلمات المرور المحفوظة.",
+          },
+          {
+            q: "هل لا يقل طول كلمات المرور عن 12 حرفاً في أنظمتكم الأساسية؟",
+            why: "الطول أهم من الرموز. العبارة الطويلة أصعب في التخمين بالتجربة من كلمة قصيرة في آخرها رقم.",
+            fix: "اجعل الحد الأدنى 12 حرفاً، وشجّع على عبارات من عدة كلمات.",
+          },
+          {
+            q: "هل يستخدم مديرو الأنظمة حساباً منفصلاً لأعمال الإدارة، غير حسابهم اليومي؟",
+            why: "إذا انخدع حساب المدير اليومي برسالة تصيّد حصل المهاجم على تحكم كامل. الحساب الإداري المنفصل يحدّ من الضرر.",
+            fix: "أنشئ حسابات إدارية منفصلة، واستخدمها لمهام الإدارة فقط.",
+          },
+          {
+            q: "هل تُعطَّل حسابات الموظف في يوم مغادرته نفسه؟",
+            why: "الحسابات القديمة مدخل شائع. لا أحد يراقبها، وقد يظل الموظف السابق يعرف كلمة المرور.",
+            fix: "أضف تعطيل الحسابات إلى إجراءات المغادرة، وراجع الحسابات الفعالة كل ربع سنة.",
+          },
+          {
+            q: "هل غُيّرت كلمات المرور الافتراضية في الراوترات والكاميرات والطابعات وبقية الأجهزة؟",
+            why: "كلمات المرور الافتراضية منشورة في الأدلة وقوائم الإنترنت، وهي أول ما يجرّبه المهاجم على أي جهاز يصل إليه.",
+            fix: "احصر أجهزة الشبكة، وغيّر كل كلمة مرور افتراضية.",
+          },
+        ],
+        levels: [
+          {
+            min: 7,
+            title: "عادات قوية",
+            text: "حساباتكم تتبع الممارسات السليمة. راجعوا قائمة الحسابات الفعالة من وقت لآخر ليبقى الوضع كذلك.",
+          },
+          {
+            min: 4,
+            title: "نقاط ضعف قليلة",
+            text: "الأساسيات موجودة، لكن بعض الثغرات تجعل سرقة كلمة مرور أخطر مما ينبغي. ابدؤوا بالنقاط أدناه.",
+          },
+          {
+            min: 0,
+            title: "سهلة الاختراق",
+            text: "كلمة مرور واحدة مسروقة أو مخمَّنة قد تفتح جزءاً كبيراً من منشأتكم. النقاط أدناه هي نقطة البداية.",
+          },
+        ],
+        ctaTitle: "تريد مساعدة في تأمين حساباتكم؟",
+        ctaText:
+          "يفعّل بيت الأفكار التحقق بخطوتين وسياسات الحسابات وحماية البريد للمنشآت في الدمام وجميع مناطق المملكة.",
+        faq: [
+          {
+            q: "ما الذي يجعل كلمة المرور قوية؟",
+            a: "الطول وعدم التكرار. عبارة من عدة كلمات غير مترابطة تستخدمها لنظام واحد فقط أقوى من كلمة قصيرة فيها رموز، وأسهل في الحفظ.",
+          },
+          {
+            q: "هل يكفي التحقق بخطوتين عبر الرسائل النصية؟",
+            a: "هو أفضل بكثير من كلمة المرور وحدها. تطبيق المصادقة أو مفتاح الأمان أقوى، لأن الرسائل النصية يمكن اعتراضها أو تحويلها.",
+          },
+          {
+            q: "هل يجب أن يغيّر الموظفون كلمات المرور كل بضعة أشهر؟",
+            a: "التوجيه الحالي هو تغيير كلمة المرور عند ظهور علامة على انكشافها، لا وفق جدول ثابت. التغيير الإجباري المتكرر يدفع الناس إلى اختيار كلمات أضعف.",
+          },
+        ],
+      },
+    },
+  },
+  {
+    slug: "wifi-security",
+    service: "wifi-installation",
+    content: {
+      en: {
+        metaTitle: "Office Wi-Fi Security Test | Thoughts House",
+        metaDescription:
+          "Free 8-question test on your office Wi-Fi. Check guest access, encryption, router passwords and updates, and see what to fix first.",
+        name: "Office Wi-Fi Security Test",
+        h1: "Office Wi-Fi Security Test: Who Can Reach Your Network?",
+        summary:
+          "Eight yes-or-no questions about the wireless network in your office. At the end you get a level and a short list of what to fix. It takes about two minutes and needs no sign-up.",
+        audience: "For business owners and IT managers",
+        minutes: "8 questions · 2 minutes",
+        questions: [
+          {
+            q: "Do visitors connect to a separate guest network, not the one your staff use?",
+            why: "A visitor's phone or laptop on the staff network can reach your shared folders, printers and servers. A guest network gives internet only.",
+            fix: "Create a guest network that is isolated from the internal network.",
+          },
+          {
+            q: "Does your Wi-Fi use WPA2 or WPA3 security?",
+            why: "Older settings such as WEP and the first WPA can be broken in minutes with free tools. An open network with no password exposes everything sent over it.",
+            fix: "Set the network to WPA2 or WPA3 and replace access points that support neither.",
+          },
+          {
+            q: "Has the administrator password of the router and access points been changed from the default?",
+            why: "Anyone on the network can open the router's settings page. With the default password they can change settings or redirect your traffic.",
+            fix: "Change the administrator password on every router and access point.",
+          },
+          {
+            q: "Is the Wi-Fi password changed when an employee who knew it leaves?",
+            why: "A shared Wi-Fi password stays valid for everyone who ever had it, and it works from the car park as well as from inside the office.",
+            fix: "Change the password after staff leave, or move to individual logins for each user.",
+          },
+          {
+            q: "Are cameras, printers and smart devices on a separate network from computers?",
+            why: "These devices are rarely updated and are often the easiest thing to break into. Separation keeps a compromised camera away from your files.",
+            fix: "Put cameras, printers and smart devices on their own network segment.",
+          },
+          {
+            q: "Has the software of your router and access points been updated in the last year?",
+            why: "Manufacturers fix security flaws through updates. A router that has not been updated for years carries flaws that are publicly known.",
+            fix: "Check for updates now, and replace devices the manufacturer no longer supports.",
+          },
+          {
+            q: "Is WPS, the push-button connection feature, turned off?",
+            why: "WPS uses a short PIN that can be guessed by trial, which gives an attacker the Wi-Fi password without knowing it.",
+            fix: "Turn off WPS on every router and access point.",
+          },
+          {
+            q: "Do you know which devices are connected to your network right now?",
+            why: "You cannot protect what you cannot see. An unknown device may be a neighbour, a former employee or a small access point someone plugged in.",
+            fix: "Review the list of connected devices and remove any you do not recognize.",
+          },
+        ],
+        levels: [
+          {
+            min: 7,
+            title: "Well secured",
+            text: "Your Wi-Fi follows good practice. Keep the devices updated and review connected devices from time to time.",
+          },
+          {
+            min: 4,
+            title: "Some doors open",
+            text: "The network is protected, but a few gaps let visitors or old devices reach more than they should. Start with the points below.",
+          },
+          {
+            min: 0,
+            title: "Open to outsiders",
+            text: "Someone near your office could reach your internal network with little effort. The points below are the place to start.",
+          },
+        ],
+        ctaTitle: "Want a Wi-Fi network you can trust?",
+        ctaText:
+          "Thoughts House designs, installs and secures office Wi-Fi for organizations in Dammam and across Saudi Arabia, with separate staff, guest and device networks.",
+        faq: [
+          {
+            q: "What is the difference between WPA2 and WPA3?",
+            a: "WPA3 is the newer standard. It protects better against password guessing and keeps past traffic private even if the password is later exposed. WPA2 with a long password is still acceptable.",
+          },
+          {
+            q: "Is hiding the network name a security measure?",
+            a: "No. A hidden name is easy to find with free tools and can cause connection problems. Strong encryption and a long password protect the network, not hiding it.",
+          },
+          {
+            q: "Should a business use one Wi-Fi password for everyone?",
+            a: "It works for a small office if the password is long and changed when people leave. Larger offices are better served by individual logins, so one person's access can be removed without affecting others.",
+          },
+        ],
+      },
+      ar: {
+        metaTitle: "اختبار أمان شبكة Wi-Fi في المكتب | بيت الأفكار",
+        metaDescription:
+          "اختبار مجاني من 8 أسئلة عن شبكة Wi-Fi في مكتبك. راجع شبكة الضيوف والتشفير وكلمات مرور الراوتر والتحديثات، واعرف ما تصلحه أولاً.",
+        name: "اختبار أمان شبكة Wi-Fi",
+        h1: "اختبار أمان شبكة Wi‑Fi في المكتب: من يصل إلى شبكتك؟",
+        summary:
+          "ثمانية أسئلة بنعم أو لا عن الشبكة اللاسلكية في مكتبك. في النهاية تحصل على مستوى وقائمة قصيرة بما تصلحه. يستغرق نحو دقيقتين ولا يحتاج إلى تسجيل.",
+        audience: "لأصحاب المنشآت ومديري تقنية المعلومات",
+        minutes: "8 أسئلة · دقيقتان",
+        questions: [
+          {
+            q: "هل يتصل الزوار بشبكة ضيوف منفصلة، غير الشبكة التي يستخدمها الموظفون؟",
+            why: "جوال الزائر أو حاسوبه على شبكة الموظفين يصل إلى المجلدات المشتركة والطابعات والسيرفرات. شبكة الضيوف تعطي الإنترنت فقط.",
+            fix: "أنشئ شبكة ضيوف معزولة عن الشبكة الداخلية.",
+          },
+          {
+            q: "هل تستخدم شبكة Wi-Fi لديكم حماية WPA2 أو WPA3؟",
+            why: "الإعدادات الأقدم مثل WEP وWPA الأول تُكسر في دقائق بأدوات مجانية. والشبكة المفتوحة دون كلمة مرور تكشف كل ما يمر عبرها.",
+            fix: "اضبط الشبكة على WPA2 أو WPA3، واستبدل نقاط الاتصال التي لا تدعم أياً منهما.",
+          },
+          {
+            q: "هل غُيّرت كلمة مرور الإدارة الافتراضية في الراوتر ونقاط الاتصال؟",
+            why: "أي متصل بالشبكة يستطيع فتح صفحة إعدادات الراوتر. بكلمة المرور الافتراضية يغيّر الإعدادات أو يحوّل مسار اتصالكم.",
+            fix: "غيّر كلمة مرور الإدارة في كل راوتر ونقطة اتصال.",
+          },
+          {
+            q: "هل تُغيَّر كلمة مرور Wi-Fi عند مغادرة موظف كان يعرفها؟",
+            why: "كلمة مرور Wi-Fi المشتركة تبقى صالحة لكل من عرفها يوماً، وتعمل من موقف السيارات كما تعمل من داخل المكتب.",
+            fix: "غيّر كلمة المرور بعد مغادرة الموظفين، أو انتقل إلى دخول فردي لكل مستخدم.",
+          },
+          {
+            q: "هل الكاميرات والطابعات والأجهزة الذكية على شبكة منفصلة عن الحواسيب؟",
+            why: "هذه الأجهزة قلّما تُحدَّث، وهي غالباً أسهل ما يُخترق. الفصل يبعد الكاميرا المخترقة عن ملفاتكم.",
+            fix: "ضع الكاميرات والطابعات والأجهزة الذكية في قسم شبكي خاص بها.",
+          },
+          {
+            q: "هل حُدّث برنامج الراوتر ونقاط الاتصال خلال السنة الماضية؟",
+            why: "الشركات المصنّعة تعالج الثغرات الأمنية بالتحديثات. الراوتر الذي لم يُحدَّث منذ سنوات فيه ثغرات معروفة للجميع.",
+            fix: "تحقق من التحديثات الآن، واستبدل الأجهزة التي توقف دعمها من المصنّع.",
+          },
+          {
+            q: "هل خاصية WPS، أي الاتصال بضغطة زر، متوقفة؟",
+            why: "تعتمد WPS على رقم قصير يمكن تخمينه بالتجربة، فيحصل المهاجم على كلمة مرور Wi-Fi دون أن يعرفها.",
+            fix: "أوقف WPS في كل راوتر ونقطة اتصال.",
+          },
+          {
+            q: "هل تعرف ما الأجهزة المتصلة بشبكتك الآن؟",
+            why: "لا تحمي ما لا تراه. الجهاز المجهول قد يكون جاراً، أو موظفاً سابقاً، أو نقطة اتصال صغيرة وصّلها أحدهم.",
+            fix: "راجع قائمة الأجهزة المتصلة، واحذف ما لا تعرفه.",
+          },
+        ],
+        levels: [
+          {
+            min: 7,
+            title: "مؤمَّنة جيداً",
+            text: "شبكتكم تتبع الممارسات السليمة. واصلوا تحديث الأجهزة ومراجعة المتصلين من وقت لآخر.",
+          },
+          {
+            min: 4,
+            title: "بعض الأبواب مفتوحة",
+            text: "الشبكة محمية، لكن بعض الثغرات تتيح للزوار أو الأجهزة القديمة الوصول إلى أكثر مما ينبغي. ابدؤوا بالنقاط أدناه.",
+          },
+          {
+            min: 0,
+            title: "مفتوحة للغرباء",
+            text: "شخص قريب من مكتبكم قد يصل إلى شبكتكم الداخلية بجهد قليل. النقاط أدناه هي نقطة البداية.",
+          },
+        ],
+        ctaTitle: "تريد شبكة Wi-Fi تثق بها؟",
+        ctaText:
+          "يصمم بيت الأفكار شبكات Wi-Fi للمكاتب وينفذها ويؤمّنها في الدمام وجميع مناطق المملكة، مع شبكات منفصلة للموظفين والضيوف والأجهزة.",
+        faq: [
+          {
+            q: "ما الفرق بين WPA2 وWPA3؟",
+            a: "WPA3 هو المعيار الأحدث. يحمي أفضل من تخمين كلمة المرور، ويُبقي الاتصالات السابقة خاصة حتى لو انكشفت كلمة المرور لاحقاً. WPA2 مع كلمة مرور طويلة ما زال مقبولاً.",
+          },
+          {
+            q: "هل إخفاء اسم الشبكة وسيلة حماية؟",
+            a: "لا. الاسم المخفي يُكشف بسهولة بأدوات مجانية، وقد يسبب مشاكل في الاتصال. ما يحمي الشبكة هو التشفير القوي وكلمة المرور الطويلة، لا الإخفاء.",
+          },
+          {
+            q: "هل تستخدم المنشأة كلمة مرور Wi-Fi واحدة للجميع؟",
+            a: "تصلح للمكتب الصغير إذا كانت طويلة وتُغيَّر عند مغادرة الموظفين. المكاتب الأكبر يناسبها دخول فردي لكل مستخدم، فتُسحب صلاحية شخص دون التأثير على البقية.",
+          },
+        ],
+      },
+    },
+  },
 ];
 
 export function getAssessment(slug: AssessmentSlug) {
@@ -519,7 +883,7 @@ export const TESTS_HUB: Record<
   en: {
     metaTitle: "Free IT Security Tests for Businesses | Thoughts House",
     metaDescription:
-      "Free short tests from Thoughts House: spot phishing messages, check your backup readiness and assess your cybersecurity basics. No sign-up needed.",
+      "Free short tests from Thoughts House: spot phishing messages and check your backups, passwords, Wi-Fi and cybersecurity basics. No sign-up needed.",
     name: "Free Tests",
     h1: "Free IT Security Tests",
     summary:
@@ -530,14 +894,14 @@ export const TESTS_HUB: Record<
     whyTitle: "How to use these tests",
     why: [
       "Share the phishing test with your team; attackers only need one person to click.",
-      "Take the two readiness tests yourself, or with your IT manager, and note the gaps.",
+      "Take the other tests yourself, or with your IT manager, and note the gaps.",
       "Send us the gaps you found and we will suggest how to close them.",
     ],
   },
   ar: {
     metaTitle: "اختبارات مجانية لأمن تقنية المعلومات | بيت الأفكار",
     metaDescription:
-      "اختبارات قصيرة مجانية من بيت الأفكار: اكشف رسائل التصيّد، وراجع جاهزية النسخ الاحتياطي، وقيّم أساسيات الأمن السيبراني في منشأتك. دون تسجيل.",
+      "اختبارات قصيرة مجانية من بيت الأفكار: اكشف رسائل التصيّد، وراجع النسخ الاحتياطي وكلمات المرور وشبكة Wi-Fi وأساسيات الأمن السيبراني في منشأتك. دون تسجيل.",
     name: "اختبارات",
     h1: "اختبارات مجانية لأمن تقنية المعلومات",
     summary:
@@ -548,7 +912,7 @@ export const TESTS_HUB: Record<
     whyTitle: "كيف تستفيد من هذه الاختبارات",
     why: [
       "شارك اختبار التصيّد مع فريقك، فالمهاجم يكفيه شخص واحد يضغط.",
-      "أجب عن اختباري الجاهزية بنفسك أو مع مدير التقنية، ودوّن الثغرات.",
+      "أجب عن بقية الاختبارات بنفسك أو مع مدير التقنية، ودوّن الثغرات.",
       "أرسل لنا الثغرات التي وجدتها، ونقترح عليك طريقة إغلاقها.",
     ],
   },
