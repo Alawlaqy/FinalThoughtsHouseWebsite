@@ -26,7 +26,7 @@ export default function BrandsPage() {
       <main>
         <section id="home" className="bg-[#0F172A]">
           <div className="container pt-32 pb-14 md:pt-40 md:pb-16">
-            <h1 className="max-w-3xl text-4xl sm:text-5xl font-extrabold text-white leading-[1.15] mb-5">
+            <h1 className="max-w-3xl text-4xl sm:text-5xl font-bold text-white leading-[1.15] mb-5">
               {c.h1}
             </h1>
             <p className="max-w-3xl text-lg text-white/75 leading-relaxed mb-8">
@@ -49,7 +49,7 @@ export default function BrandsPage() {
           >
             <div className="container">
               <div className="flex flex-wrap items-baseline justify-between gap-3 mb-8">
-                <h2 className="text-2xl sm:text-3xl font-extrabold text-[#1E293B]">
+                <h2 className="text-2xl sm:text-3xl font-bold text-[#1E293B]">
                   {g.title[lang]}
                 </h2>
                 <a

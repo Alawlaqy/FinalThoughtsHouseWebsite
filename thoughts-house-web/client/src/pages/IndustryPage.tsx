@@ -84,7 +84,7 @@ export default function IndustryPage({ slug }: { slug: IndustrySlug }) {
                 </li>
               </ol>
             </nav>
-            <h1 className="max-w-3xl text-3xl sm:text-5xl font-extrabold text-white leading-[1.15] mb-6">
+            <h1 className="max-w-3xl text-3xl sm:text-5xl font-bold text-white leading-[1.15] mb-6">
               {c.h1}
             </h1>
             <p className="max-w-2xl text-lg text-white/80 leading-relaxed mb-6">
@@ -106,7 +106,7 @@ export default function IndustryPage({ slug }: { slug: IndustrySlug }) {
               <p className="text-lg text-[#334155] leading-relaxed mb-8">
                 {c.intro}
               </p>
-              <h2 className="text-2xl font-extrabold text-[#1E293B] mb-5">
+              <h2 className="text-2xl font-bold text-[#1E293B] mb-5">
                 {c.challengesTitle}
               </h2>
               <ul className="space-y-3">
@@ -122,7 +122,7 @@ export default function IndustryPage({ slug }: { slug: IndustrySlug }) {
               </ul>
             </div>
             <div>
-              <h2 className="text-2xl font-extrabold text-[#1E293B] mb-5">
+              <h2 className="text-2xl font-bold text-[#1E293B] mb-5">
                 {c.coverageTitle}
               </h2>
               <div className="space-y-4">
@@ -150,7 +150,7 @@ export default function IndustryPage({ slug }: { slug: IndustrySlug }) {
 
         <section className="py-16 bg-[#F8FAFC]">
           <div className="container max-w-3xl">
-            <h2 className="text-2xl font-extrabold text-[#1E293B] mb-6 text-center">
+            <h2 className="text-2xl font-bold text-[#1E293B] mb-6 text-center">
               {lang === "ar" ? "الأسئلة الشائعة" : "Frequently asked questions"}
             </h2>
             <div className="space-y-5 mb-12">
@@ -164,7 +164,7 @@ export default function IndustryPage({ slug }: { slug: IndustrySlug }) {
                 </div>
               ))}
             </div>
-            <h2 className="text-xl font-extrabold text-[#1E293B] mb-4 text-center">
+            <h2 className="text-xl font-bold text-[#1E293B] mb-4 text-center">
               {lang === "ar"
                 ? "عقود الصيانة لقطاعات أخرى"
                 : "Maintenance contracts for other sectors"}

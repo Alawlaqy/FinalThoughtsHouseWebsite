@@ -24,7 +24,7 @@ export default function InsightsPage() {
       <main>
         <section id="home" className="bg-[#0F172A]">
           <div className="container pt-32 pb-14 md:pt-40 md:pb-16">
-            <h1 className="text-4xl sm:text-5xl font-extrabold text-white mb-4">
+            <h1 className="text-4xl sm:text-5xl font-bold text-white mb-4">
               {m.h1}
             </h1>
             <p className="max-w-2xl text-lg text-white/70 leading-relaxed">

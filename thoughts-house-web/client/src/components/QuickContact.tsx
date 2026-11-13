@@ -14,7 +14,7 @@ export default function QuickContact() {
     <section className="bg-[#0F172A]">
       <div className="container py-10 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
         <div>
-          <h2 className="text-2xl font-extrabold text-white mb-2">
+          <h2 className="text-2xl font-bold text-white mb-2">
             {ar ? "هل تحتاج إلى عرض سعر؟" : "Need a quotation?"}
           </h2>
           <p className="text-white/75">

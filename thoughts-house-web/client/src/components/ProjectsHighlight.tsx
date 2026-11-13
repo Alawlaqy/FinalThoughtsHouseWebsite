@@ -23,7 +23,7 @@ export default function ProjectsHighlight({
   return (
     <section className="py-16 bg-[#F8FAFC]">
       <div className="container">
-        <h2 className="text-2xl sm:text-3xl font-extrabold text-[#1E293B] mb-3">
+        <h2 className="text-2xl sm:text-3xl font-bold text-[#1E293B] mb-3">
           {c.listTitle}
         </h2>
         <p className="max-w-3xl text-[#64748B] leading-relaxed mb-8">

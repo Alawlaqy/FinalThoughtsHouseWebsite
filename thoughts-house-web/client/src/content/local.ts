@@ -120,7 +120,7 @@ const DAMMAM_PAGES: LocalPage[] = [
           "Local team based in Dammam, so site surveys and on-site work in the Eastern Province are easy to schedule.",
           "One partner from design and supply to installation and support.",
           "Supply and support for 25+ technology brands, including Cisco, Sophos, Palo Alto Networks, Dell, HP, Lenovo, Microsoft and Veeam.",
-          "500+ organizations served, with 24/7 support coverage.",
+          "250+ organizations served.",
         ],
         guide: [
           {
@@ -165,7 +165,7 @@ const DAMMAM_PAGES: LocalPage[] = [
           },
           {
             title: "An IT company in Dammam since 2002",
-            text: "Thoughts House was founded in Dammam in 2002 and has served more than 500 organizations since then, including government entities, financial institutions, industrial companies, contractors and training institutes. Long experience in one region matters in practice: we know how local procurement works, what manufacturers and distributors stock in the Kingdom, and what support customers here expect after delivery.",
+            text: "Thoughts House was founded in Dammam in 2002 and has served more than 250 organizations since then, including government entities, financial institutions, industrial companies, contractors and training institutes. Long experience in one region matters in practice: we know how local procurement works, what manufacturers and distributors stock in the Kingdom, and what support customers here expect after delivery.",
           },
           {
             title: "Examples of our work",
@@ -243,7 +243,7 @@ const DAMMAM_PAGES: LocalPage[] = [
           },
           {
             q: "How long has Thoughts House worked in Dammam?",
-            a: "Since 2002. The company was founded in Dammam and has served more than 500 organizations across Saudi Arabia.",
+            a: "Since 2002. The company was founded in Dammam and has served more than 250 organizations across Saudi Arabia.",
           },
           {
             q: "Do you work with government entities?",
@@ -311,7 +311,7 @@ const DAMMAM_PAGES: LocalPage[] = [
           "فريق محلي في الدمام، فيسهل جدولة المسح الميداني والعمل في الموقع داخل المنطقة الشرقية.",
           "شريك واحد من التصميم والتوريد إلى التركيب والدعم.",
           "توريد ودعم لأكثر من 25 علامة تقنية، منها Cisco وSophos وPalo Alto Networks وDell وHP وLenovo وMicrosoft وVeeam.",
-          "أكثر من 500 منشأة خدمناها، مع تغطية دعم على مدار الساعة.",
+          "أكثر من 250 منشأة خدمناها.",
         ],
         guide: [
           {
@@ -356,7 +356,7 @@ const DAMMAM_PAGES: LocalPage[] = [
           },
           {
             title: "شركة تقنية معلومات في الدمام منذ 2002",
-            text: "تأسس بيت الأفكار في الدمام عام 2002، وخدم منذ ذلك الحين أكثر من 500 منشأة، منها جهات حكومية ومؤسسات مالية وشركات صناعية ومقاولون ومعاهد تدريب. والخبرة الطويلة في منطقة واحدة لها أثر عملي: نعرف كيف تسير المشتريات محلياً، وما يتوفر لدى الشركات المصنّعة والموزعين في المملكة، وما يتوقعه العملاء هنا من دعم بعد التسليم.",
+            text: "تأسس بيت الأفكار في الدمام عام 2002، وخدم منذ ذلك الحين أكثر من 250 منشأة، منها جهات حكومية ومؤسسات مالية وشركات صناعية ومقاولون ومعاهد تدريب. والخبرة الطويلة في منطقة واحدة لها أثر عملي: نعرف كيف تسير المشتريات محلياً، وما يتوفر لدى الشركات المصنّعة والموزعين في المملكة، وما يتوقعه العملاء هنا من دعم بعد التسليم.",
           },
           {
             title: "أمثلة من أعمالنا",
@@ -434,7 +434,7 @@ const DAMMAM_PAGES: LocalPage[] = [
           },
           {
             q: "منذ متى يعمل بيت الأفكار في الدمام؟",
-            a: "منذ عام 2002. تأسست الشركة في الدمام، وخدمت أكثر من 500 منشأة في مناطق المملكة.",
+            a: "منذ عام 2002. تأسست الشركة في الدمام، وخدمت أكثر من 250 منشأة في مناطق المملكة.",
           },
           {
             q: "هل تعملون مع الجهات الحكومية؟",
@@ -510,7 +510,6 @@ const DAMMAM_PAGES: LocalPage[] = [
         whyTitle: "Why choose us for IT support in Dammam",
         why: [
           "Engineers based in Dammam who can come on site when remote support is not enough.",
-          "24/7 support coverage for critical systems.",
           "Contracts sized to your business, from a single office to several branches.",
           "The same team that can design and supply your next upgrade.",
         ],
@@ -591,7 +590,6 @@ const DAMMAM_PAGES: LocalPage[] = [
         whyTitle: "لماذا تختارنا للدعم الفني في الدمام",
         why: [
           "مهندسون في الدمام يحضرون إلى الموقع عندما لا يكفي الدعم عن بُعد.",
-          "تغطية دعم على مدار الساعة للأنظمة الحرجة.",
           "عقود بحجم منشأتك، من مكتب واحد إلى عدة فروع.",
           "الفريق نفسه يصمم ويورّد التحديث القادم لأنظمتك.",
         ],

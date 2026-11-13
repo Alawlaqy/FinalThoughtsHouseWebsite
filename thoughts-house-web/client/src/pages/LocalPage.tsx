@@ -77,7 +77,7 @@ export default function LocalPage({ slug }: { slug: LocalSlug }) {
                 </li>
               </ol>
             </nav>
-            <h1 className="max-w-3xl text-3xl sm:text-5xl font-extrabold text-white leading-[1.15] mb-6">
+            <h1 className="max-w-3xl text-3xl sm:text-5xl font-bold text-white leading-[1.15] mb-6">
               {c.h1}
             </h1>
             <p className="max-w-2xl text-lg text-white/80 leading-relaxed mb-6">
@@ -98,7 +98,7 @@ export default function LocalPage({ slug }: { slug: LocalSlug }) {
             <p className="max-w-3xl text-lg text-[#334155] leading-relaxed mb-12">
               {c.intro}
             </p>
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-[#1E293B] mb-8">
+            <h2 className="text-2xl sm:text-3xl font-bold text-[#1E293B] mb-8">
               {c.offersTitle}
             </h2>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -123,7 +123,7 @@ export default function LocalPage({ slug }: { slug: LocalSlug }) {
         <section className="py-16 bg-[#F8FAFC]">
           <div className="container grid lg:grid-cols-2 gap-12">
             <div>
-              <h2 className="text-2xl font-extrabold text-[#1E293B] mb-5">
+              <h2 className="text-2xl font-bold text-[#1E293B] mb-5">
                 {c.whyTitle}
               </h2>
               <ul className="space-y-3">
@@ -139,7 +139,7 @@ export default function LocalPage({ slug }: { slug: LocalSlug }) {
               </ul>
             </div>
             <div className="p-6 bg-white rounded-2xl border border-gray-100 self-start">
-              <h2 className="flex items-center gap-2 text-xl font-extrabold text-[#1E293B] mb-4">
+              <h2 className="flex items-center gap-2 text-xl font-bold text-[#1E293B] mb-4">
                 <MapPin className="w-5 h-5 text-[#2563EB]" aria-hidden="true" />
                 {lang === "ar" ? "مقرّنا في الدمام" : "Based in Dammam"}
               </h2>
@@ -203,7 +203,7 @@ export default function LocalPage({ slug }: { slug: LocalSlug }) {
             <div className="container max-w-3xl space-y-10">
               {c.guide.map(g => (
                 <div key={g.title}>
-                  <h2 className="text-2xl font-extrabold text-[#1E293B] mb-3">
+                  <h2 className="text-2xl font-bold text-[#1E293B] mb-3">
                     {g.title}
                   </h2>
                   <p className="text-[#334155] leading-relaxed mb-3">
@@ -230,7 +230,7 @@ export default function LocalPage({ slug }: { slug: LocalSlug }) {
 
         <section className="py-16 bg-white">
           <div className="container max-w-3xl">
-            <h2 className="text-2xl font-extrabold text-[#1E293B] mb-6 text-center">
+            <h2 className="text-2xl font-bold text-[#1E293B] mb-6 text-center">
               {lang === "ar" ? "الأسئلة الشائعة" : "Frequently asked questions"}
             </h2>
             <div className="space-y-5 mb-12">
@@ -244,7 +244,7 @@ export default function LocalPage({ slug }: { slug: LocalSlug }) {
                 </div>
               ))}
             </div>
-            <h2 className="text-xl font-extrabold text-[#1E293B] mb-4 text-center">
+            <h2 className="text-xl font-bold text-[#1E293B] mb-4 text-center">
               {page.group === "dammam"
                 ? lang === "ar"
                   ? "خدماتنا في الدمام"

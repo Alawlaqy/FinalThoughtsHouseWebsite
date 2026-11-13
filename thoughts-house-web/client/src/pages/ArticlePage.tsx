@@ -103,7 +103,7 @@ export default function ArticlePage({ slug }: { slug: ArticleSlug }) {
                 </li>
               </ol>
             </nav>
-            <h1 className="max-w-3xl text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-[1.2] mb-5">
+            <h1 className="max-w-3xl text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-[1.2] mb-5">
               {c.title}
             </h1>
             <p className="max-w-3xl text-lg text-white/70 leading-relaxed mb-6">
@@ -124,7 +124,7 @@ export default function ArticlePage({ slug }: { slug: ArticleSlug }) {
           <div className="container max-w-3xl text-[#334155] text-[17px] leading-[1.85]">
             {body?.summary.length ? (
               <div className="mb-10 p-6 rounded-2xl bg-[#EFF4FF] border border-[#2563EB]/15">
-                <h2 className="text-sm font-bold uppercase tracking-wider text-[#2563EB] mb-3">
+                <h2 className="text-sm font-bold text-[#2563EB] mb-3">
                   {lang === "ar" ? "الخلاصة" : "Key takeaways"}
                 </h2>
                 <ul className="space-y-2 list-disc ps-6 marker:text-[#2563EB]">
@@ -138,7 +138,7 @@ export default function ArticlePage({ slug }: { slug: ArticleSlug }) {
               "h2" in b ? (
                 <h2
                   key={i}
-                  className="text-2xl font-extrabold text-[#1E293B] mt-12 mb-4"
+                  className="text-2xl font-bold text-[#1E293B] mt-12 mb-4"
                 >
                   {b.h2}
                 </h2>
@@ -160,7 +160,7 @@ export default function ArticlePage({ slug }: { slug: ArticleSlug }) {
 
             {body?.faq.length ? (
               <div className="mt-12">
-                <h2 className="text-2xl font-extrabold text-[#1E293B] mb-4">
+                <h2 className="text-2xl font-bold text-[#1E293B] mb-4">
                   {lang === "ar" ? "أسئلة شائعة" : "Frequently asked questions"}
                 </h2>
                 <div className="space-y-5">
@@ -176,7 +176,7 @@ export default function ArticlePage({ slug }: { slug: ArticleSlug }) {
 
             {body?.sources && (
               <div className="mt-12 pt-6 border-t border-gray-100">
-                <h2 className="text-sm font-bold uppercase tracking-wider text-[#64748B] mb-3">
+                <h2 className="text-sm font-bold text-[#64748B] mb-3">
                   {lang === "ar" ? "المصادر" : "Sources"}
                 </h2>
                 <ul className="space-y-2 text-base">
@@ -202,7 +202,7 @@ export default function ArticlePage({ slug }: { slug: ArticleSlug }) {
 
             {/* Related service */}
             <aside className="mt-12 p-6 sm:p-8 rounded-2xl bg-[#F8FAFC] border border-gray-100">
-              <p className="text-sm font-semibold text-[#2563EB] uppercase tracking-wide mb-2">
+              <p className="text-sm font-semibold text-[#2563EB] mb-2">
                 {lang === "ar" ? "خدمة ذات صلة" : "Related service"}
               </p>
               <p className="text-xl font-bold text-[#1E293B] mb-4">
@@ -222,7 +222,7 @@ export default function ArticlePage({ slug }: { slug: ArticleSlug }) {
         {/* More articles */}
         <section className="py-16 bg-[#F8FAFC]">
           <div className="container">
-            <h2 className="text-2xl font-extrabold text-[#1E293B] mb-8 text-center">
+            <h2 className="text-2xl font-bold text-[#1E293B] mb-8 text-center">
               {lang === "ar" ? "مقالات أخرى" : "More insights"}
             </h2>
             <div className="grid md:grid-cols-3 gap-6">
@@ -230,7 +230,7 @@ export default function ArticlePage({ slug }: { slug: ArticleSlug }) {
                 <a
                   key={a.slug}
                   href={articlePath(a.slug, lang)}
-                  className="group p-6 bg-white rounded-2xl border border-gray-100 hover:border-[#2563EB]/30 hover:shadow-md transition-all"
+                  className="group p-6 bg-white rounded-2xl border border-gray-100 hover:border-[#2563EB]/30 hover:shadow-md transition"
                 >
                   <h3 className="font-bold text-[#1E293B] group-hover:text-[#2563EB] transition-colors mb-2">
                     {a.content[lang].title}

@@ -53,7 +53,7 @@ export default function TestsPage() {
       <main>
         <section id="home" className="bg-[#0F172A]">
           <div className="container pt-32 pb-14 md:pt-40 md:pb-16">
-            <h1 className="max-w-3xl text-4xl sm:text-5xl font-extrabold text-white leading-[1.15] mb-5">
+            <h1 className="max-w-3xl text-4xl sm:text-5xl font-bold text-white leading-[1.15] mb-5">
               {c.h1}
             </h1>
             <p className="max-w-3xl text-lg text-white/75 leading-relaxed">
@@ -70,7 +70,7 @@ export default function TestsPage() {
                 <a
                   key={card.href}
                   href={card.href}
-                  className="group flex flex-col p-7 bg-white rounded-2xl border border-gray-100 hover:border-[#2563EB]/30 hover:shadow-lg transition-all duration-300"
+                  className="group flex flex-col p-7 bg-white rounded-2xl border border-gray-100 hover:border-[#2563EB]/30 hover:shadow-lg transition duration-300"
                 >
                   <div className="w-12 h-12 rounded-xl bg-[#2563EB]/10 flex items-center justify-center mb-5">
                     <Icon
@@ -81,7 +81,7 @@ export default function TestsPage() {
                   <p className="text-xs font-semibold text-[#2563EB] mb-2">
                     {card.audience}
                   </p>
-                  <h2 className="text-xl font-extrabold text-[#1E293B] mb-3">
+                  <h2 className="text-xl font-bold text-[#1E293B] mb-3">
                     {card.title}
                   </h2>
                   <p className="text-sm text-[#475569] leading-relaxed mb-5 flex-1">
@@ -103,7 +103,7 @@ export default function TestsPage() {
 
         <section className="py-16 bg-white">
           <div className="container max-w-3xl">
-            <h2 className="text-3xl font-extrabold text-[#1E293B] mb-6">
+            <h2 className="text-3xl font-bold text-[#1E293B] mb-6">
               {c.whyTitle}
             </h2>
             <ol className="space-y-4">

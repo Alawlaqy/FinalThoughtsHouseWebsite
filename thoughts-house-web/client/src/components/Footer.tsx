@@ -41,7 +41,7 @@ export default function Footer() {
   return (
     <footer className="bg-[#0F172A] text-white">
       {/* Geometric divider */}
-      <div className="h-1 bg-gradient-to-r from-[#2563EB] via-[#60A5FA] to-[#2563EB]" />
+      <div className="h-1 bg-[#2563EB]" />
 
       <div className="container py-12">
         <div className="grid grid-cols-2 lg:grid-cols-5 gap-x-8 gap-y-10">
@@ -58,9 +58,7 @@ export default function Footer() {
               />
               <div>
                 <div className="text-lg font-bold">Thoughts House</div>
-                <div className="text-xs text-white/50">
-                  IT System Integrator
-                </div>
+                <div className="text-xs text-white/50">IT Company · Dammam</div>
               </div>
             </div>
             <p className="text-white/60 text-sm leading-relaxed mb-4 max-w-xs">
@@ -101,7 +99,7 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <p className="text-sm font-bold uppercase tracking-wider text-white/80 mb-5">
+            <p className="text-sm font-bold text-white/80 mb-5">
               {t("footer.quickLinks")}
             </p>
             <ul className="space-y-2.5">
@@ -185,7 +183,7 @@ export default function Footer() {
 
           {/* Services */}
           <div>
-            <p className="text-sm font-bold uppercase tracking-wider text-white/80 mb-5">
+            <p className="text-sm font-bold text-white/80 mb-5">
               {t("footer.services")}
             </p>
             <ul className="space-y-2.5">
@@ -204,7 +202,7 @@ export default function Footer() {
 
           {/* Dammam pages */}
           <div>
-            <p className="text-sm font-bold uppercase tracking-wider text-white/80 mb-5">
+            <p className="text-sm font-bold text-white/80 mb-5">
               {lang === "ar" ? "في الدمام" : "In Dammam"}
             </p>
             <ul className="space-y-2.5">
@@ -223,7 +221,7 @@ export default function Footer() {
 
           {/* Cities */}
           <div>
-            <p className="text-sm font-bold uppercase tracking-wider text-white/80 mb-5">
+            <p className="text-sm font-bold text-white/80 mb-5">
               {lang === "ar" ? "مدن نخدمها" : "Cities we serve"}
             </p>
             <ul className="space-y-2.5">

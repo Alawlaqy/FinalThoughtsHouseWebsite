@@ -63,11 +63,9 @@ export default function WhatsAppWidget() {
         href={whatsappUrl(lang)}
         target="_blank"
         rel="noopener noreferrer"
-        className="pop-in relative w-14 h-14 bg-[#25D366] rounded-full flex items-center justify-center shadow-lg shadow-[#25D366]/30 hover:shadow-xl hover:shadow-[#25D366]/40 hover:scale-110 transition-all duration-300 group"
+        className="pop-in relative w-14 h-14 bg-[#25D366] rounded-full flex items-center justify-center shadow-lg hover:bg-[#1FB855] transition duration-300 group"
         aria-label="Chat on WhatsApp"
       >
-        {/* Pulse ring */}
-        <span className="absolute inset-0 rounded-full bg-[#25D366] animate-ping opacity-20" />
         {/* Icon */}
         <svg
           viewBox="0 0 24 24"

@@ -124,7 +124,7 @@ export default function BrandPage({ slug }: { slug: BrandSlug }) {
             </nav>
             <div className="flex flex-col md:flex-row md:items-center gap-8">
               <div className="flex-1">
-                <h1 className="max-w-3xl text-3xl sm:text-5xl font-extrabold text-white leading-[1.15] mb-6">
+                <h1 className="max-w-3xl text-3xl sm:text-5xl font-bold text-white leading-[1.15] mb-6">
                   {c.h1}
                 </h1>
                 <p className="max-w-2xl text-lg text-white/75 leading-relaxed mb-8">
@@ -158,7 +158,7 @@ export default function BrandPage({ slug }: { slug: BrandSlug }) {
             <p className="max-w-3xl text-lg text-[#334155] leading-relaxed mb-10">
               {c.intro}
             </p>
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-[#1E293B] mb-8">
+            <h2 className="text-2xl sm:text-3xl font-bold text-[#1E293B] mb-8">
               {c.linesTitle}
             </h2>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -179,7 +179,7 @@ export default function BrandPage({ slug }: { slug: BrandSlug }) {
 
         <section className="py-16 bg-[#F8FAFC]">
           <div className="container">
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-[#1E293B] mb-8 text-center">
+            <h2 className="text-2xl sm:text-3xl font-bold text-[#1E293B] mb-8 text-center">
               {lang === "ar" ? "أكثر من مجرد توريد" : "More than supply"}
             </h2>
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -204,7 +204,7 @@ export default function BrandPage({ slug }: { slug: BrandSlug }) {
 
         <section className="py-16 bg-white">
           <div className="container max-w-3xl">
-            <h2 className="text-2xl font-extrabold text-[#1E293B] mb-6 text-center">
+            <h2 className="text-2xl font-bold text-[#1E293B] mb-6 text-center">
               {lang === "ar" ? "الأسئلة الشائعة" : "Frequently asked questions"}
             </h2>
             <div className="space-y-5 mb-12">
@@ -218,7 +218,7 @@ export default function BrandPage({ slug }: { slug: BrandSlug }) {
                 </div>
               ))}
             </div>
-            <h2 className="text-xl font-extrabold text-[#1E293B] mb-4 text-center">
+            <h2 className="text-xl font-bold text-[#1E293B] mb-4 text-center">
               {lang === "ar" ? "خدمات ذات صلة" : "Related services"}
             </h2>
             <div className="flex flex-wrap justify-center gap-3 mb-10">
@@ -232,7 +232,7 @@ export default function BrandPage({ slug }: { slug: BrandSlug }) {
                 </a>
               ))}
             </div>
-            <h2 className="text-xl font-extrabold text-[#1E293B] mb-4 text-center">
+            <h2 className="text-xl font-bold text-[#1E293B] mb-4 text-center">
               {lang === "ar" ? "علامات أخرى نورّدها" : "Other brands we supply"}
             </h2>
             <div className="flex flex-wrap justify-center gap-3">

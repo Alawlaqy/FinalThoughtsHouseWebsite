@@ -13,7 +13,7 @@ export default function FaqSection() {
   return (
     <section id="faq" className="py-24 bg-white">
       <div className="container max-w-3xl">
-        <h2 className="text-3xl sm:text-4xl font-extrabold text-[#1E293B] mb-10 text-center">
+        <h2 className="text-3xl sm:text-4xl font-bold text-[#1E293B] mb-10 text-center">
           {faq.title}
         </h2>
         <div className="space-y-4">

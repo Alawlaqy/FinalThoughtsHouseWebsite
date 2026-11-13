@@ -97,7 +97,7 @@ export default function AssessmentPage({ slug }: { slug: AssessmentSlug }) {
             <p className="text-sm font-semibold text-[#60A5FA] mb-3">
               {c.audience} · {c.minutes}
             </p>
-            <h1 className="max-w-3xl text-4xl sm:text-5xl font-extrabold text-white leading-[1.15] mb-5">
+            <h1 className="max-w-3xl text-4xl sm:text-5xl font-bold text-white leading-[1.15] mb-5">
               {c.h1}
             </h1>
             <p className="max-w-3xl text-lg text-white/75 leading-relaxed">
@@ -118,7 +118,7 @@ export default function AssessmentPage({ slug }: { slug: AssessmentSlug }) {
                   aria-hidden="true"
                 >
                   <div
-                    className="h-full bg-[#2563EB] transition-all duration-300"
+                    className="h-full bg-[#2563EB] transition duration-300"
                     style={{ width: `${((index + 1) / total) * 100}%` }}
                   />
                 </div>
@@ -136,7 +136,7 @@ export default function AssessmentPage({ slug }: { slug: AssessmentSlug }) {
                         onClick={() => choose(o.value)}
                         disabled={!!current}
                         aria-pressed={picked}
-                        className={`inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl font-semibold border transition-all ${
+                        className={`inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl font-semibold border transition ${
                           picked
                             ? "bg-[#2563EB] border-[#2563EB] text-white"
                             : "bg-white border-gray-200 text-[#1E293B] hover:border-[#2563EB] disabled:opacity-50"
@@ -172,7 +172,7 @@ export default function AssessmentPage({ slug }: { slug: AssessmentSlug }) {
                 <p className="text-sm font-semibold text-[#2563EB] mb-2">
                   {ui.resultTitle}
                 </p>
-                <p className="text-5xl font-extrabold text-[#1E293B] mb-1">
+                <p className="text-5xl font-bold text-[#1E293B] mb-1">
                   <span dir="ltr">
                     {score} / {total}
                   </span>
@@ -180,7 +180,7 @@ export default function AssessmentPage({ slug }: { slug: AssessmentSlug }) {
                 <p className="text-sm text-[#64748B] mb-5">
                   {score} {ui.score} {total}
                 </p>
-                <h2 className="text-2xl font-extrabold text-[#1E293B] mb-2">
+                <h2 className="text-2xl font-bold text-[#1E293B] mb-2">
                   {level.title}
                 </h2>
                 <p className="text-[#334155] leading-relaxed mb-6">
@@ -229,7 +229,7 @@ export default function AssessmentPage({ slug }: { slug: AssessmentSlug }) {
                 </div>
 
                 <div className="rounded-xl bg-[#0F172A] p-6">
-                  <h2 className="text-xl font-extrabold text-white mb-2">
+                  <h2 className="text-xl font-bold text-white mb-2">
                     {c.ctaTitle}
                   </h2>
                   <p className="text-white/75 leading-relaxed mb-5">
@@ -262,7 +262,7 @@ export default function AssessmentPage({ slug }: { slug: AssessmentSlug }) {
 
         <section className="py-16 bg-white">
           <div className="container max-w-3xl">
-            <h2 className="text-3xl font-extrabold text-[#1E293B] mb-8">
+            <h2 className="text-3xl font-bold text-[#1E293B] mb-8">
               {ui.faqTitle}
             </h2>
             <div className="space-y-4">

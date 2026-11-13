@@ -76,7 +76,7 @@ export default function HeroSection() {
           </div>
 
           {/* Headline */}
-          <p className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-[1.1] mb-6">
+          <p className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-[1.1] mb-6">
             {t("hero.slogan")}
           </p>
 
@@ -92,14 +92,14 @@ export default function HeroSection() {
           >
             <button
               onClick={() => handleNavClick("#services")}
-              className="group inline-flex items-center gap-2 px-7 py-3.5 bg-[#2563EB] text-white font-semibold rounded-lg hover:bg-[#1D4ED8] transition-all duration-300 hover:shadow-xl hover:shadow-[#2563EB]/30 active:scale-[0.98]"
+              className="group inline-flex items-center gap-2 px-7 py-3.5 bg-[#2563EB] text-white font-semibold rounded-lg hover:bg-[#1D4ED8] transition duration-300 active:scale-[0.98]"
             >
               {t("hero.explore")}
               <ArrowIcon className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1 rtl:group-hover:-translate-x-1" />
             </button>
             <button
               onClick={() => handleNavClick("#contact")}
-              className="inline-flex items-center gap-2 px-7 py-3.5 bg-white/10 backdrop-blur-sm text-white font-semibold rounded-lg border border-white/25 hover:bg-white/20 transition-all duration-300 active:scale-[0.98]"
+              className="inline-flex items-center gap-2 px-7 py-3.5 bg-white/10 backdrop-blur-sm text-white font-semibold rounded-lg border border-white/25 hover:bg-white/20 transition duration-300 active:scale-[0.98]"
             >
               {t("hero.contact")}
             </button>
@@ -109,20 +109,16 @@ export default function HeroSection() {
         {/* Stats row */}
         <div
           style={{ "--reveal-delay": "0.4s" } as React.CSSProperties}
-          className="reveal-up mt-20 grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8"
+          className="reveal-up mt-20 grid grid-cols-3 gap-6 md:gap-8 max-w-3xl"
         >
           {[
             {
-              value: "500+",
+              value: "250+",
               label: lang === "en" ? "Enterprise Clients" : "عميل مؤسسي",
             },
             {
-              value: "99.9%",
+              value: "97%",
               label: lang === "en" ? "Uptime SLA" : "اتفاقية وقت التشغيل",
-            },
-            {
-              value: "24/7",
-              label: lang === "en" ? "Support Coverage" : "تغطية الدعم",
             },
             {
               value: "25+",

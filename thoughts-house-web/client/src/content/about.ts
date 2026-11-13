@@ -69,8 +69,8 @@ export const ABOUT: Record<Language, AboutCopy> = {
           "Sunday to Thursday, 9:00 am to 5:00 pm (closed Friday and Saturday)",
       },
       { label: "Service area", value: "All regions of Saudi Arabia" },
-      { label: "Clients", value: "500+ organizations served" },
-      { label: "Support", value: "24/7 support coverage, 99.9% uptime SLA" },
+      { label: "Clients", value: "250+ organizations served" },
+      { label: "Support", value: "97% uptime SLA" },
       {
         label: "Services",
         value:
@@ -124,11 +124,10 @@ export const ABOUT: Record<Language, AboutCopy> = {
           "الأحد إلى الخميس، من 9:00 صباحاً إلى 5:00 مساءً (الجمعة والسبت إجازة)",
       },
       { label: "نطاق الخدمة", value: "جميع مناطق المملكة" },
-      { label: "العملاء", value: "أكثر من 500 منشأة" },
+      { label: "العملاء", value: "أكثر من 250 منشأة" },
       {
         label: "الدعم",
-        value:
-          "دعم على مدار الساعة طوال أيام الأسبوع، واتفاقية مستوى خدمة بجاهزية 99.9%",
+        value: "اتفاقية مستوى خدمة بجاهزية 97%",
       },
       {
         label: "الخدمات",

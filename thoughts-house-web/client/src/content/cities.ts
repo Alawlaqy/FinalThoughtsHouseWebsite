@@ -64,7 +64,6 @@ export const CITY_PAGES: LocalPage[] = [
           "Engineers based in Dammam, close enough for regular on-site work in Khobar.",
           "One partner for support, security, networks and supply.",
           "25+ technology brands, including Cisco, Sophos, Dell, HP, Lenovo and Microsoft.",
-          "24/7 support coverage for critical systems.",
         ],
         guide: [
           {
@@ -155,7 +154,6 @@ export const CITY_PAGES: LocalPage[] = [
           "مهندسون في الدمام قريبون بما يكفي للعمل الميداني المنتظم في الخبر.",
           "شريك واحد للدعم والحماية والشبكات والتوريد.",
           "أكثر من 25 علامة تقنية، منها Cisco وSophos وDell وHP وLenovo وMicrosoft.",
-          "تغطية دعم على مدار الساعة للأنظمة الحرجة.",
         ],
         guide: [
           {

@@ -34,7 +34,7 @@ export default function CoveragePage() {
       <main>
         <section id="home" className="bg-[#0F172A]">
           <div className="container pt-32 pb-14 md:pt-40 md:pb-16">
-            <h1 className="max-w-3xl text-4xl sm:text-5xl font-extrabold text-white leading-[1.15] mb-5">
+            <h1 className="max-w-3xl text-4xl sm:text-5xl font-bold text-white leading-[1.15] mb-5">
               {c.h1}
             </h1>
             <p className="max-w-3xl text-lg text-white/75 leading-relaxed">
@@ -48,7 +48,7 @@ export default function CoveragePage() {
             <p className="max-w-3xl text-lg text-[#334155] leading-relaxed mb-12">
               {c.intro}
             </p>
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-[#1E293B] mb-8">
+            <h2 className="text-2xl sm:text-3xl font-bold text-[#1E293B] mb-8">
               {c.howTitle}
             </h2>
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -78,7 +78,7 @@ export default function CoveragePage() {
 
         <section className="py-16 bg-[#F8FAFC]">
           <div className="container">
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-[#1E293B] mb-8">
+            <h2 className="text-2xl sm:text-3xl font-bold text-[#1E293B] mb-8">
               {c.regionsTitle}
             </h2>
             <div className="grid md:grid-cols-2 gap-6">
@@ -106,7 +106,7 @@ export default function CoveragePage() {
 
         <section className="py-16 bg-white">
           <div className="container max-w-3xl">
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-[#1E293B] mb-6">
+            <h2 className="text-2xl sm:text-3xl font-bold text-[#1E293B] mb-6">
               {lang === "ar"
                 ? "خدماتنا في جميع المناطق"
                 : "Services available in every region"}
@@ -123,7 +123,7 @@ export default function CoveragePage() {
               ))}
             </div>
 
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-[#1E293B] mb-6">
+            <h2 className="text-2xl sm:text-3xl font-bold text-[#1E293B] mb-6">
               {lang === "ar" ? "صفحات المدن" : "City pages"}
             </h2>
             <div className="flex flex-wrap gap-3 mb-14">
@@ -140,7 +140,7 @@ export default function CoveragePage() {
               ))}
             </div>
 
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-[#1E293B] mb-6">
+            <h2 className="text-2xl sm:text-3xl font-bold text-[#1E293B] mb-6">
               {c.faqTitle}
             </h2>
             <div className="space-y-4">

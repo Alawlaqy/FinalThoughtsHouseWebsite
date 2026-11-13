@@ -39,7 +39,7 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition duration-300 ${
         scrolled
           ? "bg-white/95 backdrop-blur-md shadow-[0_2px_20px_rgba(30,41,59,0.08)]"
           : "bg-transparent"
@@ -66,9 +66,9 @@ export default function Navbar() {
               Thoughts House
             </span>
             <span
-              className={`text-[10px] font-medium tracking-wider uppercase ${scrolled ? "text-[#64748B]" : "text-white/70"} transition-colors duration-300`}
+              className={`text-[11px] font-medium ${scrolled ? "text-[#64748B]" : "text-white/70"} transition-colors duration-300`}
             >
-              IT System Integrator
+              IT Company · Dammam
             </span>
           </div>
         </a>
@@ -80,7 +80,7 @@ export default function Navbar() {
               key={link.key}
               href={homeHref + link.href}
               onClick={e => handleNavClick(e, link.href)}
-              className={`px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 hover:bg-[#2563EB]/10 ${
+              className={`px-4 py-2 text-sm font-medium rounded-lg transition duration-200 hover:bg-[#2563EB]/10 ${
                 scrolled
                   ? "text-[#1E293B] hover:text-[#2563EB]"
                   : "text-white/90 hover:text-white"
@@ -91,7 +91,7 @@ export default function Navbar() {
           ))}
           <a
             href={projectsPath(lang)}
-            className={`px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 hover:bg-[#2563EB]/10 ${
+            className={`px-4 py-2 text-sm font-medium rounded-lg transition duration-200 hover:bg-[#2563EB]/10 ${
               scrolled
                 ? "text-[#1E293B] hover:text-[#2563EB]"
                 : "text-white/90 hover:text-white"
@@ -101,7 +101,7 @@ export default function Navbar() {
           </a>
           <a
             href={testsPath(lang)}
-            className={`px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 hover:bg-[#2563EB]/10 ${
+            className={`px-4 py-2 text-sm font-medium rounded-lg transition duration-200 hover:bg-[#2563EB]/10 ${
               scrolled
                 ? "text-[#1E293B] hover:text-[#2563EB]"
                 : "text-white/90 hover:text-white"
@@ -111,7 +111,7 @@ export default function Navbar() {
           </a>
           <a
             href={insightsPath(lang)}
-            className={`px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 hover:bg-[#2563EB]/10 ${
+            className={`px-4 py-2 text-sm font-medium rounded-lg transition duration-200 hover:bg-[#2563EB]/10 ${
               scrolled
                 ? "text-[#1E293B] hover:text-[#2563EB]"
                 : "text-white/90 hover:text-white"
@@ -124,7 +124,7 @@ export default function Navbar() {
           <a
             href={altHref}
             hrefLang={lang === "en" ? "ar" : "en"}
-            className={`flex items-center gap-1.5 px-3 py-2 text-sm font-medium rounded-lg transition-all duration-200 ${
+            className={`flex items-center gap-1.5 px-3 py-2 text-sm font-medium rounded-lg transition duration-200 ${
               scrolled
                 ? "text-[#64748B] hover:text-[#2563EB] hover:bg-[#2563EB]/10"
                 : "text-white/70 hover:text-white hover:bg-white/10"
@@ -138,7 +138,7 @@ export default function Navbar() {
           <a
             href={homeHref + "#contact"}
             onClick={e => handleNavClick(e, "#contact")}
-            className="ml-2 px-5 py-2.5 bg-[#2563EB] text-white text-sm font-semibold rounded-lg hover:bg-[#1D4ED8] transition-all duration-200 hover:shadow-lg hover:shadow-[#2563EB]/25 active:scale-[0.98]"
+            className="ml-2 px-5 py-2.5 bg-[#2563EB] text-white text-sm font-semibold rounded-lg hover:bg-[#1D4ED8] transition duration-200 active:scale-[0.98]"
           >
             {t("hero.contact")}
           </a>

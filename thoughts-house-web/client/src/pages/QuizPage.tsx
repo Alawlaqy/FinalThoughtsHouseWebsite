@@ -98,7 +98,7 @@ export default function QuizPage() {
       <main>
         <section id="home" className="bg-[#0F172A]">
           <div className="container pt-32 pb-14 md:pt-40 md:pb-16">
-            <h1 className="max-w-3xl text-4xl sm:text-5xl font-extrabold text-white leading-[1.15] mb-5">
+            <h1 className="max-w-3xl text-4xl sm:text-5xl font-bold text-white leading-[1.15] mb-5">
               {c.h1}
             </h1>
             <p className="max-w-3xl text-lg text-white/75 leading-relaxed">
@@ -125,7 +125,7 @@ export default function QuizPage() {
                   aria-hidden="true"
                 >
                   <div
-                    className="h-full bg-[#2563EB] transition-all duration-300"
+                    className="h-full bg-[#2563EB] transition duration-300"
                     style={{ width: `${((index + 1) / TOTAL) * 100}%` }}
                   />
                 </div>
@@ -154,7 +154,7 @@ export default function QuizPage() {
                     onClick={() => choose(false)}
                     disabled={answer !== null}
                     aria-pressed={answer === false}
-                    className={`inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl font-semibold border transition-all ${
+                    className={`inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl font-semibold border transition ${
                       answer === false
                         ? "bg-[#059669] border-[#059669] text-white"
                         : "bg-white border-gray-200 text-[#1E293B] hover:border-[#059669] disabled:opacity-50"
@@ -168,7 +168,7 @@ export default function QuizPage() {
                     onClick={() => choose(true)}
                     disabled={answer !== null}
                     aria-pressed={answer === true}
-                    className={`inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl font-semibold border transition-all ${
+                    className={`inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl font-semibold border transition ${
                       answer === true
                         ? "bg-[#DC2626] border-[#DC2626] text-white"
                         : "bg-white border-gray-200 text-[#1E293B] hover:border-[#DC2626] disabled:opacity-50"
@@ -218,7 +218,7 @@ export default function QuizPage() {
                 <p className="text-sm font-semibold text-[#2563EB] mb-2">
                   {c.resultTitle}
                 </p>
-                <p className="text-5xl font-extrabold text-[#1E293B] mb-1">
+                <p className="text-5xl font-bold text-[#1E293B] mb-1">
                   <span dir="ltr">
                     {score} / {TOTAL}
                   </span>
@@ -226,7 +226,7 @@ export default function QuizPage() {
                 <p className="text-sm text-[#64748B] mb-5">
                   {score} {c.score} {TOTAL}
                 </p>
-                <h2 className="text-2xl font-extrabold text-[#1E293B] mb-2">
+                <h2 className="text-2xl font-bold text-[#1E293B] mb-2">
                   {level.title}
                 </h2>
                 <p className="text-[#334155] leading-relaxed mb-6">
@@ -252,7 +252,7 @@ export default function QuizPage() {
                 </div>
 
                 <div className="rounded-xl bg-[#0F172A] p-6">
-                  <h2 className="text-xl font-extrabold text-white mb-2">
+                  <h2 className="text-xl font-bold text-white mb-2">
                     {c.ctaTitle}
                   </h2>
                   <p className="text-white/75 leading-relaxed mb-5">
@@ -285,7 +285,7 @@ export default function QuizPage() {
 
         <section className="py-16 bg-white">
           <div className="container max-w-4xl">
-            <h2 className="text-3xl font-extrabold text-[#1E293B] mb-8">
+            <h2 className="text-3xl font-bold text-[#1E293B] mb-8">
               {c.tipsTitle}
             </h2>
             <ol className="grid sm:grid-cols-2 gap-5">
@@ -325,7 +325,7 @@ export default function QuizPage() {
 
         <section className="py-16 bg-[#F8FAFC]">
           <div className="container max-w-3xl">
-            <h2 className="text-3xl font-extrabold text-[#1E293B] mb-8">
+            <h2 className="text-3xl font-bold text-[#1E293B] mb-8">
               {c.faqTitle}
             </h2>
             <div className="space-y-4">

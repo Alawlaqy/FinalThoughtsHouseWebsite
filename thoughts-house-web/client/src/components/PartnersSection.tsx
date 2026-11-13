@@ -52,7 +52,7 @@ function PartnerCard({
   return (
     <div
       aria-hidden={decorative || undefined}
-      className="flex-shrink-0 mx-3 px-8 py-5 bg-white rounded-xl shadow-sm border border-gray-100 flex items-center justify-center hover:shadow-md hover:border-[#2563EB]/20 transition-all duration-300 group min-w-[160px] h-[80px]"
+      className="flex-shrink-0 mx-3 px-8 py-5 bg-white rounded-xl shadow-sm border border-gray-100 flex items-center justify-center hover:shadow-md hover:border-[#2563EB]/20 transition duration-300 group min-w-[160px] h-[80px]"
     >
       <img
         src={partner.logo}
@@ -60,7 +60,7 @@ function PartnerCard({
         width={120}
         height={44}
         decoding="async"
-        className="max-h-[44px] max-w-[120px] object-contain grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300"
+        className="max-h-[44px] max-w-[120px] object-contain grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition duration-300"
         loading="lazy"
       />
     </div>
@@ -79,17 +79,17 @@ export default function PartnersSection() {
       <div className="container">
         {/* Section Header */}
         <div
-          className={`text-center max-w-2xl mx-auto mb-16 transition-all duration-700 ${
+          className={`text-center max-w-2xl mx-auto mb-16 transition duration-700 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
           <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-[#2563EB]/10 rounded-full mb-4">
             <span className="w-2 h-2 rounded-full bg-[#2563EB]" />
-            <span className="text-sm font-semibold text-[#2563EB] uppercase tracking-wide">
+            <span className="text-sm font-semibold text-[#2563EB]">
               {t("partners.title")}
             </span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#1E293B] mb-4">
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#1E293B] mb-4">
             {t("partners.title")}
           </h2>
           <p className="text-lg text-[#64748B] leading-relaxed">
@@ -108,7 +108,7 @@ export default function PartnersSection() {
 
       {/* Marquee Row 1 */}
       <div
-        className={`overflow-hidden mb-4 transition-all duration-700 delay-200 ${
+        className={`overflow-hidden mb-4 transition duration-700 delay-200 ${
           isVisible ? "opacity-100" : "opacity-0"
         }`}
       >
@@ -128,7 +128,7 @@ export default function PartnersSection() {
 
       {/* Marquee Row 2 */}
       <div
-        className={`overflow-hidden transition-all duration-700 delay-300 ${
+        className={`overflow-hidden transition duration-700 delay-300 ${
           isVisible ? "opacity-100" : "opacity-0"
         }`}
       >

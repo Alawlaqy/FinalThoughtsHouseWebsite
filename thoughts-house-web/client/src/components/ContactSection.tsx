@@ -131,17 +131,17 @@ export default function ContactSection() {
       <div className="container">
         {/* Section Header */}
         <div
-          className={`text-center max-w-2xl mx-auto mb-16 transition-all duration-700 ${
+          className={`text-center max-w-2xl mx-auto mb-16 transition duration-700 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
           <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-[#2563EB]/10 rounded-full mb-4">
             <span className="w-2 h-2 rounded-full bg-[#2563EB]" />
-            <span className="text-sm font-semibold text-[#2563EB] uppercase tracking-wide">
+            <span className="text-sm font-semibold text-[#2563EB]">
               {t("contact.title")}
             </span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#1E293B] mb-4">
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#1E293B] mb-4">
             {t("contact.title")}
           </h2>
           <p className="text-lg text-[#64748B] leading-relaxed">
@@ -150,7 +150,7 @@ export default function ContactSection() {
         </div>
 
         <div
-          className={`grid lg:grid-cols-5 gap-10 transition-all duration-700 delay-200 ${
+          className={`grid lg:grid-cols-5 gap-10 transition duration-700 delay-200 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
@@ -185,7 +185,7 @@ export default function ContactSection() {
                         setFormData({ ...formData, name: e.target.value })
                       }
                       placeholder={t("contact.namePlaceholder")}
-                      className="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl text-[#1E293B] placeholder:text-[#94A3B8] focus:outline-none focus:border-[#2563EB] focus:ring-2 focus:ring-[#2563EB]/20 transition-all"
+                      className="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl text-[#1E293B] placeholder:text-[#94A3B8] focus:outline-none focus:border-[#2563EB] focus:ring-2 focus:ring-[#2563EB]/20 transition"
                     />
                   </div>
                   <div>
@@ -206,7 +206,7 @@ export default function ContactSection() {
                         setFormData({ ...formData, phone: e.target.value })
                       }
                       placeholder="05X XXX XXXX"
-                      className="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl text-[#1E293B] placeholder:text-[#94A3B8] focus:outline-none focus:border-[#2563EB] focus:ring-2 focus:ring-[#2563EB]/20 transition-all"
+                      className="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl text-[#1E293B] placeholder:text-[#94A3B8] focus:outline-none focus:border-[#2563EB] focus:ring-2 focus:ring-[#2563EB]/20 transition"
                     />
                   </div>
                 </div>
@@ -228,7 +228,7 @@ export default function ContactSection() {
                       setFormData({ ...formData, email: e.target.value })
                     }
                     placeholder={t("contact.emailPlaceholder")}
-                    className="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl text-[#1E293B] placeholder:text-[#94A3B8] focus:outline-none focus:border-[#2563EB] focus:ring-2 focus:ring-[#2563EB]/20 transition-all"
+                    className="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl text-[#1E293B] placeholder:text-[#94A3B8] focus:outline-none focus:border-[#2563EB] focus:ring-2 focus:ring-[#2563EB]/20 transition"
                   />
                 </div>
                 <div>
@@ -248,7 +248,7 @@ export default function ContactSection() {
                       setFormData({ ...formData, message: e.target.value })
                     }
                     placeholder={t("contact.messagePlaceholder")}
-                    className="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl text-[#1E293B] placeholder:text-[#94A3B8] focus:outline-none focus:border-[#2563EB] focus:ring-2 focus:ring-[#2563EB]/20 transition-all resize-none"
+                    className="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl text-[#1E293B] placeholder:text-[#94A3B8] focus:outline-none focus:border-[#2563EB] focus:ring-2 focus:ring-[#2563EB]/20 transition resize-none"
                   />
                 </div>
                 <details className="group rounded-xl border border-gray-200 bg-white">
@@ -273,7 +273,7 @@ export default function ContactSection() {
                           setFormData({ ...formData, company: e.target.value })
                         }
                         placeholder={t("contact.companyPlaceholder")}
-                        className="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl text-[#1E293B] placeholder:text-[#94A3B8] focus:outline-none focus:border-[#2563EB] focus:ring-2 focus:ring-[#2563EB]/20 transition-all"
+                        className="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl text-[#1E293B] placeholder:text-[#94A3B8] focus:outline-none focus:border-[#2563EB] focus:ring-2 focus:ring-[#2563EB]/20 transition"
                       />
                     </div>
                     <div>
@@ -290,7 +290,7 @@ export default function ContactSection() {
                         onChange={e =>
                           setFormData({ ...formData, service: e.target.value })
                         }
-                        className="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl text-[#1E293B] focus:outline-none focus:border-[#2563EB] focus:ring-2 focus:ring-[#2563EB]/20 transition-all"
+                        className="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl text-[#1E293B] focus:outline-none focus:border-[#2563EB] focus:ring-2 focus:ring-[#2563EB]/20 transition"
                       >
                         <option value="">
                           {t("contact.sourcePlaceholder")}
@@ -319,7 +319,7 @@ export default function ContactSection() {
                         onChange={e =>
                           setFormData({ ...formData, source: e.target.value })
                         }
-                        className="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl text-[#1E293B] focus:outline-none focus:border-[#2563EB] focus:ring-2 focus:ring-[#2563EB]/20 transition-all"
+                        className="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl text-[#1E293B] focus:outline-none focus:border-[#2563EB] focus:ring-2 focus:ring-[#2563EB]/20 transition"
                       >
                         <option value="">
                           {t("contact.sourcePlaceholder")}
@@ -336,7 +336,7 @@ export default function ContactSection() {
                 <button
                   type="submit"
                   disabled={submitted || sending}
-                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-[#2563EB] text-white font-semibold rounded-xl hover:bg-[#1D4ED8] transition-all duration-300 hover:shadow-lg hover:shadow-[#2563EB]/25 active:scale-[0.98] disabled:opacity-70"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-[#2563EB] text-white font-semibold rounded-xl hover:bg-[#1D4ED8] transition duration-300 active:scale-[0.98] disabled:opacity-70"
                 >
                   {submitted ? (
                     <>
@@ -403,7 +403,7 @@ export default function ContactSection() {
                 href={whatsappUrl(lang)}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-4 p-4 bg-[#25D366]/10 rounded-xl border border-[#25D366]/30 hover:shadow-md transition-all duration-300 group"
+                className="flex items-center gap-4 p-4 bg-[#25D366]/10 rounded-xl border border-[#25D366]/30 hover:shadow-md transition duration-300 group"
               >
                 <div className="w-12 h-12 rounded-xl bg-[#25D366] flex items-center justify-center flex-shrink-0">
                   <MessageCircle className="w-5 h-5 text-white" />
@@ -429,7 +429,7 @@ export default function ContactSection() {
                         ? "noopener noreferrer"
                         : undefined
                     }
-                    className="flex items-center gap-4 p-4 bg-[#F8FAFC] rounded-xl border border-gray-100 hover:border-[#2563EB]/20 hover:shadow-md transition-all duration-300 group"
+                    className="flex items-center gap-4 p-4 bg-[#F8FAFC] rounded-xl border border-gray-100 hover:border-[#2563EB]/20 hover:shadow-md transition duration-300 group"
                   >
                     <div className="w-12 h-12 rounded-xl bg-[#2563EB]/10 flex items-center justify-center flex-shrink-0 group-hover:bg-[#2563EB]/20 transition-colors">
                       <Icon className="w-5 h-5 text-[#2563EB]" />

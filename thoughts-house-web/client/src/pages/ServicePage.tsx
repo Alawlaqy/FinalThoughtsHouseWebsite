@@ -112,7 +112,7 @@ export default function ServicePage({ slug }: { slug: ServiceSlug }) {
                 </li>
               </ol>
             </nav>
-            <h1 className="max-w-3xl text-4xl sm:text-5xl font-extrabold text-white leading-[1.15] mb-6">
+            <h1 className="max-w-3xl text-4xl sm:text-5xl font-bold text-white leading-[1.15] mb-6">
               {c.h1}
             </h1>
             <p className="max-w-2xl text-lg sm:text-xl text-white/75 leading-relaxed mb-6">
@@ -123,7 +123,7 @@ export default function ServicePage({ slug }: { slug: ServiceSlug }) {
             </p>
             <a
               href="#contact"
-              className="inline-flex items-center gap-2 px-7 py-3.5 bg-[#2563EB] text-white font-semibold rounded-lg hover:bg-[#1D4ED8] transition-all duration-300 hover:shadow-xl hover:shadow-[#2563EB]/30"
+              className="inline-flex items-center gap-2 px-7 py-3.5 bg-[#2563EB] text-white font-semibold rounded-lg hover:bg-[#1D4ED8] transition duration-300"
             >
               {
                 CTA_LABELS[
@@ -142,7 +142,7 @@ export default function ServicePage({ slug }: { slug: ServiceSlug }) {
         {/* Offerings */}
         <section className="py-20 bg-white geometric-pattern">
           <div className="container">
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-[#1E293B] mb-12 text-center">
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#1E293B] mb-12 text-center">
               {c.offeringsTitle}
             </h2>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -173,7 +173,7 @@ export default function ServicePage({ slug }: { slug: ServiceSlug }) {
             className="py-16 bg-white border-t border-gray-100"
           >
             <div className="container max-w-4xl">
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-[#1E293B] mb-4">
+              <h2 className="text-2xl sm:text-3xl font-bold text-[#1E293B] mb-4">
                 {x.title}
               </h2>
               <p className="text-lg text-[#334155] leading-relaxed mb-6">
@@ -200,7 +200,7 @@ export default function ServicePage({ slug }: { slug: ServiceSlug }) {
         {logos.length > 0 && (
           <section className="py-20 bg-[#F8FAFC]">
             <div className="container text-center">
-              <h2 className="text-3xl sm:text-4xl font-extrabold text-[#1E293B] mb-4">
+              <h2 className="text-3xl sm:text-4xl font-bold text-[#1E293B] mb-4">
                 {c.vendorsTitle}
               </h2>
               <p className="text-lg text-[#64748B] leading-relaxed max-w-2xl mx-auto mb-10">
@@ -247,7 +247,7 @@ export default function ServicePage({ slug }: { slug: ServiceSlug }) {
         {slug === "it-support-amc" && (
           <section className="py-16 bg-white">
             <div className="container">
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-[#1E293B] mb-8 text-center">
+              <h2 className="text-2xl sm:text-3xl font-bold text-[#1E293B] mb-8 text-center">
                 {lang === "ar"
                   ? "عقود الصيانة حسب القطاع"
                   : "Maintenance contracts by industry"}
@@ -257,7 +257,7 @@ export default function ServicePage({ slug }: { slug: ServiceSlug }) {
                   <a
                     key={ind.slug}
                     href={industryPath(ind.slug, lang)}
-                    className="group p-6 bg-[#F8FAFC] rounded-2xl border border-gray-100 hover:border-[#2563EB]/30 hover:shadow-md transition-all"
+                    className="group p-6 bg-[#F8FAFC] rounded-2xl border border-gray-100 hover:border-[#2563EB]/30 hover:shadow-md transition"
                   >
                     <h3 className="font-bold text-[#1E293B] group-hover:text-[#2563EB] transition-colors mb-2">
                       {ind.content[lang].name}
@@ -275,7 +275,7 @@ export default function ServicePage({ slug }: { slug: ServiceSlug }) {
         {/* Why us */}
         <section className="py-20 bg-white">
           <div className="container">
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-[#1E293B] mb-12 text-center">
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#1E293B] mb-12 text-center">
               {c.whyTitle}
             </h2>
             <div className="grid md:grid-cols-3 gap-8">
@@ -303,7 +303,7 @@ export default function ServicePage({ slug }: { slug: ServiceSlug }) {
         {/* FAQ */}
         <section className="py-20 bg-[#F8FAFC]">
           <div className="container max-w-3xl">
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-[#1E293B] mb-10 text-center">
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#1E293B] mb-10 text-center">
               {c.faqTitle}
             </h2>
             <div className="space-y-4">
@@ -333,7 +333,7 @@ export default function ServicePage({ slug }: { slug: ServiceSlug }) {
         {related.length > 0 && (
           <section className="py-16 bg-[#F8FAFC]">
             <div className="container">
-              <h2 className="text-2xl font-extrabold text-[#1E293B] mb-8 text-center">
+              <h2 className="text-2xl font-bold text-[#1E293B] mb-8 text-center">
                 {lang === "ar" ? "أدلة ذات صلة" : "Related guides"}
               </h2>
               <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
@@ -341,7 +341,7 @@ export default function ServicePage({ slug }: { slug: ServiceSlug }) {
                   <a
                     key={a.slug}
                     href={articlePath(a.slug, lang)}
-                    className="group p-6 bg-white rounded-2xl border border-gray-100 hover:border-[#2563EB]/30 hover:shadow-md transition-all"
+                    className="group p-6 bg-white rounded-2xl border border-gray-100 hover:border-[#2563EB]/30 hover:shadow-md transition"
                   >
                     <h3 className="font-bold text-[#1E293B] group-hover:text-[#2563EB] transition-colors mb-2">
                       {a.content[lang].title}
@@ -359,7 +359,7 @@ export default function ServicePage({ slug }: { slug: ServiceSlug }) {
         {/* Other services */}
         <section className="py-16 bg-white">
           <div className="container">
-            <h2 className="text-2xl font-extrabold text-[#1E293B] mb-8 text-center">
+            <h2 className="text-2xl font-bold text-[#1E293B] mb-8 text-center">
               {lang === "ar" ? "خدمات أخرى" : "Other services"}
             </h2>
             <div className="grid sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
@@ -367,7 +367,7 @@ export default function ServicePage({ slug }: { slug: ServiceSlug }) {
                 <a
                   key={s}
                   href={servicePath(s, lang)}
-                  className="group flex items-center justify-between gap-4 p-6 bg-[#F8FAFC] rounded-2xl border border-gray-100 hover:border-[#2563EB]/30 hover:shadow-md transition-all"
+                  className="group flex items-center justify-between gap-4 p-6 bg-[#F8FAFC] rounded-2xl border border-gray-100 hover:border-[#2563EB]/30 hover:shadow-md transition"
                 >
                   <span className="font-bold text-[#1E293B] group-hover:text-[#2563EB] transition-colors">
                     {SERVICES[s].content[lang].name}

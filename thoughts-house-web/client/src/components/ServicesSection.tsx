@@ -104,17 +104,17 @@ export default function ServicesSection() {
       <div className="container">
         {/* Section Header */}
         <div
-          className={`text-center max-w-2xl mx-auto mb-16 transition-all duration-700 ${
+          className={`text-center max-w-2xl mx-auto mb-16 transition duration-700 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
           <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-[#2563EB]/10 rounded-full mb-4">
             <span className="w-2 h-2 rounded-full bg-[#2563EB]" />
-            <span className="text-sm font-semibold text-[#2563EB] uppercase tracking-wide">
+            <span className="text-sm font-semibold text-[#2563EB]">
               {t("services.title")}
             </span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#1E293B] mb-4">
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#1E293B] mb-4">
             {t("services.title")}
           </h2>
           <p className="text-lg text-[#64748B] leading-relaxed">
@@ -125,7 +125,7 @@ export default function ServicesSection() {
         {/* Tab Buttons */}
         <div
           role="tablist"
-          className={`flex flex-wrap justify-center gap-3 mb-12 transition-all duration-700 delay-200 ${
+          className={`flex flex-wrap justify-center gap-3 mb-12 transition duration-700 delay-200 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
@@ -140,9 +140,9 @@ export default function ServicesSection() {
                 aria-selected={isActive}
                 aria-controls={`service-${tab.key}`}
                 onClick={() => setActiveTab(tab.key)}
-                className={`group flex items-center gap-2.5 px-6 py-3.5 rounded-xl font-semibold text-sm transition-all duration-300 ${
+                className={`group flex items-center gap-2.5 px-6 py-3.5 rounded-xl font-semibold text-sm transition duration-300 ${
                   isActive
-                    ? "bg-[#2563EB] text-white shadow-lg shadow-[#2563EB]/25"
+                    ? "bg-[#2563EB] text-white"
                     : "bg-[#F8FAFC] text-[#64748B] hover:bg-[#2563EB]/10 hover:text-[#2563EB]"
                 }`}
               >
@@ -157,7 +157,7 @@ export default function ServicesSection() {
 
         {/* Tab Content */}
         <div
-          className={`transition-all duration-700 delay-300 ${
+          className={`transition duration-700 delay-300 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
@@ -192,7 +192,7 @@ export default function ServicesSection() {
                     height={1072}
                     loading="lazy"
                     decoding="async"
-                    className="w-full h-[320px] sm:h-[400px] object-cover transition-transform duration-700 group-hover:scale-105"
+                    className="w-full h-[320px] sm:h-[400px] object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#1E293B]/40 to-transparent" />
                   <div className="absolute bottom-6 left-6 right-6">
@@ -233,7 +233,7 @@ export default function ServicesSection() {
                   </ul>
                   <a
                     href={servicePath(tab.slug, lang)}
-                    className="group mt-8 inline-flex items-center gap-2 px-6 py-3 bg-[#2563EB] text-white font-semibold rounded-lg hover:bg-[#1D4ED8] transition-all duration-300"
+                    className="group mt-8 inline-flex items-center gap-2 px-6 py-3 bg-[#2563EB] text-white font-semibold rounded-lg hover:bg-[#1D4ED8] transition duration-300"
                   >
                     {t("services.learnMore")} {t(tab.titleKey)}
                     <Arrow className="w-4 h-4" aria-hidden="true" />

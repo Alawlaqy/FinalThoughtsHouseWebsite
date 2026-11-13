@@ -82,7 +82,7 @@ export default function AboutSection() {
   return (
     <section id="about" className="py-24 bg-white" ref={sectionRef}>
       <div
-        className={`container transition-all duration-700 ${
+        className={`container transition duration-700 ${
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
         }`}
       >
@@ -90,11 +90,11 @@ export default function AboutSection() {
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-[#2563EB]/10 rounded-full mb-4">
             <span className="w-2 h-2 rounded-full bg-[#2563EB]" />
-            <span className="text-sm font-semibold text-[#2563EB] uppercase tracking-wide">
+            <span className="text-sm font-semibold text-[#2563EB]">
               {c.eyebrow}
             </span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#1E293B] mb-4">
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#1E293B] mb-4">
             {c.title}
           </h2>
           <p className="text-lg text-[#64748B] leading-relaxed">{c.intro}</p>
@@ -130,7 +130,7 @@ export default function AboutSection() {
         </div>
 
         {/* Process */}
-        <h3 className="text-2xl sm:text-3xl font-extrabold text-[#1E293B] mb-10 text-center">
+        <h3 className="text-2xl sm:text-3xl font-bold text-[#1E293B] mb-10 text-center">
           {c.processTitle}
         </h3>
         <ol className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -142,7 +142,7 @@ export default function AboutSection() {
                 className="relative p-6 rounded-2xl border border-gray-100 bg-white shadow-sm"
               >
                 <span
-                  className="absolute top-4 end-5 text-4xl font-extrabold text-[#2563EB]/10"
+                  className="absolute top-4 end-5 text-4xl font-bold text-[#2563EB]/10"
                   aria-hidden="true"
                 >
                   {i + 1}

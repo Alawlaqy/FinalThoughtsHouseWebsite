@@ -24,7 +24,7 @@ export default function AboutPage() {
       <main>
         <section id="home" className="bg-[#0F172A]">
           <div className="container pt-32 pb-14 md:pt-40 md:pb-16">
-            <h1 className="text-4xl sm:text-5xl font-extrabold text-white mb-5">
+            <h1 className="text-4xl sm:text-5xl font-bold text-white mb-5">
               {c.h1}
             </h1>
             <p className="max-w-3xl text-lg text-white/75 leading-relaxed">
@@ -36,7 +36,7 @@ export default function AboutPage() {
         {/* Fact sheet */}
         <section className="py-16 bg-white">
           <div className="container max-w-4xl">
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-[#1E293B] mb-8">
+            <h2 className="text-2xl sm:text-3xl font-bold text-[#1E293B] mb-8">
               {c.factsTitle}
             </h2>
             <dl className="divide-y divide-gray-100 border border-gray-100 rounded-2xl overflow-hidden">
@@ -58,7 +58,7 @@ export default function AboutPage() {
         {/* What we do */}
         <section className="py-16 bg-[#F8FAFC]">
           <div className="container max-w-4xl">
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-[#1E293B] mb-8">
+            <h2 className="text-2xl sm:text-3xl font-bold text-[#1E293B] mb-8">
               {c.whatTitle}
             </h2>
             <ul className="space-y-4 mb-10">
@@ -92,7 +92,7 @@ export default function AboutPage() {
         {/* Approach */}
         <section className="py-16 bg-white">
           <div className="container max-w-4xl">
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-[#1E293B] mb-6">
+            <h2 className="text-2xl sm:text-3xl font-bold text-[#1E293B] mb-6">
               {c.approachTitle}
             </h2>
             <p className="text-lg text-[#334155] leading-relaxed">

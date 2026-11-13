@@ -239,10 +239,8 @@ export default function Chatbot() {
               : "فتح المساعد"
         }
         aria-expanded={isOpen}
-        className={`hover:scale-105 active:scale-95 w-14 h-14 rounded-full flex items-center justify-center shadow-lg transition-all duration-300 ${
-          isOpen
-            ? "bg-[#1E293B] shadow-[#1E293B]/30"
-            : "bg-[#2563EB] shadow-[#2563EB]/30 hover:shadow-xl hover:shadow-[#2563EB]/40"
+        className={`active:scale-95 w-14 h-14 rounded-full flex items-center justify-center shadow-lg transition duration-300 ${
+          isOpen ? "bg-[#1E293B]" : "bg-[#2563EB] hover:bg-[#1D4ED8]"
         }`}
       >
         {isOpen ? (

@@ -17,7 +17,7 @@ export default function PrivacyPage() {
       <main>
         <section id="home" className="bg-[#0F172A]">
           <div className="container pt-32 pb-12 md:pt-40">
-            <h1 className="text-4xl sm:text-5xl font-extrabold text-white mb-4">
+            <h1 className="text-4xl sm:text-5xl font-bold text-white mb-4">
               {c.h1}
             </h1>
             <p className="text-white/60">{c.updated}</p>

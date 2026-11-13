@@ -22,7 +22,7 @@ export default function NotFound() {
           <span className="text-lg font-bold">Thoughts House</span>
         </a>
 
-        <p className="text-7xl font-extrabold text-[#60A5FA] mb-4">404</p>
+        <p className="text-7xl font-bold text-[#60A5FA] mb-4">404</p>
         <h1 className="text-2xl sm:text-3xl font-bold mb-3">Page not found</h1>
         <p className="text-white/60 mb-2">
           The page you are looking for doesn't exist or has moved.
@@ -47,7 +47,7 @@ export default function NotFound() {
           </a>
         </div>
 
-        <h2 className="text-sm font-bold uppercase tracking-wider text-white/50 mb-4">
+        <h2 className="text-sm font-bold text-white/50 mb-4">
           Our services · خدماتنا
         </h2>
         <ul className="grid sm:grid-cols-3 gap-3 text-sm">
