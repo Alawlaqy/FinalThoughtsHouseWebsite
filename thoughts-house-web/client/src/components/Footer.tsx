@@ -25,6 +25,8 @@ export default function Footer() {
   const { t, lang, homeHref } = useLanguage();
 
   const handleNavClick = (e: React.MouseEvent, hash: string) => {
+    // Every page has its own "#home" hero, so the Home link must leave inner pages.
+    if (hash === "#home" && window.location.pathname !== homeHref) return;
     const el = document.querySelector(hash);
     if (el) {
       e.preventDefault();

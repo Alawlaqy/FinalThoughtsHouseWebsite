@@ -46,10 +46,11 @@ export default function AssessmentPage({ slug }: { slug: AssessmentSlug }) {
 
   const current = answers[index];
   const q = c.questions[index];
-  const score = answers.filter(x => x === "yes").length;
+  const isGood = (i: number) => answers[i] === (c.questions[i].good ?? "yes");
+  const score = answers.filter((_, i) => isGood(i)).length;
   const level =
     c.levels.find(l => score >= l.min) ?? c.levels[c.levels.length - 1];
-  const gaps = c.questions.filter((_, i) => answers[i] !== "yes");
+  const gaps = c.questions.filter((_, i) => !isGood(i));
 
   const choose = (value: Answer) => {
     if (current) return;

@@ -23,6 +23,8 @@ interface AssessmentCopy {
   minutes: string;
   questions: {
     q: string;
+    /** The answer that is good practice; "yes" unless stated */
+    good?: "yes" | "no";
     /** Why it matters, shown after answering */
     why: string;
     /** One practical step, listed in the result when the answer is not Yes */
@@ -63,7 +65,8 @@ export const ASSESSMENTS: Assessment[] = [
             fix: "Set an automatic daily backup for servers, shared folders and key computers.",
           },
           {
-            q: "Is at least one backup copy kept outside your office, in another site or in the cloud?",
+            good: "no",
+            q: "Are all your backup copies kept in the same building as your servers?",
             why: "Fire, theft, flooding or a power fault can destroy the server and a backup sitting next to it at the same time.",
             fix: "Keep one copy offsite or in the cloud, updated automatically.",
           },
@@ -78,7 +81,8 @@ export const ASSESSMENTS: Assessment[] = [
             fix: "Run a restore test now, then repeat it every few months and record the result.",
           },
           {
-            q: "Are your email and cloud files, such as Microsoft 365, backed up separately?",
+            good: "no",
+            q: "Do you rely only on Microsoft 365 or Google to keep your email and cloud files, with no separate backup?",
             why: "Cloud services keep the service running, but deleted or overwritten data may be gone after a retention period. Your own backup covers that gap.",
             fix: "Add a backup for mailboxes, OneDrive and SharePoint.",
           },
@@ -93,7 +97,8 @@ export const ASSESSMENTS: Assessment[] = [
             fix: "Agree a recovery time target and check that your backup method can meet it.",
           },
           {
-            q: "Is the backup system protected by its own password and two-step verification?",
+            good: "no",
+            q: "Does the same administrator password open both your servers and your backup system?",
             why: "If the same administrator password opens both the servers and the backups, an attacker who gets one gets both.",
             fix: "Use a separate account with two-step verification for the backup system.",
           },
@@ -150,7 +155,8 @@ export const ASSESSMENTS: Assessment[] = [
             fix: "اضبط نسخاً تلقائياً يومياً للسيرفرات والمجلدات المشتركة والأجهزة المهمة.",
           },
           {
-            q: "هل تحتفظون بنسخة واحدة على الأقل خارج المكتب، في موقع آخر أو في السحابة؟",
+            good: "no",
+            q: "هل كل نسخكم الاحتياطية محفوظة في المبنى نفسه الذي فيه السيرفرات؟",
             why: "الحريق أو السرقة أو تسرب الماء أو عطل الكهرباء قد يتلف السيرفر والنسخة الموجودة بجانبه في وقت واحد.",
             fix: "احتفظ بنسخة خارج الموقع أو في السحابة، تُحدَّث تلقائياً.",
           },
@@ -165,7 +171,8 @@ export const ASSESSMENTS: Assessment[] = [
             fix: "نفّذ اختبار استعادة الآن، ثم كرّره كل بضعة أشهر وسجّل نتيجته.",
           },
           {
-            q: "هل يُنسخ البريد والملفات السحابية، مثل Microsoft 365، نسخاً مستقلاً؟",
+            good: "no",
+            q: "هل تعتمدون على Microsoft 365 أو Google وحدهما لحفظ البريد والملفات السحابية، دون نسخة احتياطية مستقلة؟",
             why: "الخدمات السحابية تضمن استمرار الخدمة، لكن البيانات المحذوفة أو المستبدلة قد تختفي بعد مدة الاحتفاظ. ونسختك الخاصة تسد هذه الثغرة.",
             fix: "أضف نسخاً احتياطياً لصناديق البريد وOneDrive وSharePoint.",
           },
@@ -180,7 +187,8 @@ export const ASSESSMENTS: Assessment[] = [
             fix: "حدّد زمن الاستعادة المستهدف، وتأكد أن طريقة النسخ الحالية تحققه.",
           },
           {
-            q: "هل نظام النسخ الاحتياطي محمي بكلمة مرور خاصة به وتحقق بخطوتين؟",
+            good: "no",
+            q: "هل كلمة مرور المسؤول نفسها تفتح السيرفرات ونظام النسخ الاحتياطي معاً؟",
             why: "إذا كانت كلمة مرور المسؤول نفسها تفتح السيرفرات والنسخ الاحتياطية، فمن يحصل على واحدة يحصل على الاثنتين.",
             fix: "استخدم حساباً مستقلاً بتحقق بخطوتين لنظام النسخ الاحتياطي.",
           },
@@ -239,7 +247,8 @@ export const ASSESSMENTS: Assessment[] = [
         minutes: "10 questions · 3 minutes",
         questions: [
           {
-            q: "Is your network protected by a business firewall with an active security subscription?",
+            good: "no",
+            q: "Is your office connected to the internet through a home-type router only, with no business firewall?",
             why: "A home router or an expired license only passes traffic. The security services, such as intrusion prevention and web filtering, need an active subscription.",
             fix: "Install a business firewall, or renew the security subscription on the one you have.",
           },
@@ -259,12 +268,14 @@ export const ASSESSMENTS: Assessment[] = [
             fix: "Set a monthly update routine that includes network and storage devices.",
           },
           {
-            q: "Do staff use standard accounts, with administrator rights limited to those who need them?",
+            good: "no",
+            q: "Do most staff have administrator rights on their own computers?",
             why: "Malware runs with the rights of the user who opened it. Fewer administrator accounts means less damage from one mistake.",
             fix: "Remove administrator rights from daily accounts and keep separate admin accounts.",
           },
           {
-            q: "Is guest Wi-Fi separated from the network your computers and servers use?",
+            good: "no",
+            q: "Do visitors connect to the same Wi-Fi network as your computers and servers?",
             why: "Visitors' phones and laptops are outside your control. On the same network, an infected device can reach your systems.",
             fix: "Create a separate guest Wi-Fi network that cannot reach internal systems.",
           },
@@ -284,7 +295,8 @@ export const ASSESSMENTS: Assessment[] = [
             fix: "Write a one-page incident plan with contacts and first steps.",
           },
           {
-            q: "Are the accounts of people who leave the company disabled on their last day?",
+            good: "no",
+            q: "Do former employees still have accounts that work after they leave?",
             why: "Old accounts with working passwords are an open door, and nobody watches them.",
             fix: "Add account removal to your leaving checklist and review active accounts every quarter.",
           },
@@ -336,7 +348,8 @@ export const ASSESSMENTS: Assessment[] = [
         minutes: "10 أسئلة · 3 دقائق",
         questions: [
           {
-            q: "هل شبكتكم محمية بجدار حماية للأعمال باشتراك حماية فعّال؟",
+            good: "no",
+            q: "هل يتصل مكتبكم بالإنترنت عبر راوتر منزلي فقط، دون جدار حماية للأعمال؟",
             why: "راوتر المنازل أو الجهاز المنتهي ترخيصه يمرر البيانات فقط. أما خدمات الحماية، مثل منع الاختراق وتصفية المواقع، فتحتاج إلى اشتراك فعّال.",
             fix: "ركّب جدار حماية للأعمال، أو جدّد اشتراك الحماية في الجهاز الموجود.",
           },
@@ -356,12 +369,14 @@ export const ASSESSMENTS: Assessment[] = [
             fix: "ضع جدول تحديث شهرياً يشمل أجهزة الشبكة والتخزين.",
           },
           {
-            q: "هل يعمل الموظفون بحسابات عادية، وصلاحيات المسؤول محصورة فيمن يحتاج إليها؟",
+            good: "no",
+            q: "هل لدى معظم الموظفين صلاحيات المسؤول على أجهزتهم؟",
             why: "البرنامج الخبيث يعمل بصلاحيات من فتحه. وكلما قلّت حسابات المسؤولين قلّ ضرر الخطأ الواحد.",
             fix: "أزل صلاحيات المسؤول من الحسابات اليومية، وخصص حسابات مستقلة للإدارة.",
           },
           {
-            q: "هل شبكة Wi-Fi للضيوف مفصولة عن الشبكة التي تستخدمها أجهزتكم وسيرفراتكم؟",
+            good: "no",
+            q: "هل يتصل الزوار بشبكة Wi-Fi نفسها التي عليها أجهزتكم وسيرفراتكم؟",
             why: "جوالات الزوار وأجهزتهم خارج سيطرتكم. وعلى الشبكة نفسها يستطيع جهاز مصاب الوصول إلى أنظمتكم.",
             fix: "أنشئ شبكة Wi-Fi مستقلة للضيوف لا تصل إلى الأنظمة الداخلية.",
           },
@@ -381,7 +396,8 @@ export const ASSESSMENTS: Assessment[] = [
             fix: "اكتب خطة حوادث من صفحة واحدة فيها جهات الاتصال والخطوات الأولى.",
           },
           {
-            q: "هل تُعطَّل حسابات من يغادر المنشأة في يومه الأخير؟",
+            good: "no",
+            q: "هل تبقى حسابات الموظفين السابقين تعمل بعد مغادرتهم؟",
             why: "الحسابات القديمة بكلمات مرور تعمل باب مفتوح لا يراقبه أحد.",
             fix: "أضف تعطيل الحسابات إلى إجراءات المغادرة، وراجع الحسابات الفعالة كل ثلاثة أشهر.",
           },
@@ -439,7 +455,8 @@ export const ASSESSMENTS: Assessment[] = [
         minutes: "8 questions · 2 minutes",
         questions: [
           {
-            q: "Does every employee have their own account, with no shared logins for email or business systems?",
+            good: "no",
+            q: "Do several employees share one login for email or a business system?",
             why: "With a shared login you cannot tell who did what, and you cannot remove one person's access without changing the password for everyone.",
             fix: "Give each person their own account and close shared logins.",
           },
@@ -449,7 +466,8 @@ export const ASSESSMENTS: Assessment[] = [
             fix: "Turn on two-step verification for every mailbox, starting with managers and finance.",
           },
           {
-            q: "Do staff use a different password for each work system?",
+            good: "no",
+            q: "Do staff use the same password for more than one work system?",
             why: "When one website is breached, attackers try the same email and password everywhere else. A reused password turns one leak into many.",
             fix: "Ask staff to stop reusing passwords, and give them a password manager so it is practical.",
           },
@@ -474,7 +492,8 @@ export const ASSESSMENTS: Assessment[] = [
             fix: "Add account removal to the leaving checklist and review active accounts every quarter.",
           },
           {
-            q: "Have the default passwords been changed on routers, cameras, printers and other devices?",
+            good: "no",
+            q: "Are any routers, cameras or printers still using the password they came with?",
             why: "Default passwords are published in manuals and online lists. Attackers try them first on any device they can reach.",
             fix: "List your network devices and change every default password.",
           },
@@ -526,7 +545,8 @@ export const ASSESSMENTS: Assessment[] = [
         minutes: "8 أسئلة · دقيقتان",
         questions: [
           {
-            q: "هل لكل موظف حسابه الخاص، دون حسابات مشتركة للبريد أو أنظمة العمل؟",
+            good: "no",
+            q: "هل يشترك عدة موظفين في حساب واحد للبريد أو لأحد أنظمة العمل؟",
             why: "مع الحساب المشترك لا تعرف من فعل ماذا، ولا تستطيع سحب صلاحية شخص واحد دون تغيير كلمة المرور على الجميع.",
             fix: "خصّص لكل شخص حسابه، وأغلق الحسابات المشتركة.",
           },
@@ -536,7 +556,8 @@ export const ASSESSMENTS: Assessment[] = [
             fix: "فعّل التحقق بخطوتين على كل صناديق البريد، وابدأ بالمديرين والمالية.",
           },
           {
-            q: "هل يستخدم الموظفون كلمة مرور مختلفة لكل نظام عمل؟",
+            good: "no",
+            q: "هل يستخدم الموظفون كلمة المرور نفسها لأكثر من نظام عمل؟",
             why: "عند اختراق موقع واحد يجرّب المهاجمون البريد وكلمة المرور نفسيهما في كل مكان آخر. الكلمة المكررة تحوّل تسريباً واحداً إلى عدة اختراقات.",
             fix: "اطلب من الموظفين عدم تكرار كلمات المرور، ووفّر لهم مدير كلمات مرور ليصبح ذلك عملياً.",
           },
@@ -561,7 +582,8 @@ export const ASSESSMENTS: Assessment[] = [
             fix: "أضف تعطيل الحسابات إلى إجراءات المغادرة، وراجع الحسابات الفعالة كل ربع سنة.",
           },
           {
-            q: "هل غُيّرت كلمات المرور الافتراضية في الراوترات والكاميرات والطابعات وبقية الأجهزة؟",
+            good: "no",
+            q: "هل ما زال أي راوتر أو كاميرا أو طابعة يعمل بكلمة المرور التي جاء بها؟",
             why: "كلمات المرور الافتراضية منشورة في الأدلة وقوائم الإنترنت، وهي أول ما يجرّبه المهاجم على أي جهاز يصل إليه.",
             fix: "احصر أجهزة الشبكة، وغيّر كل كلمة مرور افتراضية.",
           },
@@ -619,7 +641,8 @@ export const ASSESSMENTS: Assessment[] = [
         minutes: "8 questions · 2 minutes",
         questions: [
           {
-            q: "Do visitors connect to a separate guest network, not the one your staff use?",
+            good: "no",
+            q: "Do visitors connect to the same Wi-Fi network your staff use?",
             why: "A visitor's phone or laptop on the staff network can reach your shared folders, printers and servers. A guest network gives internet only.",
             fix: "Create a guest network that is isolated from the internal network.",
           },
@@ -639,7 +662,8 @@ export const ASSESSMENTS: Assessment[] = [
             fix: "Change the password after staff leave, or move to individual logins for each user.",
           },
           {
-            q: "Are cameras, printers and smart devices on a separate network from computers?",
+            good: "no",
+            q: "Are cameras, printers and smart devices on the same network as your computers?",
             why: "These devices are rarely updated and are often the easiest thing to break into. Separation keeps a compromised camera away from your files.",
             fix: "Put cameras, printers and smart devices on their own network segment.",
           },
@@ -649,7 +673,8 @@ export const ASSESSMENTS: Assessment[] = [
             fix: "Check for updates now, and replace devices the manufacturer no longer supports.",
           },
           {
-            q: "Is WPS, the push-button connection feature, turned off?",
+            good: "no",
+            q: "Is WPS, the push-button connection feature, turned on in your router?",
             why: "WPS uses a short PIN that can be guessed by trial, which gives an attacker the Wi-Fi password without knowing it.",
             fix: "Turn off WPS on every router and access point.",
           },
@@ -706,7 +731,8 @@ export const ASSESSMENTS: Assessment[] = [
         minutes: "8 أسئلة · دقيقتان",
         questions: [
           {
-            q: "هل يتصل الزوار بشبكة ضيوف منفصلة، غير الشبكة التي يستخدمها الموظفون؟",
+            good: "no",
+            q: "هل يتصل الزوار بشبكة Wi-Fi نفسها التي يستخدمها الموظفون؟",
             why: "جوال الزائر أو حاسوبه على شبكة الموظفين يصل إلى المجلدات المشتركة والطابعات والسيرفرات. شبكة الضيوف تعطي الإنترنت فقط.",
             fix: "أنشئ شبكة ضيوف معزولة عن الشبكة الداخلية.",
           },
@@ -726,7 +752,8 @@ export const ASSESSMENTS: Assessment[] = [
             fix: "غيّر كلمة المرور بعد مغادرة الموظفين، أو انتقل إلى دخول فردي لكل مستخدم.",
           },
           {
-            q: "هل الكاميرات والطابعات والأجهزة الذكية على شبكة منفصلة عن الحواسيب؟",
+            good: "no",
+            q: "هل الكاميرات والطابعات والأجهزة الذكية على الشبكة نفسها مع الحواسيب؟",
             why: "هذه الأجهزة قلّما تُحدَّث، وهي غالباً أسهل ما يُخترق. الفصل يبعد الكاميرا المخترقة عن ملفاتكم.",
             fix: "ضع الكاميرات والطابعات والأجهزة الذكية في قسم شبكي خاص بها.",
           },
@@ -736,7 +763,8 @@ export const ASSESSMENTS: Assessment[] = [
             fix: "تحقق من التحديثات الآن، واستبدل الأجهزة التي توقف دعمها من المصنّع.",
           },
           {
-            q: "هل خاصية WPS، أي الاتصال بضغطة زر، متوقفة؟",
+            good: "no",
+            q: "هل خاصية WPS، أي الاتصال بضغطة زر، مفعّلة في الراوتر؟",
             why: "تعتمد WPS على رقم قصير يمكن تخمينه بالتجربة، فيحصل المهاجم على كلمة مرور Wi-Fi دون أن يعرفها.",
             fix: "أوقف WPS في كل راوتر ونقطة اتصال.",
           },

@@ -30,6 +30,9 @@ export default function Navbar() {
   // pages; when the section exists on the current page we scroll to it instead of navigating.
   const handleNavClick = (e: React.MouseEvent, hash: string) => {
     setMobileOpen(false);
+
+    // Every page has its own "#home" hero, so the Home link must leave inner pages.
+    if (hash === "#home" && window.location.pathname !== homeHref) return;
     const el = document.querySelector(hash);
     if (el) {
       e.preventDefault();
