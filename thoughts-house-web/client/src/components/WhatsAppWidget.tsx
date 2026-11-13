@@ -40,9 +40,9 @@ export default function WhatsAppWidget() {
     <div
       className={`fixed bottom-6 ${lang === "ar" ? "left-6" : "right-6"} z-40 flex flex-col items-end gap-3`}
     >
-      {/* Tooltip */}
+      {/* Tooltip: desktop only. On a phone it covered the page's own buttons. */}
       {showTooltip && (
-        <div className="pop-in relative bg-white rounded-xl shadow-xl border border-gray-100 px-4 py-3 max-w-[220px]">
+        <div className="pop-in relative hidden md:block bg-white rounded-xl shadow-xl border border-gray-100 px-4 py-3 max-w-[220px]">
           <button
             onClick={() => setShowTooltip(false)}
             aria-label={lang === "en" ? "Dismiss" : "إغلاق"}
