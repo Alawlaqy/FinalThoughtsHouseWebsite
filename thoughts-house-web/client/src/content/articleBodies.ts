@@ -3566,4 +3566,260 @@ export const ARTICLE_BODIES: Record<
       ],
     },
   },
+  "how-to-choose-a-nas-for-business": {
+    en: {
+      summary: [
+        "Start with the job the NAS will do: shared folders, a backup target, CCTV recordings or virtual machines. The job decides the number of drive bays, the drive type and the network speed you need.",
+        "Size it for the next three to five years, not for today: add up your current data, expected growth and the capacity that RAID takes, and keep spare bays or an expansion option.",
+        "A NAS is not a backup. Whatever model you buy, plan a second copy on another device or in the cloud, and keep the NAS off the open internet.",
+      ],
+      faq: [
+        {
+          q: "How many drive bays does a business NAS need?",
+          a: "Work it out from capacity and protection rather than from the number of users. Four bays is a practical minimum for most offices, because it allows RAID 5 or RAID 6 and leaves room to use larger drives later. Choose more bays, or a model that accepts expansion units, if your data grows quickly or you store video and design files.",
+        },
+        {
+          q: "Which RAID level should we use?",
+          a: "According to QNAP's documentation, RAID 1 suits two-disk devices, RAID 5 tolerates one failed disk and balances protection, capacity and speed, RAID 6 tolerates two failed disks and is recommended for critical business data, and RAID 10 suits databases and other workloads that need fast random access. With large drives, RAID 6 is the safer choice.",
+        },
+        {
+          q: "Do we still need a backup if the NAS has RAID and snapshots?",
+          a: "Yes. RAID keeps the NAS running when a drive fails, and snapshots let you roll back recent changes, but both live on the same device. Fire, theft, a failed unit or ransomware can take all of them at once. Keep at least one more copy on another NAS, at another site or in the cloud.",
+        },
+      ],
+      blocks: [
+        {
+          p: "A NAS (network-attached storage) looks like a simple purchase: a box, some drives and a network cable. In practice, two devices at a similar price can behave very differently once thirty people open files at the same time or the nightly backup starts. This guide walks through the decisions in the order they should be made, so the model you choose fits the work it will do. If you are still deciding between a NAS, a SAN and cloud storage, read our comparison of the three first.",
+        },
+        { h2: "1. Start with the job, not the model" },
+        {
+          p: "Write down what the NAS will be used for. Most business devices do one or more of these jobs, and each one pulls the specification in a different direction:",
+        },
+        {
+          ul: [
+            "Shared folders for staff: needs good permissions, integration with your user directory and enough network speed for the number of users.",
+            "Backup target for servers, PCs or Microsoft 365: needs capacity above all, plus snapshots and a way to copy backups offsite.",
+            "CCTV recordings: needs large, continuous-write capacity and a clear retention period in days.",
+            "Virtual machines or applications on the NAS: needs a stronger processor, more memory and usually SSDs.",
+          ],
+        },
+        { h2: "2. Work out capacity and the number of bays" },
+        {
+          p: "Add up the data you have today, then add the growth you expect over the next three to five years. Then account for RAID: in RAID 5 the capacity of one disk goes to parity, and in RAID 6 the capacity of two disks. Four equal drives in RAID 5 therefore give you the usable space of three, and in RAID 6 the space of two. Snapshots also need free space, so do not plan to fill the volume.",
+        },
+        {
+          p: "Buy more bays than you need on day one. Empty bays, or support for expansion units, are the cheapest way to grow later. A NAS that is full after eighteen months usually ends up being replaced rather than expanded.",
+        },
+        { h2: "3. Choose the RAID level" },
+        {
+          ul: [
+            "RAID 1: two disks holding identical copies; tolerates one failed disk. Suitable for two-bay devices.",
+            "RAID 5: three or more disks; tolerates one failed disk. A good balance between protection, capacity and speed.",
+            "RAID 6: four or more disks; tolerates two failed disks. Recommended for critical business data, and the safer choice with large drives because rebuilding a failed drive takes a long time.",
+            "RAID 10: four or more disks in pairs; tolerates one failed disk per pair. Suits databases and workloads with heavy random access.",
+          ],
+        },
+        { h2: "4. Pick the drives: hard disks or SSDs" },
+        {
+          p: "Hard disks cost less per terabyte and suit archives, backups and CCTV. SSDs are much faster and suit active workloads such as virtual machines, databases and many users working on the same project files. Many organizations combine the two. Whichever you choose, use drives designed for NAS or enterprise use, buy them with the device, and check the vendor's compatibility list before ordering; QNAP, for example, publishes a searchable list of drives it has tested with each model.",
+        },
+        { h2: "5. Match the processor, memory and network" },
+        {
+          p: "For plain file sharing, the network is usually the bottleneck before the processor is. A 1 GbE port is enough for a small office working on documents. Teams that open large drawings, video or scan archives should look for 2.5 GbE or 10 GbE ports, or a slot to add them, and make sure the switch and cabling can carry that speed. Memory and processor matter more when the NAS runs applications, virtual machines, encryption or deduplication.",
+        },
+        { h2: "6. Check the operating system and data protection features" },
+        {
+          p: "The software matters as much as the hardware. Look for snapshots, integration with Active Directory or Microsoft Entra ID, detailed folder permissions, and built-in backup tools. On QNAP devices there is also a choice of operating system: QTS uses the ext4 file system, while QuTS hero is based on ZFS, which checksums data blocks and can repair silent corruption when the RAID has redundancy. QNAP states that QuTS hero needs a NAS with at least 8 GB of memory, and at least 16 GB for inline deduplication, and that switching between the two systems means re-initializing the NAS. Decide before you load your data.",
+        },
+        { h2: "7. Plan power and placement" },
+        {
+          p: "Tower models suit an office or branch without a rack; rackmount models belong in a server room or cabinet with proper cooling. For a NAS that the business depends on, consider a model with redundant power supplies, and connect any NAS to a UPS so that a power cut leads to a clean shutdown instead of a damaged volume.",
+        },
+        { h2: "8. Secure it from day one" },
+        {
+          p: "NAS devices exposed to the internet are a regular target for ransomware. QNAP's own security guidance comes down to a short list:",
+        },
+        {
+          ul: [
+            "Do not expose the NAS to the internet: disable port forwarding and UPnP on the router.",
+            "Use a VPN for remote access instead of open ports.",
+            "Keep the firmware and apps up to date.",
+            "Change the default administrator password, use strong passwords and remove accounts you do not need.",
+            "Turn on a snapshot schedule and back up regularly.",
+          ],
+        },
+        { h2: "9. Plan the backup before you buy" },
+        {
+          p: "Decide where the second copy will live and include it in the budget. Common choices are a second NAS at another site, cloud object storage, or both, following the 3-2-1 rule: three copies, on two types of media, with one offsite. Most business NAS systems include a tool for this; QNAP's Hybrid Backup Sync, for instance, backs up and syncs data to local storage, remote servers and cloud services. Test a restore after setup, and again on a schedule.",
+        },
+        { h2: "Pre-purchase checklist" },
+        {
+          ul: [
+            "What will the NAS be used for, and by how many users at once?",
+            "How much data today, and how much in three to five years?",
+            "Which RAID level, and what usable capacity does it leave?",
+            "Hard disks, SSDs or both, and are they on the compatibility list?",
+            "Which network speed, and can the switch and cabling carry it?",
+            "Which operating system and file system?",
+            "Tower or rack, single or redundant power, and is there a UPS?",
+            "Where does the second copy go, and who tests restores?",
+            "What warranty covers the device and the drives, and who supports it?",
+          ],
+        },
+        { h2: "How Thoughts House can help" },
+        {
+          p: "Thoughts House supplies QNAP NAS systems and drives to organizations across Saudi Arabia, as supply only or with installation and configuration. Our projects include supplying QNAP storage with SSDs equal to 600 TB for a Saudi cement company. We help you size the device, choose the drives and RAID level, and plan the backup copy with it. See our QNAP page for the systems we supply and our cloud backup service for the offsite copy. We are based in Dammam and serve all regions of the Kingdom.",
+        },
+      ],
+      sources: [
+        {
+          label: "QNAP — RAID types (QTS documentation)",
+          url: "https://docs.qnap.com/operating-system/qts/5.1.x/en-us/raid-types-0DFE381A.html",
+        },
+        {
+          label: "QNAP — QuTS hero operating system",
+          url: "https://www.qnap.com/en-us/operating-system/quts-hero",
+        },
+        {
+          label: "QNAP — Best practices for enhancing NAS security",
+          url: "https://www.qnap.com/en/how-to/faq/article/what-is-the-best-practice-for-enhancing-nas-security",
+        },
+        {
+          label: "QNAP — Compatibility list",
+          url: "https://www.qnap.com/en/compatibility/",
+        },
+        {
+          label: "QNAP — Hybrid Backup Sync",
+          url: "https://www.qnap.com/en/software/hybrid-backup-sync",
+        },
+      ],
+    },
+    ar: {
+      summary: [
+        "ابدأ من المهمة التي سيؤديها الجهاز: مجلدات مشتركة، أم وجهة للنسخ الاحتياطي، أم تسجيلات كاميرات، أم أجهزة افتراضية. فالمهمة هي التي تحدد عدد فتحات الأقراص ونوعها وسرعة الشبكة المطلوبة.",
+        "احسب السعة لثلاث إلى خمس سنوات قادمة لا لليوم فقط: بياناتك الحالية، والنمو المتوقع، وما يقتطعه RAID من السعة، واترك فتحات فارغة أو إمكانية للتوسعة.",
+        "جهاز NAS ليس نسخة احتياطية. أياً كان الطراز الذي تشتريه، خطط لنسخة ثانية على جهاز آخر أو في السحابة، ولا تجعل الجهاز مكشوفاً على الإنترنت.",
+      ],
+      faq: [
+        {
+          q: "كم فتحة أقراص يحتاج جهاز NAS للشركات؟",
+          a: "احسبها من السعة ومستوى الحماية لا من عدد المستخدمين. أربع فتحات حد أدنى عملي لأغلب المكاتب، لأنها تتيح RAID 5 أو RAID 6 وتترك مجالاً لأقراص أكبر لاحقاً. واختر عدداً أكبر، أو طرازاً يقبل وحدات توسعة، إذا كانت بياناتك تنمو بسرعة أو كنت تخزّن ملفات فيديو وتصميم.",
+        },
+        {
+          q: "أي مستوى RAID نستخدم؟",
+          a: "بحسب وثائق QNAP: يناسب RAID 1 الأجهزة ذات القرصين، ويتحمل RAID 5 تعطل قرص واحد ويوازن بين الحماية والسعة والسرعة، ويتحمل RAID 6 تعطل قرصين ويُنصح به لبيانات الأعمال المهمة، ويناسب RAID 10 قواعد البيانات والأعمال التي تحتاج وصولاً عشوائياً سريعاً. ومع الأقراص الكبيرة يكون RAID 6 الخيار الأكثر أماناً.",
+        },
+        {
+          q: "هل نحتاج نسخاً احتياطياً إذا كان في الجهاز RAID ولقطات؟",
+          a: "نعم. يُبقي RAID الجهاز عاملاً عند تعطل قرص، وتتيح اللقطات التراجع عن التغييرات الأخيرة، لكن كليهما على الجهاز نفسه. وقد يذهب بها جميعاً حريق أو سرقة أو عطل في الجهاز أو هجوم فدية. لذلك احتفظ بنسخة أخرى على الأقل على جهاز NAS آخر أو في موقع آخر أو في السحابة.",
+        },
+      ],
+      blocks: [
+        {
+          p: "يبدو شراء جهاز NAS (التخزين المتصل بالشبكة) أمراً بسيطاً: جهاز وبعض الأقراص وكابل شبكة. لكن جهازين متقاربين في السعر قد يختلف أداؤهما كثيراً حين يفتح ثلاثون موظفاً ملفاتهم في وقت واحد، أو حين يبدأ النسخ الاحتياطي الليلي. يرتّب هذا الدليل القرارات بالتسلسل الذي ينبغي اتخاذها به، حتى يناسب الطراز الذي تختاره العمل المطلوب منه. وإذا كنت ما زلت تقارن بين NAS وSAN والتخزين السحابي، فابدأ بمقالنا الذي يقارن بين الثلاثة.",
+        },
+        { h2: "1. ابدأ من المهمة لا من الطراز" },
+        {
+          p: "اكتب ما الذي سيُستخدم الجهاز من أجله. أغلب أجهزة الشركات تؤدي مهمة أو أكثر مما يلي، ولكل مهمة أثرها في المواصفات:",
+        },
+        {
+          ul: [
+            "مجلدات مشتركة للموظفين: تحتاج صلاحيات دقيقة وربطاً بدليل المستخدمين وسرعة شبكة تناسب عددهم.",
+            "وجهة للنسخ الاحتياطي للسيرفرات أو الأجهزة أو Microsoft 365: تحتاج السعة قبل كل شيء، ثم اللقطات ووسيلة لنقل النسخ خارج الموقع.",
+            "تسجيلات كاميرات المراقبة: تحتاج سعة كبيرة للكتابة المستمرة ومدة احتفاظ محددة بالأيام.",
+            "تشغيل أجهزة افتراضية أو تطبيقات على الجهاز: يحتاج معالجاً أقوى وذاكرة أكبر وأقراص SSD في الغالب.",
+          ],
+        },
+        { h2: "2. احسب السعة وعدد الفتحات" },
+        {
+          p: "اجمع حجم بياناتك اليوم، وأضف إليه النمو المتوقع خلال ثلاث إلى خمس سنوات، ثم احسب ما يقتطعه RAID: ففي RAID 5 تذهب سعة قرص واحد للحماية، وفي RAID 6 سعة قرصين. أي أن أربعة أقراص متساوية تعطيك في RAID 5 سعة ثلاثة أقراص، وفي RAID 6 سعة قرصين. واللقطات أيضاً تحتاج مساحة فارغة، فلا تخطط لملء وحدة التخزين بالكامل.",
+        },
+        {
+          p: "واشترِ فتحات أكثر مما تحتاجه في اليوم الأول. فالفتحات الفارغة، أو دعم وحدات التوسعة، أقل طرق التوسع تكلفة لاحقاً. والجهاز الذي يمتلئ بعد سنة ونصف يُستبدل في العادة ولا يُوسَّع.",
+        },
+        { h2: "3. اختر مستوى RAID" },
+        {
+          ul: [
+            "RAID 1: قرصان يحملان نسختين متطابقتين، ويتحمل تعطل قرص واحد. يناسب الأجهزة ذات الفتحتين.",
+            "RAID 5: ثلاثة أقراص أو أكثر، ويتحمل تعطل قرص واحد. توازن جيد بين الحماية والسعة والسرعة.",
+            "RAID 6: أربعة أقراص أو أكثر، ويتحمل تعطل قرصين. يُنصح به لبيانات الأعمال المهمة، وهو الأكثر أماناً مع الأقراص الكبيرة لأن إعادة بناء القرص المتعطل تستغرق وقتاً طويلاً.",
+            "RAID 10: أربعة أقراص أو أكثر في أزواج، ويتحمل تعطل قرص واحد من كل زوج. يناسب قواعد البيانات والأعمال كثيفة الوصول العشوائي.",
+          ],
+        },
+        { h2: "4. اختر الأقراص: صلبة أم SSD" },
+        {
+          p: "الأقراص الصلبة أقل تكلفة لكل تيرابايت وتناسب الأرشيف والنسخ الاحتياطي وتسجيلات الكاميرات. وأقراص SSD أسرع بكثير وتناسب الأعمال النشطة، مثل الأجهزة الافتراضية وقواعد البيانات وفرق العمل التي تفتح ملفات المشروع نفسه معاً. وتجمع منشآت كثيرة بين النوعين. وفي الحالتين استخدم أقراصاً مخصصة لأجهزة NAS أو للمؤسسات، واشترها مع الجهاز، وراجع قائمة التوافق لدى الشركة المصنّعة قبل الطلب؛ فشركة QNAP مثلاً تنشر قائمة قابلة للبحث بالأقراص التي اختبرتها مع كل طراز.",
+        },
+        { h2: "5. المعالج والذاكرة وسرعة الشبكة" },
+        {
+          p: "في مشاركة الملفات العادية تكون الشبكة هي نقطة الاختناق قبل المعالج. ومنفذ 1 جيجابت يكفي مكتباً صغيراً يعمل على المستندات. أما الفرق التي تفتح مخططات كبيرة أو فيديو أو أرشيفاً ممسوحاً ضوئياً، فالأنسب لها منافذ 2.5 أو 10 جيجابت، أو فتحة لإضافتها، مع التأكد من أن السويتش والتمديدات تتحمل هذه السرعة. وتزداد أهمية الذاكرة والمعالج حين يشغّل الجهاز تطبيقات أو أجهزة افتراضية أو تشفيراً أو إزالة للبيانات المكررة.",
+        },
+        { h2: "6. نظام التشغيل ومزايا حماية البيانات" },
+        {
+          p: "البرمجيات لا تقل أهمية عن العتاد. ابحث عن اللقطات، والتكامل مع Active Directory أو Microsoft Entra ID، وصلاحيات تفصيلية للمجلدات، وأدوات نسخ احتياطي مدمجة. وفي أجهزة QNAP يوجد خيار إضافي هو نظام التشغيل: فنظام QTS يستخدم نظام الملفات ext4، ونظام QuTS hero مبني على ZFS الذي يتحقق من سلامة كتل البيانات ويصلح التلف الصامت عند وجود حماية RAID. وتذكر QNAP أن QuTS hero يحتاج جهازاً بذاكرة 8 جيجابايت على الأقل، و16 جيجابايت على الأقل لإزالة البيانات المكررة، وأن التحويل بين النظامين يتطلب إعادة تهيئة الجهاز. لذلك احسم الاختيار قبل نقل بياناتك إليه.",
+        },
+        { h2: "7. الكهرباء ومكان الجهاز" },
+        {
+          p: "الطرازات المكتبية تناسب مكتباً أو فرعاً بلا خزانة شبكات، وطرازات الرف مكانها غرفة السيرفرات أو خزانة بتبريد مناسب. وإذا كان العمل يعتمد على الجهاز، ففكّر في طراز بمزوّدَي طاقة، ووصّل أي جهاز NAS بمزوّد طاقة غير منقطعة (UPS) حتى ينتهي انقطاع الكهرباء بإيقاف تشغيل سليم لا بتلف وحدة التخزين.",
+        },
+        { h2: "8. أمّنه من اليوم الأول" },
+        {
+          p: "أجهزة NAS المكشوفة على الإنترنت هدف متكرر لبرامج الفدية. وتتلخص إرشادات QNAP الأمنية في قائمة قصيرة:",
+        },
+        {
+          ul: [
+            "لا تكشف الجهاز على الإنترنت: عطّل توجيه المنافذ (Port Forwarding) وخاصية UPnP في الراوتر.",
+            "استخدم VPN للوصول عن بُعد بدلاً من فتح المنافذ.",
+            "حدّث نظام الجهاز وتطبيقاته باستمرار.",
+            "غيّر كلمة مرور المدير الافتراضية، واستخدم كلمات مرور قوية، واحذف الحسابات التي لا تحتاجها.",
+            "فعّل جدولاً للقطات، وانسخ بياناتك احتياطياً بانتظام.",
+          ],
+        },
+        { h2: "9. خطط للنسخ الاحتياطي قبل الشراء" },
+        {
+          p: "حدد أين ستكون النسخة الثانية وأدخلها في الميزانية. والخيارات المعتادة: جهاز NAS ثانٍ في موقع آخر، أو تخزين سحابي، أو كلاهما، وفق قاعدة 3-2-1: ثلاث نسخ، على نوعين من الوسائط، وإحداها خارج الموقع. وأغلب أجهزة NAS للشركات تتضمن أداة لذلك؛ فأداة Hybrid Backup Sync من QNAP مثلاً تنسخ البيانات وتزامنها مع التخزين المحلي والسيرفرات البعيدة والخدمات السحابية. واختبر الاستعادة بعد الإعداد، ثم بشكل دوري.",
+        },
+        { h2: "قائمة قبل الشراء" },
+        {
+          ul: [
+            "ما المهمة التي سيؤديها الجهاز، وكم مستخدماً سيعمل عليه في وقت واحد؟",
+            "كم حجم البيانات اليوم، وكم سيصبح خلال ثلاث إلى خمس سنوات؟",
+            "أي مستوى RAID، وكم يبقى من السعة الفعلية بعده؟",
+            "أقراص صلبة أم SSD أم كلاهما، وهل هي ضمن قائمة التوافق؟",
+            "ما سرعة الشبكة المطلوبة، وهل يتحملها السويتش والتمديدات؟",
+            "أي نظام تشغيل وأي نظام ملفات؟",
+            "مكتبي أم للرف، بمزوّد طاقة واحد أم اثنين، وهل يوجد UPS؟",
+            "أين ستُحفظ النسخة الثانية، ومن يختبر الاستعادة؟",
+            "ما الضمان الذي يغطي الجهاز والأقراص، ومن يدعمه؟",
+          ],
+        },
+        { h2: "كيف يساعدك بيت الأفكار" },
+        {
+          p: "يورّد بيت الأفكار أجهزة QNAP NAS والأقراص للمنشآت في جميع مناطق المملكة، توريداً فقط أو مع التركيب والإعداد. ومن مشاريعنا توريد أجهزة تخزين QNAP مع أقراص SSD بسعة تعادل 600 تيرابايت لشركة إسمنت سعودية. نساعدك على تحديد حجم الجهاز واختيار الأقراص ومستوى RAID، وعلى التخطيط للنسخة الاحتياطية معه. تجد الأجهزة التي نورّدها في صفحة QNAP، وحل النسخة خارج الموقع في خدمة النسخ الاحتياطي السحابي. مقرنا في الدمام، ونخدم جميع مناطق المملكة.",
+        },
+      ],
+      sources: [
+        {
+          label: "QNAP — أنواع RAID (وثائق نظام QTS)",
+          url: "https://docs.qnap.com/operating-system/qts/5.1.x/en-us/raid-types-0DFE381A.html",
+        },
+        {
+          label: "QNAP — نظام التشغيل QuTS hero",
+          url: "https://www.qnap.com/en-us/operating-system/quts-hero",
+        },
+        {
+          label: "QNAP — أفضل الممارسات لتعزيز أمان أجهزة NAS",
+          url: "https://www.qnap.com/en/how-to/faq/article/what-is-the-best-practice-for-enhancing-nas-security",
+        },
+        {
+          label: "QNAP — قائمة التوافق",
+          url: "https://www.qnap.com/en/compatibility/",
+        },
+        {
+          label: "QNAP — Hybrid Backup Sync",
+          url: "https://www.qnap.com/en/software/hybrid-backup-sync",
+        },
+      ],
+    },
+  },
 };

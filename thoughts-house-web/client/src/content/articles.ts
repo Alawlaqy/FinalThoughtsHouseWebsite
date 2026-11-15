@@ -28,7 +28,8 @@ export type ArticleSlug =
   | "what-is-it-amc-saudi-arabia"
   | "how-to-read-it-amc-contract"
   | "nas-vs-san-vs-cloud-storage"
-  | "it-company-vs-system-integrator";
+  | "it-company-vs-system-integrator"
+  | "how-to-choose-a-nas-for-business";
 
 interface LocalizedArticle {
   title: string;
@@ -46,6 +47,26 @@ export interface Article {
 }
 
 export const ARTICLES: Article[] = [
+  {
+    slug: "how-to-choose-a-nas-for-business",
+    published: "2026-11-15",
+    image: "/images/cloud-backup-1280.webp",
+    service: "cloud-backup",
+    content: {
+      en: {
+        title: "How to Choose a NAS for Your Business",
+        metaTitle: "How to Choose a NAS for Your Business",
+        description:
+          "How to choose a business NAS: bays and capacity, RAID level, HDD or SSD, network speed, operating system, security and backup, with a pre-purchase checklist.",
+      },
+      ar: {
+        title: "كيف تختار جهاز NAS لشركتك",
+        metaTitle: "كيف تختار جهاز NAS لشركتك | بيت الأفكار",
+        description:
+          "دليل عملي لاختيار جهاز NAS لشركتك: عدد الفتحات والسعة، ومستوى RAID، ونوع الأقراص، وسرعة الشبكة، ونظام التشغيل، والحماية والنسخ الاحتياطي، مع قائمة قبل الشراء.",
+      },
+    },
+  },
   {
     slug: "it-company-vs-system-integrator",
     published: "2026-11-08",
