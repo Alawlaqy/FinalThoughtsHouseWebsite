@@ -3822,4 +3822,308 @@ export const ARTICLE_BODIES: Record<
       ],
     },
   },
+  "structured-cabling-new-office": {
+    en: {
+      summary: [
+        "Bring the cabling designer in at the layout stage, before ceilings and partitions close: outlet positions, the network room and cable routes are cheap to change on a drawing and expensive to change on site.",
+        "Plan every outlet from the floor plan, not from the headcount: desks, printers, access points, cameras, access control, meeting-room screens and spare points, with each permanent link kept within 90 m of the rack.",
+        "Do not accept the work until every link is labeled, certified with a cable tester and documented. The test reports and as-built drawings are what you are paying for as much as the cable.",
+      ],
+      faq: [
+        {
+          q: "How many network points does each desk need?",
+          a: "Many offices install two data points per workstation, so a phone, a docking station or a second device can be connected without adding cable later. Add separate points for printers, wireless access points, cameras, door controllers and meeting-room equipment, and keep around 10 to 20 percent spare capacity on the patch panels and switches.",
+        },
+        {
+          q: "What is the maximum length of a network cable run?",
+          a: "Under the TIA and ISO cabling standards, a twisted-pair channel can be up to 100 m from one active device to another, including patch cords. The fixed part, the permanent link from the patch panel to the wall outlet, is limited to 90 m. If some outlets would be further than that, plan a second network cabinet connected to the main rack by fiber.",
+        },
+        {
+          q: "Should the electrical contractor install the network cabling?",
+          a: "The electrical contractor can install containment such as trays and conduit, but the data cabling itself is best done by a team that terminates, labels and certifies to the cabling standards and to the component manufacturer's warranty requirements. Whoever installs it, ask for certification test reports for every link before you sign off.",
+        },
+        {
+          q: "Do we still need cabling if we plan to use Wi-Fi?",
+          a: "Yes. Wi-Fi access points are themselves connected and powered through network cables, and fixed devices such as printers, cameras, IP phones and desktop computers work more reliably on a cable. Good Wi-Fi depends on good cabling behind it.",
+        },
+      ],
+      blocks: [
+        {
+          p: "Moving into a new office is the best chance you will get to build the network properly. Once the ceilings, partitions and furniture are in, every extra cable means opening tiles, drilling walls and working around staff. The cabling will also outlive several generations of switches, computers and access points, so mistakes made now stay with the business for years. This guide walks through structured cabling for a new office in the order the work should happen, from the first floor plan to the handover documents.",
+        },
+        { h2: "1. Start at the design stage, not after the fit-out" },
+        {
+          p: "Ask for a cabling design as soon as there is a furniture layout. The designer needs the floor plan, the planned positions of desks, meeting rooms and reception, and a rough idea of the systems that will run on the network. At this stage, moving an outlet or the network room costs nothing more than a revised drawing. Coordinate the cabling programme with the fit-out contractor so that containment goes in before the ceilings close, and cabling is pulled before the final finishes.",
+        },
+        { h2: "2. Count the outlets from the floor plan" },
+        {
+          p: "Headcount is a poor guide. Walk through the plan room by room and list every device that needs a cable:",
+        },
+        {
+          ul: [
+            "Workstations: many offices fit two data points per desk, so a second device never needs a new cable.",
+            "Wireless access points: one point per planned access point position, usually in the ceiling. A Wi-Fi survey or predictive design tells you where they go.",
+            "CCTV cameras, door access controllers and intercoms, usually powered over the cable (PoE).",
+            "Printers, meeting-room screens, video conferencing systems and digital signage.",
+            "Reception, the server or communications room, and any space you expect to convert later.",
+            "Spare capacity: around 10 to 20 percent extra on the patch panels, and spare cables to areas likely to change.",
+          ],
+        },
+        { h2: "3. Choose the cable and the components" },
+        {
+          p: "For horizontal cabling to desks and devices, the choice is usually between Category 6 and Category 6A. Category 6 supports 1 Gbps to the full distance and suits desks and phones. Category 6A supports 10 Gbps over the full 100 m channel and handles higher PoE power better, which matters for Wi-Fi 6E and Wi-Fi 7 access points and PTZ cameras. Our Cat6 vs Cat6A article explains the trade-off in detail. For power delivery over cabling, the latest TIA copper cabling standard, ANSI/TIA-568.2-E published in 2024, recommends Category 6A or higher.",
+        },
+        {
+          p: "Use fiber for the backbone between floors, between buildings and between network cabinets, and wherever a run would exceed the copper distance limit. Check whether the building owner or consultant specifies a fire-performance rating for the cable jacket, such as low-smoke zero-halogen (LSZH). Finally, buy cable, jacks, patch panels and patch cords from one manufacturer's system. Mixing brands makes warranty claims difficult, and many manufacturers only offer an extended system warranty when the installation is certified with their components.",
+        },
+        { h2: "4. Plan the network room and the racks" },
+        {
+          p: "The network room, or a cabinet in smaller offices, is the heart of the installation. Place it as centrally as possible so that every outlet stays within the 90 m permanent link limit; if the floor is too large, add a second cabinet linked to the main one by fiber. Then plan the room itself:",
+        },
+        {
+          ul: [
+            "Size: a rack with room for patch panels, switches, the firewall, a NAS or server, cable management and future growth. Leave free rack units on day one.",
+            "Power: dedicated circuits and a UPS sized for the switches, especially PoE switches that power access points and cameras.",
+            "Cooling: switches and servers produce heat around the clock, so plan ventilation or air conditioning that runs when the office is closed.",
+            "Earthing and bonding of racks and cable trays, coordinated with the electrical contractor.",
+            "Security: a lockable room or cabinet, away from water pipes, and not shared with cleaning stores.",
+          ],
+        },
+        { h2: "5. Design the cable pathways" },
+        {
+          p: "Cables need a defined route from the rack to every outlet: cable trays or baskets above the ceiling, conduit inside walls, floor boxes or raised-floor routes for desks in open areas. Size the trays for the cables you install now plus future additions, because overfilled trays crush cables and make changes difficult. Keep data cables separated from power cables and away from sources of interference such as lighting ballasts and motors, following the separation guidance in the cabling standards and from the manufacturer. Where cables pass through fire-rated walls or floors, the openings must be fire-stopped again after installation.",
+        },
+        { h2: "6. Install to the standard" },
+        {
+          p: "Good installation practice is what turns quality components into a reliable link. Ask the installer to follow these basics:",
+        },
+        {
+          ul: [
+            "Pull cables without exceeding the manufacturer's pulling tension or minimum bend radius.",
+            "Use hook-and-loop straps instead of tight plastic ties, and avoid tightly combed bundles. TIA-568.2-E advises smaller, looser bundles where cables carry PoE, to limit heat build-up.",
+            "Terminate every link to the same wiring scheme, T568A or T568B, at both ends.",
+            "Leave a neat service loop at the rack and the outlet for future re-termination.",
+            "Dress cables into the rack with proper cable management, so patching stays tidy for years.",
+          ],
+        },
+        { h2: "7. Label everything and document it" },
+        {
+          p: "Every outlet, patch panel port, cable and rack should carry a label, and the same identifier should appear on the drawings and in the test reports. The TIA-606 administration standard provides a common labeling scheme many installers follow. With consistent labels, your IT team or support provider can trace a fault in minutes instead of hours.",
+        },
+        { h2: "8. Certify every link with a cable tester" },
+        {
+          p: "A simple continuity tester only shows that the wires are connected. Certification testing measures each link against the performance limits of its category. Fluke Networks recommends testing the permanent link, the fixed cabling from patch panel to outlet, rather than the channel, because high-quality patch cords can make a channel pass even when the fixed cabling underneath has failed. Before work starts, agree in writing:",
+        },
+        {
+          ul: [
+            "The test limit to be used, which follows the project specification and the manufacturer's warranty requirements.",
+            "Whether marginal passes are acceptable; under the standards a marginal pass still counts as a pass.",
+            "That full results, including plot data, are saved and handed over for every link.",
+            "For Category 6A, how alien crosstalk testing will be handled, if 10 Gbps is required.",
+            "For fiber, that every connector is inspected and cleaned before final connection and that loss is tested on every link.",
+          ],
+        },
+        { h2: "9. Handover: what you should receive" },
+        {
+          ul: [
+            "Certification test reports for every copper and fiber link.",
+            "As-built drawings showing the final outlet positions, identifiers and cable routes.",
+            "A labeling schedule that matches the drawings and the reports.",
+            "The manufacturer's system warranty registration, where offered.",
+            "A clean, dressed rack, with patch cords of suitable lengths and a few spare outlets and cords.",
+          ],
+        },
+        { h2: "Quick checklist for a new office" },
+        {
+          ul: [
+            "Cabling design agreed before the ceilings close?",
+            "Outlet schedule covers desks, access points, cameras, access control, printers, screens and spares?",
+            "Cable category chosen, and fiber planned for the backbone?",
+            "Network room central, cooled, powered with a UPS, earthed and lockable?",
+            "Every permanent link within 90 m?",
+            "Trays sized for growth and separated from power?",
+            "One manufacturer's system, with a warranty?",
+            "Test limits and handover documents agreed in writing?",
+          ],
+        },
+        { h2: "How Thoughts House can help" },
+        {
+          p: "Thoughts House designs and installs structured cabling for offices, warehouses and data rooms across Saudi Arabia: Category 6 and 6A copper, fiber backbones, racks and patch panels, with labeling, certification testing and as-built documentation. We work alongside your fit-out contractor from the layout stage, and can also supply and configure the switches, firewall and Wi-Fi that run on the cabling. We are based in Dammam, Saudi Arabia, and work on-site by appointment. Contact sales@thoughtshouse.com or +966 54 102 2995 to plan your new office.",
+        },
+      ],
+      sources: [
+        {
+          label: "TIA — ANSI/TIA-568.2-E and ANSI/TIA-568.5-1 published",
+          url: "https://tiaonline.org/?p=36976",
+        },
+        {
+          label: "Siemon — ANSI/TIA-568.2-E released: key changes",
+          url: "https://www.siemon.com/en/ansi-tia-568-2-e-released/",
+        },
+        {
+          label: "ISO — ISO/IEC 11801-1:2017 Generic cabling for customer premises",
+          url: "https://www.iso.org/standard/66182.html",
+        },
+        {
+          label: "Fluke Networks — Channel, permanent link and patch cords",
+          url: "https://www.flukenetworks.com/blog/cabling-chronicles/channel-permanent-link-patch-cords-mptl-e2e-oh-my",
+        },
+        {
+          label: "Fluke Networks — Top 10 cable testing mistakes",
+          url: "https://www.flukenetworks.com/blog/cabling-chronicles/top-10-cable-testing-mistakes",
+        },
+      ],
+    },
+    ar: {
+      summary: [
+        "أشرك مصمم التمديدات في مرحلة المخطط، قبل إغلاق الأسقف وتركيب القواطع: فتغيير موقع منفذ أو غرفة الشبكة أو مسار الكابلات على الورق لا يكلف شيئاً، أما في الموقع فيكلف كثيراً.",
+        "خطط للمنافذ من المخطط لا من عدد الموظفين: المكاتب والطابعات ونقاط الوصول والكاميرات وأنظمة الدخول وشاشات الاجتماعات والمنافذ الاحتياطية، مع بقاء كل وصلة ثابتة ضمن 90 متراً من الخزانة.",
+        "لا تستلم العمل قبل أن تكون كل وصلة مرقّمة ومختبرة بجهاز اعتماد وموثقة. فتقارير الاختبار والمخططات النهائية جزء أساسي مما تدفع ثمنه، لا يقل أهمية عن الكابل نفسه.",
+      ],
+      faq: [
+        {
+          q: "كم منفذ شبكة يحتاج كل مكتب؟",
+          a: "تركّب كثير من الشركات منفذين لكل محطة عمل، حتى يمكن توصيل هاتف أو قاعدة توصيل أو جهاز ثانٍ دون تمديد جديد لاحقاً. وأضف منافذ مستقلة للطابعات ونقاط الوصول اللاسلكية والكاميرات وأجهزة التحكم بالأبواب ومعدات قاعات الاجتماعات، واترك سعة احتياطية في حدود 10 إلى 20 بالمئة في لوحات التوصيل والسويتشات.",
+        },
+        {
+          q: "ما أقصى طول لتمديد كابل الشبكة؟",
+          a: "وفق معايير TIA وISO، يصل طول القناة النحاسية إلى 100 متر من جهاز نشط إلى آخر بما فيها أسلاك التوصيل. أما الجزء الثابت، أي الوصلة الدائمة من لوحة التوصيل إلى منفذ الجدار، فحدّه 90 متراً. وإذا كانت بعض المنافذ أبعد من ذلك، فخطط لخزانة شبكة ثانية تتصل بالخزانة الرئيسية بالألياف الضوئية.",
+        },
+        {
+          q: "هل يمكن أن يتولى مقاول الكهرباء تمديدات الشبكة؟",
+          a: "يمكن لمقاول الكهرباء تركيب المسارات مثل حوامل الكابلات والأنابيب، لكن الأفضل أن يتولى كابلات البيانات نفسها فريق يوصّل ويرقّم ويختبر وفق معايير التمديدات ومتطلبات ضمان الشركة المصنّعة. وأياً كان المنفذ، اطلب تقارير اختبار الاعتماد لكل وصلة قبل التوقيع على الاستلام.",
+        },
+        {
+          q: "هل نحتاج إلى تمديدات إذا كنا سنعتمد على Wi-Fi؟",
+          a: "نعم. فنقاط الوصول اللاسلكية نفسها تتصل بالشبكة وتُغذّى بالطاقة عبر كابلات الشبكة، والأجهزة الثابتة مثل الطابعات والكاميرات وهواتف IP والحواسيب المكتبية تعمل بثبات أكبر على الكابل. فجودة شبكة Wi-Fi تعتمد على جودة التمديدات التي خلفها.",
+        },
+      ],
+      blocks: [
+        {
+          p: "الانتقال إلى مكتب جديد هو أفضل فرصة لبناء الشبكة بالشكل الصحيح. فبعد تركيب الأسقف والقواطع والأثاث، يصبح كل كابل إضافي مرهوناً بفتح بلاطات السقف وثقب الجدران والعمل وسط الموظفين. كما أن التمديدات تعيش أطول من عدة أجيال من السويتشات والحواسيب ونقاط الوصول، فما يُرتكب من أخطاء اليوم يبقى مع المنشأة سنوات. يشرح هذا الدليل تمديدات الشبكات (Structured Cabling) لمكتب جديد بالتسلسل الذي ينبغي أن يسير عليه العمل، من أول مخطط حتى مستندات التسليم.",
+        },
+        { h2: "1. ابدأ من مرحلة التصميم لا بعد التشطيب" },
+        {
+          p: "اطلب تصميم التمديدات بمجرد توفر مخطط توزيع الأثاث. يحتاج المصمم إلى مخطط الطابق، ومواقع المكاتب وقاعات الاجتماعات والاستقبال، وتصور مبدئي للأنظمة التي ستعمل على الشبكة. في هذه المرحلة لا يكلف نقل منفذ أو تغيير موقع غرفة الشبكة أكثر من تعديل المخطط. ونسّق جدول التمديدات مع مقاول التشطيب، بحيث تُركّب المسارات قبل إغلاق الأسقف، وتُسحب الكابلات قبل اللمسات النهائية.",
+        },
+        { h2: "2. احسب المنافذ من المخطط" },
+        {
+          p: "عدد الموظفين مؤشر ضعيف. مرّ على المخطط غرفة غرفة، واكتب كل جهاز يحتاج إلى كابل:",
+        },
+        {
+          ul: [
+            "محطات العمل: تركّب كثير من الشركات منفذين لكل مكتب، حتى لا يحتاج الجهاز الثاني إلى تمديد جديد.",
+            "نقاط الوصول اللاسلكية: منفذ لكل موقع مخطط لنقطة وصول، وغالباً في السقف. ويحدد مسح Wi-Fi أو التصميم التنبؤي مواقعها.",
+            "كاميرات المراقبة وأجهزة التحكم بالدخول والإنتركم، وتُغذّى غالباً بالطاقة عبر الكابل (PoE).",
+            "الطابعات وشاشات قاعات الاجتماعات وأنظمة الاجتماعات المرئية والشاشات الإعلانية.",
+            "الاستقبال وغرفة السيرفرات أو الاتصالات، وأي مساحة تتوقع تحويلها لاحقاً.",
+            "السعة الاحتياطية: نحو 10 إلى 20 بالمئة إضافية في لوحات التوصيل، وكابلات احتياطية للمناطق المرشحة للتغيير.",
+          ],
+        },
+        { h2: "3. اختر الكابل والمكونات" },
+        {
+          p: "في التمديدات الأفقية إلى المكاتب والأجهزة، يكون الاختيار عادةً بين Cat6 وCat6A. يدعم Cat6 سرعة 1 جيجابت على كامل المسافة ويناسب المكاتب والهواتف. ويدعم Cat6A سرعة 10 جيجابت على كامل قناة 100 متر ويتحمل طاقة PoE الأعلى بشكل أفضل، وهذا مهم لنقاط وصول Wi-Fi 6E وWi-Fi 7 وكاميرات PTZ. ويشرح مقالنا عن الفرق بين Cat6 وCat6A هذه المفاضلة بالتفصيل. وفيما يخص نقل الطاقة عبر الكابلات، يوصي أحدث معيار من TIA للكابلات النحاسية، وهو ANSI/TIA-568.2-E الصادر عام 2024، باستخدام Cat6A أو أعلى.",
+        },
+        {
+          p: "واستخدم الألياف الضوئية للعمود الفقري بين الطوابق والمباني وخزائن الشبكة، وفي أي تمديد يتجاوز حد المسافة للكابل النحاسي. وتحقق مما إذا كان مالك المبنى أو الاستشاري يشترط تصنيفاً معيناً لغلاف الكابل من حيث مقاومة الحريق، مثل الكابلات منخفضة الدخان والخالية من الهالوجين (LSZH). وأخيراً، اشترِ الكابلات والمقابس ولوحات التوصيل وأسلاك التوصيل من نظام شركة مصنّعة واحدة؛ فخلط العلامات التجارية يصعّب مطالبات الضمان، وكثير من المصنّعين لا يمنحون ضماناً ممتداً للنظام إلا إذا اختُبر التركيب بمكوناتهم.",
+        },
+        { h2: "4. خطط لغرفة الشبكة والخزائن" },
+        {
+          p: "غرفة الشبكة، أو الخزانة في المكاتب الصغيرة، هي قلب التمديدات. ضعها في موقع متوسط قدر الإمكان حتى تبقى كل المنافذ ضمن حد الوصلة الدائمة البالغ 90 متراً، وإذا كان الطابق أكبر من ذلك فأضف خزانة ثانية تتصل بالرئيسية عبر الألياف الضوئية. ثم خطط للغرفة نفسها:",
+        },
+        {
+          ul: [
+            "الحجم: خزانة تتسع للوحات التوصيل والسويتشات والجدار الناري وجهاز NAS أو السيرفر وتنظيم الكابلات والتوسع المستقبلي، مع ترك وحدات فارغة من اليوم الأول.",
+            "الكهرباء: دوائر مخصصة ومزوّد طاقة غير منقطعة (UPS) يناسب حمل السويتشات، خصوصاً سويتشات PoE التي تغذي نقاط الوصول والكاميرات.",
+            "التبريد: السويتشات والسيرفرات تُصدر حرارة طوال اليوم، فخطط لتهوية أو تكييف يعمل حتى في أوقات إغلاق المكتب.",
+            "التأريض والربط الكهربائي للخزائن وحوامل الكابلات، بالتنسيق مع مقاول الكهرباء.",
+            "الأمان: غرفة أو خزانة تُقفل، بعيدة عن مواسير المياه، ولا تُستخدم مخزناً لمواد التنظيف.",
+          ],
+        },
+        { h2: "5. صمّم مسارات الكابلات" },
+        {
+          p: "تحتاج الكابلات إلى مسار محدد من الخزانة إلى كل منفذ: حوامل أو سلال كابلات فوق السقف، وأنابيب داخل الجدران، وصناديق أرضية أو أرضيات مرتفعة للمكاتب في المساحات المفتوحة. احسب سعة الحوامل للكابلات الحالية والإضافات المستقبلية، لأن الحوامل المكتظة تضغط على الكابلات وتصعّب أي تعديل. وافصل كابلات البيانات عن كابلات الكهرباء، وأبعدها عن مصادر التداخل مثل محولات الإنارة والمحركات، وفق إرشادات الفصل في معايير التمديدات وتعليمات الشركة المصنّعة. وحيث تعبر الكابلات جدراناً أو أرضيات مقاومة للحريق، يجب إعادة إغلاق الفتحات بمواد عزل الحريق بعد التركيب.",
+        },
+        { h2: "6. نفّذ وفق المعايير" },
+        {
+          p: "حسن التنفيذ هو ما يحوّل المكونات الجيدة إلى وصلة موثوقة. اطلب من المنفذ الالتزام بهذه الأساسيات:",
+        },
+        {
+          ul: [
+            "سحب الكابلات دون تجاوز قوة الشد أو نصف قطر الانحناء الأدنى الذي تحدده الشركة المصنّعة.",
+            "استخدام أربطة اللاصق (الفيلكرو) بدلاً من الأربطة البلاستيكية المشدودة، وتجنب الحزم المضغوطة. ويوصي معيار TIA-568.2-E بحزم أصغر وأقل إحكاماً للكابلات التي تنقل PoE للحد من تراكم الحرارة.",
+            "توصيل كل الوصلات بنظام الأسلاك نفسه، T568A أو T568B، في الطرفين.",
+            "ترك فائض مرتب من الكابل عند الخزانة والمنفذ لإعادة التوصيل مستقبلاً.",
+            "ترتيب الكابلات داخل الخزانة بأدوات تنظيم مناسبة، حتى تبقى أسلاك التوصيل منظمة لسنوات.",
+          ],
+        },
+        { h2: "7. رقّم كل شيء ووثّقه" },
+        {
+          p: "ينبغي أن يحمل كل منفذ ومنفذ في لوحة التوصيل وكل كابل وخزانة رقماً تعريفياً، وأن يظهر الرقم نفسه في المخططات وتقارير الاختبار. ويقدّم معيار الإدارة TIA-606 نظام ترقيم موحداً يتبعه كثير من المنفذين. ومع ترقيم متسق، يستطيع فريق تقنية المعلومات لديك أو مزوّد الدعم تتبع العطل في دقائق بدلاً من ساعات.",
+        },
+        { h2: "8. اختبر كل وصلة بجهاز اعتماد" },
+        {
+          p: "جهاز فحص التوصيل البسيط يبيّن فقط أن الأسلاك متصلة. أما اختبار الاعتماد (Certification) فيقيس أداء كل وصلة مقابل حدود فئتها. وتوصي Fluke Networks باختبار الوصلة الدائمة، أي التمديد الثابت من لوحة التوصيل إلى المنفذ، لا القناة الكاملة، لأن أسلاك التوصيل عالية الجودة قد تجعل القناة تنجح في الاختبار رغم فشل التمديد الثابت تحتها. وقبل بدء العمل، اتفق كتابياً على ما يلي:",
+        },
+        {
+          ul: [
+            "حد الاختبار المعتمد، وهو تابع لمواصفات المشروع ومتطلبات ضمان الشركة المصنّعة.",
+            "هل تُقبل النتائج الهامشية أم لا؛ فالنجاح الهامشي يُعد نجاحاً وفق المعايير.",
+            "حفظ النتائج الكاملة، بما فيها البيانات البيانية، وتسليمها لكل وصلة.",
+            "في Cat6A، طريقة التعامل مع اختبار التداخل الخارجي (Alien Crosstalk) إذا كانت سرعة 10 جيجابت مطلوبة.",
+            "في الألياف، فحص كل موصل وتنظيفه قبل التوصيل النهائي، واختبار الفقد في كل وصلة.",
+          ],
+        },
+        { h2: "9. التسليم: ما الذي يجب أن تستلمه" },
+        {
+          ul: [
+            "تقارير اختبار الاعتماد لكل وصلة نحاسية وضوئية.",
+            "المخططات النهائية (As-built) بمواقع المنافذ وأرقامها ومسارات الكابلات كما نُفذت.",
+            "جدول ترقيم يطابق المخططات والتقارير.",
+            "تسجيل ضمان النظام لدى الشركة المصنّعة، إن كان متاحاً.",
+            "خزانة نظيفة ومرتبة، مع أسلاك توصيل بأطوال مناسبة وعدد من المنافذ والأسلاك الاحتياطية.",
+          ],
+        },
+        { h2: "قائمة مراجعة سريعة للمكتب الجديد" },
+        {
+          ul: [
+            "هل اعتُمد تصميم التمديدات قبل إغلاق الأسقف؟",
+            "هل يشمل جدول المنافذ المكاتب ونقاط الوصول والكاميرات وأنظمة الدخول والطابعات والشاشات والاحتياطي؟",
+            "هل حُددت فئة الكابل، وخُطط للألياف في العمود الفقري؟",
+            "هل غرفة الشبكة في موقع متوسط، ومبرّدة، وموصولة بـ UPS، ومؤرّضة، وتُقفل؟",
+            "هل كل وصلة دائمة ضمن 90 متراً؟",
+            "هل سعة الحوامل تكفي للتوسع، وهل هي مفصولة عن الكهرباء؟",
+            "هل المكونات من نظام شركة مصنّعة واحدة، وبضمان؟",
+            "هل اتُفق كتابياً على حدود الاختبار ومستندات التسليم؟",
+          ],
+        },
+        { h2: "كيف يساعدك بيت الأفكار" },
+        {
+          p: "يصمم بيت الأفكار وينفذ تمديدات الشبكات للمكاتب والمستودعات وغرف البيانات في جميع مناطق المملكة: كابلات Cat6 وCat6A النحاسية، والعمود الفقري بالألياف الضوئية، والخزائن ولوحات التوصيل، مع الترقيم واختبارات الاعتماد والمخططات النهائية. نعمل مع مقاول التشطيب لديك من مرحلة المخطط، ويمكننا أيضاً توريد وإعداد السويتشات والجدار الناري وشبكة Wi-Fi التي تعمل على هذه التمديدات. مقرنا في الدمام، ونعمل في الموقع بموعد مسبق. تواصل معنا عبر sales@thoughtshouse.com أو على الرقم ⁦+966 54 102 2995⁩ للتخطيط لمكتبك الجديد.",
+        },
+      ],
+      sources: [
+        {
+          label: "TIA — صدور معياري ANSI/TIA-568.2-E وANSI/TIA-568.5-1",
+          url: "https://tiaonline.org/?p=36976",
+        },
+        {
+          label: "Siemon — صدور ANSI/TIA-568.2-E وأبرز التغييرات",
+          url: "https://www.siemon.com/en/ansi-tia-568-2-e-released/",
+        },
+        {
+          label: "ISO — معيار ISO/IEC 11801-1:2017 للتمديدات العامة في المنشآت",
+          url: "https://www.iso.org/standard/66182.html",
+        },
+        {
+          label: "Fluke Networks — القناة والوصلة الدائمة وأسلاك التوصيل",
+          url: "https://www.flukenetworks.com/blog/cabling-chronicles/channel-permanent-link-patch-cords-mptl-e2e-oh-my",
+        },
+        {
+          label: "Fluke Networks — أشهر 10 أخطاء في اختبار الكابلات",
+          url: "https://www.flukenetworks.com/blog/cabling-chronicles/top-10-cable-testing-mistakes",
+        },
+      ],
+    },
+  },
 };

@@ -32,8 +32,8 @@
   "date": "2026-11-13"
  },
  "/services/structured-cabling/": {
-  "hash": "68f5b96ecc8686d1",
-  "date": "2026-11-13"
+  "hash": "cef7ada909439c33",
+  "date": "2026-11-15"
  },
  "/services/cctv-installation/": {
   "hash": "8f3731fc7ff3af28",
@@ -212,7 +212,11 @@
   "date": "2026-11-13"
  },
  "/insights/": {
-  "hash": "4345dff75a1e2b17",
+  "hash": "96321767eff9a747",
+  "date": "2026-11-15"
+ },
+ "/insights/structured-cabling-new-office/": {
+  "hash": "0dad6ee17a6be5b4",
   "date": "2026-11-15"
  },
  "/insights/how-to-choose-a-nas-for-business/": {
@@ -296,15 +300,15 @@
   "date": "2026-11-13"
  },
  "/insights/how-to-choose-a-firewall/": {
-  "hash": "e38e49c796a5a056",
+  "hash": "e4ae6ef765f52fa4",
   "date": "2026-11-15"
  },
  "/insights/3-2-1-backup-ransomware/": {
-  "hash": "d0e644564c860d89",
+  "hash": "766d3ae9b5ac3e8c",
   "date": "2026-11-15"
  },
  "/insights/office-wifi-planning/": {
-  "hash": "d3367f7825c41efe",
+  "hash": "fa5677dc52363c2f",
   "date": "2026-11-15"
  },
  "/ar/": {
@@ -340,8 +344,8 @@
   "date": "2026-11-13"
  },
  "/ar/services/structured-cabling/": {
-  "hash": "da8f0fc4897fe572",
-  "date": "2026-11-13"
+  "hash": "4b3de321224cb1ba",
+  "date": "2026-11-15"
  },
  "/ar/services/cctv-installation/": {
   "hash": "194a83ad3295cd9a",
@@ -520,7 +524,11 @@
   "date": "2026-11-13"
  },
  "/ar/insights/": {
-  "hash": "e9ee2c81cb304f9e",
+  "hash": "2a4961425f4c6445",
+  "date": "2026-11-15"
+ },
+ "/ar/insights/structured-cabling-new-office/": {
+  "hash": "8696911a89bd800c",
   "date": "2026-11-15"
  },
  "/ar/insights/how-to-choose-a-nas-for-business/": {
@@ -604,15 +612,15 @@
   "date": "2026-11-13"
  },
  "/ar/insights/how-to-choose-a-firewall/": {
-  "hash": "556a5b6cda07c2dd",
+  "hash": "e0dd1c7c19b7ebec",
   "date": "2026-11-15"
  },
  "/ar/insights/3-2-1-backup-ransomware/": {
-  "hash": "104843f41b9bd63e",
+  "hash": "acb285398a3792c7",
   "date": "2026-11-15"
  },
  "/ar/insights/office-wifi-planning/": {
-  "hash": "7d5d83fd60b86092",
+  "hash": "9755d47de642752e",
   "date": "2026-11-15"
  }
 }

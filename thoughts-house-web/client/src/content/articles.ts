@@ -29,7 +29,8 @@ export type ArticleSlug =
   | "how-to-read-it-amc-contract"
   | "nas-vs-san-vs-cloud-storage"
   | "it-company-vs-system-integrator"
-  | "how-to-choose-a-nas-for-business";
+  | "how-to-choose-a-nas-for-business"
+  | "structured-cabling-new-office";
 
 interface LocalizedArticle {
   title: string;
@@ -47,6 +48,26 @@ export interface Article {
 }
 
 export const ARTICLES: Article[] = [
+  {
+    slug: "structured-cabling-new-office",
+    published: "2026-11-15",
+    image: "/images/structured-cabling-1280.webp",
+    service: "structured-cabling",
+    content: {
+      en: {
+        title: "Structured Cabling for a New Office: A Step-by-Step Guide",
+        metaTitle: "Structured Cabling for a New Office: Step by Step",
+        description:
+          "Plan structured cabling for a new office in Saudi Arabia step by step: outlet count, cable type, network room, pathways, installation, labeling and testing.",
+      },
+      ar: {
+        title: "تمديدات الشبكات لمكتب جديد: دليل عملي خطوة بخطوة",
+        metaTitle: "تمديدات الشبكات لمكتب جديد خطوة بخطوة | بيت الأفكار",
+        description:
+          "خطوات تخطيط تمديدات الشبكات لمكتب جديد في السعودية: عدد المنافذ، ونوع الكابل، وغرفة الشبكة، والمسارات، والتنفيذ، والترقيم، واختبار الاعتماد والتسليم.",
+      },
+    },
+  },
   {
     slug: "how-to-choose-a-nas-for-business",
     published: "2026-11-15",
