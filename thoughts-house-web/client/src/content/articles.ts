@@ -30,7 +30,8 @@ export type ArticleSlug =
   | "nas-vs-san-vs-cloud-storage"
   | "it-company-vs-system-integrator"
   | "how-to-choose-a-nas-for-business"
-  | "structured-cabling-new-office";
+  | "structured-cabling-new-office"
+  | "fortinet-vs-sophos-firewall";
 
 interface LocalizedArticle {
   title: string;
@@ -48,6 +49,27 @@ export interface Article {
 }
 
 export const ARTICLES: Article[] = [
+  {
+    slug: "fortinet-vs-sophos-firewall",
+    published: "2026-11-18",
+    image: "/images/firewall-installation-1280.webp",
+    service: "firewall-installation",
+    content: {
+      en: {
+        title:
+          "Fortinet or Sophos: Which Firewall Fits Your Business in Saudi Arabia?",
+        metaTitle: "Fortinet vs Sophos Firewall: Which One Fits You?",
+        description:
+          "Fortinet FortiGate or Sophos Firewall? A practical comparison for businesses in Saudi Arabia: performance, licensing, management, endpoint integration and support.",
+      },
+      ar: {
+        title: "Fortinet أم Sophos: أي جدار حماية يناسب منشأتك في السعودية؟",
+        metaTitle: "مقارنة جدار حماية Fortinet وSophos | بيت الأفكار",
+        description:
+          "FortiGate من Fortinet أم Sophos Firewall؟ مقارنة عملية للمنشآت في السعودية: الأداء، والتراخيص، والإدارة، والتكامل مع حماية الأجهزة، والدعم.",
+      },
+    },
+  },
   {
     slug: "structured-cabling-new-office",
     published: "2026-11-15",

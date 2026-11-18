@@ -3961,7 +3961,8 @@ export const ARTICLE_BODIES: Record<
           url: "https://www.siemon.com/en/ansi-tia-568-2-e-released/",
         },
         {
-          label: "ISO — ISO/IEC 11801-1:2017 Generic cabling for customer premises",
+          label:
+            "ISO — ISO/IEC 11801-1:2017 Generic cabling for customer premises",
           url: "https://www.iso.org/standard/66182.html",
         },
         {
@@ -4122,6 +4123,212 @@ export const ARTICLE_BODIES: Record<
         {
           label: "Fluke Networks — أشهر 10 أخطاء في اختبار الكابلات",
           url: "https://www.flukenetworks.com/blog/cabling-chronicles/top-10-cable-testing-mistakes",
+        },
+      ],
+    },
+  },
+  "fortinet-vs-sophos-firewall": {
+    en: {
+      summary: [
+        "Both Fortinet FortiGate and Sophos Firewall are mature next-generation firewalls; the better choice depends on your network, your team and what you already run.",
+        "FortiGate suits multi-branch networks, SD-WAN and organizations that want firewalls, switches and Wi-Fi from one vendor in one management system.",
+        "Sophos Firewall suits organizations that use or plan to use Sophos endpoint protection, because the firewall and endpoints share health status and can isolate an infected device automatically.",
+        "Compare the two on throughput with threat protection and TLS inspection turned on, and on the total cost of hardware plus subscriptions over three to five years.",
+      ],
+      faq: [
+        {
+          q: "Is Fortinet better than Sophos?",
+          a: "Neither is better for every business. FortiGate is often stronger for multi-site networks, SD-WAN and very high throughput. Sophos is often simpler for small and mid-sized teams, especially when Sophos endpoint protection is already in place. Size both on the same requirements before deciding.",
+        },
+        {
+          q: "Do both firewalls need yearly subscriptions?",
+          a: "Yes. Intrusion prevention, web filtering, malware protection and support are sold as subscriptions on top of the hardware. Fortinet sells them as FortiGuard bundles and Sophos mainly as the Xstream Protection bundle. Always compare the renewal cost, not only the first year.",
+        },
+        {
+          q: "Can I manage several branches from one place?",
+          a: "Yes, with both. Fortinet uses FortiManager, FortiAnalyzer or the FortiGate Cloud service. Sophos manages its firewalls from Sophos Central, the same cloud console used for its endpoint products.",
+        },
+        {
+          q: "Can I move from one brand to the other later?",
+          a: "Yes, but plan it as a project. Rules, VPNs, user groups and NAT need to be rebuilt and tested on the new firewall, usually with a short maintenance window for the cut-over.",
+        },
+      ],
+      blocks: [
+        {
+          p: "Fortinet and Sophos are two of the firewall brands we are asked about most by businesses in Dammam and across Saudi Arabia. Both protect the edge of your network, inspect traffic for threats, filter websites and connect branches and remote staff over VPN. The differences are in how they are built, how they are licensed and what else they connect to. This guide compares them on the points that matter when you choose one.",
+        },
+        { h2: "The short answer" },
+        {
+          ul: [
+            "Choose Fortinet FortiGate if you have several branches, need SD-WAN between sites, expect high traffic volumes, or want firewalls, switches and access points managed together.",
+            "Choose Sophos Firewall if you are a small or mid-sized organization, already use Sophos Intercept X on your computers, or want the firewall and endpoint protection in one cloud console.",
+            "If neither applies, size both models on your real requirements and compare total cost and the support you will get locally.",
+          ],
+        },
+        { h2: "Performance and hardware" },
+        {
+          p: "FortiGate appliances use Fortinet's own security processors to accelerate firewall and VPN traffic, which is why they often show high throughput figures for their price class. Sophos XGS appliances also include a dedicated processor to offload trusted traffic. In both cases the headline throughput on the datasheet is not the number to size on. Use the throughput with threat protection, intrusion prevention and TLS inspection enabled, because that is how the firewall will actually run.",
+        },
+        {
+          p: "Size for the next three to five years: your internet speed, the number of users and devices, the VPN users working remotely and any new branches you plan to open.",
+        },
+        { h2: "Licensing and subscriptions" },
+        {
+          p: "Both brands sell the hardware with security subscriptions that renew each year or for several years at once.",
+        },
+        {
+          ul: [
+            "Fortinet sells FortiGuard services individually or in bundles. Advanced Threat Protection (ATP) is the base bundle, Unified Threat Protection (UTP) adds web and DNS filtering, and Enterprise Protection (ENT) adds further services such as data loss prevention. Each bundle includes FortiCare support.",
+            "Sophos sells the Xstream Protection bundle, which covers network protection, web protection and zero-day protection, with central management and reporting in Sophos Central included.",
+          ],
+        },
+        {
+          p: "Bundle contents change from time to time, so check the current contents with your supplier before you buy. Compare the renewal price for the same period on both quotations; the renewal is where most of the cost of a firewall sits over its life.",
+        },
+        { h2: "Management and branches" },
+        {
+          p: "Fortinet's strength is its Security Fabric: FortiGate firewalls, FortiSwitch switches and FortiAP access points can be managed from the firewall itself, and larger networks add FortiManager and FortiAnalyzer for central policy and logs. SD-WAN is built into FortiOS, which makes FortiGate a common choice for organizations with many branches.",
+        },
+        {
+          p: "Sophos manages its firewalls, endpoint protection, email security and other products from one cloud console, Sophos Central. For a small IT team that looks after everything, one console for the firewall and the computers saves time.",
+        },
+        { h2: "Working with endpoint protection" },
+        {
+          p: "This is where Sophos stands out. With Synchronized Security, the firewall and Sophos Intercept X on each computer share a Security Heartbeat. When a computer reports an active threat, the firewall can automatically limit its network access until it is cleaned, so the infection does not spread to servers and shared folders.",
+        },
+        {
+          p: "Fortinet offers similar integration within its own products, such as FortiClient and FortiEDR. If you already run another vendor's endpoint protection, this point matters less and the choice comes down to the network itself.",
+        },
+        { h2: "Questions to answer before you choose" },
+        {
+          ul: [
+            "How many sites do you have, and do they need to connect to each other?",
+            "What is your internet speed now, and what will it be in three years?",
+            "How many staff work remotely over VPN?",
+            "Which endpoint protection do you use on your computers?",
+            "Who will manage the firewall day to day: your own team or a supplier?",
+            "Do you need to show alignment with the NCA Essential Cybersecurity Controls?",
+          ],
+        },
+        { h2: "How Thoughts House helps" },
+        {
+          p: "Thoughts House supplies, installs and supports both Fortinet and Sophos firewalls for organizations in Dammam, Al Khobar and across Saudi Arabia. We size the model on your real traffic, prepare comparable quotations for both brands when you want to compare, migrate your existing rules and VPNs, and support the firewall after installation.",
+        },
+      ],
+      sources: [
+        {
+          label: "Fortinet — FortiGate security bundles",
+          url: "https://www.fortinet.com/support/support-services/fortiguard-security-subscriptions/fortigate-security-bundles",
+        },
+        {
+          label: "Sophos — How to buy Sophos Firewall",
+          url: "https://www.sophos.com/en-us/products/next-gen-firewall/how-to-buy",
+        },
+        {
+          label: "Sophos — Central management and reporting",
+          url: "https://www.sophos.com/en-us/products/next-gen-firewall/ecosystem-central",
+        },
+      ],
+    },
+    ar: {
+      summary: [
+        "جدار FortiGate من Fortinet وجدار Sophos Firewall كلاهما ناضج وموثوق، والاختيار الأفضل يعتمد على شبكتك وفريقك وما تستخدمه حالياً.",
+        "يناسب FortiGate الشبكات متعددة الفروع وربط الفروع (SD-WAN)، والمنشآت التي تريد جدار الحماية والسويتشات والـ Wi-Fi من مصنّع واحد وفي نظام إدارة واحد.",
+        "يناسب Sophos المنشآت التي تستخدم أو تنوي استخدام حماية Sophos للأجهزة، لأن الجدار والأجهزة يتبادلان حالتها ويعزلان الجهاز المصاب تلقائياً.",
+        "قارن بينهما على الأداء مع تشغيل الحماية وفحص الاتصالات المشفّرة، وعلى التكلفة الإجمالية للجهاز والاشتراكات خلال ثلاث إلى خمس سنوات.",
+      ],
+      faq: [
+        {
+          q: "هل Fortinet أفضل من Sophos؟",
+          a: "لا يوجد أفضل لكل المنشآت. FortiGate غالباً أقوى للشبكات متعددة الفروع وربط الفروع والسرعات العالية جداً. وSophos غالباً أبسط للفرق الصغيرة والمتوسطة، خصوصاً مع وجود حماية Sophos على الأجهزة. حدّد مقاس الجهازين على المتطلبات نفسها قبل القرار.",
+        },
+        {
+          q: "هل يحتاج الجداران إلى اشتراكات سنوية؟",
+          a: "نعم. منع الاختراق، وتصفية المواقع، والحماية من البرمجيات الخبيثة، والدعم، كلها اشتراكات فوق سعر الجهاز. تبيعها Fortinet كحزم FortiGuard، وتبيعها Sophos غالباً كحزمة Xstream Protection. قارن دائماً تكلفة التجديد، لا السنة الأولى فقط.",
+        },
+        {
+          q: "هل أستطيع إدارة عدة فروع من مكان واحد؟",
+          a: "نعم في الحالتين. تستخدم Fortinet منصة FortiManager أو FortiAnalyzer أو خدمة FortiGate Cloud. وتدير Sophos جدرانها من Sophos Central، وهي اللوحة السحابية نفسها التي تدير بها حماية الأجهزة.",
+        },
+        {
+          q: "هل أستطيع الانتقال من علامة إلى الأخرى لاحقاً؟",
+          a: "نعم، لكن خطّط له كمشروع. تُعاد بناء القواعد والـ VPN ومجموعات المستخدمين والـ NAT على الجدار الجديد وتُختبر، وغالباً مع نافذة صيانة قصيرة وقت التحويل.",
+        },
+      ],
+      blocks: [
+        {
+          p: "Fortinet وSophos من أكثر علامات جدران الحماية التي تسألنا عنها المنشآت في الدمام وبقية مناطق المملكة. كلاهما يحمي حدود شبكتك، ويفحص الاتصالات بحثاً عن التهديدات، ويصفّي المواقع، ويربط الفروع والموظفين عن بُعد عبر VPN. الفرق في طريقة البناء، وطريقة الترخيص، وما يتكامل معه كل منهما. يقارن هذا الدليل بينهما في النقاط التي تهمّك عند الاختيار.",
+        },
+        { h2: "الجواب المختصر" },
+        {
+          ul: [
+            "اختر FortiGate من Fortinet إذا كان لديك عدة فروع، أو تحتاج إلى ربط الفروع (SD-WAN)، أو تتوقع حجم اتصالات كبيراً، أو تريد إدارة جدار الحماية والسويتشات ونقاط الاتصال معاً.",
+            "اختر Sophos Firewall إذا كانت منشأتك صغيرة أو متوسطة، أو تستخدم Sophos Intercept X على أجهزتك، أو تريد جدار الحماية وحماية الأجهزة في لوحة سحابية واحدة.",
+            "إن لم ينطبق أيٌّ منهما، فحدّد مقاس الجهازين على متطلباتك الفعلية، وقارن التكلفة الإجمالية والدعم الذي ستحصل عليه محلياً.",
+          ],
+        },
+        { h2: "الأداء والأجهزة" },
+        {
+          p: "تستخدم أجهزة FortiGate معالجات أمنية خاصة بـ Fortinet لتسريع اتصالات الجدار والـ VPN، ولهذا تظهر غالباً بأرقام أداء عالية مقارنة بفئتها السعرية. وتحتوي أجهزة Sophos XGS أيضاً على معالج مخصص لتخفيف الحمل عن الاتصالات الموثوقة. في الحالتين، الرقم الكبير في النشرة الفنية ليس الرقم الذي تختار عليه. اعتمد الأداء مع تشغيل الحماية من التهديدات ومنع الاختراق وفحص الاتصالات المشفّرة، لأن الجدار سيعمل هكذا فعلاً.",
+        },
+        {
+          p: "اختر المقاس لثلاث إلى خمس سنوات قادمة: سرعة الإنترنت، وعدد المستخدمين والأجهزة، والموظفين الذين يعملون عن بُعد عبر VPN، وأي فروع جديدة تخطط لافتتاحها.",
+        },
+        { h2: "التراخيص والاشتراكات" },
+        {
+          p: "تبيع العلامتان الجهاز مع اشتراكات حماية تُجدَّد سنوياً أو لعدة سنوات دفعة واحدة.",
+        },
+        {
+          ul: [
+            "تبيع Fortinet خدمات FortiGuard منفردة أو في حزم. حزمة Advanced Threat Protection (ATP) هي الأساسية، وتضيف حزمة Unified Threat Protection (UTP) تصفية المواقع والـ DNS، وتضيف حزمة Enterprise Protection (ENT) خدمات أخرى مثل منع تسريب البيانات. وكل حزمة تشمل دعم FortiCare.",
+            "تبيع Sophos حزمة Xstream Protection، وتشمل حماية الشبكة، وحماية التصفح، والحماية من الهجمات غير المعروفة، مع الإدارة المركزية والتقارير في Sophos Central.",
+          ],
+        },
+        {
+          p: "محتوى الحزم يتغير من وقت لآخر، فتأكد من المحتوى الحالي مع المورّد قبل الشراء. وقارن سعر التجديد للمدة نفسها في العرضين؛ فالتجديد هو الجزء الأكبر من تكلفة الجدار طوال عمره.",
+        },
+        { h2: "الإدارة والفروع" },
+        {
+          p: "نقطة قوة Fortinet هي Security Fabric: تُدار جدران FortiGate وسويتشات FortiSwitch ونقاط الاتصال FortiAP من الجدار نفسه، وتضيف الشبكات الأكبر FortiManager وFortiAnalyzer للسياسات والسجلات المركزية. وربط الفروع (SD-WAN) مدمج في نظام FortiOS، ولهذا يكثر اختيار FortiGate في المنشآت متعددة الفروع.",
+        },
+        {
+          p: "أما Sophos فتدير جدرانها وحماية الأجهزة وحماية البريد ومنتجاتها الأخرى من لوحة سحابية واحدة هي Sophos Central. ولفريق تقنية صغير يتولى كل شيء، توفّر اللوحة الواحدة للجدار والأجهزة وقتاً واضحاً.",
+        },
+        { h2: "التكامل مع حماية الأجهزة" },
+        {
+          p: "هنا تتميز Sophos. مع خاصية Synchronized Security يتبادل الجدار وبرنامج Sophos Intercept X على كل جهاز إشارة اسمها Security Heartbeat. وعندما يبلّغ جهاز عن تهديد نشط، يستطيع الجدار تقييد وصوله إلى الشبكة تلقائياً حتى يُنظَّف، فلا تنتقل الإصابة إلى السيرفرات والمجلدات المشتركة.",
+        },
+        {
+          p: "وتقدم Fortinet تكاملاً مشابهاً بين منتجاتها، مثل FortiClient وFortiEDR. وإن كنت تستخدم حماية أجهزة من مصنّع آخر، فهذه النقطة أقل أهمية، ويعود الاختيار إلى الشبكة نفسها.",
+        },
+        { h2: "أسئلة أجب عنها قبل الاختيار" },
+        {
+          ul: [
+            "كم فرعاً لديك، وهل تحتاج الفروع إلى الاتصال ببعضها؟",
+            "ما سرعة الإنترنت الآن، وكم ستكون بعد ثلاث سنوات؟",
+            "كم موظفاً يعمل عن بُعد عبر VPN؟",
+            "ما برنامج الحماية المستخدم على أجهزتك؟",
+            "من سيدير الجدار يومياً: فريقك أم المورّد؟",
+            "هل تحتاج إلى إثبات التوافق مع الضوابط الأساسية للأمن السيبراني من الهيئة الوطنية؟",
+          ],
+        },
+        { h2: "كيف يساعدك بيت الأفكار" },
+        {
+          p: "يورّد بيت الأفكار جدران حماية Fortinet وSophos وينفذها ويدعمها للمنشآت في الدمام والخبر وجميع مناطق المملكة. نحدد المقاس على اتصالاتك الفعلية، ونجهّز عرضين متقابلين للعلامتين عند رغبتك في المقارنة، وننقل قواعدك واتصالات الـ VPN الحالية، وندعم الجدار بعد التركيب.",
+        },
+      ],
+      sources: [
+        {
+          label: "Fortinet — حزم الحماية لأجهزة FortiGate",
+          url: "https://www.fortinet.com/support/support-services/fortiguard-security-subscriptions/fortigate-security-bundles",
+        },
+        {
+          label: "Sophos — طريقة شراء Sophos Firewall",
+          url: "https://www.sophos.com/en-us/products/next-gen-firewall/how-to-buy",
+        },
+        {
+          label: "Sophos — الإدارة المركزية والتقارير",
+          url: "https://www.sophos.com/en-us/products/next-gen-firewall/ecosystem-central",
         },
       ],
     },
