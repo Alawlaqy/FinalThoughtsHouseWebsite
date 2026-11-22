@@ -4573,7 +4573,8 @@ export const ARTICLE_BODIES: Record<
       ],
       sources: [
         {
-          label: "الهيئة الوطنية للأمن السيبراني — الضوابط الأساسية للأمن السيبراني (ECC-2:2024)",
+          label:
+            "الهيئة الوطنية للأمن السيبراني — الضوابط الأساسية للأمن السيبراني (ECC-2:2024)",
           url: "https://cdn.nca.gov.sa/api/files/public/upload/86e09090-44e4-481f-bc28-355673607654_ECC--2024-EN.pdf",
         },
         {
@@ -4583,6 +4584,223 @@ export const ARTICLE_BODIES: Record<
         {
           label: "Microsoft — متطلبات Outlook للمرسلين بكميات كبيرة",
           url: "https://techcommunity.microsoft.com/blog/microsoftthreatprotectionblog/strengthening-email-ecosystem-outlook%e2%80%99s-new-requirements-for-high%e2%80%90volume-senders/4399730",
+        },
+      ],
+    },
+  },
+  "business-data-storage-solutions-saudi-arabia": {
+    en: {
+      summary: [
+        "Start with your data, not with a device: list what you store, how fast it grows, who uses it and how long each system can be down.",
+        "Match each type of data to the right place: Microsoft 365 or a NAS for documents, server or shared storage for databases and virtual machines, and cloud or offsite storage for backups and archives.",
+        "Check where each type of data is allowed to live before you buy. Personal data and data covered by NCA controls may need to stay on premises or in a cloud region inside the Kingdom.",
+      ],
+      faq: [
+        {
+          q: "What is the best storage solution for a small company in Saudi Arabia?",
+          a: "There is no single best device. Many small offices do well with Microsoft 365 for everyday documents, a business NAS for large files or CCTV recordings, and a separate backup copy offsite. The right mix depends on your file sizes, internet speed, number of users and how long you can work without access to your data.",
+        },
+        {
+          q: "Do we have to keep our company data inside Saudi Arabia?",
+          a: "It depends on the data and on your organization. The Personal Data Protection Law allows personal data to be transferred outside the Kingdom only under the conditions in its transfer regulation, and organizations covered by NCA controls must also follow its cloud and data cybersecurity controls. Check each data type with your legal or compliance team before choosing an overseas service.",
+        },
+        {
+          q: "How much storage capacity should we buy?",
+          a: "Measure what you store today, look at how fast it grew over the last two years, and plan for the next three to five years. Remember that RAID, snapshots and free space reduce usable capacity, so the raw capacity you buy must be clearly higher than the data you expect to keep.",
+        },
+      ],
+      blocks: [
+        {
+          p: "Most companies do not plan their storage; it grows by accident. A shared folder on an old server, files on personal laptops, a NAS someone bought for the design team, and a few cloud accounts. It works until a disk fails, a laptop is stolen or an auditor asks where customer data is kept. This guide gives a practical plan for business data storage in Saudi Arabia: what to store where, what the local rules mean for your choices, and how to keep the setup running for years. If you are comparing specific technologies, our guide to NAS, SAN and cloud storage goes deeper into each one.",
+        },
+        { h2: "Step 1: Know your data" },
+        {
+          p: "Before looking at products, make a simple list of the data your company keeps. For each item, note how big it is, how fast it grows, who needs it and from where, and how long the business can work without it. Typical groups are:",
+        },
+        {
+          ul: [
+            "Everyday documents and spreadsheets shared between teams.",
+            "Business systems such as ERP, accounting and HR, which run on databases.",
+            "Virtual machines and application servers.",
+            "Large working files, such as engineering drawings, design and video.",
+            "CCTV recordings, which are large and written around the clock.",
+            "Email, and archives you must keep for legal or contract reasons.",
+          ],
+        },
+        { h2: "Step 2: Match each type of data to the right storage" },
+        {
+          p: "Different data needs different storage. Putting everything on one device is cheap at first but usually means slow databases, full disks and one point of failure. A common, balanced layout looks like this:",
+        },
+        {
+          ul: [
+            "Documents and collaboration: OneDrive and SharePoint in Microsoft 365, or a business NAS when files are large or the internet link is slow.",
+            "Databases and virtual machines: server storage with RAID, or shared storage such as a SAN or hyperconverged cluster when several hosts must keep systems running after a failure.",
+            "Large media and CCTV: a NAS or dedicated recording storage sized for continuous writing.",
+            "Backups and archives: a separate backup target on site, plus an offsite or cloud copy that cannot be changed or deleted by an attacker.",
+          ],
+        },
+        { h2: "Step 3: Decide where your data may live" },
+        {
+          p: "In Saudi Arabia, the location of data is part of the design, not an afterthought. The Personal Data Protection Law, overseen by SDAIA, allows personal data to be transferred outside the Kingdom only under the conditions in its transfer regulation. Organizations covered by the National Cybersecurity Authority's controls must also apply the Cloud Cybersecurity Controls and the Data Cybersecurity Controls (DCC-1:2022), which extend the Essential Cybersecurity Controls with requirements for protecting data.",
+        },
+        {
+          p: "This gives you three realistic locations: your own premises, a local data center where you rent rack space, or a cloud region inside the Kingdom. In-country cloud options are growing: Google Cloud's Dammam region is available to Saudi-based customers through its local reseller, CNTXT, and Microsoft announced that its Saudi Arabia East region in the Eastern Province becomes available to customers in November 2026. Always confirm which specific services keep data in the region before relying on it for a compliance requirement.",
+        },
+        { h2: "Step 4: Size it for the next three to five years" },
+        {
+          p: "Storage bought for today's data is full in a year. When you size a new system, plan for:",
+        },
+        {
+          ul: [
+            "Growth: use the real growth of the last two years, then add room for new projects or systems.",
+            "Usable capacity: RAID, snapshots and recommended free space all reduce what you can actually use.",
+            "Performance: databases and virtual machines need fast disks or SSDs; archives can sit on slower, cheaper disks.",
+            "Network: storage is only as fast as the network in front of it, so check switches and cabling too.",
+            "Warranty and support: match the support period to the years you plan to use the hardware.",
+          ],
+        },
+        { h2: "Step 5: Protect it" },
+        {
+          p: "Storage is not backup. RAID protects against a failed disk, and sync services copy deletions and encrypted files as fast as good ones. Follow the 3-2-1 rule: three copies of your data, on two types of media, with one copy offsite, and make at least one copy immutable so ransomware cannot remove it. Limit access with user permissions and multi-factor authentication, encrypt laptops and offsite copies, and test a full restore regularly.",
+        },
+        { h2: "Step 6: Plan who will run it" },
+        {
+          p: "A storage system needs care for its whole life: firmware updates, disk health and capacity alerts, backup reports and replacement of failed parts. Decide early who will do this, whether an in-house team or a support contract, and write it down. Most storage incidents start with a warning that nobody was watching.",
+        },
+        { h2: "How Thoughts House can help" },
+        {
+          p: "Thoughts House is a system integrator based at 4028 Al Malek Khaled, As Suq Dist., Dammam, serving companies across Saudi Arabia, and has served more than 250 organizations. We review your data and recovery needs, design storage and backup that fit your size and compliance needs, supply and install the hardware and cloud services, and support them after installation. Contact sales@thoughtshouse.com or +966 54 102 2995 to arrange a storage review.",
+        },
+      ],
+      sources: [
+        {
+          label:
+            "SDAIA — Regulation on Personal Data Transfer outside the Kingdom",
+          url: "https://sdaia.gov.sa/Documents/RegulationonPersonalDataEN.pdf",
+        },
+        {
+          label: "NCA — Data Cybersecurity Controls (DCC-1:2022)",
+          url: "https://nca.gov.sa/en/regulatory-documents/controls-list/dcc/",
+        },
+        {
+          label: "NCA — Cloud Cybersecurity Controls (CCC-2:2024)",
+          url: "https://nca.gov.sa/en/regulatory-documents/controls-list/ccc/",
+        },
+        {
+          label: "Microsoft — Saudi Arabia East datacenter region availability",
+          url: "https://news.microsoft.com/source/emea/2026/08/microsoft-announces-saudi-arabia-east-datacenter-region-will-be-available-in-november-2026/",
+        },
+        {
+          label: "Google Cloud — Dammam region access",
+          url: "https://docs.cloud.google.com/docs/dammam-region-access",
+        },
+      ],
+    },
+    ar: {
+      summary: [
+        "ابدأ ببياناتك لا بالجهاز: اعرف ما الذي تخزّنه، وبأي سرعة ينمو، ومن يستخدمه، وكم من الوقت يحتمل كل نظام أن يتوقف.",
+        "ضع كل نوع من البيانات في المكان المناسب له: Microsoft 365 أو جهاز NAS للمستندات، وتخزين السيرفرات أو التخزين المشترك لقواعد البيانات والأجهزة الافتراضية، والسحابة أو موقع خارجي للنسخ الاحتياطية والأرشيف.",
+        "تحقّق قبل الشراء من المكان المسموح فيه بحفظ كل نوع من البيانات؛ فالبيانات الشخصية والبيانات المشمولة بضوابط الهيئة الوطنية للأمن السيبراني قد يلزم حفظها في مقرك أو في منطقة سحابية داخل المملكة.",
+      ],
+      faq: [
+        {
+          q: "ما أفضل حل تخزين لشركة صغيرة في السعودية؟",
+          a: "لا يوجد جهاز واحد هو الأفضل للجميع. كثير من المكاتب الصغيرة يكفيها Microsoft 365 للمستندات اليومية، وجهاز NAS مخصص للأعمال للملفات الكبيرة أو تسجيلات الكاميرات، ونسخة احتياطية منفصلة خارج الموقع. ويتحدد المزيج المناسب بحجم ملفاتك، وسرعة الإنترنت، وعدد المستخدمين، والمدة التي تستطيع العمل فيها دون الوصول إلى بياناتك.",
+        },
+        {
+          q: "هل يجب أن نحفظ بيانات شركتنا داخل المملكة؟",
+          a: "يعتمد ذلك على نوع البيانات وعلى طبيعة منشأتك. فنظام حماية البيانات الشخصية لا يسمح بنقل البيانات الشخصية إلى خارج المملكة إلا وفق الشروط الواردة في لائحة النقل، والجهات المشمولة بضوابط الهيئة الوطنية للأمن السيبراني ملزمة أيضاً بضوابطها الخاصة بالحوسبة السحابية والبيانات. راجع كل نوع من البيانات مع فريق الشؤون القانونية أو الامتثال قبل اختيار خدمة خارج المملكة.",
+        },
+        {
+          q: "كم سعة التخزين التي نحتاج إلى شرائها؟",
+          a: "احسب حجم ما تخزّنه اليوم، وانظر إلى نموه خلال السنتين الماضيتين، وخطّط لثلاث إلى خمس سنوات قادمة. وتذكّر أن RAID واللقطات والمساحة الفارغة الموصى بها تقلل السعة القابلة للاستخدام، لذا يجب أن تكون السعة الخام التي تشتريها أعلى بوضوح من حجم البيانات المتوقع.",
+        },
+      ],
+      blocks: [
+        {
+          p: "في أغلب الشركات لا يُخطَّط للتخزين، بل يكبر مع الوقت دون ترتيب: مجلد مشترك على سيرفر قديم، وملفات على أجهزة الموظفين، وجهاز NAS اشتراه فريق التصميم، وعدة حسابات سحابية متفرقة. ويستمر الوضع إلى أن يتعطل قرص، أو يُسرق جهاز محمول، أو يسأل مدقق عن مكان حفظ بيانات العملاء. يقدّم هذا الدليل خطة عملية لتخزين بيانات الشركات في السعودية: ماذا تحفظ وأين، وما أثر الأنظمة المحلية على قراراتك، وكيف تُبقي المنظومة تعمل بكفاءة لسنوات. وإن كنت تقارن بين تقنيات بعينها، فدليلنا عن الفرق بين NAS وSAN والتخزين السحابي يتناول كلاً منها بتفصيل أكبر.",
+        },
+        { h2: "الخطوة الأولى: اعرف بياناتك" },
+        {
+          p: "قبل النظر إلى المنتجات، اكتب قائمة بسيطة بالبيانات التي تحتفظ بها شركتك. وسجّل لكل بند حجمه، وسرعة نموه، ومن يحتاج إليه ومن أين، وكم من الوقت يستطيع العمل الاستمرار بدونه. ومن المجموعات المعتادة:",
+        },
+        {
+          ul: [
+            "المستندات وجداول البيانات اليومية التي تتشاركها الفرق.",
+            "أنظمة الأعمال مثل ERP والمحاسبة والموارد البشرية، وهي تعمل على قواعد بيانات.",
+            "الأجهزة الافتراضية وسيرفرات التطبيقات.",
+            "ملفات العمل الكبيرة، مثل المخططات الهندسية والتصاميم والفيديو.",
+            "تسجيلات كاميرات المراقبة، وهي كبيرة الحجم وتُكتب على مدار الساعة.",
+            "البريد الإلكتروني، والأرشيف الذي يلزمك الاحتفاظ به لأسباب نظامية أو تعاقدية.",
+          ],
+        },
+        { h2: "الخطوة الثانية: اختر لكل نوع من البيانات التخزين المناسب" },
+        {
+          p: "لكل نوع من البيانات احتياج مختلف. ووضع كل شيء على جهاز واحد يبدو أوفر في البداية، لكنه ينتهي غالباً بقواعد بيانات بطيئة وأقراص ممتلئة ونقطة تعطل وحيدة. وهذا توزيع متوازن شائع:",
+        },
+        {
+          ul: [
+            "المستندات والعمل المشترك: OneDrive وSharePoint في Microsoft 365، أو جهاز NAS للأعمال عندما تكون الملفات كبيرة أو اتصال الإنترنت بطيئاً.",
+            "قواعد البيانات والأجهزة الافتراضية: أقراص السيرفر مع RAID، أو تخزين مشترك مثل SAN أو بنية متقاربة (Hyperconverged) عندما تحتاج عدة سيرفرات إلى إبقاء الأنظمة تعمل بعد أي عطل.",
+            "ملفات الوسائط الكبيرة وتسجيلات الكاميرات: جهاز NAS أو تخزين تسجيل مخصص مصمم للكتابة المستمرة.",
+            "النسخ الاحتياطية والأرشيف: وجهة نسخ احتياطي منفصلة في الموقع، ونسخة خارج الموقع أو في السحابة لا يستطيع المهاجم تعديلها أو حذفها.",
+          ],
+        },
+        { h2: "الخطوة الثالثة: حدّد أين يُسمح بحفظ بياناتك" },
+        {
+          p: "في المملكة، مكان البيانات جزء من التصميم وليس تفصيلاً يُترك للنهاية. فنظام حماية البيانات الشخصية، الذي تشرف عليه الهيئة السعودية للبيانات والذكاء الاصطناعي (سدايا)، لا يسمح بنقل البيانات الشخصية إلى خارج المملكة إلا وفق الشروط الواردة في لائحة النقل. كما يجب على الجهات المشمولة بضوابط الهيئة الوطنية للأمن السيبراني تطبيق ضوابط الأمن السيبراني للحوسبة السحابية، وضوابط الأمن السيبراني للبيانات (DCC-1:2022) التي تُعد امتداداً للضوابط الأساسية للأمن السيبراني بمتطلبات خاصة بحماية البيانات.",
+        },
+        {
+          p: "وبذلك تبقى أمامك ثلاثة خيارات واقعية: مقرك الخاص، أو مركز بيانات محلي تستأجر فيه مساحة لأجهزتك، أو منطقة سحابية داخل المملكة. والخيارات السحابية المحلية في ازدياد؛ فمنطقة Google Cloud في الدمام متاحة للعملاء المقيمين في المملكة عبر موزّعها المحلي CNTXT، وأعلنت Microsoft أن منطقتها Saudi Arabia East في المنطقة الشرقية تصبح متاحة للعملاء في نوفمبر 2026. وتأكد دائماً من الخدمات المحددة التي تحفظ بياناتها داخل المنطقة قبل الاعتماد عليها لتلبية متطلب تنظيمي.",
+        },
+        { h2: "الخطوة الرابعة: قدّر السعة لثلاث إلى خمس سنوات" },
+        {
+          p: "التخزين الذي يُشترى على مقاس بيانات اليوم يمتلئ خلال عام. وعند تقدير نظام جديد، خطّط لما يلي:",
+        },
+        {
+          ul: [
+            "النمو: اعتمد على النمو الفعلي في السنتين الماضيتين، ثم أضف هامشاً للمشاريع والأنظمة الجديدة.",
+            "السعة القابلة للاستخدام: RAID واللقطات والمساحة الفارغة الموصى بها كلها تنقص مما يمكنك استخدامه فعلاً.",
+            "الأداء: قواعد البيانات والأجهزة الافتراضية تحتاج أقراصاً سريعة أو SSD، أما الأرشيف فيكفيه أقراص أبطأ وأقل تكلفة.",
+            "الشبكة: سرعة التخزين محدودة بسرعة الشبكة التي أمامه، فراجع المبدّلات والتمديدات أيضاً.",
+            "الضمان والدعم: اجعل مدة الدعم مساوية لعدد السنوات التي تنوي استخدام الأجهزة فيها.",
+          ],
+        },
+        { h2: "الخطوة الخامسة: احمِ بياناتك" },
+        {
+          p: "التخزين ليس نسخاً احتياطياً. فـ RAID يحمي من تعطل قرص، وخدمات المزامنة تنقل الملفات المحذوفة والمشفّرة بالسرعة نفسها التي تنقل بها الملفات السليمة. طبّق قاعدة 3-2-1: ثلاث نسخ من بياناتك، على نوعين من الوسائط، وإحداها خارج الموقع، واجعل نسخة واحدة على الأقل غير قابلة للتعديل حتى لا تستطيع برامج الفدية حذفها. وقيّد الوصول بصلاحيات المستخدمين والتحقق متعدد العوامل، وشفّر الأجهزة المحمولة والنسخ الخارجية، واختبر الاستعادة الكاملة بانتظام.",
+        },
+        { h2: "الخطوة السادسة: حدّد من سيتولى التشغيل" },
+        {
+          p: "يحتاج نظام التخزين إلى متابعة طوال عمره: تحديث البرامج الثابتة، ومراقبة سلامة الأقراص وتنبيهات السعة، ومراجعة تقارير النسخ الاحتياطي، واستبدال القطع المعطلة. حدّد مبكراً من سيقوم بذلك، سواء فريق داخلي أو عقد دعم، ووثّقه كتابياً؛ فأغلب أعطال التخزين تبدأ بتنبيه لم يكن أحد يتابعه.",
+        },
+        { h2: "كيف يساعدك بيت الأفكار" },
+        {
+          p: "بيت الأفكار شركة تكامل أنظمة مقرها 4028 الملك خالد، حي السوق، الدمام، تخدم الشركات في جميع مناطق المملكة، وقد خدمت أكثر من 250 منشأة. نراجع بياناتك واحتياجات الاستعادة لديك، ونصمم حلول تخزين ونسخ احتياطي تناسب حجم منشأتك ومتطلبات الامتثال، ونورّد الأجهزة والخدمات السحابية ونركّبها، وندعمها بعد التركيب. تواصل معنا على sales@thoughtshouse.com أو ‎+966 54 102 2995 لترتيب مراجعة لبيئة التخزين لديك.",
+        },
+      ],
+      sources: [
+        {
+          label: "سدايا — لائحة نقل البيانات الشخصية إلى خارج المملكة",
+          url: "https://sdaia.gov.sa/Documents/RegulationonPersonalDataEN.pdf",
+        },
+        {
+          label:
+            "الهيئة الوطنية للأمن السيبراني — ضوابط الأمن السيبراني للبيانات (DCC-1:2022)",
+          url: "https://nca.gov.sa/en/regulatory-documents/controls-list/dcc/",
+        },
+        {
+          label:
+            "الهيئة الوطنية للأمن السيبراني — ضوابط الأمن السيبراني للحوسبة السحابية (CCC-2:2024)",
+          url: "https://nca.gov.sa/en/regulatory-documents/controls-list/ccc/",
+        },
+        {
+          label: "Microsoft — إتاحة منطقة Saudi Arabia East",
+          url: "https://news.microsoft.com/source/emea/2026/08/microsoft-announces-saudi-arabia-east-datacenter-region-will-be-available-in-november-2026/",
+        },
+        {
+          label: "Google Cloud — الوصول إلى منطقة الدمام",
+          url: "https://docs.cloud.google.com/docs/dammam-region-access",
         },
       ],
     },

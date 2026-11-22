@@ -32,7 +32,8 @@ export type ArticleSlug =
   | "how-to-choose-a-nas-for-business"
   | "structured-cabling-new-office"
   | "fortinet-vs-sophos-firewall"
-  | "protect-business-email-phishing-bec";
+  | "protect-business-email-phishing-bec"
+  | "business-data-storage-solutions-saudi-arabia";
 
 interface LocalizedArticle {
   title: string;
@@ -50,6 +51,27 @@ export interface Article {
 }
 
 export const ARTICLES: Article[] = [
+  {
+    slug: "business-data-storage-solutions-saudi-arabia",
+    published: "2026-11-22",
+    image: "/images/cloud-backup-1280.webp",
+    service: "cloud-backup",
+    content: {
+      en: {
+        title:
+          "Business Data Storage Solutions in Saudi Arabia: A Practical Plan",
+        metaTitle: "Business Data Storage Solutions in Saudi Arabia",
+        description:
+          "Plan business data storage in Saudi Arabia: map your data, choose NAS, server or cloud storage, keep it in the Kingdom where required, and protect it.",
+      },
+      ar: {
+        title: "حلول تخزين البيانات للشركات في السعودية: خطة عملية",
+        metaTitle: "حلول تخزين البيانات للشركات في السعودية | بيت الأفكار",
+        description:
+          "خطة عملية لتخزين بيانات شركتك في السعودية: حصر البيانات، واختيار NAS أو السيرفر أو السحابة لكل نوع، وإبقاؤها داخل المملكة عند الحاجة، وتقدير السعة وحمايتها.",
+      },
+    },
+  },
   {
     slug: "protect-business-email-phishing-bec",
     published: "2026-11-22",

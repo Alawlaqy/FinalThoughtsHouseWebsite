@@ -12,8 +12,8 @@
   "date": "2026-11-13"
  },
  "/services/cloud-backup/": {
-  "hash": "8142ffc3a9ca846d",
-  "date": "2026-11-15"
+  "hash": "cc08f3a1a61bbd8a",
+  "date": "2026-11-22"
  },
  "/services/it-supply/": {
   "hash": "adbcc569cf3fec5e",
@@ -212,7 +212,11 @@
   "date": "2026-11-13"
  },
  "/insights/": {
-  "hash": "371948dfc34fa403",
+  "hash": "b0128018926570ed",
+  "date": "2026-11-22"
+ },
+ "/insights/business-data-storage-solutions-saudi-arabia/": {
+  "hash": "a8f3404cf2a09325",
   "date": "2026-11-22"
  },
  "/insights/protect-business-email-phishing-bec/": {
@@ -308,15 +312,15 @@
   "date": "2026-11-13"
  },
  "/insights/how-to-choose-a-firewall/": {
-  "hash": "d5a519583659ac48",
+  "hash": "193d7a071c7fc86d",
   "date": "2026-11-22"
  },
  "/insights/3-2-1-backup-ransomware/": {
-  "hash": "6d2cd237ef8d28bf",
+  "hash": "9aea766d7ab797c4",
   "date": "2026-11-22"
  },
  "/insights/office-wifi-planning/": {
-  "hash": "6a6bbeed5c691413",
+  "hash": "2ff9be9c081197f8",
   "date": "2026-11-22"
  },
  "/ar/": {
@@ -332,8 +336,8 @@
   "date": "2026-11-13"
  },
  "/ar/services/cloud-backup/": {
-  "hash": "bf03391e0dc6ee12",
-  "date": "2026-11-15"
+  "hash": "85a03c37e0747bd6",
+  "date": "2026-11-22"
  },
  "/ar/services/it-supply/": {
   "hash": "524d40fba51e1b73",
@@ -532,7 +536,11 @@
   "date": "2026-11-13"
  },
  "/ar/insights/": {
-  "hash": "0517eee9218c51d9",
+  "hash": "c8cbed06aefb61eb",
+  "date": "2026-11-22"
+ },
+ "/ar/insights/business-data-storage-solutions-saudi-arabia/": {
+  "hash": "d745ad200f6d5980",
   "date": "2026-11-22"
  },
  "/ar/insights/protect-business-email-phishing-bec/": {
@@ -628,15 +636,15 @@
   "date": "2026-11-13"
  },
  "/ar/insights/how-to-choose-a-firewall/": {
-  "hash": "5e5358e2dce24611",
+  "hash": "936e2f51c6c491f8",
   "date": "2026-11-22"
  },
  "/ar/insights/3-2-1-backup-ransomware/": {
-  "hash": "f0a8e57c61d2752d",
+  "hash": "bd130a2870df4dc0",
   "date": "2026-11-22"
  },
  "/ar/insights/office-wifi-planning/": {
-  "hash": "3f031f7661ba592f",
+  "hash": "e5ab79e0abc24e3f",
   "date": "2026-11-22"
  }
 }
