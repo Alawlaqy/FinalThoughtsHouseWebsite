@@ -4333,4 +4333,258 @@ export const ARTICLE_BODIES: Record<
       ],
     },
   },
+  "protect-business-email-phishing-bec": {
+    en: {
+      summary: [
+        "Phishing tricks people into clicking, opening or signing in; business email compromise (BEC) uses a fake or hijacked mailbox to get money or data, often with no link or attachment at all.",
+        "Technology stops most phishing: multi-factor authentication, good mail filtering and SPF, DKIM and DMARC on your domain.",
+        "BEC is stopped mainly by process: confirm every new or changed bank detail by phone on a number you already have, and require a second approval for payments.",
+      ],
+      faq: [
+        {
+          q: "What is the difference between phishing and BEC?",
+          a: "Phishing is a broad attack that tries to make someone click a link, open an attachment or enter a password. BEC is a targeted fraud in which the attacker pretends to be a manager, colleague or supplier, usually to redirect a payment. BEC messages often contain no link or file, so filters miss them more easily.",
+        },
+        {
+          q: "Does Microsoft 365 protect against phishing on its own?",
+          a: "Every Microsoft 365 plan with cloud mailboxes includes built-in protection against spam, malware and phishing. Microsoft Defender for Office 365 Plan 1, included in Microsoft 365 Business Premium and Microsoft 365 E3, adds Safe Links, Safe Attachments and impersonation protection. These settings still need to be configured and reviewed; they do not replace MFA, DMARC or a payment verification process.",
+        },
+        {
+          q: "What does DMARC do?",
+          a: "DMARC tells receiving mail servers what to do with messages that claim to come from your domain but fail SPF and DKIM checks: deliver them, send them to junk, or reject them. It also sends you reports, so you can see who is sending mail in your name.",
+        },
+        {
+          q: "What should we do if an employee paid a fraudulent invoice?",
+          a: "Call your bank immediately and ask them to stop or recall the transfer; speed matters more than anything else. Then reset the affected passwords, end active sessions, check for mailbox forwarding rules and keep the emails and logs as evidence.",
+        },
+      ],
+      blocks: [
+        {
+          p: "Email is still the easiest way into most companies. One convincing message can steal a password, install malware or persuade the accounts team to pay a supplier invoice into the wrong bank account. For businesses in Saudi Arabia that work with many suppliers, contractors and overseas partners, the second risk is often the most expensive. This guide explains how phishing and business email compromise (BEC) work and the practical layers that protect your company email.",
+        },
+        { h2: "Phishing and BEC: what is the difference?" },
+        {
+          p: "Phishing is the wide net: a fake delivery notice, a shared-document alert or a password-expiry warning that leads to a fake sign-in page or a malicious file. BEC is the targeted version. The attacker studies your company, then sends a short, believable message from a look-alike domain, a spoofed address or a real mailbox they have already taken over. Common BEC scenarios include:",
+        },
+        {
+          ul: [
+            "A supplier 'changes' its bank account and asks for the next invoice to be paid to the new details.",
+            "A message that appears to come from the general manager asks for an urgent, confidential transfer.",
+            "An employee 'asks' HR to change the bank account for their salary.",
+            "A real supplier's mailbox is hacked, and the attacker replies inside a genuine email thread with a modified invoice.",
+          ],
+        },
+        {
+          p: "Because many BEC messages contain no link or attachment, mail filters have less to detect. That is why protection needs both technology and process.",
+        },
+        { h2: "Layer 1: protect the accounts" },
+        {
+          p: "Most mailbox takeovers start with a stolen password. Close that path first:",
+        },
+        {
+          ul: [
+            "Turn on multi-factor authentication (MFA) for every mailbox, starting with management, finance and IT administrators. Prefer an authenticator app or security keys over SMS codes.",
+            "Block legacy sign-in methods that cannot use MFA.",
+            "Give administrators separate admin accounts that are not used for daily email.",
+            "Alert on new inbox rules that forward or delete mail, a classic sign of a compromised mailbox.",
+          ],
+        },
+        { h2: "Layer 2: filter incoming mail" },
+        {
+          p: "Every Microsoft 365 subscription with cloud mailboxes includes built-in protection against spam, malware and phishing. Microsoft Defender for Office 365 Plan 1, included in Microsoft 365 Business Premium and Microsoft 365 E3, adds Safe Links (links are checked when clicked, not only when the email arrives), Safe Attachments (files are opened in a sandbox before delivery) and user and domain impersonation protection, which flags messages pretending to be your managers or your own domain. Plan 2, included in plans such as Microsoft 365 E5, adds attack simulation training, threat investigation and automated response.",
+        },
+        {
+          p: "Licences alone are not enough. Review the anti-phishing policy, add your senior staff and key suppliers to impersonation protection, and tag messages from outside the company so staff notice when a 'colleague' writes from an external address.",
+        },
+        { h2: "Layer 3: authenticate your domain with SPF, DKIM and DMARC" },
+        {
+          p: "These three DNS records stop attackers from sending email that appears to come from your exact domain, and they improve the delivery of your own mail.",
+        },
+        {
+          ul: [
+            "SPF lists the servers and services allowed to send email for your domain.",
+            "DKIM adds a digital signature that proves a message was not changed in transit.",
+            "DMARC tells receiving servers what to do when a message fails those checks, and sends you reports about who is sending in your name.",
+          ],
+        },
+        {
+          p: "Start DMARC at p=none to collect reports, add every legitimate sender you find (your ERP, CRM, newsletter or e-invoicing platform), then move to quarantine and finally reject. Large mailbox providers now expect this: since May 2025, Outlook.com rejects mail from domains sending more than 5,000 messages a day unless SPF and DKIM pass and a DMARC policy of at least p=none is published.",
+        },
+        { h2: "Layer 4: a payment verification process" },
+        {
+          p: "This is the control that stops BEC, even when the email looks perfect. Write it down and apply it to everyone, including senior management:",
+        },
+        {
+          ul: [
+            "Confirm any new or changed bank details by phone, using a number from your supplier file or contract, never the number in the email.",
+            "Require two people to approve new beneficiaries and payments above an agreed amount.",
+            "Treat urgency and secrecy as warning signs, not reasons to skip checks.",
+            "Keep supplier bank details in the ERP under change control, with a record of who changed what and when.",
+          ],
+        },
+        { h2: "Layer 5: train staff and make reporting easy" },
+        {
+          p: "Short, regular awareness sessions work better than one long annual course. Show real examples: look-alike domains, fake Microsoft sign-in pages, invoices with changed bank details. Run phishing simulations, and add a 'Report phishing' button in Outlook so a suspicious message reaches IT in one click. Thank people who report, even when it turns out to be safe.",
+        },
+        { h2: "If someone clicked, signed in or paid" },
+        {
+          ul: [
+            "If money was sent, call your bank immediately and ask for the transfer to be stopped or recalled.",
+            "Reset the user's password, end all active sessions and check which MFA methods are registered on the account.",
+            "Look for inbox rules, forwarding and mailbox delegation the attacker may have added.",
+            "Keep the emails, headers and sign-in logs as evidence, and warn suppliers and customers who may have received messages from the account.",
+            "If personal data may have been exposed, review your notification obligations under the Personal Data Protection Law (PDPL).",
+          ],
+        },
+        { h2: "What the NCA Essential Cybersecurity Controls expect" },
+        {
+          p: "The NCA's Essential Cybersecurity Controls (ECC-2:2024) include a dedicated Email Protection subdomain. As a minimum it covers filtering of phishing and spam, multi-factor authentication for remote and webmail access, email archiving and backup, protection against advanced persistent threats and zero-day malware, and validation of the entity's email domains with SPF, DKIM and DMARC. Even if the ECC are not mandatory for your company, they are a useful local checklist, and the same points often appear in customer and tender security questionnaires.",
+        },
+        { h2: "How Thoughts House helps" },
+        {
+          p: "Thoughts House reviews and hardens business email for companies in Dammam and across Saudi Arabia: Microsoft 365 security settings and Defender for Office 365 policies, MFA rollout, SPF, DKIM and DMARC from monitoring to enforcement, and awareness sessions for your staff. Service is by appointment, on-site or remote. Contact us at sales@thoughtshouse.com or +966 54 102 2995 to arrange an email security review.",
+        },
+      ],
+      sources: [
+        {
+          label: "NCA — Essential Cybersecurity Controls (ECC-2:2024)",
+          url: "https://cdn.nca.gov.sa/api/files/public/upload/86e09090-44e4-481f-bc28-355673607654_ECC--2024-EN.pdf",
+        },
+        {
+          label: "Microsoft — Microsoft Defender for Office 365 overview",
+          url: "https://learn.microsoft.com/en-us/defender-office-365/mdo-about",
+        },
+        {
+          label: "Microsoft — Outlook requirements for high-volume senders",
+          url: "https://techcommunity.microsoft.com/blog/microsoftthreatprotectionblog/strengthening-email-ecosystem-outlook%e2%80%99s-new-requirements-for-high%e2%80%90volume-senders/4399730",
+        },
+      ],
+    },
+    ar: {
+      summary: [
+        "التصيّد الاحتيالي يخدع الموظف ليضغط رابطاً أو يفتح ملفاً أو يُدخل كلمة مروره، أما احتيال اختراق البريد (BEC) فيستخدم بريداً مزيفاً أو مخترقاً للحصول على أموال أو بيانات، وكثيراً ما يأتي بلا رابط ولا مرفق.",
+        "التقنية توقف معظم رسائل التصيّد: التحقق متعدد العوامل، وتصفية جيدة للبريد، وسجلات SPF وDKIM وDMARC على نطاقك.",
+        "أما احتيال BEC فيوقفه الإجراء قبل التقنية: تأكَّد هاتفياً من أي حساب بنكي جديد أو معدَّل على رقم موثّق لديك مسبقاً، واشترط موافقة ثانية على المدفوعات.",
+      ],
+      faq: [
+        {
+          q: "ما الفرق بين التصيّد الاحتيالي واحتيال BEC؟",
+          a: "التصيّد هجوم واسع يحاول دفع الموظف إلى ضغط رابط أو فتح مرفق أو إدخال كلمة المرور. أما BEC فاحتيال موجّه ينتحل فيه المهاجم صفة مدير أو زميل أو مورّد، وغالباً لتحويل دفعة مالية إلى حسابه. وكثيراً ما تخلو رسائله من الروابط والملفات، فيسهل أن تفلت من أنظمة التصفية.",
+        },
+        {
+          q: "هل يكفي Microsoft 365 وحده للحماية من التصيّد؟",
+          a: "كل خطط Microsoft 365 التي تتضمن صناديق بريد سحابية تشمل حماية مدمجة من الرسائل المزعجة والبرمجيات الخبيثة والتصيّد. وتضيف خطة Microsoft Defender for Office 365 Plan 1، المضمّنة في Microsoft 365 Business Premium وMicrosoft 365 E3، خصائص Safe Links وSafe Attachments والحماية من انتحال الهوية. لكن هذه الإعدادات تحتاج إلى ضبط ومراجعة، ولا تغني عن التحقق متعدد العوامل وDMARC وإجراء التحقق من المدفوعات.",
+        },
+        {
+          q: "ما وظيفة سجل DMARC؟",
+          a: "يخبر DMARC خوادم البريد المستقبِلة بما تفعله مع الرسائل التي تدّعي أنها من نطاقك وتفشل في فحص SPF وDKIM: تسليمها، أو نقلها إلى البريد غير الهام، أو رفضها. ويرسل إليك تقارير توضّح من يرسل بريداً باسم نطاقك.",
+        },
+        {
+          q: "ماذا نفعل إذا دفع أحد الموظفين فاتورة احتيالية؟",
+          a: "اتصل بالبنك فوراً واطلب إيقاف التحويل أو استرجاعه؛ فالسرعة هنا أهم من أي خطوة أخرى. ثم أعد تعيين كلمات المرور المتأثرة، وأنهِ الجلسات النشطة، وافحص قواعد إعادة توجيه البريد، واحتفظ بالرسائل والسجلات كأدلة.",
+        },
+      ],
+      blocks: [
+        {
+          p: "ما زال البريد الإلكتروني أسهل باب للدخول إلى معظم الشركات. رسالة واحدة مقنعة تكفي لسرقة كلمة مرور، أو تثبيت برمجية خبيثة، أو إقناع قسم الحسابات بتحويل فاتورة مورّد إلى حساب بنكي خاطئ. وللمنشآت في المملكة التي تتعامل مع موردين ومقاولين وشركاء في الخارج، يكون الخطر الثاني غالباً هو الأعلى كلفة. يشرح هذا الدليل كيف يعمل التصيّد الاحتيالي واحتيال اختراق البريد التجاري (BEC)، وما طبقات الحماية العملية لبريد منشأتك.",
+        },
+        { h2: "التصيّد واحتيال BEC: ما الفرق؟" },
+        {
+          p: "التصيّد شبكة واسعة: إشعار شحنة مزيف، أو تنبيه بمستند مشترك، أو تحذير بانتهاء كلمة المرور، يقودك إلى صفحة دخول مزيفة أو ملف خبيث. أما BEC فهو النسخة الموجّهة؛ يدرس المهاجم منشأتك ثم يرسل رسالة قصيرة ومقنعة من نطاق مشابه لنطاقك، أو عنوان منتحَل، أو صندوق بريد حقيقي سيطر عليه مسبقاً. ومن أشهر صوره:",
+        },
+        {
+          ul: [
+            "مورّد «يغيّر» حسابه البنكي ويطلب تحويل الفاتورة القادمة إلى البيانات الجديدة.",
+            "رسالة تبدو من المدير العام تطلب تحويلاً عاجلاً وسرياً.",
+            "موظف «يطلب» من الموارد البشرية تغيير الحساب الذي يُحوَّل إليه راتبه.",
+            "اختراق بريد مورّد حقيقي، ثم الرد داخل سلسلة مراسلات صحيحة بفاتورة معدَّلة.",
+          ],
+        },
+        {
+          p: "ولأن كثيراً من رسائل BEC بلا روابط ولا مرفقات، يقل ما تستطيع أنظمة التصفية اكتشافه. لهذا تحتاج الحماية إلى التقنية والإجراءات معاً.",
+        },
+        { h2: "الطبقة الأولى: حماية الحسابات" },
+        {
+          p: "تبدأ معظم عمليات السيطرة على صناديق البريد بكلمة مرور مسروقة، فأغلق هذا الباب أولاً:",
+        },
+        {
+          ul: [
+            "فعّل التحقق متعدد العوامل (MFA) لكل صناديق البريد، وابدأ بالإدارة والمالية ومديري الأنظمة. وفضّل تطبيق المصادقة أو مفاتيح الأمان على رموز الرسائل النصية.",
+            "أوقف طرق الدخول القديمة التي لا تدعم التحقق متعدد العوامل.",
+            "خصّص لمديري الأنظمة حسابات إدارية منفصلة لا تُستخدم للبريد اليومي.",
+            "فعّل تنبيهاً عند إنشاء قواعد جديدة تعيد توجيه البريد أو تحذفه؛ فهي علامة معروفة على اختراق الصندوق.",
+          ],
+        },
+        { h2: "الطبقة الثانية: تصفية البريد الوارد" },
+        {
+          p: "تشمل كل اشتراكات Microsoft 365 ذات صناديق البريد السحابية حماية مدمجة من الرسائل المزعجة والبرمجيات الخبيثة والتصيّد. وتضيف خطة Microsoft Defender for Office 365 Plan 1، المضمّنة في Microsoft 365 Business Premium وMicrosoft 365 E3، خاصية Safe Links التي تفحص الرابط لحظة الضغط عليه لا لحظة وصول الرسالة فقط، وخاصية Safe Attachments التي تفتح الملفات في بيئة معزولة قبل تسليمها، والحماية من انتحال هوية المستخدمين والنطاقات التي تنبّه إلى الرسائل المتنكّرة في صفة مديريك أو نطاقك. أما Plan 2، المضمّنة في خطط مثل Microsoft 365 E5، فتضيف محاكاة هجمات التصيّد للتدريب، وأدوات التحقيق في التهديدات، والاستجابة الآلية.",
+        },
+        {
+          p: "والتراخيص وحدها لا تكفي. راجع سياسة مكافحة التصيّد، وأضف كبار المسؤولين وأهم الموردين إلى الحماية من الانتحال، ومَيّز الرسائل القادمة من خارج المنشأة بوسم واضح حتى ينتبه الموظف عندما يراسله «زميل» من عنوان خارجي.",
+        },
+        { h2: "الطبقة الثالثة: توثيق نطاقك بسجلات SPF وDKIM وDMARC" },
+        {
+          p: "تمنع هذه السجلات الثلاثة في إعدادات DNS المهاجمين من إرسال بريد يظهر وكأنه من نطاقك نفسه، وتحسّن في الوقت ذاته وصول رسائلك إلى صناديق الوارد.",
+        },
+        {
+          ul: [
+            "سجل SPF يحدد الخوادم والخدمات المسموح لها بالإرسال باسم نطاقك.",
+            "سجل DKIM يضيف توقيعاً رقمياً يثبت أن الرسالة لم تُعدَّل أثناء انتقالها.",
+            "سجل DMARC يحدد للخوادم المستقبِلة ما تفعله بالرسائل التي تفشل في الفحصين، ويرسل إليك تقارير عمّن يرسل باسمك.",
+          ],
+        },
+        {
+          p: "ابدأ DMARC بسياسة p=none لجمع التقارير، وأضف كل جهة إرسال مشروعة تظهر لك، مثل نظام ERP أو CRM أو منصة النشرات البريدية أو الفوترة الإلكترونية، ثم انتقل إلى quarantine وبعدها إلى reject. وكبار مزودي البريد باتوا يشترطون ذلك؛ فمنذ مايو 2025 يرفض Outlook.com رسائل النطاقات التي ترسل أكثر من 5,000 رسالة يومياً ما لم تنجح في فحص SPF وDKIM وتنشر سياسة DMARC لا تقل عن p=none.",
+        },
+        { h2: "الطبقة الرابعة: إجراء للتحقق من المدفوعات" },
+        {
+          p: "هذا هو الضابط الذي يوقف احتيال BEC حتى لو بدت الرسالة متقنة تماماً. اكتبه واعتمده وطبّقه على الجميع، بمن فيهم الإدارة العليا:",
+        },
+        {
+          ul: [
+            "تأكَّد من أي حساب بنكي جديد أو معدَّل باتصال هاتفي على رقم مسجّل في ملف المورّد أو العقد، لا على الرقم الوارد في الرسالة.",
+            "اشترط موافقة شخصين على إضافة مستفيد جديد وعلى المدفوعات التي تتجاوز مبلغاً متفقاً عليه.",
+            "تعامل مع الاستعجال وطلب السرية كعلامتَي تحذير، لا كمبرر لتجاوز الإجراء.",
+            "احفظ بيانات حسابات الموردين في نظام ERP مع ضبط صلاحيات التعديل، وسجل يوضح من عدّل ماذا ومتى.",
+          ],
+        },
+        { h2: "الطبقة الخامسة: توعية الموظفين وتسهيل الإبلاغ" },
+        {
+          p: "الجلسات التوعوية القصيرة والمنتظمة أنفع من دورة طويلة مرة في السنة. اعرض أمثلة حقيقية: نطاقات مشابهة، وصفحات دخول Microsoft مزيفة، وفواتير بحسابات بنكية معدَّلة. ونفّذ محاكاة لرسائل التصيّد، وأضف زر «الإبلاغ عن تصيّد» في Outlook حتى تصل الرسالة المشبوهة إلى فريق التقنية بضغطة واحدة. واشكر من يبلّغ حتى لو تبيّن أن الرسالة سليمة.",
+        },
+        { h2: "إذا ضغط موظف رابطاً أو أدخل بياناته أو حوّل مبلغاً" },
+        {
+          ul: [
+            "إذا حُوِّل مبلغ، فاتصل بالبنك فوراً واطلب إيقاف التحويل أو استرجاعه.",
+            "أعد تعيين كلمة مرور المستخدم، وأنهِ جميع الجلسات النشطة، وراجع طرق التحقق المسجّلة على حسابه.",
+            "ابحث عن قواعد البريد وإعادة التوجيه والتفويضات التي ربما أضافها المهاجم.",
+            "احتفظ بالرسائل وترويساتها وسجلات الدخول كأدلة، ونبّه الموردين والعملاء الذين ربما وصلتهم رسائل من الحساب.",
+            "إذا احتمل تسرّب بيانات شخصية، فراجع التزامات الإبلاغ في نظام حماية البيانات الشخصية.",
+          ],
+        },
+        { h2: "ما تتطلبه الضوابط الأساسية للأمن السيبراني" },
+        {
+          p: "تتضمن الضوابط الأساسية للأمن السيبراني الصادرة عن الهيئة الوطنية للأمن السيبراني (ECC-2:2024) مكوّناً فرعياً مخصصاً لحماية البريد الإلكتروني. ويشمل كحدٍّ أدنى: تحليل الرسائل وتصفيتها من التصيّد والرسائل المزعجة، والتحقق متعدد العوامل للدخول عن بُعد وعبر بوابة البريد على الويب، وأرشفة البريد ونسخه احتياطياً، والحماية من التهديدات المتقدمة المستمرة والبرمجيات الخبيثة غير المعروفة، والتحقق من نطاقات بريد الجهة باستخدام SPF وDKIM وDMARC. وحتى إن لم تكن الضوابط إلزامية لمنشأتك، فهي قائمة محلية مفيدة، وكثيراً ما تتكرر النقاط نفسها في استبيانات الأمن لدى العملاء والمنافسات.",
+        },
+        { h2: "كيف يساعدك بيت الأفكار" },
+        {
+          p: "يراجع بيت الأفكار بريد المنشآت ويعزّز حمايته في الدمام وجميع مناطق المملكة: إعدادات الأمان في Microsoft 365 وسياسات Defender for Office 365، وتفعيل التحقق متعدد العوامل، وسجلات SPF وDKIM وDMARC من مرحلة المراقبة حتى الرفض الكامل، وجلسات توعية لموظفيك. نقدّم الخدمة بموعد مسبق، في موقعك أو عن بُعد. تواصل معنا على sales@thoughtshouse.com أو ‎+966 54 102 2995 لترتيب مراجعة لأمن بريدك.",
+        },
+      ],
+      sources: [
+        {
+          label: "الهيئة الوطنية للأمن السيبراني — الضوابط الأساسية للأمن السيبراني (ECC-2:2024)",
+          url: "https://cdn.nca.gov.sa/api/files/public/upload/86e09090-44e4-481f-bc28-355673607654_ECC--2024-EN.pdf",
+        },
+        {
+          label: "Microsoft — نظرة عامة على Microsoft Defender for Office 365",
+          url: "https://learn.microsoft.com/en-us/defender-office-365/mdo-about",
+        },
+        {
+          label: "Microsoft — متطلبات Outlook للمرسلين بكميات كبيرة",
+          url: "https://techcommunity.microsoft.com/blog/microsoftthreatprotectionblog/strengthening-email-ecosystem-outlook%e2%80%99s-new-requirements-for-high%e2%80%90volume-senders/4399730",
+        },
+      ],
+    },
+  },
 };

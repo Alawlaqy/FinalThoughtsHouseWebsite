@@ -31,7 +31,8 @@ export type ArticleSlug =
   | "it-company-vs-system-integrator"
   | "how-to-choose-a-nas-for-business"
   | "structured-cabling-new-office"
-  | "fortinet-vs-sophos-firewall";
+  | "fortinet-vs-sophos-firewall"
+  | "protect-business-email-phishing-bec";
 
 interface LocalizedArticle {
   title: string;
@@ -49,6 +50,26 @@ export interface Article {
 }
 
 export const ARTICLES: Article[] = [
+  {
+    slug: "protect-business-email-phishing-bec",
+    published: "2026-11-22",
+    image: "/images/cybersecurity-1280.webp",
+    service: "cybersecurity",
+    content: {
+      en: {
+        title: "How to Protect Business Email from Phishing and BEC Fraud",
+        metaTitle: "Protect Business Email from Phishing and BEC Fraud",
+        description:
+          "Protect your company email from phishing and business email compromise (BEC): MFA, filtering, SPF, DKIM and DMARC, payment checks, training and incident steps.",
+      },
+      ar: {
+        title: "كيف تحمي بريد منشأتك من التصيّد الاحتيالي واحتيال البريد (BEC)",
+        metaTitle: "حماية بريد الشركة من التصيّد واحتيال BEC | بيت الأفكار",
+        description:
+          "خطوات عملية لحماية بريد شركتك من التصيّد الاحتيالي واحتيال اختراق البريد (BEC): التحقق المتعدد، والتصفية، وSPF وDKIM وDMARC، وضوابط الدفع، والتوعية.",
+      },
+    },
+  },
   {
     slug: "fortinet-vs-sophos-firewall",
     published: "2026-11-18",

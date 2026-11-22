@@ -4,8 +4,8 @@
   "date": "2026-11-13"
  },
  "/services/cybersecurity/": {
-  "hash": "ecc6c32a94f6e530",
-  "date": "2026-11-13"
+  "hash": "d6795a16557200a8",
+  "date": "2026-11-22"
  },
  "/services/network-infrastructure/": {
   "hash": "16d74799775e01e0",
@@ -212,8 +212,12 @@
   "date": "2026-11-13"
  },
  "/insights/": {
-  "hash": "4a283a2d838f6830",
-  "date": "2026-11-18"
+  "hash": "371948dfc34fa403",
+  "date": "2026-11-22"
+ },
+ "/insights/protect-business-email-phishing-bec/": {
+  "hash": "4070a26be4ba97a3",
+  "date": "2026-11-22"
  },
  "/insights/fortinet-vs-sophos-firewall/": {
   "hash": "5957ce3c91ea3f54",
@@ -304,24 +308,24 @@
   "date": "2026-11-13"
  },
  "/insights/how-to-choose-a-firewall/": {
-  "hash": "c9e99a54ad96c5ed",
-  "date": "2026-11-18"
+  "hash": "d5a519583659ac48",
+  "date": "2026-11-22"
  },
  "/insights/3-2-1-backup-ransomware/": {
-  "hash": "d23fc6f6cd608d19",
-  "date": "2026-11-18"
+  "hash": "6d2cd237ef8d28bf",
+  "date": "2026-11-22"
  },
  "/insights/office-wifi-planning/": {
-  "hash": "3b448937e824a473",
-  "date": "2026-11-18"
+  "hash": "6a6bbeed5c691413",
+  "date": "2026-11-22"
  },
  "/ar/": {
   "hash": "3ca902d0be116acb",
   "date": "2026-11-13"
  },
  "/ar/services/cybersecurity/": {
-  "hash": "e9db2d7dde6ec1eb",
-  "date": "2026-11-13"
+  "hash": "9693fa07b89a5f0e",
+  "date": "2026-11-22"
  },
  "/ar/services/network-infrastructure/": {
   "hash": "2cbb6543ed4f4577",
@@ -528,8 +532,12 @@
   "date": "2026-11-13"
  },
  "/ar/insights/": {
-  "hash": "292d75678381f690",
-  "date": "2026-11-18"
+  "hash": "0517eee9218c51d9",
+  "date": "2026-11-22"
+ },
+ "/ar/insights/protect-business-email-phishing-bec/": {
+  "hash": "db971638cb46687f",
+  "date": "2026-11-22"
  },
  "/ar/insights/fortinet-vs-sophos-firewall/": {
   "hash": "aeb95545b22cf233",
@@ -620,15 +628,15 @@
   "date": "2026-11-13"
  },
  "/ar/insights/how-to-choose-a-firewall/": {
-  "hash": "624ec44ed7f51bb8",
-  "date": "2026-11-18"
+  "hash": "5e5358e2dce24611",
+  "date": "2026-11-22"
  },
  "/ar/insights/3-2-1-backup-ransomware/": {
-  "hash": "fd6c7bae93d6f7f9",
-  "date": "2026-11-18"
+  "hash": "f0a8e57c61d2752d",
+  "date": "2026-11-22"
  },
  "/ar/insights/office-wifi-planning/": {
-  "hash": "cfa15b3aada08350",
-  "date": "2026-11-18"
+  "hash": "3f031f7661ba592f",
+  "date": "2026-11-22"
  }
 }
